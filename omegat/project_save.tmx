@@ -11150,6 +11150,30 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>2.1-alpha.23 - March 22, 2026</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T135148Z" creationid="Ragnar-F" creationdate="20260911T135148Z">
+        <seg>2.1-alpha.23 - 22. März 2026</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.24 - March 29, 2026</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T133037Z" creationid="Ragnar-F" creationdate="20260911T133037Z">
+        <seg>2.1-alpha.24 - 29. März 2026</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.25 - April 5, 2026</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T131019Z" creationid="Ragnar-F" creationdate="20260911T131019Z">
+        <seg>2.1-alpha.25 - 5. April 2026</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>2.1-alpha.26 - April 12, 2026</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T123729Z" creationid="Ragnar-F" creationdate="20260911T123729Z">
@@ -67458,6 +67482,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Added &lt;a0&gt;ahk_opt&lt;/a0&gt; for WinTitle parameters (overrides default settings).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T131101Z" creationid="Ragnar-F" creationdate="20260911T131101Z">
+        <seg>Hinzugefügt: &lt;a0&gt;ahk_opt&lt;/a0&gt; für FensterTitel-Parameter (überschreibt Standardeinstellungen).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Added &lt;a0&gt;fat arrow functions&lt;/a0&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231130T140916Z" creationid="Ragnar-F" creationdate="20210704T125339Z">
@@ -67478,6 +67510,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171012T143323Z" creationid="Ragnar-F" creationdate="20140227T222038Z">
         <seg>Syntaxhervorhebung für AutoHotkey hinzugefügt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Added Offset sub-parameter for DefineProp, to allow unions.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T133554Z" creationid="Ragnar-F" creationdate="20260911T133554Z">
+        <seg>Hinzugefügt: Offset-Unterparameter für DefineProp, was Unions erlaubt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -80970,6 +81010,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed &lt;c0&gt;StructClass.Ptr&lt;/c0&gt; to subclass &lt;c1&gt;StructClass.base.Ptr&lt;/c1&gt; instead of &lt;c2&gt;Struct.Ptr&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T133731Z" creationid="Ragnar-F" creationdate="20260911T133731Z">
+        <seg>Geändert: &lt;c0&gt;StructClass.Ptr&lt;/c0&gt; macht nun &lt;c1&gt;StructClass.base.Ptr&lt;/c1&gt; statt &lt;c2&gt;Struct.Ptr&lt;/c2&gt; zur Unterklasse.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed &lt;c0&gt;X() =&gt; Y()&lt;/c0&gt; to propagate implicit &lt;a1&gt;&lt;e2&gt;blank-unset&lt;/e2&gt;&lt;/a1&gt; return.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T115930Z" creationid="Ragnar-F" creationdate="20260911T115634Z">
@@ -80998,6 +81046,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240327T214023Z" creationid="Ragnar-F" creationdate="20240327T214023Z">
         <seg>Geändert: ControlGetFocus gibt nun 0 zurück, wenn der Fokus nicht ermittelt werden kann, z.B. wenn ein Konsolenfenster aktiv ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed GetOwnPropDesc to return classes for numeric types.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T133806Z" creationid="Ragnar-F" creationdate="20260911T133806Z">
+        <seg>Geändert: GetOwnPropDesc gibt nun Klassen für numerische Typen zurück.</seg>
       </tuv>
     </tu>
     <tu>
@@ -82502,6 +82558,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T115037Z" creationid="Ragnar-F" creationdate="20210410T112303Z">
         <seg>Klassen müssen mit ihrem exakten vollständigen Namen angegeben werden (also keine Ausdrücke), da der &lt;a3&gt;Prototyp&lt;/a3&gt; jeder Klasse beim Laden des Skripts aufgelöst wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Cleaned up parts of the code relating to object construction, reducing code size and possibly improving performance in some cases.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T130009Z" creationid="Ragnar-F" creationdate="20260911T130009Z">
+        <seg>Teile des Codes zur Objektkonstruktion wurden überarbeitet, was die Codegröße reduziert und die Performanz in einigen Fällen potenziell verbessert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -95322,6 +95386,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Enhanced CallbackCreate to optionally accept an array of parameter types.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T133136Z" creationid="Ragnar-F" creationdate="20260911T133136Z">
+        <seg>Erweitert: CallbackCreate akzeptiert nun optional ein Array von Parametertypen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Enjoy!</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230823T195744Z" creationid="Ragnar-F" creationdate="20150121T142217Z">
@@ -99226,6 +99298,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;#Import ":N"&lt;/c0&gt; importing the wrong file when used under #Module in an #Include file.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T134141Z" creationid="Ragnar-F" creationdate="20260911T134141Z">
+        <seg>Behoben: &lt;c0&gt;#Import ":N"&lt;/c0&gt; importiert nicht mehr die falsche Datei, wenn es unter einem #Module in einer #Include-Datei verwendet wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed &lt;c0&gt;#include &lt;x&gt;&lt;/c0&gt; causing a load-time crash if used inside a function.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231223T110540Z" creationid="Ragnar-F" creationdate="20231223T110124Z">
@@ -99254,6 +99334,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240506T115942Z" creationid="Ragnar-F" creationdate="20240506T115942Z">
         <seg>Behoben: &lt;c0&gt;:B0*O:XY::Z&lt;/c0&gt; erzeugt nun XYZ statt XZ (also statt Y zu unterdrücken).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;A.B&lt;/c0&gt; where B is wildcard-imported into module A.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T132443Z" creationid="Ragnar-F" creationdate="20260911T132443Z">
+        <seg>Behoben: &lt;c0&gt;A.B&lt;/c0&gt;, wobei B via Platzhalter in Modul A importiert wurde.</seg>
       </tuv>
     </tu>
     <tu>
@@ -99306,6 +99394,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;ModuleA.B&lt;/c0&gt; to initialize classes and imported modules.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T132512Z" creationid="Ragnar-F" creationdate="20260911T132512Z">
+        <seg>Behoben: &lt;c0&gt;ModulA.B&lt;/c0&gt; initialisiert nun Klassen und importierte Module.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed &lt;c0&gt;Props(v)&lt;/c0&gt; to retain the value of v, not alias v.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T094733Z" creationid="Ragnar-F" creationdate="20260911T094733Z">
@@ -99354,6 +99450,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;StructClass[N].Ptr&lt;/c0&gt; (pointers to array types).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T134011Z" creationid="Ragnar-F" creationdate="20260911T134011Z">
+        <seg>Behoben: &lt;c0&gt;StructClass[N].Ptr&lt;/c0&gt; (Pointer, die auf Array-Typen verweisen).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed &lt;c0&gt;TraySetIcon("HBITMAP:" handle)&lt;/c0&gt; without *.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T060103Z" creationid="Ragnar-F" creationdate="20260903T060103Z">
@@ -99366,6 +99470,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230702T122017Z" creationid="Ragnar-F" creationdate="20230702T122017Z">
         <seg>Behoben: &lt;c0&gt;VerCompare(a, "&gt;" b)&lt;/c0&gt; und geringfügige Reduzierung der Codegröße.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;WinExist("", "Text")&lt;/c0&gt; to not retrieve the title of each window.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T131557Z" creationid="Ragnar-F" creationdate="20260911T131557Z">
+        <seg>Behoben: &lt;c0&gt;WinExist("", "Text")&lt;/c0&gt; ruft nicht mehr den Titel von jedem Fenster ab.</seg>
       </tuv>
     </tu>
     <tu>
@@ -99406,6 +99518,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230623T182306Z" creationid="Ragnar-F" creationdate="20230623T182306Z">
         <seg>Behoben: &lt;c0&gt;a.base := a&lt;/c0&gt; löst nun einen Fehler aus.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;global g&lt;/c0&gt; in a function conflicting with prior &lt;c1&gt;export global g&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T132056Z" creationid="Ragnar-F" creationdate="20260911T132056Z">
+        <seg>Behoben: &lt;c0&gt;global g&lt;/c0&gt; innerhalb einer Funktion steht nicht mehr im Konflikt mit einem vorherigen &lt;c1&gt;export global g&lt;/c1&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -99634,6 +99754,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed DllCall to reject array classes for the return type, not crash.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T131926Z" creationid="Ragnar-F" creationdate="20260911T131926Z">
+        <seg>Behoben: DllCall lehnt nun Array-Klassen als Rückgabetyp ab, anstatt einen Absturz zu verursachen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed DllCall to throw when arg type is UStr.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240327T210642Z" creationid="Ragnar-F" creationdate="20240327T210642Z">
@@ -99722,6 +99850,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed GUI control calculations causing Critical Error on any OS prior to Windows 10 version 1607; e.g. &lt;c0&gt;Gui().AddButton()&lt;/c0&gt; without "w" option.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T133028Z" creationid="Ragnar-F" creationdate="20260911T133028Z">
+        <seg>Behoben: GUI-Steuerelement-Berechnungen verursachten in OS-Versionen älter als Windows 10 Version 1607 einen kritischen Fehler; z.B. &lt;c0&gt;Gui().AddButton()&lt;/c0&gt; ohne W-Option.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed Gui GetPos/GetClientPos when Gui has an owner window or +DPIScale.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240327T210009Z" creationid="Ragnar-F" creationdate="20240327T210009Z">
@@ -99798,6 +99934,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260215T080151Z" creationid="Ragnar-F" creationdate="20260215T080151Z">
         <seg>Behoben: IsOptional- und IsByRef-Rückgabewerte für interne Methoden sind nun korrekt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed IsSet to permit expressions ending with a question mark.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T131015Z" creationid="Ragnar-F" creationdate="20260911T131015Z">
+        <seg>Behoben: IsSet erlaubt nun Ausdrücke, die mit einem Fragezeichen enden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100026,6 +100170,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed Start menu failing to appear when the Start button is clicked if a script running as admin or with UI access is displaying a menu.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T130658Z" creationid="Ragnar-F" creationdate="20260911T130658Z">
+        <seg>Behoben: Das Startmenü erscheint nun korrekt, wenn die Startschaltfläche angeklickt wird, während ein Skript, das mit Adminrechten oder UI-Access läuft, ein Menü anzeigt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed StrGet crashing when given an address and not a length.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260214T215803Z" creationid="Ragnar-F" creationdate="20260214T215247Z">
@@ -100062,6 +100214,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122609Z" creationid="Ragnar-F" creationdate="20260911T122609Z">
         <seg>Behoben: StructClass.At() funktioniert nun korrekt, wenn StructClass eine verschachtelte Struktur enthält.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed StructClass.Ptr to not seal StructClass structure when evaluated.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T130736Z" creationid="Ragnar-F" creationdate="20260911T130736Z">
+        <seg>Behoben: StructClass.Ptr versiegelt die StructClass-Struktur beim Auswerten nicht mehr.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100218,6 +100378,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed alignment of arrays within a struct.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T130847Z" creationid="Ragnar-F" creationdate="20260911T130847Z">
+        <seg>Behoben: Ausrichtung von Arrays innerhalb einer Struktur.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed an error message to refer to #HotIf rather than #IfWin.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240327T212426Z" creationid="Ragnar-F" creationdate="20240327T212426Z">
@@ -100274,6 +100442,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed circular references preventing deletion of Struct.Ptr/Array classes.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T135115Z" creationid="Ragnar-F" creationdate="20260911T135115Z">
+        <seg>Behoben: Zirkelbezüge verhindern nicht mehr, dass Struct.Ptr/Array-Klassen gelöscht werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed class declarations to not permit a class to subclass itself.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T154800Z" creationid="Ragnar-F" creationdate="20260903T053415Z">
@@ -100310,6 +100486,15 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260215T081634Z" creationid="Ragnar-F" creationdate="20260215T081634Z">
         <seg>Behoben: Kein Absturz mehr, wenn ListView die Sort-Option hat und Add mit weggelassener Spalte1 aufgerufen wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed crash when calling an unset global via a Module object.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T132212Z" creationid="Ragnar-F" creationdate="20260911T132212Z">
+        <seg>Behoben: Kein Absturz mehr, wenn ein unset global via Modulobjekt aufgerufen wird.
+</seg>
       </tuv>
     </tu>
     <tu>
@@ -100730,6 +100915,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed module initialization changing the line reported by subsequent errors.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T132331Z" creationid="Ragnar-F" creationdate="20260911T132331Z">
+        <seg>Behoben: Eine Modulinitialisierung verändert nicht mehr die Zeilennummer, die von nachfolgenden Fehlern gemeldet wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed mouse AltTab hotkeys not suppressing execution of a prefix hotkey, such as &lt;c0&gt;1::&lt;/c0&gt; for &lt;c1&gt;1 &amp; WheelDown::AltTab&lt;/c1&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240327T185948Z" creationid="Ragnar-F" creationdate="20240327T185938Z">
@@ -100850,6 +101043,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed repeat references to struct array classes causing undefined behaviour.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T135000Z" creationid="Ragnar-F" creationdate="20260911T135000Z">
+        <seg>Behoben: Undefiniertes Verhalten, wenn Struktur-Array-Klassen wiederholt referenziert werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed reserved words to be permitted as method names, as documented.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230623T181310Z" creationid="Ragnar-F" creationdate="20230623T181310Z">
@@ -100906,6 +101107,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed some error messages not pointing to the line which raised the error.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T131725Z" creationid="Ragnar-F" creationdate="20260911T131725Z">
+        <seg>Behoben: Einige Fehlermeldungen verwiesen nicht auf die Zeile, die den Fehler auslöste.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed some issues affecting continuation sections:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230911T170751Z" creationid="Ragnar-F" creationdate="20230911T170751Z">
@@ -100926,6 +101135,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T094619Z" creationid="Ragnar-F" creationdate="20260911T094619Z">
         <seg>Behoben: Einige Ausgabeparameter wurden fälschlicherweise "ungesetzt gemacht", obwohl sie eigentlich "leer gemacht" werden sollten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed some reference-counting errors in CallbackCreate.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T130929Z" creationid="Ragnar-F" creationdate="20260911T130929Z">
+        <seg>Behoben: Einige Referenzzählungsfehler in CallbackCreate.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100966,6 +101183,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260215T080644Z" creationid="Ragnar-F" creationdate="20260215T080600Z">
         <seg>Behoben: Zeichenketten-Rückgabewerte wurden während des Debuggens korrumpiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed struct return types for typed callbacks.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T130821Z" creationid="Ragnar-F" creationdate="20260911T130821Z">
+        <seg>Behoben: Struktur-Rückgabetypen für typisierte Rückrufe.</seg>
       </tuv>
     </tu>
     <tu>
@@ -101038,6 +101263,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T095020Z" creationid="Ragnar-F" creationdate="20260911T095020Z">
         <seg>Behoben: Folgezeichen in Fehlermeldung für unset return.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed undefined behaviour when DllCall is passed a Struct class with no fields.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T133912Z" creationid="Ragnar-F" creationdate="20260911T133912Z">
+        <seg>Behoben: Undefiniertes Verhalten beim Übergeben einer Struct-Klasse ohne Felder an DllCall.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed undefined behaviour when a nested struct releases the last reference to the outer struct.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T134252Z" creationid="Ragnar-F" creationdate="20260911T134252Z">
+        <seg>Behoben: Undefiniertes Verhalten, wenn eine verschachtelte Struktur die letzte Referenz zur äußeren Struktur freigibt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -129059,6 +129300,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Implemented &lt;c0&gt;#Import Export &lt;i1&gt;ModuleName&lt;/i1&gt; {*}&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T133103Z" creationid="Ragnar-F" creationdate="20260911T133103Z">
+        <seg>Implementiert: &lt;c0&gt;#Import Export &lt;i1&gt;ModulName&lt;/i1&gt; {*}&lt;/c0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Implemented an optimization to the WinText parameter by Descolada.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240605T131923Z" creationid="Ragnar-F" creationdate="20240605T124350Z">
@@ -142955,6 +143204,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Memory for typed properties is now allocated with the main object, reducing memory overhead and speeding up allocation and deallocation.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T130324Z" creationid="Ragnar-F" creationdate="20260911T130324Z">
+        <seg>Der Speicher für typisierte Eigenschaften wird nun zusammen mit dem Hauptobjekt reserviert, was den Speicher-Overhead reduziert und die Reservierung und Freigabe von Speicher beschleunigt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>MemoryError</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210216T124836Z" creationid="Ragnar-F" creationdate="20210216T124836Z">
@@ -145047,6 +145304,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20201103T140018Z" creationid="Ragnar-F" creationdate="20180412T141713Z">
         <seg>VerschiebeDateienUndOrdner(QuelleMuster, ZielOrdner, Überschreiben := false)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Moved __Value definition from each Ptr class into Struct.Ptr, fixing memory usage.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T131432Z" creationid="Ragnar-F" creationdate="20260911T131324Z">
+        <seg>Behoben: Die __Value-Definition jeder einzelnen Ptr-Klasse wurde in Struct.Ptr verschoben, was den Speicherverbrauch korrigiert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -248735,6 +249000,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240327T212427Z" creationid="Ragnar-F" creationdate="20240327T212427Z">
         <seg>[PR #327]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>[PR #356]</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T130930Z" creationid="Ragnar-F" creationdate="20260911T130930Z">
+        <seg>[PR #356]</seg>
       </tuv>
     </tu>
     <tu>
