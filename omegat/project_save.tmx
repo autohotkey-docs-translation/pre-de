@@ -11150,6 +11150,38 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>2.1-alpha.19 - February 13, 2026</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T145516Z" creationid="Ragnar-F" creationdate="20260911T145516Z">
+        <seg>2.1-alpha.19 - 13. Februar 2026</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.20 - March 1, 2026</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T144306Z" creationid="Ragnar-F" creationdate="20260911T144306Z">
+        <seg>2.1-alpha.20 - 1. März 2026</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.21 - March 8, 2026</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T142643Z" creationid="Ragnar-F" creationdate="20260911T142643Z">
+        <seg>2.1-alpha.21 - 8. März 2026</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.22 - March 15, 2026</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T140718Z" creationid="Ragnar-F" creationdate="20260911T140718Z">
+        <seg>2.1-alpha.22 - 15. März 2026</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>2.1-alpha.23 - March 22, 2026</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T135148Z" creationid="Ragnar-F" creationdate="20260911T135148Z">
@@ -33042,6 +33074,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;#Import&lt;/a0&gt; was added, with the same syntax as Import except for placement of the optional Export keyword.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T144807Z" creationid="Ragnar-F" creationdate="20260911T144807Z">
+        <seg>&lt;a0&gt;#Import&lt;/a0&gt; wurde hinzugefügt, mit derselben Syntax wie Import, außer der Platzierung des optionalen Schlüsselworts Export.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;#Include&lt;/a0&gt; is relative to the directory containing the current file by default.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210704T134302Z" creationid="Ragnar-F" creationdate="20210704T134302Z">
@@ -43886,6 +43926,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20250926T074326Z" creationid="Ragnar-F" creationdate="20250926T073910Z">
         <seg>&lt;c0&gt;DllCall("GetOEMCP", "UInt")&lt;/c0&gt; gibt die aktuelle OEM-Codepage-Nummer zurück, z.B. &lt;a1&gt;437 (Vereinigte Staaten)&lt;/a1&gt; oder &lt;a2&gt;850 (Westeuropa)&lt;/a2&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c0&gt;Export Global X&lt;/c0&gt; exports a global variable (the Global keyword was added).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T144621Z" creationid="Ragnar-F" creationdate="20260911T144621Z">
+        <seg>&lt;c0&gt;Export Global X&lt;/c0&gt; exportiert eine globale Variable (das Schlüsselwort Global wurde hinzugefügt).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c0&gt;Export X&lt;/c0&gt; and &lt;c1&gt;Import X&lt;/c1&gt; are once again function call statements.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T144542Z" creationid="Ragnar-F" creationdate="20260911T144542Z">
+        <seg>&lt;c0&gt;Export X&lt;/c0&gt; und &lt;c1&gt;Import X&lt;/c1&gt; sind wieder Funktionsaufrufanweisungen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -67466,6 +67522,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Added #StructPack and Pack sub-parameter for DefineProp.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T145559Z" creationid="Ragnar-F" creationdate="20260911T145559Z">
+        <seg>Hinzugefügt: #StructPack und Pack-Unterparameter für DefineProp.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Added &lt;a0&gt;#Import&lt;/a0&gt; (see below).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T144411Z" creationid="Ragnar-F" creationdate="20260911T144411Z">
+        <seg>Hinzugefügt: &lt;a0&gt;#Import&lt;/a0&gt; (siehe unten).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Added &lt;a0&gt;SoundGetInterface&lt;/a0&gt; for retrieving COM interfaces.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210705T183826Z" creationid="Ragnar-F" creationdate="20210705T183826Z">
@@ -67498,10 +67570,42 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Added &lt;a0&gt;numeric type classes&lt;/a0&gt; extending Struct.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T135504Z" creationid="Ragnar-F" creationdate="20260911T135345Z">
+        <seg>Hinzugefügt: Klassen für &lt;a0&gt;numerische Typen&lt;/a0&gt;, die Struct erweitern.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Added &lt;a0&gt;structured array classes&lt;/a0&gt;, created by &lt;c1&gt;&lt;i2&gt;StructClass&lt;/i2&gt;[N]&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T135833Z" creationid="Ragnar-F" creationdate="20260911T135607Z">
+        <seg>Hinzugefügt: Klassen für &lt;a0&gt;strukturierte Arrays&lt;/a0&gt;, erstellt mit &lt;c1&gt;&lt;i2&gt;StructClass&lt;/i2&gt;[N]&lt;/c1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Added &lt;c0&gt;#Import "&lt;i1&gt;file&lt;/i1&gt;:&lt;i2&gt;mod&lt;/i2&gt;"&lt;/c0&gt; for importing &lt;c3&gt;#Module &lt;i4&gt;mod&lt;/i4&gt;&lt;/c3&gt; from &lt;i5&gt;file&lt;/i5&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T143340Z" creationid="Ragnar-F" creationdate="20260911T143340Z">
+        <seg>Hinzugefügt: &lt;c0&gt;#Import "&lt;i1&gt;Datei&lt;/i1&gt;:&lt;i2&gt;Mod&lt;/i2&gt;"&lt;/c0&gt; zum Importieren von &lt;c3&gt;#Module &lt;i4&gt;Mod&lt;/i4&gt;&lt;/c3&gt; aus &lt;i5&gt;Datei&lt;/i5&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Added &lt;c0&gt;CallbackFree(Address)&lt;/c0&gt;, to free the callback memory and release the associated function object.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231127T110208Z" creationid="Ragnar-F" creationdate="20210705T172059Z">
         <seg>&lt;c0&gt;CallbackFree(Adresse)&lt;/c0&gt; wurde hinzugefügt, um den Rückrufspeicher und das zugehörige Funktionsobjekt freizugeben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Added &lt;c0&gt;a ~!= b&lt;/c0&gt;, equivalent to &lt;c1&gt;!(a ~= b)&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T144343Z" creationid="Ragnar-F" creationdate="20260911T144343Z">
+        <seg>Hinzugefügt: &lt;c0&gt;a ~!= b&lt;/c0&gt;, äquivalent zu &lt;c1&gt;!(a ~= b)&lt;/c1&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -67514,10 +67618,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Added DefineProp function.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T141216Z" creationid="Ragnar-F" creationdate="20260911T141216Z">
+        <seg>Hinzugefügt: DefineProp-Funktion.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Added Offset sub-parameter for DefineProp, to allow unions.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T133554Z" creationid="Ragnar-F" creationdate="20260911T133554Z">
         <seg>Hinzugefügt: Offset-Unterparameter für DefineProp, was Unions erlaubt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Added Struct keyword and class.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T141255Z" creationid="Ragnar-F" creationdate="20260911T141255Z">
+        <seg>Hinzugefügt: Struct-Schlüsselwort und -Klasse.</seg>
       </tuv>
     </tu>
     <tu>
@@ -67534,6 +67654,30 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260425T074551Z" creationid="Ragnar-F" creationdate="20260425T074551Z">
         <seg>Hinzugefügt: Eine &lt;a0&gt;optionale Überprüfung, ob AutoHotkey-Updates verfügbar sind&lt;/a0&gt;; standardmäßig deaktiviert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Added automatic &lt;e0&gt;struct&lt;/e0&gt;.Ptr classes.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T141324Z" creationid="Ragnar-F" creationdate="20260911T141324Z">
+        <seg>Hinzugefügt: Automatische &lt;e0&gt;struct&lt;/e0&gt;.Ptr-Klassen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Added error detection for #Module being immediately preceded by a double-colon hotkey label.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T144137Z" creationid="Ragnar-F" creationdate="20260911T143731Z">
+        <seg>Hinzugefügt: Fehlererkennung für #Module direkt nach einem Doppelpunktpaar-Hotkey-Label.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Added error detection for #Module being repeated via #Include.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T143748Z" creationid="Ragnar-F" creationdate="20260911T143700Z">
+        <seg>Hinzugefügt: Fehlererkennung für #Module, das via #Include wiederholt wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -68630,6 +68774,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231110T085807Z" creationid="Ragnar-F" creationdate="20191208T223202Z">
         <seg>Alle anderen Regler werden nur indirekt über &lt;a4&gt;SoundGetInterface&lt;/a4&gt; und &lt;a5&gt;ComCall&lt;/a5&gt; unterstützt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>All other forms of the Import statement are still permitted, for now.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T144700Z" creationid="Ragnar-F" creationdate="20260911T144700Z">
+        <seg>Alle anderen Formen der Import-Anweisung sind vorerst weiterhin zulässig.</seg>
       </tuv>
     </tu>
     <tu>
@@ -77874,6 +78026,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>By contrast, &lt;c2&gt;Import "x" {}&lt;/c2&gt; and &lt;c3&gt;Import {} from x&lt;/c3&gt; still do not add x to the global namespace.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T145114Z" creationid="Ragnar-F" creationdate="20260911T145114Z">
+        <seg>&lt;c2&gt;Import "x" {}&lt;/c2&gt; und &lt;c3&gt;Import {} from x&lt;/c3&gt; hingegen verhindern weiterhin, dass x dem globalen Namensraum hinzugefügt wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>By contrast, &lt;c5&gt;IsNumber(n)&lt;/c5&gt; is true if &lt;e6&gt;n&lt;/e6&gt; is a number or a numeric string.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210223T135353Z" creationid="Ragnar-F" creationdate="20210223T135353Z">
@@ -80986,6 +81146,46 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed #Import to recognize undeclared global variables.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T143513Z" creationid="Ragnar-F" creationdate="20260911T143513Z">
+        <seg>Geändert: #Import erkennt nun auch undeklarierte globale Variablen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed #Module names to be local to each file-based module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T143002Z" creationid="Ragnar-F" creationdate="20260911T143002Z">
+        <seg>Geändert: #Module-Namen sind nun lokal für jedes dateibasierte Modul.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed #Module to allow reopening modules.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T145358Z" creationid="Ragnar-F" creationdate="20260911T145358Z">
+        <seg>Geändert: #Module erlaubt nun das wiederholte Öffnen von Modulen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed #Module to end at the end of the file which directly contains it.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T143027Z" creationid="Ragnar-F" creationdate="20260911T143027Z">
+        <seg>Geändert: #Module endet nun am Ende der Datei, die es direkt enthält.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed #Module to require a valid identifier.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T143106Z" creationid="Ragnar-F" creationdate="20260911T143106Z">
+        <seg>Geändert: #Module erfordert nun einen gültigen Identifikator.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed #Requires to set &lt;a0&gt;compatibility mode&lt;/a0&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122158Z" creationid="Ragnar-F" creationdate="20260911T122158Z">
@@ -81002,10 +81202,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed &lt;c0&gt;#Module __Init&lt;/c0&gt; to reopen the initial module of a file import.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T143252Z" creationid="Ragnar-F" creationdate="20260911T143252Z">
+        <seg>Geändert: &lt;c0&gt;#Module __Init&lt;/c0&gt; öffnet nun wiederholt das initiale Modul eines Datei-Imports.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed &lt;c0&gt;DllCall(F, S, unset)&lt;/c0&gt; to pass &lt;c1&gt;S()&lt;/c1&gt; itself if it has no __value setter.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T125836Z" creationid="Ragnar-F" creationdate="20260911T125836Z">
         <seg>Geändert: &lt;c0&gt;DllCall(F, S, unset)&lt;/c0&gt; übergibt nun &lt;c1&gt;S()&lt;/c1&gt; selbst, wenn es keinen __Value-Setter hat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed &lt;c0&gt;Import x {}&lt;/c0&gt; to add x to the global namespace even without &lt;c1&gt;as x&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T144918Z" creationid="Ragnar-F" creationdate="20260911T144918Z">
+        <seg>Geändert: &lt;c0&gt;Import x {}&lt;/c0&gt; fügt x nun auch ohne &lt;c1&gt;as x&lt;/c1&gt; dem globalen Namensraum hinzu.</seg>
       </tuv>
     </tu>
     <tu>
@@ -81034,6 +81250,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed &lt;c0&gt;export a() =&gt; b&lt;/c0&gt; to be a function call statement as in v2.0.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T141528Z" creationid="Ragnar-F" creationdate="20260911T141528Z">
+        <seg>Geändert: &lt;c0&gt;export a() =&gt; b&lt;/c0&gt; ist nun wieder eine Funktionsaufrufanweisung wie in v2.0.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed COM method and property calls to pass large integers as VT_I8, not VT_R8 (floating-point), so the original type and precision is retained.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230702T120942Z" creationid="Ragnar-F" creationdate="20230702T120942Z">
@@ -81046,6 +81270,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240327T214023Z" creationid="Ragnar-F" creationdate="20240327T214023Z">
         <seg>Geändert: ControlGetFocus gibt nun 0 zurück, wenn der Fokus nicht ermittelt werden kann, z.B. wenn ein Konsolenfenster aktiv ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed DllCall, StructFromPtr and typed properties to require a Struct subclass.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T141442Z" creationid="Ragnar-F" creationdate="20260911T141442Z">
+        <seg>Geändert: DllCall, StructFromPtr und typisierte Eigenschaften erfordern nun eine Struct-Unterklasse.</seg>
       </tuv>
     </tu>
     <tu>
@@ -81066,6 +81298,38 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed Import and Export syntax to be backward-compatible with v2.0:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T144452Z" creationid="Ragnar-F" creationdate="20260911T144452Z">
+        <seg>Geändert: Import- und Export-Syntax ist nun rückwärtskompatibel zu v2.0:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed Import to check the current file's directory before the search path.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T145259Z" creationid="Ragnar-F" creationdate="20260911T145259Z">
+        <seg>Geändert: Import prüft nun das Verzeichnis der aktuellen Datei vor dem Suchpfad.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed Import to permit importing the same item multiple times.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T145623Z" creationid="Ragnar-F" creationdate="20260911T145623Z">
+        <seg>Geändert: Import erlaubt nun das mehrfache Importieren desselben Elements.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed IsSet to permit an unset expression without an assignment.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T141157Z" creationid="Ragnar-F" creationdate="20260911T141157Z">
+        <seg>Geändert: IsSet erlaubt nun ein unset-Ausdruck ohne Zuweisung.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed StructClass.At() to permit StructClass to have no fields.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122355Z" creationid="Ragnar-F" creationdate="20260911T122355Z">
@@ -81078,6 +81342,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122332Z" creationid="Ragnar-F" creationdate="20260911T122332Z">
         <seg>Geändert: StructClass.Prototype ist nun schreibgeschützt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed Type to return "unset" if the parameter is omitted/unset.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T140806Z" creationid="Ragnar-F" creationdate="20260911T140806Z">
+        <seg>Geändert: Type gibt nun "unset" zurück, wenn der Parameter weggelassen/ungesetzt ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -81186,6 +81458,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed module initialization order to be overridden by first reference.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T143443Z" creationid="Ragnar-F" creationdate="20260911T143443Z">
+        <seg>Geändert: Die Reihenfolge der Modulinitialisierung wird nun durch die erste Referenz überschrieben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed module object to permit accessing any global variable.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T145646Z" creationid="Ragnar-F" creationdate="20260911T145646Z">
+        <seg>Geändert: Modulobjekte erlauben nun den Zugriff auf beliebige globale Variablen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed some functions/properties to return unset in v2.1 mode.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T121449Z" creationid="Ragnar-F" creationdate="20260911T121449Z">
@@ -81206,6 +81494,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230709T071919Z" creationid="Ragnar-F" creationdate="20230709T071919Z">
         <seg>Geändert: Die Reload-Schaltfläche in Fehler-/Warndialogfenstern schließt das Fenster nun explizit, auch dann, wenn die aktuelle Skriptinstanz nicht terminiert ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed the not-RegExMatch operator from &lt;c0&gt;~!=&lt;/c0&gt; to &lt;c1&gt;!~=&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T142817Z" creationid="Ragnar-F" creationdate="20260911T142817Z">
+        <seg>Geändert: Die Negation des RegExMatch-Operators wurde von &lt;c0&gt;~!=&lt;/c0&gt; zu &lt;c1&gt;!~=&lt;/c1&gt; geändert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -99250,10 +99546,42 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed #Import loading duplicate modules.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T144222Z" creationid="Ragnar-F" creationdate="20260911T144222Z">
+        <seg>Behoben: #Import lädt Module nicht mehr doppelt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed #Import to not allow loops such as a var pointing to itself.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T140523Z" creationid="Ragnar-F" creationdate="20260911T140523Z">
+        <seg>Behoben: #Import verbietet nun Schleifen, z.B. wenn eine Variable auf sich selbst verweist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed #Import to recognize imported names regardless of import order.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T144303Z" creationid="Ragnar-F" creationdate="20260911T144303Z">
+        <seg>Behoben: #Import erkennt nun importierte Namen unabhängig von der Importreihenfolge.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed #Include to correctly "close" any built-in variable it reads (no known impact on real-world scripts).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240421T095801Z" creationid="Ragnar-F" creationdate="20240421T095801Z">
         <seg>Behoben: #Include "schließt" nun korrekt jede interne Variable, die es liest (keine bekannten Auswirkungen auf reale Skripte).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed #Module to strip quote marks around its parameter.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T145508Z" creationid="Ragnar-F" creationdate="20260911T145508Z">
+        <seg>Behoben: #Module entfernt nun Anführungszeichen um seinen Parameter.</seg>
       </tuv>
     </tu>
     <tu>
@@ -99302,6 +99630,30 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T134141Z" creationid="Ragnar-F" creationdate="20260911T134141Z">
         <seg>Behoben: &lt;c0&gt;#Import ":N"&lt;/c0&gt; importiert nicht mehr die falsche Datei, wenn es unter einem #Module in einer #Include-Datei verwendet wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;#Import "Path:__Init"&lt;/c0&gt; to resolve even if there's no #Module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T140231Z" creationid="Ragnar-F" creationdate="20260911T140127Z">
+        <seg>Behoben: &lt;c0&gt;#Import "Pfad:__Init"&lt;/c0&gt; wird nun auch ohne #Module aufgelöst.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;#Import __Init&lt;/c0&gt; failing if there are no sub-modules.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T141754Z" creationid="Ragnar-F" creationdate="20260911T141754Z">
+        <seg>Behoben: &lt;c0&gt;#Import __Init&lt;/c0&gt; schlägt nicht mehr fehl, wenn keine Untermodule vorhanden sind.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;#Include &lt;A_B&gt;&lt;/c0&gt; crashing when neither A_B.ahk nor A.ahk exist.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T150344Z" creationid="Ragnar-F" creationdate="20260911T150344Z">
+        <seg>Behoben: &lt;c0&gt;#Include &lt;A_B&gt;&lt;/c0&gt; verursacht keinen Absturz mehr, wenn weder A_B.ahk noch A.ahk existieren.</seg>
       </tuv>
     </tu>
     <tu>
@@ -99382,6 +99734,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230623T170121Z" creationid="Ragnar-F" creationdate="20230623T170121Z">
         <seg>Behoben: &lt;c0&gt;Hotkey("a", "b")&lt;/c0&gt; verwendet nun die Originalfunktion von "b", nicht "a".</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;IsSet(p)&lt;/c0&gt; to return 0 if p is an unset virtual reference.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T141659Z" creationid="Ragnar-F" creationdate="20260911T141659Z">
+        <seg>Behoben: &lt;c0&gt;IsSet(p)&lt;/c0&gt; gibt nun 0 zurück, wenn p eine ungesetzte virtuelle Referenz ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -99554,10 +99914,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;return&lt;/c0&gt; preventing other modules from executing.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T145728Z" creationid="Ragnar-F" creationdate="20260911T145728Z">
+        <seg>Behoben: &lt;c0&gt;return&lt;/c0&gt; verhindert nicht mehr die Ausführung weiterer Module.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed &lt;c0&gt;s[x] =&gt; x&lt;/c0&gt; and other single-line properties starting with "s".</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230623T171035Z" creationid="Ragnar-F" creationdate="20230623T171035Z">
         <seg>Behoben: &lt;c0&gt;s[x] =&gt; x&lt;/c0&gt; und andere einzeilige Eigenschaften, die mit "s" beginnen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;struct&lt;/c0&gt;/&lt;c1&gt;class&lt;/c1&gt; validation of base class to not depend on ordering.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T140603Z" creationid="Ragnar-F" creationdate="20260911T140603Z">
+        <seg>Behoben: &lt;c0&gt;struct&lt;/c0&gt;/&lt;c1&gt;class&lt;/c1&gt;-Validierung der Basisklasse ist nun unabhängig von der Reihenfolge.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100210,6 +100586,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed Struct.Prototype.Size to return struct size, not allocated size.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T140410Z" creationid="Ragnar-F" creationdate="20260911T140410Z">
+        <seg>Behoben: Struct.Prototype.Size gibt nun die Strukturgröße zurück, nicht die reservierte Speichergröße.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed StructClass.At() where StructClass has a nested struct.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122609Z" creationid="Ragnar-F" creationdate="20260911T122609Z">
@@ -100222,6 +100606,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T130736Z" creationid="Ragnar-F" creationdate="20260911T130736Z">
         <seg>Behoben: StructClass.Ptr versiegelt die StructClass-Struktur beim Auswerten nicht mehr.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed StructFromPtr to support assigning to nested structs with __value.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T145834Z" creationid="Ragnar-F" creationdate="20260911T145834Z">
+        <seg>Behoben: StructFromPtr unterstützt nun das Zuweisen von Werten an verschachtelten Strukturen mit __Value.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100707,6 +101099,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed explicitly importing built-in objects from AHK module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T140308Z" creationid="Ragnar-F" creationdate="20260911T140308Z">
+        <seg>Behoben: Explizites Importieren interner Objekte aus dem AHK-Modul.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed externally-released modifiers to not be "restored" post-Send.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20250125T110002Z" creationid="Ragnar-F" creationdate="20250125T110002Z">
@@ -100727,6 +101127,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260322T093548Z" creationid="Ragnar-F" creationdate="20260322T093548Z">
         <seg>Behoben: Das Auslösen-beim-Loslassen-Verhalten der neutralen Strg/Alt/Umschalt-Hotkeys funktioniert nun korrekt, wenn eine Taste-Oben-Variante eingeschaltet, aber durch #HotIf deaktiviert ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed global/static objects to be released on exit (this was disabled in v2.1-alpha.11).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T150558Z" creationid="Ragnar-F" creationdate="20260911T150558Z">
+        <seg>Behoben: Globale/statische Objekte werden bei Exit wieder freigegeben (dies war deaktiviert in v2.1-alpha.11).</seg>
       </tuv>
     </tu>
     <tu>
@@ -101251,6 +101659,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed the not-RegExMatch operator (&lt;c0&gt;!~=&lt;/c0&gt;).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T142824Z" creationid="Ragnar-F" creationdate="20260911T142639Z">
+        <seg>Behoben: Negation des RegExMatch-Operators (&lt;c0&gt;!~=&lt;/c0&gt;).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed the wrong module being reopened at the end of a file containing #Module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T142305Z" creationid="Ragnar-F" creationdate="20260911T142305Z">
+        <seg>Behoben: Am Ende einer Datei, die #Module enthält, wurde das falsche Modul wiederholt geöffnet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed timers interrupting MsgBox after the timeout starts but before the window is shown, such as if &lt;c0&gt;SetTimer(MsgBox, -10)&lt;/c0&gt; is used immediately before &lt;c1&gt;MsgBox(1,,"T1")&lt;/c1&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260425T081735Z" creationid="Ragnar-F" creationdate="20260425T081735Z">
@@ -101259,10 +101683,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed top submenu item ignoring some clicks if a Gui is active when the menu is shown.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T150221Z" creationid="Ragnar-F" creationdate="20260911T150221Z">
+        <seg>Behoben: Der oberste Untermenüpunkt ignoriert nicht mehr gelegentlich Klicks, wenn beim Anzeigen des Menüs eine GUI aktiv ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed trailing character in error message for unset return.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T095020Z" creationid="Ragnar-F" creationdate="20260911T095020Z">
         <seg>Behoben: Folgezeichen in Fehlermeldung für unset return.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed undefined behaviour in initialization of module search path.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T145437Z" creationid="Ragnar-F" creationdate="20260911T145437Z">
+        <seg>Behoben: Undefiniertes Verhalten bei der Initialisierung des Modulsuchpfads.</seg>
       </tuv>
     </tu>
     <tu>
@@ -167364,6 +167804,30 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Removed Import statement and fixed some minor issues with #Import parsing.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T142922Z" creationid="Ragnar-F" creationdate="20260911T142859Z">
+        <seg>Import-Anweisung entfernt und einige kleinere Probleme beim #Import-Parsing behoben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Removed ObjGetDataPtr fallback for DllCall Ptr parameters.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T141603Z" creationid="Ragnar-F" creationdate="20260911T141603Z">
+        <seg>Entfernt: ObjGetDataPtr-Fallback für DllCall-Ptr-Parameter.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Removed StructFromPtr.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T141543Z" creationid="Ragnar-F" creationdate="20260911T141543Z">
+        <seg>Entfernt: StructFromPtr.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Removed all legacy If statements, leaving only &lt;c0&gt;if expression&lt;/c0&gt;, which never requires parentheses (but allows them, as in any expression).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231130T131952Z" creationid="Ragnar-F" creationdate="20210704T095036Z">
@@ -210960,6 +211424,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230822T144522Z" creationid="Ragnar-F" creationdate="20180429T191708Z">
         <seg>Dies ist völlig in Ordnung, da der if-Anweisung nur eine Codezeile zugeordnet ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This is possible because &lt;c0&gt;as&lt;/c0&gt;, &lt;c1&gt;from&lt;/c1&gt; and &lt;c2&gt;X {}&lt;/c2&gt; are not valid in an expression.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T144722Z" creationid="Ragnar-F" creationdate="20260911T144722Z">
+        <seg>Dies ist möglich, da &lt;c0&gt;as&lt;/c0&gt;, &lt;c1&gt;from&lt;/c1&gt; und &lt;c2&gt;X {}&lt;/c2&gt; in einem Ausdruck nicht zulässig sind.</seg>
       </tuv>
     </tu>
     <tu>
