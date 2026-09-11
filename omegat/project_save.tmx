@@ -11150,6 +11150,38 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>2.1-alpha.26 - April 12, 2026</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T123729Z" creationid="Ragnar-F" creationdate="20260911T123729Z">
+        <seg>2.1-alpha.26 - 12. April 2026</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.27 - April 19, 2026</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122831Z" creationid="Ragnar-F" creationdate="20260911T122831Z">
+        <seg>2.1-alpha.27 - 19. April 2026</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.28 - April 26, 2026</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122104Z" creationid="Ragnar-F" creationdate="20260911T122104Z">
+        <seg>2.1-alpha.28 - 26. April 2026</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.29 - May 10, 2026</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T115207Z" creationid="Ragnar-F" creationdate="20260911T115207Z">
+        <seg>2.1-alpha.29 - 10. Mai 2026</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>2.1-alpha.30 - May 17, 2026</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T104404Z" creationid="Ragnar-F" creationdate="20260911T104404Z">
@@ -73370,6 +73402,30 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Array().Delete()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T121450Z" creationid="Ragnar-F" creationdate="20260911T121450Z">
+        <seg>Array().Delete()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Array().Pop()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T121451Z" creationid="Ragnar-F" creationdate="20260911T121451Z">
+        <seg>Array().Pop()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Array().RemoveAt()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T121452Z" creationid="Ragnar-F" creationdate="20260911T121452Z">
+        <seg>Array().RemoveAt()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>ArrayObj := &lt;s0&gt;ComObjArray&lt;/s0&gt;(VarType, Count1 &lt;s1&gt;, Count2, ... Count8&lt;/s1&gt;)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180211T124316Z" creationid="Ragnar-F" creationdate="20180211T124259Z">
@@ -80890,6 +80946,46 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed #Requires to set &lt;a0&gt;compatibility mode&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122158Z" creationid="Ragnar-F" creationdate="20260911T122158Z">
+        <seg>Geändert: #Requires setzt nun den &lt;a0&gt;Kompatibilitätsmodus&lt;/a0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed #SingleInstance and Reload to post WM_CLOSE to close the old instance (instead of an undocumented message).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T124758Z" creationid="Ragnar-F" creationdate="20260911T124758Z">
+        <seg>Geändert: #SingleInstance und Reload posten nun WM_CLOSE (statt einer undokumentierten Meldung), um die alte Instanz zu schließen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed &lt;c0&gt;DllCall(F, S, unset)&lt;/c0&gt; to pass &lt;c1&gt;S()&lt;/c1&gt; itself if it has no __value setter.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T125836Z" creationid="Ragnar-F" creationdate="20260911T125836Z">
+        <seg>Geändert: &lt;c0&gt;DllCall(F, S, unset)&lt;/c0&gt; übergibt nun &lt;c1&gt;S()&lt;/c1&gt; selbst, wenn es keinen __Value-Setter hat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed &lt;c0&gt;X() =&gt; Y()&lt;/c0&gt; to propagate implicit &lt;a1&gt;&lt;e2&gt;blank-unset&lt;/e2&gt;&lt;/a1&gt; return.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T115930Z" creationid="Ragnar-F" creationdate="20260911T115634Z">
+        <seg>Geändert: Ausdrücke wie &lt;c0&gt;X() =&gt; Y()&lt;/c0&gt; propagieren nun implizit eine &lt;a1&gt;&lt;e2&gt;Leer-Unset&lt;/e2&gt;&lt;/a1&gt;-Rückgabe.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed &lt;c0&gt;a.Base := b&lt;/c0&gt; to be invalid when &lt;c1&gt;a&lt;/c1&gt; or &lt;c2&gt;b&lt;/c2&gt; has typed properties.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122914Z" creationid="Ragnar-F" creationdate="20260911T122914Z">
+        <seg>Geändert: &lt;c0&gt;a.Base := b&lt;/c0&gt; ist nun ungültig, wenn &lt;c1&gt;a&lt;/c1&gt; oder &lt;c2&gt;b&lt;/c2&gt; typisierte Eigenschaften besitzt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed COM method and property calls to pass large integers as VT_I8, not VT_R8 (floating-point), so the original type and precision is retained.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230702T120942Z" creationid="Ragnar-F" creationdate="20230702T120942Z">
@@ -80910,6 +81006,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240421T095154Z" creationid="Ragnar-F" creationdate="20240421T095154Z">
         <seg>Geändert: Die Hotkey-Funktion löst nun einen ValueError aus, wenn ihr Optionen-Parameter eine ungültige Option enthält.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed StructClass.At() to permit StructClass to have no fields.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122355Z" creationid="Ragnar-F" creationdate="20260911T122355Z">
+        <seg>Geändert: StructClass.At() erlaubt nun, dass StructClass keine Felder besitzt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed StructClass.Prototype to be read-only.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122332Z" creationid="Ragnar-F" creationdate="20260911T122332Z">
+        <seg>Geändert: StructClass.Prototype ist nun schreibgeschützt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -80986,10 +81098,42 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed handling of some internal messages related to dialog boxes.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T124649Z" creationid="Ragnar-F" creationdate="20260911T124649Z">
+        <seg>Geändert: Die Verarbeitung bestimmter interner Meldungen bezüglich Dialogfenstern wurde angepasst.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed how key-up events are correlated to key-down events for the purpose of determining whether to suppress key-up.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260425T080015Z" creationid="Ragnar-F" creationdate="20260425T080015Z">
         <seg>Geändert: Taste-Oben-Ereignisse korrelieren nun anders mit Taste-Unten-Ereignissen zwecks Bestimmung einer eventuellen Unterdrückung von Taste-Oben-Ereignissen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed maybe operator (?) to be able to short-circuit most operators.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T115308Z" creationid="Ragnar-F" creationdate="20260911T115308Z">
+        <seg>Geändert: Der Vielleicht-Operator (?) kann nun die meisten Operatoren kurzschließen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed message handling to fix keyboard shortcuts (not hotkeys) failing to work while a modal dialog box is being displayed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T124220Z" creationid="Ragnar-F" creationdate="20260911T124220Z">
+        <seg>Geändert: Die Meldungsverarbeitung wurde angepasst, sodass Tastaturkurzbefehle (nicht Hotkeys) auch dann funktionieren, wenn ein modales Dialogfenster angezeigt wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed some functions/properties to return unset in v2.1 mode.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T121449Z" creationid="Ragnar-F" creationdate="20260911T121449Z">
+        <seg>Geändert: Einige Funktionen/Eigenschaften geben im v2.1-Modus nun unset zurück.</seg>
       </tuv>
     </tu>
     <tu>
@@ -81006,6 +81150,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230709T071919Z" creationid="Ragnar-F" creationdate="20230709T071919Z">
         <seg>Geändert: Die Reload-Schaltfläche in Fehler-/Warndialogfenstern schließt das Fenster nun explizit, auch dann, wenn die aktuelle Skriptinstanz nicht terminiert ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed v2.1 mode default return when any &lt;c0&gt;return expr&lt;/c0&gt; is present.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T121201Z" creationid="Ragnar-F" creationdate="20260911T121201Z">
+        <seg>Geändert: Die v2.1-Modus-Standardrückgabe, sobald irgendein &lt;c0&gt;return Ausdruck&lt;/c0&gt; vorhanden ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -82348,8 +82500,8 @@
       <tuv lang="en">
         <seg>Classes must be specified by their exact full name and not an arbitrary expression, as the &lt;a3&gt;Prototype&lt;/a3&gt; of each class is resolved at load time.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20230914T133453Z" creationid="Ragnar-F" creationdate="20210410T112303Z">
-        <seg>Klassen müssen mit ihrem exakten vollständigen Namen angegeben werden (also keine Ausdrücke), da der &lt;a3&gt;Prototyp&lt;/a3&gt; jeder Klasse während der Skriptausführung aufgelöst wird.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T115037Z" creationid="Ragnar-F" creationdate="20210410T112303Z">
+        <seg>Klassen müssen mit ihrem exakten vollständigen Namen angegeben werden (also keine Ausdrücke), da der &lt;a3&gt;Prototyp&lt;/a3&gt; jeder Klasse beim Laden des Skripts aufgelöst wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -99274,6 +99426,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;return unset&lt;/c0&gt; from an OnMessage callback to act as &lt;c1&gt;return ""&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122735Z" creationid="Ragnar-F" creationdate="20260911T122735Z">
+        <seg>Behoben: &lt;c0&gt;return unset&lt;/c0&gt; in einem OnMessage-Rückruf verhält sich nun wie &lt;c1&gt;return ""&lt;/c1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed &lt;c0&gt;s[x] =&gt; x&lt;/c0&gt; and other single-line properties starting with "s".</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230623T171035Z" creationid="Ragnar-F" creationdate="20230623T171035Z">
@@ -99382,6 +99542,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T112003Z" creationid="Ragnar-F" creationdate="20260911T112003Z">
         <seg>Behoben: Klassenobjekte erlauben nun Base-Zuweisung.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed ClassObj.Prototype.Base to be writable if no typed properties.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122053Z" creationid="Ragnar-F" creationdate="20260911T122053Z">
+        <seg>Behoben: ClassObj.Prototype.Base ist nun beschreibbar, wenn keine typisierten Eigenschaften.</seg>
       </tuv>
     </tu>
     <tu>
@@ -99698,6 +99866,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed Map and Array not throwing UnsetItemError in v2.0 mode when return value is unused.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T121918Z" creationid="Ragnar-F" creationdate="20260911T121918Z">
+        <seg>Behoben: Map und Array werfen im v2.0-Modus keinen UnsetItemError mehr, wenn der Rückgabewert ungenutzt bleibt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed Map and Array to throw UnsetItemError, not UnsetError (when &lt;c0&gt;?&lt;/c0&gt; and &lt;c1&gt;??&lt;/c1&gt; are not used).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122826Z" creationid="Ragnar-F" creationdate="20260911T122826Z">
+        <seg>Behoben: Map und Array werfen nun UnsetItemError statt UnsetError (wenn &lt;c0&gt;?&lt;/c0&gt; und &lt;c1&gt;??&lt;/c1&gt; nicht verwendet werden).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed Menu Add overwriting items which were appended by Menu Insert.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230702T122730Z" creationid="Ragnar-F" creationdate="20230702T122730Z">
@@ -99738,6 +99922,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed ObjSetDataPtr throwing on success.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122512Z" creationid="Ragnar-F" creationdate="20260911T122512Z">
+        <seg>Behoben: ObjSetDataPtr wirft bei Erfolg keine Ausnahme mehr.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed OnNotify/OnCommand applying styles only applicable to OnEvent.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230924T093520Z" creationid="Ragnar-F" creationdate="20230924T093520Z">
@@ -99766,6 +99958,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230623T173458Z" creationid="Ragnar-F" creationdate="20230623T172150Z">
         <seg>Behoben: PixelSearch macht X nun leer, wenn das Pixel nicht gefunden wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed Ptr class not being deleted if target struct has no fields.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T123723Z" creationid="Ragnar-F" creationdate="20260911T123723Z">
+        <seg>Behoben: Die Ptr-Klasse wird nun gelöscht, wenn die Zielstruktur keine Felder hat.</seg>
       </tuv>
     </tu>
     <tu>
@@ -99846,6 +100046,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260215T081202Z" creationid="Ragnar-F" creationdate="20260215T081202Z">
         <seg>Behoben: StrPut/StrGet-Behandlung von 32-Bit-Integer-Limitierungen unter x64.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed Struct.Array.Prototype to not permit new typed properties.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T121943Z" creationid="Ragnar-F" creationdate="20260911T121943Z">
+        <seg>Behoben: Struct.Array.Prototype erlaubt nun keine neuen typisierten Eigenschaften mehr.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed StructClass.At() where StructClass has a nested struct.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122609Z" creationid="Ragnar-F" creationdate="20260911T122609Z">
+        <seg>Behoben: StructClass.At() funktioniert nun korrekt, wenn StructClass eine verschachtelte Struktur enthält.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100062,6 +100278,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T154800Z" creationid="Ragnar-F" creationdate="20260903T053415Z">
         <seg>Behoben: Klassendeklarationen erlauben nicht mehr, eine Klasse zur Unterklasse ihrer selbst zu machen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed classes with inherited nested structs.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122635Z" creationid="Ragnar-F" creationdate="20260911T122635Z">
+        <seg>Behoben: Klassen mit geerbten verschachtelten Strukturen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100390,6 +100614,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260425T074930Z" creationid="Ragnar-F" creationdate="20260425T074930Z">
         <seg>Behoben: install-version.ahk löscht nun das temporäre ".staging"-Verzeichnis nach einer Upgrade-Installation.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed instantiation where .Prototype is a non-Prototype Object.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T123603Z" creationid="Ragnar-F" creationdate="20260911T123603Z">
+        <seg>Behoben: Instanziierung, wo .Prototype kein Prototypobjekt ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100846,6 +101078,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171118T112229Z" creationid="Ragnar-F" creationdate="20171118T112229Z">
         <seg>Fixedsys</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixes applicable only to alpha users:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T121713Z" creationid="Ragnar-F" creationdate="20260911T121713Z">
+        <seg>Fehlerbehebungen, die nur für Alpha-Nutzer gelten:</seg>
       </tuv>
     </tu>
     <tu>
@@ -109946,6 +110186,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Further revised construction of objects with typed properties, reducing memory usage and potentially improving performance.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T123137Z" creationid="Ragnar-F" creationdate="20260911T123137Z">
+        <seg>Die Konstruktion von Objekten mit typisierten Eigenschaften weiter überarbeitet, was den Speicherverbrauch senkt und die Performanz potenziell steigert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Furthermore, &lt;a3&gt;Critical&lt;/a3&gt; does not prevent &lt;e4&gt;Function&lt;/e4&gt; from doing something that might indirectly result in a call to itself, such as calling &lt;a5&gt;SendMessage&lt;/a5&gt; or &lt;a6&gt;DllCall&lt;/a6&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230623T201549Z" creationid="Ragnar-F" creationdate="20230623T201549Z">
@@ -112334,6 +112582,30 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210307T222016Z" creationid="Ragnar-F" creationdate="20210307T222016Z">
         <seg>Gui()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Gui().FocusedCtrl</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T121457Z" creationid="Ragnar-F" creationdate="20260911T121457Z">
+        <seg>Gui().FocusedCtrl</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Gui().MenuBar</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T121456Z" creationid="Ragnar-F" creationdate="20260911T121456Z">
+        <seg>Gui().MenuBar</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Gui()[]</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T121459Z" creationid="Ragnar-F" creationdate="20260911T121459Z">
+        <seg>Gui()[]</seg>
       </tuv>
     </tu>
     <tu>
@@ -130251,6 +130523,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>In other words, if Y returns without specifying a return value or unset expression, X behaves as though it did the same.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T115907Z" creationid="Ragnar-F" creationdate="20260911T115907Z">
+        <seg>Mit anderen Worten: Wenn Y ohne expliziten Rückgabewert oder ohne Unset-Ausdruck zurückkehrt, verhält sich X so, als hätte es dasselbe getan.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>In other words, if a line contains an unclosed &lt;c6&gt;(&lt;/c6&gt;/&lt;c7&gt;[&lt;/c7&gt;/&lt;c8&gt;{&lt;/c8&gt;, it will be joined with subsequent lines until the number of opening and closing symbols balances out.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231120T203057Z" creationid="Ragnar-F" creationdate="20210704T141649Z">
@@ -131667,6 +131947,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>In this release, it only affects default return values.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122217Z" creationid="Ragnar-F" creationdate="20260911T122217Z">
+        <seg>In dieser Version betrifft es nur die Standardrückgabewerte.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>In this respect, they are similar to &lt;a0&gt;hotkeys&lt;/a0&gt; except that they are typically composed of more than one character (that is, a string).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230324T110505Z" creationid="Ragnar-F" creationdate="20140310T142249Z">
@@ -131711,6 +131999,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210704T123718Z" creationid="Ragnar-F" creationdate="20210704T123718Z">
         <seg>In v1 gab der Adressoperator die Adresse des internen Zeichenkettenpuffers von &lt;e3&gt;var&lt;/e3&gt; zurück, auch dann, wenn dieser eine Zahl (aber kein Objekt) enthielt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In v2.1 mode, user-defined functions and built-in functions without an explicit return value return &lt;c0&gt;unset&lt;/c0&gt; instead of &lt;c1&gt;""&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122304Z" creationid="Ragnar-F" creationdate="20260911T122304Z">
+        <seg>Im v2.1-Modus geben benutzerdefinierte Funktionen und interne Funktionen ohne expliziten Rückgabewert nun &lt;c0&gt;unset&lt;/c0&gt; statt &lt;c1&gt;""&lt;/c1&gt; zurück.</seg>
       </tuv>
     </tu>
     <tu>
@@ -132415,6 +132711,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230509T170934Z" creationid="Ragnar-F" creationdate="20190930T075145Z">
         <seg>InputHooks &lt;a1&gt;EndMods&lt;/a1&gt;-Eigenschaft gibt den logischen Status der Modifikatortasten zum Zeitpunkt der Beendigung der Eingabeerfassung wieder.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>InputHook().On*</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T121500Z" creationid="Ragnar-F" creationdate="20260911T121500Z">
+        <seg>InputHook().On*</seg>
       </tuv>
     </tu>
     <tu>
@@ -155147,6 +155451,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>ObjGetBase/Any.Prototype.Base</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T121503Z" creationid="Ragnar-F" creationdate="20260911T121503Z">
+        <seg>ObjGetBase/Any.Prototype.Base</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>ObjGetCapacity</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20170720T183352Z" creationid="Ragnar-F" creationdate="20170720T183352Z">
@@ -155319,6 +155631,30 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231029T085454Z" creationid="Ragnar-F" creationdate="20190820T212801Z">
         <seg>Object ist die Basisklasse, von der sich andere AutoHotkey-Objektklassen ableiten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Object().DeleteProp()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T121453Z" creationid="Ragnar-F" creationdate="20260911T121453Z">
+        <seg>Object().DeleteProp()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Object().GetMethod()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T121454Z" creationid="Ragnar-F" creationdate="20260911T121454Z">
+        <seg>Object().GetMethod()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Object().GetOwnPropDesc()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T121455Z" creationid="Ragnar-F" creationdate="20260911T121455Z">
+        <seg>Object().GetOwnPropDesc()</seg>
       </tuv>
     </tu>
     <tu>
@@ -157735,6 +158071,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230702T123745Z" creationid="Ragnar-F" creationdate="20230702T123734Z">
         <seg>Optimiert: Speicherreservierung von zwischengespeicherten COM-Eigenschaftsnamen für internes IDispatch.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Optimized code size.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122410Z" creationid="Ragnar-F" creationdate="20260911T122410Z">
+        <seg>Optimiert: Codegröße reduziert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -165811,6 +166155,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>RegExMatch OutputVar (no match)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T121652Z" creationid="Ragnar-F" creationdate="20260911T121506Z">
+        <seg>RegExMatch AusgabeVar (nichts gefunden)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>RegExMatch", "lib/RegExMatch.htm"],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T082632Z" creationid="Ragnar-F" creationdate="20260903T082632Z">
@@ -166711,6 +167063,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210704T095040Z" creationid="Ragnar-F" creationdate="20210704T095040Z">
         <seg>Die "Befehlssyntax" wurde entfernt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Removed #DefaultReturn.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122315Z" creationid="Ragnar-F" creationdate="20260911T122315Z">
+        <seg>Entfernt: #DefaultReturn.</seg>
       </tuv>
     </tu>
     <tu>
@@ -205771,6 +206131,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This affects shortcuts in the script's main window and some keyboard input for Gui windows and dialog boxes (when multiple are shown).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T124451Z" creationid="Ragnar-F" creationdate="20260911T124451Z">
+        <seg>Dies betrifft sowohl die Tastaturkurzbefehle im Hauptfenster des Skripts als auch bestimmte Tastatureingaben in GUI- und Dialogfenstern (wenn mehrere angezeigt werden).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This affects windowing functions such as &lt;a0&gt;WinExist&lt;/a0&gt; and &lt;a1&gt;WinActivate&lt;/a1&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230627T183244Z" creationid="Ragnar-F" creationdate="20230627T183244Z">
@@ -206207,6 +206575,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230805T085226Z" creationid="Ragnar-F" creationdate="20210211T201520Z">
         <seg>Dieser und die beiden unteren Platzhalter können innerhalb einer &lt;a3&gt;Klasse&lt;/a3&gt; verwendet werden, z.B. ist &lt;s4&gt;[\d.-]&lt;/s4&gt; eine Ziffer, ein Punkt oder ein Minuszeichen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This applies only to tail calls of functions and methods, not properties.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T120539Z" creationid="Ragnar-F" creationdate="20260911T120539Z">
+        <seg>Dies gilt nur für endständige Aufrufe von Funktionen und Methoden, nicht für Eigenschaften.</seg>
       </tuv>
     </tu>
     <tu>
@@ -219831,6 +220207,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210216T124838Z" creationid="Ragnar-F" creationdate="20210216T124838Z">
         <seg>TypeError</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Typed property definitions can no longer be owned by any Object which is not a Prototype.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T125131Z" creationid="Ragnar-F" creationdate="20260911T125131Z">
+        <seg>Geändert: Definitionen typisierter Eigenschaften können nicht länger von einem Objekt besessen werden, das kein Prototypobjekt ist.</seg>
       </tuv>
     </tu>
     <tu>
