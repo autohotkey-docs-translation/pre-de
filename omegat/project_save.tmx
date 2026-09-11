@@ -11150,6 +11150,46 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>2.1-alpha.14 - June 23, 2024</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T194514Z" creationid="Ragnar-F" creationdate="20260911T194507Z">
+        <seg>2.1-alpha.14 - 23. Juni 2024</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.15 - January 25, 2025</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T185223Z" creationid="Ragnar-F" creationdate="20260911T185223Z">
+        <seg>2.1-alpha.15 - 25. Januar 2025</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.16 - February 2, 2025</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T184133Z" creationid="Ragnar-F" creationdate="20260911T184133Z">
+        <seg>2.1-alpha.16 - 2. Februar 2025</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.17 - March 22, 2025</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T182931Z" creationid="Ragnar-F" creationdate="20260911T182931Z">
+        <seg>2.1-alpha.17 - 22. März 2025</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.18 - March 29, 2025</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T181900Z" creationid="Ragnar-F" creationdate="20260911T181900Z">
+        <seg>2.1-alpha.18 - 29. März 2025</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>2.1-alpha.19 - February 13, 2026</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T145516Z" creationid="Ragnar-F" creationdate="20260911T145516Z">
@@ -44946,6 +44986,30 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;c0&gt;import "*RESNAME"&lt;/c0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T183413Z" creationid="Ragnar-F" creationdate="20260911T183413Z">
+        <seg>&lt;c0&gt;import "*RESNAME"&lt;/c0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c0&gt;import "path\name"&lt;/c0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T183356Z" creationid="Ragnar-F" creationdate="20260911T183335Z">
+        <seg>&lt;c0&gt;import "Pfad\Name"&lt;/c0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c0&gt;import ModuleName {*, Names}&lt;/c0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T183504Z" creationid="Ragnar-F" creationdate="20260911T183457Z">
+        <seg>&lt;c0&gt;import ModulName {*, Namen}&lt;/c0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;c0&gt;in&lt;/c0&gt; and &lt;c1&gt;contains&lt;/c1&gt; are reserved for future use.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20250926T160336Z" creationid="Ragnar-F" creationdate="20250926T160336Z">
@@ -67538,6 +67602,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Added &lt;a0&gt;A_HotIf&lt;/a0&gt; and a return value for HotIf.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T194808Z" creationid="Ragnar-F" creationdate="20260911T194808Z">
+        <seg>Hinzugefügt: &lt;a0&gt;A_HotIf&lt;/a0&gt; und ein Rückgabewert für HotIf.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Added &lt;a0&gt;SoundGetInterface&lt;/a0&gt; for retrieving COM interfaces.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210705T183826Z" creationid="Ragnar-F" creationdate="20210705T183826Z">
@@ -67610,6 +67682,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Added &lt;c0&gt;export import&lt;/c0&gt; to import and export names at the same time.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T183618Z" creationid="Ragnar-F" creationdate="20260911T183618Z">
+        <seg>Hinzugefügt: &lt;c0&gt;export import&lt;/c0&gt;, um Namen gleichzeitig zu importieren und zu exportieren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Added AutoHotkey syntax highlighting.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171012T143323Z" creationid="Ragnar-F" creationdate="20140227T222038Z">
@@ -67626,10 +67706,42 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Added Import from file:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T183334Z" creationid="Ragnar-F" creationdate="20260911T183334Z">
+        <seg>Hinzugefügt: Import aus einer Datei:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Added Import from resource:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T183407Z" creationid="Ragnar-F" creationdate="20260911T183407Z">
+        <seg>Hinzugefügt: Import aus einer Ressource:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Added InputHook &lt;a0&gt;H option&lt;/a0&gt; to allow intercepting hotkeys.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T194735Z" creationid="Ragnar-F" creationdate="20260911T194735Z">
+        <seg>Hinzugefügt: &lt;a0&gt;InputHook-Option H&lt;/a0&gt;, um das Abfangen von Hotkeys zu ermöglichen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Added Offset sub-parameter for DefineProp, to allow unions.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T133554Z" creationid="Ragnar-F" creationdate="20260911T133554Z">
         <seg>Hinzugefügt: Offset-Unterparameter für DefineProp, was Unions erlaubt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Added RTL option for &lt;a0&gt;Menu.Prototype.Add&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T183047Z" creationid="Ragnar-F" creationdate="20260911T183047Z">
+        <seg>Hinzugefügt: RTL-Option für &lt;a0&gt;Menu.Prototype.Add&lt;/a0&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -67650,6 +67762,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Added alternative Import syntax for better alignment of module names:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T183456Z" creationid="Ragnar-F" creationdate="20260911T183456Z">
+        <seg>Hinzugefügt: Alternative Import-Syntax zur besseren Ausrichtung von Modulnamen:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Added an &lt;a0&gt;optional check for AutoHotkey updates&lt;/a0&gt;, disabled by default.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260425T074551Z" creationid="Ragnar-F" creationdate="20260425T074551Z">
@@ -67666,6 +67786,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Added automatic DPI rescaling for ListView columns.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T183701Z" creationid="Ragnar-F" creationdate="20260911T183701Z">
+        <seg>Hinzugefügt: Automatische DPI-Neuskalierung für ListView-Spalten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Added disableWindowFiltering to the manifest embedded in each EXE, allowing more windows to be detected.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T184345Z" creationid="Ragnar-F" creationdate="20260911T184345Z">
+        <seg>Hinzugefügt: Das in der EXE eingebettete Manifest wurde um disableWindowFiltering ergänzt, wodurch mehr Fenster erkannt werden können.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Added error detection for #Module being immediately preceded by a double-colon hotkey label.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T144137Z" creationid="Ragnar-F" creationdate="20260911T143731Z">
@@ -67678,6 +67814,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T143748Z" creationid="Ragnar-F" creationdate="20260911T143700Z">
         <seg>Hinzugefügt: Fehlererkennung für #Module, das via #Include wiederholt wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Added module search path and removed the "Lib" subdirectory from the default locations.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T183304Z" creationid="Ragnar-F" creationdate="20260911T183304Z">
+        <seg>Modulsuchpfad hinzugefügt und das Unterverzeichnis "Lib" aus den Standardorten entfernt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -75418,6 +75562,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Automatically adjusting the font of the script's main window.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T184931Z" creationid="Ragnar-F" creationdate="20260911T184931Z">
+        <seg>Automatische Anpassung der Schrift im Hauptfenster des Skripts.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Automatically adjusting the position, size and font size of GUI controls.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T184959Z" creationid="Ragnar-F" creationdate="20260911T184959Z">
+        <seg>Automatische Anpassung der Position, Größe und Schriftgröße von GUI-Steuerelementen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Automatically listen for a connection from the debugger engine, rather than waiting for the user to click &lt;e0&gt;Start Listening&lt;/e0&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171012T144139Z" creationid="Ragnar-F" creationdate="20140227T222051Z">
@@ -81146,6 +81306,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed #HotIf to affect only the current module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T182846Z" creationid="Ragnar-F" creationdate="20260911T182846Z">
+        <seg>Geändert: #HotIf beeinflusst jetzt nur das jeweils aktive Modul.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed #Import to recognize undeclared global variables.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T143513Z" creationid="Ragnar-F" creationdate="20260911T143513Z">
@@ -81322,6 +81490,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed Import to require a single identifier for module name if not quoted.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T183557Z" creationid="Ragnar-F" creationdate="20260911T183557Z">
+        <seg>Geändert: Import erfordert nun einen einzelnen Identifikator als Modulnamen, wenn nicht in Anführungszeichen gesetzt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed IsSet to permit an unset expression without an assignment.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T141157Z" creationid="Ragnar-F" creationdate="20260911T141157Z">
@@ -81346,6 +81522,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed TraySetIcon to update the icon of the script's main window.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T194933Z" creationid="Ragnar-F" creationdate="20260911T194933Z">
+        <seg>Geändert: TraySetIcon aktualisiert nun auch das Symbol im Hauptfenster des Skripts.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed Type to return "unset" if the parameter is omitted/unset.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T140806Z" creationid="Ragnar-F" creationdate="20260911T140806Z">
@@ -81366,6 +81550,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240605T124632Z" creationid="Ragnar-F" creationdate="20240605T124632Z">
         <seg>Geändert: VarUnset-Warnmeldung wurde geändert, um konsistent mit UnsetError zu sein.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed ahk_class to be case-insensitive.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T182506Z" creationid="Ragnar-F" creationdate="20260911T182506Z">
+        <seg>Geändert: ahk_class ist nun nicht-Groß-/Kleinschreibung-sensitiv.</seg>
       </tuv>
     </tu>
     <tu>
@@ -81482,6 +81674,23 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed text input collection and dead key handling.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T195058Z" creationid="Ragnar-F" creationdate="20260911T195058Z">
+        <seg>Geändert: Sammlung von Texteingaben und Behandlung von toten Tasten.
+</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed the &lt;a0&gt;default DPI awareness&lt;/a0&gt; mode from system to per-monitor v2.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T184738Z" creationid="Ragnar-F" creationdate="20260911T184738Z">
+        <seg>Geändert: Der Modus der &lt;a0&gt;standardmäßigen DPI-Sensitivität&lt;/a0&gt; ist nun "Pro-Bildschirm-v2" statt "System".</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed the &lt;enum&gt; pseudo-property to require __Enum.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240506T132035Z" creationid="Ragnar-F" creationdate="20240506T132035Z">
@@ -81502,6 +81711,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T142817Z" creationid="Ragnar-F" creationdate="20260911T142817Z">
         <seg>Geändert: Die Negation des RegExMatch-Operators wurde von &lt;c0&gt;~!=&lt;/c0&gt; zu &lt;c1&gt;!~=&lt;/c1&gt; geändert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed user-defined functions to permit optional parameters mid-list.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T182410Z" creationid="Ragnar-F" creationdate="20260911T182410Z">
+        <seg>Geändert: Benutzerdefinierte Funktionen erlauben nun optionale Parameter inmitten der Parameterliste.</seg>
       </tuv>
     </tu>
     <tu>
@@ -82054,6 +82271,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210212T091946Z" creationid="Ragnar-F" creationdate="20210212T091946Z">
         <seg>Ändert das Arbeitsverzeichnis für nachfolgende #Includes und FileInstalls.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changes to module support:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T183107Z" creationid="Ragnar-F" creationdate="20260911T183107Z">
+        <seg>Änderungen bei der Modulunterstützung:</seg>
       </tuv>
     </tu>
     <tu>
@@ -89678,6 +89903,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190930T073706Z" creationid="Ragnar-F" creationdate="20190930T073706Z">
         <seg>Tote Tasten werden als Texterzeuger eingestuft, obwohl sie in der Regel keinen unmittelbaren Effekt haben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Dead keys with the S and I InputHook options no longer affect input collection.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T195728Z" creationid="Ragnar-F" creationdate="20260911T195728Z">
+        <seg>Tote Tasten mit den InputHook-Optionen S und I haben keinen Einfluss mehr auf die Eingabeerfassung.</seg>
       </tuv>
     </tu>
     <tu>
@@ -99538,6 +99771,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed #DefaultReturn with nested functions or class var initializers.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T185851Z" creationid="Ragnar-F" creationdate="20260911T185519Z">
+        <seg>Behoben: #DefaultReturn in Verbindung mit verschachtelten Funktionen oder Initialisierungen von Klassenvariablen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed #Import in #Module AHK.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T094239Z" creationid="Ragnar-F" creationdate="20260911T094239Z">
@@ -99742,6 +99983,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T141659Z" creationid="Ragnar-F" creationdate="20260911T141659Z">
         <seg>Behoben: &lt;c0&gt;IsSet(p)&lt;/c0&gt; gibt nun 0 zurück, wenn p eine ungesetzte virtuelle Referenz ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;IsSet(v := a.b?)&lt;/c0&gt; and &lt;c1&gt;IsSet(v := f()?)&lt;/c1&gt; when v is a string.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T184126Z" creationid="Ragnar-F" creationdate="20260911T184126Z">
+        <seg>Behoben: &lt;c0&gt;IsSet(v := a.b?)&lt;/c0&gt; und &lt;c1&gt;IsSet(v := f()?)&lt;/c1&gt;, wenn v eine Zeichenkette ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100234,10 +100483,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed Gui DPI scaling prior to creation of window (e.g. for +MinSize).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T183757Z" creationid="Ragnar-F" creationdate="20260911T183757Z">
+        <seg>Behoben: Gui-DPI-Skalierung erfolgt nun vor Erstellung des Fensters (z.B. für +MinSize).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed Gui GetPos/GetClientPos when Gui has an owner window or +DPIScale.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240327T210009Z" creationid="Ragnar-F" creationdate="20240327T210009Z">
         <seg>Behoben: Gui GetPos/GetClientPos bei einer Gui mit einem übergeordneten Fenster oder +DPIScale.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed Gui default font to adjust automatically when DPI changes.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T184103Z" creationid="Ragnar-F" creationdate="20260911T184103Z">
+        <seg>Behoben: Die Gui-Standardschrift passt sich nun dynamisch an DPI-Änderungen an.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100254,6 +100519,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230918T161918Z" creationid="Ragnar-F" creationdate="20230918T161918Z">
         <seg>Behoben: Gui-Threads werden nun im Aufrufstapel des Debuggers angezeigt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed Gui to initialize to current DPI, not process-start DPI.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T183915Z" creationid="Ragnar-F" creationdate="20260911T183915Z">
+        <seg>Behoben: Gui initialisiert nun mit der aktuellen DPI, nicht mit der DPI zum Prozessstart.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100286,6 +100559,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260425T075147Z" creationid="Ragnar-F" creationdate="20260425T075147Z">
         <seg>Behoben: Das "Help Files"-Menü erscheint nun auf der Schaltfläche, nicht mehr beim Mauszeiger.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed HotIf(obj) not finding existing criterion.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T185326Z" creationid="Ragnar-F" creationdate="20260911T185326Z">
+        <seg>Behoben: HotIf(obj) findet nun vorhandene Kriterien.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100406,6 +100687,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230702T122730Z" creationid="Ragnar-F" creationdate="20230702T122730Z">
         <seg>Behoben: Menu Add überschrieb Menüpunkte, die mit Menu Insert angefügt wurden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed MinParams to account for mandatory parameters to the right of an optional parameter in ControlGetPos, ControlMove, ListViewGetContent and MenuSelect.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T182109Z" creationid="Ragnar-F" creationdate="20260911T182109Z">
+        <seg>Behoben: MinParams berücksichtigt nun Pflichtparameter, die rechts von einem optionalen Parameter in ControlGetPos, ControlMove, ListViewGetContent und MenuSelect stehen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100834,6 +101123,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed buffer overrun when RegExReplace callback returns a number/object.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T190349Z" creationid="Ragnar-F" creationdate="20260911T190349Z">
+        <seg>Behoben: Pufferüberlauf, wenn ein RegExReplace-Rückruf eine Zahl oder ein Objekt zurückgibt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed circular references preventing deletion of Struct.Ptr/Array classes.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T135115Z" creationid="Ragnar-F" creationdate="20260911T135115Z">
@@ -100951,6 +101248,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240605T131657Z" creationid="Ragnar-F" creationdate="20240605T131657Z">
         <seg>Behoben: Der Debugger löscht keine temporären Haltepunkte mehr, die bei der Auswertung von DBGp property_get oder context_get ignoriert werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed debugger to not interpret names starting with "inf"/"nan" as float.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T190157Z" creationid="Ragnar-F" creationdate="20260911T190157Z">
+        <seg>Behoben: Der Debugger interpretiert nun Namen, die mit "inf"/"nan" beginnen, nicht mehr als Float.</seg>
       </tuv>
     </tu>
     <tu>
@@ -101127,6 +101432,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260322T093548Z" creationid="Ragnar-F" creationdate="20260322T093548Z">
         <seg>Behoben: Das Auslösen-beim-Loslassen-Verhalten der neutralen Strg/Alt/Umschalt-Hotkeys funktioniert nun korrekt, wenn eine Taste-Oben-Variante eingeschaltet, aber durch #HotIf deaktiviert ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed function definition expressions in "single-line" hotkeys.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T194504Z" creationid="Ragnar-F" creationdate="20260911T194504Z">
+        <seg>Behoben: Funktionsdefinitionsausdrücke in "einzeiligen" Hotkeys.</seg>
       </tuv>
     </tu>
     <tu>
@@ -101347,6 +101660,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed named function hotkeys with parameter default expressions.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T185842Z" creationid="Ragnar-F" creationdate="20260911T185842Z">
+        <seg>Behoben: Benannte Funktions-Hotkeys in Verbindung mit Parameter-Standardausdrücken.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed navigation with Tab key in a Gui with a nested Gui (+Parent).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260425T070927Z" creationid="Ragnar-F" creationdate="20260425T070927Z">
@@ -101367,6 +101688,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240327T191552Z" creationid="Ragnar-F" creationdate="20240327T191552Z">
         <seg>Behoben: Neue Threads konnten eine Meldungsüberprüfung mit Critical nicht verhindern.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed non-raw hotstrings where both sides start with any of ^+!#{}.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T190039Z" creationid="Ragnar-F" creationdate="20260911T190039Z">
+        <seg>Behoben: Raw-lose Hotstrings, wo beide Seiten mit einem der Zeichen aus dem Set ^+!#{} beginnen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -101739,6 +102068,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed various Gui calculations to be per-monitor DPI-aware.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T183948Z" creationid="Ragnar-F" creationdate="20260911T183948Z">
+        <seg>Behoben: Diverse Gui-Berechnungen sind nun pro-Bildschirm-DPI-sensitiv.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed version selection GUI raising an error if Enter is pressed without selecting a version.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230623T183129Z" creationid="Ragnar-F" creationdate="20230623T183129Z">
@@ -101775,6 +102112,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260214T113934Z" creationid="Ragnar-F" creationdate="20260214T113934Z">
         <seg>Behebt einige Probleme, die Tab und Tab2 betreffen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixes some obscure issues and reduces the risk of affecting dead key handling by the active window.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T195621Z" creationid="Ragnar-F" creationdate="20260911T195621Z">
+        <seg>Behebt einige obskure Probleme und reduziert das Risiko, dass die Behandlung von toten Tasten durch das aktive Fenster beeinflusst werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -103743,6 +104088,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200701T082121Z" creationid="Ragnar-F" creationdate="20200701T082121Z">
         <seg>Einzelheiten finden Sie unter &lt;a0&gt;CoordMode&lt;/a0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For details, see &lt;a0&gt;DPIResize (Gui)&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T185214Z" creationid="Ragnar-F" creationdate="20260911T185214Z">
+        <seg>Einzelheiten finden Sie unter &lt;a0&gt;DPIResize (Gui)&lt;/a0&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -129756,6 +130109,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Implemented basic support for per-monitor DPI awareness, including:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T184851Z" creationid="Ragnar-F" creationdate="20260911T184851Z">
+        <seg>Implementiert: Grundlegende Unterstützung für Pro-Bildschirm-DPI-Sensitivität, einschließlich:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Implicit concatenation is also known as &lt;e0&gt;auto-concat&lt;/e0&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171228T004608Z" creationid="Ragnar-F" creationdate="20171228T004608Z">
@@ -131280,6 +131641,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221219T140519Z" creationid="Ragnar-F" creationdate="20221219T140519Z">
         <seg>Dieses Problem tritt häufig bei neuen Softwareversionen auf und verschwindet wieder, wenn die Version von mehreren Benutzern heruntergeladen wurde.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In other words, it returns the minimum required Length of the parameter list rather than the count of mandatory parameters before the first optional parameter.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T182326Z" creationid="Ragnar-F" creationdate="20260911T182326Z">
+        <seg>Anders ausgedrückt, MinParams gibt die minimale erforderliche Länge der Parameterliste, nicht bloß die Anzahl von Pflichtparametern vor dem ersten optionalen Parameter.</seg>
       </tuv>
     </tu>
     <tu>
@@ -145748,6 +146117,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Moved Props from Object.Prototype to Any.Prototoype and added Props function.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T182929Z" creationid="Ragnar-F" creationdate="20260911T182929Z">
+        <seg>Props wurde von Object.Prototype nach Any.Prototype verschoben und eine Props-Funktion hinzugefügt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Moved __Value definition from each Ptr class into Struct.Ptr, fixing memory usage.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T131432Z" creationid="Ragnar-F" creationdate="20260911T131324Z">
@@ -158772,6 +159149,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Optimized ProcessGetPath/WinGetProcessPath.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T182742Z" creationid="Ragnar-F" creationdate="20260911T182742Z">
+        <seg>Optimiert: ProcessGetPath/WinGetProcessPath.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Optimized allocation of cached COM property names for built-in IDispatch.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230702T123745Z" creationid="Ragnar-F" creationdate="20230702T123734Z">
@@ -158800,6 +159185,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230911T171907Z" creationid="Ragnar-F" creationdate="20230911T171907Z">
         <seg>Optimiert: Das automatische Escaping von Anführungszeichen und umgekehrten Häkchen in Fortsetzungsbereichen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Optimized window searches; see &lt;a0&gt;WinTitle - Performance&lt;/a0&gt; for details.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T182731Z" creationid="Ragnar-F" creationdate="20260911T182657Z">
+        <seg>Optimiert: Die Suche nach Fenstern; Einzelheiten finden Sie unter &lt;a0&gt;FensterTitel - Performanz&lt;/a0&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -159048,6 +159441,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20170721T142551Z" creationid="Ragnar-F" creationdate="20170721T142551Z">
         <seg>Andere interne Funktionen können dies nur, wenn &lt;a0&gt;DetectHiddenWindows&lt;/a0&gt; eingeschaltet ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Other changes applicable only to alpha users:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T183642Z" creationid="Ragnar-F" creationdate="20260911T183633Z">
+        <seg>Sonstige Änderungen, die nur für Alpha-Nutzer gelten:</seg>
       </tuv>
     </tu>
     <tu>
@@ -224208,6 +224609,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190222T115136Z" creationid="Ragnar-F" creationdate="20171118T111529Z">
         <seg>Der Gebrauch solcher Schriften stellt sicher, dass sie auf den meisten Betriebssystemen angezeigt werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Using the DPI of the GUI in font size calculations instead of system DPI.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T185151Z" creationid="Ragnar-F" creationdate="20260911T185151Z">
+        <seg>Verwendung der DPI der GUI anstelle der System-DPI bei der Schriftgrößenberechnung.</seg>
       </tuv>
     </tu>
     <tu>
