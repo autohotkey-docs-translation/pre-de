@@ -100250,6 +100250,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed errors like &lt;c0&gt;!a ?? b&lt;/c0&gt; and &lt;c1&gt;b + a ?? c&lt;/c1&gt; to be caught at load time.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T114823Z" creationid="Ragnar-F" creationdate="20260911T114823Z">
+        <seg>Behoben: Ausdrücke wie &lt;c0&gt;!a ?? b&lt;/c0&gt; und &lt;c1&gt;b + a ?? c&lt;/c1&gt; werden nun bereits beim Laden des Skripts abgefangen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed errors raised during evaluation of DllCall output args not transferring control correctly.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T114525Z" creationid="Ragnar-F" creationdate="20260911T114525Z">
