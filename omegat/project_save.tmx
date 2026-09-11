@@ -11142,6 +11142,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>2.1-alpha.31 - August 28, 2026</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T094120Z" creationid="Ragnar-F" creationdate="20260911T094120Z">
+        <seg>2.1-alpha.31 - 28. August 2026</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>2000</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171118T111755Z" creationid="Ragnar-F" creationdate="20171118T111755Z">
@@ -80938,6 +80946,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed export to be implied for names defined within a module (but imported names are still not exported by default).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T094416Z" creationid="Ragnar-F" creationdate="20260911T094416Z">
+        <seg>Geändert: Export für Namen, die innerhalb eines Moduls definiert sind, erfolgt nun implizit (aber importierte Namen werden standardmäßig weiterhin nicht exportiert).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed font to Segoe UI size 9, consistent with Dash.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230902T092718Z" creationid="Ragnar-F" creationdate="20230902T092718Z">
@@ -81042,6 +81058,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changes applicable only to alpha users:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T094146Z" creationid="Ragnar-F" creationdate="20260911T094146Z">
+        <seg>Änderungen, die nur für Alpha-Nutzer gelten:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changes array-in-array behaviour.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210212T112039Z" creationid="Ragnar-F" creationdate="20210212T112039Z">
@@ -81102,6 +81126,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231204T104509Z" creationid="Ragnar-F" creationdate="20231204T104509Z">
         <seg>Änderungen von v1.1 bis v2.0 | AutoHotkey v2</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changes from v2.0 to v2.1</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T094112Z" creationid="Ragnar-F" creationdate="20260911T094112Z">
+        <seg>Änderungen von v2.0 bis v2.1</seg>
       </tuv>
     </tu>
     <tu>
@@ -98962,6 +98994,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed #Import in #Module AHK.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T094239Z" creationid="Ragnar-F" creationdate="20260911T094239Z">
+        <seg>Behoben: #Import in #Module AHK.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed #Include to correctly "close" any built-in variable it reads (no known impact on real-world scripts).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240421T095801Z" creationid="Ragnar-F" creationdate="20240421T095801Z">
@@ -99086,6 +99126,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231223T110144Z" creationid="Ragnar-F" creationdate="20231223T110137Z">
         <seg>Behoben: &lt;c0&gt;ListView.Opt("NoSort")&lt;/c0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;Props(v)&lt;/c0&gt; to retain the value of v, not alias v.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T094733Z" creationid="Ragnar-F" creationdate="20260911T094733Z">
+        <seg>Behoben: &lt;c0&gt;Props(v)&lt;/c0&gt; behält nun den Wert von v bei, nicht Alias v.</seg>
       </tuv>
     </tu>
     <tu>
@@ -99466,6 +99514,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed GuiCtrl.OnMessage threads to not overrun the #MaxThreads limit.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T100549Z" creationid="Ragnar-F" creationdate="20260911T100549Z">
+        <seg>Behoben: GuiCtrl.OnMessage-Threads überschreiten nun nicht mehr das #MaxThreads-Limit.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed GuiFromHwnd crashing if passed another script's GUI window HWND.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260214T220021Z" creationid="Ragnar-F" creationdate="20260214T220021Z">
@@ -99730,6 +99786,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed Thread Priority &gt; 0 to block GuiCtrl.OnMessage threads.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T104351Z" creationid="Ragnar-F" creationdate="20260911T104351Z">
+        <seg>Behoben: Thread-Priorität &gt; 0 blockiert nun GuiCtrl.OnMessage-Threads.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed ToolTips intermittently appearing at the wrong position.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230904T091038Z" creationid="Ragnar-F" creationdate="20230101T133659Z">
@@ -99950,6 +100014,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260215T081634Z" creationid="Ragnar-F" creationdate="20260215T081634Z">
         <seg>Behoben: Kein Absturz mehr, wenn ListView die Sort-Option hat und Add mit weggelassener Spalte1 aufgerufen wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed crash when destructing boxed pointer with nested struct.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T100338Z" creationid="Ragnar-F" creationdate="20260911T100338Z">
+        <seg>Behoben: Kein Absturz mehr, wenn ein gekapselter Pointer mit einer verschachtelten Struktur zerstört wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100346,6 +100418,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed multi-level import causing unset to become "".</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T094926Z" creationid="Ragnar-F" creationdate="20260911T094926Z">
+        <seg>Behoben: Bei einem Multi-Level-Import wurde unset zu "" gemacht.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed navigation with Tab key in a Gui with a nested Gui (+Parent).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260425T070927Z" creationid="Ragnar-F" creationdate="20260425T070927Z">
@@ -100482,6 +100562,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed simple &lt;c0&gt;a := b&lt;/c0&gt; assignments where b is a virtual reference.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T100447Z" creationid="Ragnar-F" creationdate="20260911T100447Z">
+        <seg>Behoben: Einfache &lt;c0&gt;a := b&lt;/c0&gt;-Zuweisungen, wobei b eine virtuelle Referenz ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed some ambiguity with COM calls, such as &lt;c0&gt;x.y&lt;/c0&gt; acting as &lt;c1&gt;x.y()&lt;/c1&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230831T215005Z" creationid="Ragnar-F" creationdate="20230831T215005Z">
@@ -100510,6 +100598,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240327T190300Z" creationid="Ragnar-F" creationdate="20240327T190300Z">
         <seg>Behoben: Einige Probleme mit unterdrückten Alt/Strg/Umschalt/Win-Hotkeys, wie zum Beispiel:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed some output parameters incorrectly becoming unset when they should be "made blank".</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T094619Z" creationid="Ragnar-F" creationdate="20260911T094619Z">
+        <seg>Behoben: Einige Ausgabeparameter wurden fälschlicherweise "ungesetzt gemacht", obwohl sie eigentlich "leer gemacht" werden sollten.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100614,6 +100710,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260425T081735Z" creationid="Ragnar-F" creationdate="20260425T081735Z">
         <seg>Behoben: Timer unterbrachen eine MsgBox nach Beginn der Zeitüberschreitung, aber vor dem Anzeigen des Fensters, z.B. wenn &lt;c0&gt;SetTimer(MsgBox, -10)&lt;/c0&gt; unmittelbar vor &lt;c1&gt;MsgBox(1,,"T1")&lt;/c1&gt; verwendet wurde.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed trailing character in error message for unset return.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T095020Z" creationid="Ragnar-F" creationdate="20260911T095020Z">
+        <seg>Behoben: Folgezeichen in Fehlermeldung für unset return.</seg>
       </tuv>
     </tu>
     <tu>
@@ -102222,6 +102326,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210522T075127Z" creationid="Ragnar-F" creationdate="20210522T075127Z">
         <seg>Handelt es sich um eine Integer-ID, muss der Ressourcenname ein Rautezeichen (#) gefolgt von einer Dezimalzahl sein.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For an overview of changes in major and minor releases, see the following:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T094100Z" creationid="Ragnar-F" creationdate="20260911T094100Z">
+        <seg>Nachfolgend ein Überblick über die Änderungen zwischen Haupt- und Nebenversionen:</seg>
       </tuv>
     </tu>
     <tu>
