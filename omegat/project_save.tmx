@@ -5926,6 +5926,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>#Module copies settings from previous module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T203323Z" creationid="Ragnar-F" creationdate="20260911T203323Z">
+        <seg>#Module kopiert Einstellungen vom vorherigen Modul.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>#NoEnv</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140305T161430Z" creationid="Ragnar-F" creationdate="20140305T161430Z">
@@ -11146,6 +11154,30 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230918T161602Z" creationid="Ragnar-F" creationdate="20230918T161602Z">
         <seg>2.0.9 - 17. September 2023</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.11 - May 24, 2024</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T205113Z" creationid="Ragnar-F" creationdate="20260911T205113Z">
+        <seg>2.1-alpha.11 - 24. Mai 2024</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.12 - May 26, 2024</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T203138Z" creationid="Ragnar-F" creationdate="20260911T203138Z">
+        <seg>2.1-alpha.12 - 26. Mai 2024</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.13 - June 5, 2024</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T201131Z" creationid="Ragnar-F" creationdate="20260911T201131Z">
+        <seg>2.1-alpha.13 - 5. Juni 2024</seg>
       </tuv>
     </tu>
     <tu>
@@ -43138,6 +43170,38 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;c0&gt;#Warn Mode&lt;/c0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T203421Z" creationid="Ragnar-F" creationdate="20260911T203414Z">
+        <seg>&lt;c0&gt;#Warn Modus&lt;/c0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c0&gt;#Warn Type, Mode&lt;/c0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T203405Z" creationid="Ragnar-F" creationdate="20260911T203325Z">
+        <seg>&lt;c0&gt;#Warn Typ, Modus&lt;/c0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c0&gt;#Warn Type[, On]&lt;/c0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T204321Z" creationid="Ragnar-F" creationdate="20260911T204311Z">
+        <seg>&lt;c0&gt;#Warn Typ[, On]&lt;/c0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c0&gt;#Warn&lt;/c0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T204426Z" creationid="Ragnar-F" creationdate="20260911T204426Z">
+        <seg>&lt;c0&gt;#Warn&lt;/c0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;c0&gt;$(FileDir)&lt;/c0&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210211T231438Z" creationid="Ragnar-F" creationdate="20210211T231438Z">
@@ -67610,6 +67674,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Added &lt;a0&gt;Modules&lt;/a0&gt;, &lt;a1&gt;#Module&lt;/a1&gt;, &lt;a2&gt;#Import&lt;/a2&gt; and Export.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T205142Z" creationid="Ragnar-F" creationdate="20260911T205142Z">
+        <seg>Hinzugefügt: &lt;a0&gt;Module&lt;/a0&gt;, &lt;a1&gt;#Module&lt;/a1&gt;, &lt;a2&gt;#Import&lt;/a2&gt; und Export.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Added &lt;a0&gt;SoundGetInterface&lt;/a0&gt; for retrieving COM interfaces.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210705T183826Z" creationid="Ragnar-F" creationdate="20210705T183826Z">
@@ -67750,6 +67822,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T141255Z" creationid="Ragnar-F" creationdate="20260911T141255Z">
         <seg>Hinzugefügt: Struct-Schlüsselwort und -Klasse.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Added a warning for UTF-8 decoding errors in script files.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T201423Z" creationid="Ragnar-F" creationdate="20260911T201423Z">
+        <seg>Hinzugefügt: Es wird nun gewarnt, wenn UTF-8-Dekodierungsfehler in Skriptdateien auftreten.</seg>
       </tuv>
     </tu>
     <tu>
@@ -81266,6 +81346,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Chained dead keys are supported up to 3 dead keys in sequence.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T200155Z" creationid="Ragnar-F" creationdate="20260911T200155Z">
+        <seg>Verkettete tote Tasten werden unterstützt, bis zu 3 tote Tasten in Folge.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Change</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210301T091739Z" creationid="Ragnar-F" creationdate="20210301T091739Z">
@@ -81498,6 +81586,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed InputHook handling of {dead key}{BS} so BS cancels out dead key.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T200623Z" creationid="Ragnar-F" creationdate="20260911T200623Z">
+        <seg>Geändert: InputHook behandelt {tote Taste}{BS} nun so, dass BS (Backspace) die tote Taste aufhebt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed IsSet to permit an unset expression without an assignment.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T141157Z" creationid="Ragnar-F" creationdate="20260911T141157Z">
@@ -81562,10 +81658,34 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed debugger classname attribute of Prototype objects to include the class name (e.g. "SomeClass.Prototype").</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T201946Z" creationid="Ragnar-F" creationdate="20260911T201946Z">
+        <seg>Geändert: Das Debugger-Attribut "classname" von Prototype-Objekten enthält nun den Klassennamen (z.B. "SomeClass.Prototype").</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed debugger to ignore errors thrown by __Enum (treat as no items).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240506T132006Z" creationid="Ragnar-F" creationdate="20240506T132006Z">
         <seg>Geändert: Der Debugger ignoriert nun Fehler, die durch __Enum ausgelöst werden (als keine Elemente behandeln).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed debugger to list properties defined by the Prototype for non-Object classes such as VarRef and ComValue.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T201758Z" creationid="Ragnar-F" creationdate="20260911T201758Z">
+        <seg>Geändert: Der Debugger listet nun auch Eigenschaften auf, die vom Prototype für Object-fremde Klassen wie VarRef und ComValue definiert werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed debugger to never list the natively-defined __Class or Base properties.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T202035Z" creationid="Ragnar-F" creationdate="20260911T202035Z">
+        <seg>Geändert: Der Debugger listet die nativ definierten Eigenschaften __Class und Base nicht mehr auf.</seg>
       </tuv>
     </tu>
     <tu>
@@ -81626,6 +81746,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed how &lt;a0&gt;#Warn&lt;/a0&gt; settings are applied.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T203237Z" creationid="Ragnar-F" creationdate="20260911T203237Z">
+        <seg>Geändert: Die Art und Weise, wie &lt;a0&gt;#Warn&lt;/a0&gt;-Einstellungen angewendet werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed how key-up events are correlated to key-down events for the purpose of determining whether to suppress key-up.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260425T080015Z" creationid="Ragnar-F" creationdate="20260425T080015Z">
@@ -81676,8 +81804,8 @@
       <tuv lang="en">
         <seg>Changed text input collection and dead key handling.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T195058Z" creationid="Ragnar-F" creationdate="20260911T195058Z">
-        <seg>Geändert: Sammlung von Texteingaben und Behandlung von toten Tasten.
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T195745Z" creationid="Ragnar-F" creationdate="20260911T195058Z">
+        <seg>Geändert: Texteingabeerfassung und Behandlung von toten Tasten.
 </seg>
       </tuv>
     </tu>
@@ -99835,6 +99963,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed #Warn LocalSameAsGlobal causing a load-time crash.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T204832Z" creationid="Ragnar-F" creationdate="20260911T204832Z">
+        <seg>Behoben: #Warn LocalSameAsGlobal verursacht keinen Ladezeitabsturz mehr.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed #include &lt;&gt; error messages to show "Script library" rather than "Function library".</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230904T091101Z" creationid="Ragnar-F" creationdate="20230101T133916Z">
@@ -100131,10 +100267,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;class A extends B&lt;/c0&gt; failing to resolve B, depending on order.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T202154Z" creationid="Ragnar-F" creationdate="20260911T202154Z">
+        <seg>Behoben: &lt;c0&gt;class A extends B&lt;/c0&gt; löst B nun zuverlässig auf, unabhängig von der Reihenfolge.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed &lt;c0&gt;global g&lt;/c0&gt; in a function conflicting with prior &lt;c1&gt;export global g&lt;/c1&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T132056Z" creationid="Ragnar-F" creationdate="20260911T132056Z">
         <seg>Behoben: &lt;c0&gt;global g&lt;/c0&gt; innerhalb einer Funktion steht nicht mehr im Konflikt mit einem vorherigen &lt;c1&gt;export global g&lt;/c1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;import x&lt;/c0&gt; to add x to the module list when loading from file.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T201128Z" creationid="Ragnar-F" creationdate="20260911T201128Z">
+        <seg>Behoben: &lt;c0&gt;import x&lt;/c0&gt; fügt x nun zur Modulliste hinzu, wenn aus einer Datei geladen wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100995,6 +101147,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed __Set (broken by v2.1-alpha.10).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T205443Z" creationid="Ragnar-F" creationdate="20260911T205443Z">
+        <seg>Behoben: __Set (fehlerhaft seit v2.1-alpha.10).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed a bug where a key-down event is correctly suppressed by a hotkey, but sending an additional key-down with SendLevel &gt; 0 would prevent the subsequent key-up from being suppressed, even if the sent event is ignored due to #InputLevel.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230702T123416Z" creationid="Ragnar-F" creationdate="20230702T123416Z">
@@ -101131,6 +101291,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed built-in/wildcard imports in assume-global functions.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T205017Z" creationid="Ragnar-F" creationdate="20260911T205017Z">
+        <seg>Behoben: Interne Imports und Platzhalter-Imports in Assume-Global-Funktionen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed circular references preventing deletion of Struct.Ptr/Array classes.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T135115Z" creationid="Ragnar-F" creationdate="20260911T135115Z">
@@ -101244,6 +101412,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed debugger to not attempt evaluation of property getters directly on a Prototype.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T203133Z" creationid="Ragnar-F" creationdate="20260911T203133Z">
+        <seg>Behoben: Der Debugger versucht nicht mehr, Eigenschafts-Getter direkt auf einem Prototype auszuwerten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed debugger to not delete temporary breakpoints which are ignored while evaluating DBGp property_get or context_get.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240605T131657Z" creationid="Ragnar-F" creationdate="20240605T131657Z">
@@ -101308,6 +101484,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed dynamic references at the module level resolving incorrectly if the module is being executed earlier due to being imported by another module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T200954Z" creationid="Ragnar-F" creationdate="20260911T200954Z">
+        <seg>Behoben: Dynamische Referenzen auf Modulebene werden nicht mehr falsch aufgelöst, wenn das Modul aufgrund eines Imports durch ein anderes Modul früher ausgeführt wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed enumerator calls (For) treating implicitly returned "" as true.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260215T082228Z" creationid="Ragnar-F" creationdate="20260214T220219Z">
@@ -101320,6 +101504,15 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260215T081026Z" creationid="Ragnar-F" creationdate="20260215T081026Z">
         <seg>Behoben: Fehlerhafte &lt;c0&gt;Else&lt;/c0&gt;-Platzierung verursacht beim Laden keinen Absturz mehr, sondern erzeugt eine Fehlermeldung.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed error dialogs not showing vicinity lines.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T202523Z" creationid="Ragnar-F" creationdate="20260911T202523Z">
+        <seg>Behoben: Fehlerdialogfenster zeigten keine umgebenden Codezeilen an.
+</seg>
       </tuv>
     </tu>
     <tu>
@@ -101604,6 +101797,30 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed leak from virtual references which return objects.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T205323Z" creationid="Ragnar-F" creationdate="20260911T205257Z">
+        <seg>Behoben: Lecks durch virtuelle Referenzen, die Objekte zurückgeben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed leaks when the debugger enumerates properties.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T205606Z" creationid="Ragnar-F" creationdate="20260911T205606Z">
+        <seg>Behoben: Lecks beim Enumerieren von Eigenschaften im Debugger.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed load-time crash for &lt;c0&gt;#Include %A_TrayMenu%.ahk&lt;/c0&gt; (which is invalid).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T200837Z" creationid="Ragnar-F" creationdate="20260911T200837Z">
+        <seg>Behoben: &lt;c0&gt;#Include %A_TrayMenu%.ahk&lt;/c0&gt; (eigentlich ungültig) verursachte einen Ladezeitabsturz.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed load-time errors sent to stdout showing incorrect file/line number in some cases.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240530T113254Z" creationid="Ragnar-F" creationdate="20240530T113254Z">
@@ -101752,6 +101969,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230924T093358Z" creationid="Ragnar-F" creationdate="20230924T093358Z">
         <seg>Behoben: Vorherige Inkrementierung/Dekrementierung funktioniert nun auch mit verketteten Array-Indexierungen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed propagation of errors thrown when getting/setting a virtual reference.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T202946Z" creationid="Ragnar-F" creationdate="20260911T202946Z">
+        <seg>Behoben: Beim Abrufen/Setzen von virtuellen Referenzen werden geworfene Ausnahmen jetzt korrekt propagiert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -133729,6 +133954,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190923T171953Z" creationid="Ragnar-F" creationdate="20190923T171941Z">
         <seg>InputHook - Syntax &amp; Verwendung | AutoHotkey v2</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>InputHook M option now permits Numpad digits to be collected while Alt is held, and no longer contributes to Alt+nnnn input if the digit keys are suppressed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T200031Z" creationid="Ragnar-F" creationdate="20260911T200031Z">
+        <seg>Die InputHook-Option M ermöglicht nun die Erfassung von Ziffern des Ziffernblocks bei gedrückter Alt-Taste und wirkt sich nicht mehr auf die Alt+nnnn-Eingabe aus, wenn die Zifferntasten unterdrückt sind.</seg>
       </tuv>
     </tu>
     <tu>
@@ -251501,6 +251734,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>as before.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T204310Z" creationid="Ragnar-F" creationdate="20260911T203413Z">
+        <seg>Wie zuvor.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>assign an integer, such as &lt;c3&gt;vref[] := 0&lt;/c3&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230430T073306Z" creationid="Ragnar-F" creationdate="20210508T082949Z">
@@ -253433,6 +253674,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140310T150414Z" creationid="Ragnar-F" creationdate="20140310T150414Z">
         <seg>de</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>enables warning and uses program-default mode.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T204656Z" creationid="Ragnar-F" creationdate="20260911T204425Z">
+        <seg>Aktiviert Warnung und verwendet den programmweiten Standardmodus.</seg>
       </tuv>
     </tu>
     <tu>
@@ -258613,6 +258862,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>resets warnings to default (intended for use in a module).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T204611Z" creationid="Ragnar-F" creationdate="20260911T204611Z">
+        <seg>Setzt Warnungen auf Standard zurück (vorgesehen für die Verwendung in einem Modul).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>result := DllCall("CharLower", "&lt;s0&gt;&lt;u1&gt;Str&lt;/u1&gt;&lt;/s0&gt;", DllCall("CharUpper", "Str", MyVar, "&lt;s2&gt;&lt;u3&gt;Str&lt;/u3&gt;&lt;/s2&gt;"), "Str")</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190930T124339Z" creationid="Ragnar-F" creationdate="20190930T124339Z">
@@ -259657,6 +259914,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180410T200801Z" creationid="Ragnar-F" creationdate="20180410T200801Z">
         <seg>set {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>sets program-default reporting mode.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T204303Z" creationid="Ragnar-F" creationdate="20260911T203628Z">
+        <seg>Setzt den programmweiten Standardmodus.</seg>
       </tuv>
     </tu>
     <tu>
