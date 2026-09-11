@@ -7054,6 +7054,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>(Broken by v2.1-alpha.28)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T112019Z" creationid="Ragnar-F" creationdate="20260911T112019Z">
+        <seg>(fehlerhaft seit v2.1-alpha.28)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>(Class objects are used in place of constructor functions.)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190820T102049Z" creationid="Ragnar-F" creationdate="20190820T102049Z">
@@ -11138,6 +11146,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230918T161602Z" creationid="Ragnar-F" creationdate="20230918T161602Z">
         <seg>2.0.9 - 17. September 2023</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.30 - May 17, 2026</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T104404Z" creationid="Ragnar-F" creationdate="20260911T104404Z">
+        <seg>2.1-alpha.30 - 17. Mai 2026</seg>
       </tuv>
     </tu>
     <tu>
@@ -67386,6 +67402,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Added "void" return type for DllCall, ComCall and CallbackCreate.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T104506Z" creationid="Ragnar-F" creationdate="20260911T104506Z">
+        <seg>Hinzugefügt: Rückgabetyp "void" für DllCall, ComCall und CallbackCreate.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Added &lt;a0&gt;SoundGetInterface&lt;/a0&gt; for retrieving COM interfaces.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210705T183826Z" creationid="Ragnar-F" creationdate="20210705T183826Z">
@@ -99146,6 +99170,38 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;StrGet(x, 0)&lt;/c0&gt; returning a number.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T112721Z" creationid="Ragnar-F" creationdate="20260911T112721Z">
+        <seg>Behoben: &lt;c0&gt;StrGet(x, 0)&lt;/c0&gt; gab eine Zahl zurück.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;String(x)&lt;/c0&gt; crashing when &lt;c1&gt;x.ToString()&lt;/c1&gt; returns no value.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T112142Z" creationid="Ragnar-F" creationdate="20260911T112142Z">
+        <seg>Behoben: &lt;c0&gt;String(x)&lt;/c0&gt; verursacht keinen Absturz mehr, wenn &lt;c1&gt;x.ToString()&lt;/c1&gt; keinen Wert zurückgibt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;Struct.Ptr()&lt;/c0&gt; crashing (only with the Struct class itself).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T112913Z" creationid="Ragnar-F" creationdate="20260911T112913Z">
+        <seg>Behoben: &lt;c0&gt;Struct.Ptr()&lt;/c0&gt; verursacht keinen Absturz mehr (nur mit der Struct-Klasse selbst).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;StructClass.Ptr().__Value := unset&lt;/c0&gt; to be permitted.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T112754Z" creationid="Ragnar-F" creationdate="20260911T112754Z">
+        <seg>Behoben: &lt;c0&gt;StructClass.Ptr().__Value := unset&lt;/c0&gt; ist nun zulässig.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed &lt;c0&gt;TraySetIcon("HBITMAP:" handle)&lt;/c0&gt; without *.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T060103Z" creationid="Ragnar-F" creationdate="20260903T060103Z">
@@ -99234,6 +99290,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;x?.%y%&lt;/c0&gt; to not be interpreted as a syntax error.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T112222Z" creationid="Ragnar-F" creationdate="20260911T112222Z">
+        <seg>Behoben: &lt;c0&gt;x?.%y%&lt;/c0&gt; wird nun nicht mehr als Syntaxfehler interpretiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed &lt;c0&gt;~RAlt &amp; &lt;::&lt;/c0&gt; causing &lt;c1&gt;RAlt::&lt;/c1&gt; to fire on release despite &lt;c2&gt;~&lt;/c2&gt; (and likewise with other L/R modifier keys).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260215T074750Z" creationid="Ragnar-F" creationdate="20260215T074750Z">
@@ -99310,6 +99374,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260322T072839Z" creationid="Ragnar-F" creationdate="20260322T072828Z">
         <seg>Behoben: CallbackCreate validiert nun ParamAnzahl.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed Class objects not allowing Base assignment.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T112003Z" creationid="Ragnar-F" creationdate="20260911T112003Z">
+        <seg>Behoben: Klassenobjekte erlauben nun Base-Zuweisung.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100178,6 +100250,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed errors raised during evaluation of DllCall output args not transferring control correctly.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T114525Z" creationid="Ragnar-F" creationdate="20260911T114525Z">
+        <seg>Behoben: Fehler bei der Auswertung von DllCall-Ausgabeparametern führten zu einer fehlerhaften Weitergabe des Kontrollflusses.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed errors thrown by a ComObject wrapper not being propagated correctly if it is called via an object/COM.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230702T122253Z" creationid="Ragnar-F" creationdate="20230702T122253Z">
@@ -100742,6 +100822,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230623T183129Z" creationid="Ragnar-F" creationdate="20230623T183129Z">
         <seg>Behoben: Die Versionsauswahl-GUI verursachte einen Fehler, wenn Enter gedrückt wurde, ohne eine Version auszuwählen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed virtual ref assignments to permit unset.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T113044Z" creationid="Ragnar-F" creationdate="20260911T113044Z">
+        <seg>Behoben: Zuweisungen virtueller Referenzen erlauben nun unset.</seg>
       </tuv>
     </tu>
     <tu>
@@ -166619,6 +166707,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Removed &lt;c0&gt;a?.()&lt;/c0&gt; and &lt;c1&gt;a?.[]&lt;/c1&gt;; use &lt;c2&gt;(a?)()&lt;/c2&gt; and &lt;c3&gt;(a?)[]&lt;/c3&gt; instead.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T104558Z" creationid="Ragnar-F" creationdate="20260911T104558Z">
+        <seg>Entfernt: &lt;c0&gt;a?.()&lt;/c0&gt; und &lt;c1&gt;a?.[]&lt;/c1&gt;; verwenden Sie stattdessen &lt;c2&gt;(a?)()&lt;/c2&gt; und &lt;c3&gt;(a?)[]&lt;/c3&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Removed &lt;e0&gt;EventInfo&lt;/e0&gt; parameter (use a &lt;a1&gt;closure&lt;/a1&gt; or &lt;a2&gt;bound function&lt;/a2&gt; instead).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231204T112328Z" creationid="Ragnar-F" creationdate="20231204T112328Z">
@@ -166667,6 +166763,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Removed property type strings (i32, u32, etc.).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T104801Z" creationid="Ragnar-F" creationdate="20260911T104801Z">
+        <seg>Entfernt: Eigenschaftstypen-Zeichenketten (i32, u32 usw.).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Removed the &lt;e1&gt;Label&lt;/e1&gt; parameter and related functionality.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231126T150859Z" creationid="Ragnar-F" creationdate="20210725T064552Z">
@@ -166687,6 +166791,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260322T071711Z" creationid="Ragnar-F" creationdate="20260322T071711Z">
         <seg>Entfernt: Es wurde ein undokumentierter Effekt entfernt, den ein Hotkey mit dem &lt;/&gt;-Präfix auf die entsprechende Modifikatortaste hatte; z.B. bewirkte &lt;c0&gt;&lt;^a::&lt;/c0&gt;, dass &lt;c1&gt;LCtrl::&lt;/c1&gt; beim Loslassen ausgelöst wurde, was inkonsistent mit der &lt;a2&gt;Dokumentation&lt;/a2&gt; war.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Removed typeless typed properties (size specifier without a class).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T104855Z" creationid="Ragnar-F" creationdate="20260911T104855Z">
+        <seg>Entfernt: Typenlose typisierte Eigenschaften (Größenspezifikation ohne Klasse).</seg>
       </tuv>
     </tu>
     <tu>
