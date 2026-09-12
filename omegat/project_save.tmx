@@ -11334,6 +11334,38 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>2.1-alpha.5 - September 17, 2023</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T064541Z" creationid="Ragnar-F" creationdate="20260912T064541Z">
+        <seg>2.1-alpha.5 - 17. September 2023</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.6 - September 20, 2023</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T063957Z" creationid="Ragnar-F" creationdate="20260912T063957Z">
+        <seg>2.1-alpha.6 - 20. September 2023</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.7 - October 7, 2023</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T062427Z" creationid="Ragnar-F" creationdate="20260912T062427Z">
+        <seg>2.1-alpha.7 - 7. Oktober 2023</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.8 - December 23, 2023</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T060858Z" creationid="Ragnar-F" creationdate="20260912T060858Z">
+        <seg>2.1-alpha.8 - 23. Dezember 2023</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>2.1-alpha.9 - March 24, 2024</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260912T053941Z" creationid="Ragnar-F" creationdate="20260912T053941Z">
@@ -45146,6 +45178,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;c0&gt;return (){&lt;/c0&gt; being interpreted like &lt;c1&gt;return return (){&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T064340Z" creationid="Ragnar-F" creationdate="20260912T064340Z">
+        <seg>&lt;c0&gt;return (){&lt;/c0&gt; wurde wie &lt;c1&gt;return return (){&lt;/c1&gt; interpretiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;c0&gt;s&lt;/c0&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20141227T205007Z" creationid="Ragnar-F" creationdate="20141227T205007Z">
@@ -67786,6 +67826,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Added A_KeybdHookInstalled and A_MouseHookInstalled.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T062612Z" creationid="Ragnar-F" creationdate="20260912T062612Z">
+        <seg>Hinzugefügt: A_KeybdHookInstalled und A_MouseHookInstalled.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Added AutoHotkey syntax highlighting.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171012T143323Z" creationid="Ragnar-F" creationdate="20140227T222038Z">
@@ -67798,6 +67846,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T141216Z" creationid="Ragnar-F" creationdate="20260911T141216Z">
         <seg>Hinzugefügt: DefineProp-Funktion.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Added GuiControl.Prototype.OnMessage, utilizing window subclassing.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T063018Z" creationid="Ragnar-F" creationdate="20260912T063018Z">
+        <seg>Hinzugefügt: GuiControl.Prototype.OnMessage, das Fenster-Subclassing verwendet.</seg>
       </tuv>
     </tu>
     <tu>
@@ -67846,6 +67902,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T183047Z" creationid="Ragnar-F" creationdate="20260911T183047Z">
         <seg>Hinzugefügt: RTL-Option für &lt;a0&gt;Menu.Prototype.Add&lt;/a0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Added SetCue method for Edit and ComboBox controls.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T062500Z" creationid="Ragnar-F" creationdate="20260912T062500Z">
+        <seg>Hinzugefügt: SetCue-Methode für Edit- und ComboBox-Steuerelemente.</seg>
       </tuv>
     </tu>
     <tu>
@@ -67950,6 +68014,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230709T073010Z" creationid="Ragnar-F" creationdate="20230709T073010Z">
         <seg>Hinzugefügt: Unterstützung für Multi-Variablen-Enumeratoren (For-Schleifen) mit IDispatch-gewrappten AutoHotkey-Objekten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Added support for using WheelUp, WheelDown, WheelLeft and WheelRight on either side of a remapping.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T065316Z" creationid="Ragnar-F" creationdate="20260912T065316Z">
+        <seg>Hinzugefügt: WheelUp, WheelDown, WheelLeft und WheelRight können nun auf beiden Seiten einer Neubelegung verwendet werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -81506,6 +81578,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed &lt;c0&gt;Ctrl::Alt&lt;/c0&gt; to not send an unsuppressed &lt;c1&gt;{Ctrl up}&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T064701Z" creationid="Ragnar-F" creationdate="20260912T064701Z">
+        <seg>Geändert: &lt;c0&gt;Ctrl::Alt&lt;/c0&gt; sendet nun kein nicht-unterdrücktes &lt;c1&gt;{Ctrl up}&lt;/c1&gt; mehr.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed &lt;c0&gt;DllCall(F, S, unset)&lt;/c0&gt; to pass &lt;c1&gt;S()&lt;/c1&gt; itself if it has no __value setter.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T125836Z" creationid="Ragnar-F" creationdate="20260911T125836Z">
@@ -81578,6 +81658,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed FileCreateShortcut's ShortcutKey parameter to permit the &lt;c0&gt;^&lt;/c0&gt;, &lt;c1&gt;+&lt;/c1&gt; and &lt;c2&gt;!&lt;/c2&gt; modifiers.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T062545Z" creationid="Ragnar-F" creationdate="20260912T062545Z">
+        <seg>Geändert: Der Tastenkürzel-Parameter von FileCreateShortcut erlaubt nun die Modifikatoren &lt;c0&gt;^&lt;/c0&gt;, &lt;c1&gt;+&lt;/c1&gt; und &lt;c2&gt;!&lt;/c2&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed GetOwnPropDesc to return classes for numeric types.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T133806Z" creationid="Ragnar-F" creationdate="20260911T133806Z">
@@ -81638,6 +81726,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T141157Z" creationid="Ragnar-F" creationdate="20260911T141157Z">
         <seg>Geändert: IsSet erlaubt nun ein unset-Ausdruck ohne Zuweisung.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed Menu ToggleCheck/ToggleEnable to return the new state.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T063126Z" creationid="Ragnar-F" creationdate="20260912T063126Z">
+        <seg>Geändert: Menu ToggleCheck/ToggleEnable geben nun den neuen Zustand zurück.</seg>
       </tuv>
     </tu>
     <tu>
@@ -81919,6 +82015,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260912T053034Z" creationid="Ragnar-F" creationdate="20260912T053034Z">
         <seg>Geändert: DBGp verwendet jetzt standardmäßig max_children=1000 und max_depth=1.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed the following to use ASCII-only case insensitivity instead of locale case insensitivity:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T062144Z" creationid="Ragnar-F" creationdate="20260912T061820Z">
+        <seg>Geändert: Folgende sind nun nicht-Groß-/Kleinschreibung-sensitiv auf ASCII-Basis, nicht mehr gemäß den aktuellen Sprach- und Regionseinstellungen des Benutzers:</seg>
       </tuv>
     </tu>
     <tu>
@@ -83895,6 +83999,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230906T132513Z" creationid="Ragnar-F" creationdate="20210307T130627Z">
         <seg>Closures können auch mit internen Funktionen wie &lt;a0&gt;SetTimer&lt;/a0&gt; oder &lt;a1&gt;Hotkey&lt;/a1&gt; verwendet werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Closures not working inside function definition expressions.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T064412Z" creationid="Ragnar-F" creationdate="20260912T064412Z">
+        <seg>Closures funktionierten nicht innerhalb von Funktionsdefinitionsausdrücken.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100507,6 +100619,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed A_ThisFunc and dynamic references in parameter default expressions.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T062421Z" creationid="Ragnar-F" creationdate="20260912T062421Z">
+        <seg>Behoben: A_ThisFunc und dynamische Referenzen in Parameter-Standardausdrücken.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed AltTab-related load-time errors to be consistent with other errors.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230702T122105Z" creationid="Ragnar-F" creationdate="20230702T122105Z">
@@ -100815,6 +100935,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T183915Z" creationid="Ragnar-F" creationdate="20260911T183915Z">
         <seg>Behoben: Gui initialisiert nun mit der aktuellen DPI, nicht mit der DPI zum Prozessstart.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed Gui.Prototype.OnMessage to set A_EventInfo the same as OnMessage.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T063828Z" creationid="Ragnar-F" creationdate="20260912T063828Z">
+        <seg>Behoben: Gui.Prototype.OnMessage setzt nun A_EventInfo, analog zu OnMessage.</seg>
       </tuv>
     </tu>
     <tu>
@@ -101347,6 +101475,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed a reference counting error in construction of nested structs.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T070341Z" creationid="Ragnar-F" creationdate="20260912T070341Z">
+        <seg>Behoben: Ein Referenzzählungsfehler beim Konstruieren verschachtelter Strukturen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed a reference counting error with multi-level function nesting.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231223T105927Z" creationid="Ragnar-F" creationdate="20231223T105927Z">
@@ -101435,6 +101571,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed bugs added by v2.1-alpha.5:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T064137Z" creationid="Ragnar-F" creationdate="20260912T064137Z">
+        <seg>Behoben: Fehler, die mit v2.1-alpha.5 dazukamen:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed built-in/wildcard imports in assume-global functions.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T205017Z" creationid="Ragnar-F" creationdate="20260911T205017Z">
@@ -101479,6 +101623,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260322T101124Z" creationid="Ragnar-F" creationdate="20260322T101124Z">
         <seg>Behoben: Fehlerhafte Verarbeitung anführungszeichenloser Fortsetzungsbereiche mit Leerraumzeichen am Ende.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed crash on load if the first class var initializer uses &lt;c0&gt;=&gt;&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T063949Z" creationid="Ragnar-F" creationdate="20260912T063949Z">
+        <seg>Behoben: Kein Absturz mehr beim Laden, wenn die erste Initialisierung einer Klassenvariable &lt;c0&gt;=&gt;&lt;/c0&gt; verwendet.</seg>
       </tuv>
     </tu>
     <tu>
@@ -159614,6 +159766,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Optimized auto-replace hotstrings to avoid retyping an identical leading part, where feasible.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T061118Z" creationid="Ragnar-F" creationdate="20260912T061118Z">
+        <seg>Optimiert: Automatisch-ersetzende Hotstrings vermeiden nun nach Möglichkeit das erneute Tippen eines identischen führenden Teils.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Optimized code size.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122410Z" creationid="Ragnar-F" creationdate="20260911T122410Z">
@@ -159626,6 +159786,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231028T100748Z" creationid="Ragnar-F" creationdate="20230101T134132Z">
         <seg>Optimiert: Konvertierung von DllCall-Typnamen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Optimized ternary by removing a redundant check for numericness.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T070109Z" creationid="Ragnar-F" creationdate="20260912T070109Z">
+        <seg>Optimiert: Beim ternären Operator wurde eine überflüssige Prüfung entfernt, ob ein Wert eine Zahl ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -168690,6 +168858,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T141543Z" creationid="Ragnar-F" creationdate="20260911T141543Z">
         <seg>Entfernt: StructFromPtr.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Removed a length limitation for parameter default strings (but not expressions).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T070137Z" creationid="Ragnar-F" creationdate="20260912T065501Z">
+        <seg>Entfernt: Ein Längenlimit für Parameter-Standardzeichenketten (aber nicht für Ausdrücke).</seg>
       </tuv>
     </tu>
     <tu>
@@ -183386,6 +183562,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230430T073306Z" creationid="Ragnar-F" creationdate="20171226T194348Z">
         <seg>Einige Funktionen könnten nur eine einfache Berechnung durchführen, während andere sofort sichtbare Effekte erzielen, wie z.B. das Verschieben eines Fensters.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Some functions not seeing variables which are created due to assume-global assignments.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T064538Z" creationid="Ragnar-F" creationdate="20260912T064538Z">
+        <seg>Einige Funktionen sahen Variablen nicht, die durch Assume-Global-Zuweisungen erstellt wurden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -215510,6 +215694,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This was originally intended to work around an issue with system handling of the modifier keys, but was superseded by a better workaround in v2.0.8.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T065210Z" creationid="Ragnar-F" creationdate="20260912T065210Z">
+        <seg>Dies war ursprünglich dazu gedacht, ein Problem bei der systeminternen Behandlung der Modifikatortasten zu umgehen, wurde jedoch in v2.0.8 von einem besseren Workaround abgelöst.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This was previously achieved by registering each AutoHotkey executable as a &lt;a0&gt;host app (IsHostApp)&lt;/a0&gt;, but this approach has limitations, and becomes less manageable when multiple versions can be installed.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231120T130423Z" creationid="Ragnar-F" creationdate="20220605T113855Z">
@@ -224770,6 +224962,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20170514T193850Z" creationid="Ragnar-F" creationdate="20170514T193850Z">
         <seg>UseTab</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>UseTab method (excluding Exact mode, which was already ASCII-only), Choose method and Text property (Tab control); Add method (Menu).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T062003Z" creationid="Ragnar-F" creationdate="20260912T062003Z">
+        <seg>UseTab-Methode (mit Ausnahme des VollNameVergleich-Modus, der bereits ausschließlich ASCII-basiert war), Choose-Methode und Text-Eigenschaft (Tab-Steuerelement); Add-Methode (Menu).</seg>
       </tuv>
     </tu>
     <tu>
@@ -250326,6 +250526,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>[PR #310]</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T062546Z" creationid="Ragnar-F" creationdate="20260912T062546Z">
+        <seg>[PR #310]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>[PR #315]</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T062501Z" creationid="Ragnar-F" creationdate="20260912T062501Z">
+        <seg>[PR #315]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>[PR #318]</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230623T170122Z" creationid="Ragnar-F" creationdate="20230623T170122Z">
@@ -250338,6 +250554,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230623T170521Z" creationid="Ragnar-F" creationdate="20230623T170521Z">
         <seg>[PR #323]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>[PR #326]</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T062613Z" creationid="Ragnar-F" creationdate="20260912T062613Z">
+        <seg>[PR #326]</seg>
       </tuv>
     </tu>
     <tu>
