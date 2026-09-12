@@ -45354,6 +45354,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;c0&gt;x::y(h?){&lt;/c0&gt; was implicitly permitted but was not behaving intuitively; it is now interpreted as though &lt;c1&gt;y&lt;/c1&gt; was on a new line.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T160446Z" creationid="Ragnar-F" creationdate="20260912T160446Z">
+        <seg>Geändert: &lt;c0&gt;x::y(h?){&lt;/c0&gt; wurde zwar implizit zugelassen, verhielt sich aber nicht intuitiv; es wird nun so interpretiert, als stünde &lt;c1&gt;y&lt;/c1&gt; auf einer neuen Zeile.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;c0&gt;x&lt;/c0&gt; or &lt;c1&gt;X&lt;/c1&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20141227T212025Z" creationid="Ragnar-F" creationdate="20141227T212017Z">
@@ -102069,6 +102077,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed issues with function definition expressions.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T154641Z" creationid="Ragnar-F" creationdate="20260912T154641Z">
+        <seg>Behoben: Probleme mit Funktionsdefinitionsausdrücken.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed key-up erroneously being suppressed after key-repeat presses it down in some cases.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20250125T110943Z" creationid="Ragnar-F" creationdate="20250125T110943Z">
@@ -111457,6 +111473,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171228T154013Z" creationid="Ragnar-F" creationdate="20171228T144652Z">
         <seg>Funktionsaufrufe wie &lt;c0&gt;MeineFunk(Params)&lt;/c0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Function definitions beginning within a fat arrow function or parameter initializer were incorrectly defined in the outer scope.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T160718Z" creationid="Ragnar-F" creationdate="20260912T160718Z">
+        <seg>Funktionsdefinitionen, die innerhalb einer Fat-Arrow-Funktion oder Parameterinitialisierung beginnen, wurden fälschlicherweise im äußeren Gültigkeitsbereich definiert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -175114,6 +175138,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230825T083938Z" creationid="Ragnar-F" creationdate="20230621T042550Z">
         <seg>Skriptcompilerdirektiven ermöglichen es dem Benutzer, genau anzugeben, wie ein Skript kompiliert werden soll.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Script failing to load if the function contains blocks.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T154755Z" creationid="Ragnar-F" creationdate="20260912T154755Z">
+        <seg>Behoben: Skript konnte nicht geladen werden, wenn die Funktion Blöcke enthielt.</seg>
       </tuv>
     </tu>
     <tu>
