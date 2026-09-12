@@ -11158,6 +11158,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>2.1-alpha.10 - May 7, 2024</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T050911Z" creationid="Ragnar-F" creationdate="20260912T050911Z">
+        <seg>2.1-alpha.10 - 7. Mai 2024</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>2.1-alpha.11 - May 24, 2024</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T205113Z" creationid="Ragnar-F" creationdate="20260911T205113Z">
@@ -11322,6 +11330,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T094120Z" creationid="Ragnar-F" creationdate="20260911T094120Z">
         <seg>2.1-alpha.31 - 28. August 2026</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.9 - March 24, 2024</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T053941Z" creationid="Ragnar-F" creationdate="20260912T053941Z">
+        <seg>2.1-alpha.9 - 24. März 2024</seg>
       </tuv>
     </tu>
     <tu>
@@ -67674,6 +67690,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Added &lt;a0&gt;Error.Prototype.Show(Mode?)&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T053113Z" creationid="Ragnar-F" creationdate="20260912T053057Z">
+        <seg>Hinzugefügt: &lt;a0&gt;Error.Prototype.Show(Modus?)&lt;/a0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Added &lt;a0&gt;Modules&lt;/a0&gt;, &lt;a1&gt;#Module&lt;/a1&gt;, &lt;a2&gt;#Import&lt;/a2&gt; and Export.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T205142Z" creationid="Ragnar-F" creationdate="20260911T205142Z">
@@ -67802,6 +67826,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Added Object.Prototype.Props(), which enumerates own and inherited properties.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T052338Z" creationid="Ragnar-F" creationdate="20260912T052338Z">
+        <seg>Hinzugefügt: Object.Prototype.Props(), das eigene und geerbte Eigenschaften enumeriert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Added Offset sub-parameter for DefineProp, to allow unions.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T133554Z" creationid="Ragnar-F" creationdate="20260911T133554Z">
@@ -67902,6 +67934,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T183304Z" creationid="Ragnar-F" creationdate="20260911T183304Z">
         <seg>Modulsuchpfad hinzugefügt und das Unterverzeichnis "Lib" aus den Standardorten entfernt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Added rudimentary struct pointers (&lt;a0&gt;StructFromPtr&lt;/a0&gt;).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T054010Z" creationid="Ragnar-F" creationdate="20260912T054010Z">
+        <seg>Hinzugefügt: Rudimentäre Struktur-Pointer (&lt;a0&gt;StructFromPtr&lt;/a0&gt;).</seg>
       </tuv>
     </tu>
     <tu>
@@ -81602,6 +81642,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed MouseGetPos to throw OSError if the mouse position cannot be determined.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T054111Z" creationid="Ragnar-F" creationdate="20260912T054111Z">
+        <seg>Geändert: MouseGetPos wirft nun einen OSError, wenn die Mausposition nicht ermittelt werden kann.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed RegExReplace to support binary zero in Replacement.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T052142Z" creationid="Ragnar-F" creationdate="20260912T052142Z">
+        <seg>Geändert: RegExReplace unterstützt nun binären Nullen im Ersatz-Parameter.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed StructClass.At() to permit StructClass to have no fields.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122355Z" creationid="Ragnar-F" creationdate="20260911T122355Z">
@@ -81614,6 +81670,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122332Z" creationid="Ragnar-F" creationdate="20260911T122332Z">
         <seg>Geändert: StructClass.Prototype ist nun schreibgeschützt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed Throw to be non-continuable as in v2.0.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T053934Z" creationid="Ragnar-F" creationdate="20260912T053934Z">
+        <seg>Geändert: Throw ist nun wieder nicht-fortsetzbar, wie bereits in v2.0.</seg>
       </tuv>
     </tu>
     <tu>
@@ -81646,6 +81710,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240605T124632Z" creationid="Ragnar-F" creationdate="20240605T124632Z">
         <seg>Geändert: VarUnset-Warnmeldung wurde geändert, um konsistent mit UnsetError zu sein.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed WinTitles with two different ahk_id values to yield no match.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T051738Z" creationid="Ragnar-F" creationdate="20260912T051738Z">
+        <seg>Geändert: FensterTitel mit zwei unterschiedlichen ahk_id-Werten findet nichts mehr.</seg>
       </tuv>
     </tu>
     <tu>
@@ -81754,6 +81826,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed how KeyOpt (InputHook) applies option removal for SC-based keys.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T051618Z" creationid="Ragnar-F" creationdate="20260912T051618Z">
+        <seg>Geändert: Die Art und Weise, wie KeyOpt (InputHook) das Entfernen von Optionen für SC-basierte Tasten anwendet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed how key-up events are correlated to key-down events for the purpose of determining whether to suppress key-up.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260425T080015Z" creationid="Ragnar-F" creationdate="20260425T080015Z">
@@ -81831,6 +81911,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230709T071919Z" creationid="Ragnar-F" creationdate="20230709T071919Z">
         <seg>Geändert: Die Reload-Schaltfläche in Fehler-/Warndialogfenstern schließt das Fenster nun explizit, auch dann, wenn die aktuelle Skriptinstanz nicht terminiert ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed the default DBGp max_children to 1000 and max_depth to 1.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T053034Z" creationid="Ragnar-F" creationdate="20260912T053034Z">
+        <seg>Geändert: DBGp verwendet jetzt standardmäßig max_children=1000 und max_depth=1.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100099,6 +100187,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;Class(X)&lt;/c0&gt; to not call __Init (inherited from X) on the new class.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T053331Z" creationid="Ragnar-F" creationdate="20260912T053331Z">
+        <seg>Behoben: &lt;c0&gt;Class(X)&lt;/c0&gt; ruft nicht mehr __Init (geerbt von X) bei der neuen Klasse auf.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed &lt;c0&gt;Default :&lt;/c0&gt; to not merge with the line below it.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230831T215331Z" creationid="Ragnar-F" creationdate="20230831T215331Z">
@@ -100127,6 +100223,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T184126Z" creationid="Ragnar-F" creationdate="20260911T184126Z">
         <seg>Behoben: &lt;c0&gt;IsSet(v := a.b?)&lt;/c0&gt; und &lt;c1&gt;IsSet(v := f()?)&lt;/c1&gt;, wenn v eine Zeichenkette ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;IsSet(x := y?)&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T053345Z" creationid="Ragnar-F" creationdate="20260912T053345Z">
+        <seg>Behoben: &lt;c0&gt;IsSet(x := y?)&lt;/c0&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100331,6 +100435,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;static var := unset&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T054127Z" creationid="Ragnar-F" creationdate="20260912T054117Z">
+        <seg>Behoben: &lt;c0&gt;static var := unset&lt;/c0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed &lt;c0&gt;struct&lt;/c0&gt;/&lt;c1&gt;class&lt;/c1&gt; validation of base class to not depend on ordering.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T140603Z" creationid="Ragnar-F" creationdate="20260911T140603Z">
@@ -100339,10 +100451,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;throw()&lt;/c0&gt; within Catch to re-throw.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T054202Z" creationid="Ragnar-F" creationdate="20260912T054202Z">
+        <seg>Behoben: &lt;c0&gt;throw()&lt;/c0&gt; innerhalb von Catch wirft nun erneut.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed &lt;c0&gt;x.y := unset&lt;/c0&gt; causing crashes or undefined behaviour.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230904T090455Z" creationid="Ragnar-F" creationdate="20230623T182345Z">
         <seg>Behoben: &lt;c0&gt;x.y := unset&lt;/c0&gt; führte zu Abstürzen oder undefiniertem Verhalten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;x.y() =&gt; z&lt;/c0&gt; to be recognized as a syntax error.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T053801Z" creationid="Ragnar-F" creationdate="20260912T053801Z">
+        <seg>Behoben: &lt;c0&gt;x.y() =&gt; z&lt;/c0&gt; wird nun als Syntaxfehler erkannt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100631,6 +100759,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T133028Z" creationid="Ragnar-F" creationdate="20260911T133028Z">
         <seg>Behoben: GUI-Steuerelement-Berechnungen verursachten in OS-Versionen älter als Windows 10 Version 1607 einen kritischen Fehler; z.B. &lt;c0&gt;Gui().AddButton()&lt;/c0&gt; ohne W-Option.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed Gui Control to pass itself (not the Gui) to message callbacks.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T053529Z" creationid="Ragnar-F" creationdate="20260912T053529Z">
+        <seg>Behoben: Gui-Steuerelemente übergeben nun sich selbst (nicht die Gui) an Meldungsrückrufen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100927,6 +101063,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T123723Z" creationid="Ragnar-F" creationdate="20260911T123723Z">
         <seg>Behoben: Die Ptr-Klasse wird nun gelöscht, wenn die Zielstruktur keine Felder hat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed RegEx callouts which lack a function name, such as &lt;c0&gt;(?C)&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T053729Z" creationid="Ragnar-F" creationdate="20260912T053729Z">
+        <seg>Behoben: RegEx-Callouts ohne Funktionsnamen, z.B. &lt;c0&gt;(?C)&lt;/c0&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -101388,6 +101532,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed crashing when block-end immediately follows If/Loop/etc.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T055117Z" creationid="Ragnar-F" creationdate="20260912T055117Z">
+        <seg>Behoben: Kein Absturz mehr, wenn ein Blockende direkt nach If/Loop/etc. folgt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed crashing when constructing an object which had a property of struct type redefined or deleted.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T060720Z" creationid="Ragnar-F" creationdate="20260912T060720Z">
+        <seg>Behoben: Kein Absturz mehr, wenn ein Objekt konstruiert wird, bei dem eine Eigenschaft vom Strukturtyp neu definiert oder gelöscht wurde.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed custom combo hotkeys with neutral modifiers (e.g. &lt;c0&gt;Alt &amp; Esc::&lt;/c0&gt;) [broken by v2.0.22].</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260427T100826Z" creationid="Ragnar-F" creationdate="20260425T081244Z">
@@ -101821,6 +101981,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed load-time detection of duplicate typed properties.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T060239Z" creationid="Ragnar-F" creationdate="20260912T060239Z">
+        <seg>Behoben: Ladezeiterkennung von doppelt typisierten Eigenschaften.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed load-time errors sent to stdout showing incorrect file/line number in some cases.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240530T113254Z" creationid="Ragnar-F" creationdate="20240530T113254Z">
@@ -101833,6 +102001,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240530T113805Z" creationid="Ragnar-F" creationdate="20240530T113805Z">
         <seg>Behoben: WindowSpy.ahk wird nun bei Installationen unter dem aktuellen Benutzer (Nicht-Admin) gefunden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed memory leaks during unsuccessful construction of struct classes.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T054810Z" creationid="Ragnar-F" creationdate="20260912T054810Z">
+        <seg>Behoben: Speicherlecks bei gescheiterter Konstruktion von Strukturklassen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -101917,10 +102093,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed non-struct objects to not be allocated data by default.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T054533Z" creationid="Ragnar-F" creationdate="20260912T054533Z">
+        <seg>Behoben: Für Nicht-Struktur-Objekte werden standardmäßig keine Daten mehr reserviert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed numeric literals ending with a dot to not cause line continuation.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230924T092624Z" creationid="Ragnar-F" creationdate="20230924T092624Z">
         <seg>Behoben: Direkt geschriebene Zahlen, die mit einem Punkt enden, bewirken keine Zeilenfortsetzung mehr.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed object never being deleted if a nested struct __Value was invoked.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T060847Z" creationid="Ragnar-F" creationdate="20260912T060847Z">
+        <seg>Behoben: Ein Objekt wurde nie gelöscht, wenn ein verschachtelter Struct-__Value indirekt aufgerufen wurde.</seg>
       </tuv>
     </tu>
     <tu>
@@ -130318,6 +130510,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Implemented &lt;a0&gt;virtual references&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T052245Z" creationid="Ragnar-F" creationdate="20260912T052245Z">
+        <seg>Implementiert: &lt;a0&gt;Virtuelle Referenzen&lt;/a0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Implemented &lt;c0&gt;#Import Export &lt;i1&gt;ModuleName&lt;/i1&gt; {*}&lt;/c0&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T133103Z" creationid="Ragnar-F" creationdate="20260911T133103Z">
@@ -130362,6 +130562,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140311T114738Z" creationid="Ragnar-F" creationdate="20140311T114738Z">
         <seg>Wichtige Hinweise</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Improved DBGp property and context commands:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T052509Z" creationid="Ragnar-F" creationdate="20260912T052509Z">
+        <seg>Verbessert: DBGp-Eigenschaft und Kontextbefehle:</seg>
       </tuv>
     </tu>
     <tu>
@@ -133722,6 +133930,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230814T161103Z" creationid="Ragnar-F" creationdate="20230814T161103Z">
         <seg>Infrarot</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Inherited properties are included as direct children of the object's property element.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T052719Z" creationid="Ragnar-F" creationdate="20260912T052719Z">
+        <seg>Vererbte Eigenschaften werden direkt dem Eigenschaftselement des Objekts untergeordnet.</seg>
       </tuv>
     </tu>
     <tu>
@@ -165954,6 +166170,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231125T105655Z" creationid="Ragnar-F" creationdate="20210704T150824Z">
         <seg>Eigenschafts- und Methodendefinitionen in Klassen nutzen denselben Mechanismus, daher kann ein Eigenschafts-Getter/Setter und eine Methode mit demselben Namen definiert werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Property getters and function calls permit multiple parameters.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T052804Z" creationid="Ragnar-F" creationdate="20260912T052804Z">
+        <seg>Eigenschafts-Getter und Funktionsaufrufe erlauben mehrere Parameter.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Property names can be used as parameters.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T052829Z" creationid="Ragnar-F" creationdate="20260912T052829Z">
+        <seg>Eigenschaftsnamen können als Parameter verwendet werden.</seg>
       </tuv>
     </tu>
     <tu>
