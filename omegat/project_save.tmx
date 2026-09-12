@@ -4934,6 +4934,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>"Unset" is used in the sense "has not been set" or in other words, "has no value".</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T195836Z" creationid="Ragnar-F" creationdate="20260912T195035Z">
+        <seg>"Ungesetzt" (engl. unset) wird hier im Sinne von "wurde nicht gesetzt" bzw. "hat keinen Wert" verwendet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>"Up" can also be used with normal hotkeys as in this example:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230323T115608Z" creationid="Ragnar-F" creationdate="20140316T022941Z">
@@ -62466,10 +62474,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>A &lt;a0&gt;variable&lt;/a0&gt; or array element is "unset" if it has not been assigned a value, or if its value has been removed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T195502Z" creationid="Ragnar-F" creationdate="20260912T195502Z">
+        <seg>Eine &lt;a0&gt;Variable&lt;/a0&gt; oder ein Array-Element gilt als "ungesetzt", wenn kein Wert zugewiesen wurde oder wenn der Wert entfernt wurde.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A &lt;a0&gt;window group&lt;/a0&gt; can be used to make a hotkey/hotstring execute for a group of windows.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20251001T115645Z" creationid="Ragnar-F" creationdate="20251001T115645Z">
         <seg>Eine &lt;a0&gt;Fenstergruppe&lt;/a0&gt; kann verwendet werden, um einen Hotkey/Hotstring für eine Gruppe von Fenstern auszuführen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A &lt;a1&gt;function call&lt;/a1&gt; or property is "unset" if it returns &lt;c2&gt;unset&lt;/c2&gt; or the property is not defined.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T195731Z" creationid="Ragnar-F" creationdate="20260912T195725Z">
+        <seg>Ein &lt;a1&gt;Funktionsaufruf&lt;/a1&gt; oder eine Eigenschaft gilt als "ungesetzt", wenn &lt;c2&gt;unset&lt;/c2&gt; zurückgegeben wird oder die Eigenschaft undefiniert ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -63566,6 +63590,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230421T090025Z" creationid="Ragnar-F" creationdate="20141227T192615Z">
         <seg>Eine Formatzeichenkette, bestehend aus direkt geschriebenem Text und Platzhaltern, im Format &lt;c0&gt;{&lt;i1&gt;Index&lt;/i1&gt;:&lt;i2&gt;&lt;a3&gt;Format&lt;/a3&gt;&lt;/i2&gt;}&lt;/c0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A function &lt;a0&gt;parameter&lt;/a0&gt; can be declared as &lt;a1&gt;optional&lt;/a1&gt; with no default value, as in &lt;c2&gt;f(x:=unset)&lt;/c2&gt; or &lt;c3&gt;f(x?)&lt;/c3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T204000Z" creationid="Ragnar-F" creationdate="20260912T204000Z">
+        <seg>Ein &lt;a0&gt;Funktionsparameter&lt;/a0&gt; kann als &lt;a1&gt;optional&lt;/a1&gt; ohne Standardwert deklariert werden, wie in &lt;c2&gt;f(x:=unset)&lt;/c2&gt; oder &lt;c3&gt;f(x?)&lt;/c3&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -68212,8 +68244,8 @@
       <tuv lang="en">
         <seg>Added the &lt;a0&gt;OnMessage&lt;/a0&gt; method to the Gui class, based on code by thqby.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T173412Z" creationid="Ragnar-F" creationdate="20260912T173412Z">
-        <seg>Hinzugefügt: Die Gui-Klasse hat nun die &lt;a0&gt;OnMessage&lt;/a0&gt;-Methode, basierend auf Code von thqby.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T194302Z" creationid="Ragnar-F" creationdate="20260912T173412Z">
+        <seg>Hinzugefügt: Die Gui-Klasse hat nun eine &lt;a0&gt;OnMessage&lt;/a0&gt;-Methode, basierend auf Code von thqby.</seg>
       </tuv>
     </tu>
     <tu>
@@ -79242,6 +79274,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>By default, any attempt to use an unset variable, property, array element or return value immediately causes an &lt;a0&gt;UnsetError&lt;/a0&gt; to be thrown.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T201405Z" creationid="Ragnar-F" creationdate="20260912T201405Z">
+        <seg>Standardmäßig führt jeder Versuch, eine ungesetzte Variable, eine ungesetzte Eigenschaft, ein ungesetztes Array-Element oder einen ungesetzten Rückgabewert zu verwenden, sofort dazu, dass ein &lt;a0&gt;UnsetError&lt;/a0&gt; geworfen wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>By default, any click of the left or right mouse button will reset the hotstring recognizer.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230325T125102Z" creationid="Ragnar-F" creationdate="20180212T162737Z">
@@ -79782,6 +79822,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230826T070941Z" creationid="Ragnar-F" creationdate="20140316T230534Z">
         <seg>Um diese verstrichene Zeit zu messen, speichern Sie A_TickCount in eine Variable und subtrahieren Sie diese später vom aktuellen A_TickCount-Wert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>By throwing an error when the variable is read instead of waiting until the value is used, some common errors are detected earlier, making it easier to identify the source of the error.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T203613Z" creationid="Ragnar-F" creationdate="20260912T203613Z">
+        <seg>Dadurch, dass beim Lesen der Variable ein Fehler geworfen wird, anstatt abzuwarten, bis der Wert verwendet wird, werden einige häufige Fehler früher erkannt, wodurch sich die Fehlerquelle leichter identifizieren lässt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -82100,8 +82148,8 @@
       <tuv lang="en">
         <seg>Changed debugger classname attribute of Prototype objects to include the class name (e.g. "SomeClass.Prototype").</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T201946Z" creationid="Ragnar-F" creationdate="20260911T201946Z">
-        <seg>Geändert: Das Debugger-Attribut "classname" von Prototype-Objekten enthält nun den Klassennamen (z.B. "SomeClass.Prototype").</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T193220Z" creationid="Ragnar-F" creationdate="20260911T201946Z">
+        <seg>Geändert: Das Debugger-Attribut "classname" von Prototypobjekten enthält nun den Klassennamen (z.B. "SomeClass.Prototype").</seg>
       </tuv>
     </tu>
     <tu>
@@ -131144,8 +131192,8 @@
       <tuv lang="en">
         <seg>Improved &lt;a0&gt;RegExReplace&lt;/a0&gt; with the ability to pass a callback function instead of replacement text, based on PR #307 by thqby.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T173216Z" creationid="Ragnar-F" creationdate="20260912T173216Z">
-        <seg>Verbessert: &lt;a0&gt;RegExReplace&lt;/a0&gt; unterstützt nun die Übergabe einer Rückruffunktion anstelle eines Ersatztextes, basierend auf PR #307 von thqby.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T194142Z" creationid="Ragnar-F" creationdate="20260912T173216Z">
+        <seg>Verbessert: &lt;a0&gt;RegExReplace&lt;/a0&gt; unterstützt nun die Angabe einer Rückruffunktion anstelle eines Ersatztextes, basierend auf PR #307 von thqby.</seg>
       </tuv>
     </tu>
     <tu>
@@ -136939,6 +136987,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230615T135001Z" creationid="Ragnar-F" creationdate="20160429T200348Z">
         <seg>Er kann so eingestellt werden, dass er sich automatisch wiederholt oder nur einmal ausgeführt wird:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>It can be used in an assignment to return a variable, array element or property to an unset state, in an array literal to include an element with no value (even at the end, where trailing commas are ignored), in a function call to explicitly or conditionally &lt;a1&gt;omit a parameter&lt;/a1&gt;, or in an object literal to conditionally omit a property.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T201054Z" creationid="Ragnar-F" creationdate="20260912T201054Z">
+        <seg>Es kann 1) in einer Zuweisung verwendet werden, um eine Variable, ein Array-Element oder eine Eigenschaft ungesetzt zurückzugeben, 2) in einem direkt geschriebenen Array, um ein Element ohne Wert einzufügen (selbst am Ende, wo nachfolgende Kommas ignoriert werden), 3) in einem Funktionsaufruf, um explizit oder bedingt &lt;a1&gt;einen Parameter wegzulassen&lt;/a1&gt;, oder 4) in einem direkt geschriebenen Objekt, um bedingt eine Eigenschaft wegzulassen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -184367,6 +184423,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Sometimes a variable or expression may be expected to have no value.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T203829Z" creationid="Ragnar-F" creationdate="20260912T203829Z">
+        <seg>Manchmal will man, dass eine Variable oder ein Ausdruck keinen Wert hat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Sometimes games have a hack and cheat prevention measure, such as GameGuard and Hackshield.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230430T073306Z" creationid="Ragnar-F" creationdate="20140320T143249Z">
@@ -195919,6 +195983,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The assignment &lt;c0&gt;x := y&lt;/c0&gt; will always leave &lt;e1&gt;x&lt;/e1&gt; with a value upon completion, because if &lt;e2&gt;y&lt;/e2&gt; is unset, an error is thrown before the assignment is carried out.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T203247Z" creationid="Ragnar-F" creationdate="20260912T202825Z">
+        <seg>Die Zuweisung &lt;c0&gt;x := y&lt;/c0&gt; kann nur dann abgeschlossen werden, wenn &lt;e1&gt;y&lt;/e1&gt; gesetzt ist. Wenn es ungesetzt ist, wird vor der Ausführung ein Fehler geworfen, sodass &lt;e2&gt;x&lt;/e2&gt; unverändert bleibt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The asterisk indicates that the user is permitted to navigate upward (closer to the root) from the starting folder.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230419T073846Z" creationid="Ragnar-F" creationdate="20140303T151813Z">
@@ -199711,6 +199783,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The function call &lt;c0&gt;f(x)&lt;/c0&gt; will always provide a value for the first parameter, because if &lt;e1&gt;x&lt;/e1&gt; is unset, an error is thrown before the function is called.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T203237Z" creationid="Ragnar-F" creationdate="20260912T203212Z">
+        <seg>Der Funktionsaufruf &lt;c0&gt;f(x)&lt;/c0&gt; kann nur dann erfolgen, wenn &lt;e1&gt;x&lt;/e1&gt; gesetzt ist. Wenn es ungesetzt ist, wird vor dem Aufruf ein Fehler geworfen, sodass der erste Parameter niemals ohne Wert an die Funktion gelangt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The function can &lt;a0&gt;return a value&lt;/a0&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171229T140547Z" creationid="Ragnar-F" creationdate="20171229T140547Z">
@@ -200323,6 +200403,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231119T115917Z" creationid="Ragnar-F" creationdate="20210307T154337Z">
         <seg>Nach dem Schlüsselwort &lt;c0&gt;super&lt;/c0&gt; muss eines der folgenden Symbole folgen:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The keyword &lt;c0&gt;unset&lt;/c0&gt; is used to represent this state.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T195932Z" creationid="Ragnar-F" creationdate="20260912T195932Z">
+        <seg>Man verwendet das Schlüsselwort &lt;c0&gt;unset&lt;/c0&gt;, um diesen Zustand wiederzugeben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -208667,6 +208755,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230501T092509Z" creationid="Ragnar-F" creationdate="20140304T144037Z">
         <seg>Auf diese Weise ist es möglich, das Anklicken bestimmter Radio-Steuerelemente zu ignorieren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This allows the function to use &lt;a4&gt;IsSet&lt;/a4&gt; to detect whether the parameter was omitted, rather than reserving a sentinel value for that purpose (such as &lt;c5&gt;-1&lt;/c5&gt; or &lt;c6&gt;"*N/A*"&lt;/c6&gt;, avoiding values that are normally expected for the parameter).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T205607Z" creationid="Ragnar-F" creationdate="20260912T205348Z">
+        <seg>Die Funktion kann hierbei &lt;a4&gt;IsSet&lt;/a4&gt; nutzen, um festzustellen, ob der Parameter weggelassen wurde, anstatt dafür einen speziellen Wert zu reservieren, der nicht für den Parameter erwartet wird, wie z.B. &lt;c5&gt;-1&lt;/c5&gt; oder &lt;c6&gt;"*N/A*"&lt;/c6&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -223927,6 +224023,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Unset</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T200223Z" creationid="Ragnar-F" creationdate="20260912T194702Z">
+        <seg>Ungesetzt</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Unset Parameters</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220713T144446Z" creationid="Ragnar-F" creationdate="20220713T144446Z">
@@ -225825,8 +225929,8 @@
       <tuv lang="en">
         <seg>Using the DPI of the GUI in font size calculations instead of system DPI.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T185151Z" creationid="Ragnar-F" creationdate="20260911T185151Z">
-        <seg>Verwendung der DPI der GUI anstelle der System-DPI bei der Schriftgrößenberechnung.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T193028Z" creationid="Ragnar-F" creationdate="20260911T185151Z">
+        <seg>Verwendung der GUI-DPI anstelle der System-DPI bei der Schriftgrößenberechnung.</seg>
       </tuv>
     </tu>
     <tu>
@@ -235675,6 +235779,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230826T074927Z" creationid="Ragnar-F" creationdate="20210704T070618Z">
         <seg>Innerhalb einer Zeichenkette (Textwert) ist der numerische Zeichencode und die Größe (in Byte) jedes einzelnen Zeichens von der &lt;a0&gt;Kodierung&lt;/a0&gt; der Zeichenkette abhängig.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Within a user-defined function, a parameter is "unset" if it was omitted by the caller and has no default value.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T195819Z" creationid="Ragnar-F" creationdate="20260912T195819Z">
+        <seg>Innerhalb einer benutzerdefinierten Funktion gilt ein Parameter als "ungesetzt", wenn er vom Aufrufer weggelassen wurde und keinen Standardwert hat.</seg>
       </tuv>
     </tu>
     <tu>
