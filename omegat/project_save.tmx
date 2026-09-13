@@ -7134,6 +7134,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>(For static variables, it is usually better to use a &lt;a0&gt;static initializer&lt;/a0&gt;.)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T052858Z" creationid="Ragnar-F" creationdate="20260913T052858Z">
+        <seg>(Bei statischen Variablen ist es in der Regel besser, einen &lt;a0&gt;statischen Initialisierer&lt;/a0&gt; zu verwenden.)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>(For the full list of symbols, see the &lt;a0&gt;Hotkey&lt;/a0&gt; page)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180918T091711Z" creationid="Ragnar-F" creationdate="20150120T161746Z">
@@ -64730,6 +64738,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>A script might initialize a global variable on first use.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T052806Z" creationid="Ragnar-F" creationdate="20260913T052806Z">
+        <seg>Ein Skript könnte eine globale Variable bei ihrer ersten Verwendung initialisieren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A script that checks the state of such a key immediately after it changed may use &lt;a1&gt;Sleep&lt;/a1&gt; beforehand to give the system time to update the key state.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230423T135937Z" creationid="Ragnar-F" creationdate="20180429T204337Z">
@@ -100469,8 +100485,8 @@
       <tuv lang="en">
         <seg>Fixed #DefaultReturn with nested functions or class var initializers.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T185851Z" creationid="Ragnar-F" creationdate="20260911T185519Z">
-        <seg>Behoben: #DefaultReturn in Verbindung mit verschachtelten Funktionen oder Initialisierungen von Klassenvariablen.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T053155Z" creationid="Ragnar-F" creationdate="20260911T185519Z">
+        <seg>Behoben: #DefaultReturn in Verbindung mit verschachtelten Funktionen oder Klassenvariableninitialisierern.</seg>
       </tuv>
     </tu>
     <tu>
@@ -102037,8 +102053,8 @@
       <tuv lang="en">
         <seg>Fixed crash on load if the first class var initializer uses &lt;c0&gt;=&gt;&lt;/c0&gt;.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T063949Z" creationid="Ragnar-F" creationdate="20260912T063949Z">
-        <seg>Behoben: Kein Absturz mehr beim Laden, wenn die erste Initialisierung einer Klassenvariable &lt;c0&gt;=&gt;&lt;/c0&gt; verwendet.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T053218Z" creationid="Ragnar-F" creationdate="20260912T063949Z">
+        <seg>Behoben: Kein Absturz mehr beim Laden, wenn der erste Klassenvariableninitialisierer &lt;c0&gt;=&gt;&lt;/c0&gt; verwendet.</seg>
       </tuv>
     </tu>
     <tu>
@@ -111919,8 +111935,8 @@
       <tuv lang="en">
         <seg>Function definitions beginning within a fat arrow function or parameter initializer were incorrectly defined in the outer scope.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T160718Z" creationid="Ragnar-F" creationdate="20260912T160718Z">
-        <seg>Funktionsdefinitionen, die innerhalb einer Fat-Arrow-Funktion oder Parameterinitialisierung beginnen, wurden fälschlicherweise im äußeren Gültigkeitsbereich definiert.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T053255Z" creationid="Ragnar-F" creationdate="20260912T160718Z">
+        <seg>Funktionsdefinitionen, die innerhalb einer Fat-Arrow-Funktion oder eines Parameterinitialisierers beginnen, wurden fälschlicherweise im äußeren Gültigkeitsbereich definiert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -199905,8 +199921,8 @@
       <tuv lang="en">
         <seg>The function's body was not identified correctly if it began within a fat arrow function, #HotIf, parameter initializer or class variable initializer.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T161336Z" creationid="Ragnar-F" creationdate="20260912T161336Z">
-        <seg>Der Körper einer Funktion wurde nicht korrekt erkannt, wenn ihre Definition innerhalb von Fat-Arrow-Ausdrücken, #HotIf oder Initialisierungen von Parametern oder Klassenvariablen begann.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T053429Z" creationid="Ragnar-F" creationdate="20260912T161336Z">
+        <seg>Der Körper einer Funktion wurde nicht korrekt erkannt, wenn ihre Definition innerhalb von Fat-Arrow-Ausdrücken, #HotIfs, Parameterinitialisierern oder Klassenvariableninitialisierern begann.</seg>
       </tuv>
     </tu>
     <tu>
