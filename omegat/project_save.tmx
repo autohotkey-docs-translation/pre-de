@@ -17345,8 +17345,8 @@
       <tuv lang="en">
         <seg>; Each static declaration's initializer still runs only once.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20200623T072010Z" creationid="Ragnar-F" creationdate="20200623T072010Z">
-        <seg>; Jede Initialisierung einer statischen Deklaration wird nur einmal ausgeführt.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T054852Z" creationid="Ragnar-F" creationdate="20200623T072010Z">
+        <seg>; Jeder Initialisierer einer statischen Deklaration wird nur einmal ausgeführt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -35538,6 +35538,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;Edit&lt;/a0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20140314T125938Z" creationid="Ragnar-F" creationdate="20140314T125938Z">
+        <seg>&lt;a0&gt;Edit&lt;/a0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;EditGetCurrentCol&lt;/a0&gt;, &lt;a1&gt;EditGetCurrentLine&lt;/a1&gt;, &lt;a2&gt;EditGetLine&lt;/a2&gt;, &lt;a3&gt;EditGetSelectedText&lt;/a3&gt;, &lt;a4&gt;EditPaste&lt;/a4&gt;, &lt;a5&gt;Control functions&lt;/a5&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200701T071529Z" creationid="Ragnar-F" creationdate="20200701T071514Z">
@@ -37282,6 +37290,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;HasProp&lt;/a0&gt; can be used to determine whether a property exists.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T055956Z" creationid="Ragnar-F" creationdate="20260913T055956Z">
+        <seg>Mit &lt;a0&gt;HasProp&lt;/a0&gt; lässt sich feststellen, ob eine Eigenschaft existiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;HasProp&lt;/a0&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220418T142238Z" creationid="Ragnar-F" creationdate="20220418T142238Z">
@@ -37906,6 +37922,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;IsSet&lt;/a0&gt; can be used to determine whether a variable or parameter has a value.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T055936Z" creationid="Ragnar-F" creationdate="20260913T055936Z">
+        <seg>Mit &lt;a0&gt;IsSet&lt;/a0&gt; lässt sich feststellen, ob eine Variable oder ein Parameter einen Wert hat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;IsVariadic&lt;/a0&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171229T200920Z" creationid="Ragnar-F" creationdate="20171229T200920Z">
@@ -38414,6 +38438,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171231T121536Z" creationid="Ragnar-F" creationdate="20171231T000909Z">
         <seg>&lt;a0&gt;Menu.Handle&lt;/a0&gt; gibt ein Handle eines Win32-Menüs (ein Handle vom Typ &lt;c1&gt;HMENU&lt;/c1&gt;) zurück, und konstruiert es, falls nötig.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;Menu&lt;/a0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20140314T022901Z" creationid="Ragnar-F" creationdate="20140314T022901Z">
+        <seg>&lt;a0&gt;Menu&lt;/a0&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -57724,8 +57756,8 @@
       <tuv lang="en">
         <seg>&lt;s0&gt;Note:&lt;/s0&gt; &lt;a1&gt;Static initializers&lt;/a1&gt; such as &lt;c2&gt;static my_static_array := []&lt;/c2&gt; are evaluated only once, the first time they are reached during execution, so typically do not require the use of IsSet.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20231018T114804Z" creationid="Ragnar-F" creationdate="20200622T170532Z">
-        <seg>&lt;s0&gt;Hinweis:&lt;/s0&gt; &lt;a1&gt;Statische Initialisierungen&lt;/a1&gt; wie z.B. &lt;c2&gt;static mein_statisches_array := []&lt;/c2&gt; werden nur einmal ausgewertet (wenn sie erstmalig während der Skriptausführung erreicht werden) und erfordern daher normalerweise nicht die Verwendung von IsSet.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T055021Z" creationid="Ragnar-F" creationdate="20200622T170532Z">
+        <seg>&lt;s0&gt;Hinweis:&lt;/s0&gt; &lt;a1&gt;Statische Initialisierer&lt;/a1&gt; wie z.B. &lt;c2&gt;static mein_statisches_array := []&lt;/c2&gt; werden nur einmal ausgewertet (wenn sie erstmalig während der Skriptausführung erreicht werden) und erfordern daher normalerweise nicht die Verwendung von IsSet.</seg>
       </tuv>
     </tu>
     <tu>
@@ -61250,6 +61282,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.28+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T061531Z" creationid="Ragnar-F" creationdate="20260913T061531Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.28+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;\:&lt;/s0&gt; Sorts items based on the substring that follows the last backslash in each.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230622T212012Z" creationid="Ragnar-F" creationdate="20230622T212012Z">
@@ -64298,6 +64338,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>A number of tools are available for these situations:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T055904Z" creationid="Ragnar-F" creationdate="20260913T055904Z">
+        <seg>Für solche Situationen stehen verschiedene Hilfsmittel zur Verfügung:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A number of useful variables are built into the program and can be referenced by any script.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230316T112744Z" creationid="Ragnar-F" creationdate="20171226T111742Z">
@@ -64734,6 +64782,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231009T142711Z" creationid="Ragnar-F" creationdate="20170515T213338Z">
         <seg>Ein Skript kann das Size-Ereignis verwenden, um Steuerelemente neu zu positionieren und größer/kleiner zu machen, wenn der Benutzer die Größe des Fensters ändert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A script may use the unset state as a signal for a script-specific condition.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T055818Z" creationid="Ragnar-F" creationdate="20260913T055818Z">
+        <seg>Ein Skript könnte "ungesetzt" als Signal für eine skriptspezifische Bedingung verwenden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -65302,6 +65358,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230906T123343Z" creationid="Ragnar-F" creationdate="20200726T133609Z">
         <seg>Es ist möglich, eine Variable bei ihrer Deklaration zu initialisieren. Fügen Sie einfach nach dem Variablennamen eine Zuweisung an.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A variable may have a meaningful value only under specific conditions.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T055732Z" creationid="Ragnar-F" creationdate="20260913T055732Z">
+        <seg>Eine Variable könnte nur unter bestimmten Bedingungen einen sinnvollen Wert haben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -68212,7 +68276,7 @@
       <tuv lang="en">
         <seg>Added support for ByRef VARIANT in incoming COM calls.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T174525Z" creationid="Ragnar-F" creationdate="20260912T174446Z">
+      <tuv lang="de" changeid="Ragnar-F" changedate="20230702T121516Z" creationid="Ragnar-F" creationdate="20230702T121516Z">
         <seg>Hinzugefügt: Unterstützung für ByRef VARIANT in eingehenden COM-Aufrufen.</seg>
       </tuv>
     </tu>
@@ -68244,8 +68308,8 @@
       <tuv lang="en">
         <seg>Added support for two-variable enumerators (for-loops) with IDispatch-wrapped AutoHotkey objects.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T174653Z" creationid="Ragnar-F" creationdate="20260912T174653Z">
-        <seg>Hinzugefügt: Unterstützung für Zwei-Variablen-Enumeratoren (For-Schleifen) bei IDispatch-gewrappten AutoHotkey-Objekten.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20230702T121204Z" creationid="Ragnar-F" creationdate="20230702T121204Z">
+        <seg>Hinzugefügt: Unterstützung für Zwei-Variablen-Enumeratoren (For-Schleifen) mit IDispatch-gewrappten AutoHotkey-Objekten.</seg>
       </tuv>
     </tu>
     <tu>
@@ -81908,8 +81972,8 @@
       <tuv lang="en">
         <seg>Changed &lt;c0&gt;X() =&gt; Y()&lt;/c0&gt; to propagate implicit &lt;a1&gt;&lt;e2&gt;blank-unset&lt;/e2&gt;&lt;/a1&gt; return.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T115930Z" creationid="Ragnar-F" creationdate="20260911T115634Z">
-        <seg>Geändert: Ausdrücke wie &lt;c0&gt;X() =&gt; Y()&lt;/c0&gt; propagieren nun implizit eine &lt;a1&gt;&lt;e2&gt;Leer-Unset&lt;/e2&gt;&lt;/a1&gt;-Rückgabe.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T062337Z" creationid="Ragnar-F" creationdate="20260911T115634Z">
+        <seg>Geändert: Ausdrücke wie &lt;c0&gt;X() =&gt; Y()&lt;/c0&gt; propagieren nun implizit eine &lt;a1&gt;&lt;e2&gt;Leer-Ungesetzt&lt;/e2&gt;&lt;/a1&gt;-Rückgabe.</seg>
       </tuv>
     </tu>
     <tu>
@@ -85535,6 +85599,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230924T100242Z" creationid="Ragnar-F" creationdate="20230924T100242Z">
         <seg>Vergleiche und Zuweisungen wie &lt;c1&gt;obj1 == obj2&lt;/c1&gt; und &lt;c2&gt;arr[obj1] := Wert&lt;/c2&gt; behandeln die beiden Wrapper-Objekte als nicht identisch, auch wenn sie denselben Variantentyp und Wert enthalten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Compatibility Mode</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20140309T003623Z" creationid="Ragnar-F" creationdate="20140308T025402Z">
+        <seg>Kompatibilitätsmodus</seg>
       </tuv>
     </tu>
     <tu>
@@ -103135,7 +103207,7 @@
       <tuv lang="en">
         <seg>Fixes</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T170707Z" creationid="Ragnar-F" creationdate="20260912T170707Z">
+      <tuv lang="de" changeid="Ragnar-F" changedate="20140228T011845Z" creationid="Ragnar-F" creationdate="20140227T233314Z">
         <seg>Fehlerbehebungen</seg>
       </tuv>
     </tu>
@@ -107351,8 +107423,8 @@
       <tuv lang="en">
         <seg>For example, &lt;c3&gt;x := y := 1&lt;/c3&gt; would set &lt;c4&gt;this.x&lt;/c4&gt; and a local variable &lt;c5&gt;y&lt;/c5&gt; (which would be freed once all initializers have been evaluated).</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20231118T193311Z" creationid="Ragnar-F" creationdate="20210307T153231Z">
-        <seg>Zum Beispiel bewirkt &lt;c3&gt;x := y := 1&lt;/c3&gt;, dass &lt;c4&gt;this.x&lt;/c4&gt; und eine lokale Variable &lt;c5&gt;y&lt;/c5&gt; gesetzt wird (die nach der Auswertung aller Initialisierungen wieder freigegeben wird).</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T055102Z" creationid="Ragnar-F" creationdate="20210307T153231Z">
+        <seg>Zum Beispiel bewirkt &lt;c3&gt;x := y := 1&lt;/c3&gt;, dass &lt;c4&gt;this.x&lt;/c4&gt; und eine lokale Variable &lt;c5&gt;y&lt;/c5&gt; gesetzt wird (die nach der Auswertung aller Initialisierer wieder freigegeben wird).</seg>
       </tuv>
     </tu>
     <tu>
@@ -110789,6 +110861,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For more technical details, see &lt;a0&gt;Unset&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T062415Z" creationid="Ragnar-F" creationdate="20260913T062415Z">
+        <seg>Weitere technische Details finden Sie unter &lt;a0&gt;Ungesetzt&lt;/a0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For most hotkeys, the &lt;e0&gt;hotkey name&lt;/e0&gt; consists of optional modifier symbols immediately followed by a single letter or symbol, or a &lt;a1&gt;key name&lt;/a1&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230909T071307Z" creationid="Ragnar-F" creationdate="20221220T190006Z">
@@ -114087,8 +114167,8 @@
       <tuv lang="en">
         <seg>Global, local and static variable declarations with multiple initializers are now evaluated as one, so there is no need to step over each initializer individually while debugging.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T165717Z" creationid="Ragnar-F" creationdate="20260912T165717Z">
-        <seg>Globale, lokale und statische Variablendeklarationen mit mehreren Initialisierungen werden nun als eine Einheit ausgewertet, sodass man beim Debuggen nicht mehr jede Initialisierung einzeln überspringen muss.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T055541Z" creationid="Ragnar-F" creationdate="20260912T165717Z">
+        <seg>Globale, lokale und statische Variablendeklarationen mit mehreren Initialisierern werden nun als eine Einheit ausgewertet, sodass man beim Debuggen nicht mehr jeden Initialisierer einzeln überspringen muss.</seg>
       </tuv>
     </tu>
     <tu>
@@ -131294,6 +131374,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>In &lt;a1&gt;v2.1 mode&lt;/a1&gt;, functions return &lt;a2&gt;unset&lt;/a2&gt; by default.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T061621Z" creationid="Ragnar-F" creationdate="20260913T061621Z">
+        <seg>Im &lt;a1&gt;v2.1-Modus&lt;/a1&gt; geben Funktionen standardmäßig &lt;a2&gt;unset&lt;/a2&gt; zurück.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>In &lt;s0&gt;[v2.0.6+]&lt;/s0&gt;, it is no longer the case that only the first 1023 characters of the specified window title, &lt;a1&gt;ahk_class&lt;/a1&gt; criterion value, and &lt;a2&gt;ahk_exe&lt;/a2&gt; criterion value are considered for matching purposes.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231117T171252Z" creationid="Ragnar-F" creationdate="20230902T085938Z">
@@ -132520,8 +132608,8 @@
       <tuv lang="en">
         <seg>In other words, a declaration inside an IF's or ELSE's &lt;a4&gt;block&lt;/a4&gt; takes effect unconditionally for the entire function (but any initializers included in the declaration are still conditional).</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20230906T124415Z" creationid="Ragnar-F" creationdate="20200726T141731Z">
-        <seg>Mit anderen Worten, eine Deklaration innerhalb eines IF- oder ELSE-&lt;a4&gt;Blocks&lt;/a4&gt; wird bedingungslos für die gesamte Funktion wirksam (aber alle in der Deklaration enthaltenen Initialisierungen sind immer noch bedingt).</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T054953Z" creationid="Ragnar-F" creationdate="20200726T141731Z">
+        <seg>Mit anderen Worten, eine Deklaration innerhalb eines IF- oder ELSE-&lt;a4&gt;Blocks&lt;/a4&gt; wird bedingungslos für die gesamte Funktion wirksam (aber alle in der Deklaration enthaltenen Initialisierer sind immer noch bedingt).</seg>
       </tuv>
     </tu>
     <tu>
@@ -137659,6 +137747,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240706T085650Z" creationid="Ragnar-F" creationdate="20240706T084958Z">
         <seg>Es ist nur in 32-Bit-Builds vorzeichenlos, da AutoHotkey keine vorzeichenlosen 64-Bit-Integer unterstützt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>It is permitted wherever &lt;c3&gt;unset&lt;/c3&gt; is permitted, as described further below.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T060808Z" creationid="Ragnar-F" creationdate="20260913T060808Z">
+        <seg>Es ist überall dort zulässig, wo &lt;c3&gt;unset&lt;/c3&gt; zulässig ist, wie weiter unten näher beschrieben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -156219,6 +156315,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231120T085627Z" creationid="Ragnar-F" creationdate="20220604T200137Z">
         <seg>Beachten Sie, dass Dash zwar über die Verknüpfung im Startmenü gestartet wird, aber wenn es an die Taskleiste (oder an das Startmenü in Windows 7 oder 10) angeheftet ist, enthält die Sprungliste alle zuletzt mit den Shellverben &lt;e0&gt;open&lt;/e0&gt;, &lt;e1&gt;runas&lt;/e1&gt; oder &lt;e2&gt;UIAccess&lt;/e2&gt; gestarteten Skripte (die normalerweise über das Explorer-Kontextmenü oder durch Doppelklick auf eine Datei aufgerufen werden).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Note that although value properties cannot exist without a value, an existing dynamic property can return unset.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T060337Z" creationid="Ragnar-F" creationdate="20260913T060337Z">
+        <seg>Beachten Sie, dass Werteigenschaften zwar nicht ohne einen Wert existieren können, allerdings kann eine existierende dynamische Eigenschaft "ungesetzt" zurückgeben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -186961,8 +187065,8 @@
       <tuv lang="en">
         <seg>Static declarations are evaluated the same as &lt;a3&gt;local&lt;/a3&gt; declarations, except that after a static initializer (or group of combined initializers) is successfully evaluated, it is effectively removed from the flow of control and will not execute a second time.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20210226T203146Z" creationid="Ragnar-F" creationdate="20200701T074627Z">
-        <seg>Statische Deklarationen werden genauso ausgewertet wie &lt;a3&gt;lokale&lt;/a3&gt; Deklarationen, außer dass nach erfolgreicher Auswertung einer statischen Initialisierung (oder einer Gruppe von verbundenen Initialisierungen) diese effektiv aus dem Kontrollfluss entfernt und kein zweites Mal ausgeführt wird.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T054835Z" creationid="Ragnar-F" creationdate="20200701T074627Z">
+        <seg>Statische Deklarationen werden genauso ausgewertet wie &lt;a3&gt;lokale&lt;/a3&gt; Deklarationen, außer dass nach erfolgreicher Auswertung eines statischen Initialisierers (oder einer Gruppe von verbundenen Initialisierern) diese effektiv aus dem Kontrollfluss entfernt und kein zweites Mal ausgeführt wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -187009,8 +187113,8 @@
       <tuv lang="en">
         <seg>Static/class variable initializers are now executed within the context of a &lt;c0&gt;static __Init&lt;/c0&gt; method, so &lt;c1&gt;this&lt;/c1&gt; refers to the class and the initializers can create local variables.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20231125T113544Z" creationid="Ragnar-F" creationdate="20210704T153333Z">
-        <seg>Initialisierungen von statischen bzw. Klassenvariablen werden jetzt im Kontext einer &lt;c0&gt;static __Init&lt;/c0&gt;-Methode ausgeführt, d.h. &lt;c1&gt;this&lt;/c1&gt; verweist auf die Klasse und die Initialisierungen können lokale Variablen erstellen.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T055323Z" creationid="Ragnar-F" creationdate="20210704T153333Z">
+        <seg>Statische Initialisierer und Klassenvariableninitialisierer werden jetzt im Kontext einer &lt;c0&gt;static __Init&lt;/c0&gt;-Methode ausgeführt, d.h. &lt;c1&gt;this&lt;/c1&gt; verweist auf die Klasse und die Initialisierer können lokale Variablen erstellen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -191775,6 +191879,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The &lt;a0&gt;maybe operator (?)&lt;/a0&gt; permits its left-hand side to be &lt;e1&gt;unset&lt;/e1&gt;, and optionally short-circuits a &lt;a2&gt;member access&lt;/a2&gt; chain to its right.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T060741Z" creationid="Ragnar-F" creationdate="20260913T060741Z">
+        <seg>Der &lt;a0&gt;Vielleicht-Operator (?)&lt;/a0&gt; erlaubt seiner linken Seite, &lt;e1&gt;ungesetzt&lt;/e1&gt; zu sein, und kann optional eine Kette von &lt;a2&gt;Objektelementzugriffen&lt;/a2&gt; zu seiner Rechten kurzschließen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;a0&gt;maybe-assign operator (??=)&lt;/a0&gt; provides a succinct way to initialize a variable only if it wasn't already set.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T061529Z" creationid="Ragnar-F" creationdate="20260913T061529Z">
+        <seg>Der &lt;a0&gt;Vielleicht-Zuweisungsoperator (??=)&lt;/a0&gt; bietet eine verkürzte Möglichkeit, eine Variable nur dann zu initialisieren, wenn sie noch ungesetzt ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The &lt;a0&gt;mouse&lt;/a0&gt; hook may be installed or removed if justified by the changes made by this function.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230504T083442Z" creationid="Ragnar-F" creationdate="20180211T164010Z">
@@ -191803,6 +191923,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230905T105720Z" creationid="Ragnar-F" creationdate="20220702T075444Z">
         <seg>Der &lt;a0&gt;Oder-Vielleicht-Operator (??)&lt;/a0&gt; kann verwendet werden, um einen Standardwert für eine Variable ohne Wert bereitzustellen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;a0&gt;or-maybe operator (??)&lt;/a0&gt; evaluates its right-hand side only if the left-hand side is unset.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T060901Z" creationid="Ragnar-F" creationdate="20260913T060901Z">
+        <seg>Der &lt;a0&gt;Oder-Vielleicht-Operator (??)&lt;/a0&gt; wertet seine rechte Seite nur dann aus, wenn die linke Seite ungesetzt ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -193747,6 +193875,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260224T210406Z" creationid="Ragnar-F" creationdate="20210704T181658Z">
         <seg>Das HWND kann ein Steuerelement oder ein Top-Level-Fenster identifizieren, obwohl letzteres in der Regel nur für einige wenige Funktionen sinnvoll ist (siehe unten).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The Has method can be used for array and map elements.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T060400Z" creationid="Ragnar-F" creationdate="20260913T060400Z">
+        <seg>Die Has-Methode kann für Array- und Map-Elemente verwendet werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -204847,6 +204983,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The term &lt;e3&gt;blank-unset&lt;/e3&gt; is used to mean &lt;c4&gt;""&lt;/c4&gt; in v2.0 and &lt;c5&gt;unset&lt;/c5&gt; in v2.1 mode.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T062306Z" creationid="Ragnar-F" creationdate="20260913T062306Z">
+        <seg>Mit dem Begriff &lt;e3&gt;leer-ungesetzt&lt;/e3&gt; wird ausgedrückt, dass im v2.0-Modus &lt;c4&gt;""&lt;/c4&gt; und im v2.1-Modus &lt;c5&gt;unset&lt;/c5&gt; verwendet wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The text entered by the user.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231015T125116Z" creationid="Ragnar-F" creationdate="20200606T170225Z">
@@ -209403,6 +209547,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230430T090314Z" creationid="Ragnar-F" creationdate="20180211T165045Z">
         <seg>Um das rückgängig zu machen oder zu überschreiben, übergeben Sie eine Option, die die andere Option automatisch ausschließt; &lt;c7&gt;C0&lt;/c7&gt; und &lt;c8&gt;C1&lt;/c8&gt; beispielsweise würden &lt;c9&gt;C&lt;/c9&gt; überschreiben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This can be used both to provide a fallback value and as a sort of "if unset, then".</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T061103Z" creationid="Ragnar-F" creationdate="20260913T061103Z">
+        <seg>Dies kann verwendet werden, um einen Fallback-Wert bereitzustellen oder als eine Art "wenn ungesetzt, dann".</seg>
       </tuv>
     </tu>
     <tu>
@@ -223705,8 +223857,8 @@
       <tuv lang="en">
         <seg>Unlike &lt;a0&gt;static initializers&lt;/a0&gt;, the initializers of locals and globals execute every time the function is called.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20230906T123844Z" creationid="Ragnar-F" creationdate="20200623T072417Z">
-        <seg>Im Gegensatz zu &lt;a0&gt;statischen Initialisierungen&lt;/a0&gt; werden lokale und globale Initialisierungen bei jedem Funktionsaufruf ausgeführt.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T054921Z" creationid="Ragnar-F" creationdate="20200623T072417Z">
+        <seg>Im Gegensatz zu &lt;a0&gt;statischen Initialisierern&lt;/a0&gt; werden lokale und globale Initialisierer bei jedem Funktionsaufruf ausgeführt.</seg>
       </tuv>
     </tu>
     <tu>
