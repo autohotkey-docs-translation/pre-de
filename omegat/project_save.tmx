@@ -5982,6 +5982,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>#Module - Syntax &amp; Usage | AutoHotkey v2</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T133737Z" creationid="Ragnar-F" creationdate="20260913T133737Z">
+        <seg>#Module - Syntax &amp; Verwendung | AutoHotkey v2</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#Module &lt;s0&gt;[v2.1-alpha.11+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T133949Z" creationid="Ragnar-F" creationdate="20260913T133949Z">
+        <seg>#Module &lt;s0&gt;[v2.1-alpha.11+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>#Module LibA</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122242Z" creationid="Ragnar-F" creationdate="20260913T122242Z">
@@ -6018,6 +6034,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122244Z" creationid="Ragnar-F" creationdate="20260913T122244Z">
         <seg>#Module _internal</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#Module cannot be used within a block or as the body of a control flow statement.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T140224Z" creationid="Ragnar-F" creationdate="20260913T140224Z">
+        <seg>#Module kann nicht innerhalb eines Blocks oder als Körper einer Kontrollanweisung verwendet werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -33450,6 +33474,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;#Module&lt;/a0&gt; sets the default mode of the new module to that of the __Init module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T141807Z" creationid="Ragnar-F" creationdate="20260913T141800Z">
+        <seg>&lt;a0&gt;#Module&lt;/a0&gt; setzt den Standardmodus des neuen Moduls auf den des __Init-Moduls.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;#NoTrayIcon&lt;/a0&gt; and &lt;a1&gt;A_AllowMainWindow&lt;/a1&gt; affect the behavior of compiled scripts.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231121T083108Z" creationid="Ragnar-F" creationdate="20171231T122701Z">
@@ -38670,6 +38702,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210216T150339Z" creationid="Ragnar-F" creationdate="20210216T150339Z">
         <seg>&lt;a0&gt;ModifyCol&lt;/a0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;Modules&lt;/a0&gt;, &lt;a1&gt;#Import&lt;/a1&gt;, &lt;a2&gt;#Include&lt;/a2&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T140231Z" creationid="Ragnar-F" creationdate="20260913T140225Z">
+        <seg>&lt;a0&gt;Module&lt;/a0&gt;, &lt;a1&gt;#Import&lt;/a1&gt;, &lt;a2&gt;#Include&lt;/a2&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -53418,6 +53458,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;#Module&lt;/s0&gt; ModuleName</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T133959Z" creationid="Ragnar-F" creationdate="20260913T133954Z">
+        <seg>&lt;s0&gt;#Module&lt;/s0&gt; ModulName</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;#Requires&lt;/s0&gt; Requirement</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200630T142842Z" creationid="Ragnar-F" creationdate="20200630T142834Z">
@@ -61498,10 +61546,34 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.20+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T135259Z" creationid="Ragnar-F" creationdate="20260913T135259Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.20+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.21+]&lt;/s0&gt; The use of #Module in a file which is loaded multiple times via &lt;a1&gt;#Include&lt;/a1&gt; is prohibited.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T135836Z" creationid="Ragnar-F" creationdate="20260913T135836Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.21+]&lt;/s0&gt;: Die Verwendung von #Module in einer Datei, die mehrfach via &lt;a1&gt;#Include&lt;/a1&gt; geladen wird, ist nicht zulässig.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;[v2.1-alpha.21+]&lt;/s0&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T115429Z" creationid="Ragnar-F" creationdate="20260913T115429Z">
         <seg>&lt;s0&gt;[v2.1-alpha.21+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.26+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T170132Z" creationid="Ragnar-F" creationdate="20260913T170132Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.26+]&lt;/s0&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -62790,6 +62862,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20251001T115645Z" creationid="Ragnar-F" creationdate="20251001T115645Z">
         <seg>Eine &lt;a0&gt;Fenstergruppe&lt;/a0&gt; kann verwendet werden, um einen Hotkey/Hotstring für eine Gruppe von Fenstern auszuführen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A &lt;a1&gt;WM_CLOSE message&lt;/a1&gt; is sent to terminate the old instance.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T170249Z" creationid="Ragnar-F" creationdate="20260913T170249Z">
+        <seg>Es wird eine &lt;a1&gt;WM_CLOSE-Meldung&lt;/a1&gt; gesendet, um die alte Instanz zu terminieren.</seg>
       </tuv>
     </tu>
     <tu>
@@ -65558,6 +65638,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260224T075738Z" creationid="Ragnar-F" creationdate="20260224T075738Z">
         <seg>Die Gültigkeit einer eindeutigen ID (HWND) ist an die Lebensdauer des zugehörigen Fensters gebunden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A unique name for use with &lt;a0&gt;#Import&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T134117Z" creationid="Ragnar-F" creationdate="20260913T134111Z">
+        <seg>Ein eindeutiger Name, der für &lt;a0&gt;#Import&lt;/a0&gt; verwendet wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -80226,6 +80314,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>By default, the old instance cannot be terminated automatically if it is running at a higher integrity level than the new instance, such as if the old instance was running as admin or with UI access and the new instance is not.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T170130Z" creationid="Ragnar-F" creationdate="20260913T170130Z">
+        <seg>Standardmäßig kann die alte Instanz nicht automatisch terminiert werden, wenn sie auf einer höheren Integritätsstufe läuft als die neue Instanz, z.B. wenn die alte Instanz als Administrator oder mit UI-Access ausgeführt wurde und die neue Instanz nicht.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>By default, the script can also be paused via its &lt;a0&gt;tray icon&lt;/a0&gt; or &lt;a1&gt;main window&lt;/a1&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230601T134642Z" creationid="Ragnar-F" creationdate="20171225T173215Z">
@@ -86083,6 +86179,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Compatibility Mode &lt;s0&gt;[v2.1-alpha.28+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T141035Z" creationid="Ragnar-F" creationdate="20260913T141031Z">
+        <seg>Kompatibilitätsmodus &lt;s0&gt;[v2.1-alpha.28+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Compatibility Settings</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20250926T143319Z" creationid="Ragnar-F" creationdate="20250926T143319Z">
@@ -91267,6 +91371,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Declares the script's requirements and potentially sets the &lt;a0&gt;compatibility mode&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T141030Z" creationid="Ragnar-F" creationdate="20260913T141018Z">
+        <seg>Deklariert die Anforderungen des Skripts und setzt potentiell den &lt;a0&gt;Kompatibilitätsmodus&lt;/a0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Declaring a variable with &lt;c0&gt;local&lt;/c0&gt; no longer makes the function &lt;a1&gt;assume-global&lt;/a1&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231123T131625Z" creationid="Ragnar-F" creationdate="20210704T114358Z">
@@ -93603,6 +93715,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>DllCall("ChangeWindowMessageFilterEx", "uint", A_ScriptHwnd, "uint", 0x10, "uint", 1, "ptr", 0)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T170757Z" creationid="Ragnar-F" creationdate="20260913T170757Z">
+        <seg>DllCall("ChangeWindowMessageFilterEx", "uint", A_ScriptHwnd, "uint", 0x10, "uint", 1, "ptr", 0)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>DllCall("CloseHandle", "Ptr", hFile)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190930T125523Z" creationid="Ragnar-F" creationdate="20190930T125523Z">
@@ -95863,6 +95983,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T121550Z" creationid="Ragnar-F" creationdate="20260913T121550Z">
         <seg>Jedes Modul exportiert alle globalen Namen, die nicht mit einem Unterstrich beginnen, außer Namen, die ohne das Schlüsselwort Export importiert wurden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Each module imported from file has its own set of module names, separate to the main script.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T134232Z" creationid="Ragnar-F" creationdate="20260913T134232Z">
+        <seg>Jedes aus einer Datei importierte Modul besitzt einen eigenen Satz von Modulnamen, die unabhängig vom Hauptskript sind.</seg>
       </tuv>
     </tu>
     <tu>
@@ -105633,6 +105761,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171005T124334Z" creationid="Ragnar-F" creationdate="20150309T120040Z">
         <seg>Informationen und Beispiele finden Sie unter &lt;a0&gt;BoundFunc-Objekt&lt;/a0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For details of how the mode affects the script's behaviour, see &lt;a0&gt;Compatibility Mode (Changes)&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T164019Z" creationid="Ragnar-F" creationdate="20260913T164019Z">
+        <seg>Einzelheiten dazu, wie sich der Modus auf das Verhalten des Skripts auswirkt, finden Sie unter &lt;a0&gt;Kompatibilitätsmodus (Änderungen)&lt;/a0&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -118733,6 +118869,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>However, any code not inside a function (i.e. startup code) operates in the mode set for the current module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T142856Z" creationid="Ragnar-F" creationdate="20260913T142856Z">
+        <seg>Allerdings wird jeglicher Code, der sich nicht innerhalb einer Funktion befindet (also der Startcode), im Modus ausgeführt, der für das aktuelle Modul festgelegt ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>However, any of the characters in the set &lt;c0&gt;\.*?+[{|()^$&lt;/c0&gt; must be preceded by a backslash to be seen as literal.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230622T155713Z" creationid="Ragnar-F" creationdate="20230622T155713Z">
@@ -121793,6 +121937,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231204T112526Z" creationid="Ragnar-F" creationdate="20231204T112526Z">
         <seg>Wenn &lt;e1&gt;Länge&lt;/e1&gt; negativ ist, bestimmt dessen Absolutwert die genaue Anzahl der Zeichen, die umgewandelt werden, einschließlich aller binären Nullen, die die Zeichenkette eventuell enthält, d.h. das Ergebnis wird immer eine Zeichenkette mit exakt dieser Länge sein.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If &lt;e1&gt;ModuleName&lt;/e1&gt; is &lt;c2&gt;AHK&lt;/c2&gt;, &lt;c3&gt;__Main&lt;/c3&gt; or a name used with a previous #Module directive, the existing module is "reopened", allowing &lt;a4&gt;startup code&lt;/a4&gt; and definitions to be added.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T135648Z" creationid="Ragnar-F" creationdate="20260913T135648Z">
+        <seg>Handelt es sich bei &lt;e1&gt;ModulName&lt;/e1&gt; um &lt;c2&gt;AHK&lt;/c2&gt;, &lt;c3&gt;__Main&lt;/c3&gt; oder einen Namen, der bei einer vorherigen #Module-Anweisung verwendet wurde, wird das existierende Modul "erneut geöffnet", was das Hinzufügen von &lt;a4&gt;Startcode&lt;/a4&gt; und Definitionen ermöglicht.</seg>
       </tuv>
     </tu>
     <tu>
@@ -128073,6 +128225,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220926T090645Z" creationid="Ragnar-F" creationdate="20220926T090635Z">
         <seg>Wenn das Dialogfenster nicht angezeigt werden konnte, wird eine leere Zeichenkette zurückgegeben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the directive is not used, v2.0 mode is used by default.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T141357Z" creationid="Ragnar-F" creationdate="20260913T141357Z">
+        <seg>Wenn die Direktive nicht verwendet wird, gilt standardmäßig der v2.0-Modus.</seg>
       </tuv>
     </tu>
     <tu>
@@ -147039,6 +147199,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Mode changes put into effect by a version directive inside an &lt;a0&gt;#Include&lt;/a0&gt; file are reverted at the end of the file.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T142629Z" creationid="Ragnar-F" creationdate="20260913T142629Z">
+        <seg>Modusänderungen, die durch eine Versionsdirektive innerhalb einer &lt;a0&gt;#Include&lt;/a0&gt;-Datei wirksam werden, werden am Ende der Datei rückgängig gemacht.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Modern</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140310T233145Z" creationid="Ragnar-F" creationdate="20140310T233145Z">
@@ -147171,6 +147339,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T114801Z" creationid="Ragnar-F" creationdate="20260913T114801Z">
         <seg>ModulName</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Modules defined this way take precedence over modules in the file system, but only for the exact &lt;e0&gt;ModuleName&lt;/e0&gt; used in the directive.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T135258Z" creationid="Ragnar-F" creationdate="20260913T135258Z">
+        <seg>Module, die auf diese Weise definiert werden, haben Vorrang vor Modulen im Dateisystem, jedoch nur für genau den in der Direktive verwendeten &lt;e0&gt;ModulName&lt;/e0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Modules linked with the same file can import each other by &lt;e3&gt;ModuleName&lt;/e3&gt;, while other modules can import sub-modules by using a path-qualified name of the form "Path:ModuleName".</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T134826Z" creationid="Ragnar-F" creationdate="20260913T134826Z">
+        <seg>Module, die mit derselben Datei verlinkt sind, können sich gegenseitig via &lt;e3&gt;ModulName&lt;/e3&gt; importieren, während andere Module Untermodule mithilfe eines pfadqualifizierten Namens im Format "Pfad:Modulname" importieren können.</seg>
       </tuv>
     </tu>
     <tu>
@@ -157527,6 +157711,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Note that this restriction does not apply to multiple instances of #Include in the same module, as in such cases the file is included only once.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T140136Z" creationid="Ragnar-F" creationdate="20260913T140136Z">
+        <seg>Beachten Sie, dass diese Restriktion nicht für mehrere Instanzen von #Include im selben Modul gilt, da die Datei in solchen Fällen nur einmal inkludiert wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Note that two displays can have the same bit depth, but different color formats.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171005T144017Z" creationid="Ragnar-F" creationdate="20140307T164047Z">
@@ -167115,6 +167307,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220507T144901Z" creationid="Ragnar-F" creationdate="20220507T133939Z">
         <seg>Ältere Instanzen des Skripts werden mit einem Mechanismus identifiziert, der auch bei &lt;a0&gt;#SingleInstance&lt;/a0&gt; zum Einsatz kommt, einschließlich derselben &lt;a1&gt;Einschränkungen&lt;/a1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Previous versions used an undocumented message which should not be unblocked.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T170756Z" creationid="Ragnar-F" creationdate="20260913T170756Z">
+        <seg>Frühere Versionen nutzten eine undokumentierte Meldung, die nicht entblockt werden sollte.</seg>
       </tuv>
     </tu>
     <tu>
@@ -187615,6 +187815,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Specifying one or more version requirements also sets the compatibility mode for the script.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T141206Z" creationid="Ragnar-F" creationdate="20260913T141206Z">
+        <seg>Die Angabe von Versionsanforderungen setzt auch den Kompatibilitätsmodus für das Skript.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Specifying the number 24 enables whichever type of prompt is supported by the dialog.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230418T105536Z" creationid="Ragnar-F" creationdate="20200713T174020Z">
@@ -187907,6 +188115,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230814T073420Z" creationid="Ragnar-F" creationdate="20230814T073420Z">
         <seg>StartZeileNummer</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Starts a new module or reopens an existing module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T133926Z" creationid="Ragnar-F" creationdate="20260913T133926Z">
+        <seg>Startet ein neues Modul oder öffnet ein existierendes Modul.</seg>
       </tuv>
     </tu>
     <tu>
@@ -192023,10 +192239,34 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The #Module directive creates a &lt;e1&gt;subordinate module&lt;/e1&gt; or &lt;e2&gt;sub-module&lt;/e2&gt;, linked with either the main script file or a file imported by #Import.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T134625Z" creationid="Ragnar-F" creationdate="20260913T134625Z">
+        <seg>Die #Module-Direktive erstellt ein &lt;e1&gt;untergeordnetes Modul&lt;/e1&gt; bzw. &lt;e2&gt;Untermodul&lt;/e2&gt;, das entweder mit der Hauptskriptdatei oder mit einer via #Import importierten Datei verlinkt ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The #Module directive starts a new module or reopens an existing module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T133948Z" creationid="Ragnar-F" creationdate="20260913T133902Z">
+        <seg>Die #Module-Direktive startet ein neues Modul oder öffnet ein existierendes Modul.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The #NoTrayIcon directive disables the showing of a tray icon.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230402T115849Z" creationid="Ragnar-F" creationdate="20180812T095617Z">
         <seg>Die #NoTrayIcon-Direktive deaktiviert die Anzeige des Tray-Symbols.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The #Requires directive declares the script's requirements and potentially sets the compatibility mode.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T141003Z" creationid="Ragnar-F" creationdate="20260913T141003Z">
+        <seg>Die #Requires-Direktive deklariert die Anforderungen des Skripts und setzt potentiell den Kompatibilitätsmodus.</seg>
       </tuv>
     </tu>
     <tu>
@@ -199719,6 +199959,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The first version directive used within a module sets the runtime mode for all startup code in that module across all files.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T141727Z" creationid="Ragnar-F" creationdate="20260913T141727Z">
+        <seg>Die erste, in einem Modul verwendete Versionsdirektive bestimmt den Laufzeitmodus für den gesamten Startcode dieses Moduls in allen Dateien.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The first version string to be compared.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221201T094530Z" creationid="Ragnar-F" creationdate="20221201T094507Z">
@@ -202343,6 +202591,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The module ends at the next #Module directive in the current file, or at the end of the current file.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T134418Z" creationid="Ragnar-F" creationdate="20260913T134418Z">
+        <seg>Das Modul endet bei der nächsten #Module-Anweisung in der aktuellen Datei oder am Ende der aktuellen Datei.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The module itself is added to the current module's global namespace only if &lt;e0&gt;ModuleAlias&lt;/e0&gt; is specified or &lt;e1&gt;ModuleName&lt;/e1&gt; is unquoted.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T120919Z" creationid="Ragnar-F" creationdate="20260913T120919Z">
@@ -202483,6 +202739,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230815T163325Z" creationid="Ragnar-F" creationdate="20230815T163325Z">
         <seg>Der Name (oder ein Präfix des Namens) des Top-Level-Menüpunkts, z.B. &lt;c0&gt;"Datei"&lt;/c0&gt;, &lt;c1&gt;"Bearbeiten"&lt;/c1&gt;, &lt;c2&gt;"Ansicht"&lt;/c2&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The name &lt;c4&gt;__Init&lt;/c4&gt; can be used to import the initial module of a group.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T135002Z" creationid="Ragnar-F" creationdate="20260913T135002Z">
+        <seg>Der Name &lt;c4&gt;__Init&lt;/c4&gt; kann verwendet werden, um das initiale Modul einer Gruppe zu importieren.</seg>
       </tuv>
     </tu>
     <tu>
@@ -202899,6 +203163,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220823T105440Z" creationid="Ragnar-F" creationdate="20220823T105440Z">
         <seg>Das neue Symbol ist möglicherweise nicht sofort im Windows Explorer sichtbar, wenn die kompilierte Datei zuvor mit einem anderen Symbol vorhanden war. Das neue Symbol kann jedoch durch Auswählen von &lt;c1&gt;Refresh Windows Icons&lt;/c1&gt; im &lt;c2&gt;File&lt;/c2&gt;-Menü von Ahk2Exe angezeigt werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The new module starts with an empty global namespace and implicit import from the built-in module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T134347Z" creationid="Ragnar-F" creationdate="20260913T134347Z">
+        <seg>Das neue Modul startet mit einem leeren globalen Namensraum und impliziten Import aus dem internen Modul.</seg>
       </tuv>
     </tu>
     <tu>
@@ -209783,6 +210055,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This allows a v2.0 function to be placed inside a v2.1 function.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T142201Z" creationid="Ragnar-F" creationdate="20260913T142201Z">
+        <seg>Auf diese Weise kann eine v2.0-Funktion in eine v2.1-Funktion platziert werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This allows a v2.1 script to #include a v2.0 function or class library.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T142718Z" creationid="Ragnar-F" creationdate="20260913T142718Z">
+        <seg>Auf diese Weise kann ein v2.1-Skript eine v2.0-Funktion oder -Klassenbibliothek inkludieren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This allows classes to modify or prevent the construction of new instances.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230919T095138Z" creationid="Ragnar-F" creationdate="20190820T192225Z">
@@ -213631,6 +213919,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This is because the module would be "reopened" and its content duplicated, often resulting in misleading messages about duplicate declarations.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T135945Z" creationid="Ragnar-F" creationdate="20260913T135945Z">
+        <seg>Der Grund dafür ist, dass dadurch das Modul "erneut geöffnet" und sein Inhalt dupliziert werden würde, was häufig zu irreführenden Meldungen bezüglich doppelter Deklarationen führt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This is because the program maintains a collection of &lt;a1&gt;sorting preferences&lt;/a1&gt; for each column, which would then get out of sync.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20201027T082924Z" creationid="Ragnar-F" creationdate="20140306T000246Z">
@@ -215635,6 +215931,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20250125T112446Z" creationid="Ragnar-F" creationdate="20250125T112426Z">
         <seg>Der Dateiname darf &lt;u0&gt;keine&lt;/u0&gt; doppelten Anführungszeichen (außer einem optionalen Paar doppelter Anführungszeichen, das den Parameter umschließt), Platzhalterzeichen (&lt;c1&gt;*&lt;/c1&gt; und &lt;c2&gt;?&lt;/c2&gt;) oder &lt;a3&gt;Escapesequenzen&lt;/a3&gt; außer Semikolon (&lt;c4&gt;`;&lt;/c4&gt;) enthalten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This must be a valid &lt;a1&gt;identifier&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T134143Z" creationid="Ragnar-F" creationdate="20260913T134143Z">
+        <seg>Dies muss ein gültiger &lt;a1&gt;Identifikator&lt;/a1&gt; sein.</seg>
       </tuv>
     </tu>
     <tu>
@@ -220233,8 +220537,8 @@
       <tuv lang="en">
         <seg>To import a &lt;a1&gt;sub-module&lt;/a1&gt; from a different group, use a path-qualified name of the form "Path:ModuleName".</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T115557Z" creationid="Ragnar-F" creationdate="20260913T115552Z">
-        <seg>Um ein &lt;a1&gt;Untermodul&lt;/a1&gt; aus einer anderen Gruppe zu importieren, verwenden Sie einen gültigen Pfadnamen im Format "Pfad:ModulName".</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T133428Z" creationid="Ragnar-F" creationdate="20260913T115552Z">
+        <seg>Um ein &lt;a1&gt;Untermodul&lt;/a1&gt; aus einer anderen Gruppe zu importieren, verwenden Sie einen pfadqualifizierten Namen im Format "Pfad:ModulName".</seg>
       </tuv>
     </tu>
     <tu>
@@ -221051,6 +221355,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190513T113931Z" creationid="Ragnar-F" creationdate="20190513T113931Z">
         <seg>Schreiben Sie &lt;c1&gt;*&lt;/c1&gt; als letzten Parameter (ohne Parametername), um eine Funktion beliebig viele Parameter akzeptieren zu lassen, &lt;e0&gt;ohne&lt;/e0&gt; ein Array zum Speichern der überschüssigen Parameter zu erstellen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>To permit all other processes to terminate the script, unblock the WM_CLOSE message as shown below.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T170710Z" creationid="Ragnar-F" creationdate="20260913T170710Z">
+        <seg>Um allen anderen Prozessen zu erlauben, das Skript zu terminieren, entblocken Sie die WM_CLOSE-Meldung wie unten gezeigt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -227239,6 +227551,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Using the directive inside a function only affects nested functions; the mode reverts at the end of the function.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T142102Z" creationid="Ragnar-F" creationdate="20260913T142102Z">
+        <seg>Die Verwendung der Direktive innerhalb einer Funktion beeinflusst nur verschachtelte Funktionen; am Ende der Funktion wird der Modus wieder zurückgesetzt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Using the directive without a version requirement does not affect the mode.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T141429Z" creationid="Ragnar-F" creationdate="20260913T141429Z">
+        <seg>Die Verwendung der Direktive ohne Versionsangabe hat keinen Einfluss auf den Modus.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Using this registry value may be more future-proof.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231120T125316Z" creationid="Ragnar-F" creationdate="20220605T112643Z">
@@ -228707,6 +229035,15 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T090605Z" creationid="Ragnar-F" creationdate="20260913T090605Z">
         <seg>Version &lt;a0&gt;&lt;c1/&gt;2.1-alpha.31&lt;c2/&gt;&lt;/a0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Version directives may be used throughout the code to set the runtime mode for any subsequent function definitions.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T141946Z" creationid="Ragnar-F" creationdate="20260913T141946Z">
+        <seg>Versionsdirektiven können überall im Code verwendet werden, um den Laufzeitmodus für alle nachfolgenden Funktionsdefinitionen zu bestimmen.
+</seg>
       </tuv>
     </tu>
     <tu>
@@ -264344,6 +264681,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>v2.0 libraries can instead be loaded via &lt;a1&gt;#Import&lt;/a1&gt; for maximum compatibility.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T142928Z" creationid="Ragnar-F" creationdate="20260913T142928Z">
+        <seg>v2.0-Bibliotheken können stattdessen via &lt;a1&gt;#Import&lt;/a1&gt; geladen werden, um maximale Kompatibilität zu gewährleisten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>v2.0 release candidates</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221220T234306Z" creationid="Ragnar-F" creationdate="20221220T234306Z">
@@ -264380,6 +264725,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220907T124509Z" creationid="Ragnar-F" creationdate="20220907T124509Z">
         <seg>v2.0-beta.4 und höher enthalten ein Installationsskript.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>v2.0-compatible mode is enabled if version "2.0.x" would meet the requirements, otherwise it is disabled.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T141258Z" creationid="Ragnar-F" creationdate="20260913T141258Z">
+        <seg>Der v2.0-kompatible Modus ist aktiv, wenn Version "2.0.x" die Anforderungen erfüllt; andernfalls ist er deaktiviert.</seg>
       </tuv>
     </tu>
     <tu>
