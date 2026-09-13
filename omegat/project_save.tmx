@@ -17479,6 +17479,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>; Error: Value out of range</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063915Z" creationid="Ragnar-F" creationdate="20260913T063631Z">
+        <seg>; Fehler: Wert außerhalb des Bereichs</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>; Even if Critical "On" was never used.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180412T215533Z" creationid="Ragnar-F" creationdate="20180412T215533Z">
@@ -45378,6 +45386,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;c0&gt;value is VarRef&lt;/c0&gt; can be used to test if a value is a VarRef.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063305Z" creationid="Ragnar-F" creationdate="20260913T063305Z">
+        <seg>Mit &lt;c0&gt;Wert is VarRef&lt;/c0&gt; können Sie testen, ob ein Wert eine VarRef ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;c0&gt;var :=&lt;/c0&gt; with no r-value is treated as an error at load-time.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231123T140956Z" creationid="Ragnar-F" creationdate="20210704T121029Z">
@@ -61282,6 +61298,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.10]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063306Z" creationid="Ragnar-F" creationdate="20260913T063306Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.10]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;[v2.1-alpha.28+]&lt;/s0&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T061531Z" creationid="Ragnar-F" creationdate="20260913T061531Z">
@@ -73358,6 +73382,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231204T115029Z" creationid="Ragnar-F" creationdate="20231204T115029Z">
         <seg>Es kann ein beliebiges Objekt mit einer &lt;e15&gt;Ptr&lt;/e15&gt;-Eigenschaft an &lt;a16&gt;DllCall&lt;/a16&gt;-Parametern vom Typ &lt;c17&gt;Ptr&lt;/c17&gt;, &lt;a18&gt;SendMessage&lt;/a18&gt; und &lt;a19&gt;PostMessage&lt;/a19&gt; übergeben werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Any object with a __Value property can be passed to a ByRef parameter or an output parameter of a built-in function.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063559Z" creationid="Ragnar-F" creationdate="20260913T063559Z">
+        <seg>Jedes Objekt mit einer __Value-Eigenschaft kann an einen ByRef-Parameter oder an einen Ausgabeparameter einer internen Funktion übergeben werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -111937,6 +111969,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210216T125645Z" creationid="Ragnar-F" creationdate="20210216T125645Z">
         <seg>Funktionsaufrufe mit oder ohne runde Klammern</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Function Definition Expressions</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063429Z" creationid="Ragnar-F" creationdate="20260913T063429Z">
+        <seg>Funktionsdefinitionsausdrücke</seg>
       </tuv>
     </tu>
     <tu>
@@ -150535,6 +150575,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>MsgBox PostInc(b)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063626Z" creationid="Ragnar-F" creationdate="20260913T063626Z">
+        <seg>MsgBox PostInc(b)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>MsgBox ProcessGetName(ProcessGetParent())</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221120T092707Z" creationid="Ragnar-F" creationdate="20221120T092707Z">
@@ -150987,6 +151035,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180412T132530Z" creationid="Ragnar-F" creationdate="20180412T132530Z">
         <seg>MsgBox arr[2, 3]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox b.__value</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063628Z" creationid="Ragnar-F" creationdate="20260913T063628Z">
+        <seg>MsgBox b.__value</seg>
       </tuv>
     </tu>
     <tu>
@@ -165315,6 +165371,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200622T095741Z" creationid="Ragnar-F" creationdate="20200622T095741Z">
         <seg>PostExec</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>PostInc(&amp;n) =&gt; n++</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063623Z" creationid="Ragnar-F" creationdate="20260913T063623Z">
+        <seg>PostInc(&amp;n) =&gt; n++</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>PostInc(b)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063629Z" creationid="Ragnar-F" creationdate="20260913T063629Z">
+        <seg>PostInc(b)</seg>
       </tuv>
     </tu>
     <tu>
@@ -203167,6 +203239,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The property must be defined prior to calling the function.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063620Z" creationid="Ragnar-F" creationdate="20260913T063620Z">
+        <seg>Die Eigenschaft muss vor dem Aufruf der Funktion definiert werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The property name __Item is typically omitted, as shown above, but is used when overriding the property.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190820T183541Z" creationid="Ragnar-F" creationdate="20190820T183541Z">
@@ -215583,6 +215663,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This requires the caller to pass a VarRef or &lt;a1&gt;virtual reference&lt;/a1&gt;, and allows the function itself to "dereference" the VarRef by just referring to the parameter (without percent signs).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063224Z" creationid="Ragnar-F" creationdate="20260913T063224Z">
+        <seg>Dies zwingt den Aufrufer, eine VarRef oder &lt;a1&gt;virtuelle Referenz&lt;/a1&gt; zu übergeben, und erlaubt der Funktion, die VarRef bereits durch einen simplen Verweis auf den Parameter (ohne Prozentzeichen) zu "derefenzieren".</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This saves repeating the window title, which saves a little of your time, makes the script easier to update if the window title needs to be changed, and might make the code easier to read.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230908T090709Z" creationid="Ragnar-F" creationdate="20221219T150734Z">
@@ -227143,6 +227231,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>VarRef has a __Value property which can be used to set or get the variable's value.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063418Z" creationid="Ragnar-F" creationdate="20260913T063418Z">
+        <seg>VarRef hat eine __Value-Eigenschaft, mit der der Wert der Variable gesetzt oder abgerufen werden kann.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>VarSetCapacity</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140308T022211Z" creationid="Ragnar-F" creationdate="20140308T022211Z">
@@ -227715,6 +227811,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171118T112812Z" creationid="Ragnar-F" creationdate="20171118T112812Z">
         <seg>Vijaya</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Virtual Reference &lt;s0&gt;[v2.1-alpha.10]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063443Z" creationid="Ragnar-F" creationdate="20260913T063443Z">
+        <seg>Virtuelle Referenzen &lt;s0&gt;[v2.1-alpha.10]&lt;/s0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -252215,6 +252319,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>__value {</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063656Z" creationid="Ragnar-F" creationdate="20260913T063656Z">
+        <seg>__value {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>_cb := AccumulateError.Bind(this.Errors)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231029T133438Z" creationid="Ragnar-F" creationdate="20210307T083925Z">
@@ -253071,6 +253183,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>b := Bit()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063625Z" creationid="Ragnar-F" creationdate="20260913T063625Z">
+        <seg>b := Bit()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>b := Value</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20191010T092609Z" creationid="Ragnar-F" creationdate="20191010T092605Z">
@@ -253787,6 +253907,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210419T103518Z" creationid="Ragnar-F" creationdate="20210419T103518Z">
         <seg>class B {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>class Bit {</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063651Z" creationid="Ragnar-F" creationdate="20260913T063651Z">
+        <seg>class Bit {</seg>
       </tuv>
     </tu>
     <tu>
@@ -255627,6 +255755,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20191117T093923Z" creationid="Ragnar-F" creationdate="20191117T093923Z">
         <seg>get =&gt; this.ref[]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>get =&gt; this.v</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063657Z" creationid="Ragnar-F" creationdate="20260913T063657Z">
+        <seg>get =&gt; this.v</seg>
       </tuv>
     </tu>
     <tu>
@@ -258523,6 +258659,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210223T143007Z" creationid="Ragnar-F" creationdate="20210223T143007Z">
         <seg>if value &lt; 0</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>if value &lt; 0 || value &gt; 1</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063700Z" creationid="Ragnar-F" creationdate="20260913T063700Z">
+        <seg>if value &lt; 0 || value &gt; 1</seg>
       </tuv>
     </tu>
     <tu>
@@ -262455,6 +262599,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>this.v := value</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063713Z" creationid="Ragnar-F" creationdate="20260913T063713Z">
+        <seg>this.v := value</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>this.var := Buffer(24, 0)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210425T075937Z" creationid="Ragnar-F" creationdate="20210425T075937Z">
@@ -262563,6 +262715,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210307T090346Z" creationid="Ragnar-F" creationdate="20210307T090346Z">
         <seg>throw ValueError("Parameter #1 ungültig", -1, derSchlechteParam)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>throw ValueError("Value out of range", -1, value)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063912Z" creationid="Ragnar-F" creationdate="20260913T063703Z">
+        <seg>throw ValueError("Wert außerhalb des Bereichs", -1, value)</seg>
       </tuv>
     </tu>
     <tu>
@@ -263020,6 +263180,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140311T221458Z" creationid="Ragnar-F" creationdate="20140311T221458Z">
         <seg>v</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>v : UInt8 := 0</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063654Z" creationid="Ragnar-F" creationdate="20260913T063654Z">
+        <seg>v : UInt8 := 0</seg>
       </tuv>
     </tu>
     <tu>
