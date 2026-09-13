@@ -5678,6 +5678,54 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>#Import - Syntax &amp; Usage | AutoHotkey v2</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T114625Z" creationid="Ragnar-F" creationdate="20260913T114625Z">
+        <seg>#Import - Syntax &amp; Verwendung | AutoHotkey v2</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#Import &lt;s0&gt;[v2.1-alpha.20+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T114735Z" creationid="Ragnar-F" creationdate="20260913T114735Z">
+        <seg>#Import &lt;s0&gt;[v2.1-alpha.20+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#Import Export _internal {*}</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122223Z" creationid="Ragnar-F" creationdate="20260913T122223Z">
+        <seg>#Import Export _internal {*}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#Import LibA {*}</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122227Z" creationid="Ragnar-F" creationdate="20260913T122227Z">
+        <seg>#Import LibA {*}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#Import LibB {*}</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122137Z" creationid="Ragnar-F" creationdate="20260913T122137Z">
+        <seg>#Import LibB {*}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#Import _internal {*}</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122243Z" creationid="Ragnar-F" creationdate="20260913T122243Z">
+        <seg>#Import _internal {*}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>#Include</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140305T161040Z" creationid="Ragnar-F" creationdate="20140305T161040Z">
@@ -5930,6 +5978,46 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140305T161421Z" creationid="Ragnar-F" creationdate="20140305T161421Z">
         <seg>#MenuMaskKey</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#Module LibA</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122242Z" creationid="Ragnar-F" creationdate="20260913T122242Z">
+        <seg>#Module LibA</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#Module LibB</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122221Z" creationid="Ragnar-F" creationdate="20260913T122221Z">
+        <seg>#Module LibB</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#Module TestA</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122225Z" creationid="Ragnar-F" creationdate="20260913T122225Z">
+        <seg>#Module TestA</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#Module TestB</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122136Z" creationid="Ragnar-F" creationdate="20260913T122136Z">
+        <seg>#Module TestB</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#Module _internal</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122244Z" creationid="Ragnar-F" creationdate="20260913T122244Z">
+        <seg>#Module _internal</seg>
       </tuv>
     </tu>
     <tu>
@@ -15558,6 +15646,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>; B and F are both defined.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122203Z" creationid="Ragnar-F" creationdate="20260913T122141Z">
+        <seg>; Sowohl B als auch F sind definiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>; B4</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210425T095800Z" creationid="Ragnar-F" creationdate="20210425T095800Z">
@@ -19773,6 +19869,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230418T141537Z" creationid="Ragnar-F" creationdate="20180411T100201Z">
         <seg>; Nur &lt;i8&gt;DateiName&lt;/i8&gt; existiert (aber wenn "Meine Datei" als Ordner existiert, wird es als &lt;i9&gt;RootVerz&lt;/i9&gt; vermutet).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; Only A is defined.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122239Z" creationid="Ragnar-F" creationdate="20260913T122228Z">
+        <seg>; Nur A ist definiert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -38570,6 +38674,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;Modules&lt;/a0&gt;, &lt;a1&gt;#Module&lt;/a1&gt;, &lt;a2&gt;#Include&lt;/a2&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122603Z" creationid="Ragnar-F" creationdate="20260913T122551Z">
+        <seg>&lt;a0&gt;Module&lt;/a0&gt;, &lt;a1&gt;#Module&lt;/a1&gt;, &lt;a2&gt;#Include&lt;/a2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;MonitorGet&lt;/a0&gt;, &lt;a1&gt;SysGet&lt;/a1&gt;, &lt;a2&gt;Monitor functions&lt;/a2&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180816T101313Z" creationid="Ragnar-F" creationdate="20180816T101305Z">
@@ -45674,6 +45786,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;c1&gt;"*RESNAME"&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T115418Z" creationid="Ragnar-F" creationdate="20260913T115418Z">
+        <seg>&lt;c1&gt;"*RESNAME"&lt;/c1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;c1&gt;"C:\Copy of My Folder"&lt;/c1&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260425T083213Z" creationid="Ragnar-F" creationdate="20260425T083213Z">
@@ -50226,6 +50346,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;e2&gt;Path&lt;/e2&gt; should identify the main module of the group, which is either the script itself or a file imported by #Import.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T115704Z" creationid="Ragnar-F" creationdate="20260913T115704Z">
+        <seg>&lt;e2&gt;Pfad&lt;/e2&gt; sollte das Hauptmodul der Gruppe identifizieren, das entweder das Skript selbst oder eine via #Import importierte Datei ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;e2&gt;Precision&lt;/e2&gt; specifies the maximum number of significant digits.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230421T091058Z" creationid="Ragnar-F" creationdate="20141227T204945Z">
@@ -53238,6 +53366,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180410T220128Z" creationid="Ragnar-F" creationdate="20180410T220128Z">
         <seg>&lt;s0&gt;#Hotstring&lt;/s0&gt; NoMouse</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s0&gt;#Import &lt;s1&gt;Export&lt;/s1&gt;&lt;/s0&gt; ModuleName &lt;s2&gt;&lt;s3&gt;as&lt;/s3&gt; ModuleAlias&lt;/s2&gt; &lt;s4&gt;{ *, ExportName ... }&lt;/s4&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T114754Z" creationid="Ragnar-F" creationdate="20260913T114742Z">
+        <seg>&lt;s0&gt;#Import &lt;s1&gt;Export&lt;/s1&gt;&lt;/s0&gt; ModulName &lt;s2&gt;&lt;s3&gt;as&lt;/s3&gt; ModulAlias&lt;/s2&gt; &lt;s4&gt;{ *, ExportName ... }&lt;/s4&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -57882,6 +58018,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; An implicitly imported variable cannot be the target of an assignment, as the presence of an assignment would cause a new variable to be created in the current module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T121725Z" creationid="Ragnar-F" creationdate="20260913T121725Z">
+        <seg>&lt;s0&gt;Hinweis:&lt;/s0&gt; Eine implizit importierte Variable kann nicht das Ziel einer Zuweisung sein, da die Existenz einer Zuweisung dazu führen würde, dass eine neue Variable im aktuellen Modul erstellt wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;Note:&lt;/s0&gt; Any &lt;e1&gt;Duration&lt;/e1&gt; less than 17 might result in a shorter actual duration or immediate interruption, since the system tick count has a minimum resolution of 10 to 16 milliseconds.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220308T113218Z" creationid="Ragnar-F" creationdate="20180218T121251Z">
@@ -61346,10 +61490,50 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.2+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T102448Z" creationid="Ragnar-F" creationdate="20260913T102448Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.2+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.21+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T115429Z" creationid="Ragnar-F" creationdate="20260913T115429Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.21+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;[v2.1-alpha.28+]&lt;/s0&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T061531Z" creationid="Ragnar-F" creationdate="20260913T061531Z">
         <seg>&lt;s0&gt;[v2.1-alpha.28+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.29+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T102632Z" creationid="Ragnar-F" creationdate="20260913T102632Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.29+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.3+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T114223Z" creationid="Ragnar-F" creationdate="20260913T114223Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.3+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.31+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T121444Z" creationid="Ragnar-F" creationdate="20260913T121444Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.31+]&lt;/s0&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -63562,6 +63746,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>A direct assignment with &lt;c0&gt;:=&lt;/c0&gt; or &lt;c1&gt;??=&lt;/c1&gt;, where the right-hand side is an unset expression.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T104144Z" creationid="Ragnar-F" creationdate="20260913T103549Z">
+        <seg>Eine Direktzuweisung mit &lt;c0&gt;:=&lt;/c0&gt; oder &lt;c1&gt;??=&lt;/c1&gt;, wenn die rechte Seite ein Unset-Ausdruck ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A direct variable reference.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210419T121208Z" creationid="Ragnar-F" creationdate="20210419T121208Z">
@@ -63710,6 +63902,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230421T090025Z" creationid="Ragnar-F" creationdate="20141227T192615Z">
         <seg>Eine Formatzeichenkette, bestehend aus direkt geschriebenem Text und Platzhaltern, im Format &lt;c0&gt;{&lt;i1&gt;Index&lt;/i1&gt;:&lt;i2&gt;&lt;a3&gt;Format&lt;/a3&gt;&lt;/i2&gt;}&lt;/c0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A full function definition can be used within an expression, with some limitations.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T114404Z" creationid="Ragnar-F" creationdate="20260913T114404Z">
+        <seg>Es ist möglich, eine vollständige Funktionsdefinition innerhalb eines Ausdrucks zu verwenden, allerdings mit einigen Einschränkungen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -64178,6 +64378,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>A load-time error is raised if any name used in an explicit import is also used in some other declaration within the current module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122007Z" creationid="Ragnar-F" creationdate="20260913T122007Z">
+        <seg>Es wird ein Ladezeitfehler ausgelöst, wenn ein Name, der in einem expliziten Import verwendet wird, auch in einer anderen Deklaration innerhalb des aktuellen Moduls verwendet wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A macro is a series of scripted actions that is "played" upon demand.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230803T115147Z" creationid="Ragnar-F" creationdate="20140310T235834Z">
@@ -64270,6 +64478,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210212T164414Z" creationid="Ragnar-F" creationdate="20210212T164414Z">
         <seg>Ein modales Eingabefenster hindert den Benutzer daran, mit dem GUI-Fenster zu interagieren, bis er das Eingabefenster wieder schließt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A module name, path or resource specifier.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T114830Z" creationid="Ragnar-F" creationdate="20260913T114830Z">
+        <seg>Ein Modulname, ein Pfad oder einen Ressourcenbezeichner.</seg>
       </tuv>
     </tu>
     <tu>
@@ -65646,6 +65862,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140228T213047Z" creationid="Ragnar-F" creationdate="20140228T213047Z">
         <seg>Ein Wrapper-Objekt, das ein COM-Objekt oder einen typisierten Wert enthält.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A() =&gt; Type(F?)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122243Z" creationid="Ragnar-F" creationdate="20260913T122243Z">
+        <seg>A() =&gt; Type(F?)</seg>
       </tuv>
     </tu>
     <tu>
@@ -69138,6 +69362,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Alias</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T120157Z" creationid="Ragnar-F" creationdate="20260913T120157Z">
+        <seg>Alias</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Alignment options:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230814T065125Z" creationid="Ragnar-F" creationdate="20230814T065125Z">
@@ -71386,6 +71618,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>An "optional chain" of member access immediately following the maybe operator (?).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T102632Z" creationid="Ragnar-F" creationdate="20260913T102632Z">
+        <seg>Eine "optionale Kette" von Objektelementzugriffen, unmittelbar gefolgt vom Vielleicht-Operator (?).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>An "unset expression" is any sub-expression which, by use of the &lt;c0&gt;unset&lt;/c0&gt; keyword or &lt;a1&gt;maybe operator (?)&lt;/a1&gt;, can evaluate without producing a value and without throwing an UnsetError.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T092203Z" creationid="Ragnar-F" creationdate="20260913T092203Z">
@@ -72570,6 +72810,30 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>An identifier to use within the current module in place of &lt;e0&gt;ExportName&lt;/e0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T120315Z" creationid="Ragnar-F" creationdate="20260913T120315Z">
+        <seg>Ein Identifikator, der innerhalb des aktuellen Moduls anstelle von &lt;e0&gt;ExportName&lt;/e0&gt; verwendet werden soll.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>An identifier to use within the current module to refer to the imported module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T120330Z" creationid="Ragnar-F" creationdate="20260913T115842Z">
+        <seg>Ein Identifikator, der innerhalb des aktuellen Moduls verwendet werden soll, um auf das importierte Modul zu verweisen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>An identifier which is exported from the module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T115924Z" creationid="Ragnar-F" creationdate="20260913T115924Z">
+        <seg>Ein Identifikator, der aus dem Modul exportiert wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>An immediate error message may seem a bit confrontational, but is generally more helpful.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210706T105312Z" creationid="Ragnar-F" creationdate="20210706T105312Z">
@@ -72910,6 +73174,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230819T124855Z" creationid="Ragnar-F" creationdate="20140306T133303Z">
         <seg>Ein unverwalteter Objektpointer oder COM-Interface-Pointer.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>An unset expression may consist of:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T102308Z" creationid="Ragnar-F" creationdate="20260913T102308Z">
+        <seg>Ein Unset-Ausdruck kann bestehen aus:</seg>
       </tuv>
     </tu>
     <tu>
@@ -73498,6 +73770,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Any of the following operators where the right-hand side is an unset expression:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T104148Z" creationid="Ragnar-F" creationdate="20260913T104054Z">
+        <seg>Jeder der folgenden Operatoren, wenn die rechte Seite ein Unset-Ausdruck ist:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Any of the options supported by &lt;a0&gt;Gui.Opt&lt;/a0&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231202T191209Z" creationid="Ragnar-F" creationdate="20231202T191209Z">
@@ -73766,6 +74046,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230825T074825Z" creationid="Ragnar-F" creationdate="20171105T122458Z">
         <seg>Ein beliebiger Teilausdruck in runden Klammern.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Any sub-expression short-circuited by the &lt;a1&gt;maybe operator (?)&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T103437Z" creationid="Ragnar-F" creationdate="20260913T103437Z">
+        <seg>Ein beliebiger Teilausdruck, kurzgeschlossen durch den &lt;a1&gt;Vielleicht-Operator (?)&lt;/a1&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -74946,6 +75234,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>As the final result of a &lt;c1&gt;return&lt;/c1&gt; statement.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T110728Z" creationid="Ragnar-F" creationdate="20260913T110728Z">
+        <seg>Als Endergebnis einer &lt;c1&gt;return&lt;/c1&gt;-Anweisung.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>As the function and variable &lt;a2&gt;namespaces were merged&lt;/a2&gt;, a callout pattern such as &lt;c3&gt;(?C:fn)&lt;/c3&gt; can also refer to a local or global variable containing a function object, not just a user-defined function.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231130T123609Z" creationid="Ragnar-F" creationdate="20210706T120001Z">
@@ -75230,6 +75526,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230918T164921Z" creationid="Ragnar-F" creationdate="20230918T164921Z">
         <seg>Die Zuweisung von &lt;c3&gt;"vk00sc000"&lt;/c3&gt; deaktiviert die Maskierung und entspricht der Zuweisung von &lt;c4&gt;""&lt;/c4&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Assigning &lt;e0&gt;unset&lt;/e0&gt; can be said to "unset" the variable, array/map element or property.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T111358Z" creationid="Ragnar-F" creationdate="20260913T111358Z">
+        <seg>Die Zuweisung von &lt;e0&gt;unset&lt;/e0&gt; bewirkt sozusagen, dass die Variable, das Array-/Map-Element oder die Eigenschaft "ungesetzt" gemacht wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -76354,6 +76658,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>B() =&gt; Type(F?)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122224Z" creationid="Ragnar-F" creationdate="20260913T122224Z">
+        <seg>B() =&gt; Type(F?)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>B, 5, LWin, RControl, Alt, Enter, Escape, LButton, MButton, Joy1.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140314T021857Z" creationid="Ragnar-F" creationdate="20140314T021857Z">
@@ -77222,6 +77534,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231124T095333Z" creationid="Ragnar-F" creationdate="20210704T125602Z">
         <seg>Das Verhalten bei Überlauf ist undefiniert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Being passed as a function parameter, where "unset" is analogous to "omitted".</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T104655Z" creationid="Ragnar-F" creationdate="20260913T104655Z">
+        <seg>Um als Funktionsparameter übergeben zu werden, dabei ist "ungesetzt" dasselbe wie "weggelassen".</seg>
       </tuv>
     </tu>
     <tu>
@@ -83959,6 +84279,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20160705T103942Z" creationid="Ragnar-F" creationdate="20160705T103942Z">
         <seg>Klassen</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Classes and functions are available even before the source module has executed, such as if the module which imports them is executing first due to a circular import.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122551Z" creationid="Ragnar-F" creationdate="20260913T122551Z">
+        <seg>Klassen und Funktionen stehen bereits zur Verfügung, noch bevor das Quellmodul ausgeführt wurde, z.B. wenn das Modul, das sie importiert, aufgrund eines zirkulären Imports zuerst läuft.</seg>
       </tuv>
     </tu>
     <tu>
@@ -95531,6 +95859,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Each module exports all global names which do not begin with an underscore, except for names imported without the Export keyword.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T121550Z" creationid="Ragnar-F" creationdate="20260913T121550Z">
+        <seg>Jedes Modul exportiert alle globalen Namen, die nicht mit einem Unterstrich beginnen, außer Namen, die ohne das Schlüsselwort Export importiert wurden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Each name-value pair causes a value property to be defined, with the exception that &lt;a0&gt;Base&lt;/a0&gt; can be set (with the same restrictions as a normal assignment).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231118T093530Z" creationid="Ragnar-F" creationdate="20220713T124609Z">
@@ -98459,6 +98795,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Explicit imports and other declarations take precedence over implicit imports, regardless of order.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T121443Z" creationid="Ragnar-F" creationdate="20260913T121443Z">
+        <seg>Explizite Importe und andere Deklarationen haben Vorrang vor impliziten Importen, unabhängig von der Reihenfolge.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Explicitly unset the reference before __Delete returns (doing so before it is called is fine).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240421T094052Z" creationid="Ragnar-F" creationdate="20240421T094052Z">
@@ -98479,6 +98823,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221220T094821Z" creationid="Ragnar-F" creationdate="20221220T094821Z">
         <seg>Explizit den vollständigen Pfad von wordpad.exe verwenden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Export &lt;s0&gt;[v2.1-alpha.31+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122008Z" creationid="Ragnar-F" creationdate="20260913T122008Z">
+        <seg>Export &lt;s0&gt;[v2.1-alpha.31+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ExportName</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T115843Z" creationid="Ragnar-F" creationdate="20260913T115843Z">
+        <seg>ExportName</seg>
       </tuv>
     </tu>
     <tu>
@@ -98679,6 +99039,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210212T174313Z" creationid="Ragnar-F" creationdate="20210212T174313Z">
         <seg>F = Dateien einbeziehen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>F() =&gt; 0</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122245Z" creationid="Ragnar-F" creationdate="20260913T122245Z">
+        <seg>F() =&gt; 0</seg>
       </tuv>
     </tu>
     <tu>
@@ -105581,6 +105949,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For details, see &lt;a2&gt;Search Path&lt;/a2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T120745Z" creationid="Ragnar-F" creationdate="20260913T120745Z">
+        <seg>Weitere Informationen finden Sie unter &lt;a2&gt;Suchpfad&lt;/a2&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For details, see &lt;a2&gt;SetControlDelay remarks&lt;/a2&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230920T190804Z" creationid="Ragnar-F" creationdate="20180815T080901Z">
@@ -106273,6 +106649,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231124T211248Z" creationid="Ragnar-F" creationdate="20210704T143242Z">
         <seg>Zum Beispiel ist &lt;c0&gt;MsgBox 0x1&lt;/c0&gt; äquivalent zu &lt;c1&gt;MsgBox 1&lt;/c1&gt;, während &lt;c2&gt;MsgBox 1.0000&lt;/c2&gt; äquivalent zu &lt;c3&gt;MsgBox 1.0&lt;/c3&gt; ist (weil sich die interne Float-Formatierung geändert hat).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For example, &lt;c0&gt;MsgBox((x?.y)?)&lt;/c0&gt; "omits" the parameter if &lt;e1&gt;x&lt;/e1&gt; is unset, but throws an error if &lt;e2&gt;x&lt;/e2&gt; is a value without a &lt;e3&gt;y&lt;/e3&gt; property, or if the &lt;e4&gt;y&lt;/e4&gt; property returns &lt;e5&gt;unset&lt;/e5&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T112637Z" creationid="Ragnar-F" creationdate="20260913T112637Z">
+        <seg>Zum Beispiel würde &lt;c0&gt;MsgBox((x?.y)?)&lt;/c0&gt; den Parameter "weglassen", wenn &lt;e1&gt;x&lt;/e1&gt; ungesetzt ist, aber einen Fehler auslösen, wenn &lt;e2&gt;x&lt;/e2&gt; ein Wert ohne &lt;e3&gt;y&lt;/e3&gt;-Eigenschaft ist oder wenn die &lt;e4&gt;y&lt;/e4&gt;-Eigenschaft &lt;e5&gt;unset&lt;/e5&gt; zurückgibt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -107197,6 +107581,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For example, &lt;c2&gt;Array(unset)&lt;/c2&gt; produces an array with a length of 1.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T114102Z" creationid="Ragnar-F" creationdate="20260913T114102Z">
+        <seg>Zum Beispiel erzeugt &lt;c2&gt;Array(unset)&lt;/c2&gt; ein Array mit der Länge 1.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For example, &lt;c2&gt;ComObjFlags(obj, -1)&lt;/c2&gt; removes the F_OWNVALUE flag.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230405T071643Z" creationid="Ragnar-F" creationdate="20140228T211739Z">
@@ -107225,6 +107617,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180409T134710Z" creationid="Ragnar-F" creationdate="20180409T134710Z">
         <seg>Zum Beispiel wird &lt;c2&gt;Hotstring ":T:btw"&lt;/c2&gt; standardmäßig &lt;c3&gt;::BTW&lt;/c3&gt; finden, aber nicht, wenn &lt;c4&gt;Hotstring "C"&lt;/c4&gt; oder &lt;c5&gt;&lt;a6&gt;#Hotstring&lt;/a6&gt; C&lt;/c5&gt; wirksam ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For example, &lt;c2&gt;MsgBox(A_IsAdmin ? unset : "Admin is required.")&lt;/c2&gt; shows the default message if the script is running as admin.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T113213Z" creationid="Ragnar-F" creationdate="20260913T113213Z">
+        <seg>Zum Beispiel zeigt &lt;c2&gt;MsgBox(A_IsAdmin ? unset : "Admin erforderlich.")&lt;/c2&gt; die Standardmitteilung an, wenn das Skript als Administrator ausgeführt wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -120661,6 +121061,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If &lt;c0&gt;*&lt;/c0&gt; is used, each unassigned and undeclared name in the current module may implicitly resolve to a name exported from &lt;e1&gt;ModuleName&lt;/e1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T121307Z" creationid="Ragnar-F" creationdate="20260913T121307Z">
+        <seg>Wenn &lt;c0&gt;*&lt;/c0&gt; verwendet wird, kann jeder nicht zugewiesene und nicht deklarierte Name im aktuellen Modul implizit zu einem aus &lt;e1&gt;ModulName&lt;/e1&gt; exportierten Namen aufgelöst werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If &lt;c0&gt;MyGui.Destroy()&lt;/c0&gt; is not used, the window is automatically destroyed when the Gui object is deleted (see &lt;a1&gt;General Remarks&lt;/a1&gt; for details).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231004T172343Z" creationid="Ragnar-F" creationdate="20200623T092854Z">
@@ -120937,6 +121345,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20201103T130247Z" creationid="Ragnar-F" creationdate="20171230T214304Z">
         <seg>Wenn &lt;e0&gt;MenüpunktName&lt;/e0&gt; noch nicht existiert, wird er zum Menü hinzugefügt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If &lt;e0&gt;ModuleName&lt;/e0&gt; (excluding quote marks) does not match a module defined by &lt;a1&gt;#Module&lt;/a1&gt; or previously imported from file, #Import attempts to locate a module file and load it.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T120731Z" creationid="Ragnar-F" creationdate="20260913T120731Z">
+        <seg>Wenn &lt;e0&gt;ModulName&lt;/e0&gt; (ohne Anführungszeichen) kein Modul findet, das via &lt;a1&gt;#Module&lt;/a1&gt; definiert oder zuvor aus einer Datei importiert wurde, versucht #Import, eine Moduldatei zu lokalisieren und zu laden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -122657,6 +123073,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260902T075525Z" creationid="Ragnar-F" creationdate="20260902T075525Z">
         <seg>Wenn ein reiner Buchstabe (also ohne Modifikatoren oder geschweifte Klammern) gesendet wird oder wenn der &lt;a0&gt;Raw-Modus&lt;/a0&gt; aktiv ist, wird der Buchstabe als Zeichen gesendet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If a name is exported from multiple imported modules, the last import takes precedence.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T121421Z" creationid="Ragnar-F" creationdate="20260913T121421Z">
+        <seg>Wenn ein Name aus mehreren importierten Modulen exportiert wird, hat der letzte Import Vorrang.</seg>
       </tuv>
     </tu>
     <tu>
@@ -128645,6 +129069,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If the property is dynamic or implemented by __Set, the &lt;e1&gt;value&lt;/e1&gt; parameter is omitted/unset.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T112056Z" creationid="Ragnar-F" creationdate="20260913T112056Z">
+        <seg>Wenn die Eigenschaft dynamisch ist oder via __Set implementiert ist, wird der &lt;e1&gt;value&lt;/e1&gt;-Parameter weggelassen bzw. ungesetzt gemacht.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If the region to be searched is large and the search is repeated with high frequency, it may consume a lot of CPU time.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230604T154731Z" creationid="Ragnar-F" creationdate="20191124T124259Z">
@@ -131502,10 +131934,42 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Import from File</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T120339Z" creationid="Ragnar-F" creationdate="20260913T120339Z">
+        <seg>Import aus einer Datei</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Important Notes</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140311T114738Z" creationid="Ragnar-F" creationdate="20140311T114738Z">
         <seg>Wichtige Hinweise</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Imported Names</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T120752Z" creationid="Ragnar-F" creationdate="20260913T120752Z">
+        <seg>Importierte Namen</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Imports a &lt;a0&gt;module&lt;/a0&gt; and optionally imports names from a module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T114733Z" creationid="Ragnar-F" creationdate="20260913T114733Z">
+        <seg>Importiert ein &lt;a0&gt;Modul&lt;/a0&gt; und optional Namen aus einem Modul.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Imports are processed after the main script file has been parsed, in an unspecified order.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T120455Z" creationid="Ragnar-F" creationdate="20260913T120455Z">
+        <seg>Importe werden verarbeitet, nachdem die Hauptskriptdatei geparst wurde, in einer unbestimmten Reihenfolge.</seg>
       </tuv>
     </tu>
     <tu>
@@ -131690,6 +132154,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230820T090431Z" creationid="Ragnar-F" creationdate="20171229T204442Z">
         <seg>Speichern Sie mit Notepad (oder einem anderen &lt;a0&gt;Texteditor&lt;/a0&gt;) eine Datei mit der Endung &lt;c1&gt;.ahk&lt;/c1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In a &lt;a1&gt;property name substitution&lt;/a1&gt;, where &lt;e2&gt;unset&lt;/e2&gt; resolves to the default property (either __Item or Call).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T110919Z" creationid="Ragnar-F" creationdate="20260913T110919Z">
+        <seg>In einer &lt;a1&gt;Eigenschaftsnamensubstitution&lt;/a1&gt;, wo &lt;e2&gt;unset&lt;/e2&gt; zur Standardeigenschaft (entweder __Item oder Call) aufgelöst wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -132258,6 +132730,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210211T210804Z" creationid="Ragnar-F" creationdate="20210211T210804Z">
         <seg>In allen anderen Fällen wird jedoch empfohlen, mindestens ein Leer- oder Tabulatorzeichen als Trennung zu verwenden, um die Lesbarkeit zu verbessern.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In an &lt;a1&gt;expression statement&lt;/a1&gt; or with &lt;a2&gt;multi-statement comma&lt;/a2&gt;, where the result is not used.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T111209Z" creationid="Ragnar-F" creationdate="20260913T111209Z">
+        <seg>In einer &lt;a1&gt;Ausdrucksanweisung&lt;/a1&gt; oder mit einem &lt;a2&gt;Mehrfachanweisungskomma&lt;/a2&gt;, wo das Ergebnis nicht verwendet wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -138215,6 +138695,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>It must be either a valid &lt;a0&gt;identifier&lt;/a0&gt; or a &lt;a1&gt;literal string&lt;/a1&gt;, but either syntax can be used when importing a module defined by &lt;a2&gt;#Module&lt;/a2&gt; or a file.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T115210Z" creationid="Ragnar-F" creationdate="20260913T115210Z">
+        <seg>Es muss entweder ein gültiger &lt;a0&gt;Identifikator&lt;/a0&gt; oder eine &lt;a1&gt;direkt geschriebene Zeichenkette&lt;/a1&gt; sein. Beim Importieren eines via &lt;a2&gt;#Module&lt;/a2&gt; definierten Moduls oder einer Datei kann jedoch eine beliebige Syntax verwendet werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>It must be preceded by a decimal point.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180707T103341Z" creationid="Ragnar-F" creationdate="20141227T204422Z">
@@ -142251,6 +142739,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230908T184749Z" creationid="Ragnar-F" creationdate="20221220T174242Z">
         <seg>Zeilenumbrüche bleiben erhalten,</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Line breaks can be used inside the braces, due to &lt;a0&gt;continuation by enclosure&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122413Z" creationid="Ragnar-F" creationdate="20260913T122413Z">
+        <seg>Zeilenumbrüche können innerhalb der geschweiften Klammern verwendet werden, dank &lt;a0&gt;Fortsetzung durch Umschließen&lt;/a0&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -146663,6 +147159,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>ModuleAlias</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T115722Z" creationid="Ragnar-F" creationdate="20260913T115722Z">
+        <seg>ModulAlias</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ModuleName</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T114801Z" creationid="Ragnar-F" creationdate="20260913T114801Z">
+        <seg>ModulName</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Modulo.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140305T155201Z" creationid="Ragnar-F" creationdate="20140305T155201Z">
@@ -150339,6 +150851,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180412T153456Z" creationid="Ragnar-F" creationdate="20180412T153456Z">
         <seg>MsgBox Floor(1.2)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox Format("A:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122239Z" creationid="Ragnar-F" creationdate="20260913T122239Z">
+        <seg>MsgBox Format("A:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox Format("B:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122206Z" creationid="Ragnar-F" creationdate="20260913T122206Z">
+        <seg>MsgBox Format("B:</seg>
       </tuv>
     </tu>
     <tu>
@@ -159159,10 +159687,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>On the left-hand side of or-maybe, which can provide a fallback value for any subsequent operators.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T110711Z" creationid="Ragnar-F" creationdate="20260913T110711Z">
+        <seg>Auf der linken Seite des Oder-Vielleicht-Operators (??), der einen Fallback-Wert für alle nachfolgenden Operatoren bereitstellen kann.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>On the other hand, some convenience is lost.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231123T125859Z" creationid="Ragnar-F" creationdate="20210704T113406Z">
         <seg>Andererseits geht etwas Komfort verloren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>On the right-hand side of &lt;c0&gt;:&lt;/c0&gt; in an object literal, where unset properties are ignored.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T105325Z" creationid="Ragnar-F" creationdate="20260913T105325Z">
+        <seg>Auf der rechten Seite von &lt;c0&gt;:&lt;/c0&gt; in einem direkt geschriebenen Objekt, wo ungesetzte Eigenschaften ignoriert werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -164415,6 +164959,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Parentheses enclosing an unset expression.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T104447Z" creationid="Ragnar-F" creationdate="20260913T104447Z">
+        <seg>Runde Klammern, die einen Unset-Ausdruck umschließen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Parentheses may be used to override precedence as in this example:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230328T142031Z" creationid="Ragnar-F" creationdate="20140316T131804Z">
@@ -164747,6 +165299,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260115T112544Z" creationid="Ragnar-F" creationdate="20260115T112540Z">
         <seg>Pfad:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Paths can be absolute or relative to any of the &lt;a0&gt;search directories&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T115258Z" creationid="Ragnar-F" creationdate="20260913T115258Z">
+        <seg>Pfade können absolut oder relativ zu den &lt;a0&gt;Suchverzeichnissen&lt;/a0&gt; sein.</seg>
       </tuv>
     </tu>
     <tu>
@@ -191415,6 +191975,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The #Import directive imports a module and optionally imports names from a module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T114723Z" creationid="Ragnar-F" creationdate="20260913T114723Z">
+        <seg>Die #Import-Direktive importiert ein Modul und optional Namen aus einem Modul.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The #Include and #IncludeAgain directives cause the script to behave as though the specified file's contents are present at this exact position.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230627T104320Z" creationid="Ragnar-F" creationdate="20180812T094837Z">
@@ -192375,6 +192943,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The &lt;a0&gt;ternary operator&lt;/a0&gt;, where the true and/or false branch is an unset expression.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T104306Z" creationid="Ragnar-F" creationdate="20260913T104306Z">
+        <seg>Der &lt;a0&gt;ternäre Operator&lt;/a0&gt;, wenn der gewinnende und/oder verlierende Zweig ein Unset-Ausdruck ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The &lt;a0&gt;tray icon&lt;/a0&gt; changes to &lt;i1&gt; (or to &lt;i2&gt; if the script is also &lt;a3&gt;suspended&lt;/a3&gt;), whenever the script's &lt;a4&gt;current thread&lt;/a4&gt; is in a paused state.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230623T131839Z" creationid="Ragnar-F" creationdate="20230623T131839Z">
@@ -192683,6 +193259,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230909T112011Z" creationid="Ragnar-F" creationdate="20220702T083040Z">
         <seg>Das &lt;c0&gt;unset&lt;/c0&gt;-Schlüsselwort kann auch &lt;a1&gt;in einer Funktionsdefinition verwendet werden&lt;/a1&gt;, um anzugeben, dass ein Parameter optional ist, aber keinen Standardwert hat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;c0&gt;unset&lt;/c0&gt; keyword can be used to explicitly or conditionally omit a parameter, such as in combination with the &lt;a1&gt;ternary operator&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T112946Z" creationid="Ragnar-F" creationdate="20260913T112946Z">
+        <seg>Das Schlüsselwort &lt;c0&gt;unset&lt;/c0&gt; kann verwendet werden, um einen Parameter explizit oder bedingt wegzulassen, z.B. in Kombination mit dem &lt;a1&gt;ternären Operator&lt;/a1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;c0&gt;unset&lt;/c0&gt; keyword.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T102406Z" creationid="Ragnar-F" creationdate="20260913T102406Z">
+        <seg>Das Schlüsselwort &lt;c0&gt;unset&lt;/c0&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -200663,6 +201255,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The imported names are only exported (accessible to wildcard import in other modules) if the Export keyword is used.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122135Z" creationid="Ragnar-F" creationdate="20260913T122135Z">
+        <seg>Die importierten Namen werden nur exportiert (zugänglich für Platzhalterimporte in anderen Modulen), wenn das Schlüsselwort Export verwendet wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The index of a &lt;a0&gt;component&lt;/a0&gt;, where 1 is the first component.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20191209T113753Z" creationid="Ragnar-F" creationdate="20191209T101632Z">
@@ -201519,6 +202119,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The maybe operator (?) applied to a property, method or function call.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T102529Z" creationid="Ragnar-F" creationdate="20260913T102529Z">
+        <seg>Der Vielleicht-Operator (?), angewendet auf eine Eigenschaft, eine Methode oder einen Funktionsaufruf.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The maybe operator (?) applied to a variable.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T102447Z" creationid="Ragnar-F" creationdate="20260913T102447Z">
+        <seg>Der Vielleicht-Operator (?), angewendet auf eine Variable.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The meaning of the &lt;e0&gt;Time&lt;/e0&gt; parameter.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230923T065826Z" creationid="Ragnar-F" creationdate="20160702T131126Z">
@@ -201723,6 +202339,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260322T071927Z" creationid="Ragnar-F" creationdate="20260322T071927Z">
         <seg>Die Modifikatortaste selbst wurde seit v2.0.20 unterdrückt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The module itself is added to the current module's global namespace only if &lt;e0&gt;ModuleAlias&lt;/e0&gt; is specified or &lt;e1&gt;ModuleName&lt;/e1&gt; is unquoted.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T120919Z" creationid="Ragnar-F" creationdate="20260913T120919Z">
+        <seg>Das Modul selbst wird nur zum globalen Namensraum des aktuellen Moduls hinzugefügt, wenn &lt;e0&gt;ModulAlias&lt;/e0&gt; angegeben oder &lt;e1&gt;ModulName&lt;/e1&gt; anführungszeichenlos ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -205123,6 +205747,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231128T101841Z" creationid="Ragnar-F" creationdate="20210705T201901Z">
         <seg>Das Unterbefehlschlüsselwort muss direkt geschrieben werden; es darf weder in Anführungszeichen stehen noch eine Variable oder ein Ausdruck sein.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The sub-expression should be enclosed in parentheses if the final return value is not permitted to be unset.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T112432Z" creationid="Ragnar-F" creationdate="20260913T112432Z">
+        <seg>Der Teilausdruck sollte in runde Klammern gesetzt werden, wenn der finale Rückgabewert nicht ungesetzt sein darf.</seg>
       </tuv>
     </tu>
     <tu>
@@ -209955,6 +210587,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230919T144251Z" creationid="Ragnar-F" creationdate="20200612T114740Z">
         <seg>Diese Fehlermeldung kann mit &lt;a0&gt;Try&lt;/a0&gt;/&lt;a1&gt;Catch&lt;/a1&gt; unterdrückt oder behandelt werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This can be the name of any function, class or global variable, including the module's own aliases of names it has imported.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T120156Z" creationid="Ragnar-F" creationdate="20260913T120156Z">
+        <seg>Dies kann der Name einer beliebigen Funktion, Klasse oder globalen Variable sein, einschließlich der Aliase der Namen, die das Modul importiert hat.</seg>
       </tuv>
     </tu>
     <tu>
@@ -219591,6 +220231,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>To import a &lt;a1&gt;sub-module&lt;/a1&gt; from a different group, use a path-qualified name of the form "Path:ModuleName".</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T115557Z" creationid="Ragnar-F" creationdate="20260913T115552Z">
+        <seg>Um ein &lt;a1&gt;Untermodul&lt;/a1&gt; aus einer anderen Gruppe zu importieren, verwenden Sie einen gültigen Pfadnamen im Format "Pfad:ModulName".</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>To improve performance even more, use &lt;c3&gt;LV.Opt("-Redraw")&lt;/c3&gt; prior to adding a large number of rows and &lt;c4&gt;LV.Opt("+Redraw")&lt;/c4&gt; afterward.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260216T182627Z" creationid="Ragnar-F" creationdate="20260216T182627Z">
@@ -220123,6 +220771,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260216T140033Z" creationid="Ragnar-F" creationdate="20260216T140033Z">
         <seg>Um eine Textdatei in ein Eingabefeld zu laden, verwenden Sie &lt;a0&gt;FileRead&lt;/a0&gt; und &lt;a1&gt;GuiControl.Value&lt;/a1&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>To load an &lt;a0&gt;embedded script&lt;/a0&gt; as a module, specify an asterisk followed by the resource name.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T115415Z" creationid="Ragnar-F" creationdate="20260913T115415Z">
+        <seg>Um ein &lt;a0&gt;eingebettetes Skript&lt;/a0&gt; als Modul zu laden, geben Sie ein Sternchen gefolgt vom Ressourcennamen an.</seg>
       </tuv>
     </tu>
     <tu>
@@ -224567,6 +225223,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Unlike trailing commas, which are ignored when the parameter list is enclosed in parentheses, a trailing &lt;c0&gt;unset&lt;/c0&gt; parameter would be included in the &lt;e1&gt;length&lt;/e1&gt; of the parameter list.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T113956Z" creationid="Ragnar-F" creationdate="20260913T113752Z">
+        <seg>Im Gegensatz zu nachfolgenden Kommas, die ignoriert werden, wenn die Parameterliste in runde Klammern steht, würde ein nachfolgender &lt;c0&gt;unset&lt;/c0&gt;-Parameter in die &lt;e1&gt;Länge&lt;/e1&gt; der Parameterliste einbezogen werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Unlike v1, the Win32 menu is destroyed only when the object is deleted.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210706T085929Z" creationid="Ragnar-F" creationdate="20210706T085929Z">
@@ -224647,6 +225311,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Unset expressions are valid only within the following contexts:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T104531Z" creationid="Ragnar-F" creationdate="20260913T104531Z">
+        <seg>Unset-Ausdrücke sind nur in den folgenden Kontexten gültig:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>UnsetError</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220702T084616Z" creationid="Ragnar-F" creationdate="20220702T084616Z">
@@ -224659,6 +225331,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220702T084521Z" creationid="Ragnar-F" creationdate="20220702T084521Z">
         <seg>UnsetItemError</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Unsetting a variable or array element removes its value, while unsetting a map element or value property deletes it from the object.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T111912Z" creationid="Ragnar-F" creationdate="20260913T111912Z">
+        <seg>Eine Variable oder ein Array-Element ungesetzt zu machen, bedeutet, dass der zugehörige Wert entfernt wird. Ein Map-Element oder eine Werteigenschaft ungesetzt zu machen, bedeutet hingegen, dass das Element bzw. die Eigenschaft aus dem Objekt gelöscht wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -232543,6 +233223,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>When the function executes, the local variable corresponding to that parameter will be &lt;a2&gt;unset&lt;/a2&gt; if the parameter was omitted.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T114221Z" creationid="Ragnar-F" creationdate="20260913T114221Z">
+        <seg>Bei der Ausführung der Funktion wird die lokale Variable des entsprechenden Parameters &lt;a2&gt;ungesetzt&lt;/a2&gt; sein, wenn der Parameter weggelassen wurde.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>When the function has completed its purpose, it &lt;e2&gt;returns&lt;/e2&gt; control to the script.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230316T121623Z" creationid="Ragnar-F" creationdate="20171226T195917Z">
@@ -232627,6 +233315,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231001T093639Z" creationid="Ragnar-F" creationdate="20160702T165322Z">
         <seg>Wenn die Schleife unterbrochen wird oder ihr Ende erreicht hat, werden diese Variablen auf ihre vorherigen Werte zurückgesetzt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>When the maybe operator (?) is used to short-circuit operators within a parameter list, the parameter must end with a final question mark (?) to show that it should be interpreted as omitting the parameter.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T112349Z" creationid="Ragnar-F" creationdate="20260913T112349Z">
+        <seg>Wenn der Vielleicht-Operator (?) verwendet wird, um Operatoren innerhalb einer Parameterliste kurzzuschließen, muss der Parameter mit einem Fragezeichen (?) enden, um zu signalisieren, dass er als "Parameter weglassen" interpretiert werden soll.</seg>
       </tuv>
     </tu>
     <tu>
@@ -233523,6 +234219,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140310T153856Z" creationid="Ragnar-F" creationdate="20140310T153856Z">
         <seg>Whether that is true depends on what the Program does.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Whether this produces an error or some other effect depends on the property.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T112143Z" creationid="Ragnar-F" creationdate="20260913T112143Z">
+        <seg>Ob das einen Fehler erzeugt oder eine andere Auswirkung hat, hängt von der Eigenschaft ab.</seg>
       </tuv>
     </tu>
     <tu>
@@ -236435,6 +237139,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230624T150040Z" creationid="Ragnar-F" creationdate="20230624T150040Z">
         <seg>Innerhalb eines &lt;a0&gt;Ausdrucks&lt;/a0&gt; kann &lt;c1&gt;a ~= b&lt;/c1&gt; als Kurzschreibweise für &lt;c2&gt;RegExMatch(a, b)&lt;/c2&gt; verwendet werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Within an array literal, where the element is always included in &lt;a0&gt;Length&lt;/a0&gt; but may have no value.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T114014Z" creationid="Ragnar-F" creationdate="20260913T105218Z">
+        <seg>Innerhalb eines direkt geschriebenen Arrays, wo das Element immer in &lt;a0&gt;Length&lt;/a0&gt; einbezogen wird, aber ggf. keinen Wert hat.</seg>
       </tuv>
     </tu>
     <tu>
@@ -259255,6 +259967,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>it affects all hotkeys/hotstrings physically beneath it in the current module, until the next #HotIf directive.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T114617Z" creationid="Ragnar-F" creationdate="20260913T114617Z">
+        <seg>d.h. sie beeinflusst nur Hotkeys/Hotstrings, die sich im aktuellen Modul physisch darunter befinden, bis zur nächsten #HotIf-Direktive.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>it cannot create remappings specific to a particular user, application, or locale.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230810T122632Z" creationid="Ragnar-F" creationdate="20140316T031305Z">
@@ -265436,6 +266156,38 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210706T113305Z" creationid="Ragnar-F" creationdate="20210706T113305Z">
         <seg>{}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>{}", A(), Type(F?), Type(_internal?)), "TestA"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122241Z" creationid="Ragnar-F" creationdate="20260913T122241Z">
+        <seg>{}", A(), Type(F?), Type(_internal?)), "TestA"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>{}", B(), Type(F?), Type(_internal?)), "TestB"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122220Z" creationid="Ragnar-F" creationdate="20260913T122220Z">
+        <seg>{}", B(), Type(F?), Type(_internal?)), "TestB"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>{}`nF:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122208Z" creationid="Ragnar-F" creationdate="20260913T122208Z">
+        <seg>{}`nF:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>{}`n_internal:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122218Z" creationid="Ragnar-F" creationdate="20260913T122218Z">
+        <seg>{}`n_internal:</seg>
       </tuv>
     </tu>
     <tu>
