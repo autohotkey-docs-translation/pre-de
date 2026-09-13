@@ -36,6 +36,10 @@
             <repository type="git" url="https://github.com/autohotkey-docs-translation/pre-de.git">
                 <mapping local="/" repository="/"/>
             </repository>
+            <repository type="http" url="https://raw.githubusercontent.com/autohotkey-docs-translation/v1-de/master/">
+                <mapping local="tm/enforce/v1.tmx" repository="omegat/project_save.tmx"/>
+                <mapping local="glossary/v1.txt" repository="glossary/glossary.txt"/>
+            </repository>
             <repository type="http" url="https://raw.githubusercontent.com/autohotkey-docs-translation/v2-de/master/">
                 <mapping local="tm/enforce/v2.tmx" repository="omegat/project_save.tmx"/>
                 <mapping local="glossary/v2.txt" repository="glossary/glossary.txt"/>
