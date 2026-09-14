@@ -84563,6 +84563,54 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>ClassObj := Class()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T150716Z" creationid="Ragnar-F" creationdate="20260914T150716Z">
+        <seg>ClassObj := Class()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ClassObj := Class(&lt;s0&gt;Name, BaseClass, Args*&lt;/s0&gt;)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T150905Z" creationid="Ragnar-F" creationdate="20260914T150905Z">
+        <seg>ClassObj := Class(&lt;s0&gt;Name, BaseClass, Args*&lt;/s0&gt;)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ClassObj := Class(&lt;s1&gt;BaseClass, Args*&lt;/s1&gt;)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T150931Z" creationid="Ragnar-F" creationdate="20260914T150931Z">
+        <seg>ClassObj := Class(&lt;s1&gt;BaseClass, Args*&lt;/s1&gt;)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ClassObj := Class.&lt;s0&gt;Call&lt;/s0&gt;()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T150723Z" creationid="Ragnar-F" creationdate="20260914T150723Z">
+        <seg>ClassObj := Class.&lt;s0&gt;Call&lt;/s0&gt;()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ClassObj := Class.&lt;s2&gt;Call&lt;/s2&gt;(&lt;s3&gt;Name, BaseClass, Args*&lt;/s3&gt;)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T150933Z" creationid="Ragnar-F" creationdate="20260914T150933Z">
+        <seg>ClassObj := Class.&lt;s2&gt;Call&lt;/s2&gt;(&lt;s3&gt;Name, BaseClass, Args*&lt;/s3&gt;)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ClassObj := Class.&lt;s4&gt;Call&lt;/s4&gt;(&lt;s5&gt;BaseClass, Args*&lt;/s5&gt;)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T150934Z" creationid="Ragnar-F" creationdate="20260914T150934Z">
+        <seg>ClassObj := Class.&lt;s4&gt;Call&lt;/s4&gt;(&lt;s5&gt;BaseClass, Args*&lt;/s5&gt;)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>ClassObj.&lt;s0&gt;Prototype&lt;/s0&gt; := Proto</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210223T140931Z" creationid="Ragnar-F" creationdate="20210223T140931Z">
@@ -89683,6 +89731,30 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Creates a new Class object based on &lt;e1&gt;BaseClass&lt;/e1&gt; or Object.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T150901Z" creationid="Ragnar-F" creationdate="20260914T150901Z">
+        <seg>Erstellt ein neues Class-Objekt basierend auf &lt;e1&gt;BaseClass&lt;/e1&gt; oder Object.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Creates a new Class object without a Prototype.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T150715Z" creationid="Ragnar-F" creationdate="20260914T150715Z">
+        <seg>Erstellt ein neues Class-Objekt ohne Prototype.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Creates a new Class object.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T150606Z" creationid="Ragnar-F" creationdate="20260914T150606Z">
+        <seg>Erstellt ein neues Class-Objekt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Creates a new ImageList that is initially empty.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230814T081438Z" creationid="Ragnar-F" creationdate="20230814T081438Z">
@@ -92047,6 +92119,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230623T143958Z" creationid="Ragnar-F" creationdate="20220713T130334Z">
         <seg>Löscht einen Rückruf und gibt seine Referenz zum Funktionsobjekt frei.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Deletes a callback and releases its references to the function object and type parameters (if any).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T145639Z" creationid="Ragnar-F" creationdate="20260914T145639Z">
+        <seg>Löscht einen Rückruf und gibt seine Referenzen zum Funktionsobjekt und zu den Typparametern (falls vorhanden) frei.</seg>
       </tuv>
     </tu>
     <tu>
@@ -105791,8 +105871,8 @@
       <tuv lang="en">
         <seg>For automatic conversion of the parameters and return value, specify a sequence of &lt;a1&gt;struct&lt;/a1&gt; classes.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T140157Z" creationid="Ragnar-F" creationdate="20260914T140148Z">
-        <seg>Für die automatische Umwandlung der Parameter und des Rückgabewerts können Sie eine Sequenz von &lt;a1&gt;Strukturklassen&lt;/a1&gt; angeben.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T145910Z" creationid="Ragnar-F" creationdate="20260914T140148Z">
+        <seg>Für die automatische Umwandlung der Parameter und des Rückgabewerts kann eine Sequenz von &lt;a1&gt;Strukturklassen&lt;/a1&gt; angeben werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -123727,8 +123807,8 @@
       <tuv lang="en">
         <seg>If a return type was specified via &lt;e1&gt;ParamSpec&lt;/e1&gt;, &lt;e2&gt;Function&lt;/e2&gt; must return a value of a compatible type.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T145125Z" creationid="Ragnar-F" creationdate="20260914T145125Z">
-        <seg>Wenn ein Rückgabetyp via &lt;e1&gt;ParamSpez&lt;/e1&gt; angegeben wurde, muss &lt;e2&gt;Funktion&lt;/e2&gt; einen Wert passend zum Typ zurückgeben.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T145442Z" creationid="Ragnar-F" creationdate="20260914T145125Z">
+        <seg>Wenn ein Rückgabetyp via &lt;e1&gt;ParamSpez&lt;/e1&gt; angegeben wurde, muss &lt;e2&gt;Funktion&lt;/e2&gt; einen dazu passenden Wert zurückgeben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -126465,6 +126545,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260214T094752Z" creationid="Ragnar-F" creationdate="20260214T094752Z">
         <seg>Wenn diese Option weggelassen wird, ist die Breite eines horizontalen Schiebereglers standardmäßig das 15-fache der aktuellen Schriftgröße und die Breite eines &lt;a3&gt;vertikalen&lt;/a3&gt; Schiebereglers standardmäßig 30 Pixel (außer wenn eine &lt;a4&gt;Dicke&lt;/a4&gt; angegeben wurde).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If omitted, it defaults to "".</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T150948Z" creationid="Ragnar-F" creationdate="20260914T150948Z">
+        <seg>Wenn weggelassen, wird standardmäßig "" verwendet.</seg>
       </tuv>
     </tu>
     <tu>
@@ -162567,6 +162655,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Otherwise the return value should be as described below.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T145758Z" creationid="Ragnar-F" creationdate="20260914T145542Z">
+        <seg>Andernfalls muss ein Wert wie unten beschrieben zurückgegeben werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Otherwise, 0 is returned.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230712T133714Z" creationid="Ragnar-F" creationdate="20140307T180938Z">
@@ -163811,6 +163907,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230622T142827Z" creationid="Ragnar-F" creationdate="20230621T091354Z">
         <seg>Andernfalls geben Sie die zu klickende Taste oder die Dreh-/Kipprichtung des Mausrads an.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Otherwise, specify the class name to assign to &lt;c0&gt;ClassObj.Prototype.__Class&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T161155Z" creationid="Ragnar-F" creationdate="20260914T161155Z">
+        <seg>Andernfalls geben Sie einen Klassennamen an, den Sie &lt;c0&gt;ClassObj.Prototype.__Class&lt;/c0&gt; zuweisen möchten.</seg>
       </tuv>
     </tu>
     <tu>
