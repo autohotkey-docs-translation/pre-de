@@ -38010,6 +38010,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;Integer&lt;/a0&gt; or &lt;a1&gt;Enumerable&lt;/a1&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T135722Z" creationid="Ragnar-F" creationdate="20260914T135708Z">
+        <seg>&lt;a0&gt;Integer&lt;/a0&gt; oder &lt;a1&gt;Enumerierbar&lt;/a1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;Integer&lt;/a0&gt; or &lt;a1&gt;Float&lt;/a1&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180921T105058Z" creationid="Ragnar-F" creationdate="20180816T101544Z">
@@ -48206,6 +48214,30 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230908T142024Z" creationid="Ragnar-F" creationdate="20221220T113103Z">
         <seg>&lt;e0&gt;AusgabeVarPID&lt;/e0&gt; liefert Ihnen die Prozess-ID. Diese ID wird oft mit &lt;a1&gt;WinWait&lt;/a1&gt; oder &lt;a2&gt;WinWaitActive&lt;/a2&gt; und &lt;a3&gt;ahk_pid&lt;/a3&gt; verwendet, um zu warten, bis das Programm ein Fenster auf dem Bildschirm anzeigt, oder um eines seiner Fenster zu identifizieren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;e0&gt;ParamSpec&lt;/e0&gt; is a non-numeric value and enumeration failed, or one of the values was not a valid type specifier.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T143324Z" creationid="Ragnar-F" creationdate="20260914T143324Z">
+        <seg>&lt;e0&gt;ParamSpez&lt;/e0&gt; ist ein nicht-numerischer Wert, und die Enumeration ist gescheitert, oder einer der Werte war kein gültiger Typbezeichner.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;e0&gt;ParamSpec&lt;/e0&gt; is negative.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T141400Z" creationid="Ragnar-F" creationdate="20260914T141400Z">
+        <seg>&lt;e0&gt;ParamSpez&lt;/e0&gt; ist negativ.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;e0&gt;ParamSpec&lt;/e0&gt; is omitted and:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T141403Z" creationid="Ragnar-F" creationdate="20260914T141403Z">
+        <seg>&lt;e0&gt;ParamSpez&lt;/e0&gt; wird weggelassen und:</seg>
       </tuv>
     </tu>
     <tu>
@@ -61674,6 +61706,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.24+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T135723Z" creationid="Ragnar-F" creationdate="20260914T135723Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.24+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;[v2.1-alpha.26+]&lt;/s0&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T170132Z" creationid="Ragnar-F" creationdate="20260913T170132Z">
@@ -61702,6 +61742,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T114223Z" creationid="Ragnar-F" creationdate="20260913T114223Z">
         <seg>&lt;s0&gt;[v2.1-alpha.3+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.30+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T140947Z" creationid="Ragnar-F" creationdate="20260914T140947Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.30+]&lt;/s0&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -69086,6 +69134,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210425T091036Z" creationid="Ragnar-F" creationdate="20210425T091036Z">
         <seg>AddrWord := Buffer(4)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Address := &lt;s0&gt;CallbackCreate&lt;/s0&gt;(Function &lt;s1&gt;, Options, ParamSpec&lt;/s1&gt;)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T135655Z" creationid="Ragnar-F" creationdate="20260914T134917Z">
+        <seg>Adresse := &lt;s0&gt;CallbackCreate&lt;/s0&gt;(Funktion &lt;s1&gt;, Optionen, ParamSpez&lt;/s1&gt;)</seg>
       </tuv>
     </tu>
     <tu>
@@ -105733,6 +105789,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For automatic conversion of the parameters and return value, specify a sequence of &lt;a1&gt;struct&lt;/a1&gt; classes.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T140157Z" creationid="Ragnar-F" creationdate="20260914T140148Z">
+        <seg>Für die automatische Umwandlung der Parameter und des Rückgabewerts können Sie eine Sequenz von &lt;a1&gt;Strukturklassen&lt;/a1&gt; angeben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For backreferences greater than 9 (and optionally those less than or equal to 9), enclose the number in braces; e.g. ${10}, ${11}, and so on.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230622T160013Z" creationid="Ragnar-F" creationdate="20230622T160013Z">
@@ -108417,6 +108481,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260213T211940Z" creationid="Ragnar-F" creationdate="20260213T211940Z">
         <seg>Zum Beispiel bewirkt &lt;c4&gt;Range20050101-20050615&lt;/c4&gt;, dass nur ein Datum oder Datumsbereich innerhalb der ersten 5,5 Monate des Jahres 2005 ausgewählt werden kann.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For example, &lt;c4&gt;[Float32, Float32, Int32]&lt;/c4&gt; accepts two 32-bit floating-point numbers as parameters and returns a 32-bit integer.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T140946Z" creationid="Ragnar-F" creationdate="20260914T140946Z">
+        <seg>Zum Beispiel bewirkt &lt;c4&gt;[Float32, Float32, Int32]&lt;/c4&gt;, dass zwei 32-Bit-Floating-Point-Zahlen als Parameter akzeptiert werden und ein 32-Bit-Integer zurückgegeben wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -121861,6 +121933,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If &lt;e0&gt;ParamSpec&lt;/e0&gt; is an array of type specifiers, each parameter is converted to the corresponding type.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T143935Z" creationid="Ragnar-F" creationdate="20260914T143935Z">
+        <seg>Wenn &lt;e0&gt;ParamSpez&lt;/e0&gt; ein Array von Typbezeichern ist, wird jeder Parameter in den entsprechenden Typ umgewandelt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If &lt;e0&gt;ParamSpec&lt;/e0&gt; is omitted or numeric and the &lt;s1&gt;&amp;&lt;/s1&gt; option is not used, all parameters are assumed to be integers.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T143824Z" creationid="Ragnar-F" creationdate="20260914T143824Z">
+        <seg>Wenn &lt;e0&gt;ParamSpez&lt;/e0&gt; weggelassen wird oder numerisch ist, und die &lt;s1&gt;&amp;&lt;/s1&gt;-Option nicht verwendet wird, werden alle Parameter als Integer vermutet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If &lt;e0&gt;Path&lt;/e0&gt; contains a filename that lacks a drive letter (that is, it has no path or merely a relative path), &lt;e1&gt;OutDrive&lt;/e1&gt; will be made blank but all the other output variables will be set correctly.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231111T112734Z" creationid="Ragnar-F" creationdate="20160704T130848Z">
@@ -123633,6 +123721,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230910T113034Z" creationid="Ragnar-F" creationdate="20190923T193029Z">
         <seg>Wenn ein relativer Pfad angegeben ist, verwendet die Direktive die Suchstrategie der Systemfunktion &lt;a1&gt;LoadLibraryW&lt;/a1&gt;, um die Datei zu finden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If a return type was specified via &lt;e1&gt;ParamSpec&lt;/e1&gt;, &lt;e2&gt;Function&lt;/e2&gt; must return a value of a compatible type.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T145125Z" creationid="Ragnar-F" creationdate="20260914T145125Z">
+        <seg>Wenn ein Rückgabetyp via &lt;e1&gt;ParamSpez&lt;/e1&gt; angegeben wurde, muss &lt;e2&gt;Funktion&lt;/e2&gt; einen Wert passend zum Typ zurückgeben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -127781,6 +127877,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If the &lt;c0&gt;&amp;&lt;/c0&gt; option is used, &lt;e1&gt;Function&lt;/e1&gt; receives the &lt;i2&gt;address&lt;/i2&gt; of the first callback parameter.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T144545Z" creationid="Ragnar-F" creationdate="20260914T144545Z">
+        <seg>Wenn die &lt;c0&gt;&amp;&lt;/c0&gt;-Option verwendet wird, empfängt &lt;e1&gt;Funktion&lt;/e1&gt; die &lt;i2&gt;Adresse&lt;/i2&gt; des ersten Rückrufparameters.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If the &lt;c0&gt;Owner&lt;i1&gt;HWND&lt;/i1&gt;&lt;/c0&gt; option is specified, it takes precedence over any other setting.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20170721T080953Z" creationid="Ragnar-F" creationdate="20170721T080953Z">
@@ -127857,6 +127961,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230624T185030Z" creationid="Ragnar-F" creationdate="20230624T185030Z">
         <seg>Wenn die &lt;e3&gt;Try&lt;/e3&gt;-Anweisung endet, ohne dass eine Ausnahme ausgelöst wird (und ohne dass die Kontrolle durch &lt;e4&gt;Return&lt;/e4&gt;, &lt;e5&gt;Break&lt;/e5&gt; etc. woanders hin transferiert wird), wird die &lt;e6&gt;Else&lt;/e6&gt;-Anweisung ausgeführt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the &lt;s0&gt;&amp;&lt;/s0&gt; option is used, only the address of the parameter list is passed to &lt;e1&gt;Function&lt;/e1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T144028Z" creationid="Ragnar-F" creationdate="20260914T144028Z">
+        <seg>Wenn die &lt;s0&gt;&amp;&lt;/s0&gt;-Option verwendet wird, wird nur die Adresse der Parameterliste an &lt;e1&gt;Funktion&lt;/e1&gt; übergeben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -129401,6 +129513,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231103T094755Z" creationid="Ragnar-F" creationdate="20230924T095646Z">
         <seg>Wenn der Parameter optional ist, kann nicht festgestellt werden, ob die vom Parameter referenzierte Variable eine neue lokale Variable oder eine vom Aufrufer übergebene Variable ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the parameter types are not specified, all parameters are assumed to be integers.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T144336Z" creationid="Ragnar-F" creationdate="20260914T144336Z">
+        <seg>Wenn keine Parametertypen angegeben sind, werden alle Parameter als Integer vermutet.</seg>
       </tuv>
     </tu>
     <tu>
@@ -132534,6 +132654,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>In &lt;a1&gt;v2.1 mode&lt;/a1&gt;, the return value is &lt;c2&gt;unset&lt;/c2&gt; if the array element has no value and &lt;a3&gt;Default&lt;/a3&gt; is not defined.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T133357Z" creationid="Ragnar-F" creationdate="20260914T133357Z">
+        <seg>Im &lt;a1&gt;v2.1-Modus&lt;/a1&gt; ist der Rückgabewert &lt;c2&gt;unset&lt;/c2&gt;, wenn das Array-Element keinen Wert hat und &lt;a3&gt;Default&lt;/a3&gt; nicht definiert ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>In &lt;s0&gt;[v2.0.6+]&lt;/s0&gt;, it is no longer the case that only the first 1023 characters of the specified window title, &lt;a1&gt;ahk_class&lt;/a1&gt; criterion value, and &lt;a2&gt;ahk_exe&lt;/a2&gt; criterion value are considered for matching purposes.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231117T171252Z" creationid="Ragnar-F" creationdate="20230902T085938Z">
@@ -135391,6 +135519,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>In those cases, &lt;e1&gt;ParamSpec&lt;/e1&gt; must be set to the size of the parameter list, where Int64 and Double count as two 32-bit parameters.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T144615Z" creationid="Ragnar-F" creationdate="20260914T144615Z">
+        <seg>In solchen Fällen muss &lt;e1&gt;ParamSpez&lt;/e1&gt; auf die Größe der Parameterliste gesetzt werden, wobei Int64 und Double als zwei 32-Bit-Parameter zählen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>In v1 it was equivalent to &lt;c1&gt;var := ""&lt;/c1&gt;, but silently failed if combined with another expression - for example:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231123T141200Z" creationid="Ragnar-F" creationdate="20210704T121039Z">
@@ -137419,6 +137555,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231202T133732Z" creationid="Ragnar-F" creationdate="20231202T133732Z">
         <seg>Interpretation von Ziel</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Interpreting the values correctly requires some understanding of how the x86 calling conventions work.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T144436Z" creationid="Ragnar-F" creationdate="20260914T144436Z">
+        <seg>Die korrekte Interpretation der Werte erfordert ein gewisses Verständnis dafür, wie die x86-Aufrufkonventionen funktionieren.</seg>
       </tuv>
     </tu>
     <tu>
@@ -165319,6 +165463,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>ParamSpec</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T135706Z" creationid="Ragnar-F" creationdate="20260914T135706Z">
+        <seg>ParamSpez</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Parameter pair</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200620T062927Z" creationid="Ragnar-F" creationdate="20200620T062927Z">
@@ -169547,6 +169699,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230601T104214Z" creationid="Ragnar-F" creationdate="20210212T202606Z">
         <seg>Empfängt eine benutzerdefinierte Meldung und bis zu zwei Zahlen von einem anderen Skript oder Programm (um Zeichenketten statt Zahlen zu senden, siehe nächstes Beispiel).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Receiving Parameters By Address</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T144600Z" creationid="Ragnar-F" creationdate="20260914T144530Z">
+        <seg>Parameter via Adresse empfangen</seg>
       </tuv>
     </tu>
     <tu>
@@ -187303,6 +187463,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Specify &lt;c1&gt;"void"&lt;/c1&gt; for the return type to permit &lt;e2&gt;Function&lt;/e2&gt; to return no value.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T141128Z" creationid="Ragnar-F" creationdate="20260914T141128Z">
+        <seg>Geben Sie &lt;c1&gt;"void"&lt;/c1&gt; für den Rückgabetyp an, um &lt;e2&gt;Funktion&lt;/e2&gt; zu ermöglichen, keinen Wert zurückzugeben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Specify &lt;c1&gt;-SysMenu&lt;/c1&gt; (minus SysMenu) to omit the system menu and icon in the window's upper left corner.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190226T120014Z" creationid="Ragnar-F" creationdate="20140314T024142Z">
@@ -196351,6 +196519,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The RAX or EAX register is set to 0 prior to return (i.e. if the caller expects an integer return value, the return value is 0).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T141347Z" creationid="Ragnar-F" creationdate="20260914T141347Z">
+        <seg>Das RAX- oder EAX-Register wird vor der Rückgabe auf 0 gesetzt (das heißt, wenn der Aufrufer einen Integer als Rückgabewert erwartet, ist der Rückgabewert 0).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The Random function generates a pseudo-random number.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230627T101623Z" creationid="Ragnar-F" creationdate="20180816T120412Z">
@@ -205215,6 +205391,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The return type must always be specified as the final element.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T140532Z" creationid="Ragnar-F" creationdate="20260914T140532Z">
+        <seg>Der Rückgabetyp muss immer als letztes Element angegeben werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The return value can be assigned to a variable as shown above, or it can be used directly as shown below:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230906T093301Z" creationid="Ragnar-F" creationdate="20170615T083537Z">
@@ -208603,6 +208787,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180215T151016Z" creationid="Ragnar-F" creationdate="20180215T151016Z">
         <seg>Es gibt drei Methoden:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>There are three modes for interpreting the parameters:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T143450Z" creationid="Ragnar-F" creationdate="20260914T143450Z">
+        <seg>Es gibt drei Modi für die Interpretation der Parameter:</seg>
       </tuv>
     </tu>
     <tu>
@@ -215839,6 +216031,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This may result in the caller throwing an UnsetError.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T133418Z" creationid="Ragnar-F" creationdate="20260914T133418Z">
+        <seg>Dies kann dazu führen, dass der Aufrufer einen UnsetError auslöst.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This method allows to change the display format after the DateTime control has been created.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260216T132637Z" creationid="Ragnar-F" creationdate="20260216T132637Z">
@@ -217707,6 +217907,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231121T091925Z" creationid="Ragnar-F" creationdate="20160705T140300Z">
         <seg>Dies geschieht nur, wenn Kodierungsfehler in der Skriptdatei auftreten oder wenn die zum Speichern oder Laden der Datei verwendeten Codepages nicht übereinstimmen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This should typically be an &lt;a2&gt;Array&lt;/a2&gt;, but can be any &lt;a3&gt;enumerable value&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T140536Z" creationid="Ragnar-F" creationdate="20260914T140517Z">
+        <seg>Dies sollte in der Regel ein &lt;a2&gt;Array&lt;/a2&gt; sein, aber grundsätzlich kann ein beliebiger &lt;a3&gt;enumerierbarer Wert&lt;/a3&gt; verwendet werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -226295,6 +226503,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Untyped Parameters</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T144134Z" creationid="Ragnar-F" creationdate="20260914T144104Z">
+        <seg>Untypisierte Parameter</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Unwanted behavior may also occur if a callback returns an integer to suppress further processing of a message, but the system expected different processing or a different response.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230622T110940Z" creationid="Ragnar-F" creationdate="20230622T110940Z">
@@ -234592,6 +234808,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>When using the standard 32-bit calling convention, &lt;e3&gt;ParamSpec&lt;/e3&gt; must specify the size of the parameter list in DWORDs (the number of bytes divided by 4).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T135705Z" creationid="Ragnar-F" creationdate="20260914T135705Z">
+        <seg>Wenn die reguläre 32-Bit-Aufrufkonvention verwendet wird, muss &lt;e3&gt;ParamSpez&lt;/e3&gt; die Größe der Parameterliste in DWORDs angeben (die Anzahl der Bytes geteilt durch 4).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>When using the traditional &lt;a0&gt;SendEvent&lt;/a0&gt; method, reduce &lt;a1&gt;SetKeyDelay&lt;/a1&gt; to 0 or -1, which should help because it sends the keystrokes more quickly.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230330T142712Z" creationid="Ragnar-F" creationdate="20140228T033155Z">
@@ -237852,6 +238076,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171112T212122Z" creationid="Ragnar-F" creationdate="20171112T212113Z">
         <seg>Winspector Spy (&lt;a0&gt;kann hier gefunden werden&lt;/a0&gt;)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>With &lt;e2&gt;Cdecl&lt;/e2&gt; or the 64-bit calling convention, specifying a parameter count has no effect.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T144726Z" creationid="Ragnar-F" creationdate="20260914T144726Z">
+        <seg>Bei &lt;e2&gt;Cdecl&lt;/e2&gt;- oder 64-Bit-Aufrufkonventionen ist die Angabe einer Parameteranzahl wirkungslos.</seg>
       </tuv>
     </tu>
     <tu>
