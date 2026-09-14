@@ -6374,6 +6374,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>#Warn StdOut</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T044350Z" creationid="Ragnar-F" creationdate="20260914T044350Z">
+        <seg>#Warn StdOut</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>#Warn UseUnsetLocal and UseUnsetGlobal have been removed, as reading an unset variable now raises an error.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210705T191514Z" creationid="Ragnar-F" creationdate="20210705T191514Z">
@@ -39506,6 +39514,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;Props&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.18+]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T044927Z" creationid="Ragnar-F" creationdate="20260914T044927Z">
+        <seg>&lt;a0&gt;Props&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.18+]&lt;/s1&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;Prototype objects&lt;/a0&gt; have this property by default.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231119T125630Z" creationid="Ragnar-F" creationdate="20190820T115709Z">
@@ -43538,6 +43554,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;c0&gt;#Warn On&lt;/c0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T042425Z" creationid="Ragnar-F" creationdate="20260914T042425Z">
+        <seg>&lt;c0&gt;#Warn On&lt;/c0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;c0&gt;#Warn Type, Mode&lt;/c0&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T203405Z" creationid="Ragnar-F" creationdate="20260911T203325Z">
@@ -46782,6 +46806,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20170720T152548Z" creationid="Ragnar-F" creationdate="20170720T152548Z">
         <seg>&lt;c4&gt;"'Datum:' dd.MM.yy 'Zeit:' hh:mm:ss tt"&lt;/c4&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c4&gt;#Warn Off&lt;/c4&gt; causes those warnings to be ignored.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T042257Z" creationid="Ragnar-F" creationdate="20260914T042257Z">
+        <seg>&lt;c4&gt;#Warn Off&lt;/c4&gt; führt dazu, dass solche Warnungen ignoriert werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -80012,8 +80044,8 @@
       <tuv lang="en">
         <seg>By default, any attempt to use an unset variable, property, array element or return value immediately causes an &lt;a0&gt;UnsetError&lt;/a0&gt; to be thrown.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T201405Z" creationid="Ragnar-F" creationdate="20260912T201405Z">
-        <seg>Standardmäßig führt jeder Versuch, eine ungesetzte Variable, eine ungesetzte Eigenschaft, ein ungesetztes Array-Element oder einen ungesetzten Rückgabewert zu verwenden, sofort dazu, dass ein &lt;a0&gt;UnsetError&lt;/a0&gt; geworfen wird.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T051926Z" creationid="Ragnar-F" creationdate="20260912T201405Z">
+        <seg>Standardmäßig führt jeder Versuch, eine ungesetzte Variable, eine ungesetzte Eigenschaft, ein ungesetztes Array-Element oder einen ungesetzten Rückgabewert zu verwenden, sofort dazu, dass ein &lt;a0&gt;UnsetError&lt;/a0&gt; ausgelöst wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -80572,8 +80604,8 @@
       <tuv lang="en">
         <seg>By throwing an error when the variable is read instead of waiting until the value is used, some common errors are detected earlier, making it easier to identify the source of the error.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T203613Z" creationid="Ragnar-F" creationdate="20260912T203613Z">
-        <seg>Dadurch, dass beim Lesen der Variable ein Fehler geworfen wird, anstatt abzuwarten, bis der Wert verwendet wird, werden einige häufige Fehler früher erkannt, wodurch sich die Fehlerquelle leichter identifizieren lässt.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T052003Z" creationid="Ragnar-F" creationdate="20260912T203613Z">
+        <seg>Dadurch, dass beim Lesen der Variable ein Fehler ausgelöst wird, anstatt abzuwarten, bis der Wert verwendet wird, werden einige häufige Fehler früher erkannt, wodurch sich die Fehlerquelle leichter identifizieren lässt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -82270,6 +82302,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190411T210423Z" creationid="Ragnar-F" creationdate="20140311T150225Z">
         <seg>Bewirkt, dass solche Nicht-Hot-Tracking-Elemente bei Aktivierung mit unterstrichenem Text dargestellt werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Causes warnings to be delivered via StdOut, unless a mode has been specified for the warning.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T044349Z" creationid="Ragnar-F" creationdate="20260914T044349Z">
+        <seg>Bewirkt, dass Warnungen via StdOut übermittelt werden, es sei denn, für die Warnung wurde ein Modus angegeben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -93267,6 +93307,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Disables all warnings for the current module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T043357Z" creationid="Ragnar-F" creationdate="20260914T043357Z">
+        <seg>Deaktiviert alle Warnungen für das aktuelle Modul.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Disables both horizontal and vertical scrolling in the control.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190412T111212Z" creationid="Ragnar-F" creationdate="20140311T150505Z">
@@ -97123,6 +97171,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Enables every type of warning for the current module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T043518Z" creationid="Ragnar-F" creationdate="20260914T043518Z">
+        <seg>Aktiviert alle Warnungstypen für das aktuelle Modul.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Enables exemption for subsequent hotkeys and hotstrings.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230918T162126Z" creationid="Ragnar-F" creationdate="20230918T162126Z">
@@ -97583,6 +97639,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220419T103815Z" creationid="Ragnar-F" creationdate="20190820T210651Z">
         <seg>Enumeriert Schlüssel-Wert-Paare.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Enumerates the properties of a value.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T044959Z" creationid="Ragnar-F" creationdate="20260914T044959Z">
+        <seg>Enumeriert die Eigenschaften eines Wertes.</seg>
       </tuv>
     </tu>
     <tu>
@@ -102357,16 +102421,16 @@
       <tuv lang="en">
         <seg>Fixed Map and Array not throwing UnsetItemError in v2.0 mode when return value is unused.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T121918Z" creationid="Ragnar-F" creationdate="20260911T121918Z">
-        <seg>Behoben: Map und Array werfen im v2.0-Modus keinen UnsetItemError mehr, wenn der Rückgabewert ungenutzt bleibt.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T051730Z" creationid="Ragnar-F" creationdate="20260911T121918Z">
+        <seg>Behoben: Map und Array lösen im v2.0-Modus keinen UnsetItemError mehr aus, wenn der Rückgabewert ungenutzt bleibt.</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>Fixed Map and Array to throw UnsetItemError, not UnsetError (when &lt;c0&gt;?&lt;/c0&gt; and &lt;c1&gt;??&lt;/c1&gt; are not used).</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122826Z" creationid="Ragnar-F" creationdate="20260911T122826Z">
-        <seg>Behoben: Map und Array werfen nun UnsetItemError statt UnsetError (wenn &lt;c0&gt;?&lt;/c0&gt; und &lt;c1&gt;??&lt;/c1&gt; nicht verwendet werden).</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T051758Z" creationid="Ragnar-F" creationdate="20260911T122826Z">
+        <seg>Behoben: Map und Array lösen nun UnsetItemError statt UnsetError aus (wenn &lt;c0&gt;?&lt;/c0&gt; und &lt;c1&gt;??&lt;/c1&gt; nicht verwendet werden).</seg>
       </tuv>
     </tu>
     <tu>
@@ -105041,6 +105105,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230621T155901Z" creationid="Ragnar-F" creationdate="20230621T155901Z">
         <seg>Wenn es sich um PNG- oder TIF-Bilder handelt, könnte &lt;c3&gt;*TransBlack&lt;/c3&gt; die beste Wahl sein.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For PropName &lt;s0&gt;, PropValue&lt;/s0&gt; in Value.&lt;s1&gt;Props&lt;/s1&gt;()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T045046Z" creationid="Ragnar-F" creationdate="20260914T045007Z">
+        <seg>For EigenschaftName &lt;s0&gt;, EigenschaftWert&lt;/s0&gt; in Wert.&lt;s1&gt;Props&lt;/s1&gt;()</seg>
       </tuv>
     </tu>
     <tu>
@@ -112225,6 +112297,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210704T092546Z" creationid="Ragnar-F" creationdate="20210704T092546Z">
         <seg>In v2.0 wird A_LastError auch von IniRead, IniWrite und IniDelete gesetzt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For v2.0, enables all warnings and sets mode to MsgBox.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T044142Z" creationid="Ragnar-F" creationdate="20260914T044142Z">
+        <seg>Für v2.0 werden damit alle Warnungen aktiviert und der Modus auf MsgBox gesetzt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For v2.1, sets only the default warnings to be enabled with the program-wide default mode.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T044153Z" creationid="Ragnar-F" creationdate="20260914T044047Z">
+        <seg>Für v2.1 werden damit lediglich die Standardwarnungen gesetzt, die mit dem programmweiten Standardmodus aktiviert werden sollen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -120069,6 +120157,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>However, the ordering of multiple #Warn directives is significant when &lt;e0&gt;WarningType&lt;/e0&gt; is specified:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T043240Z" creationid="Ragnar-F" creationdate="20260914T043240Z">
+        <seg>Die Anordnung der #Warn-Direktiven ist allerdings entscheidend, wenn &lt;e0&gt;WarnungTyp&lt;/e0&gt; angegeben ist:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>However, the part number might be a very large integer if the user clicks near the sizing grip at the right side of the bar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231009T144537Z" creationid="Ragnar-F" creationdate="20170516T155521Z">
@@ -121609,6 +121705,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231112T102607Z" creationid="Ragnar-F" creationdate="20160704T140437Z">
         <seg>Wenn &lt;e0&gt;Länge&lt;/e0&gt; negativ ist, bestimmt dessen Absolutwert die genaue Anzahl der Zeichen, die umgewandelt werden, einschließlich aller binären Nullen, die die Zeichenkette eventuell enthält, d.h. das Ergebnis wird immer eine Zeichenkette mit exakt dieser Länge sein.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If &lt;e0&gt;Length&lt;/e0&gt; is omitted and the item has a value, it is returned.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T051414Z" creationid="Ragnar-F" creationdate="20260914T051414Z">
+        <seg>Wenn &lt;e0&gt;Länge&lt;/e0&gt; weggelassen wird und das Element einen Wert hat, wird dieser zurückgegeben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -125085,6 +125189,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If defined, its value is returned by &lt;a0&gt;__Item&lt;/a0&gt; or &lt;a1&gt;Get&lt;/a1&gt; if the requested element has no value, instead of throwing an &lt;a2&gt;UnsetItemError&lt;/a2&gt; or returning &lt;c3&gt;unset&lt;/c3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T051606Z" creationid="Ragnar-F" creationdate="20260914T051606Z">
+        <seg>Wenn definiert, wird ihr Wert durch &lt;a0&gt;__Item&lt;/a0&gt; oder &lt;a1&gt;Get&lt;/a1&gt; zurückgegeben, wenn das angeforderte Element keinen Wert hat, anstatt einen &lt;a2&gt;UnsetItemError&lt;/a2&gt; auszulösen oder &lt;c3&gt;unset&lt;/c3&gt; zurückzugeben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If defined, its value is returned by &lt;a0&gt;__Item&lt;/a0&gt; or &lt;a1&gt;Get&lt;/a1&gt; if the requested item cannot be found, instead of throwing an &lt;a2&gt;UnsetItemError&lt;/a2&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231025T172134Z" creationid="Ragnar-F" creationdate="20230901T112918Z">
@@ -128093,6 +128205,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If the caller is in &lt;a1&gt;v2.1 mode&lt;/a1&gt;, return &lt;c2&gt;unset&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T045723Z" creationid="Ragnar-F" creationdate="20260914T045611Z">
+        <seg>Wenn der Aufrufer im &lt;a1&gt;v2.1-Modus&lt;/a1&gt; ist, &lt;c2&gt;unset&lt;/c2&gt; zurückgeben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If the calling process is associated with a Terminal Services client session, the return value is nonzero.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230921T120634Z" creationid="Ragnar-F" creationdate="20140307T163209Z">
@@ -128929,6 +129049,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230817T100922Z" creationid="Ragnar-F" creationdate="20210211T221042Z">
         <seg>Wenn das zuletzt gefundene Fenster ein verstecktes &lt;a0&gt;GUI-Fenster&lt;/a0&gt; ist, kann es auch verwendet werden, wenn &lt;a1&gt;DetectHiddenWindows&lt;/a1&gt; ausgeschaltet ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the last item has a value, it is returned.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T045928Z" creationid="Ragnar-F" creationdate="20260914T045928Z">
+        <seg>Wenn das letzte Element einen Wert hat, wird dieser zurückgegeben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -130498,6 +130626,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260215T104309Z" creationid="Ragnar-F" creationdate="20200809T072447Z">
         <seg>Wenn kein Fenster aktiv ist oder die Position der Einfügemarke nicht ermittelt werden kann, gibt die Funktion 0 (false) zurück und die Ausgabevariablen werden leer gemacht.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If there is no base, the return value is &lt;a0&gt;&lt;e1&gt;blank-unset&lt;/e1&gt;&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T045150Z" creationid="Ragnar-F" creationdate="20260914T045150Z">
+        <seg>Wenn es keine Basis gibt, ist der Rückgabewert &lt;a0&gt;&lt;e1&gt;leer-ungesetzt&lt;/e1&gt;&lt;/a0&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -138099,6 +138235,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230901T130604Z" creationid="Ragnar-F" creationdate="20230901T100927Z">
         <seg>Die Eigenschaft kann mit den üblichen Mitteln implementiert werden, einschließlich einer &lt;a3&gt;dynamischen Eigenschaft&lt;/a3&gt; oder einer &lt;a4&gt;Metafunktion&lt;/a4&gt;, aber um festzustellen, welcher Schlüssel abgefragt wurde, müsste stattdessen &lt;a5&gt;__Item&lt;/a5&gt; oder &lt;a6&gt;Get&lt;/a6&gt; überschrieben werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>It can be implemented by any of the normal means, including a &lt;a4&gt;dynamic property&lt;/a4&gt; or &lt;a5&gt;meta-function&lt;/a5&gt;, but determining which key was queried would require overriding &lt;a6&gt;__Item&lt;/a6&gt; or &lt;a7&gt;Get&lt;/a7&gt; instead.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T051711Z" creationid="Ragnar-F" creationdate="20260914T051711Z">
+        <seg>Die Eigenschaft kann mit den üblichen Mitteln implementiert werden, einschließlich einer &lt;a4&gt;dynamischen Eigenschaft&lt;/a4&gt; oder einer &lt;a5&gt;Metafunktion&lt;/a5&gt;, aber um festzustellen, welcher Schlüssel abgefragt wurde, müsste stattdessen &lt;a6&gt;__Item&lt;/a6&gt; oder &lt;a7&gt;Get&lt;/a7&gt; überschrieben werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -161047,6 +161191,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Only &lt;c2&gt;Any.Prototype&lt;/c2&gt; itself has no base.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T045221Z" creationid="Ragnar-F" creationdate="20260914T045221Z">
+        <seg>Nur &lt;c2&gt;Any.Prototype&lt;/c2&gt; selbst hat keine Basis.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Only Picture controls with the SS_NOTIFY (0x100) style send click and double-click notifications, so &lt;a2&gt;GuiControl.OnEvent&lt;/a2&gt; automatically adds this style when a Click or DoubleClick callback is registered.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260217T183821Z" creationid="Ragnar-F" creationdate="20260217T183821Z">
@@ -162251,6 +162403,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231202T140230Z" creationid="Ragnar-F" creationdate="20140308T025359Z">
         <seg>Andernfalls wird die erste Teilzeichenkette, die mit einem Leerzeichen endet und entweder eine vorhandene Datei ist oder auf .exe, .bat, .com, .cmd oder .hta endet, als Aktion interpretiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Otherwise the return value is &lt;a0&gt;&lt;e1&gt;blank-unset&lt;/e1&gt;&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T050901Z" creationid="Ragnar-F" creationdate="20260914T050901Z">
+        <seg>Andernfalls ist der Rückgabewert &lt;a0&gt;&lt;e1&gt;leer-ungesetzt&lt;/e1&gt;&lt;/a0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Otherwise the return value is &lt;a1&gt;&lt;e2&gt;blank-unset&lt;/e2&gt;&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T051446Z" creationid="Ragnar-F" creationdate="20260914T051446Z">
+        <seg>Andernfalls ist der Rückgabewert &lt;a1&gt;&lt;e2&gt;leer-ungesetzt&lt;/e2&gt;&lt;/a1&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -168331,6 +168499,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210410T202114Z" creationid="Ragnar-F" creationdate="20210410T202114Z">
         <seg>Eigenschaft[&lt;i0&gt;Parameter&lt;/i0&gt;]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Props &lt;s0&gt;[v2.1-alpha.18+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T045001Z" creationid="Ragnar-F" creationdate="20260914T045001Z">
+        <seg>Props &lt;s0&gt;[v2.1-alpha.18+]&lt;/s0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -185351,6 +185527,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>So, for example, the two statements below have the combined effect of enabling all warnings except LocalSameAsGlobal (which is also the default configuration):</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T043337Z" creationid="Ragnar-F" creationdate="20260914T043337Z">
+        <seg>Zum Beispiel haben die beiden unteren Direktiven den kombinierten Effekt, alle Warnungen außer LocalSameAsGlobal zu aktivieren (was auch die Standardkonfiguration ist):</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>So, when waiting for their trigger key within their definition, the result may differ from what is expected, especially if the timeout option is used.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20251125T165839Z" creationid="Ragnar-F" creationdate="20251125T165638Z">
@@ -197569,8 +197753,8 @@
       <tuv lang="en">
         <seg>The assignment &lt;c0&gt;x := y&lt;/c0&gt; will always leave &lt;e1&gt;x&lt;/e1&gt; with a value upon completion, because if &lt;e2&gt;y&lt;/e2&gt; is unset, an error is thrown before the assignment is carried out.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T203247Z" creationid="Ragnar-F" creationdate="20260912T202825Z">
-        <seg>Die Zuweisung &lt;c0&gt;x := y&lt;/c0&gt; kann nur dann abgeschlossen werden, wenn &lt;e1&gt;y&lt;/e1&gt; gesetzt ist. Wenn es ungesetzt ist, wird vor der Ausführung ein Fehler geworfen, sodass &lt;e2&gt;x&lt;/e2&gt; unverändert bleibt.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T051938Z" creationid="Ragnar-F" creationdate="20260912T202825Z">
+        <seg>Die Zuweisung &lt;c0&gt;x := y&lt;/c0&gt; kann nur dann abgeschlossen werden, wenn &lt;e1&gt;y&lt;/e1&gt; gesetzt ist. Wenn es ungesetzt ist, wird vor der Ausführung ein Fehler ausgelöst, sodass &lt;e2&gt;x&lt;/e2&gt; unverändert bleibt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -200999,6 +201183,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The following special cases also exist:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T042344Z" creationid="Ragnar-F" creationdate="20260914T042344Z">
+        <seg>Außerdem gibt es folgende Sonderfälle:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The following steps are generally used:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230409T114255Z" creationid="Ragnar-F" creationdate="20140301T024651Z">
@@ -201393,8 +201585,8 @@
       <tuv lang="en">
         <seg>The function call &lt;c0&gt;f(x)&lt;/c0&gt; will always provide a value for the first parameter, because if &lt;e1&gt;x&lt;/e1&gt; is unset, an error is thrown before the function is called.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T203237Z" creationid="Ragnar-F" creationdate="20260912T203212Z">
-        <seg>Der Funktionsaufruf &lt;c0&gt;f(x)&lt;/c0&gt; kann nur dann erfolgen, wenn &lt;e1&gt;x&lt;/e1&gt; gesetzt ist. Wenn es ungesetzt ist, wird vor dem Aufruf ein Fehler geworfen, sodass der erste Parameter niemals ohne Wert an die Funktion gelangt.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T051950Z" creationid="Ragnar-F" creationdate="20260912T203212Z">
+        <seg>Der Funktionsaufruf &lt;c0&gt;f(x)&lt;/c0&gt; kann nur dann erfolgen, wenn &lt;e1&gt;x&lt;/e1&gt; gesetzt ist. Wenn es ungesetzt ist, wird vor dem Aufruf ein Fehler ausgelöst, sodass der erste Parameter niemals ohne Wert an die Funktion gelangt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -202115,6 +202307,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210706T120534Z" creationid="Ragnar-F" creationdate="20210706T120534Z">
         <seg>Der letzte Skript-Thread endet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The last such directive affects all warnings which are enabled by default, and all warnings for which &lt;e3&gt;WarningMode&lt;/e3&gt; was set to On.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T042227Z" creationid="Ragnar-F" creationdate="20260914T042227Z">
+        <seg>Die letzte einer solchen Direktive beeinflusst alle Warnungen, die standardmäßig aktiv sind, und alle Warnungen, bei denen &lt;e3&gt;WarnungModus&lt;/e3&gt; auf On gesetzt wurde.</seg>
       </tuv>
     </tu>
     <tu>
@@ -207375,6 +207575,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The value (if there is no value, &lt;e0&gt;Value&lt;/e0&gt; becomes &lt;a1&gt;unset&lt;/a1&gt;).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T051527Z" creationid="Ragnar-F" creationdate="20260914T051527Z">
+        <seg>Der Wert (wenn es keinen gibt, bekommt &lt;e0&gt;Wert&lt;/e0&gt; den Status &lt;a1&gt;ungesetzt&lt;/a1&gt;).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The value being assigned.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190820T120409Z" creationid="Ragnar-F" creationdate="20190820T120409Z">
@@ -208955,6 +209163,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171102T122357Z" creationid="Ragnar-F" creationdate="20140313T161108Z">
         <seg>Daher wird der Tastatur-Hook normalerweise nur installiert, wenn das Skript eines der folgenden Dinge enthält:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Therefore, the location within a module is not significant (and, like other directives, #Warn cannot be executed conditionally).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T043151Z" creationid="Ragnar-F" creationdate="20260914T043151Z">
+        <seg>Folglich ist die Position der Direktive innerhalb eines Moduls ohne Bedeutung (und kann wie alle anderen Direktiven nicht bedingt ausgeführt werden).</seg>
       </tuv>
     </tu>
     <tu>
@@ -215791,6 +216007,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This method is exactly equivalent to &lt;c0&gt;Props(Value)&lt;/c0&gt;, unless overridden.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T045116Z" creationid="Ragnar-F" creationdate="20260914T045116Z">
+        <seg>Diese Methode ist äquivalent zu &lt;c0&gt;Props(Wert)&lt;/c0&gt;, sofern nicht überschrieben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This method is necessary in cases where a key or mouse button must be held down for the entire time that you're holding down a controller button.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231117T151641Z" creationid="Ragnar-F" creationdate="20230620T214956Z">
@@ -216043,6 +216267,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230815T161258Z" creationid="Ragnar-F" creationdate="20230815T161258Z">
         <seg>Diese Methode gibt die Anzahl der Zeilen oder Spalten im Steuerelement zurück.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This method returns the removed value (&lt;a0&gt;&lt;e1&gt;blank-unset&lt;/e1&gt;&lt;/a0&gt; if none).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T045458Z" creationid="Ragnar-F" creationdate="20260914T045458Z">
+        <seg>Diese Methode gibt den entfernten Wert zurück (&lt;a0&gt;&lt;e1&gt;leer-ungesetzt&lt;/e1&gt;&lt;/a0&gt;, wenn es keinen gibt).</seg>
       </tuv>
     </tu>
     <tu>
@@ -224351,6 +224583,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Turns on VarUnset and Unreachable and turns off LocalSameAsGlobal for the current module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T042421Z" creationid="Ragnar-F" creationdate="20260914T042421Z">
+        <seg>Aktiviert VarUnset und Unreachable und deaktiviert LocalSameAsGlobal für das aktuelle Modul.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Turns on VarUnset and Unreachable for the current module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T042502Z" creationid="Ragnar-F" creationdate="20260914T042502Z">
+        <seg>Aktiviert VarUnset und Unreachable für das aktuelle Modul.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Turns on the "read-only" and "hidden" attributes of all files and directories (subdirectories are not recursed into).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230930T111326Z" creationid="Ragnar-F" creationdate="20210212T134506Z">
@@ -227707,6 +227955,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230816T135225Z" creationid="Ragnar-F" creationdate="20140311T150415Z">
         <seg>Stellt die Hierarchie der Elemente mittels Verbindungslinien dar.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Uses the program-wide default mode.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T043554Z" creationid="Ragnar-F" creationdate="20260914T043554Z">
+        <seg>Verwendet den programmweiten Standardmodus.</seg>
       </tuv>
     </tu>
     <tu>
