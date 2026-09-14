@@ -34506,6 +34506,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;ClassObj()&lt;/a0&gt; and &lt;a1&gt;value is ClassObj&lt;/a1&gt; require that the Prototype property is a value property owned directly by the class, unless it is a &lt;a2&gt;Struct&lt;/a2&gt; class.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T164751Z" creationid="Ragnar-F" creationdate="20260914T164751Z">
+        <seg>&lt;a0&gt;ClassObj()&lt;/a0&gt; und &lt;a1&gt;Wert is ClassObj&lt;/a1&gt; setzen voraus, dass die Prototype-Eigenschaft eine Werteigenschaft ist, die direkt zur Klasse gehört, es sei denn, sie ist eine &lt;a2&gt;Struct&lt;/a2&gt;-Klasse.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;Clear&lt;/a0&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220418T143712Z" creationid="Ragnar-F" creationdate="20220418T143712Z">
@@ -44274,6 +44282,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;c0&gt;Class()&lt;/c0&gt; or &lt;c1&gt;Class.Call()&lt;/c1&gt; can be used to construct a new Class object based on &lt;c2&gt;Class.Prototype&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T162214Z" creationid="Ragnar-F" creationdate="20260914T162214Z">
+        <seg>&lt;c0&gt;Class()&lt;/c0&gt; oder &lt;c1&gt;Class.Call()&lt;/c1&gt; kann verwendet werden, um ein neues Class-Objekt basierend auf &lt;c2&gt;Class.Prototype&lt;/c2&gt; zu konstruieren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c0&gt;ClassObj.Base&lt;/c0&gt; is set to this, while &lt;c1&gt;ClassObj.Prototype.Base&lt;/c1&gt; is set to &lt;c2&gt;BaseClass.Prototype&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T161928Z" creationid="Ragnar-F" creationdate="20260914T161833Z">
+        <seg>&lt;c0&gt;ClassObj.Base&lt;/c0&gt; wird auf diesen Wert gesetzt, während &lt;c1&gt;ClassObj.Prototype.Base&lt;/c1&gt; auf &lt;c2&gt;BasisKlasse.Prototype&lt;/c2&gt; gesetzt wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;c0&gt;ClipboardAll([Data, Size])&lt;/c0&gt; creates an object containing everything on the clipboard (optionally accepting data previously retrieved from the clipboard instead of using the clipboard's current contents).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231128T132918Z" creationid="Ragnar-F" creationdate="20210705T205931Z">
@@ -46070,6 +46094,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231202T145310Z" creationid="Ragnar-F" creationdate="20231202T145305Z">
         <seg>&lt;c1&gt;Basis**Exponent&lt;/c1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c1&gt;Class()&lt;/c1&gt; or &lt;c2&gt;Class.Call()&lt;/c2&gt; can be called with parameters.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T162911Z" creationid="Ragnar-F" creationdate="20260914T162312Z">
+        <seg>&lt;c1&gt;Class()&lt;/c1&gt; oder &lt;c2&gt;Class.Call()&lt;/c2&gt; kann mit Parametern aufgerufen werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -58650,6 +58682,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; This applies when literally calling "Class" itself, not when &lt;a1&gt;calling classes&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T162125Z" creationid="Ragnar-F" creationdate="20260914T162125Z">
+        <seg>&lt;s0&gt;Hinweis:&lt;/s0&gt; Dies gilt für den direkten Aufruf von "Class" selbst, nicht für den &lt;a1&gt;Aufruf von Klassen&lt;/a1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;Note:&lt;/s0&gt; This example assumes AutoHotkey is installed in the default location, and will show an error otherwise.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230908T134655Z" creationid="Ragnar-F" creationdate="20221220T092110Z">
@@ -62146,6 +62186,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s2&gt;[v2.1-alpha.30+]&lt;/s2&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T165137Z" creationid="Ragnar-F" creationdate="20260914T165137Z">
+        <seg>&lt;s2&gt;[v2.1-alpha.30+]&lt;/s2&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s3&gt;;@Ahk2Exe-Base&lt;/s3&gt; [Path\]Name &lt;s4&gt;, [Exe_path\][Name], Codepage&lt;/s4&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230417T195548Z" creationid="Ragnar-F" creationdate="20220410T091119Z">
@@ -63062,6 +63110,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210216T132001Z" creationid="Ragnar-F" creationdate="20210216T132001Z">
         <seg>Es wird ein &lt;a4&gt;TypeError&lt;/a4&gt; ausgelöst, wenn einer der Eingabewerte weder eine Zahl noch eine numerische Zeichenkette ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A &lt;a5&gt;Prototype&lt;/a5&gt; must also be created and assigned to the class before it can be instantiated with the standard Call method.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T162247Z" creationid="Ragnar-F" creationdate="20260914T162247Z">
+        <seg>Außerdem muss ein &lt;a5&gt;Prototyp&lt;/a5&gt; erstellt und der Klasse zugewiesen werden, bevor sie mit der Standard-Call-Methode instanziiert werden kann.</seg>
       </tuv>
     </tu>
     <tu>
@@ -74810,6 +74866,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Args*</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T161839Z" creationid="Ragnar-F" creationdate="20260914T161839Z">
+        <seg>Args*</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Argument</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20141227T211858Z" creationid="Ragnar-F" creationdate="20141227T211858Z">
@@ -77310,6 +77374,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220910T111342Z" creationid="Ragnar-F" creationdate="20190820T102854Z">
         <seg>Basisobjekte können auf zwei verschiedene Arten definiert werden:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>BaseClass</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T161534Z" creationid="Ragnar-F" creationdate="20260914T161331Z">
+        <seg>BasisKlasse</seg>
       </tuv>
     </tu>
     <tu>
@@ -83835,6 +83907,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changing its value typically only affects these two operations and direct references to &lt;c3&gt;ClassObj.Prototype&lt;/c3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T164819Z" creationid="Ragnar-F" creationdate="20260914T164819Z">
+        <seg>Den Wert dieser Eigenschaft zu ändern, wirkt sich in der Regel nur auf diese beiden Operationen und auf direkte Referenzen zu &lt;c3&gt;ClassObj.Prototype&lt;/c3&gt; aus.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changing the icon will not unhide the tray icon if it was previously hidden by means such as &lt;a3&gt;#NoTrayIcon&lt;/a3&gt;; to do that, use &lt;c4&gt;&lt;a5&gt;A_IconHidden&lt;/a5&gt; := false&lt;/c4&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231114T180612Z" creationid="Ragnar-F" creationdate="20180101T002321Z">
@@ -84573,16 +84653,16 @@
       <tuv lang="en">
         <seg>ClassObj := Class(&lt;s0&gt;Name, BaseClass, Args*&lt;/s0&gt;)</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T150905Z" creationid="Ragnar-F" creationdate="20260914T150905Z">
-        <seg>ClassObj := Class(&lt;s0&gt;Name, BaseClass, Args*&lt;/s0&gt;)</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T161600Z" creationid="Ragnar-F" creationdate="20260914T150905Z">
+        <seg>ClassObj := Class(&lt;s0&gt;Name, BasisKlasse, Args*&lt;/s0&gt;)</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>ClassObj := Class(&lt;s1&gt;BaseClass, Args*&lt;/s1&gt;)</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T150931Z" creationid="Ragnar-F" creationdate="20260914T150931Z">
-        <seg>ClassObj := Class(&lt;s1&gt;BaseClass, Args*&lt;/s1&gt;)</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T161602Z" creationid="Ragnar-F" creationdate="20260914T150931Z">
+        <seg>ClassObj := Class(&lt;s1&gt;BasisKlasse, Args*&lt;/s1&gt;)</seg>
       </tuv>
     </tu>
     <tu>
@@ -84597,16 +84677,16 @@
       <tuv lang="en">
         <seg>ClassObj := Class.&lt;s2&gt;Call&lt;/s2&gt;(&lt;s3&gt;Name, BaseClass, Args*&lt;/s3&gt;)</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T150933Z" creationid="Ragnar-F" creationdate="20260914T150933Z">
-        <seg>ClassObj := Class.&lt;s2&gt;Call&lt;/s2&gt;(&lt;s3&gt;Name, BaseClass, Args*&lt;/s3&gt;)</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T161604Z" creationid="Ragnar-F" creationdate="20260914T150933Z">
+        <seg>ClassObj := Class.&lt;s2&gt;Call&lt;/s2&gt;(&lt;s3&gt;Name, BasisKlasse, Args*&lt;/s3&gt;)</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>ClassObj := Class.&lt;s4&gt;Call&lt;/s4&gt;(&lt;s5&gt;BaseClass, Args*&lt;/s5&gt;)</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T150934Z" creationid="Ragnar-F" creationdate="20260914T150934Z">
-        <seg>ClassObj := Class.&lt;s4&gt;Call&lt;/s4&gt;(&lt;s5&gt;BaseClass, Args*&lt;/s5&gt;)</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T161606Z" creationid="Ragnar-F" creationdate="20260914T150934Z">
+        <seg>ClassObj := Class.&lt;s4&gt;Call&lt;/s4&gt;(&lt;s5&gt;BasisKlasse, Args*&lt;/s5&gt;)</seg>
       </tuv>
     </tu>
     <tu>
@@ -89733,16 +89813,16 @@
       <tuv lang="en">
         <seg>Creates a new Class object based on &lt;e1&gt;BaseClass&lt;/e1&gt; or Object.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T150901Z" creationid="Ragnar-F" creationdate="20260914T150901Z">
-        <seg>Erstellt ein neues Class-Objekt basierend auf &lt;e1&gt;BaseClass&lt;/e1&gt; oder Object.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T161557Z" creationid="Ragnar-F" creationdate="20260914T150901Z">
+        <seg>Erstellt ein neues Class-Objekt basierend auf &lt;e1&gt;BasisKlasse&lt;/e1&gt; oder Object.</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>Creates a new Class object without a Prototype.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T150715Z" creationid="Ragnar-F" creationdate="20260914T150715Z">
-        <seg>Erstellt ein neues Class-Objekt ohne Prototype.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T162255Z" creationid="Ragnar-F" creationdate="20260914T150715Z">
+        <seg>Erstellt ein neues Class-Objekt ohne Prototyp.</seg>
       </tuv>
     </tu>
     <tu>
@@ -105885,6 +105965,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For backward-compatibility, it behaves as described in the paragraph above when the parameter count is zero.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T162437Z" creationid="Ragnar-F" creationdate="20260914T162437Z">
+        <seg>Aus Gründen der Abwärtskompatibilität verhält es sich wie im Absatz oben beschrieben, wenn die Parameteranzahl Null ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For better reliability, 0 is recommended as an alternative to -1.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230615T073801Z" creationid="Ragnar-F" creationdate="20140307T032418Z">
@@ -112201,6 +112289,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231203T112025Z" creationid="Ragnar-F" creationdate="20231203T112025Z">
         <seg>Bei Rechtsklick wird &lt;e2&gt;Element&lt;/e2&gt; auf die Zeilennummer oder ID des angeklickten Elements gesetzt (oder 0, wenn der Benutzer etwas anderes als ein Element anklickt).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For safety and efficiency, &lt;a1&gt;struct classes&lt;/a1&gt; have a read-only Prototype.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T164630Z" creationid="Ragnar-F" creationdate="20260914T164621Z">
+        <seg>Aus Gründen der Sicherheit und Effizienz haben &lt;a1&gt;Strukturklassen&lt;/a1&gt; einen schreibgeschützten Prototyp.</seg>
       </tuv>
     </tu>
     <tu>
@@ -120565,6 +120661,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>However, this new object initially has no Call method as it is not a subclass of &lt;a3&gt;Object&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T162220Z" creationid="Ragnar-F" creationdate="20260914T162220Z">
+        <seg>Dieses neue Objekt hat jedoch zunächst keine Call-Methode, da es keine Unterklasse von &lt;a3&gt;Object&lt;/a3&gt; ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>However, this only applies when &lt;e7&gt;Keys&lt;/e7&gt; begins with &lt;c8&gt;{Text}&lt;/c8&gt; or &lt;c9&gt;{Blind}{Text}&lt;/c9&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180613T075926Z" creationid="Ragnar-F" creationdate="20180613T075757Z">
@@ -126549,14 +126653,6 @@
     </tu>
     <tu>
       <tuv lang="en">
-        <seg>If omitted, it defaults to "".</seg>
-      </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T150948Z" creationid="Ragnar-F" creationdate="20260914T150948Z">
-        <seg>Wenn weggelassen, wird standardmäßig "" verwendet.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en">
         <seg>If omitted, it defaults to "all characters".</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230814T122800Z" creationid="Ragnar-F" creationdate="20230814T122800Z">
@@ -126873,6 +126969,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230830T092753Z" creationid="Ragnar-F" creationdate="20230830T092753Z">
         <seg>Wenn weggelassen, wird standardmäßig CP0 (die Standard-ANSI-Codepage des Systems) verwendet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If omitted, it defaults to Object.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T161629Z" creationid="Ragnar-F" creationdate="20260914T161629Z">
+        <seg>Wenn weggelassen, wird standardmäßig Object verwendet.</seg>
       </tuv>
     </tu>
     <tu>
@@ -127753,6 +127857,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190227T092718Z" creationid="Ragnar-F" creationdate="20140303T202657Z">
         <seg>Wenn Dimensionen und/oder Koordinaten in &lt;e0&gt;Optionen&lt;/e0&gt; weggelassen werden, wird das Steuerelement relativ zum vorherigen Steuerelement positioniert und/oder je nach Inhalt und Typ automatisch dimensioniert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If specified, any other parameters are passed to &lt;a0&gt;static __New&lt;/a0&gt;, as in &lt;c1&gt;ClassObj.__New(Args*)&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T162009Z" creationid="Ragnar-F" creationdate="20260914T162009Z">
+        <seg>Falls angegeben, werden alle anderen Parameter an &lt;a0&gt;static __New&lt;/a0&gt; übergeben, wie in &lt;c1&gt;ClassObj.__New(Args*)&lt;/c1&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -133918,6 +134030,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>In other words, &lt;c1&gt;Class()&lt;/c1&gt; or &lt;c2&gt;Class.Call()&lt;/c2&gt; can be called to create a new class object at runtime.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T164530Z" creationid="Ragnar-F" creationdate="20260914T164530Z">
+        <seg>Mit anderen Worten, man kann &lt;c1&gt;Class()&lt;/c1&gt; oder &lt;c2&gt;Class.Call()&lt;/c2&gt; aufrufen, um ein neues Klassenobjekt während der Skriptausführung zu erstellen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>In other words, &lt;c1&gt;myObject := ""&lt;/c1&gt; would cause the reference originally represented by &lt;e2&gt;address&lt;/e2&gt; to be released.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231119T142346Z" creationid="Ragnar-F" creationdate="20200612T082253Z">
@@ -138539,6 +138659,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221120T100821Z" creationid="Ragnar-F" creationdate="20221120T100821Z">
         <seg>Dieses Verb kann wie folgt verwendet werden:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>It can become a subclass of Object by assigning to &lt;a4&gt;Base&lt;/a4&gt;, or the Call method can be reimplemented or copied from another class.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T162224Z" creationid="Ragnar-F" creationdate="20260914T162224Z">
+        <seg>Es kann zu einer Unterklasse von Object durch Zuweisung an &lt;a4&gt;Base&lt;/a4&gt; gemacht werden, oder die Call-Methode kann reimplementiert oder aus einer anderen Klasse kopiert werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -161095,6 +161223,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>One example use is to &lt;a0&gt;create a struct definition at runtime&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T162812Z" creationid="Ragnar-F" creationdate="20260914T162812Z">
+        <seg>Ein Anwendungsbeispiel ist die &lt;a0&gt;Erstellung einer Strukturdefinition während der Skriptausführung&lt;/a0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>One exception is that &lt;a1&gt;DllCall&lt;/a1&gt; calls functions outside of the program; in those cases, it may be necessary to explicitly pass the &lt;a2&gt;buffer size&lt;/a2&gt; to the function.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230914T095031Z" creationid="Ragnar-F" creationdate="20190513T132603Z">
@@ -162559,6 +162695,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Otherwise (even if a parameter is explicitly &lt;c3&gt;unset&lt;/c3&gt;), a Prototype is created automatically based on &lt;c4&gt;BaseClass.Prototype&lt;/c4&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T162519Z" creationid="Ragnar-F" creationdate="20260914T162519Z">
+        <seg>Andernfalls (auch wenn ein Parameter explizit &lt;c3&gt;unset&lt;/c3&gt; ist) wird automatisch ein Prototyp basierend auf &lt;c4&gt;BasisKlasse.Prototype&lt;/c4&gt; erstellt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Otherwise (that is, if Notepad does not exist):</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230622T115554Z" creationid="Ragnar-F" creationdate="20210212T122254Z">
@@ -163899,6 +164043,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260309T092435Z" creationid="Ragnar-F" creationdate="20260309T092435Z">
         <seg>Andernfalls geben Sie den Bereich an, zu dem &lt;e1&gt;ZielTyp&lt;/e1&gt; relativ sein soll:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Otherwise, specify the base class.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T161640Z" creationid="Ragnar-F" creationdate="20260914T161640Z">
+        <seg>Andernfalls geben Sie die Basisklasse an.</seg>
       </tuv>
     </tu>
     <tu>
@@ -198703,6 +198855,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The class Class itself has a &lt;a0&gt;static Call method&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T164136Z" creationid="Ragnar-F" creationdate="20260914T164130Z">
+        <seg>Die Class-Klasse selbst hat eine &lt;a0&gt;statische Call-Methode&lt;/a0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The class and process name are often used when identifying a window by title alone is not feasible.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230908T084538Z" creationid="Ragnar-F" creationdate="20221219T143849Z">
@@ -212375,6 +212535,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This enables scripts to create Prototype objects which are based on native types other than Object, such as Map and Array, at runtime.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T162734Z" creationid="Ragnar-F" creationdate="20260914T162734Z">
+        <seg>Dadurch können Skripte während der Ausführung Prototypobjekte erstellen, die auf anderen nativen Typen als Object basieren, z.B. Map und Array.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This encourages clarity and reserves the directive for future uses.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230402T122447Z" creationid="Ragnar-F" creationdate="20221201T140855Z">
@@ -214427,6 +214595,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231125T195559Z" creationid="Ragnar-F" creationdate="20210704T180939Z">
         <seg>Dies beruht auf der verbesserten Unterstützung für binäre Nullen in Zeichenketten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This is a static method in the sense that it belongs to a class (such as Object), but at the same time it is an instance method of the class object, which is an instance of Class.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T164048Z" creationid="Ragnar-F" creationdate="20260914T164048Z">
+        <seg>Dies ist eine statische Methode insofern, dass sie zu einer Klasse (z.B. Object) gehört, gleichzeitig aber auch eine Instanzmethode des Klassenobjekts, das eine Instanz von Class ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -268014,6 +268190,17 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230302T194425Z" creationid="Ragnar-F" creationdate="20230302T194425Z">
         <seg>Zeitlimit</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <prop type="file">docs/lib/Class.htm</prop>
+      <prop type="prev">Type:</prop>
+      <prop type="next">If omitted, it defaults to Object.</prop>
+      <tuv lang="en">
+        <seg>Class</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T161528Z" creationid="Ragnar-F" creationdate="20260914T161528Z">
+        <seg>Klasse</seg>
       </tuv>
     </tu>
     <tu>
