@@ -6182,6 +6182,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>#Requires AutoHotkey v2.1-alpha.10</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T131959Z" creationid="Ragnar-F" creationdate="20260915T131959Z">
+        <seg>#Requires AutoHotkey v2.1-alpha.10</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>#SingleInstance</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140305T161451Z" creationid="Ragnar-F" creationdate="20140305T161451Z">
@@ -23652,6 +23660,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>; This is an anonymous function definition being passed to the OnError function.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T132634Z" creationid="Ragnar-F" creationdate="20260915T132248Z">
+        <seg>; Dies ist die Definition einer anonymen Funktion zur Übergabe an OnError.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>; This is for already opened items</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230425T112359Z" creationid="Ragnar-F" creationdate="20180411T102426Z">
@@ -23872,6 +23888,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230410T104335Z" creationid="Ragnar-F" creationdate="20180411T091607Z">
         <seg>; Diese Struktur besteht aus 8 UShorts (also 8*2=16).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; This syntax requires v2.1-alpha.3+, but Show requires v2.1-alpha.10+.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T132327Z" creationid="Ragnar-F" creationdate="20260915T132250Z">
+        <seg>; Diese Syntax benötigt v2.1-alpha.3+, aber Show benötigt v2.1-alpha.10+.</seg>
       </tuv>
     </tu>
     <tu>
@@ -37538,6 +37562,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;Hint&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.10+]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T130229Z" creationid="Ragnar-F" creationdate="20260915T130229Z">
+        <seg>&lt;a0&gt;Hint&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.10+]&lt;/s1&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;HotIf, HotIfWinActive, HotIfWinExist, HotIfWinNotActive, HotIfWinNotExist&lt;/a0&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210725T064950Z" creationid="Ragnar-F" creationdate="20210725T064950Z">
@@ -40442,6 +40474,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;Show&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.10+]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T130108Z" creationid="Ragnar-F" creationdate="20260915T130108Z">
+        <seg>&lt;a0&gt;Show&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.10+]&lt;/s1&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;Show&lt;/a0&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140314T022713Z" creationid="Ragnar-F" creationdate="20140314T022713Z">
@@ -42860,8 +42900,8 @@
       <tuv lang="en">
         <seg>&lt;a2&gt;SetWorkingDir&lt;/a2&gt; has no effect.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T121951Z" creationid="Ragnar-F" creationdate="20260915T121951Z">
-        <seg>&lt;a2&gt;SetWorkingDir&lt;/a2&gt; hat keinen Effekt.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T125648Z" creationid="Ragnar-F" creationdate="20260915T121951Z">
+        <seg>&lt;a2&gt;SetWorkingDir&lt;/a2&gt; ist wirkungslos.</seg>
       </tuv>
     </tu>
     <tu>
@@ -56106,10 +56146,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;Exit:&lt;/s0&gt; Shows the leading text "Error:" and the Abort button.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T130700Z" creationid="Ragnar-F" creationdate="20260915T130642Z">
+        <seg>&lt;s0&gt;Exit:&lt;/s0&gt; Beginnt den Text mit "Error:" und zeigt die Schaltfläche Abort an.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;Exit&lt;/s0&gt; &lt;s1&gt;ExitCode&lt;/s1&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20170614T150234Z" creationid="Ragnar-F" creationdate="20170614T150234Z">
         <seg>&lt;s0&gt;Exit&lt;/s0&gt; &lt;s1&gt;ExitCode&lt;/s1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s0&gt;ExitApp:&lt;/s0&gt; Shows the leading text "Critical Error:" and the Abort button.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T130721Z" creationid="Ragnar-F" creationdate="20260915T130701Z">
+        <seg>&lt;s0&gt;ExitApp:&lt;/s0&gt; Beginnt den Text mit "Critical Error:" und zeigt die Schaltfläche Abort an.</seg>
       </tuv>
     </tu>
     <tu>
@@ -59898,6 +59954,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;Return:&lt;/s0&gt; Shows the leading text "Error:" and the Continue and Abort buttons.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T130640Z" creationid="Ragnar-F" creationdate="20260915T130509Z">
+        <seg>&lt;s0&gt;Return:&lt;/s0&gt; Beginnt den Text mit "Error:" und zeigt die Schaltflächen Continue und Abort an.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;Return&lt;/s0&gt; &lt;s1&gt;Expression&lt;/s1&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20170614T223944Z" creationid="Ragnar-F" creationdate="20170614T223937Z">
@@ -61262,6 +61326,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230621T144545Z" creationid="Ragnar-F" creationdate="20230621T144545Z">
         <seg>&lt;s0&gt;WantTab:&lt;/s0&gt; Bewirkt, dass &lt;k1&gt;Tab&lt;/k1&gt; ein Tabulatorzeichen erzeugt, anstatt zum nächsten Steuerelement zu navigieren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s0&gt;Warn:&lt;/s0&gt; Shows the leading text "Warning:" and the Continue button.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T130818Z" creationid="Ragnar-F" creationdate="20260915T130818Z">
+        <seg>&lt;s0&gt;Warn:&lt;/s0&gt; Beginnt den Text mit "Warning:" und zeigt die Schaltfläche Continue an.</seg>
       </tuv>
     </tu>
     <tu>
@@ -72846,6 +72918,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231026T104006Z" creationid="Ragnar-F" creationdate="20171230T220332Z">
         <seg>Ein leeres Menü bleibt weiterhin existent, d.h. andere Menüs, die es als Untermenü verwenden, behalten solche Untermenüs.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>An empty string can be used to suppress the default hint.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T134031Z" creationid="Ragnar-F" creationdate="20260915T134031Z">
+        <seg>Mit einer leeren Zeichenkette kann man den Standardhinweis unterdrücken.</seg>
       </tuv>
     </tu>
     <tu>
@@ -90819,6 +90899,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>CurrentHint := ErrorObj.&lt;s0&gt;Hint&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T133712Z" creationid="Ragnar-F" creationdate="20260915T133612Z">
+        <seg>AktuellerHinweis := ErrorObj.&lt;s0&gt;Hint&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>CurrentLevel := InputHookObj.&lt;s0&gt;MinSendLevel&lt;/s0&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231203T153558Z" creationid="Ragnar-F" creationdate="20231203T153558Z">
@@ -98467,6 +98555,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>ErrorObj.&lt;s0&gt;Hint&lt;/s0&gt; := NewHint</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T133721Z" creationid="Ragnar-F" creationdate="20260915T133713Z">
+        <seg>ErrorObj.&lt;s0&gt;Hint&lt;/s0&gt; := NeuerHinweis</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>ErrorObj.&lt;s0&gt;Line&lt;/s0&gt; := NewLine</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20251125T185909Z" creationid="Ragnar-F" creationdate="20251125T185859Z">
@@ -98479,6 +98575,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20251125T190003Z" creationid="Ragnar-F" creationdate="20251125T185955Z">
         <seg>ErrorObj.&lt;s0&gt;Message&lt;/s0&gt; := NeueMeldung</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ErrorObj.&lt;s0&gt;Show&lt;/s0&gt;(&lt;s1&gt;Mode&lt;/s1&gt;)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T130456Z" creationid="Ragnar-F" creationdate="20260915T130436Z">
+        <seg>ErrorObj.&lt;s0&gt;Show&lt;/s0&gt;(&lt;s1&gt;Modus&lt;/s1&gt;)</seg>
       </tuv>
     </tu>
     <tu>
@@ -103454,8 +103558,8 @@
       <tuv lang="en">
         <seg>Fixed error dialogs not showing vicinity lines.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T202523Z" creationid="Ragnar-F" creationdate="20260911T202523Z">
-        <seg>Behoben: Fehlerdialogfenster zeigten keine umgebenden Codezeilen an.
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T132746Z" creationid="Ragnar-F" creationdate="20260911T202523Z">
+        <seg>Behoben: Fehlerdialogfenster zeigten keine Nachbarzeilen an.
 </seg>
       </tuv>
     </tu>
@@ -114461,6 +114565,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Gets or sets a string displayed near the bottom of the standard error dialog.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T133521Z" creationid="Ragnar-F" creationdate="20260915T130421Z">
+        <seg>Liefert oder setzt den Text im unteren Bereich des regulären Fehlerdialogfensters.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Gets or sets a string of text displayed near the bottom of the standard error dialog, above the stack trace link (if present).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T134128Z" creationid="Ragnar-F" creationdate="20260915T133439Z">
+        <seg>Liefert oder setzt einen Hinweistext, der im unteren Bereich des regulären Fehlerdialogfensters oberhalb des Stacktrace-Links (sofern vorhanden) angezeigt wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Gets or sets a string relating to the error.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260215T213211Z" creationid="Ragnar-F" creationdate="20260215T213211Z">
@@ -117653,6 +117773,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Hint &lt;s0&gt;[v2.1-alpha.10+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T133227Z" creationid="Ragnar-F" creationdate="20260915T133227Z">
+        <seg>Hint &lt;s0&gt;[v2.1-alpha.10+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Hip Hip Hooray!</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180219T235004Z" creationid="Ragnar-F" creationdate="20150120T150655Z">
@@ -119623,8 +119751,8 @@
       <tuv lang="en">
         <seg>However, if &lt;e0&gt;Filename&lt;/e0&gt; is omitted and an editor window appears to have the file already open (based on its window title), that window is activated instead of opening a new instance of the editor.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T125234Z" creationid="Ragnar-F" creationdate="20260915T122522Z">
-        <seg>Wenn das Skript jedoch bereits in einem Editorfenster geöffnet ist (abhängig vom Fenstertitel), und ruft man die Funktion ohne den Parameter &lt;e0&gt;DateiName&lt;/e0&gt; auf, aktiviert sie dieses Fenster, anstatt eine neue Instanz des Editors zu öffnen.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T125752Z" creationid="Ragnar-F" creationdate="20260915T122522Z">
+        <seg>Wenn die Datei jedoch bereits in einem Editorfenster geöffnet ist (abhängig vom Fenstertitel), und ruft man Edit ohne den Parameter &lt;e0&gt;DateiName&lt;/e0&gt; auf, aktiviert Edit dieses Fenster, anstatt eine neue Instanz des Editors zu öffnen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -123173,6 +123301,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If File does not correspond to the main script or an #include file, only the file name and line number are shown.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T131714Z" creationid="Ragnar-F" creationdate="20260915T131714Z">
+        <seg>Wenn File nicht zum Hauptskript oder zu einer #Include-Datei gehört, werden nur der Dateiname und die Zeilennummer angezeigt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If InStr(Haystack, Needle)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180411T113547Z" creationid="Ragnar-F" creationdate="20180411T113547Z">
@@ -125277,6 +125413,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If blank, the corresponding element of the dialog is omitted.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T131410Z" creationid="Ragnar-F" creationdate="20260915T131410Z">
+        <seg>Ist eine der Eigenschaften leer, wird das entsprechende Element im Dialogfenster weggelassen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If blank, the script's name is used instead.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231201T203935Z" creationid="Ragnar-F" creationdate="20171231T161308Z">
@@ -125969,6 +126113,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180220T122554Z" creationid="Ragnar-F" creationdate="20150120T205119Z">
         <seg>Wenn es nicht in der Tabelle steht, braucht es keine Klammern.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If left undefined, a default hint is used, usually indicating that the thread will exit.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T133958Z" creationid="Ragnar-F" creationdate="20260915T133958Z">
+        <seg>Lässt man diese Eigenschaft undefiniert, wird ein Standardhinweis verwendet, der in der Regel anzeigt, dass der Thread beendet wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -127013,6 +127165,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If omitted, it defaults to &lt;e0&gt;Return&lt;/e0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T130504Z" creationid="Ragnar-F" creationdate="20260915T130504Z">
+        <seg>Wenn weggelassen, wird standardmäßig &lt;e0&gt;Return&lt;/e0&gt; verwendet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If omitted, it defaults to &lt;e0&gt;Screen&lt;/e0&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230901T101639Z" creationid="Ragnar-F" creationdate="20230901T101639Z">
@@ -127829,6 +127989,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If present, the &lt;a0&gt;Message&lt;/a0&gt;, &lt;a1&gt;Extra&lt;/a1&gt;, &lt;a2&gt;File&lt;/a2&gt;, &lt;a3&gt;Line&lt;/a3&gt;, &lt;a4&gt;Hint&lt;/a4&gt; and &lt;a5&gt;Stack&lt;/a5&gt; properties are used to determine the content of the dialog.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T131259Z" creationid="Ragnar-F" creationdate="20260915T131259Z">
+        <seg>Sofern vorhanden, bestimmen die Eigenschaften &lt;a0&gt;Message&lt;/a0&gt;, &lt;a1&gt;Extra&lt;/a1&gt;, &lt;a2&gt;File&lt;/a2&gt;, &lt;a3&gt;Line&lt;/a3&gt;, &lt;a4&gt;Hint&lt;/a4&gt; und &lt;a5&gt;Stack&lt;/a5&gt; den Inhalt des Dialogfensters.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If present, the first asterisk (&lt;c0&gt;*&lt;/c0&gt;) in the filename is replaced with the source filename excluding its extension, while the first asterisk after the last full stop (&lt;c1&gt;.&lt;/c1&gt;) is replaced with the source file's extension.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230415T103332Z" creationid="Ragnar-F" creationdate="20190930T130940Z">
@@ -128425,6 +128593,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260310T131830Z" creationid="Ragnar-F" creationdate="20260227T122336Z">
         <seg>Wenn der RegEx-&lt;a3&gt;Titelvergleichsmodus&lt;/a3&gt; aktiv ist, akzeptiert &lt;v4&gt;Klassenname&lt;/v4&gt; einen &lt;a5&gt;regulären Ausdruck&lt;/a5&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the Return mode is used, the return value is -1 if the dialog was closed by the Continue button.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T131143Z" creationid="Ragnar-F" creationdate="20260915T131027Z">
+        <seg>Wenn das Dialogfenster im Return-Modus mit der Schaltfläche Continue geschlossen wird, wird -1 zurückgegeben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -134698,6 +134874,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171227T152526Z" creationid="Ragnar-F" creationdate="20171227T152526Z">
         <seg>In unseren schriftlichen Instruktionen haben wir Einrückungen und Nummerierungen verwendet, um die Anweisungen zu gruppieren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In particular, File can be removed to hide the "vicinity lines" normally shown in the dialog.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T132755Z" creationid="Ragnar-F" creationdate="20260915T131624Z">
+        <seg>Insbesondere kann File entfernt werden, um die "Nachbarzeilen" zu verbergen, welche normalerweise im Dialogfenster angezeigt werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -147219,6 +147403,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230621T101304Z" creationid="Ragnar-F" creationdate="20160117T152050Z">
         <seg>Meldungsüberprüfintervall</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Message can contain multiple lines of text, in which case the first line is rendered with the title font and subsequent lines are rendered with the default font.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T131917Z" creationid="Ragnar-F" creationdate="20260915T131917Z">
+        <seg>Message kann mehrere Textzeilen enthalten. In diesem Fall wird die erste Zeile als Titel und die restlichen Zeilen normal dargestellt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -160759,6 +160951,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>OnError (err, mode) {</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T132339Z" creationid="Ragnar-F" creationdate="20260915T132329Z">
+        <seg>OnError (Fehler, Modus) {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>OnError - Syntax &amp; Usage | AutoHotkey v2</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180816T102140Z" creationid="Ragnar-F" creationdate="20180816T102140Z">
@@ -164433,8 +164633,8 @@
       <tuv lang="en">
         <seg>Otherwise, specify the name of the file to open for editing, which is assumed to be in &lt;a1&gt;A_ScriptDir&lt;/a1&gt; if an absolute path isn't specified.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T121913Z" creationid="Ragnar-F" creationdate="20260915T121404Z">
-        <seg>Andernfalls geben Sie den Namen einer Datei an, die zum Editieren geöffnet werden soll. Wenn kein absoluter Pfad angegeben ist, wird die Datei im &lt;a1&gt;A_ScriptDir&lt;/a1&gt;-Verzeichnis vermutet.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T125424Z" creationid="Ragnar-F" creationdate="20260915T121404Z">
+        <seg>Andernfalls geben Sie den Namen der Datei an, die zum Editieren geöffnet werden soll. Wenn kein absoluter Pfad angegeben ist, wird die Datei im &lt;a1&gt;A_ScriptDir&lt;/a1&gt;-Verzeichnis vermutet.</seg>
       </tuv>
     </tu>
     <tu>
@@ -165147,6 +165347,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230622T115554Z" creationid="Ragnar-F" creationdate="20140306T225433Z">
         <seg>Andernfalls ist das Ergebnis ein Integer.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Otherwise, the return value is 1.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T131056Z" creationid="Ragnar-F" creationdate="20260915T131056Z">
+        <seg>Andernfalls wird 1 zurückgegeben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -183703,6 +183911,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Show &lt;s0&gt;[v2.1-alpha.10+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T130422Z" creationid="Ragnar-F" creationdate="20260915T130422Z">
+        <seg>Show &lt;s0&gt;[v2.1-alpha.10+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Show Desktop</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230814T154201Z" creationid="Ragnar-F" creationdate="20230814T154201Z">
@@ -183955,6 +184171,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220208T081438Z" creationid="Ragnar-F" creationdate="20210211T151641Z">
         <seg>Zeigt einen mehrzeiligen Tooltip an einer bestimmten Position im aktiven Fenster an.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Shows a standard script error dialog.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T133141Z" creationid="Ragnar-F" creationdate="20260915T130227Z">
+        <seg>Zeigt ein reguläres Fehlerdialogfenster an.</seg>
       </tuv>
     </tu>
     <tu>
@@ -194563,6 +194787,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230612T141408Z" creationid="Ragnar-F" creationdate="20140305T133050Z">
         <seg>Der &lt;e0&gt;TasteName&lt;/e0&gt;-Parameter enthält eine oder mehrere Tasten, die entweder nicht erkannt oder von der aktuellen Tastaturbelegung/Sprache nicht unterstützt werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;e0&gt;Mode&lt;/e0&gt; parameter and return value are compatible with &lt;a1&gt;OnError&lt;/a1&gt; callbacks.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T132554Z" creationid="Ragnar-F" creationdate="20260915T131958Z">
+        <seg>Der &lt;e0&gt;Modus&lt;/e0&gt;-Parameter und der Rückgabewert sind mit &lt;a1&gt;OnError&lt;/a1&gt;-Rückrufen kompatibel.</seg>
       </tuv>
     </tu>
     <tu>
@@ -206103,6 +206335,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The script exits when the dialog is closed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T130751Z" creationid="Ragnar-F" creationdate="20260915T130751Z">
+        <seg>Das Skript wird beendet, sobald das Dialogfenster geschlossen wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The script has the keyboard hook installed (you can see if your script uses the hook via the "View-&gt;Key history" menu item in the &lt;a0&gt;main window&lt;/a0&gt;, or via the &lt;a1&gt;KeyHistory&lt;/a1&gt; function).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230623T193110Z" creationid="Ragnar-F" creationdate="20230623T193110Z">
@@ -213089,8 +213329,8 @@
       <tuv lang="en">
         <seg>This function has no effect if &lt;e0&gt;Filename&lt;/e0&gt; is omitted when operating from within a compiled script.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T123347Z" creationid="Ragnar-F" creationdate="20260915T123347Z">
-        <seg>Diese Funktion hat keine Wirkung, wenn sie ohne ihren Parameter (&lt;e0&gt;DateiName&lt;/e0&gt;) innerhalb eines kompilierten Skripts aufgerufen wird.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T125252Z" creationid="Ragnar-F" creationdate="20260915T123347Z">
+        <seg>Diese Funktion hat keine Wirkung, wenn sie ohne den Parameter &lt;e0&gt;DateiName&lt;/e0&gt; innerhalb eines kompilierten Skripts aufgerufen wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -217955,6 +218195,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231029T110301Z" creationid="Ragnar-F" creationdate="20191009T145236Z">
         <seg>Diese Eigenschaft wurde von &lt;a0&gt;Any&lt;/a0&gt; geerbt, kann aber nur bei Object-Instanzen gesetzt werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This property is not defined by default in the standard Error classes.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T133833Z" creationid="Ragnar-F" creationdate="20260915T133833Z">
+        <seg>Diese Eigenschaft ist standardmäßig nicht in den Standard-Error-Klassen definiert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -257784,6 +258032,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>err.File := unset</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T132346Z" creationid="Ragnar-F" creationdate="20260915T132340Z">
+        <seg>Fehler.File := unset</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>err.Line := unset</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T132350Z" creationid="Ragnar-F" creationdate="20260915T132347Z">
+        <seg>Fehler.Line := unset</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>errors.Push(e)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200606T182440Z" creationid="Ragnar-F" creationdate="20200606T182440Z">
@@ -263528,6 +263792,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>return err.Show(mode)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T132358Z" creationid="Ragnar-F" creationdate="20260915T132350Z">
+        <seg>return Fehler.Show(Modus)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>return exec.StdOut.ReadAll()</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180411T181948Z" creationid="Ragnar-F" creationdate="20180411T181948Z">
@@ -265428,6 +265700,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210307T090346Z" creationid="Ragnar-F" creationdate="20210307T090346Z">
         <seg>throw ValueError("Parameter #1 ungültig", -1, derSchlechteParam)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>throw ValueError("This value is not 42", -1, 41)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T132414Z" creationid="Ragnar-F" creationdate="20260915T132359Z">
+        <seg>throw ValueError("Dieser Wert ist nicht 42", -1, 41)</seg>
       </tuv>
     </tu>
     <tu>
