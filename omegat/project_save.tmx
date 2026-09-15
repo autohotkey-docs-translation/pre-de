@@ -39298,6 +39298,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;OnMessage&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.1+]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T135626Z" creationid="Ragnar-F" creationdate="20260915T135626Z">
+        <seg>&lt;a0&gt;OnMessage&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.1+]&lt;/s1&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;OnMessage&lt;/a0&gt; no longer has the single-function-per-message mode that was used when a function name (string) was passed; it now only accepts a function by reference.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231127T093104Z" creationid="Ragnar-F" creationdate="20210705T100723Z">
@@ -55714,6 +55722,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;DPIResize&lt;/s0&gt; &lt;s1&gt;[v2.1-alpha.16+]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T135948Z" creationid="Ragnar-F" creationdate="20260915T135948Z">
+        <seg>&lt;s0&gt;DPIResize&lt;/s0&gt; &lt;s1&gt;[v2.1-alpha.16+]&lt;/s1&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;DPIScale:&lt;/s0&gt; Use &lt;c1&gt;MyGui.Opt("-DPIScale")&lt;/c1&gt; to disable &lt;a2&gt;DPI scaling&lt;/a2&gt;, which is enabled by default.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230624T081038Z" creationid="Ragnar-F" creationdate="20230624T081038Z">
@@ -61922,6 +61938,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.7+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T134827Z" creationid="Ragnar-F" creationdate="20260915T134827Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.7+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;\:&lt;/s0&gt; Sorts items based on the substring that follows the last backslash in each.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230622T212012Z" creationid="Ragnar-F" creationdate="20230622T212012Z">
@@ -62390,6 +62414,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210211T200348Z" creationid="Ragnar-F" creationdate="20210211T200311Z">
         <seg>&lt;s4&gt;\QNormaler Text\E&lt;/s4&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s5&gt;[v2.1-alpha.7+]&lt;/s5&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T135755Z" creationid="Ragnar-F" creationdate="20260915T135755Z">
+        <seg>&lt;s5&gt;[v2.1-alpha.7+]&lt;/s5&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -71214,6 +71246,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260214T211131Z" creationid="Ragnar-F" creationdate="20260214T211131Z">
         <seg>Alternativ kann die &lt;a4&gt;SetImageList&lt;/a4&gt;-Methode verwendet werden, ohne dass die zuvor genannte Einschränkung gilt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Alternatively, the system's automatic bitmap-based scaling of the window or control can be re-enabled as described under &lt;a1&gt;DPI Scaling - Mixed Settings&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T142010Z" creationid="Ragnar-F" creationdate="20260915T141849Z">
+        <seg>Alternativ kann die vom System vorgegebene, automatische, bitmapbasierte Skalierung von Fenstern oder Steuerelementen wieder aktiviert werden, wie unter &lt;a1&gt;DPI-Skalierung: Gemischte Einstellungen&lt;/a1&gt; beschrieben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -80710,6 +80750,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190413T084401Z" creationid="Ragnar-F" creationdate="20140311T151206Z">
         <seg>Standardmäßig können maximal 366 Tage ausgewählt werden. Dieser Maximalwert kann durch Senden der MCM_SETMAXSELCOUNT-Meldung an das Steuerelement geändert werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>By default, the new X, Y, width, height and font-size are calculated with a formula equivalent to &lt;c0&gt;Round(n * NewDPI / OldDPI)&lt;/c0&gt;, where n is the current value in pixels without &lt;a1&gt;DPI scaling&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T141017Z" creationid="Ragnar-F" creationdate="20260915T141017Z">
+        <seg>Standardmäßig werden die neuen Werte für X, Y, Breite, Höhe und Schriftgröße anhand der Formel &lt;c0&gt;Round(n * NeueDPI / AlteDPI)&lt;/c0&gt; berechnet, wobei n der aktuelle Pixelwert ohne &lt;a1&gt;DPI-Skalierung&lt;/a1&gt; ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -93619,6 +93667,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Disable automatic resizing if the control should be positioned or sized by different rules, such as if the layout of the GUI changes depending on DPI.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T141232Z" creationid="Ragnar-F" creationdate="20260915T141232Z">
+        <seg>Deaktivieren Sie die automatische Größenanpassung, wenn das Steuerelement nach anderen Regeln positioniert oder größer/kleiner gemacht werden soll, z.B. wenn sich das Layout der GUI je nach DPI ändert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Disable or remove any extra software that came with your keyboard or mouse or change its driver to a more standard one such as the one built into the OS.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230326T103737Z" creationid="Ragnar-F" creationdate="20140310T153821Z">
@@ -96107,6 +96163,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Each GUI starts with a default of &lt;c4&gt;+DPIResize&lt;/c4&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T145333Z" creationid="Ragnar-F" creationdate="20260915T145333Z">
+        <seg>Jede GUI startet standardmäßig mit &lt;c4&gt;+DPIResize&lt;/c4&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Each GUI window may have up to 11,000 controls.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190424T180326Z" creationid="Ragnar-F" creationdate="20140304T033851Z">
@@ -97603,6 +97667,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Enables or disables changes to this control's position, size and font size when a &lt;a2&gt;WM_DPICHANGED message&lt;/a2&gt; is received by the GUI window, such as when the window is moved between two screens which have different display scale settings.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T142949Z" creationid="Ragnar-F" creationdate="20260915T140530Z">
+        <seg>Mit dieser Option können Änderungen der Position, Größe und Schriftgröße des Steuerelements aktiviert oder deaktiviert werden, die auftreten, wenn das GUI-Fenster eine &lt;a2&gt;WM_DPICHANGED-Meldung&lt;/a2&gt; empfängt. Das ist zum Beispiel der Fall, wenn das Fenster zwischen zwei Bildschirmen mit unterschiedlichen Skalierungseinstellungen verschoben wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Enables or disables line logging or displays the script lines most recently executed.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231014T104449Z" creationid="Ragnar-F" creationdate="20160703T150603Z">
@@ -98783,6 +98855,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190315T103250Z" creationid="Ragnar-F" creationdate="20140304T132135Z">
         <seg>Eine erfolgreich angewendete Änderung kann immer noch vom Steuerelement selbst ignoriert werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Even if enabled, the script may need to handle the WM_DPICHANGED message to account for elements which are not scaled automatically, such as &lt;a0&gt;Image Lists&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T141621Z" creationid="Ragnar-F" creationdate="20260915T141621Z">
+        <seg>Selbst wenn diese Option aktiviert ist, muss das Skript die WM_DPICHANGED-Meldung eventuell verarbeiten, um Elemente zu berücksichtigen, die nicht automatisch skaliert werden, wie z.B. &lt;a0&gt;ImageLists&lt;/a0&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -106821,6 +106901,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For details, see the control's &lt;a5&gt;DPIResize&lt;/a5&gt; option.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T183854Z" creationid="Ragnar-F" creationdate="20260915T183854Z">
+        <seg>Einzelheiten finden Sie unter der Steuerelementoption &lt;a5&gt;DPIResize&lt;/a5&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For detecting and responding to clipboard changes.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230912T060015Z" creationid="Ragnar-F" creationdate="20180816T201212Z">
@@ -108765,6 +108853,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For example, &lt;c4&gt;"^!B"&lt;/c4&gt; is equivalent to &lt;c5&gt;"B"&lt;/c5&gt;, while &lt;c6&gt;"^+!A"&lt;/c6&gt; sets the hotkey to be &lt;k7&gt;Ctrl&lt;/k7&gt;+&lt;k8&gt;Shift&lt;/k8&gt;+&lt;k9&gt;Alt&lt;/k9&gt;+&lt;k10&gt;A&lt;/k10&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T135033Z" creationid="Ragnar-F" creationdate="20260915T135033Z">
+        <seg>Zum Beispiel ist &lt;c4&gt;"^!B"&lt;/c4&gt; dasselbe wie &lt;c5&gt;"B"&lt;/c5&gt;, während &lt;c6&gt;"^+!A"&lt;/c6&gt; den Hotkey &lt;k7&gt;Strg&lt;/k7&gt;+&lt;k8&gt;Umschalt&lt;/k8&gt;+&lt;k9&gt;Alt&lt;/k9&gt;+&lt;k10&gt;A&lt;/k10&gt; zuweist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For example, &lt;c4&gt;"this is a quoted string"&lt;/c4&gt; and &lt;c5&gt;'so is this'&lt;/c5&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180110T112558Z" creationid="Ragnar-F" creationdate="20180110T112558Z">
@@ -110001,6 +110097,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260216T104128Z" creationid="Ragnar-F" creationdate="20260216T104128Z">
         <seg>Wenn das Steuerelement z.B. mit dem Komponentennamen &lt;c1&gt;"Shell.Explorer"&lt;/c1&gt; erstellt wurde, wird das ein &lt;a2&gt;WebBrowser&lt;/a2&gt;-Objekt sein.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For example, if the letter B is specified for this parameter, the hotkey will be &lt;k4&gt;Ctrl&lt;/k4&gt;+&lt;k5&gt;Alt&lt;/k5&gt;+&lt;k6&gt;B&lt;/k6&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T134826Z" creationid="Ragnar-F" creationdate="20260915T134826Z">
+        <seg>Wenn z.B. der Buchstabe B für diesen Parameter angegeben ist, kann mit dem Hotkey &lt;k4&gt;Strg&lt;/k4&gt;+&lt;k5&gt;Alt&lt;/k5&gt;+&lt;k6&gt;B&lt;/k6&gt; die Verknüpfung gestartet werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -114567,8 +114671,8 @@
       <tuv lang="en">
         <seg>Gets or sets a string displayed near the bottom of the standard error dialog.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T133521Z" creationid="Ragnar-F" creationdate="20260915T130421Z">
-        <seg>Liefert oder setzt den Text im unteren Bereich des regulären Fehlerdialogfensters.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T134323Z" creationid="Ragnar-F" creationdate="20260915T130421Z">
+        <seg>Liefert oder setzt den Hinweistext im unteren Bereich des regulären Fehlerdialogfensters.</seg>
       </tuv>
     </tu>
     <tu>
@@ -126429,6 +126533,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If no modifier symbols are specified, &lt;k2&gt;Ctrl&lt;/k2&gt;+&lt;k3&gt;Alt&lt;/k3&gt; is used by default.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T134533Z" creationid="Ragnar-F" creationdate="20260915T134533Z">
+        <seg>Wenn keine Modifikatorsymbole angegeben sind, wird standardmäßig &lt;k2&gt;Strg&lt;/k2&gt;+&lt;k3&gt;Alt&lt;/k3&gt; verwendet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If no name is specified, the .exe will have the default name.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200622T092442Z" creationid="Ragnar-F" creationdate="20200622T092442Z">
@@ -129729,6 +129841,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230920T153330Z" creationid="Ragnar-F" creationdate="20210307T194250Z">
         <seg>Wenn die Methode eine Kombination von VT_BYREF und VT_VARIANT akzeptiert, wie oben gezeigt, kann stattdessen eine &lt;a0&gt;VarRef&lt;/a0&gt; verwendet werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the method is not found or cannot be retrieved without invoking a property getter, a &lt;a0&gt;MethodError&lt;/a0&gt; is thrown (except in v2.1 mode).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T135537Z" creationid="Ragnar-F" creationdate="20260915T135537Z">
+        <seg>Wenn die Methode nicht gefunden wird oder nicht ohne indirekten Aufruf eines Eigenschafts-Getters abgerufen werden kann, wird ein &lt;a0&gt;MethodError&lt;/a0&gt; ausgelöst (außer im v2.1-Modus).</seg>
       </tuv>
     </tu>
     <tu>
@@ -133114,6 +133234,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260914T133357Z" creationid="Ragnar-F" creationdate="20260914T133357Z">
         <seg>Im &lt;a1&gt;v2.1-Modus&lt;/a1&gt; ist der Rückgabewert &lt;c2&gt;unset&lt;/c2&gt;, wenn das Array-Element keinen Wert hat und &lt;a3&gt;Default&lt;/a3&gt; nicht definiert ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In &lt;a1&gt;v2.1 mode&lt;/a1&gt;, the return value is &lt;c2&gt;unset&lt;/c2&gt; if the method is not found or cannot be retrieved without invoking a property getter.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T135510Z" creationid="Ragnar-F" creationdate="20260915T135510Z">
+        <seg>Im &lt;a1&gt;v2.1-Modus&lt;/a1&gt; ist der Rückgabewert &lt;c2&gt;unset&lt;/c2&gt;, wenn die Methode nicht gefunden wird oder nicht ohne indirekten Aufruf eines Eigenschafts-Getters abgerufen werden kann.</seg>
       </tuv>
     </tu>
     <tu>
@@ -154895,6 +155023,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>MyGui.&lt;s0&gt;OnMessage&lt;/s0&gt;(MsgNumber, Callback &lt;s1&gt;, AddRemove&lt;/s1&gt;)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T144302Z" creationid="Ragnar-F" creationdate="20260915T144227Z">
+        <seg>MeineGui.&lt;s0&gt;OnMessage&lt;/s0&gt;(MldNummer, Rückruf &lt;s1&gt;, HinzufügenEntfernen&lt;/s1&gt;)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>MyGui.&lt;s0&gt;Opt&lt;/s0&gt;(Options)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200623T093043Z" creationid="Ragnar-F" creationdate="20200623T093043Z">
@@ -161147,6 +161283,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210404T112223Z" creationid="Ragnar-F" creationdate="20210404T112217Z">
         <seg>OnMessage 0x5555, MldÜberwachung</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>OnMessage &lt;s0&gt;[v2.1-alpha.1+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T144222Z" creationid="Ragnar-F" creationdate="20260915T144222Z">
+        <seg>OnMessage &lt;s0&gt;[v2.1-alpha.1+]&lt;/s0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -171191,6 +171335,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Registers a function or method to be called whenever a message is received.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T135946Z" creationid="Ragnar-F" creationdate="20260915T135753Z">
+        <seg>Registriert eine Funktion oder Methode, die aufgerufen wird, wenn eine Meldung empfangen wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Registers a method to be called on exit.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231030T074422Z" creationid="Ragnar-F" creationdate="20220907T115259Z">
@@ -178839,6 +178991,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>See &lt;a0&gt;OnMessage&lt;/a0&gt; for details.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T144323Z" creationid="Ragnar-F" creationdate="20260915T144323Z">
+        <seg>Weitere Informationen finden Sie unter &lt;a0&gt;OnMessage&lt;/a0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>See &lt;a0&gt;OnNotify&lt;/a0&gt; for details.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220418T143626Z" creationid="Ragnar-F" creationdate="20220418T143626Z">
@@ -186443,6 +186603,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210706T102415Z" creationid="Ragnar-F" creationdate="20210706T102415Z">
         <seg>Einige Steuerelemente hatten keinen sichtbaren Text oder unterstützten dessen Abruf nicht, folglich ignorierten sie den vierten Parameter.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Some elements may be scaled according to DPI regardless of this option.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T144759Z" creationid="Ragnar-F" creationdate="20260915T144759Z">
+        <seg>Einige Elemente werden eventuell unabhängig von dieser Option gemäß DPI skaliert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -203839,6 +204007,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The modifier symbols &lt;c1&gt;^&lt;/c1&gt; (Ctrl), &lt;c2&gt;!&lt;/c2&gt; (Alt) and/or &lt;c3&gt;+&lt;/c3&gt; (Shift) may be used.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T135300Z" creationid="Ragnar-F" creationdate="20260915T134902Z">
+        <seg>Es ist möglich, die Modifikatorsymbole &lt;c1&gt;^&lt;/c1&gt; (Strg), &lt;c2&gt;!&lt;/c2&gt; (Alt) und/oder &lt;c3&gt;+&lt;/c3&gt; (Umschalt) zu verwenden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The module ends at the next #Module directive in the current file, or at the end of the current file.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T134418Z" creationid="Ragnar-F" creationdate="20260913T134418Z">
@@ -206231,6 +206407,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The same is true for &lt;a6&gt;OnMessage&lt;/a6&gt;, i.e. whenever a message is received.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T135934Z" creationid="Ragnar-F" creationdate="20260915T135934Z">
+        <seg>Dasselbe gilt für &lt;a6&gt;OnMessage&lt;/a6&gt;, also immer dann, wenn eine Meldung empfangen wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The same is true for mouse buttons when the &lt;a3&gt;mouse hook&lt;/a3&gt; is not installed.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230511T085247Z" creationid="Ragnar-F" creationdate="20140314T145546Z">
@@ -207035,6 +207219,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20251125T185612Z" creationid="Ragnar-F" creationdate="20251125T185612Z">
         <seg>Das reguläre Fehlerdialogfenster zeigt eine Zeile mit "Specifically:" gefolgt von dieser Zeichenkette an.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The standard error dialog requires the Message, Extra, File, Line and Hint properties to be &lt;a0&gt;own value properties&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T134431Z" creationid="Ragnar-F" creationdate="20260915T134431Z">
+        <seg>Das reguläre Fehlerdialogfenster erfordert, dass Message, Extra, File, Line und Hint &lt;a0&gt;eigene Werteigenschaften&lt;/a0&gt; sind.</seg>
       </tuv>
     </tu>
     <tu>
@@ -215535,6 +215727,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This is enabled by default, unless &lt;a3&gt;-DPIResize&lt;/a3&gt; was used in the GUI's options prior to adding the control.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T140733Z" creationid="Ragnar-F" creationdate="20260915T140733Z">
+        <seg>Diese Option ist standardmäßig aktiviert, es sei denn, in den Optionen der GUI wurde vor dem Hinzufügen des Steuerelements &lt;a3&gt;-DPIResize&lt;/a3&gt; verwendet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This is equivalent to &lt;s0&gt;[a-zA-Z0-9_]&lt;/s0&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20201112T140836Z" creationid="Ragnar-F" creationdate="20140311T010035Z">
@@ -217567,6 +217767,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This option has no effect if &lt;a0&gt;per-monitor DPI awareness&lt;/a0&gt; is disabled for the control or window, or if the script suppresses the default handling of the WM_DPICHANGED message (such as by returning a non-empty value from an &lt;a1&gt;OnMessage&lt;/a1&gt; callback).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T142455Z" creationid="Ragnar-F" creationdate="20260915T142455Z">
+        <seg>Diese Option hat keinen Effekt, wenn die &lt;a0&gt;Pro-Bildschirm-DPI-Sensitivität&lt;/a0&gt; für das Steuerelement oder Fenster deaktiviert ist, oder wenn das Skript die Standardbehandlung der WM_DPICHANGED-Meldung unterdrückt (indem es z.B. einen &lt;a1&gt;OnMessage&lt;/a1&gt;-Rückruf dazu bringt, einen nicht-leeren Wert zurückzugeben).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This option has no effect if the Classic Theme is in effect.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20191117T123620Z" creationid="Ragnar-F" creationdate="20191117T115146Z">
@@ -217659,6 +217867,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260213T211916Z" creationid="Ragnar-F" creationdate="20260213T211916Z">
         <seg>Diese Option ist automatisch wirksam, wenn mit dem &lt;e1&gt;Zeitstempel&lt;/e1&gt;-Parameter ein Datumsbereich angegeben wurde.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This option only affects the scaling of coordinates passed to or received from the GUI.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T144430Z" creationid="Ragnar-F" creationdate="20260915T144430Z">
+        <seg>Diese Option beeinflusst nur die Skalierung der Koordinaten, die an die GUI übergeben oder von dieser empfangen werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -228075,6 +228291,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210705T142953Z" creationid="Ragnar-F" creationdate="20210705T142953Z">
         <seg>Verwenden Sie &lt;c1&gt;OnMessage(x, MeineFunk)&lt;/c1&gt;, wobei &lt;e2&gt;MeineFunk&lt;/e2&gt; der Name einer Funktion ist (ohne Anführungszeichen), aber beachten Sie, dass das v1-Äquivalent &lt;c3&gt;OnMessage(x, Func("MeineFunk"))&lt;/c3&gt; wäre, das im Gegensatz zu &lt;c4&gt;OnMessage(x, "MeineFunk")&lt;/c4&gt; anderen Funktionen erlaubt, die Meldung x weiter zu überwachen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Use &lt;c2&gt;-DPIResize&lt;/c2&gt; or &lt;c3&gt;+DPIResize&lt;/c3&gt; to set the default for all subsequently added controls, as an alternative to using it in each control's options.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T145249Z" creationid="Ragnar-F" creationdate="20260915T145249Z">
+        <seg>Mit &lt;c2&gt;-DPIResize&lt;/c2&gt; oder &lt;c3&gt;+DPIResize&lt;/c3&gt; können Sie die Standardeinstellung für alle danach hinzugefügten Steuerelemente festlegen – als Alternative zu der Möglichkeit, diese Option pro Steuerelement zu setzen.</seg>
       </tuv>
     </tu>
     <tu>
