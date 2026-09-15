@@ -35178,6 +35178,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;ControlSetEnabled&lt;/a0&gt;, &lt;a1&gt;WinGetEnabled&lt;/a1&gt;, &lt;a2&gt;GuiControl.Enabled&lt;/a2&gt;, &lt;a3&gt;Control functions&lt;/a3&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T170547Z" creationid="Ragnar-F" creationdate="20260914T170528Z">
+        <seg>&lt;a0&gt;ControlSetEnabled&lt;/a0&gt;, &lt;a1&gt;WinGetEnabled&lt;/a1&gt;, &lt;a2&gt;GuiControl.Enabled&lt;/a2&gt;, &lt;a3&gt;Control-Funktionen&lt;/a3&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;ControlSetStyle / ControlSetExStyle&lt;/a0&gt;, &lt;a1&gt;WinGetStyle / WinGetExStyle&lt;/a1&gt;, &lt;a2&gt;styles table&lt;/a2&gt;, &lt;a3&gt;Control functions&lt;/a3&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180815T123711Z" creationid="Ragnar-F" creationdate="20180815T123548Z">
@@ -40718,6 +40726,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231223T130758Z" creationid="Ragnar-F" creationdate="20231202T185112Z">
         <seg>&lt;a0&gt;Zeichenkette&lt;/a0&gt; oder &lt;a1&gt;Array&lt;/a1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;String&lt;/a0&gt; or &lt;a1&gt;Class&lt;/a1&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T170614Z" creationid="Ragnar-F" creationdate="20260914T170552Z">
+        <seg>&lt;a0&gt;Zeichenkette&lt;/a0&gt; oder &lt;a1&gt;Klasse&lt;/a1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -46854,6 +46870,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260914T042257Z" creationid="Ragnar-F" creationdate="20260914T042257Z">
         <seg>&lt;c4&gt;#Warn Off&lt;/c4&gt; führt dazu, dass solche Warnungen ignoriert werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c4&gt;%vref%&lt;/c4&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T170521Z" creationid="Ragnar-F" creationdate="20260914T170521Z">
+        <seg>&lt;c4&gt;%vref%&lt;/c4&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -61682,6 +61706,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.10+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T170317Z" creationid="Ragnar-F" creationdate="20260914T170317Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.10+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;[v2.1-alpha.10]&lt;/s0&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063306Z" creationid="Ragnar-F" creationdate="20260913T063306Z">
@@ -63070,6 +63102,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T170249Z" creationid="Ragnar-F" creationdate="20260913T170249Z">
         <seg>Es wird eine &lt;a1&gt;WM_CLOSE-Meldung&lt;/a1&gt; gesendet, um die alte Instanz zu terminieren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A &lt;a1&gt;__Value property&lt;/a1&gt; is defined so that the object can be passed to a &lt;a2&gt;ByRef parameter&lt;/a2&gt; or be used with the &lt;a3&gt;dereference operator&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T170520Z" creationid="Ragnar-F" creationdate="20260914T170520Z">
+        <seg>Es wird eine &lt;a1&gt;__Value-Eigenschaft&lt;/a1&gt; definiert, damit das Objekt an einen &lt;a2&gt;ByRef-Parameter&lt;/a2&gt; übergeben oder mit dem &lt;a3&gt;Dereferenzoperator&lt;/a3&gt; verwendet werden kann.</seg>
       </tuv>
     </tu>
     <tu>
@@ -71236,8 +71276,8 @@
       <tuv lang="en">
         <seg>Although ComCall supports the &lt;e0&gt;Cdecl&lt;/e0&gt; keyword as per &lt;a1&gt;DllCall&lt;/a1&gt;, it is generally not used by COM interface methods.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20230919T131733Z" creationid="Ragnar-F" creationdate="20191010T065404Z">
-        <seg>Obwohl ComCall das Schlüsselwort &lt;e0&gt;Cdecl&lt;/e0&gt; gemäß &lt;a1&gt;DllCall&lt;/a1&gt; unterstützt, wird es grundsätzlich nicht von COM-Interface-Methoden verwendet.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T165923Z" creationid="Ragnar-F" creationdate="20191010T065404Z">
+        <seg>Obwohl ComCall das Schlüsselwort &lt;e0&gt;Cdecl&lt;/e0&gt; analog zu &lt;a1&gt;DllCall&lt;/a1&gt; unterstützt, wird es grundsätzlich nicht von COM-Interface-Methoden verwendet.</seg>
       </tuv>
     </tu>
     <tu>
@@ -168303,6 +168343,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Prior versions used the &lt;e2&gt;Cdecl&lt;/e2&gt; option only to determine whether to check the stack pointer (ESP) after the call.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T173150Z" creationid="Ragnar-F" creationdate="20260914T173140Z">
+        <seg>Frühere Versionen nutzten die &lt;e2&gt;Cdecl&lt;/e2&gt;-Option nur, um festzustellen, ob der Stackpointer (ESP) nach dem Aufruf überprüft werden soll.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Prioritising the error type over the output variable name might encourage better code; handling the expected error as intended without suppressing or mishandling unexpected errors that should have been reported.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231130T112650Z" creationid="Ragnar-F" creationdate="20210706T114334Z">
@@ -188547,6 +188595,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230620T165540Z" creationid="Ragnar-F" creationdate="20230620T165540Z">
         <seg>Mit &lt;c6&gt;BackgroundDefault&lt;/c6&gt; kann die Standardhintergrundfarbe des Systems gesetzt werden (in der Regel weiß).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Specifying &lt;e1&gt;Cdecl&lt;/e1&gt; has no effect even on 32-bit builds, and can always be omitted.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T173959Z" creationid="Ragnar-F" creationdate="20260914T170731Z">
+        <seg>Die Angabe von &lt;e1&gt;Cdecl&lt;/e1&gt; ist selbst bei 32-Bit-Builds wirkungslos und kann daher weggelassen werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -215475,6 +215531,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230317T141607Z" creationid="Ragnar-F" creationdate="20160117T194037Z">
         <seg>Dieser Schritt wird nicht empfohlen und ist seit Windows 8 nicht mehr möglich.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This is now done unconditionally, but functions which do not accept parameters are assumed to be &lt;e3&gt;Cdecl&lt;/e3&gt; (as either call would not change ESP).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T173853Z" creationid="Ragnar-F" creationdate="20260914T173853Z">
+        <seg>Dies geschieht nun bedingungslos; allerdings werden Funktionen, die keine Parameter akzeptieren, als &lt;e3&gt;Cdecl&lt;/e3&gt; vermutet (da keiner der Aufrufe ESP ändern würde).</seg>
       </tuv>
     </tu>
     <tu>
@@ -265797,6 +265861,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221220T234306Z" creationid="Ragnar-F" creationdate="20221220T234306Z">
         <seg>v2.0 Release Candidates</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>v2.0 requires type names to be passed as strings - either quoted or as the result of an expression.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T174156Z" creationid="Ragnar-F" creationdate="20260914T174156Z">
+        <seg>In v2.0 müssen Typnamen als Zeichenketten übergeben werden – entweder in Anführungszeichen oder als Ergebnis eines Ausdrucks.</seg>
       </tuv>
     </tu>
     <tu>
