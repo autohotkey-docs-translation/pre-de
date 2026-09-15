@@ -200081,8 +200081,8 @@
       <tuv lang="en">
         <seg>The cue banner is displayed only when the control has no text, and may be displayed by a ComboBox control even if there is a selection (i.e. when &lt;a0&gt;Value&lt;/a0&gt; is non-zero but the selected item has no text).</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T191022Z" creationid="Ragnar-F" creationdate="20260915T191022Z">
-        <seg>Der Platzhaltertext wird nur angezeigt, wenn das Steuerelement keinen Text enthält, und wird eventuell auch dann von einem ComboBox-Steuerelement angezeigt, wenn etwas ausgewählt ist (d. h. wenn &lt;a0&gt;Value&lt;/a0&gt; ungleich Null liefert, aber das ausgewählte Element keinen Text enthält).</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T191349Z" creationid="Ragnar-F" creationdate="20260915T191022Z">
+        <seg>Der Platzhaltertext wird nur angezeigt, wenn das Steuerelement keinen Text enthält, und wird eventuell auch dann von einem ComboBox-Steuerelement angezeigt, wenn etwas ausgewählt ist (d.h. wenn &lt;a0&gt;Value&lt;/a0&gt; ungleich Null liefert, aber das ausgewählte Element keinen Text enthält).</seg>
       </tuv>
     </tu>
     <tu>
