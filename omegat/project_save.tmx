@@ -5694,6 +5694,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>#Import</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T201357Z" creationid="Ragnar-F" creationdate="20260915T201357Z">
+        <seg>#Import</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>#Import - Syntax &amp; Usage | AutoHotkey v2</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T114625Z" creationid="Ragnar-F" creationdate="20260913T114625Z">
@@ -5998,6 +6006,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>#Module</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T203208Z" creationid="Ragnar-F" creationdate="20260915T203208Z">
+        <seg>#Module</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>#Module - Syntax &amp; Usage | AutoHotkey v2</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T133737Z" creationid="Ragnar-F" creationdate="20260913T133737Z">
@@ -6234,6 +6250,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200612T114413Z" creationid="Ragnar-F" creationdate="20200612T114413Z">
         <seg>#Space::Run A_ScriptDir</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#StructPack</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T203341Z" creationid="Ragnar-F" creationdate="20260915T203341Z">
+        <seg>#StructPack</seg>
       </tuv>
     </tu>
     <tu>
@@ -21181,6 +21205,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200612T120918Z" creationid="Ragnar-F" creationdate="20200612T120918Z">
         <seg>; IProvideClassInfo-Interface des Objekts anfordern.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; Requires &lt;s7&gt;[v2.1-alpha.7+]&lt;/s7&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T192401Z" creationid="Ragnar-F" creationdate="20260915T192354Z">
+        <seg>; Benötigt &lt;s7&gt;[v2.1-alpha.7+]&lt;/s7&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -37122,6 +37154,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;Gui&lt;/a0&gt; and &lt;a1&gt;GuiControl&lt;/a1&gt; methods:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T195538Z" creationid="Ragnar-F" creationdate="20260915T195538Z">
+        <seg>&lt;a0&gt;Gui&lt;/a0&gt;- und &lt;a1&gt;GuiControl&lt;/a1&gt;-Methoden:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;Gui&lt;/a0&gt;, where each iteration returns one of the Gui's controls.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260224T174736Z" creationid="Ragnar-F" creationdate="20260224T174736Z">
@@ -37134,6 +37174,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231004T230013Z" creationid="Ragnar-F" creationdate="20220926T092847Z">
         <seg>&lt;a0&gt;Gui&lt;/a0&gt;.&lt;s1&gt;OnEvent&lt;/s1&gt;(EreignisName, Rückruf &lt;s2&gt;, HinzufügenEntfernen&lt;/s2&gt;)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;Gui&lt;/a0&gt;.&lt;s1&gt;OnMessage&lt;/s1&gt;(MsgNumber, Callback &lt;s2&gt;, AddRemove&lt;/s2&gt;)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T192344Z" creationid="Ragnar-F" creationdate="20260915T192332Z">
+        <seg>&lt;a0&gt;Gui&lt;/a0&gt;.&lt;s1&gt;OnMessage&lt;/s1&gt;(MldNummer, Rückruf &lt;s2&gt;, HinzufügenEntfernen&lt;/s2&gt;)</seg>
       </tuv>
     </tu>
     <tu>
@@ -37670,6 +37718,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20241102T151200Z" creationid="Ragnar-F" creationdate="20241102T151200Z">
         <seg>&lt;a0&gt;Hotkeys&lt;/a0&gt;, &lt;a1&gt;HotIf&lt;/a1&gt;, &lt;a2&gt;A_ThisHotkey&lt;/a2&gt;, &lt;a3&gt;#MaxThreadsBuffer&lt;/a3&gt;, &lt;a4&gt;#MaxThreadsPerHotkey&lt;/a4&gt;, &lt;a5&gt;Suspend&lt;/a5&gt;, &lt;a6&gt;Threads&lt;/a6&gt;, &lt;a7&gt;Thread&lt;/a7&gt;, &lt;a8&gt;Critical&lt;/a8&gt;, &lt;a9&gt;Return&lt;/a9&gt;, &lt;a10&gt;Menu-Objekt&lt;/a10&gt;, &lt;a11&gt;SetTimer&lt;/a11&gt;, &lt;a12&gt;Hotstring-Funktion&lt;/a12&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;Hotkeys&lt;/a0&gt;, &lt;a1&gt;Hotstrings&lt;/a1&gt;, &lt;a2&gt;Hotkey function&lt;/a2&gt;, &lt;a3&gt;Hotstring function&lt;/a3&gt;, &lt;a4&gt;#HotIf&lt;/a4&gt;, &lt;a5&gt;A_HotIf&lt;/a5&gt;, &lt;a6&gt;Threads&lt;/a6&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T200633Z" creationid="Ragnar-F" creationdate="20260915T200603Z">
+        <seg>&lt;a0&gt;Hotkeys&lt;/a0&gt;, &lt;a1&gt;Hotstrings&lt;/a1&gt;, &lt;a2&gt;Hotkey-Funktion&lt;/a2&gt;, &lt;a3&gt;Hotstring-Funktion&lt;/a3&gt;, &lt;a4&gt;#HotIf&lt;/a4&gt;, &lt;a5&gt;A_HotIf&lt;/a5&gt;, &lt;a6&gt;Threads&lt;/a6&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -38326,6 +38382,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231203T113016Z" creationid="Ragnar-F" creationdate="20231203T113016Z">
         <seg>&lt;a0&gt;Link&lt;/a0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;List of Windows Messages&lt;/a0&gt;, &lt;a1&gt;Threads&lt;/a1&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T195614Z" creationid="Ragnar-F" creationdate="20260915T195558Z">
+        <seg>&lt;a0&gt;Liste von Fenstermeldungen&lt;/a0&gt;, &lt;a1&gt;Threads&lt;/a1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -39318,6 +39382,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231127T093104Z" creationid="Ragnar-F" creationdate="20210705T100723Z">
         <seg>&lt;a0&gt;OnMessage&lt;/a0&gt; hat nicht mehr den Eine-Funktion-pro-Meldung-Modus, der verwendet wurde, wenn ein Funktionsname (Zeichenkette) übergeben wurde; es akzeptiert jetzt nur eine Funktion via Referenz.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;OnMessage&lt;/a0&gt;, &lt;a1&gt;PostMessage&lt;/a1&gt;, &lt;a2&gt;SendMessage&lt;/a2&gt;, &lt;a3&gt;Critical&lt;/a3&gt;, &lt;a4&gt;DllCall&lt;/a4&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T195552Z" creationid="Ragnar-F" creationdate="20260915T195552Z">
+        <seg>&lt;a0&gt;OnMessage&lt;/a0&gt;, &lt;a1&gt;PostMessage&lt;/a1&gt;, &lt;a2&gt;SendMessage&lt;/a2&gt;, &lt;a3&gt;Critical&lt;/a3&gt;, &lt;a4&gt;DllCall&lt;/a4&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -42906,6 +42978,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a2&gt;OnEvent&lt;/a2&gt;, &lt;a3&gt;OnNotify&lt;/a3&gt;, &lt;a4&gt;OnCommand&lt;/a4&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T195541Z" creationid="Ragnar-F" creationdate="20260915T195541Z">
+        <seg>&lt;a2&gt;OnEvent&lt;/a2&gt;, &lt;a3&gt;OnNotify&lt;/a3&gt;, &lt;a4&gt;OnCommand&lt;/a4&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a2&gt;SetWorkingDir&lt;/a2&gt; has no effect on #DllLoad because #DllLoad is processed before the script begins executing.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230910T114634Z" creationid="Ragnar-F" creationdate="20190923T193311Z">
@@ -43038,6 +43118,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231004T230017Z" creationid="Ragnar-F" creationdate="20220926T092915Z">
         <seg>&lt;a3&gt;GuiCtrl&lt;/a3&gt;.&lt;s4&gt;OnEvent&lt;/s4&gt;(EreignisName, Rückruf &lt;s5&gt;, HinzufügenEntfernen&lt;/s5&gt;)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a3&gt;GuiCtrl&lt;/a3&gt;.&lt;s4&gt;OnMessage&lt;/s4&gt;(MsgNumber, Callback &lt;s5&gt;, AddRemove&lt;/s5&gt;)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T192353Z" creationid="Ragnar-F" creationdate="20260915T192345Z">
+        <seg>&lt;a3&gt;GuiCtrl&lt;/a3&gt;.&lt;s4&gt;OnMessage&lt;/s4&gt;(MldNummer, Rückruf &lt;s5&gt;, HinzufügenEntfernen&lt;/s5&gt;)</seg>
       </tuv>
     </tu>
     <tu>
@@ -56770,6 +56858,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;H&lt;/s0&gt; &lt;s1&gt;[v2.1-alpha.14+]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T203345Z" creationid="Ragnar-F" creationdate="20260915T203345Z">
+        <seg>&lt;s0&gt;H&lt;/s0&gt; &lt;s1&gt;[v2.1-alpha.14+]&lt;/s1&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;H&lt;/s0&gt;&lt;e1&gt;n&lt;/e1&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230621T123857Z" creationid="Ragnar-F" creationdate="20230621T123857Z">
@@ -66538,6 +66634,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>ATan2</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T200635Z" creationid="Ragnar-F" creationdate="20260915T200635Z">
+        <seg>ATan2</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A_AhkPath</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140316T225721Z" creationid="Ragnar-F" creationdate="20140316T225721Z">
@@ -73966,6 +74070,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20250928T113601Z" creationid="Ragnar-F" creationdate="20220410T133558Z">
         <seg>Alle gefundenen AutoHotkey.exe-Dateien werden ausgeschlossen – übrig bleiben Dateien wie AutoHotkeyA32.exe, AutoHotkey64.exe usw. sowie alle gefundenen BIN-Dateien.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Any WM_COMMAND, WM_NOTIFY, WM_VSCROLL, WM_HSCROLL, or WM_CTLCOLOR' messages received by a Tab3 control's &lt;a3&gt;tab dialog&lt;/a3&gt; are forwarded to the GUI window and can be detected by using &lt;a4&gt;OnMessage&lt;/a4&gt; or in &lt;s5&gt;[v2.1-alpha.7+]&lt;/s5&gt; &lt;a6&gt;Gui.OnMessage&lt;/a6&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T191628Z" creationid="Ragnar-F" creationdate="20260915T191628Z">
+        <seg>Alle WM_COMMAND-, WM_NOTIFY-, WM_VSCROLL-, WM_HSCROLL- oder WM_CTLCOLOR...-Meldungen, die an das &lt;a3&gt;Tab-Dialogfenster&lt;/a3&gt; eines Tab3-Steuerelements gesendet wurden, werden an das GUI-Fenster weitergeleitet und können via &lt;a4&gt;OnMessage&lt;/a4&gt; oder in &lt;s5&gt;[v2.1-alpha.7+]&lt;/s5&gt; via &lt;a6&gt;Gui.OnMessage&lt;/a6&gt; erkannt und verarbeitet werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -89883,6 +89995,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Creates a &lt;a0&gt;virtual reference&lt;/a0&gt; to a property of an object.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T202218Z" creationid="Ragnar-F" creationdate="20260915T202218Z">
+        <seg>Erstellt eine &lt;a0&gt;virtuelle Referenz&lt;/a0&gt;, die auf eine Eigenschaft eines Objekts verweist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Creates a Buffer, which encapsulates a block of memory for use with other functions.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231014T085410Z" creationid="Ragnar-F" creationdate="20210425T092711Z">
@@ -105533,6 +105653,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For GuiCtrl.OnMessage, window subclassing is used to detect or intercept messages sent directly to the control.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T195446Z" creationid="Ragnar-F" creationdate="20260915T195446Z">
+        <seg>Für GuiCtrl.OnMessage wird Fenster-Subclassing verwendet, um Meldungen zu erkennen oder abzufangen, die direkt an das Steuerelement gesendet werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For Hwnd, Ctrl in MyGui</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210404T182031Z" creationid="Ragnar-F" creationdate="20210404T182011Z">
@@ -113853,6 +113981,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Functions:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T195829Z" creationid="Ragnar-F" creationdate="20260915T195546Z">
+        <seg>Funktionen:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fundamentals</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140311T003238Z" creationid="Ragnar-F" creationdate="20140311T003238Z">
@@ -116313,6 +116449,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210706T094621Z" creationid="Ragnar-F" creationdate="20210706T094621Z">
         <seg>Gui, GuiControl und GuiControlGet wurden durch &lt;a0&gt;Gui()&lt;/a0&gt; und &lt;a1&gt;Gui&lt;/a1&gt;/&lt;a2&gt;GuiControl&lt;/a2&gt;-Objekte ersetzt, die in der Regel flexibler, konsistenter und leichter zu bedienen sind.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Gui-specific message callbacks are called after global message callbacks (registered with the &lt;a0&gt;OnMessage&lt;/a0&gt; function), but before the GUI window's own default processing takes place.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T194828Z" creationid="Ragnar-F" creationdate="20260915T194818Z">
+        <seg>GUI-spezifische Meldungsrückrufe werden nach den globalen Meldungsrückrufen (die mit der &lt;a0&gt;OnMessage&lt;/a0&gt;-Funktion registriert wurden) aufgerufen, jedoch bevor die reguläre Verarbeitung des GUI-Fensters selbst startet.</seg>
       </tuv>
     </tu>
     <tu>
@@ -120385,6 +120529,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231119T135708Z" creationid="Ragnar-F" creationdate="20191009T122406Z">
         <seg>Allerdings unterstützen primitive Werte die gleiche Art der &lt;a0&gt;Delegation&lt;/a0&gt; wie Objekte.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>However, refer to the &lt;a0&gt;notes for OnEvent&lt;/a0&gt;, especially regarding &lt;c1&gt;this&lt;/c1&gt; and the &lt;e2&gt;GuiOrCtrlObj&lt;/e2&gt; parameter.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T193213Z" creationid="Ragnar-F" creationdate="20260915T192945Z">
+        <seg>Beachten Sie jedoch die &lt;a0&gt;Hinweise bei OnEvent&lt;/a0&gt; – insbesondere in Bezug auf &lt;c1&gt;this&lt;/c1&gt; und den &lt;e2&gt;GuiOderCtrlObj&lt;/e2&gt;-Parameter.</seg>
       </tuv>
     </tu>
     <tu>
@@ -128821,6 +128973,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If the Tab3 control is themed and the sub-control lacks the &lt;a7&gt;BackgroundTrans&lt;/a7&gt; option, WM_CTLCOLORSTATIC is fully handled by the tab dialog and not forwarded.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T191641Z" creationid="Ragnar-F" creationdate="20260915T191641Z">
+        <seg>Wenn das Tab3-Steuerelement thematisiert ist und das Untersteuerelement ohne die &lt;a7&gt;BackgroundTrans&lt;/a7&gt;-Option erstellt wurde, wird WM_CTLCOLORSTATIC vom Tab-Dialogfenster verarbeitet und nicht weitergeleitet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If the UpDown is attached to an &lt;a2&gt;Edit&lt;/a2&gt; control, and you do not wish to validate the user's input, it is best to use the UpDown's value rather than the Edit's.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260216T175644Z" creationid="Ragnar-F" creationdate="20260216T175644Z">
@@ -128945,6 +129105,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231009T084658Z" creationid="Ragnar-F" creationdate="20170614T075707Z">
         <seg>Wenn die Rückruffunktion eine via Name registrierte Methode ist, bekommt ihr versteckter &lt;a0&gt;&lt;e1&gt;this&lt;/e1&gt;-Parameter&lt;/a0&gt; direkt das Event-Sink-Objekt zugewiesen (also das Objekt, zu dem die Methode gehört).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the callback returns a non-empty value, it is used as the message's reply, any remaining callbacks are not called, and the GUI window's default processing of the message is suppressed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T193849Z" creationid="Ragnar-F" creationdate="20260915T193849Z">
+        <seg>Wenn der Rückruf einen nicht-leeren Wert zurückgibt, führt das dazu, dass 1) dieser als Antwort für die Meldung verwendet wird, 2) alle weiteren Rückrufe nicht aufgerufen werden und 3) die reguläre Meldungsverarbeitung durch das GUI-Fenster unterdrückt wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -154527,6 +154695,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>MyCallback(GuiOrCtrlObj, wParam, lParam, msg) { ...</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T192601Z" creationid="Ragnar-F" creationdate="20260915T192532Z">
+        <seg>MeinRückruf(GuiOderCtrlObj, wParam, lParam, Mld) { ...</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>MyCallback(HotkeyName) { ...</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231203T121400Z" creationid="Ragnar-F" creationdate="20231203T121400Z">
@@ -159999,6 +160175,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>ObjGetDataPtr</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T201614Z" creationid="Ragnar-F" creationdate="20260915T201614Z">
+        <seg>ObjGetDataPtr</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ObjGetDataSize</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T201854Z" creationid="Ragnar-F" creationdate="20260915T201854Z">
+        <seg>ObjGetDataSize</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>ObjHasOwnProp</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190924T091132Z" creationid="Ragnar-F" creationdate="20190924T091132Z">
@@ -160099,6 +160291,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20170720T183414Z" creationid="Ragnar-F" creationdate="20170720T183414Z">
         <seg>ObjSetCapacity</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ObjSetDataPtr</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T202059Z" creationid="Ragnar-F" creationdate="20260915T202059Z">
+        <seg>ObjSetDataPtr</seg>
       </tuv>
     </tu>
     <tu>
@@ -161315,6 +161515,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140306T134336Z" creationid="Ragnar-F" creationdate="20140306T134336Z">
         <seg>OnMessage</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>OnMessage (GUI) - Syntax &amp; Usage | AutoHotkey v2</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T192033Z" creationid="Ragnar-F" creationdate="20260915T192033Z">
+        <seg>OnMessage (GUI) - Syntax &amp; Verwendung | AutoHotkey v2</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>OnMessage (GUI) &lt;s0&gt;[v2.1-alpha.1+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T192307Z" creationid="Ragnar-F" creationdate="20260915T192307Z">
+        <seg>OnMessage (GUI) &lt;s0&gt;[v2.1-alpha.1+]&lt;/s0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -163195,6 +163411,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240706T091750Z" creationid="Ragnar-F" creationdate="20240706T091720Z">
         <seg>Andere Übersetzungen können systembedingt oder durch die Tastaturbelegung des aktiven Fensters vorgegeben sein.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Other types of GUI events can be detected and acted upon via &lt;a0&gt;OnNotify&lt;/a0&gt;, &lt;a1&gt;OnCommand&lt;/a1&gt;, &lt;a2&gt;OnMessage function&lt;/a2&gt; or in &lt;s3&gt;[v2.1-alpha.7+]&lt;/s3&gt; &lt;a4&gt;OnMessage method&lt;/a4&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T192014Z" creationid="Ragnar-F" creationdate="20260915T192014Z">
+        <seg>Andere Arten von GUI-Ereignissen können via &lt;a0&gt;OnNotify&lt;/a0&gt;, &lt;a1&gt;OnCommand&lt;/a1&gt;, &lt;a2&gt;OnMessage-Funktion&lt;/a2&gt; oder in &lt;s3&gt;[v2.1-alpha.7+]&lt;/s3&gt; via &lt;a4&gt;OnMessage-Methode&lt;/a4&gt; erkannt und verarbeitet werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -165827,6 +166051,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190930T074513Z" creationid="Ragnar-F" creationdate="20190930T074513Z">
         <seg>AusgabeVar := ih.Input</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Override hotkeys.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T203416Z" creationid="Ragnar-F" creationdate="20260915T203416Z">
+        <seg>Hotkeys überschreiben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -169343,6 +169575,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>PropRef</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T202126Z" creationid="Ragnar-F" creationdate="20260915T202126Z">
+        <seg>PropRef</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Properties</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220410T094230Z" creationid="Ragnar-F" creationdate="20220410T094230Z">
@@ -169467,6 +169707,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210410T202114Z" creationid="Ragnar-F" creationdate="20210410T202114Z">
         <seg>Eigenschaft[&lt;i0&gt;Parameter&lt;/i0&gt;]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Props</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T202219Z" creationid="Ragnar-F" creationdate="20260915T202219Z">
+        <seg>Props</seg>
       </tuv>
     </tu>
     <tu>
@@ -171443,6 +171691,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260915T135946Z" creationid="Ragnar-F" creationdate="20260915T135753Z">
         <seg>Registriert eine Funktion oder Methode, die aufgerufen wird, wenn eine Meldung empfangen wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Registers a function or method to be called whenever the GUI window or control receives the specified message.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T192329Z" creationid="Ragnar-F" creationdate="20260915T192329Z">
+        <seg>Registriert eine Funktion oder Methode, die aufgerufen wird, wenn das GUI-Fenster oder -Steuerelement eine bestimmte Meldung empfängt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -174311,6 +174567,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Return Value &lt;s0&gt;[v2.1-alpha.14+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T200325Z" creationid="Ragnar-F" creationdate="20260915T200316Z">
+        <seg>Rückgabewert &lt;s0&gt;[v2.1-alpha.14+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Return a value</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171226T210507Z" creationid="Ragnar-F" creationdate="20171226T210507Z">
@@ -174847,6 +175111,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Returns the address of the object's &lt;a0&gt;structured data&lt;/a0&gt; (typed properties).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T201853Z" creationid="Ragnar-F" creationdate="20260915T201853Z">
+        <seg>Gibt die Adresse der &lt;a0&gt;strukturierten Daten&lt;/a0&gt; des Objekts (typisierte Eigenschaften) zurück.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Returns the arccosine (the number whose cosine is the specified number) in radians.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230519T114634Z" creationid="Ragnar-F" creationdate="20180812T201607Z">
@@ -175167,6 +175439,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Returns the principal value of the arctangent of &lt;c0&gt;y/x&lt;/c0&gt;, in radians.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T201355Z" creationid="Ragnar-F" creationdate="20260915T201355Z">
+        <seg>Gibt den Hauptwert des Arkustangens von &lt;c0&gt;y/x&lt;/c0&gt; zurück (in Radiant).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Returns the process ID (PID) of the process which created the specified process.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221120T092326Z" creationid="Ragnar-F" creationdate="20221120T092326Z">
@@ -175227,6 +175507,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260215T110146Z" creationid="Ragnar-F" creationdate="20260215T110146Z">
         <seg>Gibt den markierten Text in einem Eingabefeld zurück.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Returns the size of the object's &lt;a0&gt;structure&lt;/a0&gt; (typed properties), in bytes.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T202058Z" creationid="Ragnar-F" creationdate="20260915T202058Z">
+        <seg>Gibt die Größe der &lt;a0&gt;Struktur&lt;/a0&gt; des Objekts (typisierte Eigenschaften) in Bytes zurück.</seg>
       </tuv>
     </tu>
     <tu>
@@ -183495,6 +183783,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Sets the address of the object's &lt;a0&gt;structured data&lt;/a0&gt; (typed properties).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T202124Z" creationid="Ragnar-F" creationdate="20260915T202124Z">
+        <seg>Setzt die Adresse der &lt;a0&gt;strukturierten Daten&lt;/a0&gt; des Objekts (typisierte Eigenschaften).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Sets the creation date.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210212T135724Z" creationid="Ragnar-F" creationdate="20210212T135724Z">
@@ -189575,14 +189871,6 @@
     </tu>
     <tu>
       <tuv lang="en">
-        <seg>Starts a new module or reopens an existing module.</seg>
-      </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T133926Z" creationid="Ragnar-F" creationdate="20260913T133926Z">
-        <seg>Startet ein neues Modul oder öffnet ein existierendes Modul.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en">
         <seg>Starts collecting input.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230509T094755Z" creationid="Ragnar-F" creationdate="20190929T204835Z">
@@ -194119,6 +194407,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The &lt;a0&gt;Gui&lt;/a0&gt; or &lt;a1&gt;GuiControl&lt;/a1&gt; object of the GUI window or control which received the message.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T192705Z" creationid="Ragnar-F" creationdate="20260915T192705Z">
+        <seg>Das &lt;a0&gt;Gui&lt;/a0&gt;- oder &lt;a1&gt;GuiControl&lt;/a1&gt;-Objekt des GUI-Fensters bzw. -Steuerelements, das die Meldung empfangen hat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The &lt;a0&gt;GuiControl object&lt;/a0&gt; of the control that received the event (blank if none).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231203T111829Z" creationid="Ragnar-F" creationdate="20231203T111829Z">
@@ -194779,6 +195075,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260216T203716Z" creationid="Ragnar-F" creationdate="20260216T203716Z">
         <seg>Die &lt;a1&gt;Hidden-Option&lt;/a1&gt; wirkt sich auf die Voreinstellung aus.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;a1&gt;OnMessage method&lt;/a1&gt; registers a function or method to be called whenever a message is received.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T191837Z" creationid="Ragnar-F" creationdate="20260915T191837Z">
+        <seg>Die &lt;a1&gt;OnMessage-Methode&lt;/a1&gt; registriert eine Funktion oder Methode, die aufgerufen wird, wenn eine Meldung empfangen wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -197287,6 +197591,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The OnMessage method of a Gui object registers a function or method to be called whenever the GUI window or control receives the specified message.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T192306Z" creationid="Ragnar-F" creationdate="20260915T192306Z">
+        <seg>Die OnMessage-Methode eines Gui-Objekts registriert eine Funktion oder Methode, die aufgerufen wird, wenn das GUI-Fenster oder -Steuerelement eine bestimmte Meldung empfängt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The OnNotify method of a GuiControl object registers a function or method to be called when a control notification is received via the WM_NOTIFY message.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231006T162753Z" creationid="Ragnar-F" creationdate="20180816T205135Z">
@@ -199391,6 +199703,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The callback function may be called recursively if the message is received while the callback is already running.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T195045Z" creationid="Ragnar-F" creationdate="20260915T195045Z">
+        <seg>Die Rückruffunktion kann rekursiv aufgerufen werden, wenn die Meldung empfangen wird, während der Rückruf bereits ausgeführt wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The callback receives a number indicating how the slider was moved.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260216T160011Z" creationid="Ragnar-F" creationdate="20260216T160011Z">
@@ -199403,6 +199723,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230914T110352Z" creationid="Ragnar-F" creationdate="20180327T115234Z">
         <seg>Der Rückruf reserviert für sich selbst eine Referenz zum Funktionsobjekt und gibt diese frei, wenn das Skript &lt;a0&gt;CallbackFree&lt;/a0&gt; aufruft.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The callback should return either an integer or an empty string, or not explicitly return.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T194050Z" creationid="Ragnar-F" creationdate="20260915T194050Z">
+        <seg>Der Rückruf sollte entweder einen Integer oder eine leere Zeichenkette zurückgeben oder keinen expliziten Rückgabewert liefern.</seg>
       </tuv>
     </tu>
     <tu>
@@ -202847,6 +203175,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The function, method or object to call when the message is received.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T192529Z" creationid="Ragnar-F" creationdate="20260915T192529Z">
+        <seg>Eine Funktion, eine Methode oder ein Objekt, die/das aufgerufen wird, wenn die Meldung empfangen wurde.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The functions &lt;a0&gt;FileGetAttrib&lt;/a0&gt;, &lt;a1&gt;FileGetSize&lt;/a1&gt;, &lt;a2&gt;FileGetTime&lt;/a2&gt;, &lt;a3&gt;FileGetVersion&lt;/a3&gt;, &lt;a4&gt;FileSetAttrib&lt;/a4&gt;, and &lt;a5&gt;FileSetTime&lt;/a5&gt; can be used in a file loop without their Filename/FilePattern parameter.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230624T110628Z" creationid="Ragnar-F" creationdate="20230624T110628Z">
@@ -204999,6 +205335,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The number of the message to monitor.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T192435Z" creationid="Ragnar-F" creationdate="20260915T192435Z">
+        <seg>Die Nummer einer Meldung, die überwacht werden soll.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The number of the row to modify.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230814T063622Z" creationid="Ragnar-F" creationdate="20230814T063622Z">
@@ -205011,6 +205355,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230814T074214Z" creationid="Ragnar-F" creationdate="20230814T074214Z">
         <seg>Die Nummer der Zeile, deren Text abgerufen werden soll.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The number of threads that can be started is limited only by &lt;a0&gt;#MaxThreads&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T195155Z" creationid="Ragnar-F" creationdate="20260915T195155Z">
+        <seg>Die Anzahl der startbaren Threads wird ausschließlich durch &lt;a0&gt;#MaxThreads&lt;/a0&gt; begrenzt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -205871,6 +206223,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The previous value of &lt;a0&gt;A_HotIf&lt;/a0&gt; is returned.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T200524Z" creationid="Ragnar-F" creationdate="20260915T200524Z">
+        <seg>Der Rückgabewert ist der vorherige Wert von &lt;a0&gt;A_HotIf&lt;/a0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The previous value of &lt;c2&gt;MyObject[AnyKey]&lt;/c2&gt; will be stored in &lt;i3&gt;RemovedValue&lt;/i3&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221120T121517Z" creationid="Ragnar-F" creationdate="20221120T121517Z">
@@ -206033,8 +206393,8 @@
       <tuv lang="en">
         <seg>The property cannot be defined by a &lt;a2&gt;meta-function&lt;/a2&gt; unless the object is a COM object (i.e. from another instance of AutoHotkey).</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T081158Z" creationid="Ragnar-F" creationdate="20260913T081158Z">
-        <seg>Die Eigenschaft kann nicht mit einer &lt;a2&gt;Metafunktion&lt;/a2&gt; definiert werden, es sei denn, es handelt sich um ein COM-Objekt (d. h. aus einer anderen Instanz von AutoHotkey).</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T191506Z" creationid="Ragnar-F" creationdate="20260913T081158Z">
+        <seg>Die Eigenschaft kann nicht mit einer &lt;a2&gt;Metafunktion&lt;/a2&gt; definiert werden, es sei denn, es handelt sich um ein COM-Objekt (d.h. aus einer anderen Instanz von AutoHotkey).</seg>
       </tuv>
     </tu>
     <tu>
@@ -210863,6 +211223,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>These messages are not detected by the global &lt;a1&gt;OnMessage&lt;/a1&gt; function.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T195520Z" creationid="Ragnar-F" creationdate="20260915T195520Z">
+        <seg>Diese Meldungen werden von der globalen &lt;a1&gt;OnMessage&lt;/a1&gt;-Funktion nicht erkannt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>These modes must be specified as &lt;c2&gt;{x}&lt;/c2&gt; in &lt;e3&gt;Keys&lt;/e3&gt;, where x is either Raw, Text, or Blind.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200405T111251Z" creationid="Ragnar-F" creationdate="20200405T111251Z">
@@ -210891,6 +211259,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20170515T130230Z" creationid="Ragnar-F" creationdate="20170515T130230Z">
         <seg>Folgende &lt;a0&gt;OnEvent&lt;/a0&gt;-Hinweise gelten auch für OnCommand:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>These notes for &lt;a0&gt;OnEvent&lt;/a0&gt; also apply to OnMessage:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T194103Z" creationid="Ragnar-F" creationdate="20260915T194103Z">
+        <seg>Folgende &lt;a0&gt;OnEvent&lt;/a0&gt;-Hinweise gelten auch für OnMessage:</seg>
       </tuv>
     </tu>
     <tu>
@@ -212507,6 +212883,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20211001T081510Z" creationid="Ragnar-F" creationdate="20190930T074730Z">
         <seg>Dies kann mit der &lt;a0&gt;L-Option&lt;/a0&gt; überschrieben werden (ohne absolutes Maximum).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This can be passed back to HotIf to restore the previous criteria.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T200601Z" creationid="Ragnar-F" creationdate="20260915T200601Z">
+        <seg>Dieser Wert kann an HotIf zurückgegeben werden, um die vorherigen Kriterien wiederherzustellen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -214199,6 +214583,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This function returns the &lt;a0&gt;Gui object&lt;/a0&gt; associated with the specified HWND, or &lt;a1&gt;&lt;e2&gt;blank-unset&lt;/e2&gt;&lt;/a1&gt; if there isn't one or the HWND is invalid.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T191748Z" creationid="Ragnar-F" creationdate="20260915T191748Z">
+        <seg>Diese Funktion gibt das &lt;a0&gt;Gui-Objekt&lt;/a0&gt; zurück, das mit dem angegebenen Fensterhandle verknüpft ist, oder &lt;a1&gt;&lt;e2&gt;leer-ungesetzt&lt;/e2&gt;&lt;/a1&gt;, wenn das zugehörige Objekt nicht gefunden wurde oder das Fensterhandle ungültig ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This function returns the &lt;a0&gt;GuiControl object&lt;/a0&gt; associated with the specified HWND, or &lt;a1&gt;&lt;e2&gt;blank-unset&lt;/e2&gt;&lt;/a1&gt; if there isn't one or the HWND is invalid.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T191726Z" creationid="Ragnar-F" creationdate="20260915T191726Z">
+        <seg>Diese Funktion gibt das &lt;a0&gt;GuiControl-Objekt&lt;/a0&gt; zurück, das mit dem angegebenen Fensterhandle verknüpft ist, oder &lt;a1&gt;&lt;e2&gt;leer-ungesetzt&lt;/e2&gt;&lt;/a1&gt;, wenn das zugehörige Objekt nicht gefunden wurde oder das Fensterhandle ungültig ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This function returns the &lt;a0&gt;HWND (unique ID)&lt;/a0&gt; of a matching window if one was found, or 0 if the function timed out.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260224T204831Z" creationid="Ragnar-F" creationdate="20180816T194934Z">
@@ -215715,6 +216115,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230810T160834Z" creationid="Ragnar-F" creationdate="20220410T093859Z">
         <seg>Einzelheiten finden Sie im &lt;a0&gt;archivierten Forum&lt;/a0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This is demonstrated in the &lt;a5&gt;GUI ToolTip example&lt;/a5&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T192023Z" creationid="Ragnar-F" creationdate="20260915T192023Z">
+        <seg>Siehe dazu das &lt;a5&gt;GUI-Tooltip-Beispiel&lt;/a5&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -235328,6 +235736,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>When the callback is called, A_EventInfo and the last found window are set as per &lt;a1&gt;Additional Information Available to the Callback&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T194221Z" creationid="Ragnar-F" creationdate="20260915T194221Z">
+        <seg>Wenn der Rückruf aufgerufen wird, werden A_EventInfo und das zuletzt gefundene Fenster gemäß &lt;a1&gt;Zusätzliche Infos für die Rückruffunktion&lt;/a1&gt; gesetzt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>When the caller passes &lt;s0&gt;three&lt;/s0&gt; parameters to the function above, Z's default value is ignored.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20170928T103623Z" creationid="Ragnar-F" creationdate="20140309T135721Z">
@@ -237296,6 +237712,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>WinGetAlwaysOnTop</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T202223Z" creationid="Ragnar-F" creationdate="20260915T202223Z">
+        <seg>WinGetAlwaysOnTop</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>WinGetClass</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140305T160635Z" creationid="Ragnar-F" creationdate="20140305T160635Z">
@@ -237396,6 +237820,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180816T143303Z" creationid="Ragnar-F" creationdate="20180816T143300Z">
         <seg>WinGetCount - Syntax &amp; Verwendung | AutoHotkey v2</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>WinGetEnabled</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T203158Z" creationid="Ragnar-F" creationdate="20260915T203158Z">
+        <seg>WinGetEnabled</seg>
       </tuv>
     </tu>
     <tu>
