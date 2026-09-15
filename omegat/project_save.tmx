@@ -39306,6 +39306,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;OnMessage&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.7+]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T185356Z" creationid="Ragnar-F" creationdate="20260915T185356Z">
+        <seg>&lt;a0&gt;OnMessage&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.7+]&lt;/s1&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;OnMessage&lt;/a0&gt; no longer has the single-function-per-message mode that was used when a function name (string) was passed; it now only accepts a function by reference.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231127T093104Z" creationid="Ragnar-F" creationdate="20210705T100723Z">
@@ -40302,6 +40310,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180815T080213Z" creationid="Ragnar-F" creationdate="20180815T080138Z">
         <seg>&lt;a0&gt;SetControlDelay&lt;/a0&gt;, &lt;a1&gt;Win-Funktionen&lt;/a1&gt;, &lt;a2&gt;GuiControl-Objekt&lt;/a2&gt; (für via Skript erstellte Steuerelemente)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;SetCue&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.7+]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T185412Z" creationid="Ragnar-F" creationdate="20260915T185412Z">
+        <seg>&lt;a0&gt;SetCue&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.7+]&lt;/s1&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -46454,6 +46470,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230428T122217Z" creationid="Ragnar-F" creationdate="20140314T023406Z">
         <seg>&lt;c1&gt;s12&lt;/c1&gt; (Dezimalzahl, nicht Hexadezimalzahl).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c1&gt;unset&lt;/c1&gt; can be assigned instead of &lt;c2&gt;""&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T184914Z" creationid="Ragnar-F" creationdate="20260915T184753Z">
+        <seg>Man kann &lt;c1&gt;unset&lt;/c1&gt; statt &lt;c2&gt;""&lt;/c2&gt; zuweisen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -86307,6 +86331,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>ComboBoxCtrl.&lt;s0&gt;SetCue&lt;/s0&gt;(NewText)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T190115Z" creationid="Ragnar-F" creationdate="20260915T190102Z">
+        <seg>ComboBoxCtrl.&lt;s0&gt;SetCue&lt;/s0&gt;(NeuerText)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Come back to Winspector Spy and press the traffic light button to pause monitoring.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230816T075843Z" creationid="Ragnar-F" creationdate="20140311T140010Z">
@@ -97091,6 +97123,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>EditCtrl.&lt;s1&gt;SetCue&lt;/s1&gt;(NewText &lt;s2&gt;, ShowWhenFocused&lt;/s2&gt;)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T190241Z" creationid="Ragnar-F" creationdate="20260915T190116Z">
+        <seg>EditCtrl.&lt;s1&gt;SetCue&lt;/s1&gt;(NeuerText &lt;s2&gt;, ZeigenBeiFokus&lt;/s2&gt;)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>EditFirstName := MyGui.Add("Edit", "ys")</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260216T114041Z" creationid="Ragnar-F" creationdate="20260216T114030Z">
@@ -106903,8 +106943,8 @@
       <tuv lang="en">
         <seg>For details, see the control's &lt;a5&gt;DPIResize&lt;/a5&gt; option.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T183854Z" creationid="Ragnar-F" creationdate="20260915T183854Z">
-        <seg>Einzelheiten finden Sie unter der Steuerelementoption &lt;a5&gt;DPIResize&lt;/a5&gt;.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T183934Z" creationid="Ragnar-F" creationdate="20260915T183854Z">
+        <seg>Einzelheiten finden Sie bei der Steuerelementoption &lt;a5&gt;DPIResize&lt;/a5&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -116605,6 +116645,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>GuiCtrl.&lt;s0&gt;OnMessage&lt;/s0&gt;(MsgNumber, Callback &lt;s1&gt;, AddRemove&lt;/s1&gt;)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T190035Z" creationid="Ragnar-F" creationdate="20260915T190035Z">
+        <seg>GuiCtrl.&lt;s0&gt;OnMessage&lt;/s0&gt;(MldNummer, Rückruf &lt;s1&gt;, HinzufügenEntfernen&lt;/s1&gt;)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>GuiCtrl.&lt;s0&gt;OnNotify&lt;/s0&gt;(NotifyCode, Callback &lt;s1&gt;, AddRemove&lt;/s1&gt;)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230623T144458Z" creationid="Ragnar-F" creationdate="20220418T143621Z">
@@ -123109,6 +123157,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If &lt;s0&gt;false&lt;/s0&gt;, the cue banner is not displayed while the control has the keyboard focus.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T190453Z" creationid="Ragnar-F" creationdate="20260915T190453Z">
+        <seg>Wenn &lt;s0&gt;false&lt;/s0&gt;, wird der Platzhaltertext nicht angezeigt, während das Steuerelement den Tastaturfokus hat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If &lt;s0&gt;false&lt;/s0&gt;, the default behaviour is restored.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231204T082930Z" creationid="Ragnar-F" creationdate="20231204T082930Z">
@@ -123217,6 +123273,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231203T230147Z" creationid="Ragnar-F" creationdate="20231203T230147Z">
         <seg>Wenn &lt;s0&gt;true&lt;/s0&gt;, wird die Farbe auf alle Untermenüs dieses Menüs angewendet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If &lt;s0&gt;true&lt;/s0&gt;, the cue banner is displayed even while the control is focused.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T190700Z" creationid="Ragnar-F" creationdate="20260915T190700Z">
+        <seg>Wenn &lt;s0&gt;true&lt;/s0&gt;, wird der Platzhaltertext auch dann angezeigt, wenn das Steuerelement fokussiert ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -126417,6 +126481,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210410T112526Z" creationid="Ragnar-F" creationdate="20210410T112526Z">
         <seg>Wenn keine Klassen angegeben sind, wird standardmäßig &lt;c0&gt;Error&lt;/c0&gt; verwendet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If no control is found, an UnsetItemError is thrown.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T185134Z" creationid="Ragnar-F" creationdate="20260915T185134Z">
+        <seg>Wenn kein Steuerelement gefunden wurde, wird ein UnsetItemError ausgelöst.</seg>
       </tuv>
     </tu>
     <tu>
@@ -131382,6 +131454,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If there is no focused control, the return value is &lt;a1&gt;&lt;e2&gt;blank-unset&lt;/e2&gt;&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T184425Z" creationid="Ragnar-F" creationdate="20260915T184241Z">
+        <seg>Wenn es kein fokussiertes Steuerelement gibt, ist der Rückgabewert &lt;a1&gt;&lt;e2&gt;leer-ungesetzt&lt;/e2&gt;&lt;/a1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If there is no hotkey in the control, the value is blank.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260216T140537Z" creationid="Ragnar-F" creationdate="20170516T143134Z">
@@ -131434,6 +131514,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231103T075531Z" creationid="Ragnar-F" creationdate="20180816T144708Z">
         <seg>Wenn kein Fenster gefunden wurde, wird 0 zurückgegeben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If there is no menu bar, the return value is &lt;a3&gt;&lt;e4&gt;blank-unset&lt;/e4&gt;&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T184851Z" creationid="Ragnar-F" creationdate="20260915T184851Z">
+        <seg>Wenn es keine Menüleiste gibt, ist der Rückgabewert &lt;a3&gt;&lt;e4&gt;leer-ungesetzt&lt;/e4&gt;&lt;/a3&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -133226,6 +133314,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T061621Z" creationid="Ragnar-F" creationdate="20260913T061621Z">
         <seg>Im &lt;a1&gt;v2.1-Modus&lt;/a1&gt; geben Funktionen standardmäßig &lt;a2&gt;unset&lt;/a2&gt; zurück.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In &lt;a1&gt;v2.1 mode&lt;/a1&gt;, the return value is &lt;c2&gt;unset&lt;/c2&gt; if no control is found.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T185324Z" creationid="Ragnar-F" creationdate="20260915T185324Z">
+        <seg>Im &lt;a1&gt;v2.1-Modus&lt;/a1&gt; ist der Rückgabewert &lt;c2&gt;unset&lt;/c2&gt;, wenn kein Steuerelement gefunden wurde.</seg>
       </tuv>
     </tu>
     <tu>
@@ -161295,6 +161391,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>OnMessage &lt;s0&gt;[v2.1-alpha.7+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T190019Z" creationid="Ragnar-F" creationdate="20260915T190019Z">
+        <seg>OnMessage &lt;s0&gt;[v2.1-alpha.7+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>OnMessage MsgNumber, Callback</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230624T140858Z" creationid="Ragnar-F" creationdate="20230624T140858Z">
@@ -182399,6 +182503,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>SetCue &lt;s0&gt;[v2.1-alpha.7+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T190037Z" creationid="Ragnar-F" creationdate="20260915T190037Z">
+        <seg>SetCue &lt;s0&gt;[v2.1-alpha.7+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>SetDataDir(Dir)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210307T120112Z" creationid="Ragnar-F" creationdate="20210307T120112Z">
@@ -183391,6 +183503,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Sets the cue banner text of an &lt;a0&gt;Edit&lt;/a0&gt; or &lt;a1&gt;ComboBox&lt;/a1&gt; control.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T190059Z" creationid="Ragnar-F" creationdate="20260915T190059Z">
+        <seg>Setzt den Platzhaltertext eines &lt;a0&gt;Edit&lt;/a0&gt;- oder &lt;a1&gt;ComboBox&lt;/a1&gt;-Steuerelements.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Sets the cue banner text of an Edit or ComboBox control.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T190018Z" creationid="Ragnar-F" creationdate="20260915T190018Z">
+        <seg>Setzt den Platzhaltertext eines Edit- oder ComboBox-Steuerelements.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Sets the current capacity of the object's internal array of own properties.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231014T123111Z" creationid="Ragnar-F" creationdate="20190821T071115Z">
@@ -184155,6 +184283,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240421T101156Z" creationid="Ragnar-F" creationdate="20240421T101152Z">
         <seg>RefZyklusGuiZeigen(*) {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ShowWhenFocused</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T190356Z" creationid="Ragnar-F" creationdate="20260915T190356Z">
+        <seg>ZeigenBeiFokus</seg>
       </tuv>
     </tu>
     <tu>
@@ -199943,6 +200079,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The cue banner is displayed only when the control has no text, and may be displayed by a ComboBox control even if there is a selection (i.e. when &lt;a0&gt;Value&lt;/a0&gt; is non-zero but the selected item has no text).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T191022Z" creationid="Ragnar-F" creationdate="20260915T191022Z">
+        <seg>Der Platzhaltertext wird nur angezeigt, wenn das Steuerelement keinen Text enthält, und wird eventuell auch dann von einem ComboBox-Steuerelement angezeigt, wenn etwas ausgewählt ist (d. h. wenn &lt;a0&gt;Value&lt;/a0&gt; ungleich Null liefert, aber das ausgewählte Element keinen Text enthält).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The current Coordinated Universal Time (UTC) in &lt;a0&gt;YYYYMMDDHH24MISS&lt;/a0&gt; format.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230826T123141Z" creationid="Ragnar-F" creationdate="20140316T230515Z">
@@ -204579,6 +204723,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230814T063819Z" creationid="Ragnar-F" creationdate="20230814T063819Z">
         <seg>Die neuen Spalten der angegebenen Zeile, die textuell oder numerisch sein können (einschließlich numerischer Ergebnisse von &lt;a0&gt;Ausdrücken&lt;/a0&gt;).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The new cue banner text.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T190352Z" creationid="Ragnar-F" creationdate="20260915T190352Z">
+        <seg>Der neue Platzhaltertext.</seg>
       </tuv>
     </tu>
     <tu>
