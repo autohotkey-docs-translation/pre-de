@@ -42858,6 +42858,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a2&gt;SetWorkingDir&lt;/a2&gt; has no effect.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T121951Z" creationid="Ragnar-F" creationdate="20260915T121951Z">
+        <seg>&lt;a2&gt;SetWorkingDir&lt;/a2&gt; hat keinen Effekt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a2&gt;Sleep&lt;/a2&gt; -1</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180812T143903Z" creationid="Ragnar-F" creationdate="20180812T143903Z">
@@ -55918,6 +55926,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230814T134130Z" creationid="Ragnar-F" creationdate="20230814T134126Z">
         <seg>&lt;s0&gt;E&lt;/s0&gt;, &lt;s1&gt;Expand&lt;/s1&gt; oder &lt;s2&gt;Expanded&lt;/s2&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s0&gt;Edit&lt;/s0&gt; &lt;s1&gt;Filename&lt;/s1&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T121247Z" creationid="Ragnar-F" creationdate="20260915T121220Z">
+        <seg>&lt;s0&gt;Edit&lt;/s0&gt; &lt;s1&gt;DateiName&lt;/s1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -101331,6 +101347,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Filename &lt;s0&gt;[v2.1-alpha.1+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T121254Z" creationid="Ragnar-F" creationdate="20260915T121249Z">
+        <seg>DateiName &lt;s0&gt;[v2.1-alpha.1+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Files (such as those copied from an open Explorer window via &lt;k2&gt;Ctrl&lt;/k2&gt;+&lt;k3&gt;C&lt;/k3&gt;) are considered to be text:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230727T072908Z" creationid="Ragnar-F" creationdate="20210211T193124Z">
@@ -119597,6 +119621,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>However, if &lt;e0&gt;Filename&lt;/e0&gt; is omitted and an editor window appears to have the file already open (based on its window title), that window is activated instead of opening a new instance of the editor.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T125234Z" creationid="Ragnar-F" creationdate="20260915T122522Z">
+        <seg>Wenn das Skript jedoch bereits in einem Editorfenster geöffnet ist (abhängig vom Fenstertitel), und ruft man die Funktion ohne den Parameter &lt;e0&gt;DateiName&lt;/e0&gt; auf, aktiviert sie dieses Fenster, anstatt eine neue Instanz des Editors zu öffnen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>However, if a GUI is sized for a screen with 100 % DPI and then moved to a screen with 200 % DPI, it will not adjust automatically, and may be very hard to use.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230731T111409Z" creationid="Ragnar-F" creationdate="20230620T212313Z">
@@ -126905,6 +126937,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230914T113353Z" creationid="Ragnar-F" creationdate="20230815T181101Z">
         <seg>Wenn weggelassen, wird standardmäßig &lt;a0&gt;&lt;i1&gt;Funktion&lt;/i1&gt;.MinParam&lt;/a0&gt; verwendet, was üblicherweise der Anzahl der Pflichtparameter in der &lt;a2&gt;Definition&lt;/a2&gt; von &lt;e3&gt;Funktion&lt;/e3&gt; entspricht.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If omitted, it defaults to &lt;a0&gt;A_ScriptFullPath&lt;/a0&gt; (the main file of the current script).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T121900Z" creationid="Ragnar-F" creationdate="20260915T121837Z">
+        <seg>Wenn weggelassen, wird standardmäßig &lt;a0&gt;A_ScriptFullPath&lt;/a0&gt; (die Hauptdatei des aktuellen Skripts) verwendet.</seg>
       </tuv>
     </tu>
     <tu>
@@ -162007,6 +162047,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Opens the current script (or a specified file) for editing in the default editor.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T121217Z" creationid="Ragnar-F" creationdate="20260915T121217Z">
+        <seg>Öffnet das aktuelle Skript (oder eine bestimmte Datei) zum Editieren im Standardeditor.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Opens the folder where user-defined &lt;a0&gt;templates&lt;/a0&gt; can be stored.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231120T090740Z" creationid="Ragnar-F" creationdate="20220926T085203Z">
@@ -164379,6 +164427,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230901T134446Z" creationid="Ragnar-F" creationdate="20230901T102622Z">
         <seg>Andernfalls geben Sie den Namen der Datei an, an die der Text oder die rohen Binärdaten angefügt werden soll(en). Wenn kein absoluter Pfad angegeben ist, wird die Datei im &lt;a1&gt;A_WorkingDir&lt;/a1&gt;-Verzeichnis vermutet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Otherwise, specify the name of the file to open for editing, which is assumed to be in &lt;a1&gt;A_ScriptDir&lt;/a1&gt; if an absolute path isn't specified.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T121913Z" creationid="Ragnar-F" creationdate="20260915T121404Z">
+        <seg>Andernfalls geben Sie den Namen einer Datei an, die zum Editieren geöffnet werden soll. Wenn kein absoluter Pfad angegeben ist, wird die Datei im &lt;a1&gt;A_ScriptDir&lt;/a1&gt;-Verzeichnis vermutet.</seg>
       </tuv>
     </tu>
     <tu>
@@ -195511,6 +195567,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The Edit function opens the current script (or a specified file) for editing in the default editor.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T121205Z" creationid="Ragnar-F" creationdate="20260915T121205Z">
+        <seg>Die Edit-Funktion öffnet das aktuelle Skript (oder eine bestimmte Datei) zum Editieren im Standardeditor.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The Edit function opens the file for editing using the associated "edit" verb in the registry (or Notepad if no verb).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T122015Z" creationid="Ragnar-F" creationdate="20260915T122015Z">
+        <seg>Die Edit-Funktion öffnet die Datei zum Editieren mithilfe des zugeordneten Verbs "edit", das in der Registry angegeben ist (oder in Notepad, wenn kein Verb vorhanden ist).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The EditGetCurrentCol function returns the column number in an edit control where the caret resides.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260215T105406Z" creationid="Ragnar-F" creationdate="20260215T105406Z">
@@ -199763,6 +199835,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200912T094203Z" creationid="Ragnar-F" creationdate="20140311T220947Z">
         <seg>Die Standardpriorität ist 0.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The default program, script or command line executed by the "edit" verb can be changed via &lt;e0&gt;Editor settings&lt;/e0&gt; in the &lt;a1&gt;Dash&lt;/a1&gt; (this applies only to .ahk files).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T122611Z" creationid="Ragnar-F" creationdate="20260915T122611Z">
+        <seg>Programme, Skripte oder Befehlszeilen, die standardmäßig mit dem Verb "edit" ausgeführt werden, können über die &lt;e0&gt;Editor settings&lt;/e0&gt; (Editoreinstellungen) im &lt;a1&gt;Dash&lt;/a1&gt; geändert werden (dies gilt nur für .ahk-Dateien).</seg>
       </tuv>
     </tu>
     <tu>
@@ -213003,6 +213083,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231125T195923Z" creationid="Ragnar-F" creationdate="20210704T181141Z">
         <seg>Diese Funktion hatte quasi einen Platzhalternamen, der viele verschiedene Suffixe zuließ.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This function has no effect if &lt;e0&gt;Filename&lt;/e0&gt; is omitted when operating from within a compiled script.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T123347Z" creationid="Ragnar-F" creationdate="20260915T123347Z">
+        <seg>Diese Funktion hat keine Wirkung, wenn sie ohne ihren Parameter (&lt;e0&gt;DateiName&lt;/e0&gt;) innerhalb eines kompilierten Skripts aufgerufen wird.</seg>
       </tuv>
     </tu>
     <tu>
