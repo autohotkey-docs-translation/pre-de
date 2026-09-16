@@ -7646,6 +7646,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>(Unlike &lt;a0&gt;OwnProps&lt;/a0&gt;, this applies even when &lt;e1&gt;PropValue&lt;/e1&gt; is omitted.) If &lt;e2&gt;Value&lt;/e2&gt; is a &lt;a3&gt;Prototype&lt;/a3&gt;, dynamic properties are not enumerated.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T123544Z" creationid="Ragnar-F" creationdate="20260916T123327Z">
+        <seg>(Im Gegensatz zu &lt;a0&gt;OwnProps&lt;/a0&gt; gilt dies auch dann, wenn &lt;e1&gt;EigenschaftWert&lt;/e1&gt; weggelassen wird.) Wenn &lt;e2&gt;Wert&lt;/e2&gt; ein &lt;a3&gt;Prototyp&lt;/a3&gt; ist, werden die dynamischen Eigenschaften nicht enumeriert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>(Unlike the others, they do not actually support expressions.)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231127T153345Z" creationid="Ragnar-F" creationdate="20210705T195902Z">
@@ -34514,6 +34522,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;CallbackCreate&lt;/a0&gt;, &lt;a1&gt;OnExit&lt;/a1&gt;, &lt;a2&gt;OnClipboardChange&lt;/a2&gt;, &lt;a3&gt;PostMessage&lt;/a3&gt;, &lt;a4&gt;SendMessage&lt;/a4&gt;, &lt;a5&gt;Functions&lt;/a5&gt;, &lt;a6&gt;Windows Messages&lt;/a6&gt;, &lt;a7&gt;Threads&lt;/a7&gt;, &lt;a8&gt;Critical&lt;/a8&gt;, &lt;a9&gt;DllCall&lt;/a9&gt;, &lt;a10&gt;OnMessage (GUI)&lt;/a10&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T115430Z" creationid="Ragnar-F" creationdate="20260916T115430Z">
+        <seg>&lt;a0&gt;CallbackCreate&lt;/a0&gt;, &lt;a1&gt;OnExit&lt;/a1&gt;, &lt;a2&gt;OnClipboardChange&lt;/a2&gt;, &lt;a3&gt;PostMessage&lt;/a3&gt;, &lt;a4&gt;SendMessage&lt;/a4&gt;, &lt;a5&gt;Funktionen&lt;/a5&gt;, &lt;a6&gt;Windows-Meldungen&lt;/a6&gt;, &lt;a7&gt;Threads&lt;/a7&gt;, &lt;a8&gt;Critical&lt;/a8&gt;, &lt;a9&gt;DllCall&lt;/a9&gt;, &lt;a10&gt;OnMessage (GUI)&lt;/a10&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;Capacity&lt;/a0&gt;, &lt;a1&gt;CaseSense&lt;/a1&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210725T064037Z" creationid="Ragnar-F" creationdate="20210725T064037Z">
@@ -36014,6 +36030,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210307T203445Z" creationid="Ragnar-F" creationdate="20210307T203445Z">
         <seg>&lt;a0&gt;Enumerator-Objekt&lt;/a0&gt;, &lt;a1&gt;OwnProps&lt;/a1&gt;, &lt;a2&gt;While-Schleife&lt;/a2&gt;, &lt;a3&gt;Loop&lt;/a3&gt;, &lt;a4&gt;Until&lt;/a4&gt;, &lt;a5&gt;Break&lt;/a5&gt;, &lt;a6&gt;Continue&lt;/a6&gt;, &lt;a7&gt;Blöcke&lt;/a7&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;Enumerator&lt;/a0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T122606Z" creationid="Ragnar-F" creationdate="20260916T122606Z">
+        <seg>&lt;a0&gt;Enumerator&lt;/a0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -39250,6 +39274,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;Object&lt;/a0&gt; or &lt;a1&gt;ComValue&lt;/a1&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T115822Z" creationid="Ragnar-F" creationdate="20260916T115814Z">
+        <seg>&lt;a0&gt;Objekt&lt;/a0&gt; oder &lt;a1&gt;ComValue&lt;/a1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;Object&lt;/a0&gt; or &lt;a1&gt;Integer&lt;/a1&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180815T071311Z" creationid="Ragnar-F" creationdate="20180815T071303Z">
@@ -39310,6 +39342,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20191010T091509Z" creationid="Ragnar-F" creationdate="20191010T091458Z">
         <seg>&lt;a0&gt;Objekte&lt;/a0&gt;, &lt;a1&gt;HasMethod&lt;/a1&gt;, &lt;a2&gt;HasBase&lt;/a2&gt;, &lt;a3&gt;HasProp&lt;/a3&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;Objects&lt;/a0&gt;, &lt;a1&gt;HasProp&lt;/a1&gt;, &lt;a2&gt;OwnProps&lt;/a2&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T124719Z" creationid="Ragnar-F" creationdate="20260916T124712Z">
+        <seg>&lt;a0&gt;Objekte&lt;/a0&gt;, &lt;a1&gt;HasProp&lt;/a1&gt;, &lt;a2&gt;OwnProps&lt;/a2&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -40318,6 +40358,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260216T164648Z" creationid="Ragnar-F" creationdate="20260216T164648Z">
         <seg>&lt;a0&gt;SendMessage&lt;/a0&gt;(0x040F, SegmentNummer - 1, HICON, MeineSB)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;SendMessage&lt;/a0&gt;, &lt;a1&gt;Message List&lt;/a1&gt;, &lt;a2&gt;Message Tutorial&lt;/a2&gt;, &lt;a3&gt;OnMessage&lt;/a3&gt;, &lt;a4&gt;OnMessage (GUI)&lt;/a4&gt;, &lt;a5&gt;Automating Winamp&lt;/a5&gt;, &lt;a6&gt;DllCall&lt;/a6&gt;, &lt;a7&gt;ControlSend&lt;/a7&gt;, &lt;a8&gt;MenuSelect&lt;/a8&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T115714Z" creationid="Ragnar-F" creationdate="20260916T115624Z">
+        <seg>&lt;a0&gt;SendMessage&lt;/a0&gt;, &lt;a1&gt;Meldungsliste&lt;/a1&gt;, &lt;a2&gt;PostMessage / SendMessage Tutorial&lt;/a2&gt;, &lt;a3&gt;OnMessage&lt;/a3&gt;, &lt;a4&gt;OnMessage (GUI)&lt;/a4&gt;, &lt;a5&gt;Winamp automatisieren&lt;/a5&gt;, &lt;a6&gt;DllCall&lt;/a6&gt;, &lt;a7&gt;ControlSend&lt;/a7&gt;, &lt;a8&gt;MenuSelect&lt;/a8&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -45114,6 +45162,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;c0&gt;PropRef&lt;/c0&gt; itself is a &lt;a1&gt;class&lt;/a1&gt; derived from &lt;c2&gt;Any&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T115813Z" creationid="Ragnar-F" creationdate="20260916T115813Z">
+        <seg>&lt;c0&gt;PropRef&lt;/c0&gt; selbst ist eine &lt;a1&gt;Klasse&lt;/a1&gt;, die von &lt;c2&gt;Any&lt;/c2&gt; abgeleitet ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;c0&gt;RegDeleteKey([KeyName])&lt;/c0&gt; deletes a registry key.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231204T124209Z" creationid="Ragnar-F" creationdate="20231204T124209Z">
@@ -48494,6 +48550,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190820T114430Z" creationid="Ragnar-F" creationdate="20190820T114353Z">
         <seg>&lt;e0&gt;AnzahlVars&lt;/e0&gt; enthält die Anzahl der Variablen, die an die For-Schleife übergeben wurden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;e0&gt;Obj&lt;/e0&gt; can be a struct instance or a Prototype object, so a non-zero return value does not necessarily mean that the object itself has structured data.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T113220Z" creationid="Ragnar-F" creationdate="20260916T113220Z">
+        <seg>Da &lt;e0&gt;Obj&lt;/e0&gt; eine Strukturinstanz oder ein Prototypobjekt sein kann, bedeutet ein Rückgabewert ungleich Null nicht zwangsläufig, dass das Objekt selbst strukturierte Daten enthält.</seg>
       </tuv>
     </tu>
     <tu>
@@ -58810,6 +58874,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; Methods are dynamic properties which do not typically have a getter, so are not enumerated.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T123637Z" creationid="Ragnar-F" creationdate="20260916T123637Z">
+        <seg>&lt;s0&gt;Hinweis:&lt;/s0&gt; Methoden sind dynamische Eigenschaften, die in der Regel keinen Getter haben und daher nicht enumeriert werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;Note:&lt;/s0&gt; Microsoft can assign an effect to an unassigned key code at any time.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230621T073601Z" creationid="Ragnar-F" creationdate="20230621T073601Z">
@@ -59294,6 +59366,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230913T075514Z" creationid="Ragnar-F" creationdate="20190821T070914Z">
         <seg>&lt;s0&gt;ObjSetBase&lt;/s0&gt;(Obj, BasisObj)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s0&gt;ObjSetDataPtr&lt;/s0&gt;(Obj, Ptr)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T113642Z" creationid="Ragnar-F" creationdate="20260916T113642Z">
+        <seg>&lt;s0&gt;ObjSetDataPtr&lt;/s0&gt;(Obj, Ptr)</seg>
       </tuv>
     </tu>
     <tu>
@@ -61706,6 +61786,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;Warning:&lt;/s0&gt; This function is likely to be removed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T113350Z" creationid="Ragnar-F" creationdate="20260916T113350Z">
+        <seg>&lt;s0&gt;Warnung:&lt;/s0&gt; Diese Funktion wird wahrscheinlich wieder entfernt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;WhichButton:&lt;/s0&gt; If omitted, it defaults to Left (the left mouse button).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230621T080817Z" creationid="Ragnar-F" creationdate="20230621T080737Z">
@@ -62194,6 +62282,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.27+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T111735Z" creationid="Ragnar-F" creationdate="20260916T111735Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.27+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;[v2.1-alpha.28+]&lt;/s0&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T061531Z" creationid="Ragnar-F" creationdate="20260913T061531Z">
@@ -62494,6 +62590,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230531T084932Z" creationid="Ragnar-F" creationdate="20171105T121747Z">
         <seg>&lt;s1&gt;Z&lt;/s1&gt; (hat eine Z-Achse), &lt;s2&gt;R&lt;/s2&gt; (hat eine R-Achse), &lt;s3&gt;U&lt;/s3&gt; (hat eine U-Achse), &lt;s4&gt;V&lt;/s4&gt; (hat eine V-Achse), &lt;s5&gt;P&lt;/s5&gt; (hat einen Rundblickschalter), &lt;s6&gt;D&lt;/s6&gt; (der Rundblickschalter hat nur vordefinierte Richtungen wie Oben, Unten usw.), &lt;s7&gt;C&lt;/s7&gt; (der Rundblickschalter ist stufenlos/genau).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s1&gt;[v2.1-alpha.1+]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T115432Z" creationid="Ragnar-F" creationdate="20260916T115432Z">
+        <seg>&lt;s1&gt;[v2.1-alpha.1+]&lt;/s1&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -63542,6 +63646,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260912T195502Z" creationid="Ragnar-F" creationdate="20260912T195502Z">
         <seg>Eine &lt;a0&gt;Variable&lt;/a0&gt; oder ein Array-Element gilt als "ungesetzt", wenn kein Wert zugewiesen wurde oder wenn der Wert entfernt wurde.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A &lt;a0&gt;virtual reference&lt;/a0&gt; can be passed to a &lt;a1&gt;ByRef parameter&lt;/a1&gt; in place of a variable reference.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T111733Z" creationid="Ragnar-F" creationdate="20260916T111733Z">
+        <seg>Anstelle einer Variablenreferenz kann eine &lt;a0&gt;virtuelle Referenz&lt;/a0&gt; an einen &lt;a1&gt;ByRef-Parameter&lt;/a1&gt; übergeben werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -71842,6 +71954,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Although a primitive value (such as a string or integer) cannot have its own properties, it can inherit properties from the respective &lt;a0&gt;prototype&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T124511Z" creationid="Ragnar-F" creationdate="20260916T124511Z">
+        <seg>Obwohl ein primitiver Wert (z.B. eine Zeichenkette oder ein Integer) keine eigenen Eigenschaften haben kann, kann er Eigenschaften vom jeweiligen &lt;a0&gt;Prototyp&lt;/a0&gt; erben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Although a remapped key can trigger normal hotkeys, by default it cannot trigger mouse hotkeys or &lt;a0&gt;hook hotkeys&lt;/a0&gt; (use &lt;a1&gt;ListHotkeys&lt;/a1&gt; to discover which hotkeys are "hook").</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230810T093806Z" creationid="Ragnar-F" creationdate="20140311T015803Z">
@@ -76462,6 +76582,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231201T211703Z" creationid="Ragnar-F" creationdate="20160705T185143Z">
         <seg>Beim Zuweisen eines Wertes an A_LastError wird auch die Systemfunktion SetLastError() aufgerufen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Assigning to Base causes an error to be thrown if either &lt;e1&gt;Obj&lt;/e1&gt; or &lt;e2&gt;NewBaseObj&lt;/e2&gt; is a Prototype or instance with &lt;a3&gt;typed properties&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T112704Z" creationid="Ragnar-F" creationdate="20260916T112704Z">
+        <seg>Es wird ein Fehler ausgelöst, wenn man Base etwas zuweist, während &lt;e1&gt;Obj&lt;/e1&gt; oder &lt;e2&gt;NeueBasisObj&lt;/e2&gt; ein Prototyp oder eine Instanz mit &lt;a3&gt;typisierten Eigenschaften&lt;/a3&gt; ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -87523,6 +87651,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Consider alternatives, such as &lt;a1&gt;Struct.At&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T115221Z" creationid="Ragnar-F" creationdate="20260916T113432Z">
+        <seg>Verwenden Sie Alternativen wie &lt;a1&gt;Struct.At&lt;/a1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Consider installing an &lt;a0&gt;editor with AutoHotkey support&lt;/a0&gt; to make editing and testing scripts much easier.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230908T073152Z" creationid="Ragnar-F" creationdate="20221219T135058Z">
@@ -96163,6 +96299,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Due to a bug, an error is thrown even on success.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T113642Z" creationid="Ragnar-F" creationdate="20260916T113642Z">
+        <seg>Aufgrund eines Bugs wird selbst bei Erfolg ein Fehler ausgelöst.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Due to a quirk in Windows, .wav files with a path longer than 127 characters will not be played.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230622T213828Z" creationid="Ragnar-F" creationdate="20230622T213828Z">
@@ -96311,6 +96455,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231125T135916Z" creationid="Ragnar-F" creationdate="20190821T062005Z">
         <seg>Dynamische Eigenschaften werden kopiert, nicht indirekt aufgerufen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Dynamic properties are enumerated only if a getter is defined and can be called without parameters.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T123202Z" creationid="Ragnar-F" creationdate="20260916T123000Z">
+        <seg>Dynamische Eigenschaften werden nur enumeriert, wenn ein Getter definiert ist, der ohne Parameter aufgerufen werden kann.</seg>
       </tuv>
     </tu>
     <tu>
@@ -106061,6 +106213,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For PropName &lt;s0&gt;, PropValue&lt;/s0&gt; in &lt;s1&gt;Props&lt;/s1&gt;(Value)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T122554Z" creationid="Ragnar-F" creationdate="20260916T122514Z">
+        <seg>For EigenschaftName &lt;s0&gt;, EigenschaftWert&lt;/s0&gt; in &lt;s1&gt;Props&lt;/s1&gt;(Wert)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For PropName &lt;s0&gt;, PropValue&lt;/s0&gt; in Value.&lt;s1&gt;Props&lt;/s1&gt;()</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260914T045046Z" creationid="Ragnar-F" creationdate="20260914T045007Z">
@@ -108289,6 +108449,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230624T203701Z" creationid="Ragnar-F" creationdate="20210216T132112Z">
         <seg>Zum Beispiel bewirkt &lt;c1&gt;#ErrorStdOut "UTF-8"&lt;/c1&gt;, dass Fehlermeldungen als UTF-8 kodiert werden, bevor sie zur Standardfehlerausgabe (stderr) gesendet werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For example, &lt;c1&gt;&amp;Obj.Prop&lt;/c1&gt; is equivalent to &lt;c2&gt;Obj.__Ref('Prop')&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T111546Z" creationid="Ragnar-F" creationdate="20260916T111546Z">
+        <seg>Zum Beispiel ist &lt;c1&gt;&amp;Obj.Prop&lt;/c1&gt; dasselbe wie &lt;c2&gt;Obj.__Ref('Prop')&lt;/c2&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -121421,6 +121589,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>However, this function can also be used with &lt;a0&gt;ComValue&lt;/a0&gt; and derived types, or to bypass any custom __Ref implementation.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T122343Z" creationid="Ragnar-F" creationdate="20260916T122343Z">
+        <seg>Allerdings kann diese Funktion auch mit &lt;a0&gt;ComValue&lt;/a0&gt; und abgeleiteten Typen verwendet werden, oder um eine benutzerdefinierte __Ref-Implementierung zu umgehen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>However, this is generally not needed for the &lt;a1&gt;SendInput&lt;/a1&gt; and &lt;a2&gt;SendPlay&lt;/a2&gt; modes because they automatically postpone the user's physical mouse activity until afterward.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230403T143302Z" creationid="Ragnar-F" creationdate="20140228T181412Z">
@@ -123009,6 +123185,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230509T073733Z" creationid="Ragnar-F" creationdate="20140305T165527Z">
         <seg>Wenn &lt;e0&gt;Anzeigetext&lt;/e0&gt; relativ lang ist, kann es via &lt;a1&gt;Fortsetzungsbereich&lt;/a1&gt; in mehrere kurze Zeilen aufgeteilt werden, um die Übersichtlichkeit und Wartbarkeit des Skripts zu verbessern.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If &lt;e0&gt;PropValue&lt;/e0&gt; is specified, the enumerator attempts to call the property's getter to retrieve the value.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T124059Z" creationid="Ragnar-F" creationdate="20260916T124049Z">
+        <seg>Wenn &lt;e0&gt;EigenschaftWert&lt;/e0&gt; angegeben ist, versucht der Enumerator den Getter der Eigenschaft aufzurufen, um den Wert abzurufen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -130829,6 +131013,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If the property has a getter method, it is called to obtain the value (unless &lt;e0&gt;PropValue&lt;/e0&gt; is omitted).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T125243Z" creationid="Ragnar-F" creationdate="20260916T122705Z">
+        <seg>Wenn die Eigenschaft eine Getter-Methode hat, wird diese aufgerufen, um den Wert zu ermitteln (es sei denn, &lt;e0&gt;EigenschaftWert&lt;/e0&gt; wird weggelassen).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If the property has a getter method, it is called to obtain the value (unless &lt;e0&gt;Value&lt;/e0&gt; is omitted).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190821T065705Z" creationid="Ragnar-F" creationdate="20190821T065705Z">
@@ -130849,6 +131041,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T085702Z" creationid="Ragnar-F" creationdate="20260916T085655Z">
         <seg>Handelt es sich bei der Eigenschaft um eine &lt;a0&gt;verschachtelte Struktur&lt;/a0&gt;, wird eine Referenz zurückgegeben, die auf diese Struktur verweist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the property is a &lt;a0&gt;pointer type&lt;/a0&gt; or not a nested struct, a &lt;a1&gt;PropRef&lt;/a1&gt; is created and returned.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T111435Z" creationid="Ragnar-F" creationdate="20260916T111435Z">
+        <seg>Handelt es sich bei der Eigenschaft um einen &lt;a0&gt;Pointer-Typ&lt;/a0&gt; oder nicht um eine verschachtelte Struktur, wird eine &lt;a1&gt;PropRef&lt;/a1&gt; erstellt und zurückgegeben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -134974,6 +135174,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>In most cases, directly using this class is not recommended.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T121635Z" creationid="Ragnar-F" creationdate="20260916T121635Z">
+        <seg>In den meisten Fällen sollte man diese Klasse nicht direkt verwenden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>In most cases, error dialogs now provide the option to continue the current thread (vs. exiting the thread).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231130T095255Z" creationid="Ragnar-F" creationdate="20210706T104841Z">
@@ -138475,6 +138683,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231122T171620Z" creationid="Ragnar-F" creationdate="20210704T103129Z">
         <seg>Verwenden Sie stattdessen mehrere Funktionen und rufen Sie diese nacheinander auf.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Instead, use the &lt;a0&gt;reference operator&lt;/a0&gt; to retrieve a reference to a property (via the &lt;a1&gt;__Ref method&lt;/a1&gt;).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T122020Z" creationid="Ragnar-F" creationdate="20260916T122020Z">
+        <seg>Besser ist es, den &lt;a0&gt;Referenzoperator&lt;/a0&gt; zu verwenden, um eine Referenz auf eine Eigenschaft abzurufen (über die &lt;a1&gt;__Ref-Methode&lt;/a1&gt;).</seg>
       </tuv>
     </tu>
     <tu>
@@ -153327,6 +153543,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>MsgBox PropName "=" PropValue</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T124821Z" creationid="Ragnar-F" creationdate="20260916T124805Z">
+        <seg>MsgBox EigenschaftName "=" EigenschaftWert</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>MsgBox RegExMatch("abc123", "i)^ABC")</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190819T141931Z" creationid="Ragnar-F" creationdate="20190819T141931Z">
@@ -160663,10 +160887,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>ObjGetDataPtr &lt;s0&gt;[v2.1-alpha.3+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T112705Z" creationid="Ragnar-F" creationdate="20260916T112705Z">
+        <seg>ObjGetDataPtr &lt;s0&gt;[v2.1-alpha.3+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>ObjGetDataSize</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260915T201854Z" creationid="Ragnar-F" creationdate="20260915T201854Z">
         <seg>ObjGetDataSize</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ObjGetDataSize &lt;s0&gt;[v2.1-alpha.3+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T112806Z" creationid="Ragnar-F" creationdate="20260916T112806Z">
+        <seg>ObjGetDataSize &lt;s0&gt;[v2.1-alpha.3+]&lt;/s0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -160779,6 +161019,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260915T202059Z" creationid="Ragnar-F" creationdate="20260915T202059Z">
         <seg>ObjSetDataPtr</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ObjSetDataPtr &lt;s0&gt;[v2.1-alpha.3+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T113222Z" creationid="Ragnar-F" creationdate="20260916T113222Z">
+        <seg>ObjSetDataPtr &lt;s0&gt;[v2.1-alpha.3+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ObjSetDataPtr does not affect nested objects, as they each have their own data pointer (which points into the outer object's original data).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T114812Z" creationid="Ragnar-F" creationdate="20260916T114812Z">
+        <seg>ObjSetDataPtr hat keinen Effekt auf verschachtelte Objekte, da diese jeweils einen eigenen Datenpointer haben (der auf die ursprünglichen Daten des äußeren Objekts verweist).</seg>
       </tuv>
     </tu>
     <tu>
@@ -162787,6 +163043,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230814T143937Z" creationid="Ragnar-F" creationdate="20230814T143937Z">
         <seg>OneDrive</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Only &lt;a1&gt;boxed pointers&lt;/a1&gt; have the capacity to redirect typed properties to an external address.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T113552Z" creationid="Ragnar-F" creationdate="20260916T113552Z">
+        <seg>Nur &lt;a1&gt;gekapselte Pointer&lt;/a1&gt; sind in der Lage, typisierte Eigenschaften auf eine externe Adresse umzuleiten.</seg>
       </tuv>
     </tu>
     <tu>
@@ -170071,10 +170335,42 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>PropName</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T122624Z" creationid="Ragnar-F" creationdate="20260916T122624Z">
+        <seg>EigenschaftName</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>PropRef</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260915T202126Z" creationid="Ragnar-F" creationdate="20260915T202126Z">
         <seg>PropRef</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>PropRef - Syntax &amp; Usage | AutoHotkey v2</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T115720Z" creationid="Ragnar-F" creationdate="20260916T115720Z">
+        <seg>PropRef - Syntax &amp; Verwendung | AutoHotkey v2</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>PropRef &lt;s0&gt;[v2.1-alpha.10+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T115749Z" creationid="Ragnar-F" creationdate="20260916T115749Z">
+        <seg>PropRef &lt;s0&gt;[v2.1-alpha.10+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>PropValue</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T122632Z" creationid="Ragnar-F" creationdate="20260916T122632Z">
+        <seg>EigenschaftWert</seg>
       </tuv>
     </tu>
     <tu>
@@ -170211,6 +170507,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260915T202219Z" creationid="Ragnar-F" creationdate="20260915T202219Z">
         <seg>Props</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Props - Syntax &amp; Usage | AutoHotkey v2</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T122452Z" creationid="Ragnar-F" creationdate="20260916T122452Z">
+        <seg>Props - Syntax &amp; Verwendung | AutoHotkey v2</seg>
       </tuv>
     </tu>
     <tu>
@@ -170355,6 +170659,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140301T021736Z" creationid="Ragnar-F" creationdate="20140301T021736Z">
         <seg>Ptr</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Ptr := &lt;s0&gt;ObjGetDataPtr&lt;/s0&gt;(Obj)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T112803Z" creationid="Ragnar-F" creationdate="20260916T112803Z">
+        <seg>Ptr := &lt;s0&gt;ObjGetDataPtr&lt;/s0&gt;(Obj)</seg>
       </tuv>
     </tu>
     <tu>
@@ -171443,6 +171755,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230322T143425Z" creationid="Ragnar-F" creationdate="20210211T190351Z">
         <seg>Reduzieren Sie die Abnutzung Ihrer Finger, indem Sie eine &lt;a0&gt;beliebige Taste&lt;/a0&gt; zu einem Hotkey machen, inklusive einzelner Buchstaben, Pfeiltasten, Ziffernblocktasten, und sogar die Modifikatortasten (Strg, Alt, Win und Umschalt).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Ref := &lt;s0&gt;PropRef&lt;/s0&gt;(Obj, Name)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T115754Z" creationid="Ragnar-F" creationdate="20260916T115754Z">
+        <seg>Ref := &lt;s0&gt;PropRef&lt;/s0&gt;(Obj, Name)</seg>
       </tuv>
     </tu>
     <tu>
@@ -175639,6 +175959,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Returns the address of the object's &lt;a0&gt;structured data&lt;/a0&gt; (typed properties defined by the script).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T112802Z" creationid="Ragnar-F" creationdate="20260916T112802Z">
+        <seg>Gibt die Adresse der &lt;a0&gt;strukturierten Daten&lt;/a0&gt; des Objekts (via Skript definierte typisierte Eigenschaften) zurück.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Returns the address of the object's &lt;a0&gt;structured data&lt;/a0&gt; (typed properties).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260915T201853Z" creationid="Ragnar-F" creationdate="20260915T201853Z">
@@ -176059,6 +176387,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260915T202058Z" creationid="Ragnar-F" creationdate="20260915T202058Z">
         <seg>Gibt die Größe der &lt;a0&gt;Struktur&lt;/a0&gt; des Objekts (typisierte Eigenschaften) in Bytes zurück.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Returns the size of the object's &lt;a0&gt;structured data&lt;/a0&gt; (typed properties defined by the script), in bytes.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T113018Z" creationid="Ragnar-F" creationdate="20260916T113018Z">
+        <seg>Gibt die Größe der &lt;a0&gt;strukturierten Daten&lt;/a0&gt; des Objekts (via Skript definierte typisierte Eigenschaften) in Bytes zurück.</seg>
       </tuv>
     </tu>
     <tu>
@@ -184343,6 +184679,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Sets the address of the object's &lt;a0&gt;structured data&lt;/a0&gt; (typed properties defined by the script).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T113454Z" creationid="Ragnar-F" creationdate="20260916T113454Z">
+        <seg>Setzt die Adresse der &lt;a0&gt;strukturierten Daten&lt;/a0&gt; des Objekts (via Skript definierte typisierte Eigenschaften).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Sets the address of the object's &lt;a0&gt;structured data&lt;/a0&gt; (typed properties).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260915T202124Z" creationid="Ragnar-F" creationdate="20260915T202124Z">
@@ -186931,6 +187275,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220421T094059Z" creationid="Ragnar-F" creationdate="20180815T193627Z">
         <seg>Größe := &lt;s0&gt;FileGetSize&lt;/s0&gt;(&lt;s1&gt;DateiName, Einheit&lt;/s1&gt;)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Size := &lt;s0&gt;ObjGetDataSize&lt;/s0&gt;(Obj)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T113027Z" creationid="Ragnar-F" creationdate="20260916T113020Z">
+        <seg>Größe := &lt;s0&gt;ObjGetDataSize&lt;/s0&gt;(Obj)</seg>
       </tuv>
     </tu>
     <tu>
@@ -189803,6 +190155,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230901T115906Z" creationid="Ragnar-F" creationdate="20230901T115906Z">
         <seg>Geben Sie die X- und Y-Koordinate der Position an, von der aus das Ziehen gestartet werden soll (der Mauszeiger wird vor dem Ziehen auf diese Position bewegt).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Specify the address of a valid struct as defined by typed properties in &lt;c0&gt;Obj.base&lt;/c0&gt;, or any integer if there are no typed properties.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T114614Z" creationid="Ragnar-F" creationdate="20260916T114614Z">
+        <seg>Die Adresse einer gültigen Struktur, definiert durch typisierte Eigenschaften in &lt;c0&gt;Obj.base&lt;/c0&gt;, oder ein beliebiger Integer, falls keine typisierten Eigenschaften vorhanden sind.</seg>
       </tuv>
     </tu>
     <tu>
@@ -198319,6 +198679,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The PropRef function creates a virtual reference to a property of an object.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T115748Z" creationid="Ragnar-F" creationdate="20260916T115748Z">
+        <seg>Die PropRef-Funktion erstellt eine virtuelle Referenz, die auf eine Eigenschaft eines Objekts verweist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The Props function enumerates the properties of a value.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T122510Z" creationid="Ragnar-F" creationdate="20260916T122510Z">
+        <seg>Die Props-Funktion enumeriert die Eigenschaften eines Wertes.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The R and T options are mutually exclusive.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171230T121541Z" creationid="Ragnar-F" creationdate="20171230T121541Z">
@@ -200363,6 +200739,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230624T135734Z" creationid="Ragnar-F" creationdate="20230624T135734Z">
         <seg>Die Rückruffunktionen werden aufgerufen, sobald das Skript auf irgendeine Weise beendet wird (außer es wird durch so etwas wie "Task beenden" gekillt).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The caller can continue enumeration at the next property only if it retained a reference to the enumerator (for instance, by assigning the return value of Props to a variable before passing it to &lt;a1&gt;For&lt;/a1&gt;).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T124345Z" creationid="Ragnar-F" creationdate="20260916T124345Z">
+        <seg>Der Aufrufer kann die Enumeration bei der nächsten Eigenschaft nur fortsetzen, wenn er eine Referenz zum Enumerator gespeichert hat (z.B. indem er den Rückgabewert von Props einer Variable zuweist, bevor er diese an &lt;a1&gt;For&lt;/a1&gt; übergibt).</seg>
       </tuv>
     </tu>
     <tu>
@@ -206775,6 +207159,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The predefined &lt;c0&gt;__Class&lt;/c0&gt; property created by a class definition and &lt;c1&gt;Any.Prototype.Base&lt;/c1&gt; are not enumerated.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T124711Z" creationid="Ragnar-F" creationdate="20260916T124711Z">
+        <seg>Die vordefinierte &lt;c0&gt;__Class&lt;/c0&gt;-Eigenschaft einer Klassendefinition und &lt;c1&gt;Any.Prototype.Base&lt;/c1&gt; werden nicht enumeriert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The preferred method is &lt;a0&gt;#HotIf&lt;/a0&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200613T072019Z" creationid="Ragnar-F" creationdate="20200613T072019Z">
@@ -207747,6 +208139,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231025T120721Z" creationid="Ragnar-F" creationdate="20210216T115208Z">
         <seg>Das Skript kann einen Enumerator implementieren, um zu steuern, welche Werte den Variablen der For-Schleife pro Schleifenwiederholung zugewiesen werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The script may use &lt;a0&gt;ObjGetDataPtr&lt;/a0&gt; to retrieve &lt;e1&gt;Ptr&lt;/e1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T114633Z" creationid="Ragnar-F" creationdate="20260916T114633Z">
+        <seg>Das Skript kann &lt;a0&gt;ObjGetDataPtr&lt;/a0&gt; verwenden, um &lt;e1&gt;Ptr&lt;/e1&gt; abzurufen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -213543,6 +213943,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This can be passed to a ByRef parameter.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T121526Z" creationid="Ragnar-F" creationdate="20260916T121303Z">
+        <seg>Diese Referenz kann an einen ByRef-Parameter übergeben werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This can be safely assigned to a variable, passed to a function or concatenated with another string.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230914T142246Z" creationid="Ragnar-F" creationdate="20180814T183327Z">
@@ -214687,6 +215095,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This function fails for all other objects.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T113612Z" creationid="Ragnar-F" creationdate="20260916T113612Z">
+        <seg>Bei allen anderen Objekten schlägt diese Funktion fehl.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This function first makes a brief attempt to close the window normally.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231116T124807Z" creationid="Ragnar-F" creationdate="20170721T131626Z">
@@ -215031,6 +215447,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This function returns a &lt;a0&gt;virtual reference&lt;/a0&gt; corresponding to the property; that is, an object with a __Value property which retrieves or sets the value of the target property.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T121452Z" creationid="Ragnar-F" creationdate="20260916T120956Z">
+        <seg>Diese Funktion gibt eine &lt;a0&gt;virtuelle Referenz&lt;/a0&gt; zurück, die auf die Eigenschaft verweist – also ein Objekt mit einer __Value-Eigenschaft zum Abrufen oder Setzen des Wertes der Zieleigenschaft.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This function returns a COM wrapper object of type dependent on the IID parameter.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210410T123309Z" creationid="Ragnar-F" creationdate="20210410T123309Z">
@@ -215059,6 +215483,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20181007T101021Z" creationid="Ragnar-F" creationdate="20181007T101021Z">
         <seg>Diese Funktion gibt eine hexadezimale numerische Zeichenkette zurück, die die RGB-Farbe (Rot-Grün-Blau) des Pixels repräsentiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This function returns a new &lt;a0&gt;enumerator&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T122622Z" creationid="Ragnar-F" creationdate="20260916T122622Z">
+        <seg>Diese Funktion gibt einen neuen &lt;a0&gt;Enumerator&lt;/a0&gt; zurück.</seg>
       </tuv>
     </tu>
     <tu>
@@ -218323,6 +218755,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230811T120115Z" creationid="Ragnar-F" creationdate="20230620T215028Z">
         <seg>Diese Methode wird benötigt, wenn Sie mehr als einen Controller-Hotkey wie den von Methode #2 haben und Sie diese Hotkeys manchmal gleichzeitig drücken und loslassen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This method is normally called indirectly via the &lt;a0&gt;reference operator&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T111510Z" creationid="Ragnar-F" creationdate="20260916T111510Z">
+        <seg>Diese Methode wird normalerweise indirekt über den &lt;a0&gt;Referenzoperator&lt;/a0&gt; aufgerufen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -223195,6 +223635,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260216T122113Z" creationid="Ragnar-F" creationdate="20260216T122113Z">
         <seg>Mit &lt;a0&gt;ComObjConnect&lt;/a0&gt; können die Ereignisse des ActiveX-Objekts verarbeitet werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>To have a &lt;a2&gt;GUI&lt;/a2&gt; window or in &lt;s3&gt;[v2.1-alpha.7+]&lt;/s3&gt; a GUI control receive a message, use the &lt;a4&gt;OnMessage method&lt;/a4&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T115621Z" creationid="Ragnar-F" creationdate="20260916T115621Z">
+        <seg>Damit ein &lt;a2&gt;GUI&lt;/a2&gt;-Fenster oder in &lt;s3&gt;[v2.1-alpha.7+]&lt;/s3&gt; ein GUI-Steuerelement eine Meldung empfängt, verwenden Sie die &lt;a4&gt;OnMessage-Methode&lt;/a4&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -228091,6 +228539,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20150402T231803Z" creationid="Ragnar-F" creationdate="20140307T182320Z">
         <seg>Im Gegensatz zu den ImageLists einer &lt;a0&gt;ListView&lt;/a0&gt; werden ImageLists einer TreeView nicht automatisch zerstört, wenn die TreeView zerstört wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Unlike &lt;a0&gt;OwnProps&lt;/a0&gt;, Props enumerates inherited properties, including &lt;a1&gt;typed properties&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T124002Z" creationid="Ragnar-F" creationdate="20260916T124002Z">
+        <seg>Im Gegensatz zu &lt;a0&gt;OwnProps&lt;/a0&gt; enumeriert Props geerbten Eigenschaften, inklusive &lt;a1&gt;typisierte Eigenschaften&lt;/a1&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -259860,6 +260316,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260115T114248Z" creationid="Ragnar-F" creationdate="20260115T110238Z">
         <seg>for Index, Proz in ProzessListeAbrufen()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>for PropName, PropValue in Props(Map("Key", "Value"))</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T124804Z" creationid="Ragnar-F" creationdate="20260916T124722Z">
+        <seg>for EigenschaftName, EigenschaftWert in Props(Map("Schlüssel", "Wert"))</seg>
       </tuv>
     </tu>
     <tu>
