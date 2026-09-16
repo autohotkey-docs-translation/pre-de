@@ -62186,6 +62186,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.1+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T130732Z" creationid="Ragnar-F" creationdate="20260916T130732Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.1+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;[v2.1-alpha.10+]&lt;/s0&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260914T170317Z" creationid="Ragnar-F" creationdate="20260914T170317Z">
@@ -130933,6 +130941,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If the pattern is not found (that is, if the function returns 0), this variable is made &lt;a0&gt;&lt;e1&gt;blank-unset&lt;/e1&gt;&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T130510Z" creationid="Ragnar-F" creationdate="20260916T130510Z">
+        <seg>Wenn das Suchmuster nicht gefunden wird (also wenn die Funktion 0 zurückgibt), wird diese Variable &lt;a0&gt;&lt;e1&gt;leer-ungesetzt&lt;/e1&gt;&lt;/a0&gt; gemacht.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If the percentage number begins with a minus sign or is unsigned, it does not need to be enclosed in quotation marks.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230911T161255Z" creationid="Ragnar-F" creationdate="20230911T161255Z">
@@ -164863,6 +164879,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Otherwise, specify a replacement string or in &lt;s1&gt;[v2.1-alpha.1+]&lt;/s1&gt; a callback function.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T130557Z" creationid="Ragnar-F" creationdate="20260916T130557Z">
+        <seg>Andernfalls geben Sie einen Ersatztext oder in &lt;s1&gt;[v2.1-alpha.1+]&lt;/s1&gt; eine Rückruffunktion an.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Otherwise, specify a series of one or more of the following options, each separated from the next by zero or more spaces or tabs.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260212T203213Z" creationid="Ragnar-F" creationdate="20260212T202216Z">
@@ -190175,6 +190199,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Specify the function to call for each match in the string.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T131104Z" creationid="Ragnar-F" creationdate="20260916T131057Z">
+        <seg>Geben Sie eine Funktion an, die für jede Übereinstimmung in der Zeichenkette aufgerufen werden soll.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Specify the letter B to buffer the hotkey as described in &lt;a2&gt;#MaxThreadsBuffer&lt;/a2&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230814T061858Z" creationid="Ragnar-F" creationdate="20230814T061858Z">
@@ -190299,6 +190331,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230306T170750Z" creationid="Ragnar-F" creationdate="20230306T170750Z">
         <seg>Geben Sie die Zeichenkette NA im sechsten Parameter (&lt;e0&gt;Optionen&lt;/e0&gt;) wie unten gezeigt an:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Specify the string to be substituted for each match, which is plain text (not a regular expression).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T130644Z" creationid="Ragnar-F" creationdate="20260916T130644Z">
+        <seg>Geben Sie eine reine Zeichenkette (keinen regulären Ausdruck) an, mit der jede Übereinstimmung ersetzt werden soll.</seg>
       </tuv>
     </tu>
     <tu>
@@ -207571,6 +207611,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231122T155820Z" creationid="Ragnar-F" creationdate="20210704T100433Z">
         <seg>Die übrigen Ausgabevariablen werden wie &lt;a0&gt;ByRef-Parameter&lt;/a0&gt; (deren Verwendung und Syntax sich geändert hat) behandelt, außer dass sie Referenzen erlauben, die auf beschreibbare interne Variablen verweisen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The replacement string may contain binary zero.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T130731Z" creationid="Ragnar-F" creationdate="20260916T130731Z">
+        <seg>Der Ersatztext kann binäre Nullen enthalten.</seg>
       </tuv>
     </tu>
     <tu>
