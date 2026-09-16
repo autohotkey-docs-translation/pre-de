@@ -4758,6 +4758,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>"Obj" is used below as a placeholder for any instance of the Struct.Array class.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T160606Z" creationid="Ragnar-F" creationdate="20260916T160606Z">
+        <seg>"Obj" wird hier stellvertretend für eine beliebige Instanz der Struct.Array-Klasse verwendet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>"Open the help settings":</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T152559Z" creationid="Ragnar-F" creationdate="20260903T152559Z">
@@ -18700,6 +18708,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231025T115924Z" creationid="Ragnar-F" creationdate="20180411T123619Z">
         <seg>; Wenn die obige Schleife wegen fehlender Endungszeichen null Wiederholungen</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; If the destination key is a mouse button/wheel, SetMouseDelay is used instead.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T171254Z" creationid="Ragnar-F" creationdate="20260916T171254Z">
+        <seg>; Wenn die Zieltaste eine Maustaste oder ein Mausrad ist, wird stattdessen SetMouseDelay verwendet.</seg>
       </tuv>
     </tu>
     <tu>
@@ -40882,6 +40898,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;Static Properties&lt;/a0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T151322Z" creationid="Ragnar-F" creationdate="20260916T151322Z">
+        <seg>&lt;a0&gt;Statische Eigenschaften&lt;/a0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;Static variables&lt;/a0&gt; for the current function.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231020T081842Z" creationid="Ragnar-F" creationdate="20200726T165251Z">
@@ -41906,6 +41930,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;WinGetAlwaysOnTop&lt;/a0&gt;, &lt;a1&gt;WinMoveTop&lt;/a1&gt;, &lt;a2&gt;WinMoveBottom&lt;/a2&gt;, &lt;a3&gt;Win functions&lt;/a3&gt;, &lt;a4&gt;Control functions&lt;/a4&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T163634Z" creationid="Ragnar-F" creationdate="20260916T163634Z">
+        <seg>&lt;a0&gt;WinGetAlwaysOnTop&lt;/a0&gt;, &lt;a1&gt;WinMoveTop&lt;/a1&gt;, &lt;a2&gt;WinMoveBottom&lt;/a2&gt;, &lt;a3&gt;Win-Funktionen&lt;/a3&gt;, &lt;a4&gt;Control-Funktionen&lt;/a4&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;WinGetClass&lt;/a0&gt;, &lt;a1&gt;WinGetControls&lt;/a1&gt;, &lt;a2&gt;MouseGetPos&lt;/a2&gt;, &lt;a3&gt;GuiControl.ClassNN&lt;/a3&gt;, &lt;a4&gt;Control functions&lt;/a4&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260215T195648Z" creationid="Ragnar-F" creationdate="20260215T195638Z">
@@ -41942,6 +41974,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180816T151124Z" creationid="Ragnar-F" creationdate="20180816T151059Z">
         <seg>&lt;a0&gt;WinGetCount&lt;/a0&gt;, &lt;a1&gt;Win-Funktionen&lt;/a1&gt;, &lt;a2&gt;Control-Funktionen&lt;/a2&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;WinGetEnabled&lt;/a0&gt;, &lt;a1&gt;ControlSetEnabled&lt;/a1&gt;, &lt;a2&gt;Win functions&lt;/a2&gt;, &lt;a3&gt;Control functions&lt;/a3&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T163648Z" creationid="Ragnar-F" creationdate="20260916T163637Z">
+        <seg>&lt;a0&gt;WinGetEnabled&lt;/a0&gt;, &lt;a1&gt;ControlSetEnabled&lt;/a1&gt;, &lt;a2&gt;Win-Funktionen&lt;/a2&gt;, &lt;a3&gt;Control-Funktionen&lt;/a3&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -42162,6 +42202,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;WinSetAlwaysOnTop&lt;/a0&gt;, &lt;a1&gt;WinMoveTop&lt;/a1&gt;, &lt;a2&gt;WinMoveBottom&lt;/a2&gt;, &lt;a3&gt;Win functions&lt;/a3&gt;, &lt;a4&gt;Control functions&lt;/a4&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T163256Z" creationid="Ragnar-F" creationdate="20260916T163240Z">
+        <seg>&lt;a0&gt;WinSetAlwaysOnTop&lt;/a0&gt;, &lt;a1&gt;WinMoveTop&lt;/a1&gt;, &lt;a2&gt;WinMoveBottom&lt;/a2&gt;, &lt;a3&gt;Win-Funktionen&lt;/a3&gt;, &lt;a4&gt;Control-Funktionen&lt;/a4&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;WinSetEnabled&lt;/a0&gt;, &lt;a1&gt;ControlGetEnabled&lt;/a1&gt;, &lt;a2&gt;Win functions&lt;/a2&gt;, &lt;a3&gt;Control functions&lt;/a3&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T163515Z" creationid="Ragnar-F" creationdate="20260916T163515Z">
+        <seg>&lt;a0&gt;WinSetEnabled&lt;/a0&gt;, &lt;a1&gt;ControlGetEnabled&lt;/a1&gt;, &lt;a2&gt;Win-Funktionen&lt;/a2&gt;, &lt;a3&gt;Control-Funktionen&lt;/a3&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;WinSetStyle / WinSetExStyle&lt;/a0&gt;, &lt;a1&gt;ControlGetStyle / ControlGetExStyle&lt;/a1&gt;, &lt;a2&gt;styles table&lt;/a2&gt;, &lt;a3&gt;Win functions&lt;/a3&gt;, &lt;a4&gt;Control functions&lt;/a4&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180816T153230Z" creationid="Ragnar-F" creationdate="20180816T153151Z">
@@ -42334,6 +42390,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T081706Z" creationid="Ragnar-F" creationdate="20260916T081706Z">
         <seg>&lt;a0&gt;__Ref&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.10+]&lt;/s1&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;__Ref&lt;/a0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T153346Z" creationid="Ragnar-F" creationdate="20260916T153346Z">
+        <seg>&lt;a0&gt;__Ref&lt;/a0&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -46154,6 +46218,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;c0&gt;{Blind}&lt;/c0&gt; is adjusted to include any modifiers which are explicitly specified for the source key and not the destination key, to allow those modifiers to be released by Send.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T172859Z" creationid="Ragnar-F" creationdate="20260916T172356Z">
+        <seg>&lt;c0&gt;{Blind}&lt;/c0&gt; ist so angepasst, dass es jegliche Modifikatoren einbezieht, die explizit für die Originaltaste und nicht für die Zieltaste angegeben sind, damit Send diese Modifikatoren loslassen darf.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;c0&gt;{Blind}&lt;/c0&gt; is not supported by SendText or &lt;a1&gt;ControlSendText&lt;/a1&gt;; use &lt;c2&gt;{Blind}{Text}&lt;/c2&gt; instead.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231108T111920Z" creationid="Ragnar-F" creationdate="20180507T210141Z">
@@ -47350,6 +47422,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210704T125534Z" creationid="Ragnar-F" creationdate="20210704T125534Z">
         <seg>&lt;c5&gt;1..2&lt;/c5&gt; oder &lt;c6&gt;1.0.2&lt;/c6&gt; ist die Zahl 1.0, gefolgt von der Eigenschaft 2.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c5&gt;&lt;^a::b&lt;/c5&gt; uses &lt;c6&gt;{Blind&lt;^}&lt;/c6&gt; in &lt;s7&gt;[v2.1-alpha.5+]&lt;/s7&gt; but &lt;c8&gt;{Blind^}&lt;/c8&gt; in earlier versions (which may produce unexpected results if used in combination with RCtrl).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T173117Z" creationid="Ragnar-F" creationdate="20260916T173117Z">
+        <seg>&lt;c5&gt;&lt;^a::b&lt;/c5&gt; verwendet &lt;c6&gt;{Blind&lt;^}&lt;/c6&gt; in &lt;s7&gt;[v2.1-alpha.5+]&lt;/s7&gt;, aber &lt;c8&gt;{Blind^}&lt;/c8&gt; in früheren Versionen (was in Kombination mit RCtrl zu unerwarteten Ergebnissen führen kann).</seg>
       </tuv>
     </tu>
     <tu>
@@ -48734,6 +48814,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231013T131543Z" creationid="Ragnar-F" creationdate="20200612T151426Z">
         <seg>&lt;e0&gt;Zkette&lt;/e0&gt; kann einem existierenden Hotstring entsprechen, unter Berücksichtigung der &lt;a1&gt;Groß-/Kleinschreibung-Sensitivität (C)&lt;/a1&gt;, &lt;a2&gt;Wort-Sensitivität (?)&lt;/a2&gt;, Aktivierungskriterien (gesetzt durch &lt;a3&gt;#HotIf&lt;/a3&gt; oder &lt;a4&gt;HotIf&lt;/a4&gt;) und der auslösenden Zeichenkette.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;e0&gt;StructClass&lt;/e0&gt; must be a subclass of Struct.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T153735Z" creationid="Ragnar-F" creationdate="20260916T153717Z">
+        <seg>&lt;e0&gt;StructKlasse&lt;/e0&gt; muss eine Unterklasse von Struct sein.</seg>
       </tuv>
     </tu>
     <tu>
@@ -62250,6 +62338,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.14+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T161832Z" creationid="Ragnar-F" creationdate="20260916T161832Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.14+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.16+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T163650Z" creationid="Ragnar-F" creationdate="20260916T163650Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.16+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;[v2.1-alpha.18+]&lt;/s0&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T081556Z" creationid="Ragnar-F" creationdate="20260913T081556Z">
@@ -62358,6 +62462,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T121444Z" creationid="Ragnar-F" creationdate="20260913T121444Z">
         <seg>&lt;s0&gt;[v2.1-alpha.31+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.5+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T173126Z" creationid="Ragnar-F" creationdate="20260916T173126Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.5+]&lt;/s0&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -62942,6 +63054,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230822T105843Z" creationid="Ragnar-F" creationdate="20230621T044531Z">
         <seg>&lt;s8&gt;Hinweis:&lt;/s8&gt; &lt;c9&gt;^A&lt;/c9&gt; hat in manchen Programmen eine andere Wirkung als &lt;c10&gt;^a&lt;/c10&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s8&gt;[v2.1-alpha.5+]&lt;/s8&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T171519Z" creationid="Ragnar-F" creationdate="20260916T171519Z">
+        <seg>&lt;s8&gt;[v2.1-alpha.5+]&lt;/s8&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -69308,8 +69428,8 @@
       <tuv lang="en">
         <seg>Added &lt;a0&gt;structured array classes&lt;/a0&gt;, created by &lt;c1&gt;&lt;i2&gt;StructClass&lt;/i2&gt;[N]&lt;/c1&gt;.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T135833Z" creationid="Ragnar-F" creationdate="20260911T135607Z">
-        <seg>Hinzugefügt: Klassen für &lt;a0&gt;strukturierte Arrays&lt;/a0&gt;, erstellt mit &lt;c1&gt;&lt;i2&gt;StructClass&lt;/i2&gt;[N]&lt;/c1&gt;.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T153701Z" creationid="Ragnar-F" creationdate="20260911T135607Z">
+        <seg>Hinzugefügt: Klassen für &lt;a0&gt;strukturierte Arrays&lt;/a0&gt;, erstellt mit &lt;c1&gt;&lt;i2&gt;StructKlasse&lt;/i2&gt;[N]&lt;/c1&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -69866,6 +69986,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Address</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T154019Z" creationid="Ragnar-F" creationdate="20260916T154019Z">
+        <seg>Adresse</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Address := &lt;s0&gt;CallbackCreate&lt;/s0&gt;(Function &lt;s1&gt;, Options, ParamSpec&lt;/s1&gt;)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260914T135655Z" creationid="Ragnar-F" creationdate="20260914T134917Z">
@@ -69878,6 +70006,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200612T211400Z" creationid="Ragnar-F" creationdate="20200612T211349Z">
         <seg>Adresse := &lt;s0&gt;StrPtr&lt;/s0&gt;(Wert)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Address := Obj.&lt;s0&gt;Ptr&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T154914Z" creationid="Ragnar-F" creationdate="20260916T154908Z">
+        <seg>Adresse := Obj.&lt;s0&gt;Ptr&lt;/s0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -75314,6 +75450,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Any value.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T162059Z" creationid="Ragnar-F" creationdate="20260916T162059Z">
+        <seg>Beliebiger Wert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Any variable reference in an &lt;a0&gt;assume-local&lt;/a0&gt; function may resolve to a global variable if it is only read.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210307T115427Z" creationid="Ragnar-F" creationdate="20210307T115420Z">
@@ -75774,6 +75918,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T121452Z" creationid="Ragnar-F" creationdate="20260911T121452Z">
         <seg>Array().RemoveAt()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ArrayClass := StructClass.&lt;s0&gt;__Item&lt;/s0&gt;[Length]</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T154800Z" creationid="Ragnar-F" creationdate="20260916T154747Z">
+        <seg>ArrayKlasse := StructKlasse.&lt;s0&gt;__Item&lt;/s0&gt;[Länge]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ArrayClass := StructClass[Length]</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T154746Z" creationid="Ragnar-F" creationdate="20260916T154746Z">
+        <seg>ArrayKlasse := StructKlasse[Länge]</seg>
       </tuv>
     </tu>
     <tu>
@@ -76690,6 +76850,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>At</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T153900Z" creationid="Ragnar-F" creationdate="20260916T153900Z">
+        <seg>At</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>At least one &lt;a0&gt;Gui&lt;/a0&gt; (or the script's &lt;a1&gt;main window&lt;/a1&gt;) is visible.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210725T074301Z" creationid="Ragnar-F" creationdate="20210725T074301Z">
@@ -77366,6 +77534,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230904T091901Z" creationid="Ragnar-F" creationdate="20210704T071238Z">
         <seg>AutoHotkey v2 verwendet nativ Unicode (UTF-16), aber einige externe Bibliotheken oder Fenstermeldungen können ANSI-Zeichenketten erfordern.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>AutoHotkey v2.0 GUI windows do not respond to this message by default, and v2.1 may not account for all aspects of a control.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T171057Z" creationid="Ragnar-F" creationdate="20260916T171057Z">
+        <seg>AutoHotkey-v2.0-GUI-Fenster reagieren standardmäßig nicht auf diese Meldung, und v2.1 berücksichtigt unter Umständen nicht alle Aspekte eines Steuerelements.</seg>
       </tuv>
     </tu>
     <tu>
@@ -80994,6 +81170,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>By default, controls are automatically resized when the &lt;a1&gt;WM_DPICHANGED message&lt;/a1&gt; is received.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T164105Z" creationid="Ragnar-F" creationdate="20260916T163852Z">
+        <seg>Standardmäßig werden Steuerelemente beim Empfangen der &lt;a1&gt;WM_DPICHANGED-Meldung&lt;/a1&gt; automatisch größer/kleiner gemacht.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>By default, coordinates are relative to the active window's client area.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260310T094507Z" creationid="Ragnar-F" creationdate="20260310T094507Z">
@@ -83612,8 +83796,8 @@
       <tuv lang="en">
         <seg>Changed &lt;c0&gt;StructClass.Ptr&lt;/c0&gt; to subclass &lt;c1&gt;StructClass.base.Ptr&lt;/c1&gt; instead of &lt;c2&gt;Struct.Ptr&lt;/c2&gt;.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T133731Z" creationid="Ragnar-F" creationdate="20260911T133731Z">
-        <seg>Geändert: &lt;c0&gt;StructClass.Ptr&lt;/c0&gt; macht nun &lt;c1&gt;StructClass.base.Ptr&lt;/c1&gt; statt &lt;c2&gt;Struct.Ptr&lt;/c2&gt; zur Unterklasse.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T153649Z" creationid="Ragnar-F" creationdate="20260911T133731Z">
+        <seg>Geändert: &lt;c0&gt;StructKlasse.Ptr&lt;/c0&gt; macht nun &lt;c1&gt;StructKlasse.base.Ptr&lt;/c1&gt; statt &lt;c2&gt;Struct.Ptr&lt;/c2&gt; zur Unterklasse.</seg>
       </tuv>
     </tu>
     <tu>
@@ -83796,16 +83980,16 @@
       <tuv lang="en">
         <seg>Changed StructClass.At() to permit StructClass to have no fields.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122355Z" creationid="Ragnar-F" creationdate="20260911T122355Z">
-        <seg>Geändert: StructClass.At() erlaubt nun, dass StructClass keine Felder besitzt.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T153620Z" creationid="Ragnar-F" creationdate="20260911T122355Z">
+        <seg>Geändert: StructKlasse.At() erlaubt nun, dass StructKlasse keine Felder besitzt.</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>Changed StructClass.Prototype to be read-only.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122332Z" creationid="Ragnar-F" creationdate="20260911T122332Z">
-        <seg>Geändert: StructClass.Prototype ist nun schreibgeschützt.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T153610Z" creationid="Ragnar-F" creationdate="20260911T122332Z">
+        <seg>Geändert: StructKlasse.Prototype ist nun schreibgeschützt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -84739,6 +84923,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changing the mode is recommended only when the automatic scaling does not work well for a particular GUI or control.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T170912Z" creationid="Ragnar-F" creationdate="20260916T170912Z">
+        <seg>Der Modus sollte nur geändert werden, wenn die automatische Skalierung bei einer bestimmten GUI oder einem bestimmten Steuerelement nicht zufriedenstellend funktioniert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changing the setting does not affect positions or sizes which have already been set.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230425T142022Z" creationid="Ragnar-F" creationdate="20161013T165421Z">
@@ -85447,6 +85639,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231204T093523Z" creationid="Ragnar-F" creationdate="20231204T093523Z">
         <seg>ClassNNs := &lt;s0&gt;WinGetControls&lt;/s0&gt;(&lt;s1&gt;FensterTitel, FensterText, AusnahmeTitel, AusnahmeText&lt;/s1&gt;)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ClassName := &lt;s0&gt;Type&lt;/s0&gt;(&lt;s1&gt;Value&lt;/s1&gt;)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T162051Z" creationid="Ragnar-F" creationdate="20260916T162034Z">
+        <seg>KlasseName := &lt;s0&gt;Type&lt;/s0&gt;(&lt;s1&gt;Wert&lt;/s1&gt;)</seg>
       </tuv>
     </tu>
     <tu>
@@ -90499,6 +90699,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Creates a &lt;a0&gt;boxed pointer&lt;/a0&gt;, which behaves as an instance of &lt;e1&gt;StructClass&lt;/e1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T154002Z" creationid="Ragnar-F" creationdate="20260916T154002Z">
+        <seg>Erstellt einen &lt;a0&gt;gekapselten Pointer&lt;/a0&gt;, der sich wie eine Instanz von &lt;e1&gt;StructKlasse&lt;/e1&gt; verhält.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Creates a &lt;a0&gt;virtual reference&lt;/a0&gt; to a property of an object.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260915T202218Z" creationid="Ragnar-F" creationdate="20260915T202218Z">
@@ -90695,6 +90903,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231029T093713Z" creationid="Ragnar-F" creationdate="20210307T164213Z">
         <seg>Erstellt ein neues Object.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Creates a new Struct.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T153459Z" creationid="Ragnar-F" creationdate="20260916T153459Z">
+        <seg>Erstellt ein neues Struct.</seg>
       </tuv>
     </tu>
     <tu>
@@ -102877,16 +103093,16 @@
       <tuv lang="en">
         <seg>Fixed &lt;c0&gt;StructClass.Ptr().__Value := unset&lt;/c0&gt; to be permitted.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T112754Z" creationid="Ragnar-F" creationdate="20260911T112754Z">
-        <seg>Behoben: &lt;c0&gt;StructClass.Ptr().__Value := unset&lt;/c0&gt; ist nun zulässig.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T153608Z" creationid="Ragnar-F" creationdate="20260911T112754Z">
+        <seg>Behoben: &lt;c0&gt;StructKlasse.Ptr().__Value := unset&lt;/c0&gt; ist nun zulässig.</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>Fixed &lt;c0&gt;StructClass[N].Ptr&lt;/c0&gt; (pointers to array types).</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T134011Z" creationid="Ragnar-F" creationdate="20260911T134011Z">
-        <seg>Behoben: &lt;c0&gt;StructClass[N].Ptr&lt;/c0&gt; (Pointer, die auf Array-Typen verweisen).</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T153653Z" creationid="Ragnar-F" creationdate="20260911T134011Z">
+        <seg>Behoben: &lt;c0&gt;StructKlasse[N].Ptr&lt;/c0&gt; (Pointer, die auf Array-Typen verweisen).</seg>
       </tuv>
     </tu>
     <tu>
@@ -103805,16 +104021,16 @@
       <tuv lang="en">
         <seg>Fixed StructClass.At() where StructClass has a nested struct.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122609Z" creationid="Ragnar-F" creationdate="20260911T122609Z">
-        <seg>Behoben: StructClass.At() funktioniert nun korrekt, wenn StructClass eine verschachtelte Struktur enthält.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T153627Z" creationid="Ragnar-F" creationdate="20260911T122609Z">
+        <seg>Behoben: StructKlasse.At() funktioniert nun korrekt, wenn StructKlasse eine verschachtelte Struktur enthält.</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>Fixed StructClass.Ptr to not seal StructClass structure when evaluated.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T130736Z" creationid="Ragnar-F" creationdate="20260911T130736Z">
-        <seg>Behoben: StructClass.Ptr versiegelt die StructClass-Struktur beim Auswerten nicht mehr.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T153638Z" creationid="Ragnar-F" creationdate="20260911T130736Z">
+        <seg>Behoben: StructKlasse.Ptr versiegelt die StructKlasse-Struktur beim Auswerten nicht mehr.</seg>
       </tuv>
     </tu>
     <tu>
@@ -106925,6 +107141,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For backward-compatibility with the Throw statement in previous versions, Throw accepts any number of parameters and uses only the last parameter (like &lt;a2&gt;multi-statement comma&lt;/a2&gt;).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T161705Z" creationid="Ragnar-F" creationdate="20260916T161613Z">
+        <seg>Aus Gründen der Abwärtskompatibilität mit der Throw-Anweisung in früheren Versionen akzeptiert Throw eine beliebige Anzahl von Parametern und verwendet nur den letzten Parameter (ähnlich wie beim &lt;a2&gt;Mehrfachanweisungskomma&lt;/a2&gt;).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For backward-compatibility, it behaves as described in the paragraph above when the parameter count is zero.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260914T162437Z" creationid="Ragnar-F" creationdate="20260914T162437Z">
@@ -107569,6 +107793,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180507T220811Z" creationid="Ragnar-F" creationdate="20180507T220811Z">
         <seg>Weitere Informationen finden Sie unter &lt;a6&gt;Text-Modus&lt;/a6&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For details, see &lt;a9&gt;Blind mode&lt;/a9&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T173126Z" creationid="Ragnar-F" creationdate="20260916T173126Z">
+        <seg>Weitere Informationen finden Sie unter &lt;a9&gt;Blind-Modus&lt;/a9&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -108957,6 +109189,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For example, &lt;c1&gt;Type(MyVar?)&lt;/c1&gt; returns "unset" if MyVar is unset.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T162424Z" creationid="Ragnar-F" creationdate="20260916T162424Z">
+        <seg>Zum Beispiel gibt &lt;c1&gt;Type(MeineVar?)&lt;/c1&gt; "unset" zurück, wenn MeineVar ungesetzt ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For example, &lt;c1&gt;Var //= 2&lt;/c1&gt; performs &lt;a2&gt;integer division&lt;/a2&gt; to divide &lt;e3&gt;Var&lt;/e3&gt; by 2, then stores the result back in &lt;e4&gt;Var&lt;/e4&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231201T153600Z" creationid="Ragnar-F" creationdate="20210311T123155Z">
@@ -108985,6 +109225,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231201T180910Z" creationid="Ragnar-F" creationdate="20170722T114300Z">
         <seg>Zum Beispiel ist &lt;c1&gt;[a, b, c]&lt;/c1&gt; äquivalent zu &lt;c2&gt;Array(a, b, c)&lt;/c2&gt; (a, b und c sind Variablen).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For example, &lt;c1&gt;^a::b&lt;/c1&gt; uses &lt;c2&gt;{Blind^}&lt;/c2&gt; so that the sent &lt;k3&gt;B&lt;/k3&gt; is not modified by &lt;k4&gt;Ctrl&lt;/k4&gt;, but can be combined with other modifier keys.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T172814Z" creationid="Ragnar-F" creationdate="20260916T172814Z">
+        <seg>Zum Beispiel bewirkt &lt;c1&gt;^a::b&lt;/c1&gt;, dass &lt;c2&gt;{Blind^}&lt;/c2&gt; verwendet wird, sodass das gesendete &lt;k3&gt;B&lt;/k3&gt; nicht durch &lt;k4&gt;Strg&lt;/k4&gt; modifiziert wird, aber mit anderen Modifikatortasten kombiniert werden kann.</seg>
       </tuv>
     </tu>
     <tu>
@@ -115317,6 +115565,38 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Gets a class representing a fixed-size array of &lt;e0&gt;StructClass&lt;/e0&gt; elements.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T155508Z" creationid="Ragnar-F" creationdate="20260916T154719Z">
+        <seg>Liefert eine Klasse, die ein Array fester Größe bestehend aus &lt;e0&gt;StructKlasse&lt;/e0&gt;-Elementen repräsentiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Gets a class representing a fixed-size array with this class as the element type.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T153345Z" creationid="Ragnar-F" creationdate="20260916T153345Z">
+        <seg>Liefert eine Klasse, die ein Array fester Größe mit dieser Klasse als Elementtyp repräsentiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Gets a class representing a pointer to a &lt;e0&gt;StructClass&lt;/e0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T154403Z" creationid="Ragnar-F" creationdate="20260916T154403Z">
+        <seg>Liefert eine Klasse, die einen Pointer auf eine &lt;e0&gt;StructKlasse&lt;/e0&gt; repräsentiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Gets a class representing a pointer to a struct of this class.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T152749Z" creationid="Ragnar-F" creationdate="20260916T152732Z">
+        <seg>Liefert eine Klasse, die einen Pointer auf eine Struktur dieser Klasse repräsentiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Gets a handle to a &lt;a0&gt;Win32 menu&lt;/a0&gt; (a handle of type &lt;c1&gt;HMENU&lt;/c1&gt;), constructing it if necessary.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260216T194629Z" creationid="Ragnar-F" creationdate="20260216T194629Z">
@@ -116133,6 +116413,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Gets the Prototype on which all instances of the struct class are based.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T152241Z" creationid="Ragnar-F" creationdate="20260916T152241Z">
+        <seg>Liefert den Prototyp, auf dem alle Instanzen der Strukturklasse basieren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Gets the address of the struct.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T153408Z" creationid="Ragnar-F" creationdate="20260916T153408Z">
+        <seg>Liefert die Adresse der Struktur.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Gets the buffer's current memory address.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260215T093304Z" creationid="Ragnar-F" creationdate="20260215T093304Z">
@@ -116169,6 +116465,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260213T094453Z" creationid="Ragnar-F" creationdate="20260213T094453Z">
         <seg>Liefert den Namen der Funktion.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Gets the length of the array.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T160704Z" creationid="Ragnar-F" creationdate="20260916T160704Z">
+        <seg>Liefert die Länge des Arrays.</seg>
       </tuv>
     </tu>
     <tu>
@@ -116225,6 +116529,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260216T085025Z" creationid="Ragnar-F" creationdate="20260216T085025Z">
         <seg>Liefert das übergeordnete Fenster eines Steuerelements.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Gets the size of the struct in bytes.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T153427Z" creationid="Ragnar-F" creationdate="20260916T153427Z">
+        <seg>Liefert die Größe der Struktur in Bytes.</seg>
       </tuv>
     </tu>
     <tu>
@@ -128685,6 +128997,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If omitted, the return value is the string "unset".</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T162152Z" creationid="Ragnar-F" creationdate="20260916T162152Z">
+        <seg>Wenn weggelassen, ist der Rückgabewert die Zeichenkette "unset".</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If omitted, the script's &lt;a0&gt;main window&lt;/a0&gt; will be shown, equivalent to selecting the "View-&gt;Key history" menu item.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230901T110205Z" creationid="Ragnar-F" creationdate="20230901T110205Z">
@@ -134494,6 +134814,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>In addition to the methods and properties inherited from &lt;a0&gt;Struct&lt;/a0&gt;, struct arrays have the following predefined methods and properties.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T160644Z" creationid="Ragnar-F" creationdate="20260916T160644Z">
+        <seg>Zusätzlich zu den von &lt;a0&gt;Struct&lt;/a0&gt; geerbten Methoden und Eigenschaften haben Struktur-Arrays die folgenden vordefinierten Methoden und Eigenschaften.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>In addition to the methods and properties inherited from &lt;a2&gt;Any&lt;/a2&gt;, Objects have the following predefined methods and properties.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20251125T184143Z" creationid="Ragnar-F" creationdate="20251125T184143Z">
@@ -139351,6 +139679,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>IsAlwaysOnTop := &lt;s0&gt;WinGetAlwaysOnTop&lt;/s0&gt;(&lt;s1&gt;WinTitle, WinText, ExcludeTitle, ExcludeText&lt;/s1&gt;)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T162916Z" creationid="Ragnar-F" creationdate="20260916T162810Z">
+        <seg>IstImmerImVordergrund := &lt;s0&gt;WinGetAlwaysOnTop&lt;/s0&gt;(&lt;s1&gt;FensterTitel, FensterText, AusnahmeTitel, AusnahmeText&lt;/s1&gt;)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>IsAtEOF := FileObj.&lt;s0&gt;AtEOF&lt;/s0&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231202T184310Z" creationid="Ragnar-F" creationdate="20231202T184310Z">
@@ -139419,6 +139755,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260224T183045Z" creationid="Ragnar-F" creationdate="20260224T183045Z">
         <seg>IstInteraktiv := &lt;s0&gt;ControlGetEnabled&lt;/s0&gt;(StrlmntID &lt;s1&gt;, FensterTitel, FensterText, AusnahmeTitel, AusnahmeText&lt;/s1&gt;)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>IsEnabled := &lt;s0&gt;WinGetEnabled&lt;/s0&gt;(&lt;s1&gt;WinTitle, WinText, ExcludeTitle, ExcludeText&lt;/s1&gt;)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T163432Z" creationid="Ragnar-F" creationdate="20260916T163432Z">
+        <seg>IstInteraktiv := &lt;s0&gt;WinGetEnabled&lt;/s0&gt;(&lt;s1&gt;FensterTitel, FensterText, AusnahmeTitel, AusnahmeText&lt;/s1&gt;)</seg>
       </tuv>
     </tu>
     <tu>
@@ -144595,6 +144939,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210223T135842Z" creationid="Ragnar-F" creationdate="20210223T135837Z">
         <seg>Länge := ArrayObj.&lt;s0&gt;Length&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Length := Obj.&lt;s0&gt;Length&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T160721Z" creationid="Ragnar-F" creationdate="20260916T160715Z">
+        <seg>Länge := Obj.&lt;s0&gt;Length&lt;/s0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -158463,6 +158815,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>New threads can launch while a menu is being displayed if it was shown via the tray icon or by calling the &lt;a2&gt;Show&lt;/a2&gt; method.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T174244Z" creationid="Ragnar-F" creationdate="20260916T174244Z">
+        <seg>Während eines geöffneten Menüs können neue Threads gestartet werden, sofern das Menü via Tray-Symbol oder Aufruf der &lt;a2&gt;Show&lt;/a2&gt;-Methode angezeigt wurde.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>New values for the flags identified by &lt;i0&gt;Mask&lt;/i0&gt;, or flags to add or remove.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190612T085732Z" creationid="Ragnar-F" creationdate="20140228T211547Z">
@@ -160903,10 +161263,42 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Obj := StructClass()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T153527Z" creationid="Ragnar-F" creationdate="20260916T153501Z">
+        <seg>Obj := StructKlasse()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Obj := StructClass.&lt;s0&gt;At&lt;/s0&gt;(Address)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T154010Z" creationid="Ragnar-F" creationdate="20260916T154002Z">
+        <seg>Obj := StructKlasse.&lt;s0&gt;At&lt;/s0&gt;(Adresse)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Obj := StructClass.&lt;s0&gt;Call&lt;/s0&gt;()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T153600Z" creationid="Ragnar-F" creationdate="20260916T153529Z">
+        <seg>Obj := StructKlasse.&lt;s0&gt;Call&lt;/s0&gt;()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Obj.&lt;s0&gt;Base&lt;/s0&gt; := NewBaseObj</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231204T081427Z" creationid="Ragnar-F" creationdate="20231204T081419Z">
         <seg>Obj.&lt;s0&gt;Base&lt;/s0&gt; := NeueBasisObj</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Obj.&lt;s0&gt;__Item&lt;/s0&gt;[Index] := Value</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T160741Z" creationid="Ragnar-F" creationdate="20260916T160736Z">
+        <seg>Obj.&lt;s0&gt;__Item&lt;/s0&gt;[Index] := Wert</seg>
       </tuv>
     </tu>
     <tu>
@@ -161187,6 +161579,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T114812Z" creationid="Ragnar-F" creationdate="20260916T114812Z">
         <seg>ObjSetDataPtr hat keinen Effekt auf verschachtelte Objekte, da diese jeweils einen eigenen Datenpointer haben (der auf die ursprünglichen Daten des äußeren Objekts verweist).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Obj[Index] := Value</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T160735Z" creationid="Ragnar-F" creationdate="20260916T160732Z">
+        <seg>Obj[Index] := Wert</seg>
       </tuv>
     </tu>
     <tu>
@@ -164243,6 +164643,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240327T191136Z" creationid="Ragnar-F" creationdate="20240327T191136Z">
         <seg>Andere potenzielle Probleme, bei denen das Low-Level-Tracking einer Modifikatortaste durch das System nicht mit dem logischen Zustand übereinstimmt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Other processes can then retrieve it by sending the &lt;a2&gt;WM_GETICON message&lt;/a2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T162032Z" creationid="Ragnar-F" creationdate="20260916T162032Z">
+        <seg>Andere Prozesse können das Symbol dann abrufen, indem sie die &lt;a2&gt;WM_GETICON-Meldung&lt;/a2&gt; senden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -170843,6 +171251,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200613T055444Z" creationid="Ragnar-F" creationdate="20200613T055438Z">
         <seg>Ptr := StrPtr(MeineVar)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>PtrClass := StructClass.&lt;s0&gt;Ptr&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T154423Z" creationid="Ragnar-F" creationdate="20260916T154405Z">
+        <seg>PtrKlasse := StructKlasse.&lt;s0&gt;Ptr&lt;/s0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -179695,6 +180111,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Scripts are per-monitor DPI aware by default, which prevents them from receiving virtualized coordinates as described above, but may cause layout or display issues when the DPI is changed or a GUI is moved from one screen to a screen with a different DPI.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T165721Z" creationid="Ragnar-F" creationdate="20260916T165721Z">
+        <seg>Skripte sind standardmäßig pro-Bildschirm-DPI-sensitiv. Dadurch wird zwar verhindert, dass die Skripte virtualisierte Koordinaten wie oben beschrieben erhalten, aber es kann zu Layout- oder Anzeigefehlern kommen, wenn die DPI geändert wird oder wenn eine GUI von einem Bildschirm auf einen anderen Bildschirm mit anderer DPI verschoben wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Scripts can also be &lt;a0&gt;compiled&lt;/a0&gt;; that is, combined together with an AutoHotkey binary file to form a self-contained executable (.exe) file.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230825T093654Z" creationid="Ragnar-F" creationdate="20171229T211656Z">
@@ -179835,6 +180259,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210404T113310Z" creationid="Ragnar-F" creationdate="20210404T113310Z">
         <seg>Skripte, die durch Auswahl eines benutzerdefinierten Tray-Menüpunkts ausgeführt werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Scripts use the Per Monitor v2 mode by default.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T170205Z" creationid="Ragnar-F" creationdate="20260916T170205Z">
+        <seg>Skripte verwenden standardmäßig den Modus "Per Monitor v2".</seg>
       </tuv>
     </tu>
     <tu>
@@ -180207,6 +180639,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>See &lt;a0&gt;Boxed Pointer&lt;/a0&gt; for further details.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T154259Z" creationid="Ragnar-F" creationdate="20260916T154259Z">
+        <seg>Weitere Informationen finden Sie unter &lt;a0&gt;Gekapselter Pointer&lt;/a0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>See &lt;a0&gt;Built-in Classes&lt;/a0&gt; for a list of standard object types.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231118T085416Z" creationid="Ragnar-F" creationdate="20210216T114807Z">
@@ -180235,6 +180675,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210706T104747Z" creationid="Ragnar-F" creationdate="20210706T104747Z">
         <seg>Weitere Informationen finden Sie unter &lt;a0&gt;Catch&lt;/a0&gt; unten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>See &lt;a0&gt;ClassObj.Prototype&lt;/a0&gt; for details.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T154333Z" creationid="Ragnar-F" creationdate="20260916T154333Z">
+        <seg>Weitere Informationen finden Sie unter &lt;a0&gt;ClassObj.Prototype&lt;/a0&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -180467,6 +180915,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231119T220945Z" creationid="Ragnar-F" creationdate="20171229T214817Z">
         <seg>Unter &lt;a0&gt;Befehlszeilenparameter an ein Skript übergeben&lt;/a0&gt; finden Sie Informationen zur Befehlszeilennutzung und eine Liste von Befehlszeilenoptionen, die das Verhalten des Programms beeinflussen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>See &lt;a0&gt;Pointers to Structs&lt;/a0&gt; for further details.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T154605Z" creationid="Ragnar-F" creationdate="20260916T154605Z">
+        <seg>Weitere Informationen finden Sie unter &lt;a0&gt;Pointer auf Strukturen&lt;/a0&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -180859,6 +181315,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230625T215954Z" creationid="Ragnar-F" creationdate="20190818T073739Z">
         <seg>Weitere Informationen finden Sie unter &lt;a1&gt;Meldungsüberprüfintervall&lt;/a1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>See &lt;a1&gt;Mixed Settings&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T170925Z" creationid="Ragnar-F" creationdate="20260916T170925Z">
+        <seg>Siehe &lt;a1&gt;Gemischte Einstellungen&lt;/a1&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -187471,6 +187935,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Size := Obj.&lt;s0&gt;Size&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T155109Z" creationid="Ragnar-F" creationdate="20260916T155100Z">
+        <seg>Größe := Obj.&lt;s0&gt;Size&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Size calculation for structures containing one or more pointers.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140309T005240Z" creationid="Ragnar-F" creationdate="20140308T025750Z">
@@ -191055,6 +191527,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Static Properties</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T154314Z" creationid="Ragnar-F" creationdate="20260916T154314Z">
+        <seg>Statische Eigenschaften</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Static Variables</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140227T225733Z" creationid="Ragnar-F" creationdate="20140227T225733Z">
@@ -192183,6 +192663,38 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Struct.Array - Methods &amp; Properties | AutoHotkey v2</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T160124Z" creationid="Ragnar-F" creationdate="20260916T160124Z">
+        <seg>Struct.Array - Methoden &amp; Eigenschaften | AutoHotkey v2</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Struct.Array &lt;s0&gt;[v2.1-alpha.23+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T160209Z" creationid="Ragnar-F" creationdate="20260916T160209Z">
+        <seg>Struct.Array &lt;s0&gt;[v2.1-alpha.23+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Struct.Array is the base class for all &lt;a0&gt;structured arrays&lt;/a0&gt;, which are fixed-size arrays with elements of a fixed type.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T160556Z" creationid="Ragnar-F" creationdate="20260916T160556Z">
+        <seg>Struct.Array ist die Basisklasse für alle &lt;a0&gt;strukturierten Arrays&lt;/a0&gt;, die Arrays fester Größe mit Elementen festen Typs sind.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Struct.Array is the base class for all struct arrays.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T160209Z" creationid="Ragnar-F" creationdate="20260916T160209Z">
+        <seg>Struct.Array ist die Basisklasse für alle Struktur-Arrays.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Structure example.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230410T143152Z" creationid="Ragnar-F" creationdate="20190930T125654Z">
@@ -192395,6 +192907,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180429T190112Z" creationid="Ragnar-F" creationdate="20180429T190112Z">
         <seg>SubStr(A_Hour - 12, 2)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Subclasses can be created by a &lt;a1&gt;struct definition&lt;/a1&gt; or &lt;a2&gt;at runtime&lt;/a2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T153859Z" creationid="Ragnar-F" creationdate="20260916T153859Z">
+        <seg>Unterklassen können mithilfe einer &lt;a1&gt;Strukturdefinition&lt;/a1&gt; oder &lt;a2&gt;während der Skriptausführung&lt;/a2&gt; erstellt werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -200231,6 +200751,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The address of a struct is the same as the address of its first field (typed property).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T155846Z" creationid="Ragnar-F" creationdate="20260916T155057Z">
+        <seg>Die Adresse einer Struktur ist identisch zur Adresse ihres ersten Feldes (typisiertes Feld).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The address of a struct of the type defined by &lt;e0&gt;StructClass&lt;/e0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T154212Z" creationid="Ragnar-F" creationdate="20260916T154212Z">
+        <seg>Die Adresse einer Struktur des durch &lt;e0&gt;StructKlasse&lt;/e0&gt; definierten Typs.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The address of a temporary string is valid only until evaluation of the overall expression or function call statement is completed, after which time it must not be used.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200613T063954Z" creationid="Ragnar-F" creationdate="20200613T063954Z">
@@ -205095,6 +205631,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The length of the array type.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T154820Z" creationid="Ragnar-F" creationdate="20260916T154820Z">
+        <seg>Die Länge des Array-Typs.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The length of the interval in milliseconds.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140228T013746Z" creationid="Ragnar-F" creationdate="20140228T013746Z">
@@ -205883,6 +206427,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230625T215014Z" creationid="Ragnar-F" creationdate="20170720T095410Z">
         <seg>Jedes Mal, wenn das Skript eine &lt;a2&gt;Suspend&lt;/a2&gt;- oder &lt;a3&gt;Hotkey&lt;/a3&gt;-Funktion erreicht, wird geprüft, ob der Maus-Hook noch von Hotkeys oder Hotstrings beansprucht wird. Ist dies nicht der Fall, wird der Hook wieder deinstalliert (siehe &lt;a4&gt;#Hotstring NoMouse&lt;/a4&gt;).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The mouse wheel (WheelUp/Down/Left/Right), except in &lt;s0&gt;[v2.1-alpha.5+]&lt;/s0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T173816Z" creationid="Ragnar-F" creationdate="20260916T173816Z">
+        <seg>Das Mausrad (WheelUp/Down/Left/Right), außer in &lt;s0&gt;[v2.1-alpha.5+]&lt;/s0&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -207847,6 +208399,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The remapping no longer sends an unsuppressed Ctrl key-up, as it was superseded by a better workaround in v2.0.8.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T171853Z" creationid="Ragnar-F" creationdate="20260916T171853Z">
+        <seg>Die Neubelegung sendet kein ununterdrücktes Strg-Taste-Oben-Ereignis mehr, da dies in v2.0.8 von einem besseren Workaround abgelöst wurde.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The requested capacity is too large to fit within any single contiguous memory block available to the script.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231115T115725Z" creationid="Ragnar-F" creationdate="20200607T101347Z">
@@ -208019,6 +208579,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230930T092300Z" creationid="Ragnar-F" creationdate="20191010T085334Z">
         <seg>Der Rückgabewert ist ein neues &lt;a0&gt;File-Objekt&lt;/a0&gt;, das das offene Handle zur Datei kapselt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The return value is a subclass of &lt;a0&gt;Struct.Array&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T154845Z" creationid="Ragnar-F" creationdate="20260916T154845Z">
+        <seg>Der Rückgabewert ist eine Unterklasse von &lt;a0&gt;Struct.Array&lt;/a0&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -210867,6 +211435,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230814T094936Z" creationid="Ragnar-F" creationdate="20220823T092129Z">
         <seg>Das Fenster des Steuerelements unter dem Mauszeiger muss nicht aktiv sein, um erkannt zu werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The window's always-on-top status is determined by checking for the WS_EX_TOPMOST style.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T163239Z" creationid="Ragnar-F" creationdate="20260916T163239Z">
+        <seg>Der Immer-Im-Vordergrund-Status des Fensters wird durch Überprüfung des WS_EX_TOPMOST-Styles ermittelt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -214103,6 +214679,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This can be disabled with the &lt;a2&gt;-DPIResize&lt;/a2&gt; option, or by disabling per-monitor DPI awareness as described &lt;a3&gt;below&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T164139Z" creationid="Ragnar-F" creationdate="20260916T164000Z">
+        <seg>Dies kann mit der Option &lt;a2&gt;-DPIResize&lt;/a2&gt; oder durch Deaktivieren der Pro-Bildschirm-DPI-Sensitivität, wie &lt;a3&gt;unten&lt;/a3&gt; beschrieben, deaktiviert werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This can be done as follows (the two lines below are equivalent):</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231119T142044Z" creationid="Ragnar-F" creationdate="20200612T081640Z">
@@ -215071,6 +215655,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This example is only for illustration because it would be easier to use &lt;a1&gt;WinGetAlwaysOnTop&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T163627Z" creationid="Ragnar-F" creationdate="20260916T163627Z">
+        <seg>Dieses Beispiel dient nur zur Illustration, da es einfacher wäre, &lt;a1&gt;WinGetAlwaysOnTop&lt;/a1&gt; zu verwenden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This example is only for illustration because it would be easier to use &lt;a1&gt;WinGetEnabled&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T163614Z" creationid="Ragnar-F" creationdate="20260916T163614Z">
+        <seg>Dieses Beispiel dient nur zur Illustration, da es einfacher wäre, &lt;a1&gt;WinGetEnabled&lt;/a1&gt; zu verwenden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This example launches Notepad.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230908T134104Z" creationid="Ragnar-F" creationdate="20221219T224443Z">
@@ -215259,6 +215859,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230920T150446Z" creationid="Ragnar-F" creationdate="20160702T112049Z">
         <seg>Diese Funktion ermöglicht es, den Typ eines Wertes anzugeben, wenn er an eine COM-Methode übergeben wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This function also sets the icon for the &lt;a1&gt;main window&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T161933Z" creationid="Ragnar-F" creationdate="20260916T161933Z">
+        <seg>Diese Funktion setzt auch das Symbol für das &lt;a1&gt;Hauptfenster&lt;/a1&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -215691,6 +216299,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231018T104405Z" creationid="Ragnar-F" creationdate="20230624T103514Z">
         <seg>Diese Funktion gibt 1 (true) zurück, wenn das angegebene Label im aktuellen Gültigkeitsbereich existiert, andernfalls 0 (false).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This function returns 1 (true) if the specified window is always-on-top, or 0 (false) if not.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T163001Z" creationid="Ragnar-F" creationdate="20260916T163001Z">
+        <seg>Diese Funktion gibt 1 (true) zurück, wenn das angegebene Fenster immer im Vordergrund ist, andernfalls 0 (false).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This function returns 1 (true) if the specified window is enabled, or 0 (false) if disabled.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T163457Z" creationid="Ragnar-F" creationdate="20260916T163457Z">
+        <seg>Diese Funktion gibt 1 (true) zurück, wenn die Interaktion mit dem angegebenen Fenster erlaubt ist, andernfalls 0 (false).</seg>
       </tuv>
     </tu>
     <tu>
@@ -218399,6 +219023,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This is typically used with &lt;a0&gt;DllCall&lt;/a0&gt; and &lt;a1&gt;typed properties&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T154903Z" creationid="Ragnar-F" creationdate="20260916T154903Z">
+        <seg>Dies wird üblicherweise in Verbindung mit &lt;a0&gt;DllCall&lt;/a0&gt; und &lt;a1&gt;typisierten Eigenschaften&lt;/a1&gt; verwendet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This is up to the program, and can usually be avoided by doubling the backslash, as in &lt;c2&gt;Run 'my.exe "A\\" B'&lt;/c2&gt;, which usually produces two parameters (&lt;c3&gt;A\&lt;/c3&gt; and &lt;c4&gt;B&lt;/c4&gt;).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230908T140739Z" creationid="Ragnar-F" creationdate="20221220T105707Z">
@@ -218443,6 +219075,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T062536Z" creationid="Ragnar-F" creationdate="20260916T062536Z">
         <seg>Dies wird für Sprachen verwendet, die von rechts nach links geschrieben werden, wie z.B. Arabisch oder Hebräisch.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This is used with &lt;a0&gt;DllCall&lt;/a0&gt; and &lt;a1&gt;typed properties&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T154459Z" creationid="Ragnar-F" creationdate="20260916T154459Z">
+        <seg>Dies wird in Verbindung mit &lt;a0&gt;DllCall&lt;/a0&gt; und &lt;a1&gt;typisierten Eigenschaften&lt;/a1&gt; verwendet.</seg>
       </tuv>
     </tu>
     <tu>
@@ -221819,6 +222459,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230913T143811Z" creationid="Ragnar-F" creationdate="20220702T084116Z">
         <seg>Einen &lt;a0&gt;UnsetItemError&lt;/a0&gt; auslösen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Throw is a function, so can be called or referenced within an expression, be used as a method or &lt;a1&gt;have parameters bound&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T161422Z" creationid="Ragnar-F" creationdate="20260916T161422Z">
+        <seg>Throw ist eine Funktion. Dadurch kann Throw innerhalb eines Ausdrucks aufgerufen oder referenziert werden, als Methode verwendet werden oder &lt;a1&gt;gebundene Parameter haben&lt;/a1&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -227863,6 +228511,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>TypeOf(Value?)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T162453Z" creationid="Ragnar-F" creationdate="20260916T162453Z">
+        <seg>TypeOf(Value?)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Typed property definitions can no longer be owned by any Object which is not a Prototype.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T125131Z" creationid="Ragnar-F" creationdate="20260911T125131Z">
@@ -231963,6 +232619,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220713T123632Z" creationid="Ragnar-F" creationdate="20220713T123632Z">
         <seg>Wert := MeinObjekt.Eigenschaft[Params]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Value := Obj.&lt;s0&gt;__Item&lt;/s0&gt;[Index]</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T160731Z" creationid="Ragnar-F" creationdate="20260916T160727Z">
+        <seg>Wert := Obj.&lt;s0&gt;__Item&lt;/s0&gt;[Index]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Value := Obj[Index]</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T160726Z" creationid="Ragnar-F" creationdate="20260916T160723Z">
+        <seg>Wert := Obj[Index]</seg>
       </tuv>
     </tu>
     <tu>
@@ -236776,6 +237448,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>When either the source or the destination is WheelDown, WheelUp, WheelLeft or WheelRight, the key-up hotkey and DownR suffix are omitted.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T173745Z" creationid="Ragnar-F" creationdate="20260916T173745Z">
+        <seg>Wenn die Original- oder Zieltaste WheelDown, WheelUp, WheelLeft oder WheelRight ist, entfallen der Taste-Oben-Hotkey und das DownR-Suffix.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>When enumerating a &lt;a0&gt;SafeArray&lt;/a0&gt;, &lt;i1&gt;Value1&lt;/i1&gt; contains the current element and &lt;i2&gt;Value2&lt;/i2&gt; contains its variant type.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190818T091137Z" creationid="Ragnar-F" creationdate="20190818T091137Z">
@@ -239208,6 +239888,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>WinGetAlwaysOnTop - Syntax &amp; Usage | AutoHotkey v2</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T162755Z" creationid="Ragnar-F" creationdate="20260916T162755Z">
+        <seg>WinGetAlwaysOnTop - Syntax &amp; Verwendung | AutoHotkey v2</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>WinGetAlwaysOnTop &lt;s0&gt;[v2.1-alpha.1+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T162758Z" creationid="Ragnar-F" creationdate="20260916T162758Z">
+        <seg>WinGetAlwaysOnTop &lt;s0&gt;[v2.1-alpha.1+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>WinGetClass</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140305T160635Z" creationid="Ragnar-F" creationdate="20140305T160635Z">
@@ -239316,6 +240012,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260915T203158Z" creationid="Ragnar-F" creationdate="20260915T203158Z">
         <seg>WinGetEnabled</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>WinGetEnabled - Syntax &amp; Usage | AutoHotkey v2</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T163304Z" creationid="Ragnar-F" creationdate="20260916T163304Z">
+        <seg>WinGetEnabled - Syntax &amp; Verwendung | AutoHotkey v2</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>WinGetEnabled &lt;s0&gt;[v2.1-alpha.1+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T163304Z" creationid="Ragnar-F" creationdate="20260916T163304Z">
+        <seg>WinGetEnabled &lt;s0&gt;[v2.1-alpha.1+]&lt;/s0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -257384,6 +258096,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>__Item &lt;s0&gt;[v2.1-alpha.23+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T154607Z" creationid="Ragnar-F" creationdate="20260916T154607Z">
+        <seg>__Item &lt;s0&gt;[v2.1-alpha.23+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>__Item Property</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190506T132342Z" creationid="Ragnar-F" creationdate="20190506T132310Z">
@@ -257428,6 +258148,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180410T201017Z" creationid="Ragnar-F" creationdate="20180410T201010Z">
         <seg>__New(aFlags, aGröße)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>__Ref</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T154904Z" creationid="Ragnar-F" creationdate="20260916T154904Z">
+        <seg>__Ref</seg>
       </tuv>
     </tu>
     <tu>
@@ -258044,6 +258772,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260227T214116Z" creationid="Ragnar-F" creationdate="20260227T214116Z">
         <seg>ahk_id 68096</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ahk_opt (Options)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T174254Z" creationid="Ragnar-F" creationdate="20260916T174246Z">
+        <seg>ahk_opt (Optionen)</seg>
       </tuv>
     </tu>
     <tu>
@@ -259348,6 +260084,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T142643Z" creationid="Ragnar-F" creationdate="20260916T142643Z">
         <seg>class Struct extends Any</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>class Struct.Array extends Struct</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T160212Z" creationid="Ragnar-F" creationdate="20260916T160212Z">
+        <seg>class Struct.Array extends Struct</seg>
       </tuv>
     </tu>
     <tu>
@@ -261636,6 +262380,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221030T170317Z" creationid="Ragnar-F" creationdate="20221030T170310Z">
         <seg>if !IsSet(MeineVar)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>if !IsSet(Value)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T162503Z" creationid="Ragnar-F" creationdate="20260916T162503Z">
+        <seg>if !IsSet(Value)</seg>
       </tuv>
     </tu>
     <tu>
@@ -271832,6 +272584,17 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230302T205713Z" creationid="Ragnar-F" creationdate="20230302T205713Z">
         <seg>String</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <prop type="file">docs/lib/StructArray.htm</prop>
+      <prop type="prev">Properties</prop>
+      <prop type="next">Gets the length of the array.</prop>
+      <tuv lang="en">
+        <seg>Length</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T160710Z" creationid="Ragnar-F" creationdate="20260916T160710Z">
+        <seg>Length</seg>
       </tuv>
     </tu>
     <tu>
