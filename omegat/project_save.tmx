@@ -14966,6 +14966,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>; &lt;s3&gt;[v2.1-alpha.22+]&lt;/s3&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T054536Z" creationid="Ragnar-F" creationdate="20260916T054536Z">
+        <seg>; &lt;s3&gt;[v2.1-alpha.22+]&lt;/s3&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>; =&gt;  [   , "B", "C"]</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180411T211745Z" creationid="Ragnar-F" creationdate="20180411T211745Z">
@@ -21566,6 +21574,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180411T124300Z" creationid="Ragnar-F" creationdate="20180411T124300Z">
         <seg>; Gibt 0.362358 zurück</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; Returns 0.463648</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T062127Z" creationid="Ragnar-F" creationdate="20260916T061944Z">
+        <seg>; Gibt 0.463648 zurück</seg>
       </tuv>
     </tu>
     <tu>
@@ -33674,6 +33690,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;ATan2&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.1+]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T061912Z" creationid="Ragnar-F" creationdate="20260916T061912Z">
+        <seg>&lt;a0&gt;ATan2&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.1+]&lt;/s1&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;ATan&lt;/a0&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180812T201608Z" creationid="Ragnar-F" creationdate="20180812T201608Z">
@@ -33882,6 +33906,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;A_KeybdHookInstalled&lt;/a0&gt;, &lt;a1&gt;InstallMouseHook&lt;/a1&gt;, &lt;a2&gt;#UseHook&lt;/a2&gt;, &lt;a3&gt;Hotkey&lt;/a3&gt;, &lt;a4&gt;InputHook&lt;/a4&gt;, &lt;a5&gt;KeyHistory&lt;/a5&gt;, &lt;a6&gt;Hotstrings&lt;/a6&gt;, &lt;a7&gt;GetKeyState&lt;/a7&gt;, &lt;a8&gt;KeyWait&lt;/a8&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T053746Z" creationid="Ragnar-F" creationdate="20260916T053746Z">
+        <seg>&lt;a0&gt;A_KeybdHookInstalled&lt;/a0&gt;, &lt;a1&gt;InstallMouseHook&lt;/a1&gt;, &lt;a2&gt;#UseHook&lt;/a2&gt;, &lt;a3&gt;Hotkey&lt;/a3&gt;, &lt;a4&gt;InputHook&lt;/a4&gt;, &lt;a5&gt;KeyHistory&lt;/a5&gt;, &lt;a6&gt;Hotstrings&lt;/a6&gt;, &lt;a7&gt;GetKeyState&lt;/a7&gt;, &lt;a8&gt;KeyWait&lt;/a8&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;A_LastError&lt;/a0&gt; is set to the result of the operating system's GetLastError() function.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20141002T114820Z" creationid="Ragnar-F" creationdate="20140303T122913Z">
@@ -33926,6 +33958,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210725T072716Z" creationid="Ragnar-F" creationdate="20210725T072716Z">
         <seg>&lt;a0&gt;A_MenuMaskKey&lt;/a0&gt; (ersetzt #MenuMaskKey)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;A_MouseHookInstalled&lt;/a0&gt;, &lt;a1&gt;InstallKeybdHook&lt;/a1&gt;, &lt;a2&gt;#UseHook&lt;/a2&gt;, &lt;a3&gt;Hotkey&lt;/a3&gt;, &lt;a4&gt;KeyHistory&lt;/a4&gt;, &lt;a5&gt;GetKeyState&lt;/a5&gt;, &lt;a6&gt;KeyWait&lt;/a6&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T053834Z" creationid="Ragnar-F" creationdate="20260916T053834Z">
+        <seg>&lt;a0&gt;A_MouseHookInstalled&lt;/a0&gt;, &lt;a1&gt;InstallKeybdHook&lt;/a1&gt;, &lt;a2&gt;#UseHook&lt;/a2&gt;, &lt;a3&gt;Hotkey&lt;/a3&gt;, &lt;a4&gt;KeyHistory&lt;/a4&gt;, &lt;a5&gt;GetKeyState&lt;/a5&gt;, &lt;a6&gt;KeyWait&lt;/a6&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -45354,6 +45394,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;c0&gt;X.HasProp("Y")&lt;/c0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T060634Z" creationid="Ragnar-F" creationdate="20260916T060634Z">
+        <seg>&lt;c0&gt;X.HasProp("Y")&lt;/c0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;c0&gt;X.Y := 1&lt;/c0&gt; is an error by default (the property is read-only).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240327T215907Z" creationid="Ragnar-F" creationdate="20240327T215907Z">
@@ -48222,6 +48270,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231018T094658Z" creationid="Ragnar-F" creationdate="20200713T071901Z">
         <seg>&lt;e0&gt;Modus&lt;/e0&gt; gilt nur für IsAlpha, IsAlnum, IsUpper und IsLower.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;e0&gt;MyCallback&lt;/e0&gt; is the &lt;a1&gt;function object&lt;/a1&gt; to call (blank if none).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T053341Z" creationid="Ragnar-F" creationdate="20260916T053341Z">
+        <seg>&lt;e0&gt;MeinRückruf&lt;/e0&gt; ist ein &lt;a1&gt;Funktionsobjekt&lt;/a1&gt;, das aufgerufen werden soll (leer, wenn nicht).</seg>
       </tuv>
     </tu>
     <tu>
@@ -52854,6 +52910,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230719T144818Z" creationid="Ragnar-F" creationdate="20140307T192346Z">
         <seg>&lt;i0&gt;Until&lt;/i0&gt; kann mit jedem Loop oder For verwendet werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;i0&gt;VarName&lt;/i0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T061314Z" creationid="Ragnar-F" creationdate="20260916T061314Z">
+        <seg>&lt;i0&gt;VarName&lt;/i0&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -59778,6 +59842,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;RTL&lt;/s0&gt; &lt;s1&gt;[v2.1-alpha.17+]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T062235Z" creationid="Ragnar-F" creationdate="20260916T062235Z">
+        <seg>&lt;s0&gt;RTL&lt;/s0&gt; &lt;s1&gt;[v2.1-alpha.17+]&lt;/s1&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;RTrim0&lt;/s0&gt; (RTrim followed by a zero):</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230821T094953Z" creationid="Ragnar-F" creationdate="20140313T024345Z">
@@ -62314,6 +62386,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s1&gt;[v2.1-alpha.10]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T052711Z" creationid="Ragnar-F" creationdate="20260916T052711Z">
+        <seg>&lt;s1&gt;[v2.1-alpha.10]&lt;/s1&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s1&gt;\b&lt;/s1&gt; is used to exclude incomplete words in matches such as &lt;e2&gt;The quic&lt;/e2&gt;, &lt;e3&gt;The qui&lt;/e3&gt;, &lt;e4&gt;The qu&lt;/e4&gt;, etc.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230809T130018Z" creationid="Ragnar-F" creationdate="20140311T002746Z">
@@ -62446,6 +62526,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T085912Z" creationid="Ragnar-F" creationdate="20260913T085912Z">
         <seg>&lt;s2&gt;[v2.1-alpha.28+]&lt;/s2&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s2&gt;[v2.1-alpha.29+]&lt;/s2&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T053342Z" creationid="Ragnar-F" creationdate="20260916T053342Z">
+        <seg>&lt;s2&gt;[v2.1-alpha.29+]&lt;/s2&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -66638,6 +66726,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260915T200635Z" creationid="Ragnar-F" creationdate="20260915T200635Z">
         <seg>ATan2</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ATan2 &lt;s0&gt;[v2.1-alpha.1+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T061928Z" creationid="Ragnar-F" creationdate="20260916T061928Z">
+        <seg>ATan2 &lt;s0&gt;[v2.1-alpha.1+]&lt;/s0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -72658,6 +72754,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>An &lt;a0&gt;unset expression&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T054656Z" creationid="Ragnar-F" creationdate="20260916T054656Z">
+        <seg>Ein &lt;a0&gt;Unset-Ausdruck&lt;/a0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>An &lt;a0&gt;unsigned&lt;/a0&gt; Int (UInt) is also used quite frequently, such as for DWORD.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190616T110752Z" creationid="Ragnar-F" creationdate="20140301T021628Z">
@@ -72766,6 +72870,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20160119T152234Z" creationid="Ragnar-F" creationdate="20140305T234750Z">
         <seg>Eine ImageList (übersetzt Bildliste) ist eine Gruppe von gleich großen Symbolen, die im Speicher abgelegt sind.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>An InputHook with the H option can be used to temporarily override hotkeys without actually disabling or modifying them.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T052615Z" creationid="Ragnar-F" creationdate="20260916T052615Z">
+        <seg>Ein InputHook mit der H-Option kann verwendet werden, um Hotkeys vorübergehend zu überschreiben, ohne sie tatsächlich zu deaktivieren oder zu ändern.</seg>
       </tuv>
     </tu>
     <tu>
@@ -76090,6 +76202,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>As with the expression &lt;c2&gt;X?.Y&lt;/c2&gt;, an UnsetError is thrown if X.Y is unset.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T060204Z" creationid="Ragnar-F" creationdate="20260916T060204Z">
+        <seg>Wie beim Ausdruck &lt;c2&gt;X?.Y&lt;/c2&gt; wird ein UnsetError ausgelöst, wenn X.Y ungesetzt ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>As you've seen above, the escape character &lt;c0&gt;`&lt;/c0&gt; (known by &lt;e1&gt;backquote&lt;/e1&gt;, &lt;e2&gt;backtick&lt;/e2&gt;, &lt;e3&gt;grave accent&lt;/e3&gt; and other names) has special meaning, so if you want to send that character literally (or send the corresponding key), you need to double it up, as in &lt;c4&gt;Send "``"&lt;/c4&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230908T162718Z" creationid="Ragnar-F" creationdate="20221220T143445Z">
@@ -78594,10 +78714,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Boolean := &lt;s1&gt;IsSet&lt;/s1&gt;(UnsetExpression)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T054534Z" creationid="Ragnar-F" creationdate="20260916T054534Z">
+        <seg>Boolesch := &lt;s1&gt;IsSet&lt;/s1&gt;(UnsetAusdruck)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Boolean := &lt;s2&gt;WinWaitNotActive&lt;/s2&gt;(&lt;s3&gt;WinTitle, WinText, Timeout, ExcludeTitle, ExcludeText&lt;/s3&gt;)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20241102T152651Z" creationid="Ragnar-F" creationdate="20241102T152651Z">
         <seg>Boolesch := &lt;s2&gt;WinWaitNotActive&lt;/s2&gt;(&lt;s3&gt;FensterTitel, FensterText, Zeitlimit, AusnahmeTitel, AusnahmeText&lt;/s3&gt;)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Boolean := &lt;s4&gt;IsSetRef&lt;/s4&gt;(&amp;Ref)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T054605Z" creationid="Ragnar-F" creationdate="20260916T054605Z">
+        <seg>Boolesch := &lt;s4&gt;IsSetRef&lt;/s4&gt;(&amp;Ref)</seg>
       </tuv>
     </tu>
     <tu>
@@ -78646,6 +78782,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231203T152609Z" creationid="Ragnar-F" creationdate="20231203T152609Z">
         <seg>Boolesch := InputHookObj.&lt;s0&gt;InProgress&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Boolean := MyMenu.&lt;s0&gt;ToggleCheck&lt;/s0&gt;(MenuItemName)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T063237Z" creationid="Ragnar-F" creationdate="20260916T063237Z">
+        <seg>Boolesch := MeinMenü.&lt;s0&gt;ToggleCheck&lt;/s0&gt;(MenüpunktName)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Boolean := MyMenu.&lt;s0&gt;ToggleEnable&lt;/s0&gt;(MenuItemName)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T063518Z" creationid="Ragnar-F" creationdate="20260916T063518Z">
+        <seg>Boolesch := MeinMenü.&lt;s0&gt;ToggleEnable&lt;/s0&gt;(MenüpunktName)</seg>
       </tuv>
     </tu>
     <tu>
@@ -79838,6 +79990,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T145114Z" creationid="Ragnar-F" creationdate="20260911T145114Z">
         <seg>&lt;c2&gt;Import "x" {}&lt;/c2&gt; und &lt;c3&gt;Import {} from x&lt;/c3&gt; hingegen verhindern weiterhin, dass x dem globalen Namensraum hinzugefügt wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>By contrast, &lt;c3&gt;IsSet(X?.Y?)&lt;/c3&gt; never throws and &lt;c4&gt;IsSet(X.Y?)&lt;/c4&gt; throws only if X is unset</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T060436Z" creationid="Ragnar-F" creationdate="20260916T060436Z">
+        <seg>Im Gegensatz dazu löst &lt;c3&gt;IsSet(X?.Y?)&lt;/c3&gt; niemals einen Fehler aus, und &lt;c4&gt;IsSet(X.Y?)&lt;/c4&gt; nur, wenn X ungesetzt ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -97435,6 +97595,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Either &lt;c3&gt;""&lt;/c3&gt; or &lt;c4&gt;unset&lt;/c4&gt; can be assigned to remove the current callback.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T053512Z" creationid="Ragnar-F" creationdate="20260916T053512Z">
+        <seg>Man kann entweder &lt;c3&gt;""&lt;/c3&gt; oder &lt;c4&gt;unset&lt;/c4&gt; zuweisen, um den aktuellen Rückruf zu entfernen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Either &lt;e0&gt;Length&lt;/e0&gt; or &lt;e1&gt;Encoding&lt;/e1&gt; may be specified directly after &lt;e2&gt;Source&lt;/e2&gt;, but in those cases &lt;e3&gt;Encoding&lt;/e3&gt; must be non-numeric.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230826T074512Z" creationid="Ragnar-F" creationdate="20210223T114959Z">
@@ -108233,6 +108401,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231010T160648Z" creationid="Ragnar-F" creationdate="20191010T092819Z">
         <seg>Zum Beispiel gibt &lt;c1&gt;HasBase(1, 0.base)&lt;/c1&gt; True zurück.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For example, &lt;c1&gt;IsSet(X?.Y)&lt;/c1&gt; returns 0 if X is unset, or 1 if X and X.Y both have a value.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T054906Z" creationid="Ragnar-F" creationdate="20260916T054906Z">
+        <seg>Zum Beispiel gibt &lt;c1&gt;IsSet(X?.Y)&lt;/c1&gt; 0 zurück, wenn X ungesetzt ist, oder 1, wenn sowohl X als auch X.Y einen Wert haben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -123333,6 +123509,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If &lt;s0&gt;false&lt;/s0&gt;, the method will return immediately, allowing the script to continue execution while the menu is being displayed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T063156Z" creationid="Ragnar-F" creationdate="20260916T063156Z">
+        <seg>Wenn &lt;s0&gt;false&lt;/s0&gt;, kehrt die Methode sofort zurück, damit das Skript während der Anzeige des Menüs weiter ausgeführt werden kann.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If &lt;s0&gt;false&lt;/s0&gt;, the picture is divided up into however many icons can fit into its actual width.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231203T205112Z" creationid="Ragnar-F" creationdate="20231203T205112Z">
@@ -123449,6 +123633,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231204T091003Z" creationid="Ragnar-F" creationdate="20231204T091003Z">
         <seg>Wenn &lt;s0&gt;true&lt;/s0&gt;, wird das Symbol eingefroren, d.h. es kann nicht durch &lt;a1&gt;Pause&lt;/a1&gt; oder &lt;a2&gt;Suspend&lt;/a2&gt; geändert werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If &lt;s0&gt;true&lt;/s0&gt;, the method will not return until after the menu is closed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T063103Z" creationid="Ragnar-F" creationdate="20260916T063103Z">
+        <seg>Wenn &lt;s0&gt;true&lt;/s0&gt;, kehrt die Methode erst zurück, wenn das Menü geschlossen wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -126629,6 +126821,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If no callback is set, the return value is &lt;a5&gt;&lt;e6&gt;blank-unset&lt;/e6&gt;&lt;/a5&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T053633Z" creationid="Ragnar-F" creationdate="20260916T053633Z">
+        <seg>Wenn kein Rückruf gesetzt ist, ist der Rückgabewert &lt;a5&gt;&lt;e6&gt;leer-ungesetzt&lt;/e6&gt;&lt;/a5&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If no classes are specified, the default is &lt;c0&gt;Error&lt;/c0&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210410T112526Z" creationid="Ragnar-F" creationdate="20210410T112526Z">
@@ -127873,6 +128073,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230815T164728Z" creationid="Ragnar-F" creationdate="20171225T172217Z">
         <seg>Wenn weggelassen, wird die Standardgeschwindigkeit verwendet (definiert durch &lt;a0&gt;SetDefaultMouseSpeed&lt;/a0&gt; oder standardmäßig 2).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If omitted, the default value depends on the menu style.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T062709Z" creationid="Ragnar-F" creationdate="20260916T062709Z">
+        <seg>Wenn weggelassen, ist der Standardwert vom Menü-Style abhängig.</seg>
       </tuv>
     </tu>
     <tu>
@@ -129797,6 +130005,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If the handle is invalid or does not correspond to a menu created by this script, the function returns &lt;a0&gt;&lt;e1&gt;blank-unset&lt;/e1&gt;&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T075030Z" creationid="Ragnar-F" creationdate="20260916T075030Z">
+        <seg>Wenn das Handle ungültig ist oder nicht zu einem Menü gehört, das von diesem Skript erstellt wurde, gibt die Funktion &lt;a0&gt;&lt;e1&gt;leer-ungesetzt&lt;/e1&gt;&lt;/a0&gt; zurück.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If the hotkey variant already exists, its behavior is updated according to whether &lt;e0&gt;KeyName&lt;/e0&gt; includes or excludes the &lt;a1&gt;tilde (~) prefix&lt;/a1&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231012T173447Z" creationid="Ragnar-F" creationdate="20160702T204842Z">
@@ -129841,6 +130057,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20201125T140849Z" creationid="Ragnar-F" creationdate="20140305T151849Z">
         <seg>Wenn das Bild auf dem Bildschirm transparent ist, wird ImageSearch es wahrscheinlich nicht finden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the input is not suppressed, it is then processed by the hotkey recognizer, then by InputHooks which lack the H option, then by the hotstring recognizer.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T052708Z" creationid="Ragnar-F" creationdate="20260916T052434Z">
+        <seg>Wenn die Eingabe nicht unterdrückt wird, wird sie anschließend vom Hotkey-Erkenner verarbeitet, danach von InputHooks ohne H-Option und danach vom Hotstring-Erkenner.</seg>
       </tuv>
     </tu>
     <tu>
@@ -130129,6 +130353,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20250926T074959Z" creationid="Ragnar-F" creationdate="20250926T074959Z">
         <seg>Wenn der Name für die Ressource nicht angegeben ist, wird standardmäßig 1 verwendet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the name is handled by SC, the option is also removed from the corresponding VK (i.e. regardless of whether the name is handled by VK or SC, the option is removed from both).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T053239Z" creationid="Ragnar-F" creationdate="20260916T053239Z">
+        <seg>Wenn der Name via SC behandelt wird, wird die Option auch vom entsprechenden VK entfernt. Das heißt, es ist egal, ob der Name via VK oder SC behandelt wird – die Option wird in beiden Fällen entfernt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -130601,6 +130833,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231223T091720Z" creationid="Ragnar-F" creationdate="20231223T091720Z">
         <seg>Wenn das Skript einen &lt;a0&gt;Low-Level-Tastatur-Hook&lt;/a0&gt; installiert hat, deinstalliert SendInput ihn automatisch vor der Ausführung und installiert ihn danach wieder.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the script has applied the MNS_MODELESS style (typically via &lt;a0&gt;DllCall&lt;/a0&gt;), the default is false (no wait); otherwise, the default is true (wait).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T062959Z" creationid="Ragnar-F" creationdate="20260916T062959Z">
+        <seg>Wenn das Skript den MNS_MODELESS-Style angewendet hat (in der Regel via &lt;a0&gt;DllCall&lt;/a0&gt;), gilt standardmäßig false (nicht warten), andernfalls true (warten).</seg>
       </tuv>
     </tu>
     <tu>
@@ -133510,6 +133750,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>In &lt;a1&gt;v2.1 mode&lt;/a1&gt;, the return value is &lt;c2&gt;unset&lt;/c2&gt; if there is no value to return.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T061738Z" creationid="Ragnar-F" creationdate="20260916T061738Z">
+        <seg>Im &lt;a1&gt;v2.1-Modus&lt;/a1&gt; ist der Rückgabewert &lt;c2&gt;unset&lt;/c2&gt;, wenn es keinen Wert gibt, der zurückgegeben werden kann.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>In &lt;s0&gt;[v2.0.6+]&lt;/s0&gt;, it is no longer the case that only the first 1023 characters of the specified window title, &lt;a1&gt;ahk_class&lt;/a1&gt; criterion value, and &lt;a2&gt;ahk_exe&lt;/a2&gt; criterion value are considered for matching purposes.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231117T171252Z" creationid="Ragnar-F" creationdate="20230902T085938Z">
@@ -135438,6 +135686,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>In some cases it may be better to check for the existence of a property without evaluating it.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T060634Z" creationid="Ragnar-F" creationdate="20260916T060634Z">
+        <seg>In manchen Fällen ist es sinnvoller, lediglich zu prüfen, ob eine Eigenschaft vorhanden ist, ohne diese auszuwerten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>In some cases it may be sufficient for the method to delete itself, such as with &lt;c2&gt;this.DeleteProp('__New')&lt;/c2&gt;; however, the first execution of __New might be for a subclass if one is nested in the base class or referenced during initialization of a static/class variable.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231119T131029Z" creationid="Ragnar-F" creationdate="20210419T094043Z">
@@ -137019,6 +137275,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20151001T234409Z" creationid="Ragnar-F" creationdate="20140228T175132Z">
         <seg>Die Eingabe wird automatisch wieder aktiviert, wenn das Skript beendet wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Input is processed by InputHooks with the H option first.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T052653Z" creationid="Ragnar-F" creationdate="20260916T052113Z">
+        <seg>InputHooks mit der H-Option verarbeiten die Eingabe zuerst.</seg>
       </tuv>
     </tu>
     <tu>
@@ -144443,6 +144707,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20201103T123444Z" creationid="Ragnar-F" creationdate="20200622T202541Z">
         <seg>Liste := ListViewGetContent("Selected", "SysListView321", FensterTitel)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>List items may also take the following form:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T061313Z" creationid="Ragnar-F" creationdate="20260916T061313Z">
+        <seg>Zusätzlich gibt es auch die folgende Darstellungsform:</seg>
       </tuv>
     </tu>
     <tu>
@@ -152167,6 +152439,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>MsgBox ATan2(1, 2)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T061941Z" creationid="Ragnar-F" creationdate="20260916T061941Z">
+        <seg>MsgBox ATan2(1, 2)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>MsgBox A_AhkPath.length " == " StrLen(A_AhkPath)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180412T210600Z" creationid="Ragnar-F" creationdate="20180412T210600Z">
@@ -156327,6 +156607,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>MyMenu.&lt;s0&gt;Show&lt;/s0&gt;(&lt;s1&gt;X, Y, Wait&lt;/s1&gt;)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T062558Z" creationid="Ragnar-F" creationdate="20260916T062538Z">
+        <seg>MeinMenü.&lt;s0&gt;Show&lt;/s0&gt;(&lt;s1&gt;X, Y, Warten&lt;/s1&gt;)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>MyMenu.&lt;s0&gt;Uncheck&lt;/s0&gt;(MenuItemName)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231026T071512Z" creationid="Ragnar-F" creationdate="20200623T110507Z">
@@ -158939,6 +159227,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260216T140715Z" creationid="Ragnar-F" creationdate="20260216T140715Z">
         <seg>Beachten Sie, dass das Ereignis auch bei einer unvollständigen Tastenkombination ausgelöst wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Note that the expression must be fully evaluated to determine whether it has a value.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T060630Z" creationid="Ragnar-F" creationdate="20260916T060630Z">
+        <seg>Beachten Sie, dass der Ausdruck vollständig ausgewertet werden muss, um festzustellen, ob er einen Wert hat.</seg>
       </tuv>
     </tu>
     <tu>
@@ -174575,6 +174871,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Return Value &lt;s0&gt;[v2.1-alpha.7+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T063245Z" creationid="Ragnar-F" creationdate="20260916T063245Z">
+        <seg>Rückgabewert &lt;s0&gt;[v2.1-alpha.7+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Return a value</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171226T210507Z" creationid="Ragnar-F" creationdate="20171226T210507Z">
@@ -174867,6 +175171,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230506T121833Z" creationid="Ragnar-F" creationdate="20221030T164744Z">
         <seg>Gibt eine Zahl ungleich 0 zurück, wenn einer bestimmten Variable ein Wert zugewiesen wurde.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Returns a non-zero number if the specified variable or expression has a value (is not &lt;a0&gt;unset&lt;/a0&gt;).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T054513Z" creationid="Ragnar-F" creationdate="20260916T054513Z">
+        <seg>Gibt eine Zahl ungleich 0 zurück, wenn die Variable oder der Ausdruck einen Wert hat (nicht &lt;a0&gt;ungesetzt&lt;/a0&gt; ist).</seg>
       </tuv>
     </tu>
     <tu>
@@ -175443,6 +175755,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260915T201355Z" creationid="Ragnar-F" creationdate="20260915T201355Z">
         <seg>Gibt den Hauptwert des Arkustangens von &lt;c0&gt;y/x&lt;/c0&gt; zurück (in Radiant).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Returns the principal value of the arctangent of &lt;c2&gt;y/x&lt;/c2&gt;, in radians.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T061926Z" creationid="Ragnar-F" creationdate="20260916T061926Z">
+        <seg>Gibt den Hauptwert des Arkustangens von &lt;c2&gt;y/x&lt;/c2&gt; zurück (in Radiant).</seg>
       </tuv>
     </tu>
     <tu>
@@ -197231,6 +197551,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The IsSet operator and IsSetRef function return a non-zero number if the specified variable or expression has a value (is not unset).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T054159Z" creationid="Ragnar-F" creationdate="20260916T054159Z">
+        <seg>Der IsSet-Operator und die IsSetRef-Funktion geben eine Zahl ungleich 0 zurück, wenn die Variable oder der Ausdruck einen Wert hat (nicht ungesetzt ist).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The KeyHistory function displays script info and a history of the most recent keystrokes and mouse clicks.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230627T093641Z" creationid="Ragnar-F" creationdate="20180816T093741Z">
@@ -199491,6 +199819,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260310T143626Z" creationid="Ragnar-F" creationdate="20260310T143626Z">
         <seg>Die interne Variable &lt;a0&gt;A_WorkingDir&lt;/a0&gt; enthält die aktuelle Einstellung, und erlaubt die Zuweisung eines neuen Wertes, ohne SetWorkingDir aufzurufen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The built-in variable &lt;a1&gt;A_KeybdHookInstalled&lt;/a1&gt; contains the current state of the keyboard hook.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T053744Z" creationid="Ragnar-F" creationdate="20260916T053744Z">
+        <seg>Die interne Variable &lt;a1&gt;A_KeybdHookInstalled&lt;/a1&gt; enthält den aktuellen Status des Tastatur-Hooks.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The built-in variable &lt;a1&gt;A_MouseHookInstalled&lt;/a1&gt; contains the current state of the mouse hook.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T053833Z" creationid="Ragnar-F" creationdate="20260916T053833Z">
+        <seg>Die interne Variable &lt;a1&gt;A_MouseHookInstalled&lt;/a1&gt; enthält den aktuellen Status des Maus-Hooks.</seg>
       </tuv>
     </tu>
     <tu>
@@ -203587,6 +203931,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260214T151948Z" creationid="Ragnar-F" creationdate="20230814T134256Z">
         <seg>Das Element ist gerade &lt;a3&gt;aufgeklappt&lt;/a3&gt; (d.h. seine Kinderelemente werden angezeigt).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The item is displayed in right-to-left order.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T062326Z" creationid="Ragnar-F" creationdate="20260916T062326Z">
+        <seg>Der Menüpunkt wird von rechts nach links angezeigt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -217079,6 +217431,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This is used to support right-to-left languages, such as Arabic and Hebrew.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T062536Z" creationid="Ragnar-F" creationdate="20260916T062536Z">
+        <seg>Dies wird für Sprachen verwendet, die von rechts nach links geschrieben werden, wie z.B. Arabisch oder Hebräisch.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This is useful for converting file names -- such as those passed into a script as command line parameters -- to their exact path names as shown by Explorer.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230516T112551Z" creationid="Ragnar-F" creationdate="20140306T004222Z">
@@ -217463,6 +217823,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This may result in the caller throwing an &lt;a3&gt;UnsetError&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T061801Z" creationid="Ragnar-F" creationdate="20260916T061801Z">
+        <seg>Dies kann dazu führen, dass der Aufrufer einen &lt;a3&gt;UnsetError&lt;/a3&gt; auslöst.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This may result in the caller throwing an UnsetError.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260914T133418Z" creationid="Ragnar-F" creationdate="20260914T133418Z">
@@ -217715,6 +218083,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210301T102653Z" creationid="Ragnar-F" creationdate="20210301T102653Z">
         <seg>Diese Methode gibt 1 (true) zurück, wenn sie erfolgreich war, oder 0 (false), wenn keine Elemente mehr übrig sind.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This method returns 1 (true) if the item is now checked, otherwise 0 (false).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T063443Z" creationid="Ragnar-F" creationdate="20260916T063443Z">
+        <seg>Diese Methode gibt 1 (true) zurück, wenn der Menüpunkt nun ein Häkchen hat, andernfalls 0 (false).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This method returns 1 (true) if the item is now enabled, otherwise 0 (false).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T063616Z" creationid="Ragnar-F" creationdate="20260916T063616Z">
+        <seg>Diese Methode gibt 1 (true) zurück, wenn die Interaktion mit dem Menüpunkt nun erlaubt ist, andernfalls 0 (false).</seg>
       </tuv>
     </tu>
     <tu>
@@ -227855,6 +228239,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>UnsetExpression</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T054625Z" creationid="Ragnar-F" creationdate="20260916T054607Z">
+        <seg>UnsetAusdruck</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>UnsetItemError</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220702T084521Z" creationid="Ragnar-F" creationdate="20220702T084521Z">
@@ -230235,6 +230627,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180211T173926Z" creationid="Ragnar-F" creationdate="20180211T173922Z">
         <seg>Wert := &lt;s0&gt;ASin&lt;/s0&gt;(Zahl)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Value := &lt;s0&gt;ATan2&lt;/s0&gt;(Y, X)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T061940Z" creationid="Ragnar-F" creationdate="20260916T061934Z">
+        <seg>Wert := &lt;s0&gt;ATan2&lt;/s0&gt;(Y, X)</seg>
       </tuv>
     </tu>
     <tu>
@@ -233564,6 +233964,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180813T125015Z" creationid="Ragnar-F" creationdate="20171225T195335Z">
         <seg>Wait</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Wait &lt;s0&gt;[v2.1-alpha.1+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T062606Z" creationid="Ragnar-F" creationdate="20260916T062559Z">
+        <seg>Warten &lt;s0&gt;[v2.1-alpha.1+]&lt;/s0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -266909,6 +267317,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221220T174312Z" creationid="Ragnar-F" creationdate="20221220T174312Z">
         <seg>es sei denn, Sie verwenden die Join-Option.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>unset</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T061315Z" creationid="Ragnar-F" creationdate="20260916T061315Z">
+        <seg>unset</seg>
       </tuv>
     </tu>
     <tu>
