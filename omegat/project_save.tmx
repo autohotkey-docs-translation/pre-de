@@ -9910,6 +9910,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>0, 1, 2, 4 or 8.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T082850Z" creationid="Ragnar-F" creationdate="20260916T082848Z">
+        <seg>0, 1, 2, 4 oder 8.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>0, if &lt;e0&gt;String1&lt;/e0&gt; is identical to &lt;e1&gt;String2&lt;/e1&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231112T093725Z" creationid="Ragnar-F" creationdate="20190819T144954Z">
@@ -39178,6 +39186,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;ObjGetDataPtr&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.3+]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T082033Z" creationid="Ragnar-F" creationdate="20260916T082033Z">
+        <seg>&lt;a0&gt;ObjGetDataPtr&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.3+]&lt;/s1&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;ObjGetDataSize&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.3+]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T082129Z" creationid="Ragnar-F" creationdate="20260916T082129Z">
+        <seg>&lt;a0&gt;ObjGetDataSize&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.3+]&lt;/s1&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;ObjHasOwnProp&lt;/a0&gt; (formerly ObjHasKey) and &lt;a1&gt;ObjOwnProps&lt;/a1&gt; (formerly ObjNewEnum) are kept to facilitate safe inspection of objects which have redefined those methods (and the primitive prototypes, which don't have them defined).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231125T092705Z" creationid="Ragnar-F" creationdate="20210725T063542Z">
@@ -39198,6 +39222,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220410T124248Z" creationid="Ragnar-F" creationdate="20220410T124248Z">
         <seg>&lt;a0&gt;ObjSetBase&lt;/a0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;ObjSetDataPtr&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.3+]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T082140Z" creationid="Ragnar-F" creationdate="20260916T082140Z">
+        <seg>&lt;a0&gt;ObjSetDataPtr&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.3+]&lt;/s1&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -42222,6 +42254,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220418T142818Z" creationid="Ragnar-F" creationdate="20220418T142818Z">
         <seg>&lt;a0&gt;__New&lt;/a0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;__Ref&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.10+]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T081706Z" creationid="Ragnar-F" creationdate="20260916T081706Z">
+        <seg>&lt;a0&gt;__Ref&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.10+]&lt;/s1&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -50746,6 +50786,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;e2&gt;Obj&lt;/e2&gt; must be a Prototype.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T082623Z" creationid="Ragnar-F" creationdate="20260916T082623Z">
+        <seg>&lt;e2&gt;Obj&lt;/e2&gt; muss ein Prototyp sein.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;e2&gt;Options&lt;/e2&gt; is a string of zero or more case-insensitive options delimited by a space or tab.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231204T112643Z" creationid="Ragnar-F" creationdate="20231204T112643Z">
@@ -52130,6 +52178,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;e4&gt;Offset&lt;/e4&gt; is the zero-based offset of the property in bytes, relative to the start of the object's structured data.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T085231Z" creationid="Ragnar-F" creationdate="20260916T085231Z">
+        <seg>&lt;e4&gt;Offset&lt;/e4&gt; ist der 0-basierte Offset der Eigenschaft in Bytes, relativ zur Startposition der strukturierten Daten des Objekts.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;e50&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180411T120934Z" creationid="Ragnar-F" creationdate="20180411T120934Z">
@@ -52342,6 +52398,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260216T111808Z" creationid="Ragnar-F" creationdate="20260216T111808Z">
         <seg>&lt;e6&gt;NeuerWert&lt;/e6&gt; kann leer sein, um das Steuerelement zu leeren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;e6&gt;Type&lt;/e6&gt; is a class object.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T085248Z" creationid="Ragnar-F" creationdate="20260916T085234Z">
+        <seg>&lt;e6&gt;Type&lt;/e6&gt; ist ein Klassenobjekt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -59074,6 +59138,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; Typed properties can only be owned by a Prototype.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T085324Z" creationid="Ragnar-F" creationdate="20260916T085324Z">
+        <seg>&lt;s0&gt;Hinweis:&lt;/s0&gt; Typisierte Eigenschaften können nur von einem Prototyp besessen werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;Note:&lt;/s0&gt; Unlike &lt;a1&gt;if statements&lt;/a1&gt;, braces have no effect with the #HotIf directive.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230911T082304Z" creationid="Ragnar-F" creationdate="20200612T104920Z">
@@ -59302,6 +59374,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20181007T094102Z" creationid="Ragnar-F" creationdate="20181007T094051Z">
         <seg>&lt;s0&gt;Off&lt;/s0&gt; oder &lt;s1&gt;0&lt;/s1&gt; (false):</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s0&gt;Offset&lt;/s0&gt; &lt;s1&gt;[v2.1-alpha.24+]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T083523Z" creationid="Ragnar-F" creationdate="20260916T083523Z">
+        <seg>&lt;s0&gt;Offset&lt;/s0&gt; &lt;s1&gt;[v2.1-alpha.24+]&lt;/s1&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -59550,6 +59630,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230607T120600Z" creationid="Ragnar-F" creationdate="20180813T123759Z">
         <seg>&lt;s0&gt;PID (Prozess-ID):&lt;/s0&gt; Eine Nummer zur eindeutigen Identifizierung eines Prozesses (die Gültigkeit dieser Nummer ist an die Lebensdauer des Prozesses gebunden).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s0&gt;Pack&lt;/s0&gt; &lt;s1&gt;[v2.1-alpha.19+]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T082800Z" creationid="Ragnar-F" creationdate="20260916T082800Z">
+        <seg>&lt;s0&gt;Pack&lt;/s0&gt; &lt;s1&gt;[v2.1-alpha.19+]&lt;/s1&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -61226,6 +61314,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;Type&lt;/s0&gt; &lt;s1&gt;[v2.1-alpha.30+]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T082420Z" creationid="Ragnar-F" creationdate="20260916T082420Z">
+        <seg>&lt;s0&gt;Type&lt;/s0&gt; &lt;s1&gt;[v2.1-alpha.30+]&lt;/s1&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;TypeError:&lt;/s0&gt; An unexpected type of value was used as input for a function, property assignment, or some other operation.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230926T123104Z" creationid="Ragnar-F" creationdate="20230624T071430Z">
@@ -62074,6 +62170,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.22+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T083726Z" creationid="Ragnar-F" creationdate="20260916T083726Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.22+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;[v2.1-alpha.24+]&lt;/s0&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260914T135723Z" creationid="Ragnar-F" creationdate="20260914T135723Z">
@@ -62134,6 +62238,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260915T134827Z" creationid="Ragnar-F" creationdate="20260915T134827Z">
         <seg>&lt;s0&gt;[v2.1-alpha.7+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.9+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T075034Z" creationid="Ragnar-F" creationdate="20260916T075034Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.9+]&lt;/s0&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -62626,6 +62738,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s5&gt;[v2.1-alpha.24+]&lt;/s5&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T085232Z" creationid="Ragnar-F" creationdate="20260916T085232Z">
+        <seg>&lt;s5&gt;[v2.1-alpha.24+]&lt;/s5&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s5&gt;[v2.1-alpha.7+]&lt;/s5&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260915T135755Z" creationid="Ragnar-F" creationdate="20260915T135755Z">
@@ -63086,6 +63206,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231202T165654Z" creationid="Ragnar-F" creationdate="20231202T165654Z">
         <seg>Es wird ein &lt;a0&gt;MemoryError&lt;/a0&gt; ausgelöst, wenn der Speicher nicht reserviert werden konnte, z.B. weil &lt;e1&gt;NeueByteAnzahl&lt;/e1&gt; unerwartet groß ist oder das System nicht über genügend virtuellen Speicher verfügt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A &lt;a0&gt;PropertyError&lt;/a0&gt; is thrown if &lt;e1&gt;Obj&lt;/e1&gt; does not own a property by that name (except in &lt;a2&gt;v2.1 mode&lt;/a2&gt;).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T085553Z" creationid="Ragnar-F" creationdate="20260916T085553Z">
+        <seg>Es wird ein &lt;a0&gt;PropertyError&lt;/a0&gt; ausgelöst, wenn &lt;e1&gt;Obj&lt;/e1&gt; keine Eigenschaft mit diesem Namen besitzt (außer im &lt;a2&gt;v2.1-Modus&lt;/a2&gt;).</seg>
       </tuv>
     </tu>
     <tu>
@@ -72786,10 +72914,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>An &lt;a1&gt;OSError&lt;/a1&gt; is thrown if there is a problem determining the mouse position, such as if the workstation is locked or entering a suspended state (sleep mode or hibernation).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T075919Z" creationid="Ragnar-F" creationdate="20260916T075919Z">
+        <seg>Es wird ein &lt;a1&gt;OSError&lt;/a1&gt; ausgelöst, wenn bei der Ermittlung der Mausposition ein Problem auftritt, z.B. wenn der PC gesperrt ist oder in einen Ruhezustand oder Energiesparmodus wechselt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>An &lt;a1&gt;UnsetItemError&lt;/a1&gt; is thrown if &lt;e2&gt;Key&lt;/e2&gt; has no associated value within the map, unless a &lt;a3&gt;Default&lt;/a3&gt; property is defined, in which case its value is returned.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231025T172405Z" creationid="Ragnar-F" creationdate="20220702T084742Z">
         <seg>Es wird ein &lt;a1&gt;UnsetItemError&lt;/a1&gt; ausgelöst, wenn &lt;e2&gt;Schlüssel&lt;/e2&gt; keinen zugeordneten Wert im Map-Objekt hat, es sei denn, es ist eine &lt;a3&gt;Default&lt;/a3&gt;-Eigenschaft definiert, dann wird deren Wert zurückgegeben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>An &lt;a1&gt;abstract data type&lt;/a1&gt; typically implements both a getter and a setter, in which case the nested struct itself can only be retrieved via this method.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T111152Z" creationid="Ragnar-F" creationdate="20260916T111152Z">
+        <seg>Da ein &lt;a1&gt;abstrakter Datentyp&lt;/a1&gt; in der Regel sowohl einen Getter als auch einen Setter implementiert, kann die verschachtelte Struktur selbst nur über diese Methode abgerufen werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -83436,8 +83580,8 @@
       <tuv lang="en">
         <seg>Changed MouseGetPos to throw OSError if the mouse position cannot be determined.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T054111Z" creationid="Ragnar-F" creationdate="20260912T054111Z">
-        <seg>Geändert: MouseGetPos wirft nun einen OSError, wenn die Mausposition nicht ermittelt werden kann.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T080654Z" creationid="Ragnar-F" creationdate="20260912T054111Z">
+        <seg>Geändert: MouseGetPos löst nun einen OSError aus, wenn die Mausposition nicht ermittelt werden kann.</seg>
       </tuv>
     </tu>
     <tu>
@@ -92551,6 +92695,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190820T213829Z" creationid="Ragnar-F" creationdate="20190820T213829Z">
         <seg>DefineProp</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>DefineProp is predefined as a function.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T084100Z" creationid="Ragnar-F" creationdate="20260916T083742Z">
+        <seg>DefineProp gibt es auch als Funktion.</seg>
       </tuv>
     </tu>
     <tu>
@@ -103277,8 +103429,8 @@
       <tuv lang="en">
         <seg>Fixed ObjSetDataPtr throwing on success.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122512Z" creationid="Ragnar-F" creationdate="20260911T122512Z">
-        <seg>Behoben: ObjSetDataPtr wirft bei Erfolg keine Ausnahme mehr.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T080618Z" creationid="Ragnar-F" creationdate="20260911T122512Z">
+        <seg>Behoben: ObjSetDataPtr löst bei Erfolg keinen Fehler mehr aus.</seg>
       </tuv>
     </tu>
     <tu>
@@ -130693,6 +130845,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If the property is a &lt;a0&gt;nested struct&lt;/a0&gt;, a reference to the struct is returned.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T085702Z" creationid="Ragnar-F" creationdate="20260916T085655Z">
+        <seg>Handelt es sich bei der Eigenschaft um eine &lt;a0&gt;verschachtelte Struktur&lt;/a0&gt;, wird eine Referenz zurückgegeben, die auf diese Struktur verweist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If the property is dynamic or implemented by __Set, the &lt;e1&gt;value&lt;/e1&gt; parameter is omitted/unset.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T112056Z" creationid="Ragnar-F" creationdate="20260913T112056Z">
@@ -133722,6 +133882,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T061621Z" creationid="Ragnar-F" creationdate="20260913T061621Z">
         <seg>Im &lt;a1&gt;v2.1-Modus&lt;/a1&gt; geben Funktionen standardmäßig &lt;a2&gt;unset&lt;/a2&gt; zurück.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In &lt;a1&gt;v2.1 mode&lt;/a1&gt;, the return value is &lt;c2&gt;unset&lt;/c2&gt; if &lt;e3&gt;Obj&lt;/e3&gt; does not own a property by that name.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T085508Z" creationid="Ragnar-F" creationdate="20260916T085508Z">
+        <seg>Im &lt;a1&gt;v2.1-Modus&lt;/a1&gt; ist der Rückgabewert &lt;c2&gt;unset&lt;/c2&gt;, wenn &lt;e3&gt;Obj&lt;/e3&gt; keine Eigenschaft mit diesem Namen besitzt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -160311,6 +160479,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Obj := &lt;s1&gt;DefineProp&lt;/s1&gt;(Obj, Name, Descriptor)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T082221Z" creationid="Ragnar-F" creationdate="20260916T082205Z">
+        <seg>Obj := &lt;s1&gt;DefineProp&lt;/s1&gt;(Obj, Name, Deskriptor)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Obj := ClassObj(Params*)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210311T122210Z" creationid="Ragnar-F" creationdate="20210311T122210Z">
@@ -160355,6 +160531,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231204T081427Z" creationid="Ragnar-F" creationdate="20231204T081419Z">
         <seg>Obj.&lt;s0&gt;Base&lt;/s0&gt; := NeueBasisObj</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Obj.&lt;s0&gt;__Ref&lt;/s0&gt;(Name)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T085610Z" creationid="Ragnar-F" creationdate="20260916T085610Z">
+        <seg>Obj.&lt;s0&gt;__Ref&lt;/s0&gt;(Name)</seg>
       </tuv>
     </tu>
     <tu>
@@ -162343,6 +162527,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>One of the following integers specifying the maximum alignment requirement for the property:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T082847Z" creationid="Ragnar-F" creationdate="20260916T082847Z">
+        <seg>Einer der folgenden Integer, der die maximale Ausrichtungsanforderung für die Eigenschaft angibt:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>One of the following may also be present:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231005T091603Z" creationid="Ragnar-F" creationdate="20140303T190049Z">
@@ -163819,6 +164011,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230726T093044Z" creationid="Ragnar-F" creationdate="20200622T101214Z">
         <seg>Andernfalls geben Sie eine der folgenden Zahlen an, um das Programm nach einer bestimmten Komprimierung auszuführen:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Otherwise specify the offset in bytes.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T083723Z" creationid="Ragnar-F" creationdate="20260916T083723Z">
+        <seg>Andernfalls geben Sie den Offset in Bytes an.</seg>
       </tuv>
     </tu>
     <tu>
@@ -174023,6 +174223,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Retrieves a nested struct or &lt;a0&gt;virtual reference&lt;/a0&gt; to a property.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T085608Z" creationid="Ragnar-F" creationdate="20260916T085608Z">
+        <seg>Ermittelt eine verschachtelte Struktur oder eine &lt;a0&gt;virtuelle Referenz&lt;/a0&gt;, die auf eine Eigenschaft verweist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Retrieves a nested struct or virtual reference to a property.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T082030Z" creationid="Ragnar-F" creationdate="20260916T082030Z">
+        <seg>Ermittelt eine verschachtelte Struktur oder eine virtuelle Referenz, die auf eine Eigenschaft verweist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Retrieves a registered COM object.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230507T130133Z" creationid="Ragnar-F" creationdate="20140305T152514Z">
@@ -175431,6 +175647,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Returns the address of the object's structured data (typed properties).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T082129Z" creationid="Ragnar-F" creationdate="20260916T082129Z">
+        <seg>Gibt die Adresse der strukturierten Daten des Objekts (typisierte Eigenschaften) zurück.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Returns the arccosine (the number whose cosine is the specified number) in radians.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230519T114634Z" creationid="Ragnar-F" creationdate="20180812T201607Z">
@@ -175835,6 +176059,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260915T202058Z" creationid="Ragnar-F" creationdate="20260915T202058Z">
         <seg>Gibt die Größe der &lt;a0&gt;Struktur&lt;/a0&gt; des Objekts (typisierte Eigenschaften) in Bytes zurück.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Returns the size of the object's structure (typed properties), in bytes.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T082139Z" creationid="Ragnar-F" creationdate="20260916T082139Z">
+        <seg>Gibt die Größe der Struktur des Objekts (typisierte Eigenschaften) in Bytes zurück.</seg>
       </tuv>
     </tu>
     <tu>
@@ -180351,6 +180583,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>See &lt;a3&gt;Structures&lt;/a3&gt; for general information and &lt;a4&gt;Using DefineProp&lt;/a4&gt; for an example.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T082759Z" creationid="Ragnar-F" creationdate="20260916T082759Z">
+        <seg>Allgemeine Informationen finden Sie unter &lt;a3&gt;Strukturen&lt;/a3&gt;, und ein Beispiel unter &lt;a4&gt;DefineProp verwenden&lt;/a4&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>See &lt;a3&gt;TCS_VERTICAL&lt;/a3&gt; for limitations on Left and Right.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260214T115029Z" creationid="Ragnar-F" creationdate="20260214T115029Z">
@@ -184107,6 +184347,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260915T202124Z" creationid="Ragnar-F" creationdate="20260915T202124Z">
         <seg>Setzt die Adresse der &lt;a0&gt;strukturierten Daten&lt;/a0&gt; des Objekts (typisierte Eigenschaften).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Sets the address of the object's structured data (typed properties).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T082158Z" creationid="Ragnar-F" creationdate="20260916T082158Z">
+        <seg>Setzt die Adresse der strukturierten Daten des Objekts (typisierte Eigenschaften).</seg>
       </tuv>
     </tu>
     <tu>
@@ -205799,6 +206047,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The offset of the struct field.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T083600Z" creationid="Ragnar-F" creationdate="20260916T083554Z">
+        <seg>Der Offset des Strukturfelds.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The old behaviour was to use the label/function by that name if one existed, but only if the &lt;e7&gt;Label&lt;/e7&gt; parameter did not contain a variable reference or expression.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231126T154416Z" creationid="Ragnar-F" creationdate="20210704T192246Z">
@@ -206747,6 +207003,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260915T191506Z" creationid="Ragnar-F" creationdate="20260913T081158Z">
         <seg>Die Eigenschaft kann nicht mit einer &lt;a2&gt;Metafunktion&lt;/a2&gt; definiert werden, es sei denn, es handelt sich um ein COM-Objekt (d.h. aus einer anderen Instanz von AutoHotkey).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The property corresponding to a nested struct can only be assigned a value if the struct defines a settable __Value property.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T092529Z" creationid="Ragnar-F" creationdate="20260916T092529Z">
+        <seg>Der Eigenschaft, die einer verschachtelten Struktur entspricht, kann nur ein Wert zugewiesen werden, wenn die Struktur eine setzbare __Value-Eigenschaft definiert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -208307,6 +208571,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231112T084149Z" creationid="Ragnar-F" creationdate="20190819T144553Z">
         <seg>Die zu vergleichenden Zeichenketten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The struct class identifying the type of the property to define.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T082606Z" creationid="Ragnar-F" creationdate="20260916T082606Z">
+        <seg>Die Strukturklasse, die den Typ der Eigenschaft, die definiert werden soll, identifiziert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The struct itself can also be used as a virtual reference in that case.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T092558Z" creationid="Ragnar-F" creationdate="20260916T092558Z">
+        <seg>In diesem Fall kann die Struktur selbst auch als virtuelle Referenz verwendet werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -212391,6 +212671,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This affects the alignment of the property and overall struct only if non-zero and less than the type's default alignment requirement, or if non-zero and &lt;e2&gt;Type&lt;/e2&gt; is an integer.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T083344Z" creationid="Ragnar-F" creationdate="20260916T083344Z">
+        <seg>Dies beeinflusst die Ausrichtung der Eigenschaft und der gesamten Struktur nur dann, wenn die Ausrichtung ungleich Null und kleiner als die Standardausrichtungsanforderung des Typs ist, oder wenn die Ausrichtung ungleich Null ist und &lt;e2&gt;Type&lt;/e2&gt; ein Integer ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This affects windowing functions such as &lt;a0&gt;WinExist&lt;/a0&gt; and &lt;a1&gt;WinActivate&lt;/a1&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230627T183244Z" creationid="Ragnar-F" creationdate="20230627T183244Z">
@@ -212851,6 +213139,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230805T085226Z" creationid="Ragnar-F" creationdate="20210211T201520Z">
         <seg>Dieser und die beiden unteren Platzhalter können innerhalb einer &lt;a3&gt;Klasse&lt;/a3&gt; verwendet werden, z.B. ist &lt;s4&gt;[\d.-]&lt;/s4&gt; eine Ziffer, ein Punkt oder ein Minuszeichen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This and the properties above are mutually-exclusive.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T082655Z" creationid="Ragnar-F" creationdate="20260916T082647Z">
+        <seg>Diese und die obigen Eigenschaften schließen sich gegenseitig aus.</seg>
       </tuv>
     </tu>
     <tu>
@@ -218359,6 +218655,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This method returns the value of the removed property (&lt;a0&gt;&lt;e1&gt;blank-unset&lt;/e1&gt;&lt;/a0&gt; if none).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T084341Z" creationid="Ragnar-F" creationdate="20260916T084341Z">
+        <seg>Diese Methode gibt den Wert der entfernten Eigenschaft zurück (&lt;a0&gt;&lt;e1&gt;leer-ungesetzt&lt;/e1&gt;&lt;/a0&gt;, wenn es keinen gibt).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This method sends simple keystrokes and mouse clicks.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20191017T145612Z" creationid="Ragnar-F" creationdate="20140316T031344Z">
@@ -222015,6 +222319,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>To define a &lt;a0&gt;typed property&lt;/a0&gt;, specify an object with one or more of the following own properties (only Type is required):</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T082418Z" creationid="Ragnar-F" creationdate="20260916T082418Z">
+        <seg>Um eine &lt;a0&gt;typisierte Eigenschaft&lt;/a0&gt; zu definieren, geben Sie ein Objekt mit beliebig vielen der folgenden eigenen Eigenschaften an (nur Type wird benötigt):</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>To define a hotstring, enclose the triggering abbreviation between pairs of colons as in this example:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230324T120312Z" creationid="Ragnar-F" creationdate="20140310T142255Z">
@@ -225135,6 +225447,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>To use the same offset as a previously defined property, specify its name.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T083656Z" creationid="Ragnar-F" creationdate="20260916T083656Z">
+        <seg>Um denselben Offset einer zuvor definierten Eigenschaft zu verwenden, geben Sie deren Namen an.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>To use the system's locale instead, specify LSys.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230421T142501Z" creationid="Ragnar-F" creationdate="20140303T160439Z">
@@ -228091,6 +228411,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230925T120350Z" creationid="Ragnar-F" creationdate="20210620T113151Z">
         <seg>Im Gegensatz zur Option "Hardware sicher entfernen" wird dies nur das via &lt;e0&gt;Laufwerk&lt;/e0&gt; identifizierte Volume dismounten, nicht das gesamte Gerät.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Unlike the method, it can be used directly with Prototype objects which do not derive from Object, such as for &lt;a1&gt;struct&lt;/a1&gt; subclasses.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T084309Z" creationid="Ragnar-F" creationdate="20260916T084007Z">
+        <seg>Im Gegensatz zur Methode kann die Funktion direkt mit Prototypobjekten verwendet werden, die nicht von Object abgeleitet sind, wie z.B. bei &lt;a1&gt;Strukturunterklassen&lt;/a1&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -235652,6 +235980,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230321T135352Z" creationid="Ragnar-F" creationdate="20140309T165048Z">
         <seg>Beim Definieren einer Funktion können Sie den letzten Parameter mit einem Sternchen versehen, um die Funktion als variadisch zu kennzeichnen, wodurch ihr eine variable Anzahl von Parametern übergeben werden kann:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>When defining a property in a class definition, the most recent &lt;a3&gt;#StructPack&lt;/a3&gt; directive sets the value for &lt;e4&gt;Pack&lt;/e4&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T083522Z" creationid="Ragnar-F" creationdate="20260916T083522Z">
+        <seg>Definiert man eine Eigenschaft in einer Klassendefinition, bestimmt die aktuellste &lt;a3&gt;#StructPack&lt;/a3&gt;-Direktive den Wert für &lt;e4&gt;Pack&lt;/e4&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -256348,6 +256684,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180410T201017Z" creationid="Ragnar-F" creationdate="20180410T201010Z">
         <seg>__New(aFlags, aGröße)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>__Ref &lt;s0&gt;[v2.1-alpha.10+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T085555Z" creationid="Ragnar-F" creationdate="20260916T085555Z">
+        <seg>__Ref &lt;s0&gt;[v2.1-alpha.10+]&lt;/s0&gt;</seg>
       </tuv>
     </tu>
     <tu>
