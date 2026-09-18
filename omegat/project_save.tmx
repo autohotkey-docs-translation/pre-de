@@ -5094,6 +5094,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>"https://github.com/AutoHotkey/AutoHotkeyDocs/edit/alpha/docs/",</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T183859Z" creationid="Ragnar-F" creationdate="20260918T183859Z">
+        <seg>"https://github.com/autohotkey-docs-translation/pre-de/edit/master/target/docs/",</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>"item 1",</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180412T220428Z" creationid="Ragnar-F" creationdate="20180412T220428Z">
@@ -5726,6 +5734,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>#Import "X" {Calculate as CalculateX}</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T180128Z" creationid="Ragnar-F" creationdate="20260918T180111Z">
+        <seg>#Import "X" {Berechnen as XBerechnen}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#Import "Y" {*}</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T180129Z" creationid="Ragnar-F" creationdate="20260918T180129Z">
+        <seg>#Import "Y" {*}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>#Import - Syntax &amp; Usage | AutoHotkey v2</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T114625Z" creationid="Ragnar-F" creationdate="20260913T114625Z">
@@ -6070,6 +6094,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>#Module Other</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T175823Z" creationid="Ragnar-F" creationdate="20260918T175808Z">
+        <seg>#Module Anderes</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>#Module TestA</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122225Z" creationid="Ragnar-F" creationdate="20260913T122225Z">
@@ -6082,6 +6114,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122136Z" creationid="Ragnar-F" creationdate="20260913T122136Z">
         <seg>#Module TestB</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#Module X</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T180259Z" creationid="Ragnar-F" creationdate="20260918T180259Z">
+        <seg>#Module X</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#Module Y</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T180309Z" creationid="Ragnar-F" creationdate="20260918T180309Z">
+        <seg>#Module Y</seg>
       </tuv>
     </tu>
     <tu>
@@ -6550,6 +6598,30 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>#import A {ANSWER}</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T170811Z" creationid="Ragnar-F" creationdate="20260918T170807Z">
+        <seg>#import A {ANTWORT}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#module A</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T170712Z" creationid="Ragnar-F" creationdate="20260918T170712Z">
+        <seg>#module A</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#module B</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T170806Z" creationid="Ragnar-F" creationdate="20260918T170806Z">
+        <seg>#module B</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>#n::</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180410T180542Z" creationid="Ragnar-F" creationdate="20180410T180542Z">
@@ -6738,6 +6810,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180411T202901Z" creationid="Ragnar-F" creationdate="20180411T202901Z">
         <seg>$^p::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>%A_ScriptDir%;%A_MyDocuments%\AutoHotkey;%A_AhkPath%\..</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T173301Z" creationid="Ragnar-F" creationdate="20260918T173301Z">
+        <seg>%A_ScriptDir%;%A_MyDocuments%\AutoHotkey;%A_AhkPath%\..</seg>
       </tuv>
     </tu>
     <tu>
@@ -15294,6 +15374,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>; Add the Info icon by default.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T180953Z" creationid="Ragnar-F" creationdate="20260918T180953Z">
+        <seg>; Infosymbol standardmäßig hinzufügen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>; Add the picture control, preserving the aspect ratio of the first picture.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230515T133525Z" creationid="Ragnar-F" creationdate="20180411T121646Z">
@@ -19633,6 +19721,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>; MyVar is accessible in v2.1-alpha.19+.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T175619Z" creationid="Ragnar-F" creationdate="20260918T175619Z">
+        <seg>; MeineVar ist zugänglich in v2.1-alpha.19+.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>; NIN_BALLOONHIDE</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20250926T172611Z" creationid="Ragnar-F" creationdate="20250926T172611Z">
@@ -20225,6 +20321,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>; Other MyVar is still 2.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T175316Z" creationid="Ragnar-F" creationdate="20260918T175247Z">
+        <seg>; Andere MeineVar ist immer noch 2.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>; Otherwise (since above didn't return), pass all unhandled events to the original WindowProc.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230622T115554Z" creationid="Ragnar-F" creationdate="20180411T181045Z">
@@ -20349,6 +20453,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230622T115554Z" creationid="Ragnar-F" creationdate="20180410T171933Z">
         <seg>; Andernfalls:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; Our MyVar is 1.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T175230Z" creationid="Ragnar-F" creationdate="20260918T175230Z">
+        <seg>; Unsere MeineVar ist 1.</seg>
       </tuv>
     </tu>
     <tu>
@@ -22534,6 +22646,30 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20201028T114446Z" creationid="Ragnar-F" creationdate="20180411T192014Z">
         <seg>; Das Fenster und dessen TreeView anzeigen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; Shown first.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T171756Z" creationid="Ragnar-F" creationdate="20260918T170822Z">
+        <seg>; wird als Erstes angezeigt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; Shown second.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T171814Z" creationid="Ragnar-F" creationdate="20260918T170758Z">
+        <seg>; wird als Zweites angezeigt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; Shown third.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T171805Z" creationid="Ragnar-F" creationdate="20260918T170956Z">
+        <seg>; wird als Drittes angezeigt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -42891,6 +43027,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a1&gt;Struct classes&lt;/a1&gt; are defined using the &lt;c2&gt;struct&lt;/c2&gt; keyword instead of &lt;c3&gt;class&lt;/c3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T182814Z" creationid="Ragnar-F" creationdate="20260918T182814Z">
+        <seg>&lt;a1&gt;Strukturklassen&lt;/a1&gt; werden mit dem Schlüsselwort &lt;c2&gt;struct&lt;/c2&gt; anstelle von &lt;c3&gt;class&lt;/c3&gt; definiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a1&gt;Text&lt;/a1&gt;, &lt;a2&gt;Edit&lt;/a2&gt;, &lt;a3&gt;Button&lt;/a3&gt;, &lt;a4&gt;CheckBox&lt;/a4&gt;, &lt;a5&gt;Radio&lt;/a5&gt;, &lt;a6&gt;Slider&lt;/a6&gt;, &lt;a7&gt;GroupBox&lt;/a7&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260213T110836Z" creationid="Ragnar-F" creationdate="20260213T110836Z">
@@ -47363,6 +47507,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;c4&gt;#Import "M"&lt;/c4&gt; is the same except that the name &lt;e5&gt;M&lt;/e5&gt; is not added to the current module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T174445Z" creationid="Ragnar-F" creationdate="20260918T174445Z">
+        <seg>&lt;c4&gt;#Import "M"&lt;/c4&gt; verhält sich genauso, nur dass der Name &lt;e5&gt;M&lt;/e5&gt; nicht zum aktuellen Modul hinzugefügt wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;c4&gt;#Warn Off&lt;/c4&gt; causes those warnings to be ignored.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260914T042257Z" creationid="Ragnar-F" creationdate="20260914T042257Z">
@@ -48443,6 +48595,30 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;e0&gt;InitExpression&lt;/e0&gt; can access other instance variables and methods via &lt;c1&gt;this&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T182828Z" creationid="Ragnar-F" creationdate="20260918T182828Z">
+        <seg>&lt;e0&gt;InitAusdruck&lt;/e0&gt; kann mit &lt;c1&gt;this&lt;/c1&gt; auf andere Instanzvariablen und Methoden zugreifen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;e0&gt;InitExpression&lt;/e0&gt; has the same interpretation as for instance variables, except that &lt;c1&gt;this&lt;/c1&gt; refers to the class itself.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T183744Z" creationid="Ragnar-F" creationdate="20260918T183744Z">
+        <seg>&lt;e0&gt;InitAusdruck&lt;/e0&gt; wird genauso interpretiert wie die Instanzvariablen, außer dass &lt;c1&gt;this&lt;/c1&gt; auf die Klasse selbst verweist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;e0&gt;InitExpression&lt;/e0&gt; is optional.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T183630Z" creationid="Ragnar-F" creationdate="20260918T183630Z">
+        <seg>&lt;e0&gt;InitAusdruck&lt;/e0&gt; ist optional.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;e0&gt;InputBoxObj&lt;/e0&gt; is an object with the properties &lt;e1&gt;Result&lt;/e1&gt; (containing "OK", "Cancel" or "Timeout") and &lt;e2&gt;Value&lt;/e2&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231204T113353Z" creationid="Ragnar-F" creationdate="20231204T113353Z">
@@ -48999,6 +49175,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230621T115746Z" creationid="Ragnar-F" creationdate="20230621T115746Z">
         <seg>Das Verhalten von &lt;e0&gt;Try&lt;/e0&gt; hängt davon ab, ob ein &lt;e1&gt;Catch&lt;/e1&gt; oder &lt;e2&gt;Finally&lt;/e2&gt; vorhanden ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;e0&gt;TypeSpecifier&lt;/e0&gt; is a reserved type name or type expression defining the type of the property.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T183529Z" creationid="Ragnar-F" creationdate="20260918T183529Z">
+        <seg>&lt;e0&gt;TypBezeichner&lt;/e0&gt; ist ein reservierter Typname oder ein Typausdruck, der den Typ der Eigenschaft definiert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -53151,6 +53335,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230511T141044Z" creationid="Ragnar-F" creationdate="20170610T170028Z">
         <seg>&lt;i0&gt;Info&lt;/i0&gt; hängt vom Typ des Objekts ab, ist aber derzeit sehr begrenzt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;i0&gt;ModuleName&lt;/i0&gt;.ahk</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T174212Z" creationid="Ragnar-F" creationdate="20260918T174209Z">
+        <seg>&lt;i0&gt;ModulName&lt;/i0&gt;.ahk</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;i0&gt;ModuleName&lt;/i0&gt;\__Init.ahk</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T174208Z" creationid="Ragnar-F" creationdate="20260918T174204Z">
+        <seg>&lt;i0&gt;ModulName&lt;/i0&gt;\__Init.ahk</seg>
       </tuv>
     </tu>
     <tu>
@@ -62507,6 +62707,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.20]&lt;/s0&gt; and earlier:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T171853Z" creationid="Ragnar-F" creationdate="20260918T171847Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.20]&lt;/s0&gt; und älter:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;[v2.1-alpha.21+]&lt;/s0&gt; The use of #Module in a file which is loaded multiple times via &lt;a1&gt;#Include&lt;/a1&gt; is prohibited.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T135836Z" creationid="Ragnar-F" creationdate="20260913T135836Z">
@@ -64683,6 +64891,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>A class object is typically created by writing a class definition with the &lt;c0&gt;class&lt;/c0&gt; keyword.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T182731Z" creationid="Ragnar-F" creationdate="20260918T182609Z">
+        <seg>In der Regel definiert man ein Klassenobjekt mit dem Schlüsselwort &lt;c0&gt;class&lt;/c0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A class's Prototype is normally based on the Prototype of its base class, so &lt;c0&gt;ClassObj.Prototype.base == ClassObj.base.Prototype&lt;/c0&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230919T101521Z" creationid="Ragnar-F" creationdate="20210223T141048Z">
@@ -66783,6 +66999,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200630T153038Z" creationid="Ragnar-F" creationdate="20200630T153038Z">
         <seg>Ein "+" am Ende genügt, um den Leser darauf hinzuweisen, dass spätere Versionen akzeptabel, aber nicht erforderlich sind.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A typed property can only hold a value of the specified type, and cannot be deleted from an individual instance.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T182948Z" creationid="Ragnar-F" creationdate="20260918T182948Z">
+        <seg>Eine typisierte Eigenschaft kann nur einen Wert des angegebenen Typs enthalten und kann nicht aus einer einzelnen Instanz gelöscht werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -69063,6 +69287,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140303T140046Z" creationid="Ragnar-F" creationdate="20140303T140046Z">
         <seg>Zugriffsmodi (schließen sich gegenseitig aus)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Access shadowed built-in functions.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T180852Z" creationid="Ragnar-F" creationdate="20260918T180852Z">
+        <seg>Zugriff auf "überschriebene" interne Funktionen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -75315,6 +75547,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Any percent signs which are not part of a valid variable reference are interpreted literally.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T173626Z" creationid="Ragnar-F" creationdate="20260918T173626Z">
+        <seg>Prozentzeichen, die nicht zu einer gültigen Variablenreferenz gehören, werden als direkt geschriebener Text interpretiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Any popup menu can be shown, including submenus and the tray menu.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231026T124029Z" creationid="Ragnar-F" creationdate="20180409T172827Z">
@@ -80171,6 +80411,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Built-in variables may be used in the value of AhkImportPath by enclosing them in percent signs.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T173538Z" creationid="Ragnar-F" creationdate="20260918T173538Z">
+        <seg>Interne Variablen können in der Liste angegeben werden, müssen aber in Prozentzeichen gesetzt werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Built-in variables such as &lt;a0&gt;A_Clipboard&lt;/a0&gt; and &lt;a1&gt;A_TimeIdle&lt;/a1&gt; are never local (they can be accessed from anywhere), and cannot be redeclared.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230906T105405Z" creationid="Ragnar-F" creationdate="20200613T072113Z">
@@ -82551,6 +82799,30 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171225T203434Z" creationid="Ragnar-F" creationdate="20171225T203434Z">
         <seg>Caching</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Calculate() =&gt; 1</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T180258Z" creationid="Ragnar-F" creationdate="20260918T180255Z">
+        <seg>Berechnen() =&gt; 1</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Calculate() =&gt; 2</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T180308Z" creationid="Ragnar-F" creationdate="20260918T180302Z">
+        <seg>Berechnen() =&gt; 2</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Calculate() =&gt; 3</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T180316Z" creationid="Ragnar-F" creationdate="20260918T180311Z">
+        <seg>Berechnen() =&gt; 3</seg>
       </tuv>
     </tu>
     <tu>
@@ -85328,6 +85600,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231203T190905Z" creationid="Ragnar-F" creationdate="20231203T190905Z">
         <seg>Prüfen, ob eine Zeichenkette einem bestimmten Muster entspricht.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Check(n) =&gt; n = Calculate()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T180328Z" creationid="Ragnar-F" creationdate="20260918T180317Z">
+        <seg>Prüfen(n) =&gt; n = Berechnen()</seg>
       </tuv>
     </tu>
     <tu>
@@ -94732,6 +95012,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Directories are searched in the order they are listed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T174047Z" creationid="Ragnar-F" creationdate="20260918T174047Z">
+        <seg>Die Verzeichnisse werden in der Reihenfolge ihrer Auflistung durchsucht.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Directories can be "renamed into" another location as long as it's on the same volume.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20241111T182100Z" creationid="Ragnar-F" creationdate="20210212T131109Z">
@@ -97684,10 +97972,34 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Each module executes its imported modules before its own body, excluding modules which have already begun execution.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T172217Z" creationid="Ragnar-F" creationdate="20260918T172217Z">
+        <seg>Jedes Modul führt seine importierten Module vor seinem eigenen Körper aus, mit Ausnahme von bereits gestarteten Modulen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Each module exports all global names which do not begin with an underscore, except for names imported without the Export keyword.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T121550Z" creationid="Ragnar-F" creationdate="20260913T121550Z">
         <seg>Jedes Modul exportiert alle globalen Namen, die nicht mit einem Unterstrich beginnen, außer Namen, die ohne das Schlüsselwort Export importiert wurden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Each module has its own &lt;c0&gt;Calculate&lt;/c0&gt;, which takes precedence over any wildcard import.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T180110Z" creationid="Ragnar-F" creationdate="20260918T180110Z">
+        <seg>Jedes Modul hat sein eigenes &lt;c0&gt;Berechnen&lt;/c0&gt;, das Vorrang vor jedem Platzhalterimport hat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Each module has its own global variables (&lt;c0&gt;MyVar&lt;/c0&gt; and &lt;c1&gt;ShowVar&lt;/c1&gt;).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T174535Z" creationid="Ragnar-F" creationdate="20260918T174535Z">
+        <seg>Jedes Modul hat seine eigenen globalen Variablen (&lt;c0&gt;MeineVar&lt;/c0&gt; und &lt;c1&gt;VarZeigen&lt;/c1&gt;).</seg>
       </tuv>
     </tu>
     <tu>
@@ -108426,6 +108738,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230421T090441Z" creationid="Ragnar-F" creationdate="20141227T193950Z">
         <seg>Zum Beispiel formatiert &lt;c0&gt;"{2:i} {:i}"&lt;/c0&gt; den zweiten und dritten Eingabewert als dezimale Integer, getrennt durch ein Leerzeichen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For example, &lt;c0&gt;#Import M&lt;/c0&gt; may load the file with exact name &lt;c1&gt;M&lt;/c1&gt;, &lt;c2&gt;M\__Init.ahk&lt;/c2&gt; or &lt;c3&gt;M.ahk&lt;/c3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T174333Z" creationid="Ragnar-F" creationdate="20260918T174333Z">
+        <seg>Zum Beispiel könnte &lt;c0&gt;#Import M&lt;/c0&gt; die Datei mit dem exakten Namen &lt;c1&gt;M&lt;/c1&gt;, &lt;c2&gt;M\__Init.ahk&lt;/c2&gt; oder &lt;c3&gt;M.ahk&lt;/c3&gt; laden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -124201,8 +124521,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>If &lt;e1&gt;ModuleName&lt;/e1&gt; is &lt;c2&gt;AHK&lt;/c2&gt;, &lt;c3&gt;__Main&lt;/c3&gt; or a name used with a previous #Module directive, the existing module is "reopened", allowing &lt;a4&gt;startup code&lt;/a4&gt; and definitions to be added.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T135648Z" creationid="Ragnar-F" creationdate="20260913T135648Z">
-        <seg>Handelt es sich bei &lt;e1&gt;ModulName&lt;/e1&gt; um &lt;c2&gt;AHK&lt;/c2&gt;, &lt;c3&gt;__Main&lt;/c3&gt; oder einen Namen, der bei einer vorherigen #Module-Anweisung verwendet wurde, wird das existierende Modul "erneut geöffnet", was das Hinzufügen von &lt;a4&gt;Startcode&lt;/a4&gt; und Definitionen ermöglicht.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T172839Z" creationid="Ragnar-F" creationdate="20260913T135648Z">
+        <seg>Handelt es sich bei &lt;e1&gt;ModulName&lt;/e1&gt; um &lt;c2&gt;AHK&lt;/c2&gt;, &lt;c3&gt;__Main&lt;/c3&gt; oder einen Namen, der bei einer vorherigen #Module-Direktive verwendet wurde, wird das existierende Modul "erneut geöffnet", was das Hinzufügen von &lt;a4&gt;Startcode&lt;/a4&gt; und Definitionen ermöglicht.</seg>
       </tuv>
     </tu>
     <tu>
@@ -127623,6 +127943,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If it is not defined, the default list is as follows:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T173608Z" creationid="Ragnar-F" creationdate="20260918T173253Z">
+        <seg>Wenn diese Variable nicht verwendet wird, gilt die folgende Standardliste:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If it is still true, a new iteration begins; otherwise, the loop ends.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231025T120357Z" creationid="Ragnar-F" creationdate="20140307T195806Z">
@@ -129635,6 +129963,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231202T140027Z" creationid="Ragnar-F" creationdate="20231202T135659Z">
         <seg>Falls vorhanden, werden das optionale Sternchen, der Verbname und ein einzelnes separierendes Leer- oder Tabulatorzeichen von der weiteren Interpretation ausgeschlossen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If present, the property is initialized in the same way as any other instance variable.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T183715Z" creationid="Ragnar-F" creationdate="20260918T183715Z">
+        <seg>Falls vorhanden, wird die Eigenschaft wie jede andere Instanzvariable initialisiert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -139113,6 +139449,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>InstanceVar := &lt;i0&gt;InitExpression&lt;/i0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T182155Z" creationid="Ragnar-F" creationdate="20260918T182155Z">
+        <seg>InstanzVar := &lt;i0&gt;InitAusdruck&lt;/i0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Instances are typically created by calling &lt;a6&gt;&lt;e7&gt;ClassName&lt;/e7&gt;()&lt;/a6&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210307T152742Z" creationid="Ragnar-F" creationdate="20210307T152742Z">
@@ -145945,6 +146289,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>List items can be absolute paths or relative to the directory containing the script (&lt;a0&gt;A_ScriptDir&lt;/a0&gt;).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T173936Z" creationid="Ragnar-F" creationdate="20260918T173936Z">
+        <seg>Die Einträge in der Liste können absolute Pfade oder relativ zum Verzeichnis des Skripts (&lt;a0&gt;A_ScriptDir&lt;/a0&gt;) sein.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>List items may also take the following form:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T061313Z" creationid="Ragnar-F" creationdate="20260916T061313Z">
@@ -151345,6 +151697,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>MsgBox "A executing"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T170729Z" creationid="Ragnar-F" creationdate="20260918T170721Z">
+        <seg>MsgBox "A wird ausgeführt"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>MsgBox "A matching process has appeared (Process ID is " NewPID ")."</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231103T102216Z" creationid="Ragnar-F" creationdate="20180412T155647Z">
@@ -151453,6 +151813,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180815T144039Z" creationid="Ragnar-F" creationdate="20180815T144039Z">
         <seg>MsgBox "Mindestens ein Programmordner existiert."</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox "B executing"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T170821Z" creationid="Ragnar-F" creationdate="20260918T170811Z">
+        <seg>MsgBox "B wird ausgeführt"</seg>
       </tuv>
     </tu>
     <tu>
@@ -151769,6 +152137,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>MsgBox "Hello, world!",, "T2"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T180905Z" creationid="Ragnar-F" creationdate="20260918T180855Z">
+        <seg>MsgBox "Hallo, Welt!",, "T2"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>MsgBox "IProvideClassInfo interface not supported."</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180412T132708Z" creationid="Ragnar-F" creationdate="20180412T132708Z">
@@ -152037,6 +152413,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230624T095629Z" creationid="Ragnar-F" creationdate="20230624T095629Z">
         <seg>MsgBox "Eines der gewünschten Fenster ist aktiv."</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox "Other still has the original MsgBox.",, "T2"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T181127Z" creationid="Ragnar-F" creationdate="20260918T181127Z">
+        <seg>MsgBox "Anderes hat noch die originale MsgBox.",, "T2"</seg>
       </tuv>
     </tu>
     <tu>
@@ -153145,6 +153529,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>MsgBox "Within main, Other.MyVar = " (Other.MyVar ?? "inaccessible")</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T175835Z" creationid="Ragnar-F" creationdate="20260918T175318Z">
+        <seg>MsgBox "Im Haupt, Anderes.MeineVar = " (Anderes.MeineVar ?? "unzugänglich")</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>MsgBox "Word isn't open."</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230919T142723Z" creationid="Ragnar-F" creationdate="20180412T132450Z">
@@ -153157,6 +153549,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180413T080022Z" creationid="Ragnar-F" creationdate="20180413T080022Z">
         <seg>MsgBox "Wow!"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox "X = " (X ?? "not imported")</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T180247Z" creationid="Ragnar-F" creationdate="20260918T180237Z">
+        <seg>MsgBox "X = " (X ?? "nicht importiert")</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox "Y = " (Y ?? "not imported")</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T180255Z" creationid="Ragnar-F" creationdate="20260918T180249Z">
+        <seg>MsgBox "Y = " (Y ?? "nicht importiert")</seg>
       </tuv>
     </tu>
     <tu>
@@ -153673,6 +154081,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>MsgBox ANSWER</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T170903Z" creationid="Ragnar-F" creationdate="20260918T170828Z">
+        <seg>MsgBox ANTWORT</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>MsgBox ASin(0.2)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180412T153510Z" creationid="Ragnar-F" creationdate="20180412T153510Z">
@@ -153761,6 +154177,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>MsgBox Calculate()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T180209Z" creationid="Ragnar-F" creationdate="20260918T180207Z">
+        <seg>MsgBox Berechnen()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox CalculateX()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T180215Z" creationid="Ragnar-F" creationdate="20260918T180210Z">
+        <seg>MsgBox XBerechnen()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>MsgBox Caption " is " (State = 0 ? "unchecked" : "checked")</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260216T114640Z" creationid="Ragnar-F" creationdate="20260216T114640Z">
@@ -153781,6 +154213,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180412T153454Z" creationid="Ragnar-F" creationdate="20180412T153454Z">
         <seg>MsgBox Ceil(1.2)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox Check(3)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T180235Z" creationid="Ragnar-F" creationdate="20260918T180218Z">
+        <seg>MsgBox Prüfen(3)</seg>
       </tuv>
     </tu>
     <tu>
@@ -155565,6 +156005,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200622T142139Z" creationid="Ragnar-F" creationdate="20200622T142133Z">
         <seg>MsgBox(GuiFromHwnd(MeineGui.Hwnd).Title)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox(Text?, Title?, Options:="") {</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T181003Z" creationid="Ragnar-F" creationdate="20260918T180954Z">
+        <seg>MsgBox(Text?, Titel?, Optionen:="") {</seg>
       </tuv>
     </tu>
     <tu>
@@ -158461,6 +158909,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190506T174159Z" creationid="Ragnar-F" creationdate="20190506T174153Z">
         <seg>MeineVar := "a bbb cc"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MyVar := 1</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T175204Z" creationid="Ragnar-F" creationdate="20260918T175200Z">
+        <seg>MeineVar := 1</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MyVar := 2</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T175858Z" creationid="Ragnar-F" creationdate="20260918T175853Z">
+        <seg>MeineVar := 2</seg>
       </tuv>
     </tu>
     <tu>
@@ -165185,6 +165649,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Other.ShowVar()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T175850Z" creationid="Ragnar-F" creationdate="20260918T175232Z">
+        <seg>Anderes.VarZeigen()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Other:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140227T020942Z">
@@ -171521,6 +171993,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Property[&lt;i4&gt;Parameters&lt;/i4&gt;]</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T182254Z" creationid="Ragnar-F" creationdate="20260918T182254Z">
+        <seg>Eigenschaft[&lt;i4&gt;Parameter&lt;/i4&gt;]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Props</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260915T202219Z" creationid="Ragnar-F" creationdate="20260915T202219Z">
@@ -172837,6 +173317,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180716T164804Z" creationid="Ragnar-F" creationdate="20171225T203646Z">
         <seg>Objektreferenzen</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>References to environment variables are not resolved by AutoHotkey, as they are typically resolved before the process starts.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T173740Z" creationid="Ragnar-F" creationdate="20260918T173740Z">
+        <seg>Referenzen, die auf Umgebungsvariablen verweisen, werden von AutoHotkey nicht aufgelöst, da dies in der Regel bereits vor dem Prozessstart erfolgt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -180865,6 +181353,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Search Path &lt;s0&gt;[v2.1-alpha.20+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T172439Z" creationid="Ragnar-F" creationdate="20260918T172432Z">
+        <seg>Suchpfad &lt;s0&gt;[v2.1-alpha.20+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Search Results</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230814T160931Z" creationid="Ragnar-F" creationdate="20230814T160931Z">
@@ -181813,6 +182309,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230326T092733Z" creationid="Ragnar-F" creationdate="20140310T152447Z">
         <seg>Einzelheiten finden Sie unter &lt;a1&gt;Sondertasten&lt;/a1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>See &lt;a1&gt;Structures&lt;/a1&gt; and &lt;a2&gt;Type Specifiers&lt;/a2&gt; for details.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T183609Z" creationid="Ragnar-F" creationdate="20260918T183609Z">
+        <seg>Informationen finden Sie unter &lt;a1&gt;Strukturen&lt;/a1&gt; und &lt;a2&gt;Typbezeichner&lt;/a2&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -186457,6 +186961,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>ShorterProperty =&gt; &lt;i12&gt;Expression which calculates property value&lt;/i12&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T182335Z" creationid="Ragnar-F" creationdate="20260918T182335Z">
+        <seg>KürzereEigenschaft =&gt; &lt;i12&gt;Ausdruck zum Ermitteln des Eigenschaftswertes&lt;/i12&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>ShorterProperty[&lt;i0&gt;Parameters&lt;/i0&gt;] =&gt; &lt;i1&gt;Expression which calculates property value&lt;/i1&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231206T195822Z" creationid="Ragnar-F" creationdate="20210410T202738Z">
@@ -186589,6 +187101,30 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240421T101156Z" creationid="Ragnar-F" creationdate="20240421T101152Z">
         <seg>RefZyklusGuiZeigen(*) {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ShowVar()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T175157Z" creationid="Ragnar-F" creationdate="20260918T175157Z">
+        <seg>VarZeigen()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ShowVar() =&gt; MsgBox("Main MyVar = " MyVar)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T175844Z" creationid="Ragnar-F" creationdate="20260918T175714Z">
+        <seg>VarZeigen() =&gt; MsgBox("Haupt MeineVar = " MeineVar)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ShowVar() =&gt; MsgBox("Other MyVar = " MyVar)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T175926Z" creationid="Ragnar-F" creationdate="20260918T175859Z">
+        <seg>VarZeigen() =&gt; MsgBox("Anderes MeineVar = " MeineVar)</seg>
       </tuv>
     </tu>
     <tu>
@@ -191787,8 +192323,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>Splitting the components of a script into modules can make the components easier to reuse and maintain.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T162318Z" creationid="Ragnar-F" creationdate="20260918T162318Z">
-        <seg>Durch die Aufteilung eines Skripts in Module lassen sich seine Bestandteile leichter wiederverwenden und warten.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T181157Z" creationid="Ragnar-F" creationdate="20260918T162318Z">
+        <seg>Durch die Aufteilung eines Skripts in Module lassen sich seine Bestandteile leichter wiederverwenden und pflegen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -196097,6 +196633,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The #Import directive itself has no effect on the order.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T172854Z" creationid="Ragnar-F" creationdate="20260918T170659Z">
+        <seg>Die #Import-Direktive selbst hat keinen Einfluss auf die Reihenfolge.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The #Include and #IncludeAgain directives cause the script to behave as though the specified file's contents are present at this exact position.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230627T104320Z" creationid="Ragnar-F" creationdate="20180812T094837Z">
@@ -197477,6 +198021,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230421T094238Z" creationid="Ragnar-F" creationdate="20141227T212302Z">
         <seg>Das &lt;c1&gt;0x&lt;/c1&gt;-Präfix ist nur enthalten, wenn das &lt;c2&gt;#&lt;/c2&gt;-Flag vorhanden ist, wie in &lt;c3&gt;{:#x}&lt;/c3&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;c1&gt;AhkImportPath&lt;/c1&gt; environment variable can contain a semicolon-delimited list of additional directories to search.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T173215Z" creationid="Ragnar-F" creationdate="20260918T173215Z">
+        <seg>Die Umgebungsvariable &lt;c1&gt;AhkImportPath&lt;/c1&gt; kann eine semikolongetrennte Liste von Verzeichnissen enthalten, die ebenfalls durchsucht werden sollen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -203169,6 +203721,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The directory of the file which contains the #Import directive is always searched first.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T172924Z" creationid="Ragnar-F" creationdate="20260918T172924Z">
+        <seg>Das Verzeichnis der Datei, die die #Import-Direktive enthält, wird immer zuerst durchsucht.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The display name of a device; either the full name or a leading part (case-insensitive).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231110T093200Z" creationid="Ragnar-F" creationdate="20191209T103338Z">
@@ -206289,6 +206849,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The list is resolved only once, so &lt;a1&gt;A_LineFile&lt;/a1&gt; always refers to the main script.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T174000Z" creationid="Ragnar-F" creationdate="20260918T174000Z">
+        <seg>Die Liste wird nur einmal aufgelöst, daher verweist &lt;a1&gt;A_LineFile&lt;/a1&gt; immer auf das Hauptskript.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The list-view control sends an LVN_ITEMACTIVATE notification message to the parent window when the user clicks an item.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190411T103917Z" creationid="Ragnar-F" creationdate="20140311T150033Z">
@@ -206795,8 +207363,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>The module ends at the next #Module directive in the current file, or at the end of the current file.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T134418Z" creationid="Ragnar-F" creationdate="20260913T134418Z">
-        <seg>Das Modul endet bei der nächsten #Module-Anweisung in der aktuellen Datei oder am Ende der aktuellen Datei.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T172827Z" creationid="Ragnar-F" creationdate="20260913T134418Z">
+        <seg>Das Modul endet bei der nächsten #Module-Direktive in der aktuellen Datei oder am Ende der aktuellen Datei.</seg>
       </tuv>
     </tu>
     <tu>
@@ -206805,6 +207373,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T120919Z" creationid="Ragnar-F" creationdate="20260913T120919Z">
         <seg>Das Modul selbst wird nur zum globalen Namensraum des aktuellen Moduls hinzugefügt, wenn &lt;e0&gt;ModulAlias&lt;/e0&gt; angegeben oder &lt;e1&gt;ModulName&lt;/e1&gt; anführungszeichenlos ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The module search path is a list of directories which the &lt;a0&gt;#Import&lt;/a0&gt; statement looks in to find module files.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T172813Z" creationid="Ragnar-F" creationdate="20260918T172614Z">
+        <seg>Der Modulsuchpfad ist eine Liste von Verzeichnissen, die von der &lt;a0&gt;#Import&lt;/a0&gt;-Direktive genutzt wird, um Moduldateien zu finden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -216085,6 +216661,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230908T174101Z" creationid="Ragnar-F" creationdate="20221220T164614Z">
         <seg>das keine offizielle Methode zum Senden von Tastendrücken verwendet, sondern stattdessen Meldungen direkt an das von Ihnen angegebene Fenster sendet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This doesn't work well when modules have circular dependencies.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T172430Z" creationid="Ragnar-F" creationdate="20260918T172430Z">
+        <seg>Das funktioniert jedoch weniger gut, wenn Module zirkuläre Abhängigkeiten aufweisen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -229113,10 +229697,34 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Typed Property &lt;s0&gt;[v2.1-alpha.3+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T182843Z" creationid="Ragnar-F" creationdate="20260918T182836Z">
+        <seg>Typisierte Eigenschaft &lt;s0&gt;[v2.1-alpha.3+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Typed property definitions can no longer be owned by any Object which is not a Prototype.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T125131Z" creationid="Ragnar-F" creationdate="20260911T125131Z">
         <seg>Geändert: Definitionen typisierter Eigenschaften können nicht länger von einem Objekt besessen werden, das kein Prototypobjekt ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>TypedVar : &lt;i0&gt;TypeSpecifier&lt;/i0&gt; := &lt;i1&gt;InitExpression&lt;/i1&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T183037Z" creationid="Ragnar-F" creationdate="20260918T182952Z">
+        <seg>TypisierteVar : &lt;i0&gt;TypBezeichner&lt;/i0&gt; := &lt;i1&gt;InitAusdruck&lt;/i1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>TypedVar : &lt;i1&gt;TypeExpression&lt;/i1&gt; := &lt;i2&gt;InitExpression&lt;/i2&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T182227Z" creationid="Ragnar-F" creationdate="20260918T182158Z">
+        <seg>TypisierteVar : &lt;i1&gt;TypisierterAusdruck&lt;/i1&gt; := &lt;i2&gt;InitAusdruck&lt;/i2&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -231829,6 +232437,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231115T122044Z" creationid="Ragnar-F" creationdate="20210223T133040Z">
         <seg>Verwenden Sie eine Variable, um eine Zeichenkette von einer externen Funktion über &lt;a0&gt;DllCall&lt;/a0&gt; zu empfangen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Use an alias to resolve a conflict.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T181727Z" creationid="Ragnar-F" creationdate="20260918T175950Z">
+        <seg>Verwenden Sie ein Alias, um einen Konflikt zu lösen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -242594,6 +243210,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Within each directory, files are considered in this order:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T174203Z" creationid="Ragnar-F" creationdate="20260918T174203Z">
+        <seg>Innerhalb jedes Verzeichnisses werden die Dateien in folgender Reihenfolge abgearbeitet:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Within each row, each field (column) except the last will end with a tab character (`t).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230407T070154Z" creationid="Ragnar-F" creationdate="20140228T235008Z">
@@ -242638,6 +243262,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231025T131953Z" creationid="Ragnar-F" creationdate="20170720T202940Z">
         <seg>Innerhalb der Schleife kann die &lt;a0&gt;FileAppend&lt;/a0&gt;-Funktion ohne den &lt;e1&gt;DateiName&lt;/e1&gt;-Parameter verwendet werden, um den zu schreibenden Text an die spezielle Datei anzufügen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Within this documentation, the word "class" on its own usually means a class object.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T182355Z" creationid="Ragnar-F" creationdate="20260918T182355Z">
+        <seg>In dieser Dokumentation bezieht sich das Wort "Klasse" in der Regel auf ein Klassenobjekt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -244170,6 +244802,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["!~=", "Variables.htm#regex", 4, "", true],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184306Z" creationid="Ragnar-F" creationdate="20260918T184306Z">
+        <seg>["!~=", "Variables.htm#regex", 4, "", true],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["#ClipboardTimeout", "lib/_ClipboardTimeout.htm", 0, "S"],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T073913Z" creationid="Ragnar-F" creationdate="20260903T073433Z">
@@ -244274,6 +244914,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["#Import", "lib/_Import.htm", 0, "E"],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184314Z" creationid="Ragnar-F" creationdate="20260918T184314Z">
+        <seg>["#Import", "lib/_Import.htm", 0, "E"],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["#Import", "lib/_Import.htm"]</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184858Z" creationid="Ragnar-F" creationdate="20260918T184858Z">
+        <seg>["#Import", "lib/_Import.htm"]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["#Include", "lib/_Include.htm", 0, "S"],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T073923Z" creationid="Ragnar-F" creationdate="20260903T073530Z">
@@ -244362,6 +245018,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["#Module", "lib/_Module.htm", 0, "S"],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184316Z" creationid="Ragnar-F" creationdate="20260918T184316Z">
+        <seg>["#Module", "lib/_Module.htm", 0, "S"],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["#Module", "lib/_Module.htm"],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184855Z" creationid="Ragnar-F" creationdate="20260918T184855Z">
+        <seg>["#Module", "lib/_Module.htm"],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["#NoTrayIcon", "lib/_NoTrayIcon.htm", 0, ""],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T073932Z" creationid="Ragnar-F" creationdate="20260903T073536Z">
@@ -244406,6 +245078,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T084656Z" creationid="Ragnar-F" creationdate="20260903T084656Z">
         <seg>["#SingleInstance", "lib/_SingleInstance.htm"],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["#StructPack", "lib/_StructPack.htm", 0, "S"],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184319Z" creationid="Ragnar-F" creationdate="20260918T184319Z">
+        <seg>["#StructPack", "lib/_StructPack.htm", 0, "S"],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["#StructPack", "lib/_StructPack.htm"],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184915Z" creationid="Ragnar-F" creationdate="20260918T184915Z">
+        <seg>["#StructPack", "lib/_StructPack.htm"],</seg>
       </tuv>
     </tu>
     <tu>
@@ -244834,6 +245522,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["??=", "Variables.htm#maybe-assign", 4, "", true],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184310Z" creationid="Ragnar-F" creationdate="20260918T184310Z">
+        <seg>["??=", "Variables.htm#maybe-assign", 4, "", true],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["@Ahk2Exe-", "misc/Ahk2ExeDirectives.htm"],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T073836Z" creationid="Ragnar-F" creationdate="20260903T073324Z">
@@ -244858,10 +245554,26 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["ASin/ACos/ATan/ATan2", "lib/Math.htm#ASin"]</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184845Z" creationid="Ragnar-F" creationdate="20260918T184845Z">
+        <seg>["ASin/ACos/ATan/ATan2", "lib/Math.htm#ASin"]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["ATan", "lib/Math.htm#ATan", 2],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T074352Z" creationid="Ragnar-F" creationdate="20260903T074352Z">
         <seg>["ATan", "lib/Math.htm#ATan", 2],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["ATan2", "lib/Math.htm#ATan2", 2],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184353Z" creationid="Ragnar-F" creationdate="20260918T184353Z">
+        <seg>["ATan2", "lib/Math.htm#ATan2", 2],</seg>
       </tuv>
     </tu>
     <tu>
@@ -245098,6 +245810,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["A_HotIf", "Variables.htm#HotIf", 1],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184321Z" creationid="Ragnar-F" creationdate="20260918T184321Z">
+        <seg>["A_HotIf", "Variables.htm#HotIf", 1],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["A_HotkeyInterval", "lib/A_MaxHotkeysPerInterval.htm", 1],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T074033Z" creationid="Ragnar-F" creationdate="20260903T074033Z">
@@ -245254,6 +245974,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T074047Z" creationid="Ragnar-F" creationdate="20260903T074047Z">
         <seg>["A_KeyDurationPlay", "Variables.htm#KeyDelayPlay", 1],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["A_KeybdHookInstalled", "Variables.htm#HookInstalled", 1],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184324Z" creationid="Ragnar-F" creationdate="20260918T184324Z">
+        <seg>["A_KeybdHookInstalled", "Variables.htm#HookInstalled", 1],</seg>
       </tuv>
     </tu>
     <tu>
@@ -245566,6 +246294,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T074124Z" creationid="Ragnar-F" creationdate="20260903T074124Z">
         <seg>["A_MouseDelayPlay", "Variables.htm#MouseDelay", 1],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["A_MouseHookInstalled", "Variables.htm#HookInstalled", 1],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184327Z" creationid="Ragnar-F" creationdate="20260918T184327Z">
+        <seg>["A_MouseHookInstalled", "Variables.htm#HookInstalled", 1],</seg>
       </tuv>
     </tu>
     <tu>
@@ -246082,6 +246818,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["AhkImportPath", "Modules.htm#Search_Path"],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184333Z" creationid="Ragnar-F" creationdate="20260918T184333Z">
+        <seg>["AhkImportPath", "Modules.htm#Search_Path"],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["AltGr", "Hotkeys.htm#AltGr"],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T074325Z" creationid="Ragnar-F" creationdate="20260903T074325Z">
@@ -246142,6 +246886,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T153150Z" creationid="Ragnar-F" creationdate="20260903T074342Z">
         <seg>["Arrays (allgemeine Infos)", "Objects.htm"],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["At method (Struct)", "lib/Struct.htm#At", 7],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184353Z" creationid="Ragnar-F" creationdate="20260918T184344Z">
+        <seg>["At-Methode (Struct)", "lib/Struct.htm#At", 7],</seg>
       </tuv>
     </tu>
     <tu>
@@ -246518,6 +247270,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T153809Z" creationid="Ragnar-F" creationdate="20260903T083644Z">
         <seg>["Änderungen von v1.1 bis v2.0", "v2-changes.htm"],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["Changes from v2.0 to v2.1", "v2.1-changes.htm"],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184828Z" creationid="Ragnar-F" creationdate="20260918T184828Z">
+        <seg>["Änderungen von v2.0 bis v2.1", "v2.1-changes.htm"],</seg>
       </tuv>
     </tu>
     <tu>
@@ -247758,6 +248518,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T154154Z" creationid="Ragnar-F" creationdate="20260903T075327Z">
         <seg>["DefineProp-Methode (Object)", "lib/Object.htm#DefineProp", 7],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["DefineProp", "lib/Object.htm#DefineProp", 2],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184356Z" creationid="Ragnar-F" creationdate="20260918T184356Z">
+        <seg>["DefineProp", "lib/Object.htm#DefineProp", 2],</seg>
       </tuv>
     </tu>
     <tu>
@@ -249058,6 +249826,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["Float32", "Structs.htm#numeric-types", 6],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184358Z" creationid="Ragnar-F" creationdate="20260918T184358Z">
+        <seg>["Float32", "Structs.htm#numeric-types", 6],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["Float64", "Structs.htm#numeric-types", 6],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184400Z" creationid="Ragnar-F" creationdate="20260918T184400Z">
+        <seg>["Float64", "Structs.htm#numeric-types", 6],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["Floor", "lib/Math.htm#Floor", 2],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T081121Z" creationid="Ragnar-F" creationdate="20260903T081121Z">
@@ -249882,6 +250666,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["Hint property (Error)", "lib/Error.htm#Hint", 7],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184416Z" creationid="Ragnar-F" creationdate="20260918T184416Z">
+        <seg>["Hint-Eigenschaft (Error)", "lib/Error.htm#Hint", 7],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["HotIf / HotIfWin...", "lib/HotIf.htm"],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T084059Z" creationid="Ragnar-F" creationdate="20260903T084059Z">
@@ -250366,6 +251158,46 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T084125Z" creationid="Ragnar-F" creationdate="20260903T084125Z">
         <seg>["InstallMouseHook", "lib/InstallMouseHook.htm"],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["Int16", "Structs.htm#numeric-types", 6],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184431Z" creationid="Ragnar-F" creationdate="20260918T184431Z">
+        <seg>["Int16", "Structs.htm#numeric-types", 6],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["Int32", "Structs.htm#numeric-types", 6],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184433Z" creationid="Ragnar-F" creationdate="20260918T184433Z">
+        <seg>["Int32", "Structs.htm#numeric-types", 6],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["Int64", "Structs.htm#numeric-types", 6],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184435Z" creationid="Ragnar-F" creationdate="20260918T184435Z">
+        <seg>["Int64", "Structs.htm#numeric-types", 6],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["Int8", "Structs.htm#numeric-types", 6],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184437Z" creationid="Ragnar-F" creationdate="20260918T184437Z">
+        <seg>["Int8", "Structs.htm#numeric-types", 6],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["IntPtr", "Structs.htm#numeric-types", 6],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184439Z" creationid="Ragnar-F" creationdate="20260918T184439Z">
+        <seg>["IntPtr", "Structs.htm#numeric-types", 6],</seg>
       </tuv>
     </tu>
     <tu>
@@ -251346,6 +252178,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["Modules", "Modules.htm",</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184853Z" creationid="Ragnar-F" creationdate="20260918T184850Z">
+        <seg>["Module", "Modules.htm",</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["Modules", "Modules.htm"],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184449Z" creationid="Ragnar-F" creationdate="20260918T184444Z">
+        <seg>["Module", "Modules.htm"],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["Monitor functions", "lib/Monitor.htm"],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T153535Z" creationid="Ragnar-F" creationdate="20260903T082105Z">
@@ -251762,6 +252610,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["ObjGetDataPtr", "lib/Object.htm#GetDataPtr", 2],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184450Z" creationid="Ragnar-F" creationdate="20260918T184450Z">
+        <seg>["ObjGetDataPtr", "lib/Object.htm#GetDataPtr", 2],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["ObjGetDataSize", "lib/Object.htm#GetDataSize", 2],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184451Z" creationid="Ragnar-F" creationdate="20260918T184451Z">
+        <seg>["ObjGetDataSize", "lib/Object.htm#GetDataSize", 2],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["ObjHasOwnProp", "lib/Object.htm#HasOwnProp", 2],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T082252Z" creationid="Ragnar-F" creationdate="20260903T082252Z">
@@ -251826,6 +252690,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["ObjSetDataPtr", "lib/Object.htm#SetDataPtr", 2],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184453Z" creationid="Ragnar-F" creationdate="20260918T184453Z">
+        <seg>["ObjSetDataPtr", "lib/Object.htm#SetDataPtr", 2],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["Object Types", "ObjList.htm",</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T153827Z" creationid="Ragnar-F" creationdate="20260903T084200Z">
@@ -251862,6 +252734,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T154307Z" creationid="Ragnar-F" creationdate="20260903T082248Z">
         <seg>["Objects (general information)", "Objects.htm"], ["Objekte (allgemeine Infos)", "Objects.htm"],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["Objects", "Objects.htm"],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184801Z" creationid="Ragnar-F" creationdate="20260918T184715Z">
+        <seg>["Objekte", "Objects.htm"],</seg>
       </tuv>
     </tu>
     <tu>
@@ -251998,6 +252878,38 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T154310Z" creationid="Ragnar-F" creationdate="20260903T082318Z">
         <seg>["OnKeyUp-Eigenschaft (InputHook)", "lib/InputHook.htm#OnKeyUp", 7],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["OnMessage (Gui)", "lib/GuiOnMessage.htm"],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184456Z" creationid="Ragnar-F" creationdate="20260918T184456Z">
+        <seg>["OnMessage (Gui)", "lib/GuiOnMessage.htm"],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["OnMessage method (Gui)", "lib/Gui.htm#OnMessage", 7],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184504Z" creationid="Ragnar-F" creationdate="20260918T184458Z">
+        <seg>["OnMessage-Methode (Gui)", "lib/Gui.htm#OnMessage", 7],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["OnMessage method (Gui.Control)", "lib/GuiControl.htm#OnMessage", 7],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184510Z" creationid="Ragnar-F" creationdate="20260918T184505Z">
+        <seg>["OnMessage-Methode (Gui.Control)", "lib/GuiControl.htm#OnMessage", 7],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["OnMessage method", "lib/GuiOnMessage.htm"],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184843Z" creationid="Ragnar-F" creationdate="20260918T184830Z">
+        <seg>["OnMessage-Methode", "lib/GuiOnMessage.htm"],</seg>
       </tuv>
     </tu>
     <tu>
@@ -252142,6 +253054,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T082415Z" creationid="Ragnar-F" creationdate="20260903T082415Z">
         <seg>["Persistent", "lib/Persistent.htm", 2],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["Persistent", "lib/Persistent.htm"],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184903Z" creationid="Ragnar-F" creationdate="20260918T184903Z">
+        <seg>["Persistent", "lib/Persistent.htm"],</seg>
       </tuv>
     </tu>
     <tu>
@@ -252394,10 +253314,42 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["PropRef", "lib/PropRef.htm", 6],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184511Z" creationid="Ragnar-F" creationdate="20260918T184511Z">
+        <seg>["PropRef", "lib/PropRef.htm", 6],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["PropertyError", "lib/Error.htm#MemberError", 6],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T082509Z" creationid="Ragnar-F" creationdate="20260903T082509Z">
         <seg>["PropertyError", "lib/Error.htm#MemberError", 6],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["Props method (Any)", "lib/Any.htm#Props", 7],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184520Z" creationid="Ragnar-F" creationdate="20260918T184515Z">
+        <seg>["Props-Methode (Any)", "lib/Any.htm#Props", 7],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["Props", "lib/Props.htm", 2],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184513Z" creationid="Ragnar-F" creationdate="20260918T184513Z">
+        <seg>["Props", "lib/Props.htm", 2],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["Props", "lib/Props.htm"]</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184905Z" creationid="Ragnar-F" creationdate="20260918T184905Z">
+        <seg>["Props", "lib/Props.htm"]</seg>
       </tuv>
     </tu>
     <tu>
@@ -252414,6 +253366,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T154317Z" creationid="Ragnar-F" creationdate="20260903T082512Z">
         <seg>["Ptr-Eigenschaft (Buffer)", "lib/Buffer.htm#Ptr", 7],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["Ptr property (Struct)", "lib/Struct.htm#Ptr", 7],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184525Z" creationid="Ragnar-F" creationdate="20260918T184520Z">
+        <seg>["Ptr-Eigenschaft (Struct)", "lib/Struct.htm#Ptr", 7],</seg>
       </tuv>
     </tu>
     <tu>
@@ -253130,6 +254090,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["SetCue method (Gui.ComboBox)", "lib/GuiControl.htm#SetCue", 7],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184532Z" creationid="Ragnar-F" creationdate="20260918T184527Z">
+        <seg>["SetCue-Methode (Gui.ComboBox)", "lib/GuiControl.htm#SetCue", 7],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["SetCue method (Gui.Edit)", "lib/GuiControl.htm#SetCue", 7],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184540Z" creationid="Ragnar-F" creationdate="20260918T184533Z">
+        <seg>["SetCue-Methode (Gui.Edit)", "lib/GuiControl.htm#SetCue", 7],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["SetDefaultMouseSpeed", "lib/SetDefaultMouseSpeed.htm", 2],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T082759Z" creationid="Ragnar-F" creationdate="20260903T082759Z">
@@ -253394,6 +254370,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["Show method (Error)", "lib/Error.htm#Show", 7],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184547Z" creationid="Ragnar-F" creationdate="20260918T184542Z">
+        <seg>["Show-Methode (Error)", "lib/Error.htm#Show", 7],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["Show method (Gui)", "lib/Gui.htm#Show", 7],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T154333Z" creationid="Ragnar-F" creationdate="20260903T082850Z">
@@ -253470,6 +254454,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T154335Z" creationid="Ragnar-F" creationdate="20260903T082906Z">
         <seg>["Size-Eigenschaft (Buffer)", "lib/Buffer.htm#Size", 7],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["Size property (Struct)", "lib/Struct.htm#Size", 7],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184554Z" creationid="Ragnar-F" creationdate="20260918T184548Z">
+        <seg>["Size-Eigenschaft (Struct)", "lib/Struct.htm#Size", 7],</seg>
       </tuv>
     </tu>
     <tu>
@@ -253946,6 +254938,38 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["Struct", "lib/Struct.htm", 6],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184558Z" creationid="Ragnar-F" creationdate="20260918T184558Z">
+        <seg>["Struct", "lib/Struct.htm", 6],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["Struct.Array", "lib/StructArray.htm", 6],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184600Z" creationid="Ragnar-F" creationdate="20260918T184600Z">
+        <seg>["Struct.Array", "lib/StructArray.htm", 6],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["Struct.Ptr", "Structs.htm#pointers", 6],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184610Z" creationid="Ragnar-F" creationdate="20260918T184610Z">
+        <seg>["Struct.Ptr", "Structs.htm#pointers", 6],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["Structures", "Structs.htm"]</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184810Z" creationid="Ragnar-F" creationdate="20260918T184803Z">
+        <seg>["Strukturen", "Structs.htm"]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["Styles for a window/control", "misc/Styles.htm"],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T153822Z" creationid="Ragnar-F" creationdate="20260903T084005Z">
@@ -254330,6 +255354,30 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["UInt16", "Structs.htm#numeric-types", 6],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184645Z" creationid="Ragnar-F" creationdate="20260918T184645Z">
+        <seg>["UInt16", "Structs.htm#numeric-types", 6],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["UInt32", "Structs.htm#numeric-types", 6],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184646Z" creationid="Ragnar-F" creationdate="20260918T184646Z">
+        <seg>["UInt32", "Structs.htm#numeric-types", 6],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["UInt8", "Structs.htm#numeric-types", 6],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184648Z" creationid="Ragnar-F" creationdate="20260918T184648Z">
+        <seg>["UInt8", "Structs.htm#numeric-types", 6],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["Uncheck method (Menu)", "lib/Menu.htm#Uncheck", 7],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T154344Z" creationid="Ragnar-F" creationdate="20260903T083204Z">
@@ -254690,6 +255738,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["WinGetAlwaysOnTop", "lib/WinGetAlwaysOnTop.htm", 2],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184710Z" creationid="Ragnar-F" creationdate="20260918T184710Z">
+        <seg>["WinGetAlwaysOnTop", "lib/WinGetAlwaysOnTop.htm", 2],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["WinGetAlwaysOnTop", "lib/WinGetAlwaysOnTop.htm"],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184908Z" creationid="Ragnar-F" creationdate="20260918T184908Z">
+        <seg>["WinGetAlwaysOnTop", "lib/WinGetAlwaysOnTop.htm"],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["WinGetClass", "lib/WinGetClass.htm", 2],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T083337Z" creationid="Ragnar-F" creationdate="20260903T083337Z">
@@ -254766,6 +255830,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T084624Z" creationid="Ragnar-F" creationdate="20260903T084624Z">
         <seg>["WinGetCount", "lib/WinGetCount.htm"],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["WinGetEnabled", "lib/WinGetEnabled.htm", 2],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184712Z" creationid="Ragnar-F" creationdate="20260918T184712Z">
+        <seg>["WinGetEnabled", "lib/WinGetEnabled.htm", 2],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["WinGetEnabled", "lib/WinGetEnabled.htm"],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184911Z" creationid="Ragnar-F" creationdate="20260918T184911Z">
+        <seg>["WinGetEnabled", "lib/WinGetEnabled.htm"],</seg>
       </tuv>
     </tu>
     <tu>
@@ -255642,10 +256722,42 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["__Ref method (Object)", "lib/Object.htm#__Ref", 7],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T183956Z" creationid="Ragnar-F" creationdate="20260918T183923Z">
+        <seg>["__Ref-Methode (Object)", "lib/Object.htm#__Ref", 7],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["__Ref method (Struct)", "lib/Struct.htm#__Ref", 7],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184005Z" creationid="Ragnar-F" creationdate="20260918T183958Z">
+        <seg>["__Ref-Methode (Struct)", "lib/Struct.htm#__Ref", 7],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["__Set meta-function", "Objects.htm#Meta_Functions"],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T153054Z" creationid="Ragnar-F" creationdate="20260903T073209Z">
         <seg>["__Set-Metafunktion", "Objects.htm#Meta_Functions"],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["__Value property (VarRef)", "Concepts.htm#variable-references", 7],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184303Z" creationid="Ragnar-F" creationdate="20260918T184255Z">
+        <seg>["__Value-Eigenschaft (VarRef)", "Concepts.htm#variable-references", 7],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["__Value property (struct)", "Structs.htm#abstract", 7],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184252Z" creationid="Ragnar-F" creationdate="20260918T184246Z">
+        <seg>["__Value-Eigenschaft (struct)", "Structs.htm#abstract", 7],</seg>
       </tuv>
     </tu>
     <tu>
@@ -255730,6 +256842,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["ahk_opt", "misc/WinTitle.htm#ahk_opt"],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184330Z" creationid="Ragnar-F" creationdate="20260918T184330Z">
+        <seg>["ahk_opt", "misc/WinTitle.htm#ahk_opt"],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["ahk_pid", "misc/WinTitle.htm#ahk_pid"],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T074317Z" creationid="Ragnar-F" creationdate="20260903T074317Z">
@@ -255766,6 +256886,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T154106Z" creationid="Ragnar-F" creationdate="20260903T074331Z">
         <seg>["append to file", "lib/FileAppend.htm"], ["Anfügen an einer Datei", "lib/FileAppend.htm"],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["as (#Import)", "lib/_Import.htm"],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184337Z" creationid="Ragnar-F" creationdate="20260918T184337Z">
+        <seg>["as (#Import)", "lib/_Import.htm"],</seg>
       </tuv>
     </tu>
     <tu>
@@ -256314,6 +257442,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["en", "https://www.autohotkey.com/docs/alpha/", "English"]</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T183813Z" creationid="Ragnar-F" creationdate="20260918T183813Z">
+        <seg>["en", "https://www.autohotkey.com/docs/alpha/", "English"]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["environment variables (change them)", "lib/EnvSet.htm"],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T154206Z" creationid="Ragnar-F" creationdate="20260903T075615Z">
@@ -256622,6 +257758,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T154235Z" creationid="Ragnar-F" creationdate="20260903T081456Z">
         <seg>["icon, changing", "lib/TraySetIcon.htm"], ["Symbol ändern", "lib/TraySetIcon.htm"],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["import", "lib/_Import.htm", 5, "", true],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184419Z" creationid="Ragnar-F" creationdate="20260918T184419Z">
+        <seg>["import", "lib/_Import.htm", 5, "", true],</seg>
       </tuv>
     </tu>
     <tu>
@@ -257474,6 +258618,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["struct", "Structs.htm#classdef", 5, "", true],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184555Z" creationid="Ragnar-F" creationdate="20260918T184555Z">
+        <seg>["struct", "Structs.htm#classdef", 5, "", true],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["structures", "Structs.htm"],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184619Z" creationid="Ragnar-F" creationdate="20260918T184611Z">
+        <seg>["Strukturen", "Structs.htm"],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["structures, via DllCall", "lib/DllCall.htm#struct"],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T154337Z" creationid="Ragnar-F" creationdate="20260903T083007Z">
@@ -257626,6 +258786,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>["type specifiers (structs)", "Structs.htm#type-specs"],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184644Z" creationid="Ragnar-F" creationdate="20260918T184624Z">
+        <seg>["Typbezeichner (Strukturen)", "Structs.htm#type-specs"],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>["uninitialized variables", "Concepts.htm#uninitialized-variables"],</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T153702Z" creationid="Ragnar-F" creationdate="20260903T083205Z">
@@ -257734,6 +258902,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T154347Z" creationid="Ragnar-F" creationdate="20260903T083256Z">
         <seg>["virtual key", "lib/Send.htm#vk"], ["virtuelle Taste", "lib/Send.htm#vk"],</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>["virtual reference", "Functions.htm#virtual-reference"],</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T184708Z" creationid="Ragnar-F" creationdate="20260918T184653Z">
+        <seg>["virtuelle Referenz", "Functions.htm#virtual-reference"],</seg>
       </tuv>
     </tu>
     <tu>
@@ -262362,6 +263538,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>get =&gt; &lt;i9&gt;Expression which calculates property value&lt;/i9&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T182329Z" creationid="Ragnar-F" creationdate="20260918T182329Z">
+        <seg>get =&gt; &lt;i9&gt;Ausdruck zum Ermitteln des Eigenschaftswertes&lt;/i9&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>get =&gt; EnvGet(name)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190510T193826Z" creationid="Ragnar-F" creationdate="20190510T193826Z">
@@ -262414,6 +263598,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180410T175048Z" creationid="Ragnar-F" creationdate="20180410T175048Z">
         <seg>global</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>global ANSWER := 42</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T170804Z" creationid="Ragnar-F" creationdate="20260918T170759Z">
+        <seg>global ANTWORT := 42</seg>
       </tuv>
     </tu>
     <tu>
@@ -267210,6 +268402,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>return &lt;i6&gt;value of property&lt;/i6&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T182325Z" creationid="Ragnar-F" creationdate="20260918T182325Z">
+        <seg>return &lt;i6&gt;Eigenschaftswert&lt;/i6&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>return AHK.MsgBox(Text?, Title?, "Iconi " Options)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T181020Z" creationid="Ragnar-F" creationdate="20260918T181004Z">
+        <seg>return AHK.MsgBox(Text?, Titel?, "Iconi " Optionen)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>return A_LoopRegType</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180411T181428Z" creationid="Ragnar-F" creationdate="20180411T181428Z">
@@ -267994,6 +269202,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>set =&gt; &lt;i10&gt;Expression which stores or otherwise handles&lt;/i10&gt; &lt;s11&gt;value&lt;/s11&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T182332Z" creationid="Ragnar-F" creationdate="20260918T182332Z">
+        <seg>set =&gt; &lt;i10&gt;Ausdruck zum Speichern oder Verarbeiten von&lt;/i10&gt; &lt;s11&gt;value&lt;/s11&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>set =&gt; &lt;i2&gt;Expression which stores or otherwise handles&lt;/i2&gt; &lt;s3&gt;value&lt;/s3&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260322T114407Z" creationid="Ragnar-F" creationdate="20260322T114407Z">
@@ -268198,6 +269414,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20191010T071543Z" creationid="Ragnar-F" creationdate="20191010T071543Z">
         <seg>static CLSID := "{56FDF344-FD6D-11d0-958A-006097C9A090}"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>static ClassVar := &lt;i0&gt;InitExpression&lt;/i0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T183724Z" creationid="Ragnar-F" creationdate="20260918T183724Z">
+        <seg>static KlasseVar := &lt;i0&gt;InitAusdruck&lt;/i0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>static ClassVar := &lt;i3&gt;InitExpression&lt;/i3&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T182248Z" creationid="Ragnar-F" creationdate="20260918T182228Z">
+        <seg>static KlasseVar := &lt;i3&gt;InitAusdruck&lt;/i3&gt;</seg>
       </tuv>
     </tu>
     <tu>
