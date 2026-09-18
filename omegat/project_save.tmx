@@ -5542,6 +5542,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>#HotIf and &lt;a1&gt;HotIf&lt;/a1&gt; expressions are module-scoped, as they may contain references to module-level variables.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T165547Z" creationid="Ragnar-F" creationdate="20260918T165229Z">
+        <seg>#HotIf und &lt;a1&gt;HotIf&lt;/a1&gt;-Ausdrücke gelten nur innerhalb ihres Moduls, da sie Referenzen enthalten können, die auf Variablen im Modul verweisen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>#HotIf can also be used to alter the behavior of an ordinary key like &lt;k0&gt;Enter&lt;/k0&gt; or &lt;k1&gt;Space&lt;/k1&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230826T080213Z" creationid="Ragnar-F" creationdate="20200612T105029Z">
@@ -33578,6 +33586,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;#HotIf&lt;/a0&gt; affects only the current module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T164737Z" creationid="Ragnar-F" creationdate="20260918T164737Z">
+        <seg>&lt;a0&gt;#HotIf&lt;/a0&gt; beeinflusst nur das aktuelle Modul.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;#HotIfTimeout&lt;/a0&gt; may be used to override the default timeout value.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230911T095337Z" creationid="Ragnar-F" creationdate="20200612T113530Z">
@@ -33606,6 +33622,15 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T144807Z" creationid="Ragnar-F" creationdate="20260911T144807Z">
         <seg>&lt;a0&gt;#Import&lt;/a0&gt; wurde hinzugefügt, mit derselben Syntax wie Import, außer der Platzierung des optionalen Schlüsselworts Export.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;#Include&lt;/a0&gt; is able to include a file once per module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T164420Z" creationid="Ragnar-F" creationdate="20260918T164420Z">
+        <seg>&lt;a0&gt;#Include&lt;/a0&gt; kann jeweils nur eine Datei pro Modul inkludieren.
+</seg>
       </tuv>
     </tu>
     <tu>
@@ -33742,6 +33767,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231127T134229Z" creationid="Ragnar-F" creationdate="20210705T191548Z">
         <seg>&lt;a0&gt;#Warn VarUnset&lt;/a0&gt; wurde hinzugefügt und verwendet standardmäßig den MsgBox-Modus.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;#Warn&lt;/a0&gt; can enable or disable warnings within the current module without affecting other modules.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T164541Z" creationid="Ragnar-F" creationdate="20260918T164541Z">
+        <seg>Mit &lt;a0&gt;#Warn&lt;/a0&gt; können Warnungen innerhalb des aktuellen Moduls aktiviert oder deaktiviert werden, ohne dass andere Module davon betroffen sind.</seg>
       </tuv>
     </tu>
     <tu>
@@ -47010,6 +47043,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;c2&gt;A_Args&lt;/c2&gt; is the exception (it is a normal variable defined in __Main).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T164129Z" creationid="Ragnar-F" creationdate="20260918T164129Z">
+        <seg>&lt;c2&gt;A_Args&lt;/c2&gt; ist eine Ausnahme (es ist eine normale in __Main definierte Variable).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;c2&gt;A_Args[1]&lt;/c2&gt; contains the first parameter.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20160705T135502Z" creationid="Ragnar-F" creationdate="20160705T135449Z">
@@ -47786,6 +47827,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;e0&gt;Body&lt;/e0&gt;, sometimes referred to as an auto-execute section.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T161004Z" creationid="Ragnar-F" creationdate="20260918T161004Z">
+        <seg>&lt;e0&gt;Körper&lt;/e0&gt;, der manchmal auch als automatischer Ausführungsbereich bezeichnet wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;e0&gt;Callback&lt;/e0&gt; is called on the current &lt;a1&gt;thread&lt;/a1&gt;, before it exits (that is, before the call stack unwinds).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230622T091837Z" creationid="Ragnar-F" creationdate="20230622T091837Z">
@@ -48310,6 +48359,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231204T081258Z" creationid="Ragnar-F" creationdate="20231204T081258Z">
         <seg>&lt;e0&gt;Get&lt;/e0&gt;, &lt;e1&gt;Set&lt;/e1&gt;, &lt;e2&gt;Call&lt;/e2&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;e0&gt;Global namespace&lt;/e0&gt; for variables, functions and classes.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T160809Z" creationid="Ragnar-F" creationdate="20260918T160809Z">
+        <seg>&lt;e0&gt;Globalen Namensraum&lt;/e0&gt; für Variablen, Funktionen und Klassen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -64834,6 +64891,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>A declaration or assignment within a module can reuse the name of a built-in class or function, in which case that class or function is not accessible except through the AHK module (e.g. &lt;c0&gt;#Import AHK&lt;/c0&gt;, &lt;c1&gt;AHK.MsgBox()&lt;/c1&gt;).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T163525Z" creationid="Ragnar-F" creationdate="20260918T163525Z">
+        <seg>Eine Deklaration oder Zuweisung innerhalb eines Moduls kann den Namen einer internen Klasse oder Funktion wiederverwenden. In diesem Fall ist die entsprechende Klasse oder Funktion nur über das AHK-Modul zugänglich (z.B. &lt;c0&gt;#Import AHK&lt;/c0&gt;, &lt;c1&gt;AHK.MsgBox()&lt;/c1&gt;).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A delay is being performed by &lt;a0&gt;Send&lt;/a0&gt; (most often due to &lt;a1&gt;SetKeyDelay&lt;/a1&gt;), &lt;a2&gt;WinActivate&lt;/a2&gt;, or a &lt;a3&gt;Clipboard&lt;/a3&gt; operation.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230816T171633Z" creationid="Ragnar-F" creationdate="20200630T141205Z">
@@ -65614,6 +65679,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210212T164414Z" creationid="Ragnar-F" creationdate="20210212T164414Z">
         <seg>Ein modales Eingabefenster hindert den Benutzer daran, mit dem GUI-Fenster zu interagieren, bis er das Eingabefenster wieder schließt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A module is basically a script within the script.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T160538Z" creationid="Ragnar-F" creationdate="20260918T160538Z">
+        <seg>Ein Modul ist im Grunde ein Skript innerhalb des Skripts.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A module name is added to a module's global namespace only when imported, and conflicts can be resolved by giving the imported module an alias within the destination module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T164302Z" creationid="Ragnar-F" creationdate="20260918T164302Z">
+        <seg>Ein Modulname gelangt erst durch den Import in den globalen Namensraum eines Moduls; etwaige Konflikte lassen sich durch ein Alias für das importierte Modul im Zielmodul lösen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -68874,6 +68955,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>About modules and how to use them.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T160457Z" creationid="Ragnar-F" creationdate="20260918T160457Z">
+        <seg>Erfahren Sie mehr über Module und wie man sie verwendet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>About the section title:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210704T180905Z" creationid="Ragnar-F" creationdate="20210704T180905Z">
@@ -70890,6 +70979,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>All modules implicitly import from the built-in "AHK" module, which contains all built-in classes, variables and functions.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T163119Z" creationid="Ragnar-F" creationdate="20260918T163119Z">
+        <seg>Alle Module importieren implizit aus dem internen Modul "AHK", das alle internen Klassen, Variablen und Funktionen enthält.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>All non-static method and property definitions inside the class body are attached to the prototype object.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231018T095243Z" creationid="Ragnar-F" creationdate="20210704T144147Z">
@@ -72894,6 +72991,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190616T110646Z" creationid="Ragnar-F" creationdate="20140301T021658Z">
         <seg>Ein 8-Bit-Integer im Bereich von -128 (-0x80) bis 127 (0x7F).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>An &lt;a0&gt;#Import&lt;/a0&gt; directive can be used to make a module or some of its functions, classes and variables accessible within the current module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T163044Z" creationid="Ragnar-F" creationdate="20260918T163044Z">
+        <seg>Mit einer &lt;a0&gt;#Import&lt;/a0&gt;-Direktive kann ein Modul oder einige seiner Funktionen, Klassen und Variablen innerhalb des aktuellen Moduls zugänglich gemacht werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -81226,6 +81331,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>By default, all lines of code and global variables (including functions and classes) are added to an implicitly-defined module named "__Main".</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T162741Z" creationid="Ragnar-F" creationdate="20260918T162741Z">
+        <seg>Standardmäßig werden alle Codezeilen und globalen Variablen (einschließlich Funktionen und Klassen) einem implizit definierten Modul namens "__Main" hinzugefügt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>By default, an UpDown control automatically snaps onto the previously added control, which is known as the UpDown's &lt;e0&gt;buddy control&lt;/e0&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260214T122745Z" creationid="Ragnar-F" creationdate="20260214T122745Z">
@@ -83780,8 +83893,8 @@
       <tuv lang="en">
         <seg>Changed #HotIf to affect only the current module.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T182846Z" creationid="Ragnar-F" creationdate="20260911T182846Z">
-        <seg>Geändert: #HotIf beeinflusst jetzt nur das jeweils aktive Modul.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T164747Z" creationid="Ragnar-F" creationdate="20260911T182846Z">
+        <seg>Geändert: #HotIf beeinflusst jetzt nur das aktuelle Modul.</seg>
       </tuv>
     </tu>
     <tu>
@@ -97245,8 +97358,8 @@
       <tuv lang="en">
         <seg>Each candidate window's title, class, process ID and process name or path are retrieved only if criteria have been specified which require it.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T150729Z" creationid="Ragnar-F" creationdate="20260918T144701Z">
-        <seg>Die Titel, Klassen, Prozess-IDs und Prozessnamen/-pfade der potenziellen Zielfenster werden nur abgerufen, wenn entsprechende Kriterien angegeben wurden.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T154804Z" creationid="Ragnar-F" creationdate="20260918T144701Z">
+        <seg>Die Titel, Klassen, Prozess-IDs und Prozessnamen/-pfade der potenziellen Zielfenster werden nur abgerufen, wenn die entsprechenden Kriterien angegeben wurden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -97575,6 +97688,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T121550Z" creationid="Ragnar-F" creationdate="20260913T121550Z">
         <seg>Jedes Modul exportiert alle globalen Namen, die nicht mit einem Unterstrich beginnen, außer Namen, die ohne das Schlüsselwort Export importiert wurden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Each module has its own:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T160748Z" creationid="Ragnar-F" creationdate="20260918T160748Z">
+        <seg>Jedes Modul hat einen eigenen:</seg>
       </tuv>
     </tu>
     <tu>
@@ -100407,6 +100528,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230612T102400Z" creationid="Ragnar-F" creationdate="20190929T095733Z">
         <seg>Führt den angegebenen Code als neuen AutoHotkey-Prozess aus.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Execution</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T165557Z" creationid="Ragnar-F" creationdate="20260918T165557Z">
+        <seg>Ausführung</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Execution begins with the module which was defined or loaded last.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T170118Z" creationid="Ragnar-F" creationdate="20260918T170118Z">
+        <seg>Die Ausführung startet mit dem zuletzt definierten oder geladenen Modul.</seg>
       </tuv>
     </tu>
     <tu>
@@ -107941,6 +108078,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For details, see the &lt;a1&gt;#Warn remarks&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T164635Z" creationid="Ragnar-F" creationdate="20260918T164635Z">
+        <seg>Weitere Informationen finden Sie in den &lt;a1&gt;#Warn-Bemerkungen&lt;/a1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For details, see the &lt;a2&gt;Change&lt;/a2&gt; event.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260217T184645Z" creationid="Ragnar-F" creationdate="20260216T160123Z">
@@ -113049,6 +113194,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230615T181203Z" creationid="Ragnar-F" creationdate="20161119T223921Z">
         <seg>Zum Beispiel wird der Text in Static- und Button-Steuerelementen üblicherweise erkannt, aber nicht in Edit-Steuerelementen, es sei denn, sie gehören zum Skript.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For instance, the effect of &lt;c2&gt;#HotIf myToggle&lt;/c2&gt; depends on what value &lt;e3&gt;myToggle&lt;/e3&gt; has in the current module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T165444Z" creationid="Ragnar-F" creationdate="20260918T165444Z">
+        <seg>Zum Beispiel ist der Effekt von &lt;c2&gt;#HotIf meinSchalter&lt;/c2&gt; davon abhängig, welchen Wert &lt;e3&gt;meinSchalter&lt;/e3&gt; im aktuellen Modul hat.</seg>
       </tuv>
     </tu>
     <tu>
@@ -120989,6 +121142,15 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>However, built-in (A_) variables do not require a declaration or explicit import to allow assignment, and their names cannot be reused.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T164018Z" creationid="Ragnar-F" creationdate="20260918T164018Z">
+        <seg>Interne Variablen (A_) lassen sich ohne Deklaration oder Import zuweisen,
+und ihre Namen sind nicht wiederverwendbar.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>However, comments can be included on the bottom and top lines of the section.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230821T115224Z" creationid="Ragnar-F" creationdate="20140312T123717Z">
@@ -125337,6 +125499,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230708T131124Z" creationid="Ragnar-F" creationdate="20230708T131124Z">
         <seg>Wenn ein Modifikator-Hotkey wie &lt;c0&gt;~*RWin::&lt;/c0&gt; zu früh Send oder GetKeyState aufruft, kann das System melden, dass RWin nicht unten ist, wodurch der Modifikatorstatus des Hooks "korrigiert" wird und Hotkeys fälschlicherweise ausgelöst oder nicht ausgelöst werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If a module has not begun execution by the time one of its variables or constants is referenced, the module is executed immediately.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T170636Z" creationid="Ragnar-F" creationdate="20260918T170636Z">
+        <seg>Wird eine Variable oder Konstante eines Moduls referenziert, bevor dessen Ausführung begonnen hat, wird das Modul sofort ausgeführt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -131241,6 +131411,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20191010T070148Z" creationid="Ragnar-F" creationdate="20191010T070148Z">
         <seg>Wenn die Methode vom Typ ist, der keinen Wert zurückgibt (mit einem Rückgabetyp, der in C als &lt;c0&gt;void&lt;/c0&gt; definiert ist), ist das Ergebnis undefiniert und sollte ignoriert werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the module has no imports, the second-last module is executed next, and so on, until all modules have executed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T170239Z" creationid="Ragnar-F" creationdate="20260918T170239Z">
+        <seg>Enthält das Modul keine Importe, wird als Nächstes das vorletzte Modul ausgeführt. Dies wiederholt sich, bis alle Module ausgeführt wurden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -150007,6 +150185,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Modules &lt;s0&gt;[v2.1-alpha.11+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T160502Z" creationid="Ragnar-F" creationdate="20260918T160500Z">
+        <seg>Module &lt;s0&gt;[v2.1-alpha.11+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Modules defined this way take precedence over modules in the file system, but only for the exact &lt;e0&gt;ModuleName&lt;/e0&gt; used in the directive.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T135258Z" creationid="Ragnar-F" creationdate="20260913T135258Z">
@@ -150027,6 +150213,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T134826Z" creationid="Ragnar-F" creationdate="20260913T134826Z">
         <seg>Module, die mit derselben Datei verlinkt sind, können sich gegenseitig via &lt;e3&gt;ModulName&lt;/e3&gt; importieren, während andere Module Untermodule mithilfe eines pfadqualifizierten Namens im Format "Pfad:Modulname" importieren können.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Modules | AutoHotkey v2</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T160336Z" creationid="Ragnar-F" creationdate="20260918T160336Z">
+        <seg>Module | AutoHotkey v2</seg>
       </tuv>
     </tu>
     <tu>
@@ -160561,8 +160755,8 @@
       <tuv lang="en">
         <seg>Note that while FindWindow ignores case, AutoHotkey performs a case-sensitive comparison to verify that the title matches.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T153601Z" creationid="Ragnar-F" creationdate="20260918T153601Z">
-        <seg>Beachten Sie, dass FindWindow die Groß-/Kleinschreibung zwar ignoriert, AutoHotkey jedoch einen Groß-/Kleinschreibung-sensitiven Vergleich durchführt, die Übereinstimmung des Titels zu verifizieren.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T160245Z" creationid="Ragnar-F" creationdate="20260918T153601Z">
+        <seg>Beachten Sie, dass FindWindow die Groß-/Kleinschreibung zwar ignoriert, AutoHotkey jedoch einen Groß-/Kleinschreibung-sensitiven Vergleich durchführt, um zu verifizieren, dass der Titel übereinstimmt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -176209,8 +176403,8 @@
       <tuv lang="en">
         <seg>Retrieving a process path is slower than retrieving a process name.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T144736Z" creationid="Ragnar-F" creationdate="20260918T144736Z">
-        <seg>Prozesspfade lassen sich langsamer abrufen als Prozessnamen.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T154853Z" creationid="Ragnar-F" creationdate="20260918T144736Z">
+        <seg>Das Abrufen eines Prozesspfads dauert länger als das Abrufen eines Prozessnamens.</seg>
       </tuv>
     </tu>
     <tu>
@@ -191591,6 +191785,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Splitting the components of a script into modules can make the components easier to reuse and maintain.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T162318Z" creationid="Ragnar-F" creationdate="20260918T162318Z">
+        <seg>Durch die Aufteilung eines Skripts in Module lassen sich seine Bestandteile leichter wiederverwenden und warten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Sqrt</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20160802T170824Z" creationid="Ragnar-F" creationdate="20160802T170824Z">
@@ -201287,6 +201489,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The body of each module is executed at program startup, by the &lt;a0&gt;auto-execute thread&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T165946Z" creationid="Ragnar-F" creationdate="20260918T165946Z">
+        <seg>Sobald das Programm gestartet wird, wird der Körper jedes Moduls vom &lt;a0&gt;Auto-Execute-Thread&lt;/a0&gt; ausgeführt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The bold &lt;s0&gt;0&lt;/s0&gt; above is the zero-based part number.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230816T144912Z" creationid="Ragnar-F" creationdate="20140311T153710Z">
@@ -209175,6 +209385,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The script can start a new module with &lt;a0&gt;#Module&lt;/a0&gt; or load one from file with &lt;a1&gt;#Import&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T162823Z" creationid="Ragnar-F" creationdate="20260918T162823Z">
+        <seg>Das Skript kann mit &lt;a0&gt;#Module&lt;/a0&gt; ein neues Modul starten oder mit &lt;a1&gt;#Import&lt;/a1&gt; ein Modul aus einer Datei laden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The script compiler looks for special comments in the source script and recognises these as Compiler Directives.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230825T083738Z" creationid="Ragnar-F" creationdate="20200621T071428Z">
@@ -210825,16 +211043,16 @@
       <tuv lang="en">
         <seg>The title matching mode is 1 or 2 (which is the default), there are windows with the given class name, and the first such window (in Z order) matches all criteria.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T153017Z" creationid="Ragnar-F" creationdate="20260918T153017Z">
-        <seg>Der Titelvergleichmodus ist 1 oder 2 (was Standard ist), es gibt Fenster mit dem angegebenen Klassennamen, und das erste dieser Fenster (in Z-Reihenfolge) erfüllt alle Kriterien.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T160132Z" creationid="Ragnar-F" creationdate="20260918T153017Z">
+        <seg>Der Titelvergleichsmodus ist 1 oder 2 (was Standard ist), es gibt Fenster mit dem angegebenen Klassennamen, und das erste dieser Fenster (in Z-Reihenfolge) erfüllt alle Kriterien.</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>The title matching mode is 3, there are windows with the given class name and title, &lt;e0&gt;ignoring case&lt;/e0&gt;, and the first such window (in Z order) matches all criteria.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T153317Z" creationid="Ragnar-F" creationdate="20260918T153317Z">
-        <seg>Der Titelvergleichmodus ist 3, es gibt Fenster mit dem angegebenen Klassennamen und Titel, wobei die Groß-/Kleinschreibung &lt;e0&gt;ignoriert&lt;/e0&gt; wird, und das erste dieser Fenster (in Z-Reihenfolge) erfüllt alle Kriterien.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T160138Z" creationid="Ragnar-F" creationdate="20260918T153317Z">
+        <seg>Der Titelvergleichsmodus ist 3, es gibt Fenster mit dem angegebenen Klassennamen und Titel, wobei die Groß-/Kleinschreibung &lt;e0&gt;ignoriert&lt;/e0&gt; wird, und das erste dieser Fenster (in Z-Reihenfolge) erfüllt alle Kriterien.</seg>
       </tuv>
     </tu>
     <tu>
@@ -212243,6 +212461,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231128T200825Z" creationid="Ragnar-F" creationdate="20210706T095608Z">
         <seg>Es gibt keine "g-Labels" oder Labels/Funktionen mehr, die GUI-Ereignisse automatisch behandeln.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>There are no windows of that class.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T154535Z" creationid="Ragnar-F" creationdate="20260918T154535Z">
+        <seg>Es gibt keine Fenster dieser Klasse.</seg>
       </tuv>
     </tu>
     <tu>
@@ -218793,8 +219019,8 @@
       <tuv lang="en">
         <seg>This is inherent to the &lt;a0&gt;EnumWindows&lt;/a0&gt; function, which most likely creates an internal list of windows in Z order before beginning enumeration.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T140640Z" creationid="Ragnar-F" creationdate="20260918T140640Z">
-        <seg>Das liegt in der Natur der &lt;a0&gt;EnumWindows&lt;/a0&gt;-Funktion, die höchstwahrscheinlich vor Beginn der Enumeration eine interne Liste von Fenstern in Z-Reihenfolge erstellt.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T155829Z" creationid="Ragnar-F" creationdate="20260918T140640Z">
+        <seg>Das liegt in der Natur der Funktion &lt;a0&gt;EnumWindows&lt;/a0&gt;, die höchstwahrscheinlich vor Beginn der Enumeration eine interne Liste von Fenstern in Z-Reihenfolge erstellt.</seg>
       </tuv>
     </tu>
     <tu>
