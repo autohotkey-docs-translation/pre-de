@@ -15454,6 +15454,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>; Always detects hidden windows.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T133103Z" creationid="Ragnar-F" creationdate="20260918T133103Z">
+        <seg>; Erkennt immer versteckte Fenster.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>; Always exit at the end!</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180411T182031Z" creationid="Ragnar-F" creationdate="20180411T182031Z">
@@ -19677,6 +19685,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200612T113942Z" creationid="Ragnar-F" creationdate="20200612T113942Z">
         <seg>; Verschachtelte Funktion:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; Never detects hidden windows.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T133350Z" creationid="Ragnar-F" creationdate="20260918T133115Z">
+        <seg>; Erkennt nie versteckte Fenster.</seg>
       </tuv>
     </tu>
     <tu>
@@ -24549,6 +24565,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>; Uses default settings.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T133018Z" creationid="Ragnar-F" creationdate="20260918T133018Z">
+        <seg>; Nutzt Standardeinstellungen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>; Uses the window found by the above line.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230724T150127Z" creationid="Ragnar-F" creationdate="20180411T195424Z">
@@ -25147,6 +25171,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230814T172529Z" creationid="Ragnar-F" creationdate="20230814T172529Z">
         <seg>; af-ZA</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; ahk_opt has no effect if every member of the group overrides it:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T133245Z" creationid="Ragnar-F" creationdate="20260918T133139Z">
+        <seg>; ahk_opt ist wirkungslos, wenn es von jedem Gruppenmitglied überschrieben wird:</seg>
       </tuv>
     </tu>
     <tu>
@@ -59170,6 +59202,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; The following details are for the purpose of guiding optimizations, and are not to be taken as guarantees of future behaviour.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T135351Z" creationid="Ragnar-F" creationdate="20260918T135351Z">
+        <seg>&lt;s0&gt;Hinweis:&lt;/s0&gt; Die folgenden Informationen dienen als Orientierungshilfe für Optimierungen und sind nicht als Garantie für zukünftiges Verhalten zu verstehen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;Note:&lt;/s0&gt; The last character before &lt;c1&gt;::&lt;/c1&gt; is never interpreted as a modifier symbol.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221220T192050Z" creationid="Ragnar-F" creationdate="20221220T192050Z">
@@ -59390,6 +59430,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230821T134004Z" creationid="Ragnar-F" creationdate="20160430T013653Z">
         <seg>&lt;s0&gt;Hinweis:&lt;/s0&gt; Die Komprimierung einer EXE-Datei verhindert, dass der Quellcode des Skripts einfach mit einem Texteditor wie Notepad oder PE-Resource-Editor eingesehen werden kann, aber sie verhindert nicht, dass der Quellcode mit speziell dafür entwickelten Tools extrahiert werden kann.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; Window classes in general are not case-sensitive.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T124809Z" creationid="Ragnar-F" creationdate="20260918T124809Z">
+        <seg>&lt;s0&gt;Hinweis:&lt;/s0&gt; Fensterklassen sind grundsätzlich nicht Groß-/Kleinschreibung-sensitiv.</seg>
       </tuv>
     </tu>
     <tu>
@@ -64514,6 +64562,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>A case-sensitive check would therefore either match both window classes or match neither, depending on which was registered first.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T125520Z" creationid="Ragnar-F" creationdate="20260918T125520Z">
+        <seg>Eine Groß-/Kleinschreibung-sensitive Überprüfung würde daher entweder beide oder keine der beiden Fensterklassen finden, je nachdem, welche zuerst registriert wurde.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A change such as &lt;c2&gt;myObj.ans := 42&lt;/c2&gt; would be reflected by both &lt;c3&gt;myObj.ans&lt;/c3&gt; and &lt;c4&gt;yourObj.ans&lt;/c4&gt;, since they both refer to the same object.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190820T075047Z" creationid="Ragnar-F" creationdate="20190820T075047Z">
@@ -66222,6 +66278,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20170527T145245Z" creationid="Ragnar-F" creationdate="20140228T212448Z">
         <seg>Ein Service-Identifikator im selben Format wie IID.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A setting of &lt;c0&gt;DetectHiddenWindows false&lt;/c0&gt; or &lt;c1&gt;ahk_opt Hidden0&lt;/c1&gt; is applied whenever &lt;e2&gt;WinTitle&lt;/e2&gt; contains criteria other than ahk_group or ahk_opt.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T133713Z" creationid="Ragnar-F" creationdate="20260918T133713Z">
+        <seg>&lt;c0&gt;DetectHiddenWindows false&lt;/c0&gt; bzw. &lt;c1&gt;ahk_opt Hidden0&lt;/c1&gt; wird jedes Mal automatisch angewendet, wenn &lt;e2&gt;FensterTitel&lt;/e2&gt; andere Kriterien als ahk_group oder ahk_opt enthält.</seg>
       </tuv>
     </tu>
     <tu>
@@ -99019,6 +99083,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Enumeration is not needed when &lt;a0&gt;ahk_id/HWND&lt;/a0&gt;, the &lt;a1&gt;Last Found Window&lt;/a1&gt; or the &lt;a2&gt;active window&lt;/a2&gt; is used, so it is best to make use of these rather than repeatedly identifying the window by title, class and/or process.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T144237Z" creationid="Ragnar-F" creationdate="20260918T144237Z">
+        <seg>Eine Enumeration ist nicht erforderlich, wenn &lt;a0&gt;ahk_id/HWND&lt;/a0&gt;, das &lt;a1&gt;Zuletzt Gefundene Fenster&lt;/a1&gt; oder das &lt;a2&gt;aktive Fenster&lt;/a2&gt; verwendet wird. Es empfiehlt sich daher, lieber diese Möglichkeiten zu nutzen, anstatt das Fenster immer wieder per Titel, Klasse und/oder Prozess zu identifizieren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Enumeration of ComObjArray is now consistent with Array; i.e. &lt;c0&gt;for value in arr&lt;/c0&gt; or &lt;c1&gt;for index, value in arr&lt;/c1&gt; rather than &lt;c2&gt;for value, vartype in arr&lt;/c2&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231125T144128Z" creationid="Ragnar-F" creationdate="20210704T172210Z">
@@ -109213,6 +109285,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For example, &lt;c1&gt;WinExist(WinTitle " ahk_id" ahwnd)&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T135152Z" creationid="Ragnar-F" creationdate="20260918T134845Z">
+        <seg>Zum Beispiel &lt;c1&gt;WinExist(FensterTitel " ahk_id" eineHWND)&lt;/c1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For example, &lt;c1&gt;X:=[]&lt;/c1&gt; would create a new Array each time.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220713T144301Z" creationid="Ragnar-F" creationdate="20220713T144301Z">
@@ -116965,6 +117045,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>GroupAdd "All_Scripts", "ahk_opt Hidden ahk_group Scripts"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T132933Z" creationid="Ragnar-F" creationdate="20260918T132916Z">
+        <seg>GroupAdd "Alle_Skripte", "ahk_opt Hidden ahk_group Skripte"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>GroupAdd "AltTabWindow", "ahk_class #32771"</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210310T083151Z" creationid="Ragnar-F" creationdate="20210307T143943Z">
@@ -117025,6 +117113,30 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200622T123030Z" creationid="Ragnar-F" creationdate="20200622T123030Z">
         <seg>GroupAdd "MeineGruppe", "ahk_class WordPadClass"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>GroupAdd "Scripts", "Autocorrect.ahk ahk_class AutoHotkey"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T132912Z" creationid="Ragnar-F" creationdate="20260918T132907Z">
+        <seg>GroupAdd "Skripte", "Autocorrect.ahk ahk_class AutoHotkey"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>GroupAdd "Scripts", "Hotkeys.ahk ahk_class AutoHotkey"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T132906Z" creationid="Ragnar-F" creationdate="20260918T132900Z">
+        <seg>GroupAdd "Skripte", "Hotkeys.ahk ahk_class AutoHotkey"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>GroupAdd "Visible_Scripts", "ahk_opt Hidden0 ahk_group Scripts"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T132948Z" creationid="Ragnar-F" creationdate="20260918T132934Z">
+        <seg>GroupAdd "Sichtbare_Skripte", "ahk_opt Hidden0 ahk_group Skripte"</seg>
       </tuv>
     </tu>
     <tu>
@@ -131509,6 +131621,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If the same criterion type is used multiple times, the result is undefined.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T134148Z" creationid="Ragnar-F" creationdate="20260918T134138Z">
+        <seg>Wenn derselbe Kriteriumstyp mehrfach verwendet wird, ist das Ergebnis undefiniert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If the sc or vk portion is omitted, the most appropriate value is sent in its place.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230823T184503Z" creationid="Ragnar-F" creationdate="20140307T013042Z">
@@ -133350,10 +133470,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If two ahk_id values are present and not equal, the match always fails.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T134409Z" creationid="Ragnar-F" creationdate="20260918T134409Z">
+        <seg>Wenn zwei ahk_id-Werte vorhanden sind und sich unterscheiden, schlägt das Abgleichen immer fehl.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If two variables were specified, the enumerator attempts to call the property's getter to retrieve the value.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231029T104907Z" creationid="Ragnar-F" creationdate="20200705T205913Z">
         <seg>Wenn zwei Variablen angegeben wurden, versucht der Enumerator den Getter der Eigenschaft aufzurufen, um den Wert abzurufen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If two window classes are registered with the same name but differing by case, the system uses only the first registered case for both classes.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T125153Z" creationid="Ragnar-F" creationdate="20260918T125153Z">
+        <seg>Wenn zwei Fensterklassen mit demselben Namen, aber unterschiedlicher Groß-/Kleinschreibung registriert sind, verwendet das System für beide Klassen nur die Schreibweise der zuerst registrierten Klasse.</seg>
       </tuv>
     </tu>
     <tu>
@@ -136250,6 +136386,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230421T144546Z" creationid="Ragnar-F" creationdate="20140314T021338Z">
         <seg>Mit anderen Worten, die Elemente müssen so angeordnet werden, dass die resultierende Zeichenkette in zwei Hälften geteilt werden kann:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In other words, the window's visibility is usually part of the criteria, but is deferred when ahk_group is used on its own so that individual group members can override it.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T134117Z" creationid="Ragnar-F" creationdate="20260918T134117Z">
+        <seg>Mit anderen Worten, die Sichtbarkeit des Fensters ist üblicherweise Teil der Kriterien, wird jedoch zurückgestellt, wenn ahk_group allein verwendet wird, damit einzelne Gruppenmitglieder diese Einstellung überschreiben können.</seg>
       </tuv>
     </tu>
     <tu>
@@ -154439,6 +154583,38 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>MsgBox WinExist("ahk_group All_Scripts ahk_opt Hidden0")</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T133255Z" creationid="Ragnar-F" creationdate="20260918T133245Z">
+        <seg>MsgBox WinExist("ahk_group Alle_Skripte ahk_opt Hidden0")</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox WinExist("ahk_group All_Scripts")</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T133028Z" creationid="Ragnar-F" creationdate="20260918T133019Z">
+        <seg>MsgBox WinExist("ahk_group Alle_Skripte")</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox WinExist("ahk_group Scripts")</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T133001Z" creationid="Ragnar-F" creationdate="20260918T132949Z">
+        <seg>MsgBox WinExist("ahk_group Skripte")</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox WinExist("ahk_group Visible_Scripts")</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T133114Z" creationid="Ragnar-F" creationdate="20260918T133104Z">
+        <seg>MsgBox WinExist("ahk_group Sichtbare_Skripte")</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>MsgBox X ", " Y ", " Z</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180412T191507Z" creationid="Ragnar-F" creationdate="20180412T191507Z">
@@ -172611,6 +172787,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231130T123255Z" creationid="Ragnar-F" creationdate="20210706T115724Z">
         <seg>RegEx-Zeilenumbruchsübereinstimmung verwendet standardmäßig (*ANYCRLF) und (*BSR_ANYCRLF); `r und `n werden zusätzlich zu `r`n erkannt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>RegEx patterns are typically case-sensitive, unless overridden with the &lt;a1&gt;i) modifier&lt;/a1&gt; or by other methods.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T124656Z" creationid="Ragnar-F" creationdate="20260918T124656Z">
+        <seg>Regex-Muster sind üblicherweise Groß-/Kleinschreibung-sensitiv, es sei denn, dies wird mit dem &lt;a1&gt;i)-Modifikator&lt;/a1&gt; oder auf andere Weise überschrieben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -204119,6 +204303,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The following factors affect the cost of enumeration:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T140402Z" creationid="Ragnar-F" creationdate="20260918T140402Z">
+        <seg>Die folgenden Faktoren beeinflussen die Kosten der Enumeration:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The following folder structure is supported, where the running version of &lt;c0&gt;Ahk2Exe.exe&lt;/c0&gt; is in the first \Compiler directory shown below:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231121T084626Z" creationid="Ragnar-F" creationdate="20211017T100308Z">
@@ -207175,6 +207367,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The number of top-level windows currently in existence, regardless of other factors.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T140435Z" creationid="Ragnar-F" creationdate="20260918T140435Z">
+        <seg>Die Anzahl der derzeit vorhandenen Top-Level-Fenster, unabhängig von anderen Faktoren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The number of top-level windows evaluated by AutoHotkey before finding a match.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T140731Z" creationid="Ragnar-F" creationdate="20260918T140731Z">
+        <seg>Die Anzahl der Top-Level-Fenster, die von AutoHotkey ausgewertet werden, bevor eine Übereinstimmung gefunden wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The number to store.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230506T123113Z" creationid="Ragnar-F" creationdate="20140319T150013Z">
@@ -209531,6 +209739,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230624T153758Z" creationid="Ragnar-F" creationdate="20230624T153758Z">
         <seg>Das Leer- oder Tabulatorzeichen nach &lt;e0&gt;Return&lt;/e0&gt; ist optional, wenn der Ausdruck in runden Klammern gesetzt ist, z.B. &lt;c1&gt;return(Ausdruck)&lt;/c1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The specific criteria being evaluated.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T140749Z" creationid="Ragnar-F" creationdate="20260918T140749Z">
+        <seg>Die konkreten Kriterien, die evaluiert werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -215543,6 +215759,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This enables a set of criteria which may include ahk_id to be tested against a specific window.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T134836Z" creationid="Ragnar-F" creationdate="20260918T134836Z">
+        <seg>Dadurch kann eine Gruppe von Kriterien, die ahk_id enthält, an einem bestimmten Fenster getestet werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This enables expressions like &lt;c3&gt;(x.y)[z]()&lt;/c3&gt; to be used at the start of a line, and also allows &lt;a4&gt;multi-line expressions&lt;/a4&gt; to start with a line like &lt;c5&gt;((&lt;/c5&gt; or &lt;c6&gt;(MyFunc(&lt;/c6&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231120T222159Z" creationid="Ragnar-F" creationdate="20210508T100720Z">
@@ -218439,6 +218663,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This is inherent to the &lt;a0&gt;EnumWindows&lt;/a0&gt; function, which most likely creates an internal list of windows in Z order before beginning enumeration.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T140640Z" creationid="Ragnar-F" creationdate="20260918T140640Z">
+        <seg>Das liegt in der Natur der &lt;a0&gt;EnumWindows&lt;/a0&gt;-Funktion, die höchstwahrscheinlich vor Beginn der Enumeration eine interne Liste von Fenstern in Z-Reihenfolge erstellt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This is intended for use with &lt;a1&gt;DllCall&lt;/a1&gt; and &lt;a2&gt;ComCall&lt;/a2&gt;, so the pointer does not need to be manually wrapped after the function returns.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231204T111216Z" creationid="Ragnar-F" creationdate="20231204T111216Z">
@@ -220971,6 +221203,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140310T152416Z" creationid="Ragnar-F" creationdate="20140310T152416Z">
         <seg>Diese Taste existiert nur auf sehr wenigen Tastaturen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This process generally does not cause a perceptible delay, but can affect the performance of scripts.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T140306Z" creationid="Ragnar-F" creationdate="20260918T140306Z">
+        <seg>Dieser Vorgang verursacht in der Regel keine spürbare Verzögerung, kann jedoch die Performanz von Skripten beeinträchtigen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -237560,6 +237800,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>When not using the RegEx mode, window class comparisons are case-insensitive in &lt;s0&gt;[v2.1-alpha.18+]&lt;/s0&gt; but case-sensitive in earlier versions.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T124453Z" creationid="Ragnar-F" creationdate="20260918T124453Z">
+        <seg>Wenn in &lt;s0&gt;[v2.1-alpha.18+]&lt;/s0&gt; der RegEx-Modus nicht verwendet wird, sind Fensterklassenvergleiche standardmäßig nicht Groß-/Kleinschreibung-sensitiv. In früheren Versionen waren diese hingegen sensitiv.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>When one of these UIA.exe files is used by an administrator to run a script, the script is able to interact with windows of programs that run as admin, without the script itself running as admin.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231120T132404Z" creationid="Ragnar-F" creationdate="20220605T114624Z">
@@ -241812,6 +242060,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20211017T092359Z" creationid="Ragnar-F" creationdate="20211017T092359Z">
         <seg>Bis auf wenige Ausnahmen ähnelt dies der internen Variable &lt;a0&gt;A_ThisHotkey&lt;/a0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>With some exceptions, a window is generally located by enumerating all top-level windows and evaluating the criteria specified by &lt;v0&gt;WinTitle&lt;/v0&gt; and other parameters against each candidate window.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T140226Z" creationid="Ragnar-F" creationdate="20260918T140226Z">
+        <seg>Bis auf einige Ausnahmen wird ein Fenster in der Regel lokalisiert, indem alle Top-Level-Fenster enumeriert und die Kriterien, die via &lt;v0&gt;FensterTitel&lt;/v0&gt; und andere Parameter definiert wurden, an allen infrage kommenden Fenstern getestet werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -258780,6 +259036,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T174254Z" creationid="Ragnar-F" creationdate="20260916T174246Z">
         <seg>ahk_opt (Optionen)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>ahk_opt (Options) &lt;s0&gt;[v2.1-alpha.25+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T125526Z" creationid="Ragnar-F" creationdate="20260918T125523Z">
+        <seg>ahk_opt (Optionen) &lt;s0&gt;[v2.1-alpha.25+]&lt;/s0&gt;</seg>
       </tuv>
     </tu>
     <tu>
