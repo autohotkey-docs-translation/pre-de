@@ -42434,6 +42434,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;ahk_exe&lt;/a0&gt; causes the process path to be retrieved if the RegEx title matching mode is active or the value contains a backslash (&lt;c1&gt;\&lt;/c1&gt;); otherwise only the process name is retrieved.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T145148Z" creationid="Ragnar-F" creationdate="20260918T145148Z">
+        <seg>&lt;a0&gt;ahk_exe&lt;/a0&gt; bewirkt, dass der Prozesspfad abgerufen wird, wenn der RegEx-Titelvergleichsmodus aktiv ist oder der Wert einen umgekehrten Schrägstrich (&lt;c1&gt;\&lt;/c1&gt;) enthält; andernfalls wird nur der Prozessname abgerufen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;command line parameters&lt;/a0&gt;, &lt;a1&gt;A_WorkingDir&lt;/a1&gt;, &lt;a2&gt;A_ScriptDir&lt;/a2&gt;, &lt;a3&gt;A_ScriptName&lt;/a3&gt;, &lt;a4&gt;(...more...)&lt;/a4&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140316T140055Z" creationid="Ragnar-F" creationdate="20140316T140055Z">
@@ -43286,6 +43294,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230924T092009Z" creationid="Ragnar-F" creationdate="20230924T092009Z">
         <seg>&lt;a2&gt;WinGetText&lt;/a2&gt; und &lt;a3&gt;ControlGetText&lt;/a3&gt; werden auf die gleiche Weise beeinflusst, verwenden aber immer den langsamen Modus zum Abrufen von Text.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a2&gt;ahk_pid&lt;/a2&gt; is faster but can only specify one process which the script has already identified.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T145327Z" creationid="Ragnar-F" creationdate="20260918T145327Z">
+        <seg>&lt;a2&gt;ahk_pid&lt;/a2&gt; ist zwar schneller, kann aber nur für einen Prozess verwendet werden, den das Skript bereits identifiziert hat.</seg>
       </tuv>
     </tu>
     <tu>
@@ -62326,6 +62342,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230624T071608Z" creationid="Ragnar-F" creationdate="20230624T071608Z">
         <seg>&lt;s0&gt;ZeroDivisionError:&lt;/s0&gt; Es wurde versucht, in einem Ausdruck oder mit der Mod-Funktion durch Null zu dividieren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.0+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T145328Z" creationid="Ragnar-F" creationdate="20260918T145328Z">
+        <seg>&lt;s0&gt;[v2.0+]&lt;/s0&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -91451,6 +91475,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Criteria are considered in the following order:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T151038Z" creationid="Ragnar-F" creationdate="20260918T151038Z">
+        <seg>Die Kriterien werden in der folgenden Reihenfolge geprüft:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Criteria beyond the first should be separated from the previous with exactly &lt;u0&gt;one&lt;/u0&gt; space or tab (any other spaces or tabs are treated as a literal part of the previous criterion).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230817T100241Z" creationid="Ragnar-F" creationdate="20230620T220530Z">
@@ -97207,6 +97239,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230623T150903Z" creationid="Ragnar-F" creationdate="20210216T104551Z">
         <seg>Jede Rückruffunktion kann &lt;e1&gt;Wert&lt;/e1&gt; inspizieren und weitere Rückruffunktionen und Standardbehandlungen entweder unterdrücken oder erlauben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Each candidate window's title, class, process ID and process name or path are retrieved only if criteria have been specified which require it.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T150729Z" creationid="Ragnar-F" creationdate="20260918T144701Z">
+        <seg>Die Titel, Klassen, Prozess-IDs und Prozessnamen/-pfade der potenziellen Zielfenster werden nur abgerufen, wenn entsprechende Kriterien angegeben wurden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -111125,6 +111165,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For example, if every second item in a window group with 10 items uses ahk_exe, the process name may be retrieved 5 times for each candidate window; but if those 5 items are grouped together, the process name should be retrieved only once for each candidate window.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T150612Z" creationid="Ragnar-F" creationdate="20260918T150612Z">
+        <seg>Wenn zum Beispiel jedes zweite Element in einer Fenstergruppe, die aus 10 Elementen besteht, ahk_exe verwendet, wird der Prozessname fünfmal für jedes potenzielle Zielfenster abgerufen. Sind diese fünf Elemente jedoch zu einer Gruppe zusammengefasst, wird der Prozessname für jedes potenzielle Zielfenster nur einmal abgerufen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For example, if it renames files via &lt;a0&gt;FileMove&lt;/a0&gt; or other means, each such file might be found twice:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230516T130127Z" creationid="Ragnar-F" creationdate="20140314T152450Z">
@@ -112921,6 +112969,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190614T075237Z" creationid="Ragnar-F" creationdate="20140228T214137Z">
         <seg>Wenn zum Beispiel ein Interface-Pointer zurückgegeben wird, sollte &lt;a5&gt;Release&lt;/a5&gt; nicht aufgerufen werden, aber &lt;a6&gt;AddRef&lt;/a6&gt; könnte erforderlich sein, je nachdem, was das Skript mit dem Pointer macht.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For instance, if only a title and class are specified and &lt;a1&gt;DetectHiddenWindows&lt;/a1&gt; is off, the title of every visible top-level window must be retrieved, but the class name is retrieved only when the title matches.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T151331Z" creationid="Ragnar-F" creationdate="20260918T151331Z">
+        <seg>Wenn zum Beispiel nur ein Titel und eine Klasse angegeben sind und &lt;a1&gt;DetectHiddenWindows&lt;/a1&gt; deaktiviert ist, muss der Titel jedes sichtbaren Top-Level-Fensters abgerufen werden, während der Klassenname nur abgerufen wird, wenn der Titel übereinstimmt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -123177,6 +123233,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230503T104908Z" creationid="Ragnar-F" creationdate="20160117T230716Z">
         <seg>Wenn die &lt;a1&gt;#MaxThreadsBuffer&lt;/a1&gt;-Direktive im Skript nicht vorkommt, wird ihre Standardeinstellung (in diesem Fall OFF) verwendet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If &lt;a1&gt;ahk_class&lt;/a1&gt; is used with a non-RegEx &lt;a2&gt;title matching mode&lt;/a2&gt;, AutoHotkey attempts to locate the window by calling &lt;a3&gt;FindWindow&lt;/a3&gt; once before falling back to EnumWindows.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T151702Z" creationid="Ragnar-F" creationdate="20260918T151702Z">
+        <seg>Verwendet man &lt;a1&gt;ahk_class&lt;/a1&gt; mit einem &lt;a2&gt;Titelvergleichsmodus&lt;/a2&gt; außer RegEx, versucht AutoHotkey zunächst, das Fenster mithilfe eines einzelnen Aufrufs von &lt;a3&gt;FindWindow&lt;/a3&gt; zu lokalisieren, bevor es auf EnumWindows zurückfällt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -160495,6 +160559,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Note that while FindWindow ignores case, AutoHotkey performs a case-sensitive comparison to verify that the title matches.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T153601Z" creationid="Ragnar-F" creationdate="20260918T153601Z">
+        <seg>Beachten Sie, dass FindWindow die Groß-/Kleinschreibung zwar ignoriert, AutoHotkey jedoch einen Groß-/Kleinschreibung-sensitiven Vergleich durchführt, die Übereinstimmung des Titels zu verifizieren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Note that with an odd number of consecutive colons, the previous behaviour did not consider the final colon as part of a pair.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231130T120808Z" creationid="Ragnar-F" creationdate="20210706T115451Z">
@@ -167867,6 +167939,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231204T083401Z" creationid="Ragnar-F" creationdate="20231204T083401Z">
         <seg>PID := SendMessage(0x0044, 0x405, 0, , "BeliebigesSkript.ahk - AutoHotkey v")</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>PID, title, class, process name/path, group.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T151103Z" creationid="Ragnar-F" creationdate="20260918T151040Z">
+        <seg>PID, Titel, Klasse, Prozessname/-pfad, Gruppe.</seg>
       </tuv>
     </tu>
     <tu>
@@ -176123,6 +176203,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260213T090130Z" creationid="Ragnar-F" creationdate="20260213T090130Z">
         <seg>Ermittelt, welches Steuerelement im Zielfenster den Tastaturfokus hat, sofern vorhanden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Retrieving a process path is slower than retrieving a process name.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T144736Z" creationid="Ragnar-F" creationdate="20260918T144736Z">
+        <seg>Prozesspfade lassen sich langsamer abrufen als Prozessnamen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -191315,6 +191403,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230421T090754Z" creationid="Ragnar-F" creationdate="20180812T135709Z">
         <seg>Die Angabe einer Genauigkeit kann dazu führen, dass der Wert gekürzt oder gerundet wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Specifying a title, &lt;a1&gt;ahk_class&lt;/a1&gt; or &lt;a2&gt;ahk_exe&lt;/a2&gt; causes the respective attribute to be retrieved once for each candidate window, and again each time the type of criteria changes.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T150739Z" creationid="Ragnar-F" creationdate="20260918T145720Z">
+        <seg>Die Angabe von Titel, &lt;a1&gt;ahk_class&lt;/a1&gt; oder &lt;a2&gt;ahk_exe&lt;/a2&gt; bewirkt, dass das jeweilige Attribut für jedes potenzielle Zielfenster einmal abgerufen wird – und jedes Mal erneut, wenn sich die Art der Kriterien ändert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -210727,6 +210823,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The title matching mode is 1 or 2 (which is the default), there are windows with the given class name, and the first such window (in Z order) matches all criteria.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T153017Z" creationid="Ragnar-F" creationdate="20260918T153017Z">
+        <seg>Der Titelvergleichmodus ist 1 oder 2 (was Standard ist), es gibt Fenster mit dem angegebenen Klassennamen, und das erste dieser Fenster (in Z-Reihenfolge) erfüllt alle Kriterien.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The title matching mode is 3, there are windows with the given class name and title, &lt;e0&gt;ignoring case&lt;/e0&gt;, and the first such window (in Z order) matches all criteria.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T153317Z" creationid="Ragnar-F" creationdate="20260918T153317Z">
+        <seg>Der Titelvergleichmodus ist 3, es gibt Fenster mit dem angegebenen Klassennamen und Titel, wobei die Groß-/Kleinschreibung &lt;e0&gt;ignoriert&lt;/e0&gt; wird, und das erste dieser Fenster (in Z-Reihenfolge) erfüllt alle Kriterien.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The title of a window is often visible as text in a title bar at the top of the window.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230830T130935Z" creationid="Ragnar-F" creationdate="20230830T130935Z">
@@ -211643,6 +211755,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221219T153457Z" creationid="Ragnar-F" creationdate="20221219T153457Z">
         <seg>Der Fenstertitel muss immer ganz vorne stehen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The window title, class name or process name/path of each candidate window are retrieved only if and when they are first needed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T151003Z" creationid="Ragnar-F" creationdate="20260918T151003Z">
+        <seg>Die Titel, Klassennamen oder Prozessnamen/-pfade der potenziellen Zielfenster werden erst abgerufen, wenn diese Informationen zum ersten Mal benötigt werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -214491,6 +214611,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260214T121853Z" creationid="Ragnar-F" creationdate="20260214T121710Z">
         <seg>Dies ermöglicht dem Benutzer, den &lt;a1&gt;Tastaturkurzbefehl&lt;/a1&gt; &lt;k2&gt;Alt&lt;/k2&gt;+&lt;k3&gt;V&lt;/k3&gt; zu drücken, um den Tastaturfokus auf das erste eingabefähige Steuerelement zu setzen, das nach dem Text-Steuerelement erstellt wurde.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This allows the window search to complete much more quickly in any of the following cases:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T151901Z" creationid="Ragnar-F" creationdate="20260918T151901Z">
+        <seg>Dadurch wird die Fenstersuche in den folgenden Fällen deutlich beschleunigt:</seg>
       </tuv>
     </tu>
     <tu>
@@ -242066,8 +242194,8 @@
       <tuv lang="en">
         <seg>With some exceptions, a window is generally located by enumerating all top-level windows and evaluating the criteria specified by &lt;v0&gt;WinTitle&lt;/v0&gt; and other parameters against each candidate window.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T140226Z" creationid="Ragnar-F" creationdate="20260918T140226Z">
-        <seg>Bis auf einige Ausnahmen wird ein Fenster in der Regel lokalisiert, indem alle Top-Level-Fenster enumeriert und die Kriterien, die via &lt;v0&gt;FensterTitel&lt;/v0&gt; und andere Parameter definiert wurden, an allen infrage kommenden Fenstern getestet werden.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T150654Z" creationid="Ragnar-F" creationdate="20260918T140226Z">
+        <seg>Bis auf einige Ausnahmen wird ein Fenster in der Regel lokalisiert, indem alle Top-Level-Fenster enumeriert und die Kriterien, die via &lt;v0&gt;FensterTitel&lt;/v0&gt; und andere Parameter definiert wurden, an allen potenziellen Zielfenstern getestet werden.</seg>
       </tuv>
     </tu>
     <tu>
