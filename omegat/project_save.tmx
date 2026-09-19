@@ -270,6 +270,38 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>" MI.rcMonitor.Bottom "</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T173001Z" creationid="Ragnar-F" creationdate="20260919T173001Z">
+        <seg>" MI.rcMonitor.Bottom "</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>" MI.rcMonitor.Left "</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172952Z" creationid="Ragnar-F" creationdate="20260919T172952Z">
+        <seg>" MI.rcMonitor.Left "</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>" MI.rcMonitor.Right "</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172958Z" creationid="Ragnar-F" creationdate="20260919T172958Z">
+        <seg>" MI.rcMonitor.Right "</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>" MI.rcMonitor.Top "</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172955Z" creationid="Ragnar-F" creationdate="20260919T172955Z">
+        <seg>" MI.rcMonitor.Top "</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>" ProgramFilesDir</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180816T120939Z" creationid="Ragnar-F" creationdate="20180816T120939Z">
@@ -4682,6 +4714,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210223T130010Z" creationid="Ragnar-F" creationdate="20210223T130010Z">
         <seg>"MapObj" wird hier stellvertretend für ein beliebiges Map-Objekt verwendet, da "Map" die Klasse selbst ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>"Monitor info from point:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172721Z" creationid="Ragnar-F" creationdate="20260919T172704Z">
+        <seg>"Bildschirminfos vom Punkt:</seg>
       </tuv>
     </tu>
     <tu>
@@ -14974,6 +15014,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>; 40</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T170609Z" creationid="Ragnar-F" creationdate="20260919T170609Z">
+        <seg>; 40</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>; 45 to 135 degrees: Right</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180411T204050Z" creationid="Ragnar-F" creationdate="20180411T204050Z">
@@ -15058,6 +15106,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190613T192048Z" creationid="Ragnar-F" creationdate="20180411T083402Z">
         <seg>; vorzeichenloser 8-Bit-Integer</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; 80</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T171320Z" creationid="Ragnar-F" creationdate="20260919T171320Z">
+        <seg>; 80</seg>
       </tuv>
     </tu>
     <tu>
@@ -24572,10 +24628,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>; Use "ptr" to pass by reference without type-checking (C type: POINT*).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172114Z" creationid="Ragnar-F" creationdate="20260919T171827Z">
+        <seg>; Mit "ptr" per Referenz ohne Typüberprüfung übergeben (C-Typ: POINT*).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>; Use "str" to update the length automatically:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230720T091332Z" creationid="Ragnar-F" creationdate="20180411T193843Z">
         <seg>; "str" verwenden, um die Länge automatisch zu aktualisieren:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; Use .Ptr to pass by reference or receive output via a VarRef.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172053Z" creationid="Ragnar-F" creationdate="20260919T171924Z">
+        <seg>; Mit .Ptr per Referenz übergeben oder Ausgabe via VarRef empfangen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -24624,6 +24696,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20191117T112254Z" creationid="Ragnar-F" creationdate="20191117T112220Z">
         <seg>; Das ahk_id-Präfix verwenden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; Use the class itself to pass by value (C type: POINT).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172137Z" creationid="Ragnar-F" creationdate="20260919T171718Z">
+        <seg>; Mit der Klasse selbst per Wert übergeben (C-Typ: POINT).</seg>
       </tuv>
     </tu>
     <tu>
@@ -26595,6 +26675,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230814T184209Z" creationid="Ragnar-F" creationdate="20230814T184209Z">
         <seg>; fa-IR</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; false</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T171317Z" creationid="Ragnar-F" creationdate="20260919T170617Z">
+        <seg>; falsch</seg>
       </tuv>
     </tu>
     <tu>
@@ -29414,6 +29502,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230814T184412Z" creationid="Ragnar-F" creationdate="20230814T184412Z">
         <seg>; tr-TR</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; true</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T171256Z" creationid="Ragnar-F" creationdate="20260919T170614Z">
+        <seg>; wahr</seg>
       </tuv>
     </tu>
     <tu>
@@ -39483,10 +39579,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;ObjGetDataPtr&lt;/a0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T171322Z" creationid="Ragnar-F" creationdate="20260919T171322Z">
+        <seg>&lt;a0&gt;ObjGetDataPtr&lt;/a0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;ObjGetDataSize&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.3+]&lt;/s1&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T082129Z" creationid="Ragnar-F" creationdate="20260916T082129Z">
         <seg>&lt;a0&gt;ObjGetDataSize&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.3+]&lt;/s1&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;ObjGetDataSize&lt;/a0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T171332Z" creationid="Ragnar-F" creationdate="20260919T171332Z">
+        <seg>&lt;a0&gt;ObjGetDataSize&lt;/a0&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -39519,6 +39631,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T082140Z" creationid="Ragnar-F" creationdate="20260916T082140Z">
         <seg>&lt;a0&gt;ObjSetDataPtr&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.3+]&lt;/s1&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;ObjSetDataPtr&lt;/a0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T171339Z" creationid="Ragnar-F" creationdate="20260919T171339Z">
+        <seg>&lt;a0&gt;ObjSetDataPtr&lt;/a0&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -80195,6 +80315,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Both the array length and element type are defined by the class, which is a subclass of &lt;a0&gt;Struct.Array&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T170347Z" creationid="Ragnar-F" creationdate="20260919T170347Z">
+        <seg>Sowohl die Array-Länge als auch der Elementtyp werden von der Klasse definiert, die eine Unterklasse von &lt;a0&gt;Struct.Array&lt;/a0&gt; ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Both the date and the time are present regardless of whether they were actually visible in the control.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260213T153905Z" creationid="Ragnar-F" creationdate="20140305T022010Z">
@@ -80215,6 +80343,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230316T110940Z" creationid="Ragnar-F" creationdate="20171226T105444Z">
         <seg>Beide Variablen können gleichzeitig existieren, aber nur eine ist für jeden Teil des Skripts sichtbar.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Bottom : Int32</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172425Z" creationid="Ragnar-F" creationdate="20260919T172425Z">
+        <seg>Bottom : Int32</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Bottom:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T173000Z" creationid="Ragnar-F" creationdate="20260919T173000Z">
+        <seg>Bottom:</seg>
       </tuv>
     </tu>
     <tu>
@@ -96180,6 +96324,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>DllCall("GetCursorPos", "uint64*", &amp;point:=0)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172432Z" creationid="Ragnar-F" creationdate="20260919T172432Z">
+        <seg>DllCall("GetCursorPos", "uint64*", &amp;point:=0)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>DllCall("GetFullPathName", "str", path, "uint", cc, "ptr", buf, "ptr", 0)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20191009T121115Z" creationid="Ragnar-F" creationdate="20191009T121100Z">
@@ -96448,6 +96600,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210508T101606Z" creationid="Ragnar-F" creationdate="20210508T101606Z">
         <seg>DllCall("oleaut32\VariantClear", "ptr", this.var)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>DllCall("user32\GetMonitorInfo", "ptr", hMonitor, "ptr", MI := MONITORINFO())</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172435Z" creationid="Ragnar-F" creationdate="20260919T172435Z">
+        <seg>DllCall("user32\GetMonitorInfo", "ptr", hMonitor, "ptr", MI := MONITORINFO())</seg>
       </tuv>
     </tu>
     <tu>
@@ -108190,6 +108350,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For both assignment and return, &lt;a0&gt;unset&lt;/a0&gt; is used to represent a null pointer (0).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T162812Z" creationid="Ragnar-F" creationdate="20260919T162812Z">
+        <seg>Sowohl bei der Zuweisung als auch bei der Rückgabe repräsentiert &lt;a0&gt;unset&lt;/a0&gt; einen Null-Pointer (0).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For both modes, the default press duration is -1.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260309T110554Z" creationid="Ragnar-F" creationdate="20260309T110554Z">
@@ -112478,6 +112646,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For example, it is typically safe to use &lt;c2&gt;outer.lpEx := Example()&lt;/c2&gt;, whereas &lt;c3&gt;myVar := Example().Ptr&lt;/c3&gt; would free the new struct immediately after the assignment.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T165739Z" creationid="Ragnar-F" creationdate="20260919T165219Z">
+        <seg>Zum Beispiel ist die Verwendung von &lt;c2&gt;äußereKlasse.lpEx := Beispiel()&lt;/c2&gt; in der Regel unbedenklich, während &lt;c3&gt;meineVar := Beispiel().Ptr&lt;/c3&gt; die neue Struktur unmittelbar nach der Zuweisung freigeben würde.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For example, it works in a broader variety of games, it has no known &lt;a1&gt;alt-tab issues&lt;/a1&gt;, and it is capable of firing AutoHotkey's hook hotkeys (whereas AutoHotkey's remapping requires a &lt;a2&gt;workaround&lt;/a2&gt;).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230810T114959Z" creationid="Ragnar-F" creationdate="20140311T021126Z">
@@ -116459,6 +116635,38 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20170514T065454Z" creationid="Ragnar-F" creationdate="20170514T065454Z">
         <seg>GetCount</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>GetCursorPos := DllCall.Bind("GetCursorPos", "ptr", unset)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T171912Z" creationid="Ragnar-F" creationdate="20260919T171912Z">
+        <seg>GetCursorPos := DllCall.Bind("GetCursorPos", "ptr", unset)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>GetCursorPos := DllCall.Bind("GetCursorPos", Point.Ptr, unset)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172139Z" creationid="Ragnar-F" creationdate="20260919T172139Z">
+        <seg>GetCursorPos := DllCall.Bind("GetCursorPos", Point.Ptr, unset)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>GetCursorPos(&amp;pt2)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172140Z" creationid="Ragnar-F" creationdate="20260919T172140Z">
+        <seg>GetCursorPos(&amp;pt2)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>GetCursorPos(pt1)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T171915Z" creationid="Ragnar-F" creationdate="20260919T171915Z">
+        <seg>GetCursorPos(pt1)</seg>
       </tuv>
     </tu>
     <tu>
@@ -125984,6 +126192,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If a &lt;a0&gt;boxed struct&lt;/a0&gt; of an appropriate type is assigned to the property, a reference is retained to ensure it is not deleted until after the script releases its reference to the outer struct or &lt;a1&gt;boxed pointer&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T164918Z" creationid="Ragnar-F" creationdate="20260919T164918Z">
+        <seg>Wenn der Eigenschaft eine &lt;a0&gt;gekapselte Struktur&lt;/a0&gt; eines geeigneten Typs zugewiesen wird, wird eine Referenz darauf beibehalten, um sicherzustellen, dass diese Struktur erst gelöscht wird, wenn das Skript seine Referenz auf die äußere Struktur oder den &lt;a1&gt;gekapselten Pointer&lt;/a1&gt; freigibt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If a &lt;a0&gt;hotkey&lt;/a0&gt; is pressed or a &lt;a1&gt;custom menu item&lt;/a1&gt; is selected while the &lt;a2&gt;current thread&lt;/a2&gt; is uninterruptible, that event will be buffered.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230706T130655Z" creationid="Ragnar-F" creationdate="20140307T164924Z">
@@ -126508,6 +126724,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230712T121056Z" creationid="Ragnar-F" creationdate="20230620T170530Z">
         <seg>Wenn eine Nummer (&lt;e5&gt;N&lt;/e5&gt;) angegeben ist, wird diese als ID-Nummer des Geschwisterelements vermutet, hinter dem das neue Element eingefügt werden soll (wenn &lt;e6&gt;N&lt;/e6&gt; die einzige Option ist, muss sie nicht in Anführungszeichen gesetzt werden).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If a pointer class is constructed directly, its __Value property behaves as described above.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T165927Z" creationid="Ragnar-F" creationdate="20260919T165927Z">
+        <seg>Wenn eine Pointer-Klasse direkt konstruiert wird, verhält sich ihre __Value-Eigenschaft wie oben beschrieben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -133453,6 +133677,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230925T140248Z" creationid="Ragnar-F" creationdate="20170720T123642Z">
         <seg>Wenn das Laufwerk gerade geschlossen wurde, kann es passieren, dass die Ausführung der Funktion hinausgezögert wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the underlying pointer value has been changed, evaluating &lt;c4&gt;outer.lpEx&lt;/c4&gt; causes the held reference to be released.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T165641Z" creationid="Ragnar-F" creationdate="20260919T165641Z">
+        <seg>Wenn der zugrunde liegende Pointer-Wert verändert wurde, bewirkt die Auswertung von &lt;c4&gt;äußereKlasse.lpEx&lt;/c4&gt;, dass die zuvor gehaltene Referenz freigegeben wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -146162,6 +146394,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Left : Int32</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172423Z" creationid="Ragnar-F" creationdate="20260919T172423Z">
+        <seg>Left : Int32</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Left := Right</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180410T174434Z" creationid="Ragnar-F" creationdate="20180410T174434Z">
@@ -146262,6 +146502,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210212T122319Z" creationid="Ragnar-F" creationdate="20210212T122319Z">
         <seg>Linksklicke auf die Koordinaten 100, 200</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Left:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172951Z" creationid="Ragnar-F" creationdate="20260919T172951Z">
+        <seg>Left:</seg>
       </tuv>
     </tu>
     <tu>
@@ -155962,6 +156210,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>MsgBox WinGetClass(WindowFromPoint(pt1))</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T171921Z" creationid="Ragnar-F" creationdate="20260919T171921Z">
+        <seg>MsgBox WinGetClass(WindowFromPoint(pt1))</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox WinGetClass(WindowFromPoint(pt2))</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172141Z" creationid="Ragnar-F" creationdate="20260919T172141Z">
+        <seg>MsgBox WinGetClass(WindowFromPoint(pt2))</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>MsgBox X ", " Y ", " Z</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180412T191507Z" creationid="Ragnar-F" creationdate="20180412T191507Z">
@@ -156430,6 +156694,54 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180412T220305Z" creationid="Ragnar-F" creationdate="20180412T220305Z">
         <seg>MsgBox x[1]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox z.Size</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T170607Z" creationid="Ragnar-F" creationdate="20260919T170607Z">
+        <seg>MsgBox z.Size</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox z.y is Int32[100]</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T170615Z" creationid="Ragnar-F" creationdate="20260919T170615Z">
+        <seg>MsgBox z.y is Int32[100]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox z.y is Int32[10]</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T170613Z" creationid="Ragnar-F" creationdate="20260919T170613Z">
+        <seg>MsgBox z.y is Int32[10]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox z.y.Length</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T170611Z" creationid="Ragnar-F" creationdate="20260919T170611Z">
+        <seg>MsgBox z.y.Length</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox z.y.Size</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T170610Z" creationid="Ragnar-F" creationdate="20260919T170610Z">
+        <seg>MsgBox z.y.Size</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox zz.Size</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T171319Z" creationid="Ragnar-F" creationdate="20260919T171319Z">
+        <seg>MsgBox zz.Size</seg>
       </tuv>
     </tu>
     <tu>
@@ -177098,6 +177410,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Retrieves information about the monitor containing the mouse cursor, using nested structs.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172421Z" creationid="Ragnar-F" creationdate="20260919T172421Z">
+        <seg>Ruft Informationen über den Bildschirm ab, auf dem sich der Mauszeiger befindet, wobei verschachtelte Strukturen verwendet werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Retrieves one or more characters from the specified position in a string.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230629T110619Z" creationid="Ragnar-F" creationdate="20140305T160218Z">
@@ -178250,6 +178570,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Returns the address of the object's structured data.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T171331Z" creationid="Ragnar-F" creationdate="20260919T171331Z">
+        <seg>Gibt die Adresse der strukturierten Daten des Objekts zurück.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Returns the arccosine (the number whose cosine is the specified number) in radians.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230519T114634Z" creationid="Ragnar-F" creationdate="20180812T201607Z">
@@ -178674,6 +179002,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Returns the size of the object's structure, in bytes.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T171339Z" creationid="Ragnar-F" creationdate="20260919T171333Z">
+        <seg>Gibt die Größe der Struktur des Objekts in Bytes zurück.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Returns the specified number rounded down to the nearest integer (without any .00 suffix).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221030T164706Z" creationid="Ragnar-F" creationdate="20221030T164706Z">
@@ -179026,6 +179362,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Right : Int32</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172424Z" creationid="Ragnar-F" creationdate="20260919T172424Z">
+        <seg>Right : Int32</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Right := temp</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180410T174440Z" creationid="Ragnar-F" creationdate="20180410T174440Z">
@@ -179174,6 +179518,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20141109T113559Z" creationid="Ragnar-F" creationdate="20140306T125733Z">
         <seg>Rechts-nach-Links-Leselayout für Hebräisch / Arabisch</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Right:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172956Z" creationid="Ragnar-F" creationdate="20260919T172956Z">
+        <seg>Right:</seg>
       </tuv>
     </tu>
     <tu>
@@ -187034,6 +187386,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Sets the address of the object's structured data.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T171351Z" creationid="Ragnar-F" creationdate="20260919T171351Z">
+        <seg>Setzt die Adresse der strukturierten Daten des Objekts.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Sets the creation date.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210212T135724Z" creationid="Ragnar-F" creationdate="20210212T135724Z">
@@ -188134,6 +188494,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230706T113721Z" creationid="Ragnar-F" creationdate="20210223T145041Z">
         <seg>Zeigt die Begrenzungskoordinaten des zweiten Bildschirms in einem Mitteilungsfenster an.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Shows the class name of the window/control under the mouse cursor.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T171710Z" creationid="Ragnar-F" creationdate="20260919T171710Z">
+        <seg>Meldet den Klassennamen des Fensters/Steuerelements, auf dem sich der Mauszeiger befindet.</seg>
       </tuv>
     </tu>
     <tu>
@@ -194486,6 +194854,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171227T220939Z" creationid="Ragnar-F" creationdate="20171227T220939Z">
         <seg>Aufbau eines Skripts</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Structured Arrays &lt;s0&gt;[v2.1-alpha.23+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T170038Z" creationid="Ragnar-F" creationdate="20260919T165930Z">
+        <seg>Strukturierte Arrays &lt;s0&gt;[v2.1-alpha.23+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Structured arrays have a fixed size and all elements must be the same type.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T170150Z" creationid="Ragnar-F" creationdate="20260919T170150Z">
+        <seg>Strukturierte Arrays haben eine feste Größe und alle ihre Elemente müssen vom gleichen Typ sein.</seg>
       </tuv>
     </tu>
     <tu>
@@ -211838,6 +212222,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T112432Z" creationid="Ragnar-F" creationdate="20260913T112432Z">
         <seg>Der Teilausdruck sollte in runde Klammern gesetzt werden, wenn der finale Rückgabewert nicht ungesetzt sein darf.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The subclass is not created by defining it in the script, but instead by using the &lt;a1&gt;static __Item property&lt;/a1&gt; of a Struct subclass.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T170602Z" creationid="Ragnar-F" creationdate="20260919T170602Z">
+        <seg>Die Unterklasse entsteht nicht durch eine Klassendefinition im Skript, sondern durch die Nutzung der &lt;a1&gt;statischen __Item-Eigenschaft&lt;/a1&gt; einer Struct-Unterklasse.</seg>
       </tuv>
     </tu>
     <tu>
@@ -229474,10 +229866,26 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Top : Int32</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172424Z" creationid="Ragnar-F" creationdate="20260919T172424Z">
+        <seg>Top : Int32</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Top-level class definitions now create a constant (read-only variable); that is, assigning to a class name is now an error rather than an optional warning, except where a local variable shadows the global class (which now occurs by default when assigning inside a function).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231125T101322Z" creationid="Ragnar-F" creationdate="20210704T145421Z">
         <seg>Top-Level-Klassendefinitionen erstellen nun eine Konstante (schreibgeschützte Variable), d.h. Wertzuweisungen an einen Klassennamen zeigen nun einen Fehler statt einer optionalen Warnung an, es sei denn, eine lokale Variable "überschreibt" die globale Klasse (was nun standardmäßig bei Zuweisungen innerhalb einer Funktion geschieht).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Top:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172953Z" creationid="Ragnar-F" creationdate="20260919T172953Z">
+        <seg>Top:</seg>
       </tuv>
     </tu>
     <tu>
@@ -239763,6 +240171,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>When non-null, the high-level value of the property is an instance of the target class (either a &lt;a0&gt;boxed pointer&lt;/a0&gt; or a &lt;a1&gt;boxed struct&lt;/a1&gt;).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T163602Z" creationid="Ragnar-F" creationdate="20260919T163602Z">
+        <seg>Bei ungleich Null ist der High-Level-Wert der Eigenschaft eine Instanz der Zielklasse (entweder ein &lt;a0&gt;gekapselter Pointer&lt;/a0&gt; oder eine &lt;a1&gt;gekapselte Struktur&lt;/a1&gt;).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>When not using the RegEx mode, window class comparisons are case-insensitive in &lt;s0&gt;[v2.1-alpha.18+]&lt;/s0&gt; but case-sensitive in earlier versions.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260918T124453Z" creationid="Ragnar-F" creationdate="20260918T124453Z">
@@ -243775,6 +244191,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260227T125316Z" creationid="Ragnar-F" creationdate="20260227T125316Z">
         <seg>Window:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>WindowFromPoint := DllCall.Bind("WindowFromPoint", Point, unset, "uptr")</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T171817Z" creationid="Ragnar-F" creationdate="20260919T171817Z">
+        <seg>WindowFromPoint := DllCall.Bind("WindowFromPoint", Point, unset, "uptr")</seg>
       </tuv>
     </tu>
     <tu>
@@ -262595,6 +263019,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>cbSize : Int32 := 40</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172427Z" creationid="Ragnar-F" creationdate="20260919T172427Z">
+        <seg>cbSize : Int32 := 40</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>cc := DllCall("GetFullPathName", "str", path, "uint", 0, "ptr", 0, "ptr", 0, "uint")</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190930T103406Z" creationid="Ragnar-F" creationdate="20190930T103349Z">
@@ -263527,6 +263959,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260919T072128Z" creationid="Ragnar-F" creationdate="20260919T072128Z">
         <seg>dwFlags     : UInt32</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>dwFlags : Int32</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172430Z" creationid="Ragnar-F" creationdate="20260919T172430Z">
+        <seg>dwFlags : Int32</seg>
       </tuv>
     </tu>
     <tu>
@@ -264935,6 +265375,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20250926T083610Z" creationid="Ragnar-F" creationdate="20250926T083610Z">
         <seg>hModule := DllCall("LoadLibrary", "Str", "MeineFunktionen.dll", "Ptr")</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>hMonitor := DllCall("MonitorFromPoint", "int64", point, "uint", 0, "ptr")</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172434Z" creationid="Ragnar-F" creationdate="20260919T172434Z">
+        <seg>hMonitor := DllCall("MonitorFromPoint", "int64", point, "uint", 0, "ptr")</seg>
       </tuv>
     </tu>
     <tu>
@@ -267843,6 +268291,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>items : X[2]</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T171249Z" creationid="Ragnar-F" creationdate="20260919T171249Z">
+        <seg>items : X[2]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>joy2::</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180328T095427Z" creationid="Ragnar-F" creationdate="20180328T095427Z">
@@ -269083,6 +269539,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>pt1 := Point()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T171914Z" creationid="Ragnar-F" creationdate="20260919T171914Z">
+        <seg>pt1 := Point()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>put " VarContainingNameOfTargetFile "</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230929T072718Z" creationid="Ragnar-F" creationdate="20180412T140636Z">
@@ -269127,6 +269591,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140303T140048Z" creationid="Ragnar-F" creationdate="20140303T140048Z">
         <seg>r</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>rcMonitor : RECT</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172428Z" creationid="Ragnar-F" creationdate="20260919T172428Z">
+        <seg>rcMonitor : RECT</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>rcWork : RECT</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172429Z" creationid="Ragnar-F" creationdate="20260919T172429Z">
+        <seg>rcWork : RECT</seg>
       </tuv>
     </tu>
     <tu>
@@ -271035,10 +271515,50 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>struct MONITORINFO {</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172426Z" creationid="Ragnar-F" creationdate="20260919T172426Z">
+        <seg>struct MONITORINFO {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>struct POINT {</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260919T070540Z" creationid="Ragnar-F" creationdate="20260919T070540Z">
         <seg>struct POINT {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>struct Point {</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T171712Z" creationid="Ragnar-F" creationdate="20260919T171712Z">
+        <seg>struct Point {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>struct RECT {</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172422Z" creationid="Ragnar-F" creationdate="20260919T172422Z">
+        <seg>struct RECT {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>struct X {</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T170603Z" creationid="Ragnar-F" creationdate="20260919T170603Z">
+        <seg>struct X {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>struct XX {</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T170618Z" creationid="Ragnar-F" creationdate="20260919T170618Z">
+        <seg>struct XX {</seg>
       </tuv>
     </tu>
     <tu>
@@ -273156,6 +273676,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>y : Int32[10]</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T170604Z" creationid="Ragnar-F" creationdate="20260919T170604Z">
+        <seg>y : Int32[10]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>y := "EFG"</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180410T174810Z" creationid="Ragnar-F" creationdate="20180410T174810Z">
@@ -273208,6 +273736,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140311T221539Z" creationid="Ragnar-F" creationdate="20140311T221539Z">
         <seg>z</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>z := X()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T170606Z" creationid="Ragnar-F" creationdate="20260919T170606Z">
+        <seg>z := X()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>zz := XX()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T171318Z" creationid="Ragnar-F" creationdate="20260919T171318Z">
+        <seg>zz := XX()</seg>
       </tuv>
     </tu>
     <tu>
