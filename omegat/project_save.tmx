@@ -62227,6 +62227,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;Warning:&lt;/s0&gt; This is preliminary documentation for v2.1.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T062223Z" creationid="Ragnar-F" creationdate="20260919T062223Z">
+        <seg>&lt;s0&gt;Warnung:&lt;/s0&gt; Dies ist eine Vorabdokumentation für Version 2.1.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;WhichButton:&lt;/s0&gt; If omitted, it defaults to Left (the left mouse button).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230621T080817Z" creationid="Ragnar-F" creationdate="20230621T080737Z">
@@ -97812,6 +97820,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Each field in a struct is defined by writing its name, followed by a colon, then a type specifier.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T070806Z" creationid="Ragnar-F" creationdate="20260919T070140Z">
+        <seg>Um ein Feld in einer Struktur zu definieren, muss zunächst dessen Name, dann ein Doppelpunkt und anschließend ein Typbezeichner angegeben werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Each format specifier can include the following components, in this order (without the spaces):</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180707T120132Z" creationid="Ragnar-F" creationdate="20141227T202552Z">
@@ -101576,6 +101592,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190818T092538Z" creationid="Ragnar-F" creationdate="20190818T092538Z">
         <seg>FibF() {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fields are generally not referenced by name, making the code hard to read and maintain.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T062147Z" creationid="Ragnar-F" creationdate="20260919T062147Z">
+        <seg>Felder werden grundsätzlich nicht per Name referenziert, was die Lesbarkeit und Pflege des Codes erschwert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -156297,6 +156321,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Multiple typed properties can be defined on one line by separating them with a comma.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T070536Z" creationid="Ragnar-F" creationdate="20260919T070536Z">
+        <seg>Es ist möglich, mehrere typisierte Eigenschaften auf einer Zeile zu definieren, jeweils getrennt durch ein Komma.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Multiple variables may be declared on the same line by separating them with commas as in these examples:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230321T204503Z" creationid="Ragnar-F" creationdate="20140309T170045Z">
@@ -190761,6 +190793,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Specifics may change with each alpha release.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T062251Z" creationid="Ragnar-F" creationdate="20260919T062251Z">
+        <seg>Details können sich mit jeder Alpha-Version ändern.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Specifics may not be added yet and may change with future releases.":</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260903T152631Z" creationid="Ragnar-F" creationdate="20260903T152631Z">
@@ -193685,6 +193725,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T142640Z" creationid="Ragnar-F" creationdate="20260916T142640Z">
         <seg>Struct &lt;s0&gt;[v2.1-alpha.22+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Struct classes are defined using &lt;c0&gt;struct&lt;/c0&gt; instead of &lt;c1&gt;class&lt;/c1&gt;, and default to extending Struct instead of Object.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T065734Z" creationid="Ragnar-F" creationdate="20260919T065734Z">
+        <seg>Strukturklassen werden mit &lt;c0&gt;struct&lt;/c0&gt; statt mit &lt;c1&gt;class&lt;/c1&gt; definiert, und erben standardmäßig von Struct statt von Object.</seg>
       </tuv>
     </tu>
     <tu>
@@ -215425,6 +215473,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This allows the script to refer to fields by name, relying on automatic calculation of field offsets and struct sizes.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T063227Z" creationid="Ragnar-F" creationdate="20260919T063227Z">
+        <seg>Dies ermöglicht es, Felder per Name anzusteuern, unterstützt durch die automatische Berechnung von Offsets und Strukturgrößen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This allows the user to press &lt;k1&gt;Alt&lt;/k1&gt;+&lt;k2&gt;P&lt;/k2&gt; as a &lt;a3&gt;shortcut key&lt;/a3&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260213T134646Z" creationid="Ragnar-F" creationdate="20260213T134626Z">
@@ -218965,6 +219021,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230327T114349Z" creationid="Ragnar-F" creationdate="20171227T225413Z">
         <seg>Dies erfolgt präprozedural, d.h. es ist nicht Teil der Sprache im eigentlichen Sinne.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This is also called a typed property.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T070158Z" creationid="Ragnar-F" creationdate="20260919T070158Z">
+        <seg>Dies wird auch als typisierte Eigenschaft bezeichnet.</seg>
       </tuv>
     </tu>
     <tu>
@@ -233081,6 +233145,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Using a Class Definition &lt;s0&gt;[v2.1-alpha.22+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T065529Z" creationid="Ragnar-F" creationdate="20260919T065529Z">
+        <seg>Verwendung einer Klassendefinition &lt;s0&gt;[v2.1-alpha.22+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Using a Controller as a Mouse</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230620T214117Z" creationid="Ragnar-F" creationdate="20230620T214117Z">
@@ -233205,6 +233277,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230926T123220Z" creationid="Ragnar-F" creationdate="20210216T124042Z">
         <seg>&lt;s1&gt;Message&lt;/s1&gt; gibt normalerweise an, welche Erwartung verletzt wurde, und &lt;s2&gt;Extra&lt;/s2&gt; enthält eine Zeichenkette, die den fehlerhaften Wert repräsentiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Usually a &lt;a0&gt;struct class definition&lt;/a0&gt; is used, but a struct class can also be &lt;a1&gt;constructed at runtime&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T065257Z" creationid="Ragnar-F" creationdate="20260919T065257Z">
+        <seg>In der Regel wird dafür eine &lt;a0&gt;Strukturklassendefinition&lt;/a0&gt; verwendet. Allerdings können Strukturklassen auch &lt;a1&gt;während der Skriptausführung konstruiert werden&lt;/a1&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -243150,6 +243230,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20160705T094852Z" creationid="Ragnar-F" creationdate="20160705T094852Z">
         <seg>Wenn diese Option aktiviert ist, werden zusätzlich `v/VT/vertical tab/chr(0xB), `f/FF/formfeed/chr(0xC), NEL/next-line/chr(0x85), LS/line separator/chr(0x2028) und PS/paragraph separator/chr(0x2029) erkannt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>With v2.1, the script can define a struct as a sequence of typed properties.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T062432Z" creationid="Ragnar-F" creationdate="20260919T062432Z">
+        <seg>Ab Version 2.1 ist es möglich, eine Struktur in Form einer Sequenz typisierter Eigenschaften zu definieren.</seg>
       </tuv>
     </tu>
     <tu>
@@ -269962,6 +270050,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>struct POINT {</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T070540Z" creationid="Ragnar-F" creationdate="20260919T070540Z">
+        <seg>struct POINT {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>subject           := NumGet(A_EventInfo,  8 + A_PtrSize, "Ptr")</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200713T134205Z" creationid="Ragnar-F" creationdate="20200713T134205Z">
@@ -271831,6 +271927,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180411T193436Z" creationid="Ragnar-F" creationdate="20180411T193436Z">
         <seg>x *= 2</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>x : Int32, y : Int32</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T070541Z" creationid="Ragnar-F" creationdate="20260919T070541Z">
+        <seg>x : Int32, y : Int32</seg>
       </tuv>
     </tu>
     <tu>
