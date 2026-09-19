@@ -11166,6 +11166,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>1})</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T075021Z" creationid="Ragnar-F" creationdate="20260919T075021Z">
+        <seg>1})</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>1}&lt;/c2&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210704T130627Z" creationid="Ragnar-F" creationdate="20210704T130627Z">
@@ -29594,6 +29602,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>; v2.1-alpha.21 and older used Object instead of Struct.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T074416Z" creationid="Ragnar-F" creationdate="20260919T074356Z">
+        <seg>; v2.1-alpha.21 und älter nutzten Object statt Struct.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>; ve</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230814T184427Z" creationid="Ragnar-F" creationdate="20230814T184427Z">
@@ -33871,6 +33887,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231130T130358Z" creationid="Ragnar-F" creationdate="20210706T120847Z">
         <seg>Standardmäßig verwenden alle Skripte das &lt;a0&gt;#SingleInstance&lt;/a0&gt;-Prompt-Verhalten; #SingleInstance selbst aktiviert den Force-Modus.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;#StructPack&lt;/a0&gt; can be used to override the default alignment of fields within the struct.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T073659Z" creationid="Ragnar-F" creationdate="20260919T073659Z">
+        <seg>Mit &lt;a0&gt;#StructPack&lt;/a0&gt; kann die Standardausrichtung der Felder innerhalb der Struktur überschrieben werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -42931,6 +42955,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a1&gt;Pack&lt;/a1&gt; can be used to override the default alignment of fields within the struct.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T075012Z" creationid="Ragnar-F" creationdate="20260919T075012Z">
+        <seg>Mit &lt;a1&gt;Pack&lt;/a1&gt; kann die Standardausrichtung der Felder innerhalb der Struktur überschrieben werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a1&gt;PostMessage&lt;/a1&gt; 0x0111, 32, 0, , "Untitled - Notepad"</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210223T133949Z" creationid="Ragnar-F" creationdate="20210223T133949Z">
@@ -45123,6 +45155,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;c0&gt;Float32&lt;/c0&gt; and &lt;c1&gt;Float64&lt;/c1&gt; are floating-point numbers.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T082002Z" creationid="Ragnar-F" creationdate="20260919T081936Z">
+        <seg>&lt;c0&gt;Float32&lt;/c0&gt; und &lt;c1&gt;Float64&lt;/c1&gt; sind Floating-Point-Zahlen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;c0&gt;GetCurrentTimestamp()&lt;/c0&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140416T190043Z" creationid="Ragnar-F" creationdate="20140316T020650Z">
@@ -45199,6 +45239,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231204T124150Z" creationid="Ragnar-F" creationdate="20231204T124150Z">
         <seg>&lt;c0&gt;InstallKeybdHook([Installieren, Erzwingen])&lt;/c0&gt; und &lt;c1&gt;InstallMouseHook([Installieren, Erzwingen])&lt;/c1&gt; ersetzen die entsprechenden Direktiven, für erhöhte Flexibilität.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c0&gt;Int8&lt;/c0&gt;, &lt;c1&gt;Int16&lt;/c1&gt;, &lt;c2&gt;Int32&lt;/c2&gt; and &lt;c3&gt;Int64&lt;/c3&gt; are signed integers; 8-bit, 16-bit, 32-bit and 64-bit.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T081815Z" creationid="Ragnar-F" creationdate="20260919T081733Z">
+        <seg>&lt;c0&gt;Int8&lt;/c0&gt;, &lt;c1&gt;Int16&lt;/c1&gt;, &lt;c2&gt;Int32&lt;/c2&gt; und &lt;c3&gt;Int64&lt;/c3&gt; sind vorzeichenfähige Integer; 8-Bit, 16-Bit, 32-Bit und 64-Bit.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c0&gt;IntPtr&lt;/c0&gt; is a signed integer; 32-bit when A_PtrSize = 4 and 64-bit when A_PtrSize = 8.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T081936Z" creationid="Ragnar-F" creationdate="20260919T081851Z">
+        <seg>&lt;c0&gt;IntPtr&lt;/c0&gt; ist ein vorzeichenfähiger Integer; 32-Bit wenn A_PtrSize = 4, und 64-Bit wenn A_PtrSize = 8.</seg>
       </tuv>
     </tu>
     <tu>
@@ -45687,6 +45743,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210704T143804Z" creationid="Ragnar-F" creationdate="20210704T143804Z">
         <seg>&lt;c0&gt;Type(Wert)&lt;/c0&gt; gibt eine der folgenden Zeichenketten zurück:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c0&gt;UInt8&lt;/c0&gt;, &lt;c1&gt;UInt16&lt;/c1&gt; and &lt;c2&gt;UInt32&lt;/c2&gt; are unsigned integers; 8-bit, 16-bit and 32-bit.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T081846Z" creationid="Ragnar-F" creationdate="20260919T081816Z">
+        <seg>&lt;c0&gt;UInt8&lt;/c0&gt;, &lt;c1&gt;UInt16&lt;/c1&gt; und &lt;c2&gt;UInt32&lt;/c2&gt; sind vorzeichenlose Integer; 8-Bit, 16-Bit und 32-Bit.</seg>
       </tuv>
     </tu>
     <tu>
@@ -59075,6 +59139,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; AutoHotkey does not support 64-bit unsigned integers, but signed integers can generally be used instead.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T082337Z" creationid="Ragnar-F" creationdate="20260919T082330Z">
+        <seg>&lt;s0&gt;Hinweis:&lt;/s0&gt; AutoHotkey unterstützt keine vorzeichenlosen 64-Bit-Integer. Verwenden Sie stattdessen vorzeichenfähige Integer.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;Note:&lt;/s0&gt; AutoHotkey v2 natively uses Unicode and does not have an ANSI version.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230905T100018Z" creationid="Ragnar-F" creationdate="20210704T075456Z">
@@ -62699,6 +62771,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.19+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T074956Z" creationid="Ragnar-F" creationdate="20260919T074956Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.19+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;[v2.1-alpha.2+]&lt;/s0&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T102448Z" creationid="Ragnar-F" creationdate="20260913T102448Z">
@@ -65251,6 +65331,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>A field can be initialized to some other value by including an assignment after the type.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T072122Z" creationid="Ragnar-F" creationdate="20260919T072122Z">
+        <seg>Um ein Feld mit einem bestimmten Wert zu initialisieren, wird nach dem Typ eine Zuweisung eingefügt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A file can be loaded into a variable via &lt;a1&gt;FileRead&lt;/a1&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210223T122029Z" creationid="Ragnar-F" creationdate="20210223T122029Z">
@@ -66243,6 +66331,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>A property of a pointer type such as &lt;c0&gt;Int32.Ptr&lt;/c0&gt; can return a boxed pointer.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T084511Z" creationid="Ragnar-F" creationdate="20260919T084511Z">
+        <seg>Eine Eigenschaft eines Pointer-Typs wie &lt;c0&gt;Int32.Ptr&lt;/c0&gt; kann einen gekapselten Pointer zurückgeben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A pseudo-array cannot be declared as a whole, so some "elements" may resolve to &lt;a0&gt;global&lt;/a0&gt; (or &lt;a1&gt;captured&lt;/a1&gt;) variables while others do not.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230909T144916Z" creationid="Ragnar-F" creationdate="20210307T152022Z">
@@ -66859,6 +66955,30 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>A struct can be defined at runtime by creating a &lt;a0&gt;Class&lt;/a0&gt; object and adding typed properties to its &lt;a1&gt;Prototype&lt;/a1&gt; with &lt;a2&gt;DefineProp&lt;/a2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T074333Z" creationid="Ragnar-F" creationdate="20260919T074229Z">
+        <seg>Eine Struktur kann während der Skriptausführung definiert werden, indem man ein &lt;a0&gt;Class&lt;/a0&gt;-Objekt erstellt und mittels &lt;a2&gt;DefineProp&lt;/a2&gt; typisierte Eigenschaften zu seinem &lt;a1&gt;Prototyp&lt;/a1&gt; hinzufügt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A struct class can be instantiated the normal way, by calling it:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T072300Z" creationid="Ragnar-F" creationdate="20260919T072300Z">
+        <seg>Eine Strukturklasse kann auf die übliche Weise instanziiert werden, indem sie aufgerufen wird:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A struct class is any subclass of &lt;a0&gt;Struct&lt;/a0&gt;, including the &lt;a1&gt;numeric types&lt;/a1&gt;, &lt;a2&gt;array classes&lt;/a2&gt;, &lt;a3&gt;pointer classes&lt;/a3&gt; and &lt;c4&gt;Struct.Ptr&lt;/c4&gt; itself.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T081608Z" creationid="Ragnar-F" creationdate="20260919T081608Z">
+        <seg>Eine Strukturklasse ist eine beliebige Unterklasse von &lt;a0&gt;Struct&lt;/a0&gt;, einschließlich &lt;a1&gt;numerischer Typen&lt;/a1&gt;, &lt;a2&gt;Array-Klassen&lt;/a2&gt;, &lt;a3&gt;Pointer-Klassen&lt;/a3&gt; und &lt;c4&gt;Struct.Ptr&lt;/c4&gt; selbst.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A structure is a collection of &lt;e0&gt;members&lt;/e0&gt; (fields) stored adjacently in memory.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140930T140843Z" creationid="Ragnar-F" creationdate="20140301T024628Z">
@@ -67015,6 +67135,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200630T153038Z" creationid="Ragnar-F" creationdate="20200630T153038Z">
         <seg>Ein "+" am Ende genügt, um den Leser darauf hinzuweisen, dass spätere Versionen akzeptabel, aber nicht erforderlich sind.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A type specifier in a class definition can be:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T075409Z" creationid="Ragnar-F" creationdate="20260919T075409Z">
+        <seg>Ein Typbezeichner in einer Klassendefinition kann Folgendes sein:</seg>
       </tuv>
     </tu>
     <tu>
@@ -67383,6 +67511,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180412T203540Z" creationid="Ragnar-F" creationdate="20180412T203540Z">
         <seg>A::b</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>AB := Class(Struct)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T075014Z" creationid="Ragnar-F" creationdate="20260919T075014Z">
+        <seg>AB := Class(Struct)</seg>
       </tuv>
     </tu>
     <tu>
@@ -71091,6 +71227,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>All elements of a &lt;a0&gt;class definition&lt;/a0&gt; are permitted, but an initializer such as &lt;c1&gt;x := 0&lt;/c1&gt; cannot create a new property.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T073819Z" creationid="Ragnar-F" creationdate="20260919T073813Z">
+        <seg>Alle Elemente einer &lt;a0&gt;Klassendefinition&lt;/a0&gt; sind zulässig, aber ein Initialisierer wie z.B. &lt;c1&gt;x := 0&lt;/c1&gt; kann keine neue Eigenschaft erstellen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>All fields are zero-initialized when the object is constructed, before initializers are evaluated.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T071923Z" creationid="Ragnar-F" creationdate="20260919T071923Z">
+        <seg>Bei der Konstruktion des Objekts werden alle Felder null-initialisiert, noch bevor die Initialisierer ausgewertet werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>All file buffers have been flushed to disk, and all running processes have stopped.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260902T081601Z" creationid="Ragnar-F" creationdate="20260902T081135Z">
@@ -74179,6 +74331,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>An exact class name, such as &lt;c0&gt;MyClass.MyNestedClass&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T075551Z" creationid="Ragnar-F" creationdate="20260919T075529Z">
+        <seg>Ein exakter Klassenname, wie z.B. &lt;c0&gt;KlasseName.VerschachtelteKlasse&lt;/c0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>An example of a fatal exception is dereferencing an invalid pointer such as NULL (0).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190622T074214Z" creationid="Ragnar-F" creationdate="20160702T144335Z">
@@ -74451,6 +74611,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>An expression enclosed in parentheses.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T075730Z" creationid="Ragnar-F" creationdate="20260919T075730Z">
+        <seg>Ein in runde Klammern gesetzter Ausdruck.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>An expression starting with an identifier, optionally followed by a parameter list (making it a function call), optionally followed by any number of property or method calls.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T075935Z" creationid="Ragnar-F" creationdate="20260919T075935Z">
+        <seg>Ein Ausdruck, der mit einem Identifikator beginnt, optional gefolgt von einer Parameterliste (was ihn zu einem Funktionsaufruf macht), optional gefolgt von einer beliebigen Anzahl von Eigenschaften oder Methodenaufrufen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>An identifier to use within the current module in place of &lt;e0&gt;ExportName&lt;/e0&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T120315Z" creationid="Ragnar-F" creationdate="20260913T120315Z">
@@ -74503,6 +74679,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180822T165315Z" creationid="Ragnar-F" creationdate="20180822T165315Z">
         <seg>Ein typisches Eingabefenster sieht wie folgt aus:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>An instance can be created as follows:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T084131Z" creationid="Ragnar-F" creationdate="20260919T084131Z">
+        <seg>Eine Instanz kann wie folgt erstellt werden:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>An instance of a numeric struct class acts not as a number, but as a &lt;a0&gt;virtual reference&lt;/a0&gt; to a numeric variable.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T083732Z" creationid="Ragnar-F" creationdate="20260919T083732Z">
+        <seg>Eine Instanz einer numerischen Strukturklasse agiert nicht als Zahl, sondern als &lt;a0&gt;virtuelle Referenz&lt;/a0&gt;, die auf eine numerische Variable verweist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -76875,6 +77067,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>As structs often come from external sources, an address can be converted to a reference to a struct by calling the &lt;a0&gt;At&lt;/a0&gt; method.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T072612Z" creationid="Ragnar-F" creationdate="20260919T072612Z">
+        <seg>Da Strukturen häufig aus externen Quellen stammen, kann mithilfe der &lt;a0&gt;At&lt;/a0&gt;-Methode eine Adresse in eine Referenz umgewandelt werden, die auf eine Struktur verweist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>As the "Prompt to Overwrite" option is supported only by the Save dialog, specifying that option without the "Prompt to Create" option also puts the S option into effect.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230621T115141Z" creationid="Ragnar-F" creationdate="20230621T115141Z">
@@ -76979,6 +77179,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>As these are struct classes, each one has a &lt;a0&gt;pointer class&lt;/a0&gt; and &lt;a1&gt;array classes&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T082516Z" creationid="Ragnar-F" creationdate="20260919T082516Z">
+        <seg>Da das Strukturklassen sind, verfügt jede über eine &lt;a0&gt;Pointer-Klasse&lt;/a0&gt; und &lt;a1&gt;Array-Klassen&lt;/a1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>As these conversions can happen very frequently, whenever a variable containing a number is converted to a string, the result is &lt;e2&gt;cached&lt;/e2&gt; in the variable.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180108T002331Z" creationid="Ragnar-F" creationdate="20180108T002331Z">
@@ -77007,6 +77215,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230725T170444Z" creationid="Ragnar-F" creationdate="20200622T070404Z">
         <seg>Darüber hinaus können spezielle Benutzervariablen im Format &lt;c0&gt;U_&lt;i1&gt;Name&lt;/i1&gt;&lt;/c0&gt; mit den unten beschriebenen &lt;a2&gt;Let&lt;/a2&gt;- und &lt;a3&gt;Obey&lt;/a3&gt;-Direktiven erstellt werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>As with a class definition, fields can be inherited from the prototype's base.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T074955Z" creationid="Ragnar-F" creationdate="20260919T074955Z">
+        <seg>Ähnlich wie bei einer Klassendefinition können Felder von der Basisklasse des Prototyps geerbt werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -77119,6 +77335,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231009T142827Z" creationid="Ragnar-F" creationdate="20170515T213534Z">
         <seg>Wie jedes Fensterereignis wird das Size-Ereignis erst ausgelöst, wenn der aktuelle Thread &lt;a0&gt;unterbrechbar&lt;/a0&gt; wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>As with struct instances, we call it a &lt;a1&gt;boxed pointer&lt;/a1&gt; if it encapsulates an unsafe pointer, or a &lt;a2&gt;boxed struct&lt;/a2&gt; if its lifecycle is managed by the script.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T084120Z" creationid="Ragnar-F" creationdate="20260919T084120Z">
+        <seg>Wie bei Strukturinstanzen sprechen wir von einem &lt;a1&gt;gekapselten Pointer&lt;/a1&gt;, wenn der Pointer unsicher ist, oder von einer &lt;a2&gt;gekapselten Struktur&lt;/a2&gt;, wenn ihre Lebensdauer durch das Skript verwaltet wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -93628,6 +93852,38 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>DefineProp(AB.Prototype, 'a', {type:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T075016Z" creationid="Ragnar-F" creationdate="20260919T075016Z">
+        <seg>DefineProp(AB.Prototype, 'a', {type:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>DefineProp(AB.Prototype, 'b', {type:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T075018Z" creationid="Ragnar-F" creationdate="20260919T075018Z">
+        <seg>DefineProp(AB.Prototype, 'b', {type:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>DefineProp(POINT.Prototype, 'x', {type:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T074456Z" creationid="Ragnar-F" creationdate="20260919T074456Z">
+        <seg>DefineProp(POINT.Prototype, 'x', {type:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>DefineProp(POINT.Prototype, 'y', {type:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T074459Z" creationid="Ragnar-F" creationdate="20260919T074459Z">
+        <seg>DefineProp(POINT.Prototype, 'y', {type:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Defined properties and methods take precedence over meta-functions, regardless of whether they were defined in a base object.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220910T113427Z" creationid="Ragnar-F" creationdate="20210704T155455Z">
@@ -95016,6 +95272,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220412T113705Z" creationid="Ragnar-F" creationdate="20200621T080250Z">
         <seg>Direktiven für das Skriptverhalten</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Directly calling the class creates a boxed struct.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T084322Z" creationid="Ragnar-F" creationdate="20260919T084322Z">
+        <seg>Der direkte Aufruf der Klasse erstellt eine gekapselte Struktur.</seg>
       </tuv>
     </tu>
     <tu>
@@ -101604,6 +101868,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fields defined by a subclass are always placed after fields defined by the base class.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T072813Z" creationid="Ragnar-F" creationdate="20260919T072813Z">
+        <seg>Felder einer Unterklasse werden immer hinter den Feldern der Basisklasse platziert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>File</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140313T153439Z" creationid="Ragnar-F" creationdate="20140313T153439Z">
@@ -106982,6 +107254,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For DllCall, this includes the pointer classes.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T083359Z" creationid="Ragnar-F" creationdate="20260919T083359Z">
+        <seg>Bei DllCall beinhaltet das auch die Pointer-Klassen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For Example:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140320T144623Z" creationid="Ragnar-F" creationdate="20140320T144623Z">
@@ -110094,6 +110374,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For example, &lt;c2&gt;UInt32.Ptr&lt;/c2&gt; is equivalent to &lt;c3&gt;"UInt*"&lt;/c3&gt; when used with &lt;a4&gt;DllCall&lt;/a4&gt;, and &lt;c5&gt;UInt8[64]&lt;/c5&gt; is the class of an array of 64 bytes.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T082901Z" creationid="Ragnar-F" creationdate="20260919T082822Z">
+        <seg>Zum Beispiel ist &lt;c2&gt;UInt32.Ptr&lt;/c2&gt; dasselbe wie &lt;c3&gt;"UInt*"&lt;/c3&gt; bei &lt;a4&gt;DllCall&lt;/a4&gt;, und &lt;c5&gt;UInt8[64]&lt;/c5&gt; ist die Klasse eines 64-Byte-Arrays.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For example, &lt;c2&gt;Var := ++X&lt;/c2&gt; increments X and then assigns its value to &lt;e3&gt;Var&lt;/e3&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231201T104639Z" creationid="Ragnar-F" creationdate="20190821T073007Z">
@@ -113066,6 +113354,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230624T164946Z" creationid="Ragnar-F" creationdate="20230624T164946Z">
         <seg>Wenn z.B. &lt;c2&gt;"A|B|A"&lt;/c2&gt; zufällig sortiert wird, kann das Ergebnis entweder ein oder zwei A enthalten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For example, when class StructB extends StructA, the layout is the same as if StructB extends Object but begins with a nested StructA.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T073238Z" creationid="Ragnar-F" creationdate="20260919T073238Z">
+        <seg>Wenn z.B. die Klasse StructB die Klasse StructA erweitert, ist das Layout dasselbe wie, als würde StructB die Klasse Object erweitern, jedoch beginnend mit einer verschachtelten StructA.</seg>
       </tuv>
     </tu>
     <tu>
@@ -121883,6 +122179,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231120T184043Z" creationid="Ragnar-F" creationdate="20170721T202748Z">
         <seg>Ohne Hotkeys und Hotstrings führt ein Skript jedoch seine Funktionen beim Start der Reihe nach von oben nach unten aus.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>However, inherited properties are accessed directly, not through a nested struct.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T073555Z" creationid="Ragnar-F" creationdate="20260919T073533Z">
+        <seg>Der Zugriff auf geerbte Eigenschaften erfolgt allerdings nicht über eine verschachtelte Struktur, sondern direkt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -140089,10 +140393,34 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Int32, pack:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T075020Z" creationid="Ragnar-F" creationdate="20260919T075020Z">
+        <seg>Int32, pack:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Int32})</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T074458Z" creationid="Ragnar-F" creationdate="20260919T074458Z">
+        <seg>Int32})</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Int64</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140301T021505Z" creationid="Ragnar-F" creationdate="20140301T021505Z">
         <seg>Int64</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Int8})</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T075017Z" creationid="Ragnar-F" creationdate="20260919T075017Z">
+        <seg>Int8})</seg>
       </tuv>
     </tu>
     <tu>
@@ -141661,6 +141989,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231005T130132Z" creationid="Ragnar-F" creationdate="20180409T181507Z">
         <seg>Es wird automatisch zerstört, wenn das Menu-Objekt gelöscht wird (was geschieht, wenn dessen Referenzanzahl 0 erreicht).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>It is evaluated in the context of &lt;a0&gt;static __Init()&lt;/a0&gt;; i.e. &lt;c1&gt;this&lt;/c1&gt; refers to the class object.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T081328Z" creationid="Ragnar-F" creationdate="20260919T081328Z">
+        <seg>Die Auswertung erfolgt im Kontext &lt;a0&gt;static __Init()&lt;/a0&gt;; d.h. &lt;c1&gt;this&lt;/c1&gt; verweist auf das Klassenobjekt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -154121,6 +154457,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>MsgBox AB().Size</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T075022Z" creationid="Ragnar-F" creationdate="20260919T075022Z">
+        <seg>MsgBox AB().Size</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>MsgBox ACos(0.2)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180412T153511Z" creationid="Ragnar-F" creationdate="20180412T153511Z">
@@ -161761,6 +162105,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Numeric Types &lt;s0&gt;[v2.1-alpha.23+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T081621Z" creationid="Ragnar-F" creationdate="20260919T081611Z">
+        <seg>Numerische Typen &lt;s0&gt;[v2.1-alpha.23+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Numeric comparison is still performed when both operands are numeric and at least one operand is a pure number (not a string).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231124T213753Z" creationid="Ragnar-F" creationdate="20210704T143651Z">
@@ -168701,6 +169053,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171118T112553Z" creationid="Ragnar-F" creationdate="20171118T112553Z">
         <seg>PMingLiU-ExtB</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>POINT := Class(Struct)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T074353Z" creationid="Ragnar-F" creationdate="20260919T074353Z">
+        <seg>POINT := Class(Struct)</seg>
       </tuv>
     </tu>
     <tu>
@@ -193731,8 +194091,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>Struct classes are defined using &lt;c0&gt;struct&lt;/c0&gt; instead of &lt;c1&gt;class&lt;/c1&gt;, and default to extending Struct instead of Object.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T065734Z" creationid="Ragnar-F" creationdate="20260919T065734Z">
-        <seg>Strukturklassen werden mit &lt;c0&gt;struct&lt;/c0&gt; statt mit &lt;c1&gt;class&lt;/c1&gt; definiert, und erben standardmäßig von Struct statt von Object.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T072918Z" creationid="Ragnar-F" creationdate="20260919T065734Z">
+        <seg>Strukturklassen werden mit &lt;c0&gt;struct&lt;/c0&gt; statt mit &lt;c1&gt;class&lt;/c1&gt; definiert, und erweitern standardmäßig Struct statt Object.</seg>
       </tuv>
     </tu>
     <tu>
@@ -205577,6 +205937,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The following struct classes are predefined for numeric types:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T081727Z" creationid="Ragnar-F" creationdate="20260919T081727Z">
+        <seg>Es gibt für numerische Typen die folgenden vordefinierten Strukturklassen:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The following styles are always enabled and cannot be disabled:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210301T094707Z" creationid="Ragnar-F" creationdate="20210301T094707Z">
@@ -211885,6 +212253,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230726T075659Z" creationid="Ragnar-F" creationdate="20200622T080502Z">
         <seg>Der Typ der Ressource (als Integer oder Zeichenkette) kann explizit durch ein vorangestelltes Sternchen angegeben werden:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The type specifier must evaluate to a struct class with non-zero size.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T081340Z" creationid="Ragnar-F" creationdate="20260919T081137Z">
+        <seg>Der Typbezeichner muss bei der Auswertung eine Strukturklasse mit einer Größe ungleich Null ergeben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -229753,6 +230129,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Type Specifiers &lt;s0&gt;[v2.1-alpha.30+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T075240Z" creationid="Ragnar-F" creationdate="20260919T075232Z">
+        <seg>Typbezeichner &lt;s0&gt;[v2.1-alpha.30+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Type is now mandatory for NumGet as well.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231127T090912Z" creationid="Ragnar-F" creationdate="20210704T200948Z">
@@ -229765,6 +230149,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231028T100813Z" creationid="Ragnar-F" creationdate="20140308T025750Z">
         <seg>Typnamen, die mit &lt;a0&gt;DllCall&lt;/a0&gt;, &lt;a1&gt;NumPut&lt;/a1&gt; oder &lt;a2&gt;NumGet&lt;/a2&gt; verwendet werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Type specifiers are evaluated in sequence with static property initializers, when the class is initialized (not each time it is instantiated).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T080919Z" creationid="Ragnar-F" creationdate="20260919T080919Z">
+        <seg>Typbezeichner werden nacheinander mit statischen Eigenschaftsinitialisierern ausgewertet, wenn die Klasse initialisiert wird (nicht jedes Mal, wenn sie instanziiert wird).</seg>
       </tuv>
     </tu>
     <tu>
@@ -229909,6 +230301,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140310T151023Z" creationid="Ragnar-F" creationdate="20140310T151023Z">
         <seg>Führt üblicherweise die gleiche Funktion aus wie Browser_Forward.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Typically the class object (POINT) would be defined once and used to create many instances (pt).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T074644Z" creationid="Ragnar-F" creationdate="20260919T074644Z">
+        <seg>Typischerweise wird das Klassenobjekt (POINT) einmal definiert und dazu verwendet, viele Instanzen (pt) zu erstellen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -230989,6 +231389,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221030T215317Z" creationid="Ragnar-F" creationdate="20221030T215317Z">
         <seg>Im Gegensatz zur arithmetischen bitweisen Verschiebung nach rechts wird bei dieser Verschiebung das Vorzeichen der Zahl nicht beibehalten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Unlike declarations in a class definition, literal reserved type names such as "i32" must be quoted when calling DefineProp.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T074901Z" creationid="Ragnar-F" creationdate="20260919T074901Z">
+        <seg>Anders als bei Deklarationen in einer Klassendefinition müssen direkt geschriebene, reservierte Typnamen wie "i32" in Anführungszeichen gesetzt werden, wenn DefineProp aufgerufen wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -233109,6 +233517,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230624T141201Z" creationid="Ragnar-F" creationdate="20230624T141201Z">
         <seg>Wenn Sie mit &lt;a0&gt;Critical&lt;/a0&gt; das &lt;a1&gt;Meldungsüberprüfintervall&lt;/a1&gt; erhöhen, wird die Rückruffunktion mehr Zeit zum Beenden haben, bevor irgendwelche Meldungen abgeschickt werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Using DefineProp</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T073833Z" creationid="Ragnar-F" creationdate="20260919T073833Z">
+        <seg>Verwendung von DefineProp</seg>
       </tuv>
     </tu>
     <tu>
@@ -239678,6 +240094,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20191117T111602Z" creationid="Ragnar-F" creationdate="20191117T111602Z">
         <seg>Wenn dieser Style vorhanden ist, wird das Steuerelement im klassischen Design dargestellt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>When used as a property type, DllCall parameter type or array element type, conversion is handled directly and the class is not instantiated.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T083246Z" creationid="Ragnar-F" creationdate="20260919T083246Z">
+        <seg>Wenn diese Strukturklassen als Eigenschaftstypen, DllCall-Parametertypen oder Array-Elementtypen verwendet werden, erfolgt die Umwandlung direkt. Die Klassen werden dabei nicht instanziiert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -261690,6 +262114,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>cbSize      : UInt32 := this.Size</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T072127Z" creationid="Ragnar-F" creationdate="20260919T072127Z">
+        <seg>cbSize      : UInt32 := this.Size</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>cc := DllCall("GetFullPathName", "str", path, "uint", 0, "ptr", 0, "ptr", 0, "uint")</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190930T103406Z" creationid="Ragnar-F" creationdate="20190930T103349Z">
@@ -262618,6 +263050,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>dwFlags     : UInt32</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T072128Z" creationid="Ragnar-F" creationdate="20260919T072128Z">
+        <seg>dwFlags     : UInt32</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>dwProcessId := NumGet(pi, A_PtrSize*2 + 4, "UInt")</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180410T161316Z" creationid="Ragnar-F" creationdate="20180410T161316Z">
@@ -262630,6 +263070,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180410T161313Z" creationid="Ragnar-F" creationdate="20180410T161313Z">
         <seg>dwProcessId := NumGet(pi, A_PtrSize*2,     "UInt")</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>dwReserved  : UInt32</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T072131Z" creationid="Ragnar-F" creationdate="20260919T072131Z">
+        <seg>dwReserved  : UInt32</seg>
       </tuv>
     </tu>
     <tu>
@@ -264142,6 +264590,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200713T065917Z" creationid="Ragnar-F" creationdate="20200713T065917Z">
         <seg>iField := NumGet(NMIPAddress, 3*A_PtrSize + 0, "int")</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>iItem       : Int32</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T072130Z" creationid="Ragnar-F" creationdate="20260919T072130Z">
+        <seg>iItem       : Int32</seg>
       </tuv>
     </tu>
     <tu>
@@ -266778,6 +267234,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>im := LVINSERTMARK()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T072301Z" creationid="Ragnar-F" creationdate="20260919T072301Z">
+        <seg>im := LVINSERTMARK()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>in v1, &lt;c13&gt;and := 1&lt;/c13&gt; was allowed on its own line but &lt;c14&gt;(and := 1)&lt;/c14&gt; would not work.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231123T124038Z" creationid="Ragnar-F" creationdate="20210704T110823Z">
@@ -268118,6 +268582,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210307T194120Z" creationid="Ragnar-F" creationdate="20210307T194120Z">
         <seg>proto.HrInit := ComCall.Bind(3)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>pt := POINT()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T074500Z" creationid="Ragnar-F" creationdate="20260919T074500Z">
+        <seg>pt := POINT()</seg>
       </tuv>
     </tu>
     <tu>
@@ -270046,6 +270518,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171226T104529Z" creationid="Ragnar-F" creationdate="20171226T104529Z">
         <seg>Zeichenkette, Zahl oder Objekt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>struct LVINSERTMARK {</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T072125Z" creationid="Ragnar-F" creationdate="20260919T072125Z">
+        <seg>struct LVINSERTMARK {</seg>
       </tuv>
     </tu>
     <tu>
@@ -275288,8 +275768,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>true,</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260903T152641Z" creationid="Ragnar-F" creationdate="20260903T152641Z">
-        <seg>"Vorabversionsdokumentation. Details können noch fehlen und sich in zukünftigen Versionen ändern.",</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T071120Z" creationid="Ragnar-F" creationdate="20260903T152641Z">
+        <seg>"Vorabdokumentation. Details können noch fehlen und sich in zukünftigen Versionen ändern.",</seg>
       </tuv>
     </tu>
     <tu>
