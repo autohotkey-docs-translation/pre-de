@@ -66859,6 +66859,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>A structure or &lt;e0&gt;struct&lt;/e0&gt; is a collection of &lt;e1&gt;members&lt;/e1&gt; (fields) stored adjacently in memory.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T055123Z" creationid="Ragnar-F" creationdate="20260919T055123Z">
+        <seg>Eine Struktur oder &lt;e0&gt;struct&lt;/e0&gt; ist eine Sammlung von &lt;e1&gt;Elementen&lt;/e1&gt; (Feldern), die nebeneinander im Speicher abgelegt sind.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A sub-expression enclosed in (), [] or {} can automatically span multiple lines in most cases.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231120T194800Z" creationid="Ragnar-F" creationdate="20180215T102946Z">
@@ -135280,6 +135288,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>In AutoHotkey v2.0 and earlier, structs were typically "defined" by allocating memory with &lt;a0&gt;Buffer&lt;/a0&gt; (or other means) and directly manipulating it with &lt;a1&gt;NumPut&lt;/a1&gt; and &lt;a2&gt;NumGet&lt;/a2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T061101Z" creationid="Ragnar-F" creationdate="20260919T061101Z">
+        <seg>In AutoHotkey v2.0 und älteren Versionen wurden Strukturen in der Regel "definiert", indem man Speicher mit z.B. &lt;a0&gt;Buffer&lt;/a0&gt; reservierte und diesen anschließend direkt mit &lt;a1&gt;NumPut&lt;/a1&gt; und &lt;a2&gt;NumGet&lt;/a2&gt; manipulierte.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>In AutoHotkey, a &lt;c1&gt;class&lt;/c1&gt; defines properties to be shared by instances of the class (and methods, which are callable properties).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230826T080651Z" creationid="Ragnar-F" creationdate="20210404T171301Z">
@@ -138173,6 +138189,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260914T144615Z" creationid="Ragnar-F" creationdate="20260914T144615Z">
         <seg>In solchen Fällen muss &lt;e1&gt;ParamSpez&lt;/e1&gt; auf die Größe der Parameterliste gesetzt werden, wobei Int64 und Double als zwei 32-Bit-Parameter zählen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In those cases, the memory offset of each field relative to the start of the struct must exactly match the offset expected by the external function or control, usually as defined in an SDK or documentation meant for C/C++ developers.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T060120Z" creationid="Ragnar-F" creationdate="20260919T060120Z">
+        <seg>In solchen Fällen muss der Speicher-Offset jedes Feldes relativ zum Anfang der Struktur genau mit dem Offset übereinstimmen, den die externe Funktion oder das Steuerelement erwartet – in der Regel so, wie er in einem SDK oder in der Dokumentation für C/C++-Entwickler definiert ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -193713,6 +193737,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Structs are most often used with external functions via &lt;a0&gt;DllCall&lt;/a0&gt;, or with Gui controls via &lt;a1&gt;SendMessage&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T055622Z" creationid="Ragnar-F" creationdate="20260919T055622Z">
+        <seg>Strukturen werden häufig bei externen Funktionen via &lt;a0&gt;DllCall&lt;/a0&gt; oder bei GUI-Steuerelementen via &lt;a1&gt;SendMessage&lt;/a1&gt; verwendet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Structure example.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230410T143152Z" creationid="Ragnar-F" creationdate="20190930T125654Z">
@@ -193741,6 +193773,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140301T024617Z" creationid="Ragnar-F" creationdate="20140301T024617Z">
         <seg>Strukturen und Arrays</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Structures | AutoHotkey v2</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T051408Z" creationid="Ragnar-F" creationdate="20260919T051408Z">
+        <seg>Strukturen | AutoHotkey v2</seg>
       </tuv>
     </tu>
     <tu>
@@ -222333,6 +222373,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220604T164206Z" creationid="Ragnar-F" creationdate="20220604T164134Z">
         <seg>Dies setzt voraus, dass AutoHotkey unter "Programme" installiert ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This requires calculating the offset of each individual field as needed, so is a laborious and error-prone process.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T061944Z" creationid="Ragnar-F" creationdate="20260919T061944Z">
+        <seg>Für diesen Vorgang müssen die Offsets für jedes einzelne Feld berechnet werden. Das ist ziemlich mühsam und fehleranfällig.</seg>
       </tuv>
     </tu>
     <tu>
