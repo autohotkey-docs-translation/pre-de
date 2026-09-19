@@ -64795,6 +64795,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>A TypeError is thrown if __Value is not implemented.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T102918Z" creationid="Ragnar-F" creationdate="20260919T102918Z">
+        <seg>Es wird ein TypeError ausgelöst, wenn __Value nicht implementiert ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A Unicode character code between 0 and 0x10FFFF.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180814T180426Z" creationid="Ragnar-F" creationdate="20180814T180426Z">
@@ -66303,6 +66311,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20201112T123431Z" creationid="Ragnar-F" creationdate="20140311T005216Z">
         <seg>Der Platzhalter für 1 oder mehr Vorkommen des vorherigen Elements (Zeichen, &lt;a0&gt;Klasse&lt;/a0&gt; oder &lt;a1&gt;Teilsuchmuster&lt;/a1&gt;).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A pointer class can be used as the type of a struct field or typed property.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T104602Z" creationid="Ragnar-F" creationdate="20260919T104602Z">
+        <seg>Eine Pointer-Klasse kann als Typ eines Strukturfelds oder einer typisierten Eigenschaft verwendet werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -125960,6 +125976,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If a &lt;a0&gt;VarRef&lt;/a0&gt; is passed, its value (if any) is used as input.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T102536Z" creationid="Ragnar-F" creationdate="20260919T102536Z">
+        <seg>Wenn eine &lt;a0&gt;VarRef&lt;/a0&gt; übergeben wird, wird ihr Wert (sofern vorhanden) als Eingabe verwendet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If a &lt;a0&gt;hotkey&lt;/a0&gt; is pressed or a &lt;a1&gt;custom menu item&lt;/a1&gt; is selected while the &lt;a2&gt;current thread&lt;/a2&gt; is uninterruptible, that event will be buffered.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230706T130655Z" creationid="Ragnar-F" creationdate="20140307T164924Z">
@@ -126002,8 +126026,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>If a StructClass.Ptr is passed, the pointer value it contains is passed (but this is not typical usage).</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T102458Z" creationid="Ragnar-F" creationdate="20260919T102458Z">
-        <seg>Wenn ein StructClass.Ptr übergeben wird, wird der darin enthaltene Pointer-Wert übergeben (untypische Verwendung).</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T102624Z" creationid="Ragnar-F" creationdate="20260919T102458Z">
+        <seg>Wenn ein StructKlasse.Ptr übergeben wird, wird der darin enthaltene Pointer-Wert übergeben (untypische Verwendung).</seg>
       </tuv>
     </tu>
     <tu>
@@ -126020,6 +126044,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260919T102202Z" creationid="Ragnar-F" creationdate="20260919T102129Z">
         <seg>Wird eine VarRef übergeben, wird der Wert nach dem Aufruf zurückgelesen und der VarRef zugewiesen, wobei der Wert dabei ggf. konvertiert wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If a VarRef was passed, the VarRef is assigned one of the following:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T103001Z" creationid="Ragnar-F" creationdate="20260919T103001Z">
+        <seg>Wenn eine VarRef übergeben wurde, wird der VarRef einer der folgenden Werte zugewiesen:</seg>
       </tuv>
     </tu>
     <tu>
@@ -126980,6 +127012,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230621T205117Z" creationid="Ragnar-F" creationdate="20230621T205117Z">
         <seg>Wenn eine innere Registry-Schleife von einer äußeren Registry-Schleife umschlossen ist, hat das Element der innersten Schleife Vorrang:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If an input value was provided (not an unset VarRef), __Value is assigned to handle the conversion.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T103144Z" creationid="Ragnar-F" creationdate="20260919T102841Z">
+        <seg>Wenn ein Eingabewert angegeben wurde (keine ungesetzte VarRef), wird __Value für die Umwandlung zugewiesen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -132008,6 +132048,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If the input is an instance of StructClass, its address is passed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T102617Z" creationid="Ragnar-F" creationdate="20260919T102617Z">
+        <seg>Wenn die Eingabe eine Instanz von StructKlasse ist, wird deren Adresse übergeben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If the input is not suppressed, it is then processed by the hotkey recognizer, then by InputHooks which lack the H option, then by the hotstring recognizer.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T052708Z" creationid="Ragnar-F" creationdate="20260916T052434Z">
@@ -136541,6 +136589,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210216T105132Z" creationid="Ragnar-F" creationdate="20210216T105132Z">
         <seg>In allen anderen Fällen wird eine Standardmeldung verwendet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In any other case, a new instance of StructClass is constructed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T102644Z" creationid="Ragnar-F" creationdate="20260919T102644Z">
+        <seg>In allen anderen Fällen wird eine neue Instanz von StructKlasse konstruiert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -170590,6 +170646,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230904T094347Z" creationid="Ragnar-F" creationdate="20210704T075351Z">
         <seg>Pointer sind in 32-Bit-Builds 4 Bytes und in 64-Bit-Builds 8 Bytes groß.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Pointers in Structs</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T104458Z" creationid="Ragnar-F" creationdate="20260919T104458Z">
+        <seg>Pointer in Strukturen</seg>
       </tuv>
     </tu>
     <tu>
@@ -208746,6 +208810,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The new struct instance, so &lt;c0&gt;StructClass.Ptr, &amp;Arg&lt;/c0&gt; gives the same end result as &lt;c1&gt;StructClass.Ptr, Arg := StructClass()&lt;/c1&gt;, except that Arg is not assigned until after the call.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T103815Z" creationid="Ragnar-F" creationdate="20260919T103815Z">
+        <seg>Die neue Strukturinstanz. &lt;c0&gt;StructKlasse.Ptr, &amp;Arg&lt;/c0&gt; liefert dasselbe Endergebnis wie &lt;c1&gt;StructClass.Ptr, Arg := StructKlasse()&lt;/c1&gt;, außer dass Arg erst nach dem Aufruf etwas zugewiesen bekommt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The new style value is calculated as shown below (where &lt;e0&gt;CurrentStyle&lt;/e0&gt; could be retrieved with &lt;a1&gt;ControlGetStyle&lt;/a1&gt;, &lt;a2&gt;ControlGetExStyle&lt;/a2&gt;, &lt;a3&gt;WinGetStyle&lt;/a3&gt; or &lt;a4&gt;WinGetExStyle&lt;/a4&gt;):</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230924T100625Z" creationid="Ragnar-F" creationdate="20230924T100625Z">
@@ -210502,6 +210574,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231125T105720Z" creationid="Ragnar-F" creationdate="20210704T131548Z">
         <seg>Der Rückgabewert eines Eigenschafts-Setters wird nun ignoriert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The return value of the __Value getter, if defined.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T103029Z" creationid="Ragnar-F" creationdate="20260919T103029Z">
+        <seg>Der Rückgabewert des __Value-Getters, sofern definiert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -240479,6 +240559,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260919T083246Z" creationid="Ragnar-F" creationdate="20260919T083246Z">
         <seg>Wenn diese Strukturklassen als Eigenschaftstypen, DllCall-Parametertypen oder Array-Elementtypen verwendet werden, erfolgt die Umwandlung direkt. Die Klassen werden dabei nicht instanziiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>When used as a return type, the return value is a &lt;a0&gt;boxed pointer&lt;/a0&gt;, or &lt;a1&gt;unset&lt;/a1&gt; if null.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T104403Z" creationid="Ragnar-F" creationdate="20260919T104403Z">
+        <seg>Wenn der Rückgabewert als Rückgabetyp verwendet wird, ist er ein &lt;a0&gt;gekapselter Pointer&lt;/a0&gt;, oder &lt;a1&gt;ungesetzt&lt;/a1&gt;, falls Null.</seg>
       </tuv>
     </tu>
     <tu>
