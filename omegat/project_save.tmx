@@ -48309,6 +48309,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;c6&gt;)]},:?.&lt;/c6&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260920T105142Z" creationid="Ragnar-F" creationdate="20260920T105142Z">
+        <seg>&lt;c6&gt;)]},:?.&lt;/c6&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;c6&gt;String(Value)&lt;/c6&gt; calls &lt;c7&gt;Value.ToString()&lt;/c7&gt; if &lt;e8&gt;Value&lt;/e8&gt; is an object.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231204T110935Z" creationid="Ragnar-F" creationdate="20231204T110935Z">
@@ -102026,6 +102034,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231124T124247Z" creationid="Ragnar-F" creationdate="20210704T141240Z">
         <seg>Abgesehen vom obigen Fall wird beim Vorhandensein ungültiger Optionen ein Ladezeitfehler angezeigt, anstatt die ungültigen Optionen zu ignorieren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Excluding whitespace, the question mark should immediately follow the variable or property name (if there are no parameters) or the closing symbol of the parameter list (&lt;c4&gt;]?&lt;/c4&gt; or &lt;c5&gt;)?&lt;/c5&gt;); and must be followed by one of the following symbols:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260920T105141Z" creationid="Ragnar-F" creationdate="20260920T105141Z">
+        <seg>Ohne Berücksichtigung von Leerraumzeichen muss das Fragezeichen direkt rechts vom Variablen- oder Eigenschaftsnamen stehen (wenn keine Parameter vorhanden sind) oder direkt rechts von der Endklammer der Parameterliste (&lt;c4&gt;]?&lt;/c4&gt; oder &lt;c5&gt;)?&lt;/c5&gt;) stehen. Nach dem Fragezeichen muss eines der folgenden Symbole folgen:</seg>
       </tuv>
     </tu>
     <tu>
@@ -171564,6 +171580,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Permits a variable (or in &lt;s1&gt;[v2.1-alpha.2+]&lt;/s1&gt; a property, method or function call) to be &lt;a2&gt;unset&lt;/a2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260920T103149Z" creationid="Ragnar-F" creationdate="20260920T103149Z">
+        <seg>Erlaubt einer Variable (oder in &lt;s1&gt;[v2.1-alpha.2+]&lt;/s1&gt; einer Eigenschaft, Methode oder einem Funktionsaufruf), &lt;a2&gt;ungesetzt&lt;/a2&gt; zu sein.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Persistence</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210706T120355Z" creationid="Ragnar-F" creationdate="20210706T120355Z">
@@ -221364,6 +221388,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This is &lt;a3&gt;valid only in specific contexts&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260920T103229Z" creationid="Ragnar-F" creationdate="20260920T103229Z">
+        <seg>Dies ist &lt;a3&gt;nur in bestimmten Fällen gültig&lt;/a3&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This is a boon, for instance, when moving a GUI window between a large external screen with 100 % DPI and a smaller screen with 200 % DPI.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230731T112405Z" creationid="Ragnar-F" creationdate="20230620T212305Z">
@@ -240561,6 +240593,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180703T122259Z" creationid="Ragnar-F" creationdate="20140303T133952Z">
         <seg>Der Name einer Datei, die erstellt werden soll, wenn &lt;e0&gt;Quelle&lt;/e0&gt; aus der EXE-Datei extrahiert wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>When &lt;e1&gt;Expr&lt;/e1&gt; evaluates to any other object, the object's &lt;a2&gt;__Value property&lt;/a2&gt; is invoked (get or set, depending on whether the dereference is the target of an assignment).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260920T103033Z" creationid="Ragnar-F" creationdate="20260920T103033Z">
+        <seg>Wenn die Auswertung von &lt;e1&gt;Ausdr&lt;/e1&gt; ein anderes Objekt ergibt, wird die &lt;a2&gt;__Value-Eigenschaft&lt;/a2&gt; des Objekts aufgerufen (Get oder Set, je nachdem, ob die Dereferenzierung das Ziel einer Zuweisung ist).</seg>
       </tuv>
     </tu>
     <tu>
