@@ -25618,8 +25618,8 @@
       <tuv lang="en">
         <seg>; Z can be mandatory only in v2.1-alpha.18+</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T081554Z" creationid="Ragnar-F" creationdate="20260913T081554Z">
-        <seg>; Z kann nur in Version 2.1-alpha.18+ ein Pflichtparameter sein.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T182648Z" creationid="Ragnar-F" creationdate="20260913T081554Z">
+        <seg>; Z kann nur in v2.1-alpha.18+ ein Pflichtparameter sein.</seg>
       </tuv>
     </tu>
     <tu>
@@ -63271,8 +63271,8 @@
       <tuv lang="en">
         <seg>&lt;s0&gt;Warning:&lt;/s0&gt; This is preliminary documentation for v2.1.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T062223Z" creationid="Ragnar-F" creationdate="20260919T062223Z">
-        <seg>&lt;s0&gt;Warnung:&lt;/s0&gt; Dies ist eine Vorabdokumentation für Version 2.1.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T182724Z" creationid="Ragnar-F" creationdate="20260919T062223Z">
+        <seg>&lt;s0&gt;Warnung:&lt;/s0&gt; Dies ist eine Vorabdokumentation für v2.1.</seg>
       </tuv>
     </tu>
     <tu>
@@ -80439,8 +80439,8 @@
       <tuv lang="en">
         <seg>Based on v2.0.3.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T173013Z" creationid="Ragnar-F" creationdate="20260912T173013Z">
-        <seg>Basiert auf Version 2.0.3.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T182659Z" creationid="Ragnar-F" creationdate="20260912T173013Z">
+        <seg>Basiert auf v2.0.3.</seg>
       </tuv>
     </tu>
     <tu>
@@ -110010,8 +110010,8 @@
       <tuv lang="en">
         <seg>For changes made after v2.1, see the &lt;a0&gt;changelog&lt;/a0&gt;.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T182815Z" creationid="Ragnar-F" creationdate="20260919T182815Z">
-        <seg>Änderungen nach Version 2.1 finden Sie im &lt;a0&gt;Änderungsprotokoll&lt;/a0&gt;.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T182821Z" creationid="Ragnar-F" creationdate="20260919T182815Z">
+        <seg>Änderungen nach v2.1 finden Sie im &lt;a0&gt;Änderungsprotokoll&lt;/a0&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -248064,8 +248064,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>With v2.1, the script can define a struct as a sequence of typed properties.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T062432Z" creationid="Ragnar-F" creationdate="20260919T062432Z">
-        <seg>Ab Version 2.1 ist es möglich, eine Struktur in Form einer Sequenz typisierter Eigenschaften zu definieren.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T182733Z" creationid="Ragnar-F" creationdate="20260919T062432Z">
+        <seg>Ab v2.1 ist es möglich, eine Struktur in Form einer Sequenz typisierter Eigenschaften zu definieren.</seg>
       </tuv>
     </tu>
     <tu>
