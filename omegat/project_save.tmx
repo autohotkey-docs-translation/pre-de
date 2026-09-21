@@ -62,6 +62,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>!~=</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T070704Z" creationid="Ragnar-F" creationdate="20260921T070704Z">
+        <seg>!~=</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>" (name ?? "could not be retrieved") "`n"</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220713T141250Z" creationid="Ragnar-F" creationdate="20220713T141231Z">
@@ -10038,6 +10046,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>0 = No hooks installed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T074008Z" creationid="Ragnar-F" creationdate="20260921T073959Z">
+        <seg>0 = Keine Hooks installiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>0 = Normal boot</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210211T151233Z" creationid="Ragnar-F" creationdate="20210211T151233Z">
@@ -10846,6 +10862,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>1 = This script has a hook installed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T074030Z" creationid="Ragnar-F" creationdate="20260921T074009Z">
+        <seg>1 = Dieses Skript hat einen Hook installiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>1 = Use short date (meaningful only when &lt;e0&gt;Format&lt;/e0&gt; is blank; not compatible with 2 and 8).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210212T140306Z" creationid="Ragnar-F" creationdate="20210212T140306Z">
@@ -11322,6 +11346,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20250928T113237Z" creationid="Ragnar-F" creationdate="20200622T101336Z">
         <seg>2 – Nur ausführen, wenn die UPX-Komprimierung angegeben ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2 = Another script has a hook installed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T074050Z" creationid="Ragnar-F" creationdate="20260921T074033Z">
+        <seg>2 = Ein anderes Skript hat einen Hook installiert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12010,6 +12042,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20250928T113656Z" creationid="Ragnar-F" creationdate="20180429T181633Z">
         <seg>3 – Tastendrücke senden</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>3 = Both this script and another script have hooks installed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T074117Z" creationid="Ragnar-F" creationdate="20260921T074051Z">
+        <seg>3 = Sowohl dieses Skript als auch ein anderes Skript haben Hooks installiert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -40133,6 +40173,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;OnMessage (GUI)&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.7+]&lt;/s1&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T073902Z" creationid="Ragnar-F" creationdate="20260921T073902Z">
+        <seg>&lt;a0&gt;OnMessage (GUI)&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.7+]&lt;/s1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;OnMessage&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.1+]&lt;/s1&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260915T135626Z" creationid="Ragnar-F" creationdate="20260915T135626Z">
@@ -42245,6 +42293,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;Unset (technical details)&lt;/a0&gt;, &lt;a1&gt;Unset (concept)&lt;/a1&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T065639Z" creationid="Ragnar-F" creationdate="20260921T065615Z">
+        <seg>&lt;a0&gt;Ungesetzt (technische Details)&lt;/a0&gt;, &lt;a1&gt;Ungesetzt (Konzept)&lt;/a1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;Until&lt;/a0&gt; causes a loop to terminate when an expression evaluates to true.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230720T115345Z" creationid="Ragnar-F" creationdate="20171228T220822Z">
@@ -44329,6 +44385,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231201T184202Z" creationid="Ragnar-F" creationdate="20210307T191726Z">
         <seg>&lt;a6&gt;Base&lt;/a6&gt; kann innerhalb des direkt geschriebenen Objekts gesetzt werden, aber alle anderen Eigenschaften werden als &lt;e7&gt;eigene Werteigenschaften&lt;/e7&gt; gesetzt, mit der Möglichkeit (oder Gefahr), die vom Basisobjekt geerbten Eigenschaften zu überschreiben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a6&gt;Dereference&lt;/a6&gt;, &lt;a7&gt;ByRef&lt;/a7&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T070035Z" creationid="Ragnar-F" creationdate="20260921T070035Z">
+        <seg>&lt;a6&gt;Dereferenz&lt;/a6&gt;, &lt;a7&gt;ByRef&lt;/a7&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -47557,6 +47621,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;c1&gt;a !~= b&lt;/c1&gt; is equivalent to &lt;c2&gt;!(a ~= b)&lt;/c2&gt; or &lt;c3&gt;!RegExMatch(a, b)&lt;/c3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T070746Z" creationid="Ragnar-F" creationdate="20260921T070724Z">
+        <seg>&lt;c1&gt;a !~= b&lt;/c1&gt; ist dasselbe wie &lt;c2&gt;!(a ~= b)&lt;/c2&gt; oder &lt;c3&gt;!RegExMatch(a, b)&lt;/c3&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;c1&gt;break("outer")&lt;/c1&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180215T124516Z" creationid="Ragnar-F" creationdate="20180215T124516Z">
@@ -47649,6 +47721,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140316T134650Z" creationid="Ragnar-F" creationdate="20140316T134650Z">
         <seg>&lt;c1&gt;x &gt; 3 and x &lt; 10&lt;/c1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c1&gt;x ??= y&lt;/c1&gt; is shorthand for &lt;c2&gt;x := x ?? y&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T071914Z" creationid="Ragnar-F" creationdate="20260921T071850Z">
+        <seg>&lt;c1&gt;x ??= y&lt;/c1&gt; ist die Kurzschreibweise für &lt;c2&gt;x := x ?? y&lt;/c2&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -47773,6 +47853,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;c2&gt;A_KeybdHookInstalled &amp; 1&lt;/c2&gt; (using &lt;a3&gt;bitwise-AND&lt;/a3&gt;) is true when this script has a keyboard hook installed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T074445Z" creationid="Ragnar-F" creationdate="20260921T074445Z">
+        <seg>&lt;c2&gt;A_KeybdHookInstalled &amp; 1&lt;/c2&gt; (das ein &lt;a3&gt;bitweises UND&lt;/a3&gt; verwendet) ist wahr, wenn dieses Skript einen Tastatur-Hook installiert hat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;c2&gt;If&lt;/c2&gt; with &lt;c3&gt;Else&lt;/c3&gt;; &lt;c4&gt;Loop&lt;/c4&gt;/&lt;c5&gt;For&lt;/c5&gt; with &lt;c6&gt;Until&lt;/c6&gt; or &lt;c7&gt;Else&lt;/c7&gt;; &lt;c8&gt;Try&lt;/c8&gt; with &lt;c9&gt;Catch&lt;/c9&gt; and/or &lt;c10&gt;Else&lt;/c10&gt; and/or &lt;c11&gt;Finally&lt;/c11&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210410T200535Z" creationid="Ragnar-F" creationdate="20210410T200456Z">
@@ -47873,6 +47961,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260214T095326Z" creationid="Ragnar-F" creationdate="20260214T092218Z">
         <seg>&lt;c2&gt;ToolTipLeft&lt;/c2&gt; oder &lt;c3&gt;ToolTipRight&lt;/c3&gt; (für &lt;a4&gt;vertikale&lt;/a4&gt; Schieberegler); &lt;c5&gt;ToolTipTop&lt;/c5&gt; oder &lt;c6&gt;ToolTipBottom&lt;/c6&gt; (für horizontale Schieberegler).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c2&gt;Var := unset&lt;/c2&gt;, &lt;c3&gt;Var1 := (Var2?)&lt;/c3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T071832Z" creationid="Ragnar-F" creationdate="20260921T071832Z">
+        <seg>&lt;c2&gt;Var := unset&lt;/c2&gt;, &lt;c3&gt;Var1 := (Var2?)&lt;/c3&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -52793,6 +52889,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230926T105810Z" creationid="Ragnar-F" creationdate="20210223T141808Z">
         <seg>&lt;e3&gt;Quellcode&lt;/e3&gt; ist die ungefähre Darstellung des tatsächlichen Quellcodes in dieser Zeile, wie in &lt;a4&gt;ListLines&lt;/a4&gt; angezeigt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;e3&gt;y&lt;/e3&gt; is evaluated and assigned to &lt;e4&gt;x&lt;/e4&gt; only if &lt;e5&gt;x&lt;/e5&gt; is &lt;a6&gt;unset&lt;/a6&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T072037Z" creationid="Ragnar-F" creationdate="20260921T072037Z">
+        <seg>&lt;e3&gt;y&lt;/e3&gt; wird nur ausgewertet und dem &lt;e4&gt;x&lt;/e4&gt; zugewiesen, wenn &lt;e5&gt;x&lt;/e5&gt; gleich &lt;a6&gt;unset&lt;/a6&gt; ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -61165,6 +61269,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;Reference (&amp;):&lt;/s0&gt; Retrieves a value representing a reference to a variable or property.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T065904Z" creationid="Ragnar-F" creationdate="20260921T065904Z">
+        <seg>&lt;s0&gt;Referenz (&amp;):&lt;/s0&gt; Ruft einen Wert ab, der eine Referenz repräsentiert, die auf eine Variable oder Eigenschaft verweist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;RegCreateKey&lt;/s0&gt; &lt;s1&gt;KeyName&lt;/s1&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220713T142536Z" creationid="Ragnar-F" creationdate="20220713T142524Z">
@@ -62297,6 +62409,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230820T071613Z" creationid="Ragnar-F" creationdate="20230814T054627Z">
         <seg>&lt;s0&gt;Tipp:&lt;/s0&gt; Wenn Ihr Browser dies unterstützt, können Sie jeden Codeblock (wie den obigen) als Skriptdatei herunterladen, indem Sie den Mauszeiger über den Codeblock bewegen und oben rechts auf die Schaltfläche &lt;s1&gt;↓&lt;/s1&gt; klicken.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s0&gt;Tip:&lt;/s0&gt; Short-circuiting allows the maybe operator to simplify complex expressions where multiple inputs can be unset.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T064731Z" creationid="Ragnar-F" creationdate="20260921T064731Z">
+        <seg>&lt;s0&gt;Tipp:&lt;/s0&gt; Durch Kurzschließen kann der Vielleicht-Operator komplexe Ausdrücke vereinfachen, wo mehrere Eingaben ungesetzt sein können.</seg>
       </tuv>
     </tu>
     <tu>
@@ -64221,6 +64341,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>??=</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T071419Z" creationid="Ragnar-F" creationdate="20260921T071419Z">
+        <seg>??=</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140311T004248Z" creationid="Ragnar-F" creationdate="20140311T004248Z">
@@ -65505,6 +65633,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260918T125520Z" creationid="Ragnar-F" creationdate="20260918T125520Z">
         <seg>Eine Groß-/Kleinschreibung-sensitive Überprüfung würde daher entweder beide oder keine der beiden Fensterklassen finden, je nachdem, welche zuerst registriert wurde.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A chain does not extend outside of parentheses, but a new chain can be started, as in &lt;c8&gt;(w ?? x?.y)?.z()&lt;/c8&gt;, which permits only &lt;e9&gt;w&lt;/e9&gt; and &lt;e10&gt;x&lt;/e10&gt; to be unset.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T063030Z" creationid="Ragnar-F" creationdate="20260921T063030Z">
+        <seg>Eine Kette reicht nicht über die Klammern hinaus, aber es kann eine neue Kette gestartet werden, wie in &lt;c8&gt;(w ?? x?.y)?.z()&lt;/c8&gt;, wodurch nur &lt;e9&gt;w&lt;/e9&gt; und &lt;e10&gt;x&lt;/e10&gt; ungesetzt sein dürfen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -68701,6 +68837,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>A_HotIf</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T073147Z" creationid="Ragnar-F" creationdate="20260921T073147Z">
+        <seg>A_HotIf</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A_HotkeyInterval</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210404T075148Z" creationid="Ragnar-F" creationdate="20210404T075148Z">
@@ -68953,6 +69097,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20160117T222925Z" creationid="Ragnar-F" creationdate="20160117T222925Z">
         <seg>A_KeyDurationPlay</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A_KeybdHookInstalled</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T073906Z" creationid="Ragnar-F" creationdate="20260921T073906Z">
+        <seg>A_KeybdHookInstalled</seg>
       </tuv>
     </tu>
     <tu>
@@ -69361,6 +69513,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20160117T223031Z" creationid="Ragnar-F" creationdate="20160117T223031Z">
         <seg>A_MouseDelayPlay</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A_MouseHookInstalled</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T073908Z" creationid="Ragnar-F" creationdate="20260921T073908Z">
+        <seg>A_MouseHookInstalled</seg>
       </tuv>
     </tu>
     <tu>
@@ -75637,6 +75797,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>An optional chain can be used on the left-hand side of an assignment, but in that case cannot end with &lt;c1&gt;?&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T065612Z" creationid="Ragnar-F" creationdate="20260921T065612Z">
+        <seg>Auf der linken Seite einer Zuweisung kann eine optionale Kette verwendet werden. In diesem Fall darf die Kette jedoch nicht mit &lt;c1&gt;?&lt;/c1&gt; enden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>An optional chain is subject to the same &lt;a0&gt;restrictions&lt;/a0&gt; as any unset expression, with the &lt;a1&gt;additional restriction&lt;/a1&gt; that a final question mark is required if it should be interpreted as omitting a parameter.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T065353Z" creationid="Ragnar-F" creationdate="20260921T065310Z">
+        <seg>Eine optionale Kette unterliegt denselben &lt;a0&gt;Einschränkungen&lt;/a0&gt; wie ein Unset-Ausdruck. &lt;a1&gt;Hinzu kommt die Einschränkung&lt;/a1&gt;, dass ein finales Fragezeichen erforderlich ist, wenn die Kette als "Parameter weglassen" interpretiert werden soll.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>An optional letter "v" followed by a version number.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221201T141542Z" creationid="Ragnar-F" creationdate="20221201T141214Z">
@@ -77013,6 +77189,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Applying the operator to a property causes the __Ref method to be called with the property name as a parameter.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T070438Z" creationid="Ragnar-F" creationdate="20260921T070438Z">
+        <seg>Wendet man den Operator auf eine Eigenschaft an, wird die __Ref-Methode aufgerufen, mit dem Namen der Eigenschaft als Parameter.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>AppsKey</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140310T152302Z" creationid="Ragnar-F" creationdate="20140310T152302Z">
@@ -78129,6 +78313,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140311T225454Z" creationid="Ragnar-F" creationdate="20140311T225454Z">
         <seg>Zuweisen eines Elements:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Assigning &lt;c0&gt;unset&lt;/c0&gt; may have &lt;a1&gt;special meaning&lt;/a1&gt;, such as deleting a property or map element, or other effects if the target is a dynamic property.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T071753Z" creationid="Ragnar-F" creationdate="20260921T071753Z">
+        <seg>Die Zuweisung von &lt;c0&gt;unset&lt;/c0&gt; hat mitunter eine &lt;a1&gt;besondere Bedeutung&lt;/a1&gt;, z.B. das Löschen einer Eigenschaft oder eines Map-Elements, oder andere Auswirkungen, wenn das Ziel eine dynamische Eigenschaft ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -81421,6 +81613,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Built-in variables which allow assignment are fully supported.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T070222Z" creationid="Ragnar-F" creationdate="20260921T070222Z">
+        <seg>Interne Variablen, die eine Zuweisung zulassen, werden vollständig unterstützt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Built-in variables which return numbers now return them as an &lt;a0&gt;integer&lt;/a0&gt; rather than a &lt;a1&gt;string&lt;/a1&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210725T072327Z" creationid="Ragnar-F" creationdate="20210725T072327Z">
@@ -81941,6 +82141,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>By contrast, &lt;c3&gt;x.y[z]?&lt;/c3&gt; permits the property to &lt;c4&gt;return unset&lt;/c4&gt; but requires that the property itself exists.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T055627Z" creationid="Ragnar-F" creationdate="20260921T055627Z">
+        <seg>Im Gegensatz dazu erlaubt &lt;c3&gt;x.y[z]?&lt;/c3&gt; der Eigenschaft, ein &lt;c4&gt;return unset&lt;/c4&gt; zu machen, setzt jedoch voraus, dass die Eigenschaft selbst existiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>By contrast, &lt;c5&gt;IsNumber(n)&lt;/c5&gt; is true if &lt;e6&gt;n&lt;/e6&gt; is a number or a numeric string.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210223T135353Z" creationid="Ragnar-F" creationdate="20210223T135353Z">
@@ -81953,6 +82161,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221220T153902Z" creationid="Ragnar-F" creationdate="20221220T153902Z">
         <seg>&lt;c6&gt;^a::&lt;/c6&gt; und &lt;c7&gt;^A::&lt;/c7&gt; sind dagegen äquivalent.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>By contrast, &lt;c8&gt;x?.y ?? z&lt;/c8&gt; permits &lt;e9&gt;x&lt;/e9&gt; to be unset but not &lt;e10&gt;y&lt;/e10&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T071417Z" creationid="Ragnar-F" creationdate="20260921T071417Z">
+        <seg>&lt;c8&gt;x?.y ?? z&lt;/c8&gt; hingegen erlaubt &lt;e9&gt;x&lt;/e9&gt;, ungesetzt zu sein, &lt;e10&gt;y&lt;/e10&gt; aber nicht.</seg>
       </tuv>
     </tu>
     <tu>
@@ -84073,6 +84289,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231203T220946Z" creationid="Ragnar-F" creationdate="20231203T220946Z">
         <seg>RückrufOderUntermenü</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Callbacks which are set by HotIfWin or an &lt;a5&gt;optimized #HotIf&lt;/a5&gt; may not be called by the program, but can be called by the script.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T073708Z" creationid="Ragnar-F" creationdate="20260921T073708Z">
+        <seg>Rückrufe, die von HotIfWin oder einem &lt;a5&gt;optimierten #HotIf&lt;/a5&gt; gesetzt wurden, können zwar nicht vom Programm, wohl aber vom Skript aufgerufen werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -89690,6 +89914,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230825T085344Z" creationid="Ragnar-F" creationdate="20200630T142616Z">
         <seg>Enthält ein &lt;a0&gt;Array&lt;/a0&gt; von Befehlszeilenparametern.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Contains one of the following numbers, depending on the current state of the keyboard/mouse hook:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T073957Z" creationid="Ragnar-F" creationdate="20260921T073957Z">
+        <seg>Enthält je nach aktuellem Status des Tastatur-/Maus-Hooks eine der folgenden Zahlen:</seg>
       </tuv>
     </tu>
     <tu>
@@ -102040,8 +102272,8 @@
       <tuv lang="en">
         <seg>Excluding whitespace, the question mark should immediately follow the variable or property name (if there are no parameters) or the closing symbol of the parameter list (&lt;c4&gt;]?&lt;/c4&gt; or &lt;c5&gt;)?&lt;/c5&gt;); and must be followed by one of the following symbols:</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260920T105141Z" creationid="Ragnar-F" creationdate="20260920T105141Z">
-        <seg>Ohne Berücksichtigung von Leerraumzeichen muss das Fragezeichen direkt rechts vom Variablen- oder Eigenschaftsnamen stehen (wenn keine Parameter vorhanden sind) oder direkt rechts von der Endklammer der Parameterliste (&lt;c4&gt;]?&lt;/c4&gt; oder &lt;c5&gt;)?&lt;/c5&gt;) stehen. Nach dem Fragezeichen muss eines der folgenden Symbole folgen:</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T062019Z" creationid="Ragnar-F" creationdate="20260920T105141Z">
+        <seg>Geben Sie das Fragezeichen direkt rechts vom Variablen- oder Eigenschaftsnamen (wenn keine Parameter vorhanden sind) oder direkt rechts von der Endklammer der Parameterliste (&lt;c4&gt;]?&lt;/c4&gt; oder &lt;c5&gt;)?&lt;/c5&gt;) an. Nach dem Fragezeichen muss eines der folgenden Symbole folgen:</seg>
       </tuv>
     </tu>
     <tu>
@@ -110192,6 +110424,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For example, &lt;c0&gt;A_KeybdHookInstalled &gt; 1&lt;/c0&gt; is true when another script has a keyboard hook installed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T074158Z" creationid="Ragnar-F" creationdate="20260921T074158Z">
+        <seg>Zum Beispiel ist &lt;c0&gt;A_KeybdHookInstalled &gt; 1&lt;/c0&gt; wahr, wenn ein anderes Skript einen Tastatur-Hook installiert hat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For example, &lt;c0&gt;Click 100, 200, "R D"&lt;/c0&gt; is equivalent to &lt;c1&gt;Click "100 200 R D"&lt;/c1&gt; and both are valid.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230919T102347Z" creationid="Ragnar-F" creationdate="20230815T181547Z">
@@ -110652,6 +110892,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T111546Z" creationid="Ragnar-F" creationdate="20260916T111546Z">
         <seg>Zum Beispiel ist &lt;c1&gt;&amp;Obj.Prop&lt;/c1&gt; dasselbe wie &lt;c2&gt;Obj.__Ref('Prop')&lt;/c2&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For example, &lt;c1&gt;&amp;x.y&lt;/c1&gt; is equivalent to &lt;c2&gt;x.__Ref('y')&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T070504Z" creationid="Ragnar-F" creationdate="20260921T070504Z">
+        <seg>Zum Beispiel ist &lt;c1&gt;&amp;x.y&lt;/c1&gt; dasselbe wie &lt;c2&gt;x.__Ref('y')&lt;/c2&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -111192,6 +111440,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For example, &lt;c1&gt;r := x?.y + 1&lt;/c1&gt; assigns &lt;c2&gt;unset&lt;/c2&gt; to &lt;e3&gt;r&lt;/e3&gt; if &lt;e4&gt;x&lt;/e4&gt; is unset, but &lt;c5&gt;1 + (r := x?.y)&lt;/c5&gt; is not permitted because the assignment's result can be unset.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T064110Z" creationid="Ragnar-F" creationdate="20260921T064110Z">
+        <seg>Zum Beispiel bewirkt &lt;c1&gt;r := x?.y + 1&lt;/c1&gt;, dass &lt;c2&gt;unset&lt;/c2&gt; an &lt;e3&gt;r&lt;/e3&gt; zugewiesen wird, wenn &lt;e4&gt;x&lt;/e4&gt; ungesetzt ist, aber &lt;c5&gt;1 + (r := x?.y)&lt;/c5&gt; ist nicht zulässig, da das Ergebnis der Zuweisung ungesetzt sein kann.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For example, &lt;c1&gt;return ComValue(0,0)&lt;/c1&gt; returns a variant of type VT_EMPTY, which is equivalent to returning &lt;c2&gt;undefined&lt;/c2&gt; (or not returning) from a JavaScript function.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230624T204311Z" creationid="Ragnar-F" creationdate="20210410T122912Z">
@@ -111528,6 +111784,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For example, &lt;c3&gt;(x?.y(z()))&lt;/c3&gt; does not evaluate &lt;c4&gt;z()&lt;/c4&gt; or &lt;c5&gt;.y()&lt;/c5&gt; if &lt;e6&gt;x&lt;/e6&gt; is unset, but only &lt;e7&gt;x&lt;/e7&gt; itself is permitted to be unset, unless additional question marks are added.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T062714Z" creationid="Ragnar-F" creationdate="20260921T062714Z">
+        <seg>Zum Beispiel bewirkt &lt;c3&gt;(x?.y(z()))&lt;/c3&gt;, dass weder &lt;c4&gt;z()&lt;/c4&gt; noch &lt;c5&gt;.y()&lt;/c5&gt; ausgewertet werden, wenn &lt;e6&gt;x&lt;/e6&gt; ungesetzt ist; allerdings darf nur &lt;e7&gt;x&lt;/e7&gt; selbst ungesetzt sein, sofern keine weiteren Fragezeichen hinzugefügt werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For example, &lt;c3&gt;*Icon2&lt;/c3&gt; would load the default icon from the second icon group.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230621T155802Z" creationid="Ragnar-F" creationdate="20230621T155802Z">
@@ -111704,6 +111968,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For example, &lt;c3&gt;ref := &amp;target&lt;/c3&gt; followed by &lt;c4&gt;%ref% := 1&lt;/c4&gt; would assign the value 1 to &lt;e5&gt;target&lt;/e5&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T070017Z" creationid="Ragnar-F" creationdate="20260921T070017Z">
+        <seg>Zum Beispiel bewirkt &lt;c3&gt;Ref := &amp;Ziel&lt;/c3&gt; gefolgt von &lt;c4&gt;%Ref% := 1&lt;/c4&gt;, dass 1 in &lt;e5&gt;Ziel&lt;/e5&gt; gespeichert wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For example, &lt;c3&gt;t64&lt;/c3&gt; would double the default distance between tab stops.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260213T195752Z" creationid="Ragnar-F" creationdate="20260213T195752Z">
@@ -111844,6 +112116,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231201T181036Z" creationid="Ragnar-F" creationdate="20191209T145739Z">
         <seg>Zum Beispiel ist &lt;c4&gt;x := {a:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For example, &lt;c4&gt;x.y ?? z&lt;/c4&gt; is equivalent to &lt;c5&gt;(x.y?) ?? z&lt;/c5&gt;, which permits &lt;e6&gt;y&lt;/e6&gt; to be unset but not &lt;e7&gt;x&lt;/e7&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T071258Z" creationid="Ragnar-F" creationdate="20260921T071258Z">
+        <seg>Zum Beispiel ist &lt;c4&gt;x.y ?? z&lt;/c4&gt; dasselbe wie &lt;c5&gt;(x.y?) ?? z&lt;/c5&gt;, wo &lt;e6&gt;y&lt;/e6&gt; ungesetzt sein darf, &lt;e7&gt;x&lt;/e7&gt; aber nicht.</seg>
       </tuv>
     </tu>
     <tu>
@@ -121345,6 +121625,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>HotIf also returns the previous callback, but this variable can be used to retrieve it without changing the current criteria.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T073858Z" creationid="Ragnar-F" creationdate="20260921T073858Z">
+        <seg>HotIf gibt auch den vorherigen Rückruf zurück, aber mit dieser Variable kann dieser abgerufen werden, ohne die aktuellen Kriterien zu ändern.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>HotIfTimeout</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20241102T142402Z" creationid="Ragnar-F" creationdate="20241102T142402Z">
@@ -126918,6 +127206,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20241102T140302Z" creationid="Ragnar-F" creationdate="20241102T140302Z">
         <seg>Wenn XXX nichts anderes als eine der explizit definierten ComObj-Funktionen ist, verwenden Sie stattdessen &lt;a0&gt;ComObjActive&lt;/a0&gt;, &lt;a1&gt;ComValue&lt;/a1&gt; oder &lt;a2&gt;ComObjFromPtr&lt;/a2&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If Y explicitly returns unset, it is assumed that Y should sometimes return a value, so X is required to use the &lt;a7&gt;maybe (?)&lt;/a7&gt; operator to show that the return value is optional.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T073144Z" creationid="Ragnar-F" creationdate="20260921T073144Z">
+        <seg>Wenn Y explizit unset zurückgibt, wird davon ausgegangen, dass Y manchmal einen Wert zurückgeben soll; daher muss X den &lt;a7&gt;Vielleicht-Operator (?)&lt;/a7&gt; verwenden, um zu zeigen, dass der Rückgabewert optional ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -133210,6 +133506,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If the left operand has a value, it becomes the result and the right branch is skipped.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T070806Z" creationid="Ragnar-F" creationdate="20260921T070806Z">
+        <seg>Wenn der linke Operand einen Wert hat, wird dieser als Ergebnis verwendet und der rechte Zweig übersprungen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the left operand is &lt;e2&gt;unset&lt;/e2&gt;, evaluation short-circuits the chain.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T062507Z" creationid="Ragnar-F" creationdate="20260921T062507Z">
+        <seg>Wenn der linke Operand &lt;e2&gt;ungesetzt&lt;/e2&gt; ist, wird die Kette bei der Auswertung kurzgeschlossen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If the length of a line exceeds this, its remaining characters will be read during the next loop iteration.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231025T115841Z" creationid="Ragnar-F" creationdate="20140306T010923Z">
@@ -133510,6 +133822,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231201T113528Z" creationid="Ragnar-F" creationdate="20210216T131808Z">
         <seg>Wenn der Operand eine Floating-Point-Zahl ist, wird ein &lt;a4&gt;TypeError&lt;/a4&gt; ausgelöst.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the operator is immediately preceded by a property name as in &lt;c1&gt;x.y?&lt;/c1&gt;, the expression will be &lt;e2&gt;unset&lt;/e2&gt; if the property does not exist.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T055230Z" creationid="Ragnar-F" creationdate="20260921T055230Z">
+        <seg>Wenn dem Operator unmittelbar ein Eigenschaftsname vorangestellt ist, wie in &lt;c1&gt;x.y?&lt;/c1&gt;, wird der Ausdruck &lt;e2&gt;ungesetzt&lt;/e2&gt; sein, falls die Eigenschaft nicht existiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the operator is preceded by a property, method or function call which is not part of an &lt;a2&gt;optional chain&lt;/a2&gt;, the effect is the same as if the &lt;a3&gt;maybe operator&lt;/a3&gt; was used.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T071128Z" creationid="Ragnar-F" creationdate="20260921T071128Z">
+        <seg>Wenn dem Operator ein Eigenschafts-, Methoden- oder Funktionsaufruf vorangestellt ist, der nicht Teil einer &lt;a2&gt;optionalen Kette&lt;/a2&gt; ist, ist der Effekt derselbe wie, als würde man den &lt;a3&gt;Vielleicht-Operator&lt;/a3&gt; verwenden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -134327,6 +134655,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230923T195358Z" creationid="Ragnar-F" creationdate="20230327T111555Z">
         <seg>Wenn die Zielfunktion bereits zu Beginn bestimmte Werte in der Struktur benötigt, rufen Sie &lt;c0&gt;&lt;a1&gt;NumPut&lt;/a1&gt;("UInt", 123, MeineStrukt, 4)&lt;/c0&gt; auf, um ein beliebiges Element auf einen Wert ungleich 0 zu setzen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the target is a variable, its value is removed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T071811Z" creationid="Ragnar-F" creationdate="20260921T071811Z">
+        <seg>Wenn das Ziel eine Variable ist, wird ihr Wert entfernt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -138107,6 +138443,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>In other words, &lt;c4&gt;X() =&gt; Y()&lt;/c4&gt; can be equivalent to a function containing &lt;c5&gt;return Y()&lt;/c5&gt; or just &lt;c6&gt;Y()&lt;/c6&gt;, depending on how Y returns.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T073002Z" creationid="Ragnar-F" creationdate="20260921T073002Z">
+        <seg>Mit anderen Worten, &lt;c4&gt;X() =&gt; Y()&lt;/c4&gt; kann äquivalent zu einer Funktion mit &lt;c5&gt;return Y()&lt;/c5&gt; oder nur &lt;c6&gt;Y()&lt;/c6&gt; sein, je nachdem, wie die Rückgabe von Y ausfällt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>In other words, &lt;e6&gt;Beta&lt;/e6&gt; is a name which has meaning to the object; it is not a local or global variable.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230328T074751Z" creationid="Ragnar-F" creationdate="20171228T122415Z">
@@ -138959,6 +139303,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230409T110516Z" creationid="Ragnar-F" creationdate="20140301T023749Z">
         <seg>Trotz der internen Ausnahmebehandlung kann ein DllCall das Skript immer noch zum Absturz bringen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In such a case, &lt;a1&gt;SendInput&lt;/a1&gt; would revert to SendEvent/SendPlay.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T074314Z" creationid="Ragnar-F" creationdate="20260921T074314Z">
+        <seg>In so einem Fall fällt &lt;a1&gt;SendInput&lt;/a1&gt; auf SendEvent/SendPlay zurück.</seg>
       </tuv>
     </tu>
     <tu>
@@ -174020,6 +174372,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Property parameters and indexing (array/map elements) are not supported.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T070702Z" creationid="Ragnar-F" creationdate="20260921T070702Z">
+        <seg>Eigenschaftsparameter und Indexierung (Array-/Map-Elemente) werden nicht unterstützt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Property setters defined in a class now allow the &lt;c0&gt;value&lt;/c0&gt; parameter to be omitted (unset) so that assignments like &lt;c1&gt;x.y := unset&lt;/c1&gt; can be handled.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260920T083021Z" creationid="Ragnar-F" creationdate="20260920T083021Z">
@@ -197756,6 +198116,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Taking a reference to a built-in variable such as &lt;a0&gt;A_Clipboard&lt;/a0&gt; is supported only when it is being passed directly to an &lt;e1&gt;OutputVar&lt;/e1&gt; parameter of a built-in function.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T070152Z" creationid="Ragnar-F" creationdate="20260921T070152Z">
+        <seg>Das Abrufen einer Referenz, die auf eine interne Variable wie z.B. &lt;a0&gt;A_Clipboard&lt;/a0&gt; verweist, wird nur unterstützt, wenn sie direkt an einen &lt;e1&gt;AusgabeVar&lt;/e1&gt;-Parameter einer internen Funktion übergeben wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Taking action immediately upon starting the script, and changing default settings.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231120T183946Z" creationid="Ragnar-F" creationdate="20200713T141831Z">
@@ -204740,6 +205108,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The callback (&lt;a1&gt;function object&lt;/a1&gt;) which represents the current &lt;a2&gt;HotIf&lt;/a2&gt; criteria for the &lt;a3&gt;Hotkey&lt;/a3&gt; and &lt;a4&gt;Hotstring&lt;/a4&gt; functions, or blank if none.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T073415Z" creationid="Ragnar-F" creationdate="20260921T073415Z">
+        <seg>Der Rückruf (ein &lt;a1&gt;Funktionsobjekt&lt;/a1&gt;), der die aktuellen &lt;a2&gt;HotIf&lt;/a2&gt;-Kriterien für die Funktionen &lt;a3&gt;Hotkey&lt;/a3&gt; und &lt;a4&gt;Hotstring&lt;/a4&gt; repräsentiert, oder leer, wenn nicht vorhanden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The callback accepts a specific number of parameters depending on the &lt;a0&gt;window event&lt;/a0&gt; and &lt;a1&gt;control event&lt;/a1&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260310T100720Z" creationid="Ragnar-F" creationdate="20260310T100617Z">
@@ -209012,6 +209388,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The left operand can be any &lt;a1&gt;unset expression&lt;/a1&gt; (while taking operator precedence into account).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T070919Z" creationid="Ragnar-F" creationdate="20260921T070919Z">
+        <seg>Der linke Operand kann ein beliebiger &lt;a1&gt;Unset-Ausdruck&lt;/a1&gt; sein (unter Berücksichtigung der Operatorpriorität).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The legacy command "if Var is Type" has been replaced with a series of functions:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231204T115238Z" creationid="Ragnar-F" creationdate="20231204T115238Z">
@@ -211748,6 +212132,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The question mark can be followed by a sequence of &lt;a1&gt;member access&lt;/a1&gt; operations to form an "optional chain".</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T062330Z" creationid="Ragnar-F" creationdate="20260921T062330Z">
+        <seg>Nach dem Fragezeichen kann eine Sequenz von &lt;a1&gt;Objektelementzugriffen&lt;/a1&gt; folgen, um eine "optionale Kette" zu bilden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The quote mark is then included in the command line (i.e. the string that is passed to the Run function), whereas the back-tick, having fulfilled its purpose, is left out.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230908T140353Z" creationid="Ragnar-F" creationdate="20221220T103251Z">
@@ -211840,6 +212232,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260920T090014Z" creationid="Ragnar-F" creationdate="20260920T090014Z">
         <seg>Der Referenzoperator (&amp;) erlaubt interne/virtuelle Variablen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The reference would typically be passed to a function, but could be stored in an array or property.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T070031Z" creationid="Ragnar-F" creationdate="20260921T070031Z">
+        <seg>Die Referenz wird normalerweise an eine Funktion übergeben, kann aber auch in ein Array oder eine Eigenschaft gespeichert werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -222948,6 +223348,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This is usually a &lt;a1&gt;VarRef&lt;/a1&gt; or more generally a &lt;a2&gt;virtual reference&lt;/a2&gt;, which can be used to indirectly get or set the target's value.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T070004Z" creationid="Ragnar-F" creationdate="20260921T070004Z">
+        <seg>Dabei handelt es sich in der Regel um eine &lt;a1&gt;VarRef&lt;/a1&gt; oder allgemeiner um eine &lt;a2&gt;virtuelle Referenz&lt;/a2&gt;, mit der der Wert des Ziels indirekt abgerufen oder gesetzt werden kann.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This is usually as set in the program's manifest, but could be overridden by application compatibility settings.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20250926T180846Z" creationid="Ragnar-F" creationdate="20250926T134635Z">
@@ -224060,6 +224468,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This operator can short-circuit any part of an expression which would fail if its input is unset, but cannot short-circuit a function call from inside its parameter list, or an assignment from its right-hand side.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T063912Z" creationid="Ragnar-F" creationdate="20260921T063912Z">
+        <seg>Dieser Operator kann jeden Teil eines Ausdrucks kurzschließen, der fehlschlagen würde, wenn dessen Eingabe ungesetzt ist, kann jedoch weder einen Funktionsaufruf innerhalb der Parameterliste noch eine Zuweisung auf der rechten Seite überspringen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This operator is a shorthand replacement for the &lt;a1&gt;if-else statement&lt;/a1&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231201T152732Z" creationid="Ragnar-F" creationdate="20160705T165236Z">
@@ -224824,6 +225240,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230412T100215Z" creationid="Ragnar-F" creationdate="20140312T001947Z">
         <seg>Diese Eigenschaft sollte nur mit einer echten Datei verwendet werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This provides a succinct way to initialize a variable, property or array/map element only if it didn't already have a value.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T072251Z" creationid="Ragnar-F" creationdate="20260921T072251Z">
+        <seg>Dies bietet eine verkürzte Möglichkeit, eine Variable, eine Eigenschaft oder ein Array-/Map-Element nur zu initialisieren, wenn noch kein Wert gesetzt wurde.</seg>
       </tuv>
     </tu>
     <tu>
@@ -225732,6 +226156,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This typically corresponds to &lt;a3&gt;__Ref (Object)&lt;/a3&gt;, which returns a nested struct or virtual reference to the property.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T070615Z" creationid="Ragnar-F" creationdate="20260921T070615Z">
+        <seg>Dies entspricht in der Regel &lt;a3&gt;__Ref (Object)&lt;/a3&gt;, das eine verschachtelte Struktur oder eine virtuelle Referenz auf die Eigenschaft zurückgibt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This typically corresponds to an array element or item within a collection, where &lt;e5&gt;y&lt;/e5&gt; is the item's index or key.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231201T180615Z" creationid="Ragnar-F" creationdate="20191209T145129Z">
@@ -225768,6 +226200,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260227T213428Z" creationid="Ragnar-F" creationdate="20260227T213428Z">
         <seg>Dieses Programm dient als schnelle Hilfe beim Schreiben von Automatisierungsskripten und unterstützt Sie dabei, die genauen Werte für gängige interne Funktionen zu ermitteln.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This value can be saved to later restore the context by passing it to HotIf.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T073527Z" creationid="Ragnar-F" creationdate="20260921T073527Z">
+        <seg>Dieser Wert kann gespeichert und später an HotIf übergeben werden, um den Kontext wiederherzustellen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -241161,6 +241601,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230904T110138Z" creationid="Ragnar-F" creationdate="20190819T193350Z">
         <seg>Wenn es heißt, dass ein Array oder eine Variable ein Objekt enthält, enthält es/sie in Wirklichkeit eine Referenz zum Objekt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>When an arrow function performs a tail call to a function or method which returns &lt;a1&gt;&lt;e2&gt;blank-unset&lt;/e2&gt;&lt;/a1&gt;, the arrow function returns &lt;e3&gt;blank-unset&lt;/e3&gt; and does not throw UnsetError.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T072542Z" creationid="Ragnar-F" creationdate="20260921T072542Z">
+        <seg>Wenn eine Fat-Arrow-Funktion einen endständigen Aufruf an eine Funktion oder Methode ausführt, die &lt;a1&gt;&lt;e2&gt;leer-ungesetzt&lt;/e2&gt;&lt;/a1&gt; zurückgibt, wird die Fat-Arrow-Funktion &lt;e3&gt;leer-ungesetzt&lt;/e3&gt; zurückgeben und keinen UnsetError auslösen.</seg>
       </tuv>
     </tu>
     <tu>
