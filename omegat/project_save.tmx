@@ -61271,8 +61271,8 @@
       <tuv lang="en">
         <seg>&lt;s0&gt;Reference (&amp;):&lt;/s0&gt; Retrieves a value representing a reference to a variable or property.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T065904Z" creationid="Ragnar-F" creationdate="20260921T065904Z">
-        <seg>&lt;s0&gt;Referenz (&amp;):&lt;/s0&gt; Ruft einen Wert ab, der eine Referenz repräsentiert, die auf eine Variable oder Eigenschaft verweist.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T074905Z" creationid="Ragnar-F" creationdate="20260921T065904Z">
+        <seg>&lt;s0&gt;Referenz (&amp;):&lt;/s0&gt; Ruft einen Wert ab, der eine Referenz auf eine Variable oder Eigenschaft repräsentiert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -198118,8 +198118,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>Taking a reference to a built-in variable such as &lt;a0&gt;A_Clipboard&lt;/a0&gt; is supported only when it is being passed directly to an &lt;e1&gt;OutputVar&lt;/e1&gt; parameter of a built-in function.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T070152Z" creationid="Ragnar-F" creationdate="20260921T070152Z">
-        <seg>Das Abrufen einer Referenz, die auf eine interne Variable wie z.B. &lt;a0&gt;A_Clipboard&lt;/a0&gt; verweist, wird nur unterstützt, wenn sie direkt an einen &lt;e1&gt;AusgabeVar&lt;/e1&gt;-Parameter einer internen Funktion übergeben wird.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T075006Z" creationid="Ragnar-F" creationdate="20260921T070152Z">
+        <seg>Das Abrufen einer Referenz auf eine interne Variable wie z.B. &lt;a0&gt;A_Clipboard&lt;/a0&gt; wird nur unterstützt, wenn sie direkt an einen &lt;e1&gt;AusgabeVar&lt;/e1&gt;-Parameter einer internen Funktion übergeben wird.</seg>
       </tuv>
     </tu>
     <tu>
