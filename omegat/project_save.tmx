@@ -63255,8 +63255,8 @@
       <tuv lang="en">
         <seg>&lt;s0&gt;Warning:&lt;/s0&gt; The debugger may query properties automatically, so it is best to always release any boxed pointers before the target struct is deleted.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T100816Z" creationid="Ragnar-F" creationdate="20260919T100811Z">
-        <seg>&lt;s0&gt;Warnung:&lt;/s0&gt; Der Debugger greift eventuell automatisch auf Eigenschaften zu. Gekapselte Pointer sollten deshalb am besten immer freigegeben werden, bevor die Zielstruktur gelöscht wird.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T192010Z" creationid="Ragnar-F" creationdate="20260919T100811Z">
+        <seg>&lt;s0&gt;Warnung:&lt;/s0&gt; Der Debugger kann Eigenschaften automatisch abfragen. Deshalb sollten gekapselte Pointer am besten immer freigegeben werden, bevor die Zielstruktur gelöscht wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -65303,8 +65303,8 @@
       <tuv lang="en">
         <seg>A &lt;a1&gt;pointer class&lt;/a1&gt; has similar usage and can be used for structs.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T180514Z" creationid="Ragnar-F" creationdate="20260921T180514Z">
-        <seg>Eine &lt;a1&gt;Pointer-Klasse&lt;/a1&gt; funktioniert ähnlich und kann für Strukturen verwendet werden.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T202951Z" creationid="Ragnar-F" creationdate="20260921T180514Z">
+        <seg>Eine &lt;a1&gt;Pointerklasse&lt;/a1&gt; funktioniert ähnlich und kann für Strukturen verwendet werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -67351,16 +67351,16 @@
       <tuv lang="en">
         <seg>A pointer class can be used as the type of a struct field or typed property.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T104602Z" creationid="Ragnar-F" creationdate="20260919T104602Z">
-        <seg>Eine Pointer-Klasse kann als Typ eines Strukturfelds oder einer typisierten Eigenschaft verwendet werden.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T203047Z" creationid="Ragnar-F" creationdate="20260919T104602Z">
+        <seg>Eine Pointerklasse kann als Typ eines Strukturfelds oder einer typisierten Eigenschaft verwendet werden.</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>A pointer class is generally not instantiated, but is used with &lt;a1&gt;DllCall&lt;/a1&gt; and typed properties to specify a pointer-to-struct parameter or field.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T093646Z" creationid="Ragnar-F" creationdate="20260919T093646Z">
-        <seg>Eine Pointer-Klasse wird in der Regel nicht instanziiert, sondern zusammen mit &lt;a1&gt;DllCall&lt;/a1&gt; und typisierten Eigenschaften verwendet, um einen Parameter oder ein Feld anzugeben, der bzw. das auf eine Struktur verweist.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T203045Z" creationid="Ragnar-F" creationdate="20260919T093646Z">
+        <seg>Eine Pointerklasse wird in der Regel nicht instanziiert, sondern zusammen mit &lt;a1&gt;DllCall&lt;/a1&gt; und typisierten Eigenschaften verwendet, um einen Parameter oder ein Feld anzugeben, der bzw. das auf eine Struktur verweist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -68087,8 +68087,8 @@
       <tuv lang="en">
         <seg>A struct class is any subclass of &lt;a0&gt;Struct&lt;/a0&gt;, including the &lt;a1&gt;numeric types&lt;/a1&gt;, &lt;a2&gt;array classes&lt;/a2&gt;, &lt;a3&gt;pointer classes&lt;/a3&gt; and &lt;c4&gt;Struct.Ptr&lt;/c4&gt; itself.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T081608Z" creationid="Ragnar-F" creationdate="20260919T081608Z">
-        <seg>Eine Strukturklasse ist eine beliebige Unterklasse von &lt;a0&gt;Struct&lt;/a0&gt;, einschließlich &lt;a1&gt;numerischer Typen&lt;/a1&gt;, &lt;a2&gt;Array-Klassen&lt;/a2&gt;, &lt;a3&gt;Pointer-Klassen&lt;/a3&gt; und &lt;c4&gt;Struct.Ptr&lt;/c4&gt; selbst.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T203305Z" creationid="Ragnar-F" creationdate="20260919T081608Z">
+        <seg>Eine Strukturklasse ist eine beliebige Unterklasse von &lt;a0&gt;Struct&lt;/a0&gt;, einschließlich &lt;a1&gt;numerischer Typen&lt;/a1&gt;, &lt;a2&gt;Arrayklassen&lt;/a2&gt;, &lt;a3&gt;Pointerklassen&lt;/a3&gt; und &lt;c4&gt;Struct.Ptr&lt;/c4&gt; selbst.</seg>
       </tuv>
     </tu>
     <tu>
@@ -75231,8 +75231,8 @@
       <tuv lang="en">
         <seg>An address (pointer value) can be boxed by calling the &lt;a0&gt;At&lt;/a0&gt; method.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T094725Z" creationid="Ragnar-F" creationdate="20260919T094725Z">
-        <seg>Eine Adresse (Pointer-Wert) kann durch Aufruf der &lt;a0&gt;At&lt;/a0&gt;-Methode gekapselt werden.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T191302Z" creationid="Ragnar-F" creationdate="20260919T094725Z">
+        <seg>Eine Adresse (Pointerwert) kann durch Aufruf der &lt;a0&gt;At&lt;/a0&gt;-Methode gekapselt werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -78519,8 +78519,8 @@
       <tuv lang="en">
         <seg>As these are struct classes, each one has a &lt;a0&gt;pointer class&lt;/a0&gt; and &lt;a1&gt;array classes&lt;/a1&gt;.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T082516Z" creationid="Ragnar-F" creationdate="20260919T082516Z">
-        <seg>Da das Strukturklassen sind, verfügt jede über eine &lt;a0&gt;Pointer-Klasse&lt;/a0&gt; und &lt;a1&gt;Array-Klassen&lt;/a1&gt;.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T203312Z" creationid="Ragnar-F" creationdate="20260919T082516Z">
+        <seg>Da das Strukturklassen sind, verfügt jede über eine &lt;a0&gt;Pointerklasse&lt;/a0&gt; und &lt;a1&gt;Arrayklassen&lt;/a1&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -86463,8 +86463,8 @@
       <tuv lang="en">
         <seg>Changed remapping to utilize left/right modifiers in Blind; e.g. &lt;c0&gt;&gt;^a::b&lt;/c0&gt; remaps RCtrl-A to B and LCtrl-RCtrl-A to LCtrl-B, instead of just B.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T165150Z" creationid="Ragnar-F" creationdate="20260912T165150Z">
-        <seg>Geändert: Neubelegung nutzt nun Links-/Rechts-Modifikatoren in Blind; z.B. bewirkt &lt;c0&gt;&gt;^a::b&lt;/c0&gt;, dass RCtrl-A zu B und LCtrl-RCtrl-A zu LCtrl-B umbelegt wird, statt einfach nur zu B.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T193752Z" creationid="Ragnar-F" creationdate="20260912T165150Z">
+        <seg>Geändert: Neubelegungen nutzen nun Links-/Rechts-Modifikatoren in Blind; z.B. bewirkt &lt;c0&gt;&gt;^a::b&lt;/c0&gt;, dass RCtrl-A zu B und LCtrl-RCtrl-A zu LCtrl-B umbelegt wird, statt einfach nur zu B.</seg>
       </tuv>
     </tu>
     <tu>
@@ -96680,8 +96680,8 @@
       <tuv lang="en">
         <seg>Different instances do not compare equal; the "boxes" are compared, not the pointer value.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T101401Z" creationid="Ragnar-F" creationdate="20260919T101401Z">
-        <seg>Verschiedene Instanzen werden nicht als gleich angesehen; die "Kapseln" werden verglichen, nicht die Pointer-Werte.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T191306Z" creationid="Ragnar-F" creationdate="20260919T101401Z">
+        <seg>Verschiedene Instanzen werden nicht als gleich angesehen; die "Kapseln" werden verglichen, nicht die Pointerwerte.</seg>
       </tuv>
     </tu>
     <tu>
@@ -99616,8 +99616,8 @@
       <tuv lang="en">
         <seg>Each &lt;a1&gt;numeric type class&lt;/a1&gt; has its own pointer class, which is equivalent to the corresponding type name.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T180708Z" creationid="Ragnar-F" creationdate="20260921T180701Z">
-        <seg>Jede &lt;a1&gt;numerische Typklasse&lt;/a1&gt; hat ihre eigene Pointer-Klasse, was äquivalent zum entsprechenden Typnamen ist.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T202955Z" creationid="Ragnar-F" creationdate="20260921T180701Z">
+        <seg>Jede &lt;a1&gt;numerische Typklasse&lt;/a1&gt; hat ihre eigene Pointerklasse, was äquivalent zum entsprechenden Typnamen ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100352,8 +100352,8 @@
       <tuv lang="en">
         <seg>Each struct class has a static property named &lt;s0&gt;Ptr&lt;/s0&gt; which returns a pointer class.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T093325Z" creationid="Ragnar-F" creationdate="20260919T093325Z">
-        <seg>Jede Strukturklasse hat eine statische Eigenschaft namens &lt;s0&gt;Ptr&lt;/s0&gt;, die eine Pointer-Klasse zurückgibt.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T203040Z" creationid="Ragnar-F" creationdate="20260919T093325Z">
+        <seg>Jede Strukturklasse hat eine statische Eigenschaft namens &lt;s0&gt;Ptr&lt;/s0&gt;, die eine Pointerklasse zurückgibt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -106200,8 +106200,8 @@
       <tuv lang="en">
         <seg>Fixed DllCall to reject array classes for the return type, not crash.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T131926Z" creationid="Ragnar-F" creationdate="20260911T131926Z">
-        <seg>Behoben: DllCall lehnt nun Array-Klassen als Rückgabetyp ab, anstatt einen Absturz zu verursachen.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T203115Z" creationid="Ragnar-F" creationdate="20260911T131926Z">
+        <seg>Behoben: DllCall lehnt nun Arrayklassen als Rückgabetyp ab, anstatt einen Absturz zu verursachen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -107024,7 +107024,7 @@
       <tuv lang="en">
         <seg>Fixed circular references preventing deletion of Struct.Ptr/Array classes.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T135115Z" creationid="Ragnar-F" creationdate="20260911T135115Z">
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T203221Z" creationid="Ragnar-F" creationdate="20260911T135115Z">
         <seg>Behoben: Zirkelbezüge verhindern nicht mehr, dass Struct.Ptr/Array-Klassen gelöscht werden.</seg>
       </tuv>
     </tu>
@@ -107834,8 +107834,8 @@
       <tuv lang="en">
         <seg>Fixed repeat references to struct array classes causing undefined behaviour.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T135000Z" creationid="Ragnar-F" creationdate="20260911T135000Z">
-        <seg>Behoben: Undefiniertes Verhalten, wenn Struktur-Array-Klassen wiederholt referenziert werden.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T203252Z" creationid="Ragnar-F" creationdate="20260911T135000Z">
+        <seg>Behoben: Undefiniertes Verhalten, wenn Struct.Array-Klassen wiederholt referenziert werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -109154,8 +109154,8 @@
       <tuv lang="en">
         <seg>For DllCall, this includes the pointer classes.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T083359Z" creationid="Ragnar-F" creationdate="20260919T083359Z">
-        <seg>Bei DllCall beinhaltet das auch die Pointer-Klassen.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T203034Z" creationid="Ragnar-F" creationdate="20260919T083359Z">
+        <seg>Bei DllCall beinhaltet das auch die Pointerklassen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -109906,8 +109906,8 @@
       <tuv lang="en">
         <seg>For automatic conversion of the parameters and return value, specify a sequence of &lt;a1&gt;struct&lt;/a1&gt; classes.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T145910Z" creationid="Ragnar-F" creationdate="20260914T140148Z">
-        <seg>Für die automatische Umwandlung der Parameter und des Rückgabewerts kann eine Sequenz von &lt;a1&gt;Strukturklassen&lt;/a1&gt; angeben werden.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T202937Z" creationid="Ragnar-F" creationdate="20260914T140148Z">
+        <seg>Für die automatische Umwandlung der Parameter und des Rückgabewerts kann eine Sequenz von &lt;a1&gt;Strukturklassen&lt;/a1&gt; angegeben werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -116547,8 +116547,8 @@
       <tuv lang="en">
         <seg>For pointers to structures, the more specific &lt;a5&gt;pointer classes&lt;/a5&gt; should typically be used.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T131212Z" creationid="Ragnar-F" creationdate="20260921T131212Z">
-        <seg>Für Pointer, die auf Strukturen verweisen, sollten in der Regel die spezifischeren &lt;a5&gt;Pointer-Klassen&lt;/a5&gt; verwendet werden.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T202945Z" creationid="Ragnar-F" creationdate="20260921T131212Z">
+        <seg>Für Pointer, die auf Strukturen verweisen, sollten in der Regel die spezifischeren &lt;a5&gt;Pointerklassen&lt;/a5&gt; verwendet werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -128124,8 +128124,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>If a StructClass.Ptr is passed, the pointer value it contains is passed (but this is not typical usage).</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T102624Z" creationid="Ragnar-F" creationdate="20260919T102458Z">
-        <seg>Wenn ein StructKlasse.Ptr übergeben wird, wird der darin enthaltene Pointer-Wert übergeben (untypische Verwendung).</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T191311Z" creationid="Ragnar-F" creationdate="20260919T102458Z">
+        <seg>Wenn ein StructKlasse.Ptr übergeben wird, wird der darin enthaltene Pointerwert übergeben (untypische Verwendung).</seg>
       </tuv>
     </tu>
     <tu>
@@ -128620,8 +128620,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>If a pointer class is constructed directly, its __Value property behaves as described above.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T165927Z" creationid="Ragnar-F" creationdate="20260919T165927Z">
-        <seg>Wenn eine Pointer-Klasse direkt konstruiert wird, verhält sich ihre __Value-Eigenschaft wie oben beschrieben.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T203104Z" creationid="Ragnar-F" creationdate="20260919T165927Z">
+        <seg>Wenn eine Pointerklasse direkt konstruiert wird, verhält sich ihre __Value-Eigenschaft wie oben beschrieben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -135725,8 +135725,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>If the underlying pointer value has been changed, evaluating &lt;c4&gt;outer.lpEx&lt;/c4&gt; causes the held reference to be released.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T182350Z" creationid="Ragnar-F" creationdate="20260919T165641Z">
-        <seg>Wenn der zugrunde liegende Pointer-Wert verändert wurde, bewirkt die Auswertung von &lt;c4&gt;outer.lpEx&lt;/c4&gt;, dass die zuvor gehaltene Referenz freigegeben wird.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T191318Z" creationid="Ragnar-F" creationdate="20260919T165641Z">
+        <seg>Wenn der zugrunde liegende Pointerwert verändert wurde, bewirkt die Auswertung von &lt;c4&gt;outer.lpEx&lt;/c4&gt;, dass die zuvor gehaltene Referenz freigegeben wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -139165,8 +139165,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>In many cases the struct is constructed by external code; the method of allocation can vary and may be unknowable.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T100404Z" creationid="Ragnar-F" creationdate="20260919T100404Z">
-        <seg>Oft werden AutoHotkey-fremde Strukturen behandelt; die Art der Speicherreservierung kann variieren und ist ggf. unbekannt.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T191629Z" creationid="Ragnar-F" creationdate="20260919T100404Z">
+        <seg>Die meisten Strukturen stammen aus externen Quellen; die Art der Speicherreservierung kann variieren und ist ggf. unbekannt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -176422,8 +176422,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>Rather than encapsulating pointer values as their own unique type, they are treated as instances of the target struct class, with all of the same properties and type identity.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T094304Z" creationid="Ragnar-F" creationdate="20260919T094304Z">
-        <seg>Anstatt Pointer-Werte als eigenständigen Typ zu kapseln, werden sie als Instanzen der Zielstrukturklasse behandelt, mit denselben Eigenschaften und derselben Typidentität.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T191250Z" creationid="Ragnar-F" creationdate="20260919T094304Z">
+        <seg>Anstatt Pointerwerte als eigenständigen Typ zu kapseln, werden sie als Instanzen der Zielstrukturklasse behandelt, mit denselben Eigenschaften und derselben Typidentität.</seg>
       </tuv>
     </tu>
     <tu>
@@ -177982,8 +177982,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>Remapping now utilizes left/right modifiers in Blind; e.g. &lt;c0&gt;&gt;^a::b&lt;/c0&gt; remaps RCtrl-A to B and LCtrl-RCtrl-A to LCtrl-B, instead of just B.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T174519Z" creationid="Ragnar-F" creationdate="20260921T174519Z">
-        <seg>Neubelegung nutzt nun Links-/Rechts-Modifikatoren in Blind; z.B. bewirkt &lt;c0&gt;&gt;^a::b&lt;/c0&gt;, dass RCtrl-A zu B und LCtrl-RCtrl-A zu LCtrl-B umbelegt wird, statt einfach nur zu B.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T193805Z" creationid="Ragnar-F" creationdate="20260921T174519Z">
+        <seg>Neubelegungen nutzen nun Links-/Rechts-Modifikatoren in Blind; z.B. bewirkt &lt;c0&gt;&gt;^a::b&lt;/c0&gt;, dass RCtrl-A zu B und LCtrl-RCtrl-A zu LCtrl-B umbelegt wird, statt einfach nur zu B.</seg>
       </tuv>
     </tu>
     <tu>
@@ -214351,8 +214351,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>The script must ensure that no typed properties are queried after the struct is deleted.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T100559Z" creationid="Ragnar-F" creationdate="20260919T100559Z">
-        <seg>Das Skript muss sicherstellen, dass nach dem Löschen der Struktur kein Zugriff mehr auf die typisierten Eigenschaften erfolgt.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T191851Z" creationid="Ragnar-F" creationdate="20260919T100559Z">
+        <seg>Das Skript muss sicherstellen, dass nach dem Löschen der Struktur keine typisierten Eigenschaften mehr abgefragt werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -227871,8 +227871,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>This was originally intended to work around an issue with system handling of the modifier keys, but was superseded by a better workaround in v2.0.8.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T065210Z" creationid="Ragnar-F" creationdate="20260912T065210Z">
-        <seg>Dies war ursprünglich dazu gedacht, ein Problem bei der systeminternen Behandlung der Modifikatortasten zu umgehen, wurde jedoch in v2.0.8 von einem besseren Workaround abgelöst.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T193907Z" creationid="Ragnar-F" creationdate="20260912T065210Z">
+        <seg>Dies war ursprünglich dazu gedacht, ein Problem bei der systemseitigen Behandlung der Modifikatortasten zu umgehen, wurde jedoch in v2.0.8 von einem besseren Workaround abgelöst.</seg>
       </tuv>
     </tu>
     <tu>
@@ -229663,8 +229663,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>To differentiate, we can use the term "boxed struct" to refer to an instance constructed by the script, and "boxed pointer" to refer to an instance which encapsulates a pointer value.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T094626Z" creationid="Ragnar-F" creationdate="20260919T094626Z">
-        <seg>Zur besseren Unterscheidung bezeichnen wir eine vom Skript konstruierte Instanz als "gekapselte Struktur" und eine Instanz, die einen Pointer-Wert kapselt, als "gekapselter Pointer".</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T191257Z" creationid="Ragnar-F" creationdate="20260919T094626Z">
+        <seg>Zur besseren Unterscheidung bezeichnen wir eine vom Skript konstruierte Instanz als "gekapselte Struktur" und eine Instanz, die einen Pointerwert kapselt, als "gekapselter Pointer".</seg>
       </tuv>
     </tu>
     <tu>
