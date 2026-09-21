@@ -24912,8 +24912,8 @@
       <tuv lang="en">
         <seg>; Use the class itself to pass by value (C type: POINT).</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172137Z" creationid="Ragnar-F" creationdate="20260919T171718Z">
-        <seg>; Mit der Klasse selbst per Wert übergeben (C-Typ: POINT).</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T135633Z" creationid="Ragnar-F" creationdate="20260919T171718Z">
+        <seg>; Mit der Klasse selbst als Wert übergeben (C-Typ: POINT).</seg>
       </tuv>
     </tu>
     <tu>
@@ -37285,6 +37285,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;FontHandle&lt;/a0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T143922Z" creationid="Ragnar-F" creationdate="20260921T143922Z">
+        <seg>&lt;a0&gt;FontHandle&lt;/a0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;For-loop&lt;/a0&gt;, &lt;a1&gt;OwnProps&lt;/a1&gt;, &lt;a2&gt;__Enum (Array)&lt;/a2&gt;, &lt;a3&gt;__Enum (Map)&lt;/a3&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210307T155428Z" creationid="Ragnar-F" creationdate="20210307T155359Z">
@@ -40247,8 +40255,8 @@
       <tuv lang="en">
         <seg>&lt;a0&gt;OnMessage&lt;/a0&gt; no longer has the single-function-per-message mode that was used when a function name (string) was passed; it now only accepts a function by reference.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20231127T093104Z" creationid="Ragnar-F" creationdate="20210705T100723Z">
-        <seg>&lt;a0&gt;OnMessage&lt;/a0&gt; hat nicht mehr den Eine-Funktion-pro-Meldung-Modus, der verwendet wurde, wenn ein Funktionsname (Zeichenkette) übergeben wurde; es akzeptiert jetzt nur eine Funktion via Referenz.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T134452Z" creationid="Ragnar-F" creationdate="20210705T100723Z">
+        <seg>&lt;a0&gt;OnMessage&lt;/a0&gt; hat nicht mehr den Eine-Funktion-pro-Meldung-Modus, der verwendet wurde, wenn ein Funktionsname (Zeichenkette) übergeben wurde; es akzeptiert jetzt nur eine Funktion per Referenz.</seg>
       </tuv>
     </tu>
     <tu>
@@ -43575,8 +43583,8 @@
       <tuv lang="en">
         <seg>&lt;a1&gt;Pointer types&lt;/a1&gt; are also supported.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T130448Z" creationid="Ragnar-F" creationdate="20260921T130448Z">
-        <seg>&lt;a1&gt;Pointer-Typen&lt;/a1&gt; werden ebenfalls unterstützt.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T143041Z" creationid="Ragnar-F" creationdate="20260921T130448Z">
+        <seg>&lt;a1&gt;Pointertypen&lt;/a1&gt; werden ebenfalls unterstützt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -44239,8 +44247,8 @@
       <tuv lang="en">
         <seg>&lt;a3&gt;Pointer types&lt;/a3&gt; are also supported.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T130558Z" creationid="Ragnar-F" creationdate="20260921T130558Z">
-        <seg>&lt;a3&gt;Pointer-Typen&lt;/a3&gt; werden ebenfalls unterstützt.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T143049Z" creationid="Ragnar-F" creationdate="20260921T130558Z">
+        <seg>&lt;a3&gt;Pointertypen&lt;/a3&gt; werden ebenfalls unterstützt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -48173,6 +48181,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;c3&gt;DllCall("MyDll\MyFunction", "Int*", &amp;MyVar)&lt;/c3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T143009Z" creationid="Ragnar-F" creationdate="20260921T143009Z">
+        <seg>&lt;c3&gt;DllCall("MeineDLL\MeineFunktion", "Int*", &amp;MeineVar)&lt;/c3&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;c3&gt;Exception.Extra&lt;/c3&gt; contains the hexadecimal error code.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210216T141837Z" creationid="Ragnar-F" creationdate="20210216T141837Z">
@@ -50977,6 +50993,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210706T090312Z" creationid="Ragnar-F" creationdate="20210706T090312Z">
         <seg>&lt;e1&gt;GroßKleinSensitiv&lt;/e1&gt; kann "Locale" sein.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;e1&gt;Class&lt;/e1&gt; must be derived from &lt;a2&gt;Struct&lt;/a2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T140408Z" creationid="Ragnar-F" creationdate="20260921T140408Z">
+        <seg>&lt;e1&gt;Klasse&lt;/e1&gt; muss von &lt;a2&gt;Struct&lt;/a2&gt; abgeleitet werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -60453,6 +60477,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; Typed properties are the recommended way to define structures in &lt;s1&gt;[v2.1-alpha.3+]&lt;/s1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T143903Z" creationid="Ragnar-F" creationdate="20260921T143903Z">
+        <seg>&lt;s0&gt;Hinweis:&lt;/s0&gt; In &lt;s1&gt;[v2.1-alpha.3+]&lt;/s1&gt; können typisierte Eigenschaften für die Definition von Strukturen verwendet werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;Note:&lt;/s0&gt; Typed properties can only be owned by a Prototype.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T085324Z" creationid="Ragnar-F" creationdate="20260916T085324Z">
@@ -64951,8 +64983,8 @@
       <tuv lang="en">
         <seg>A &lt;a0&gt;callback&lt;/a0&gt; can convert an incoming pointer value to a boxed pointer when the parameter type is a pointer type such as &lt;c1&gt;Int32.Ptr&lt;/c1&gt;.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T084741Z" creationid="Ragnar-F" creationdate="20260919T084741Z">
-        <seg>Ein &lt;a0&gt;Rückruf&lt;/a0&gt; kann einen eingehenden Pointer-Wert in einen gekapselten Pointer umwandeln, wenn der Parametertyp ein Pointer-Typ wie z.B. &lt;c1&gt;Int32.Ptr&lt;/c1&gt; ist.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T143207Z" creationid="Ragnar-F" creationdate="20260919T084741Z">
+        <seg>Ein &lt;a0&gt;Rückruf&lt;/a0&gt; kann einen eingehenden Pointerwert in einen gekapselten Pointer umwandeln, wenn der Parametertyp ein Pointertyp wie z.B. &lt;c1&gt;Int32.Ptr&lt;/c1&gt; ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -65095,8 +65127,8 @@
       <tuv lang="en">
         <seg>A &lt;a1&gt;structure&lt;/a1&gt; or &lt;a2&gt;abstract type&lt;/a2&gt; to pass by value.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T131403Z" creationid="Ragnar-F" creationdate="20260921T131403Z">
-        <seg>Eine &lt;a1&gt;Struktur&lt;/a1&gt; oder ein &lt;a2&gt;abstrakter Typ&lt;/a2&gt;, der per Wert übergeben werden soll.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T135624Z" creationid="Ragnar-F" creationdate="20260921T131403Z">
+        <seg>Eine &lt;a1&gt;Struktur&lt;/a1&gt; oder ein &lt;a2&gt;abstrakter Typ&lt;/a2&gt;, der als Wert übergeben werden soll.</seg>
       </tuv>
     </tu>
     <tu>
@@ -65399,8 +65431,8 @@
       <tuv lang="en">
         <seg>A GUI is typically not referenced by name/number (although it can still be named with &lt;c0&gt;GuiObj.Name&lt;/c0&gt;).</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20231128T192256Z" creationid="Ragnar-F" creationdate="20210706T094632Z">
-        <seg>Eine GUI wird typischerweise nicht via Name/Nummer referenziert (obwohl sie immer noch mit &lt;c0&gt;GuiObj.Name&lt;/c0&gt; benannt werden kann).</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T134757Z" creationid="Ragnar-F" creationdate="20210706T094632Z">
+        <seg>Eine GUI wird typischerweise nicht per Name/Nummer referenziert (obwohl sie immer noch mit &lt;c0&gt;GuiObj.Name&lt;/c0&gt; benannt werden kann).</seg>
       </tuv>
     </tu>
     <tu>
@@ -66927,8 +66959,8 @@
       <tuv lang="en">
         <seg>A nested function is not accessible by name outside of the function which immediately encloses it, but is accessible anywhere inside that function, including inside other nested functions (with exceptions).</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20230906T130054Z" creationid="Ragnar-F" creationdate="20220702T080916Z">
-        <seg>Der Zugriff auf eine verschachtelte Funktion kann nicht via Name außerhalb der äußeren Funktion erfolgen, aber überall innerhalb dieser Funktion, einschließlich innerhalb anderer verschachtelter Funktionen (mit Ausnahmen).</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T134502Z" creationid="Ragnar-F" creationdate="20220702T080916Z">
+        <seg>Der Zugriff auf eine verschachtelte Funktion kann nicht per Name außerhalb der äußeren Funktion erfolgen, aber überall innerhalb dieser Funktion, einschließlich innerhalb anderer verschachtelter Funktionen (mit Ausnahmen).</seg>
       </tuv>
     </tu>
     <tu>
@@ -67149,6 +67181,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>A pointer type should not be used for string types such as LPTSTR, pointers to structures such as LPRECT, or arrays; for these, &lt;a2&gt;Str&lt;/a2&gt; or &lt;a3&gt;Ptr&lt;/a3&gt; should be used, depending on whether you pass a string, address or &lt;a4&gt;Buffer&lt;/a4&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T143319Z" creationid="Ragnar-F" creationdate="20260921T143319Z">
+        <seg>Ein Pointertyp sollte nicht für Zeichenkettentypen wie LPTSTR, auf Strukturen verweisende Pointer wie LPRECT, oder Arrays verwendet werden; für solche Typen ist &lt;a2&gt;Str&lt;/a2&gt; oder &lt;a3&gt;Ptr&lt;/a3&gt; besser geeignet, je nachdem, ob eine Zeichenkette, eine Adresse oder ein &lt;a4&gt;Buffer&lt;/a4&gt; übergeben wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A possible work-around is to add the hotkey &lt;c1&gt;*Tab::Send "{Blind}{Tab}"&lt;/c1&gt; -- but be aware that it will likely interfere with using the real &lt;k2&gt;Alt&lt;/k2&gt; to alt-tab.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20250928T121743Z" creationid="Ragnar-F" creationdate="20210216T113544Z">
@@ -67199,8 +67239,8 @@
       <tuv lang="en">
         <seg>A property of a pointer type such as &lt;c0&gt;Int32.Ptr&lt;/c0&gt; can return a boxed pointer.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T084511Z" creationid="Ragnar-F" creationdate="20260919T084511Z">
-        <seg>Eine Eigenschaft eines Pointer-Typs wie &lt;c0&gt;Int32.Ptr&lt;/c0&gt; kann einen gekapselten Pointer zurückgeben.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T143153Z" creationid="Ragnar-F" creationdate="20260919T084511Z">
+        <seg>Eine Eigenschaft eines Pointertyps wie &lt;c0&gt;Int32.Ptr&lt;/c0&gt; kann einen gekapselten Pointer zurückgeben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -67401,6 +67441,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221219T142150Z" creationid="Ragnar-F" creationdate="20221219T142150Z">
         <seg>Ein Skript kann fast jedes Fenster aktivieren, schließen, minimieren, maximieren, wiederherstellen, verstecken, sichtbar machen oder verschieben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A script can also crash when it specifies an inappropriate argument type or return type, such as claiming that an ordinary integer yielded by a function is a &lt;a1&gt;pointer type&lt;/a1&gt; or &lt;a2&gt;string type&lt;/a2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T143420Z" creationid="Ragnar-F" creationdate="20260921T143420Z">
+        <seg>Ein Skript kann auch abstürzen, wenn es einen ungeeigneten Argument- oder Rückgabetyp spezifiziert, z.B. wenn es behauptet, dass ein gewöhnlicher Integer, der von einer Funktion zurückgegeben wird, ein &lt;a1&gt;Pointertyp&lt;/a1&gt; oder &lt;a2&gt;Zeichenkettentyp&lt;/a2&gt; ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -70767,8 +70815,8 @@
       <tuv lang="en">
         <seg>AddStandard detects existing items by ID, not by name.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20231026T101229Z" creationid="Ragnar-F" creationdate="20180409T175842Z">
-        <seg>AddStandard identifiziert existierende Menüpunkte anhand ihrer ID, nicht anhand ihres Namens.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T134643Z" creationid="Ragnar-F" creationdate="20180409T175842Z">
+        <seg>AddStandard identifiziert existierende Menüpunkte per ID, nicht per Name.</seg>
       </tuv>
     </tu>
     <tu>
@@ -77261,6 +77309,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Append an asterisk or the letter P (both with optional preceding space) to any of the above &lt;a0&gt;string type names&lt;/a0&gt; or &lt;a1&gt;numeric type names&lt;/a1&gt; to cause the address of the argument to be passed rather than the value itself (the called function must be designed to accept it).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T142948Z" creationid="Ragnar-F" creationdate="20260921T142948Z">
+        <seg>Fügen Sie ein Sternchen oder den Buchstaben P (beide optional mit Leerzeichen davor) an einen der obigen Typnamen für &lt;a0&gt;Zeichenketten&lt;/a0&gt; oder &lt;a1&gt;Zahlen&lt;/a1&gt; an, um nicht den Wert selbst, sondern die Adresse des Arguments zu übergeben (die aufgerufene Funktion muss dafür ausgelegt sein, so etwas zu akzeptieren).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Append one or more items using the &lt;a0&gt;Push&lt;/a0&gt; method:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230819T125401Z" creationid="Ragnar-F" creationdate="20190510T135557Z">
@@ -82277,6 +82333,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>By contrast, &lt;a1&gt;GetWindowRect&lt;/a1&gt; does not accept a RECT, but a pointer to a RECT.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T140211Z" creationid="Ragnar-F" creationdate="20260921T140211Z">
+        <seg>&lt;a1&gt;GetWindowRect&lt;/a1&gt; akzeptiert hingegen kein RECT, sondern einen Pointer, der auf ein RECT verweist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>By contrast, &lt;a2&gt;GuiControl.Move&lt;/a2&gt; takes GUI coordinates and &lt;a3&gt;ControlMove&lt;/a3&gt; takes window coordinates, regardless of the control's parent window.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20250125T121126Z" creationid="Ragnar-F" creationdate="20250125T121126Z">
@@ -84591,8 +84655,8 @@
       <tuv lang="en">
         <seg>Calls a function that returns a struct by value.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T174532Z" creationid="Ragnar-F" creationdate="20260919T174532Z">
-        <seg>Ruft eine Funktion auf, die eine Struktur per Wert zurückgibt.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T135918Z" creationid="Ragnar-F" creationdate="20260919T174532Z">
+        <seg>Ruft eine Funktion auf, die eine Struktur als Wert zurückgibt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -89480,8 +89544,8 @@
       <tuv lang="en">
         <seg>Comparison of string keys is case-sensitive, while objects are compared by reference/address.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20231025T161759Z" creationid="Ragnar-F" creationdate="20190820T203820Z">
-        <seg>Der Vergleich von Zeichenkettenschlüsseln erfolgt Groß-/Kleinschreibung-sensitiv, während Objekte via Referenz/Adresse verglichen werden.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T134413Z" creationid="Ragnar-F" creationdate="20190820T203820Z">
+        <seg>Der Vergleich von Zeichenkettenschlüsseln erfolgt Groß-/Kleinschreibung-sensitiv, während Objekte per Referenz/Adresse verglichen werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -91696,8 +91760,8 @@
       <tuv lang="en">
         <seg>Controls can still be named and be referenced by name, but it's just a name (used with &lt;c0&gt;GuiObj["Name"]&lt;/c0&gt; and &lt;a1&gt;Gui.Submit()&lt;/a1&gt;), not an associated variable, so there is no need to declare or create a global or static variable.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20231204T115940Z" creationid="Ragnar-F" creationdate="20231204T115940Z">
-        <seg>Steuerelemente können weiterhin benannt und via Name referenziert werden. Dies ist jedoch nur ein Name (der mit &lt;c0&gt;GuiObj["Name"]&lt;/c0&gt; und &lt;a1&gt;Gui.Submit()&lt;/a1&gt; verwendet wird), keine zugeordnete Variable, daher müssen keine globalen oder statischen Variablen deklariert oder erstellt werden.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T134847Z" creationid="Ragnar-F" creationdate="20231204T115940Z">
+        <seg>Steuerelemente können weiterhin benannt und per Name referenziert werden. Dies ist jedoch nur ein Name (der mit &lt;c0&gt;GuiObj["Name"]&lt;/c0&gt; und &lt;a1&gt;Gui.Submit()&lt;/a1&gt; verwendet wird), keine zugeordnete Variable, daher müssen keine globalen oder statischen Variablen deklariert oder erstellt werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -97274,6 +97338,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231128T093958Z" creationid="Ragnar-F" creationdate="20210705T201731Z">
         <seg>DllCall verlangt nun, dass die Werte von Parametern numerischen Typs numerisch sein müssen, und löst eine Ausnahme aus, wenn eine nicht-numerische oder leere Zeichenkette übergeben wurde.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>DllCall returns &lt;a1&gt;&lt;e2&gt;blank-unset&lt;/e2&gt;&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T141251Z" creationid="Ragnar-F" creationdate="20260921T141251Z">
+        <seg>DllCall gibt &lt;a1&gt;&lt;e2&gt;leer-ungesetzt&lt;/e2&gt;&lt;/a1&gt; zurück.</seg>
       </tuv>
     </tu>
     <tu>
@@ -108200,6 +108272,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>FontHandle &lt;s0&gt;[v2.1-alpha.32+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T144159Z" creationid="Ragnar-F" creationdate="20260921T144159Z">
+        <seg>FontHandle &lt;s0&gt;[v2.1-alpha.32+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>FontName</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20201103T094911Z" creationid="Ragnar-F" creationdate="20140306T171634Z">
@@ -114386,8 +114466,8 @@
       <tuv lang="en">
         <seg>For example, the following call would pass the contents of MyVar to MyFunction by address, but would also update MyVar to reflect any changes made to it by MyFunction:</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20230409T094955Z" creationid="Ragnar-F" creationdate="20140313T233650Z">
-        <seg>Zum Beispiel würde der folgende Aufruf den Inhalt von MeineVar an MeineFunktion via Adresse übergeben, aber auch den Inhalt von MeineVar aktualisieren, um alle Änderungen widerzuspiegeln, die MeineFunktion an MeineVar vorgenommen hat:</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T135423Z" creationid="Ragnar-F" creationdate="20140313T233650Z">
+        <seg>Zum Beispiel würde der folgende Aufruf den Inhalt von MeineVar an MeineFunktion per Adresse übergeben, aber auch den Inhalt von MeineVar aktualisieren, um alle Änderungen widerzuspiegeln, die MeineFunktion an MeineVar vorgenommen hat:</seg>
       </tuv>
     </tu>
     <tu>
@@ -118285,6 +118365,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260216T194629Z" creationid="Ragnar-F" creationdate="20260216T194629Z">
         <seg>Liefert ein Handle eines &lt;a0&gt;Win32-Menüs&lt;/a0&gt; (ein Handle vom Typ &lt;c1&gt;HMENU&lt;/c1&gt;) zurück, und konstruiert es, falls nötig.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Gets a handle to the font set by SetFont.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T144425Z" creationid="Ragnar-F" creationdate="20260921T144157Z">
+        <seg>Liefert ein Handle der via SetFont gesetzten Schrift.</seg>
       </tuv>
     </tu>
     <tu>
@@ -126810,6 +126898,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If &lt;e3&gt;Function&lt;/e3&gt; returns a value, it is ignored.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T141348Z" creationid="Ragnar-F" creationdate="20260921T141348Z">
+        <seg>Wenn &lt;e3&gt;Funktion&lt;/e3&gt; einen Wert zurückgibt, wird dieser ignoriert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If &lt;e3&gt;Value&lt;/e3&gt; is a non-numeric string, it is used as the message.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210216T105123Z" creationid="Ragnar-F" creationdate="20210216T105123Z">
@@ -132996,8 +133092,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>If the callback is a method registered by name, its hidden &lt;a0&gt;&lt;e1&gt;this&lt;/e1&gt; parameter&lt;/a0&gt; seamlessly receives the event sink object (that is, the object to which the method belongs).</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20231009T084658Z" creationid="Ragnar-F" creationdate="20170614T075707Z">
-        <seg>Wenn die Rückruffunktion eine via Name registrierte Methode ist, bekommt ihr versteckter &lt;a0&gt;&lt;e1&gt;this&lt;/e1&gt;-Parameter&lt;/a0&gt; direkt das Event-Sink-Objekt zugewiesen (also das Objekt, zu dem die Methode gehört).</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T134557Z" creationid="Ragnar-F" creationdate="20170614T075707Z">
+        <seg>Wenn die Rückruffunktion eine per Name registrierte Methode ist, bekommt ihr versteckter &lt;a0&gt;&lt;e1&gt;this&lt;/e1&gt;-Parameter&lt;/a0&gt; direkt das Event-Sink-Objekt zugewiesen (also das Objekt, zu dem die Methode gehört).</seg>
       </tuv>
     </tu>
     <tu>
@@ -134292,8 +134388,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>If the parameter is a pointer to a single numeric value such as LPDWORD or Int*, generally a &lt;a3&gt;pointer type&lt;/a3&gt; should be used instead of Ptr.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T131033Z" creationid="Ragnar-F" creationdate="20260921T131033Z">
-        <seg>Wenn der Parameter ein Pointer ist, der auf einen einzelnen numerischen Wert verweist, wie z.B. LPDWORD oder Int*, sollte grundsätzlich ein &lt;a3&gt;Pointer-Typ&lt;/a3&gt; anstelle von Ptr verwendet werden.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T143106Z" creationid="Ragnar-F" creationdate="20260921T131033Z">
+        <seg>Wenn der Parameter ein Pointer ist, der auf einen einzelnen numerischen Wert verweist, wie z.B. LPDWORD oder Int*, sollte grundsätzlich ein &lt;a3&gt;Pointertyp&lt;/a3&gt; anstelle von Ptr verwendet werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -134334,6 +134430,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260921T131944Z" creationid="Ragnar-F" creationdate="20260921T131944Z">
         <seg>Wenn der Parameterwert keine Instanz der Klasse ist, wird automatisch eine Instanz konstruiert (ohne Aufruf der statischen Call-Methode) und ihrer &lt;a0&gt;__Value-Eigenschaft&lt;/a0&gt; der Parameterwert zugewiesen (oder auf &lt;c1&gt;unset&lt;/c1&gt; gesetzt, falls der Parameter weggelassen wurde).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the parameter value is omitted or &lt;c1&gt;unset&lt;/c1&gt; and no __Value property is defined, no error is thrown.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T140537Z" creationid="Ragnar-F" creationdate="20260921T140537Z">
+        <seg>Wenn der Parameterwert weggelassen wird oder &lt;c1&gt;unset&lt;/c1&gt; ist, und keine __Value-Eigenschaft definiert ist, wird kein Fehler ausgelöst.</seg>
       </tuv>
     </tu>
     <tu>
@@ -134484,8 +134588,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>If the property is a &lt;a0&gt;pointer type&lt;/a0&gt; or not a nested struct, a &lt;a1&gt;PropRef&lt;/a1&gt; is created and returned.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T111435Z" creationid="Ragnar-F" creationdate="20260916T111435Z">
-        <seg>Handelt es sich bei der Eigenschaft um einen &lt;a0&gt;Pointer-Typ&lt;/a0&gt; oder nicht um eine verschachtelte Struktur, wird eine &lt;a1&gt;PropRef&lt;/a1&gt; erstellt und zurückgegeben.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T143135Z" creationid="Ragnar-F" creationdate="20260916T111435Z">
+        <seg>Handelt es sich bei der Eigenschaft um einen &lt;a0&gt;Pointertyp&lt;/a0&gt; oder nicht um eine verschachtelte Struktur, wird eine &lt;a1&gt;PropRef&lt;/a1&gt; erstellt und zurückgegeben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -138547,6 +138651,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>In general, a pointer type is used whenever a function has an argument type or return type that starts with "LP".</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T143035Z" creationid="Ragnar-F" creationdate="20260921T143035Z">
+        <seg>In der Regel wird ein Pointertyp verwendet, wenn eine Funktion einen Argument- oder Rückgabetyp hat, der mit "LP" beginnt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>In general, an asterisk is used whenever a function has an argument type or return type that starts with "LP".</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230409T095322Z" creationid="Ragnar-F" creationdate="20140301T022127Z">
@@ -139589,8 +139701,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>In short, the parameter is passed &lt;e7&gt;by value&lt;/e7&gt;.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20230905T085259Z" creationid="Ragnar-F" creationdate="20210307T103920Z">
-        <seg>Kurz gesagt, der Parameter wird &lt;e7&gt;via Wert&lt;/e7&gt; übergeben.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T134237Z" creationid="Ragnar-F" creationdate="20210307T103920Z">
+        <seg>Kurz gesagt, der Parameter wird &lt;e7&gt;als Wert&lt;/e7&gt; übergeben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -139895,6 +140007,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231117T130203Z" creationid="Ragnar-F" creationdate="20200613T112830Z">
         <seg>In solchen Fällen wird der in der Variable gespeicherte Name zur Lokalisierung des Ziellabels verwendet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In such cases, the thread is aborted (if &lt;a2&gt;Try&lt;/a2&gt; is not used), but any &lt;a3&gt;pointer types&lt;/a3&gt; are still updated.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T143342Z" creationid="Ragnar-F" creationdate="20260921T143342Z">
+        <seg>In solchen Fällen wird der Thread unterbrochen (wenn &lt;a2&gt;Try&lt;/a2&gt; nicht verwendet wird), während alle &lt;a3&gt;Pointertypen&lt;/a3&gt; weiter aktualisiert werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -142212,6 +142332,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Instead, the function is passed a struct instance with default values for all fields.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T141053Z" creationid="Ragnar-F" creationdate="20260921T141053Z">
+        <seg>Stattdessen wird der Funktion eine Strukturinstanz übergeben, mit Standardwerten bei allen Feldern.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Instead, the map object is passed directly to a &lt;a1&gt;for-loop&lt;/a1&gt;, which calls __Enum once and then calls the enumerator once for each iteration of the loop.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231029T102851Z" creationid="Ragnar-F" creationdate="20190820T210725Z">
@@ -144254,8 +144382,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>It is not possible to pass an &lt;a1&gt;object property&lt;/a1&gt; or &lt;a2&gt;built-in variable&lt;/a2&gt; by reference, and therefore not valid to pass one to this function.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20231115T115618Z" creationid="Ragnar-F" creationdate="20180816T135150Z">
-        <seg>Es ist nicht möglich, eine &lt;a1&gt;Objekteigenschaft&lt;/a1&gt; oder &lt;a2&gt;interne Variable&lt;/a2&gt; via Referenz zu übergeben, daher ist es ungültig, diese an diese Funktion zu übergeben.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T134431Z" creationid="Ragnar-F" creationdate="20180816T135150Z">
+        <seg>Es ist nicht möglich, eine &lt;a1&gt;Objekteigenschaft&lt;/a1&gt; oder &lt;a2&gt;interne Variable&lt;/a2&gt; per Referenz zu übergeben, daher ist es ungültig, diese an diese Funktion zu übergeben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -148246,16 +148374,16 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>Let components be referenced by name and/or index.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20231127T114256Z" creationid="Ragnar-F" creationdate="20210705T182427Z">
-        <seg>Komponenten können jetzt via Name und/oder Index referenziert werden.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T134740Z" creationid="Ragnar-F" creationdate="20210705T182427Z">
+        <seg>Komponenten können jetzt per Name und/oder Index referenziert werden.</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>Let devices be referenced by name-prefix and/or index.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20231127T114312Z" creationid="Ragnar-F" creationdate="20210705T182431Z">
-        <seg>Geräte können jetzt via Name+Präfix und/oder Index referenziert werden.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T134748Z" creationid="Ragnar-F" creationdate="20210705T182431Z">
+        <seg>Geräte können jetzt per Name+Präfix und/oder Index referenziert werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -162828,6 +162956,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>No value.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T141101Z" creationid="Ragnar-F" creationdate="20260921T141101Z">
+        <seg>Kein Wert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>NoAction(*) {</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210404T182900Z" creationid="Ragnar-F" creationdate="20210404T182857Z">
@@ -172854,8 +172990,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>Pointer Types</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T130758Z" creationid="Ragnar-F" creationdate="20260921T130758Z">
-        <seg>Pointer-Typen</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T143054Z" creationid="Ragnar-F" creationdate="20260921T130758Z">
+        <seg>Pointertypen</seg>
       </tuv>
     </tu>
     <tu>
@@ -173392,6 +173528,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260902T082121Z" creationid="Ragnar-F" creationdate="20260902T082121Z">
         <seg>Bereitet das System auf den Schnellstart vor, fährt das System herunter und unterbricht die Stromversorgung.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Prepend the letter U to any of the &lt;a0&gt;integer types&lt;/a0&gt; above to interpret it as an unsigned integer (&lt;a1&gt;UInt64&lt;/a1&gt;, &lt;a2&gt;UInt&lt;/a2&gt;, &lt;a3&gt;UShort&lt;/a3&gt;, &lt;a4&gt;UChar&lt;/a4&gt;, and &lt;a5&gt;UPtr&lt;/a5&gt;).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T141546Z" creationid="Ragnar-F" creationdate="20260921T141546Z">
+        <seg>Stellen Sie einem der obigen &lt;a0&gt;Integertypen&lt;/a0&gt; den Buchstaben U voran, um den entsprechenden Wert als vorzeichenlosen Integer zu interpretieren (&lt;a1&gt;UInt64&lt;/a1&gt;, &lt;a2&gt;UInt&lt;/a2&gt;, &lt;a3&gt;UShort&lt;/a3&gt;, &lt;a4&gt;UChar&lt;/a4&gt; und &lt;a5&gt;UPtr&lt;/a5&gt;).</seg>
       </tuv>
     </tu>
     <tu>
@@ -174070,8 +174214,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>Previously a string was passed by address if the expression began with &lt;c2&gt;"&lt;/c2&gt;, but other strings were coerced to integers.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20231127T112640Z" creationid="Ragnar-F" creationdate="20210705T175333Z">
-        <seg>Früher wurde eine Zeichenkette via Adresse übergeben, wenn der Ausdruck mit &lt;c2&gt;"&lt;/c2&gt; begann, aber andere Zeichenketten wurden zwangsweise in Integer umgewandelt.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T135032Z" creationid="Ragnar-F" creationdate="20210705T175333Z">
+        <seg>Früher wurde eine Zeichenkette per Adresse übergeben, wenn der Ausdruck mit &lt;c2&gt;"&lt;/c2&gt; begann, aber andere Zeichenketten wurden zwangsweise in Integer umgewandelt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -176070,8 +176214,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>Receiving Parameters By Address</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260914T144600Z" creationid="Ragnar-F" creationdate="20260914T144530Z">
-        <seg>Parameter via Adresse empfangen</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T135957Z" creationid="Ragnar-F" creationdate="20260914T144530Z">
+        <seg>Parameter per Adresse empfangen</seg>
       </tuv>
     </tu>
     <tu>
@@ -180110,8 +180254,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>Returning structs larger than this (by value) is not supported.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20230610T203245Z" creationid="Ragnar-F" creationdate="20160117T163309Z">
-        <seg>Die Rückgabe von Strukturen größer als diese (nach Wert) wird nicht unterstützt.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T133300Z" creationid="Ragnar-F" creationdate="20160117T163309Z">
+        <seg>Die Rückgabe von Strukturen größer als diese (als Wert) wird nicht unterstützt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -180272,6 +180416,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T054513Z" creationid="Ragnar-F" creationdate="20260916T054513Z">
         <seg>Gibt eine Zahl ungleich 0 zurück, wenn die Variable oder der Ausdruck einen Wert hat (nicht &lt;a0&gt;ungesetzt&lt;/a0&gt; ist).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Returns a non-zero number if the specified window is always-on-top.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T144529Z" creationid="Ragnar-F" creationdate="20260921T144529Z">
+        <seg>Gibt eine Zahl ungleich 0 zurück, wenn ein bestimmtes Fenster immer im Vordergrund ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -185512,6 +185664,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230622T171416Z" creationid="Ragnar-F" creationdate="20230622T171416Z">
         <seg>Weitere Informationen finden Sie unter &lt;a2&gt;Einschränkungen beim Neubelegen via SendPlay&lt;/a2&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>See &lt;a2&gt;Structures&lt;/a2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T143919Z" creationid="Ragnar-F" creationdate="20260921T143919Z">
+        <seg>Siehe &lt;a2&gt;Strukturen&lt;/a2&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -191852,6 +192012,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Since the value of such an argument might be modified by the function, whenever a &lt;a2&gt;VarRef&lt;/a2&gt; is passed as the argument, the variable's contents will be updated after the function returns.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T142959Z" creationid="Ragnar-F" creationdate="20260921T142959Z">
+        <seg>Da der Wert eines solchen Arguments von der Funktion geändert werden kann, wird jedes Mal, wenn eine &lt;a2&gt;VarRef&lt;/a2&gt; als Argument übergeben wird, der Inhalt der Variable nach Abschluss der Funktion aktualisiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Since the variable is expected to sometimes be &lt;a0&gt;uninitialized&lt;/a0&gt;, no error is thrown in that case.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231201T152710Z" creationid="Ragnar-F" creationdate="20220702T071204Z">
@@ -192390,8 +192558,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>Smaller types are padded out to 64 bits, while larger types are always passed by address.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20160117T161358Z" creationid="Ragnar-F" creationdate="20160117T161358Z">
-        <seg>Kleinere Typen werden auf 64 Bit erweitert, während größere Typen immer via Adresse übergeben werden.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T135438Z" creationid="Ragnar-F" creationdate="20160117T161358Z">
+        <seg>Kleinere Typen werden auf 64 Bit erweitert, während größere Typen immer per Adresse übergeben werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -195286,8 +195454,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>Specifying a key by name, by &lt;c5&gt;{vkNN}&lt;/c5&gt; or by &lt;c6&gt;{scNNN}&lt;/c6&gt; may produce three different results; see below for details.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20230509T175604Z" creationid="Ragnar-F" creationdate="20190929T205357Z">
-        <seg>Die Angabe einer Taste via Name, &lt;c5&gt;{vkNN}&lt;/c5&gt; oder &lt;c6&gt;{scNNN}&lt;/c6&gt; kann zu drei verschiedenen Ergebnissen führen; Einzelheiten finden Sie unten.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T133754Z" creationid="Ragnar-F" creationdate="20190929T205357Z">
+        <seg>Die Angabe einer Taste per Name, &lt;c5&gt;{vkNN}&lt;/c5&gt; oder &lt;c6&gt;{scNNN}&lt;/c6&gt; kann zu drei verschiedenen Ergebnissen führen; Einzelheiten finden Sie unten.</seg>
       </tuv>
     </tu>
     <tu>
@@ -196496,6 +196664,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180430T114915Z" creationid="Ragnar-F" creationdate="20180430T114915Z">
         <seg>ZketteWert := &lt;s0&gt;String&lt;/s0&gt;(Wert)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Strictly speaking, this is necessary only for return types and &lt;a6&gt;pointer types&lt;/a6&gt; because it does not matter whether an argument passed by value is unsigned or signed (except for &lt;a7&gt;Int64&lt;/a7&gt;).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T141737Z" creationid="Ragnar-F" creationdate="20260921T141737Z">
+        <seg>Streng genommen ist das nur für Rückgabetypen und &lt;a6&gt;Pointertypen&lt;/a6&gt; notwendig, da es keine Rolle spielt, ob ein als Wert übergebenes Argument vorzeichenfähig oder vorzeichenlos ist (außer für &lt;a7&gt;Int64&lt;/a7&gt;).</seg>
       </tuv>
     </tu>
     <tu>
@@ -207662,8 +207838,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>The expressions &lt;c0&gt;funcName[""]()&lt;/c0&gt; and &lt;c1&gt;funcName.()&lt;/c1&gt; no longer call a function by name.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20210704T120215Z" creationid="Ragnar-F" creationdate="20210704T120215Z">
-        <seg>Die Ausdrücke &lt;c0&gt;funkName[""]()&lt;/c0&gt; und &lt;c1&gt;funkName.()&lt;/c1&gt; rufen nicht länger eine Funktion via Name auf.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T134733Z" creationid="Ragnar-F" creationdate="20210704T120215Z">
+        <seg>Die Ausdrücke &lt;c0&gt;funkName[""]()&lt;/c0&gt; und &lt;c1&gt;funkName.()&lt;/c1&gt; rufen nicht länger eine Funktion per Name auf.</seg>
       </tuv>
     </tu>
     <tu>
@@ -213116,6 +213292,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The return value is a Win32 font handle (HFONT).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T144354Z" creationid="Ragnar-F" creationdate="20260921T144354Z">
+        <seg>Der Rückgabewert ist ein Win32-Font-Handle (HFONT).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The return value is a new &lt;a0&gt;File object&lt;/a0&gt; encapsulating the open handle to the file.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230930T092300Z" creationid="Ragnar-F" creationdate="20191010T085334Z">
@@ -217670,8 +217854,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>These do not apply to a specific instance, and can be used by referring to the class itself by name.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20231118T133638Z" creationid="Ragnar-F" creationdate="20190820T105047Z">
-        <seg>Diese gelten nicht für eine bestimmte Instanz und können verwendet werden, indem via Name auf die Klasse selbst verwiesen wird.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T134652Z" creationid="Ragnar-F" creationdate="20190820T105047Z">
+        <seg>Diese gelten nicht für eine bestimmte Instanz und können verwendet werden, indem per Name auf die Klasse selbst verwiesen wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -218822,8 +219006,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>This allows keys to be excluded by name after applying an option to &lt;a0&gt;all keys&lt;/a0&gt;.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20190930T071326Z" creationid="Ragnar-F" creationdate="20190930T071326Z">
-        <seg>Dies ermöglicht es, Tasten via Name auszuschließen, nachdem eine Option auf &lt;a0&gt;alle Tasten&lt;/a0&gt; angewendet wurde.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T133815Z" creationid="Ragnar-F" creationdate="20190930T071326Z">
+        <seg>Dies ermöglicht es, Tasten per Name auszuschließen, nachdem eine Option auf &lt;a0&gt;alle Tasten&lt;/a0&gt; angewendet wurde.</seg>
       </tuv>
     </tu>
     <tu>
@@ -226412,6 +226596,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This string is valid only for the return type.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T141222Z" creationid="Ragnar-F" creationdate="20260921T141222Z">
+        <seg>Diese Zeichenkette kann nur als Rückgabetyp verwendet werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This string should not be treated as a number, i.e. one should not perform math on it or compare it numerically.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230924T100708Z" creationid="Ragnar-F" creationdate="20230924T100708Z">
@@ -231214,8 +231406,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>To send a key by name, or to send any one of the above symbols literally, enclose it in braces.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20230908T163559Z" creationid="Ragnar-F" creationdate="20221220T144937Z">
-        <seg>Um eine Taste per Namen zu senden oder um eines der oben genannten Symbole direkt zu senden, umschließen Sie die Taste oder das Symbol mit geschweiften Klammern.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T134513Z" creationid="Ragnar-F" creationdate="20221220T144937Z">
+        <seg>Um eine Taste per Name zu senden oder um eines der oben genannten Symbole direkt zu senden, umschließen Sie die Taste oder das Symbol mit geschweiften Klammern.</seg>
       </tuv>
     </tu>
     <tu>
@@ -235126,8 +235318,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>Unsigned Integer Types</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T130751Z" creationid="Ragnar-F" creationdate="20260921T130751Z">
-        <seg>Vorzeichenlose Integer-Typen</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T141553Z" creationid="Ragnar-F" creationdate="20260921T130751Z">
+        <seg>Vorzeichenlose Integertypen</seg>
       </tuv>
     </tu>
     <tu>
@@ -236094,8 +236286,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>Use &lt;c0&gt;myVar()&lt;/c0&gt; in place of &lt;c1&gt;%myVar%()&lt;/c1&gt; when calling a function by value.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20231123T122327Z" creationid="Ragnar-F" creationdate="20210704T104150Z">
-        <seg>Verwenden Sie &lt;c0&gt;meineVar()&lt;/c0&gt; anstelle von &lt;c1&gt;%meineVar%()&lt;/c1&gt;, um eine Funktion per Wert aufzurufen.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T134315Z" creationid="Ragnar-F" creationdate="20210704T104150Z">
+        <seg>Verwenden Sie &lt;c0&gt;meineVar()&lt;/c0&gt; anstelle von &lt;c1&gt;%meineVar%()&lt;/c1&gt;, um eine Funktion als Wert aufzurufen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -242143,8 +242335,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>When a key is specified by name, options are added either by VK or by SC.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20240421T101935Z" creationid="Ragnar-F" creationdate="20240421T101935Z">
-        <seg>Wenn eine Taste via Name angegeben wurde, werden Optionen entweder via VK oder SC hinzugefügt.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T134606Z" creationid="Ragnar-F" creationdate="20240421T101935Z">
+        <seg>Wenn eine Taste per Name angegeben wurde, werden Optionen entweder via VK oder SC hinzugefügt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -268149,6 +268341,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>hFont := MyGui.&lt;s0&gt;FontHandle&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T144247Z" creationid="Ragnar-F" creationdate="20260921T144205Z">
+        <seg>hFont := MeineGui.&lt;s0&gt;FontHandle&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>hIcon := LoadPicture("My Icon.ico", "Icon1 w" iconsize " h" iconsize, &amp;imgtype)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210307T161718Z" creationid="Ragnar-F" creationdate="20210307T161718Z">
@@ -276130,6 +276330,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180816T082054Z" creationid="Ragnar-F" creationdate="20180816T082054Z">
         <seg>vk_code := GetKeyVK("Esc")</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>void</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T141055Z" creationid="Ragnar-F" creationdate="20260921T141055Z">
+        <seg>void</seg>
       </tuv>
     </tu>
     <tu>
