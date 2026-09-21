@@ -43245,6 +43245,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;ahk_opt (Options)&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.25+]&lt;/s1&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T170004Z" creationid="Ragnar-F" creationdate="20260921T165953Z">
+        <seg>&lt;a0&gt;ahk_opt (Optionen)&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.25+]&lt;/s1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;command line parameters&lt;/a0&gt;, &lt;a1&gt;A_WorkingDir&lt;/a1&gt;, &lt;a2&gt;A_ScriptDir&lt;/a2&gt;, &lt;a3&gt;A_ScriptName&lt;/a3&gt;, &lt;a4&gt;(...more...)&lt;/a4&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140316T140055Z" creationid="Ragnar-F" creationdate="20140316T140055Z">
@@ -45845,6 +45853,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;c0&gt;Hidden&lt;/c0&gt; or &lt;c1&gt;Hidden1&lt;/c1&gt; to enable &lt;a2&gt;DetectHiddenWindows&lt;/a2&gt;, or &lt;c3&gt;Hidden0&lt;/c3&gt; to disable it.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T170326Z" creationid="Ragnar-F" creationdate="20260921T170326Z">
+        <seg>&lt;c0&gt;Hidden&lt;/c0&gt; oder &lt;c1&gt;Hidden1&lt;/c1&gt;, um &lt;a2&gt;DetectHiddenWindows&lt;/a2&gt; zu aktivieren, oder &lt;c3&gt;Hidden0&lt;/c3&gt;, um es zu deaktivieren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c0&gt;HiddenText&lt;/c0&gt; or &lt;c1&gt;HiddenText1&lt;/c1&gt; to enable &lt;a2&gt;DetectHiddenText&lt;/a2&gt;, or &lt;c3&gt;HiddenText0&lt;/c3&gt; to disable it.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T170345Z" creationid="Ragnar-F" creationdate="20260921T170345Z">
+        <seg>&lt;c0&gt;HiddenText&lt;/c0&gt; oder &lt;c1&gt;HiddenText1&lt;/c1&gt;, um &lt;a2&gt;DetectHiddenText&lt;/a2&gt; zu aktivieren, oder &lt;c3&gt;HiddenText0&lt;/c3&gt;, um es zu deaktivieren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;c0&gt;HotIf&lt;/c0&gt; or &lt;c1&gt;HotIfWinActive&lt;/c1&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200612T142150Z" creationid="Ragnar-F" creationdate="20200612T142139Z">
@@ -46521,6 +46545,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T060634Z" creationid="Ragnar-F" creationdate="20260916T060634Z">
         <seg>&lt;c0&gt;X.HasProp("Y")&lt;/c0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c0&gt;X.HasProp("Y")&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T165058Z" creationid="Ragnar-F" creationdate="20260921T165058Z">
+        <seg>&lt;c0&gt;X.HasProp("Y")&lt;/c0&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -47417,6 +47449,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210307T154338Z" creationid="Ragnar-F" creationdate="20210307T154338Z">
         <seg>&lt;c1&gt;.[(&lt;/c1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c1&gt;1&lt;/c1&gt;, &lt;c2&gt;2&lt;/c2&gt;, &lt;c3&gt;3&lt;/c3&gt;, &lt;c4&gt;RegEx&lt;/c4&gt;, &lt;c5&gt;Fast&lt;/c5&gt;, &lt;c6&gt;Slow&lt;/c6&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T170240Z" creationid="Ragnar-F" creationdate="20260921T170240Z">
+        <seg>&lt;c1&gt;1&lt;/c1&gt;, &lt;c2&gt;2&lt;/c2&gt;, &lt;c3&gt;3&lt;/c3&gt;, &lt;c4&gt;RegEx&lt;/c4&gt;, &lt;c5&gt;Fast&lt;/c5&gt;, &lt;c6&gt;Slow&lt;/c6&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -63989,6 +64029,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s1&gt;[v2.1-alpha.10+]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T165047Z" creationid="Ragnar-F" creationdate="20260921T165047Z">
+        <seg>&lt;s1&gt;[v2.1-alpha.10+]&lt;/s1&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s1&gt;[v2.1-alpha.10]&lt;/s1&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T052711Z" creationid="Ragnar-F" creationdate="20260916T052711Z">
@@ -74733,6 +74781,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>An &lt;a0&gt;OSError&lt;/a0&gt; is thrown if there is a problem determining the mouse position, such as if the workstation is locked or entering a suspended state (sleep mode or hibernation).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T165309Z" creationid="Ragnar-F" creationdate="20260921T165309Z">
+        <seg>Es wird ein &lt;a0&gt;OSError&lt;/a0&gt; ausgelöst, wenn bei der Ermittlung der Mausposition ein Problem auftritt, z.B. wenn der PC gesperrt ist oder in einen Ruhezustand oder Energiesparmodus wechselt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>An &lt;a0&gt;OSError&lt;/a0&gt; is thrown if there was a problem opening or reading the file.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210216T143701Z" creationid="Ragnar-F" creationdate="20210216T143701Z">
@@ -77153,6 +77209,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231116T213942Z" creationid="Ragnar-F" creationdate="20200622T085048Z">
         <seg>Es dürfen nur die internen Variablen aus der &lt;a6&gt;ersten Gruppe&lt;/a6&gt; oben verwendet werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Any valid &lt;a0&gt;SetTitleMatchMode&lt;/a0&gt; value:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T170238Z" creationid="Ragnar-F" creationdate="20260921T170238Z">
+        <seg>Ein beliebiger gültiger &lt;a0&gt;SetTitleMatchMode&lt;/a0&gt;-Wert:</seg>
       </tuv>
     </tu>
     <tu>
@@ -82400,6 +82464,14 @@
         <seg>By contrast, &lt;c3&gt;IsSet(X?.Y?)&lt;/c3&gt; never throws and &lt;c4&gt;IsSet(X.Y?)&lt;/c4&gt; throws only if X is unset</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T060436Z" creationid="Ragnar-F" creationdate="20260916T060436Z">
+        <seg>Im Gegensatz dazu löst &lt;c3&gt;IsSet(X?.Y?)&lt;/c3&gt; niemals einen Fehler aus, und &lt;c4&gt;IsSet(X.Y?)&lt;/c4&gt; nur, wenn X ungesetzt ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>By contrast, &lt;c3&gt;IsSet(X?.Y?)&lt;/c3&gt; never throws and &lt;c4&gt;IsSet(X.Y?)&lt;/c4&gt; throws only if X is unset.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T165056Z" creationid="Ragnar-F" creationdate="20260921T165056Z">
         <seg>Im Gegensatz dazu löst &lt;c3&gt;IsSet(X?.Y?)&lt;/c3&gt; niemals einen Fehler aus, und &lt;c4&gt;IsSet(X.Y?)&lt;/c4&gt; nur, wenn X ungesetzt ist.</seg>
       </tuv>
     </tu>
@@ -92830,6 +92902,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Creates a boxed pointer.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T165518Z" creationid="Ragnar-F" creationdate="20260921T165518Z">
+        <seg>Erstellt einen gekapselten Pointer.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Creates a button that is the same as a check box, except that the check state automatically toggles between checked and cleared each time the user selects the check box.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260217T100747Z" creationid="Ragnar-F" creationdate="20210301T095303Z">
@@ -101614,6 +101694,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Error Handling &lt;s0&gt;[v2.1-alpha.9+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T165244Z" creationid="Ragnar-F" creationdate="20260921T165235Z">
+        <seg>Fehlerbehandlung &lt;s0&gt;[v2.1-alpha.9+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Error Message</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200630T143329Z" creationid="Ragnar-F" creationdate="20200630T143329Z">
@@ -109096,6 +109184,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For a &lt;a1&gt;typed property&lt;/a1&gt;, the return value is a new object with the own properties &lt;e2&gt;Type&lt;/e2&gt; and &lt;e3&gt;Offset&lt;/e3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T165420Z" creationid="Ragnar-F" creationdate="20260921T165420Z">
+        <seg>Bei einer &lt;a1&gt;typisierten Eigenschaft&lt;/a1&gt; ist der Rückgabewert ein neues Objekt mit den eigenen Eigenschaften &lt;e2&gt;Type&lt;/e2&gt; und &lt;e3&gt;Offset&lt;/e3&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For a ComboBox, if no item is selected, it is the text in the edit field.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260216T102733Z" creationid="Ragnar-F" creationdate="20260216T101707Z">
@@ -111056,6 +111152,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For example, &lt;c0&gt;WinExist("i)^untitled ahk_opt RegEx ahk_class i)^notepad$")&lt;/c0&gt; always uses the &lt;a1&gt;RegEx mode&lt;/a1&gt; for both the title and the class, but uses the default &lt;a2&gt;title match speed&lt;/a2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T171428Z" creationid="Ragnar-F" creationdate="20260921T171428Z">
+        <seg>Zum Beispiel bewirkt &lt;c0&gt;WinExist("i)^unbenannt ahk_opt RegEx ahk_class i)^notepad$")&lt;/c0&gt;, dass sowohl für den Titel als auch für die Klasse immer der &lt;a1&gt;RegEx-Modus&lt;/a1&gt; verwendet wird, jedoch mit der voreingestellten &lt;a2&gt;Titelvergleichsgeschwindigkeit&lt;/a2&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For example, &lt;c0&gt;["Red", "Green", "Blue"]&lt;/c0&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260216T085438Z" creationid="Ragnar-F" creationdate="20260216T085438Z">
@@ -111700,6 +111804,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231109T113324Z" creationid="Ragnar-F" creationdate="20191010T103434Z">
         <seg>Zum Beispiel kann &lt;c1&gt;SetTimer , 0&lt;/c1&gt; innerhalb einer Timer-Funktion verwendet werden, um den Timer zum Löschen zu markieren, während &lt;c2&gt;SetTimer , 1000&lt;/c2&gt; die &lt;e3&gt;Periode&lt;/e3&gt; des aktuellen Timers aktualisiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For example, &lt;c1&gt;Type(MyVar?)&lt;/c1&gt; returns "unset" if MyVar is &lt;a2&gt;unset&lt;/a2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T165838Z" creationid="Ragnar-F" creationdate="20260921T165838Z">
+        <seg>Zum Beispiel gibt &lt;c1&gt;Type(MeineVar?)&lt;/c1&gt; "unset" zurück, wenn MeineVar &lt;a2&gt;ungesetzt&lt;/a2&gt; ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -134086,6 +134198,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230622T064750Z" creationid="Ragnar-F" creationdate="20210301T113357Z">
         <seg>Wenn das Hauptfenster zerstört wird, existiert es möglicherweise noch, kann aber nicht angezeigt werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the map does not contain this key, an &lt;a0&gt;UnsetItemError&lt;/a0&gt; is thrown (except in &lt;a1&gt;v2.1 mode&lt;/a1&gt;).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T165230Z" creationid="Ragnar-F" creationdate="20260921T165230Z">
+        <seg>Wenn das Map-Objekt diesen Schlüssel nicht enthält, wird ein &lt;a0&gt;UnsetItemError&lt;/a0&gt; ausgelöst (außer im &lt;a1&gt;v2.1-Modus&lt;/a1&gt;).</seg>
       </tuv>
     </tu>
     <tu>
@@ -180428,6 +180548,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Returns a non-zero number if the specified window is enabled.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T165044Z" creationid="Ragnar-F" creationdate="20260921T165044Z">
+        <seg>Gibt eine Zahl ungleich 0 zurück, wenn die Interaktion mit einem bestimmten Fenster erlaubt ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Returns a non-zero number if the specified window is maximized or minimized.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231203T150726Z" creationid="Ragnar-F" creationdate="20231203T150726Z">
@@ -194996,6 +195124,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Specify for &lt;e3&gt;Options&lt;/e3&gt; one or more of the following values, each separated from the next by one or more spaces or tabs:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T170214Z" creationid="Ragnar-F" creationdate="20260921T170214Z">
+        <seg>Geben Sie für &lt;e3&gt;Optionen&lt;/e3&gt; einen oder mehrere der folgenden Werte an, jeweils getrennt durch mindestens ein Leer- oder Tabulatorzeichen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Specify for &lt;e5&gt;ControlID&lt;/e5&gt; the &lt;a6&gt;Name&lt;/a6&gt; or &lt;a7&gt;HWND&lt;/a7&gt; of an existing control.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260224T200756Z" creationid="Ragnar-F" creationdate="20260224T200756Z">
@@ -204732,6 +204868,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The WinGetAlwaysOnTop function returns a non-zero number if the specified window is always-on-top.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T165900Z" creationid="Ragnar-F" creationdate="20260921T165900Z">
+        <seg>Die WinGetAlwaysOnTop-Funktion gibt eine Zahl ungleich 0 zurück, wenn ein bestimmtes Fenster immer im Vordergrund ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The WinGetClass function retrieves the specified window's class name.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230627T064114Z" creationid="Ragnar-F" creationdate="20180816T140739Z">
@@ -204768,6 +204912,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231116T080305Z" creationid="Ragnar-F" creationdate="20180816T143751Z">
         <seg>Die WinGetCount-Funktion gibt die Anzahl existierender Fenster gemäß bestimmter Kriterien zurück.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The WinGetEnabled function returns a non-zero number if the specified window is enabled.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T165949Z" creationid="Ragnar-F" creationdate="20260921T165949Z">
+        <seg>Die WinGetEnabled-Funktion gibt eine Zahl ungleich 0 zurück, wenn die Interaktion mit einem bestimmten Fenster erlaubt ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -212672,6 +212824,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T124711Z" creationid="Ragnar-F" creationdate="20260916T124711Z">
         <seg>Die vordefinierte &lt;c0&gt;__Class&lt;/c0&gt;-Eigenschaft einer Klassendefinition und &lt;c1&gt;Any.Prototype.Base&lt;/c1&gt; werden nicht enumeriert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The predefined __Class property created by a class definition and &lt;c0&gt;Any.Prototype.Base&lt;/c0&gt; are not enumerated.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T165454Z" creationid="Ragnar-F" creationdate="20260921T165454Z">
+        <seg>Die vordefinierte __Class-Eigenschaft einer Klassendefinition und &lt;c0&gt;Any.Prototype.Base&lt;/c0&gt; werden nicht enumeriert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -236272,6 +236432,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260224T210042Z" creationid="Ragnar-F" creationdate="20260224T170728Z">
         <seg>Verwenden Sie &lt;c0&gt;ahk_id &lt;v1&gt;HWND&lt;/v1&gt;&lt;/c0&gt; oder ein reines HWND (als &lt;a2&gt;Integer&lt;/a2&gt; oder &lt;a3&gt;Objekt&lt;/a3&gt; mit einer Hwnd-Eigenschaft) in &lt;v4&gt;FensterTitel&lt;/v4&gt;, um ein Fenster oder ein Steuerelement über dessen eindeutige ID zu identifizieren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Use &lt;c0&gt;ahk_opt &lt;i1&gt;Options&lt;/i1&gt;&lt;/c0&gt; in &lt;v2&gt;WinTitle&lt;/v2&gt; to override the default settings for all criteria within the same parameter.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T170103Z" creationid="Ragnar-F" creationdate="20260921T170103Z">
+        <seg>Verwenden Sie &lt;c0&gt;ahk_opt &lt;i1&gt;Optionen&lt;/i1&gt;&lt;/c0&gt; in &lt;v2&gt;FensterTitel&lt;/v2&gt;, um die Standardeinstellungen für alle Kriterien innerhalb desselben Parameters zu überschreiben.</seg>
       </tuv>
     </tu>
     <tu>
