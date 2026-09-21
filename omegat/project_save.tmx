@@ -66543,8 +66543,8 @@
       <tuv lang="en">
         <seg>A function can be defined within an expression, with limitations.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T081950Z" creationid="Ragnar-F" creationdate="20260913T081950Z">
-        <seg>Eine Funktion kann innerhalb eines Ausdrucks definiert werden, allerdings mit Einschränkungen.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T183349Z" creationid="Ragnar-F" creationdate="20260913T081950Z">
+        <seg>Es ist möglich, eine Funktion innerhalb eines Ausdrucks zu definieren, allerdings mit Einschränkungen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -110002,8 +110002,8 @@
       <tuv lang="en">
         <seg>For changes made after v2.0, see the &lt;a0&gt;changelog&lt;/a0&gt;.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260425T065218Z" creationid="Ragnar-F" creationdate="20260425T065218Z">
-        <seg>Änderungen nach Version 2.0 finden Sie im &lt;a0&gt;Änderungsprotokoll&lt;/a0&gt;.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T182925Z" creationid="Ragnar-F" creationdate="20260425T065218Z">
+        <seg>Änderungen nach v2.0 finden Sie im &lt;a0&gt;Änderungsprotokoll&lt;/a0&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -164134,8 +164134,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>Note that an expression line starting with &lt;c0&gt;(&lt;/c0&gt; must have a &lt;c1&gt;)&lt;/c1&gt; on the same line, otherwise it would be interpreted as a &lt;a2&gt;continuation section&lt;/a2&gt;.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T085219Z" creationid="Ragnar-F" creationdate="20260913T085219Z">
-        <seg>Beachten Sie, dass eine Ausdruckszeile, die mit &lt;c0&gt;(&lt;/c0&gt; beginnt, auf derselben Zeile ein &lt;c1&gt;)&lt;/c1&gt; haben muss, anderenfalls würde sie als &lt;a2&gt;Fortsetzungsbereich&lt;/a2&gt; interpretiert werden.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T183559Z" creationid="Ragnar-F" creationdate="20260913T085219Z">
+        <seg>Beachten Sie, dass eine Ausdruckszeile, die mit &lt;c0&gt;(&lt;/c0&gt; beginnt, auf derselben Zeile ein &lt;c1&gt;)&lt;/c1&gt; haben muss, andernfalls würde sie als &lt;a2&gt;Fortsetzungsbereich&lt;/a2&gt; interpretiert werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -243432,8 +243432,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>When converting scripts to v2, see also &lt;a0&gt;Changes from v1.0 to v1.1&lt;/a0&gt; if you are converting from v1.0, and consider using tools such as the &lt;a1&gt;AHK v2 Script Converter&lt;/a1&gt; to automate the process.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260425T070115Z" creationid="Ragnar-F" creationdate="20260425T070115Z">
-        <seg>Beim Konvertieren von Skripten auf v2 sollten Sie auch die &lt;a0&gt;Änderungen von v1.0 bis v1.1&lt;/a0&gt; berücksichtigen, wenn Sie von Version 1.0 konvertieren, und den Einsatz von Tools wie &lt;a1&gt;AHK v2 Script Converter&lt;/a1&gt; in Betracht ziehen, um den Vorgang zu automatisieren.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T183012Z" creationid="Ragnar-F" creationdate="20260425T070115Z">
+        <seg>Beim Konvertieren von Skripten auf v2 sollten Sie auch die &lt;a0&gt;Änderungen von v1.0 bis v1.1&lt;/a0&gt; berücksichtigen, wenn Sie von v1.0 konvertieren, und den Einsatz von Tools wie &lt;a1&gt;AHK v2 Script Converter&lt;/a1&gt; in Betracht ziehen, um den Vorgang zu automatisieren.</seg>
       </tuv>
     </tu>
     <tu>
