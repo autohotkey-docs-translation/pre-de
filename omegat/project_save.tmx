@@ -118843,16 +118843,16 @@
       <tuv lang="en">
         <seg>Gets or sets a string displayed near the bottom of the standard error dialog.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T134323Z" creationid="Ragnar-F" creationdate="20260915T130421Z">
-        <seg>Liefert oder setzt den Hinweistext im unteren Bereich des regulären Fehlerdialogfensters.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T203841Z" creationid="Ragnar-F" creationdate="20260915T130421Z">
+        <seg>Liefert oder setzt den Hinweistext ganz unten im Standardfehlerdialogfenster.</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>Gets or sets a string of text displayed near the bottom of the standard error dialog, above the stack trace link (if present).</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T134128Z" creationid="Ragnar-F" creationdate="20260915T133439Z">
-        <seg>Liefert oder setzt einen Hinweistext, der im unteren Bereich des regulären Fehlerdialogfensters oberhalb des Stacktrace-Links (sofern vorhanden) angezeigt wird.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T204154Z" creationid="Ragnar-F" creationdate="20260915T133439Z">
+        <seg>Liefert oder setzt einen Hinweistext, der im unteren Bereich des Standardfehlerdialogfensters oberhalb des Stacktrace-Links (sofern vorhanden) angezeigt wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -191078,8 +191078,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>Shows a standard script error dialog.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T133141Z" creationid="Ragnar-F" creationdate="20260915T130227Z">
-        <seg>Zeigt ein reguläres Fehlerdialogfenster an.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T203735Z" creationid="Ragnar-F" creationdate="20260915T130227Z">
+        <seg>Zeigt ein Standardfehlerdialogfenster an.</seg>
       </tuv>
     </tu>
     <tu>
@@ -214967,8 +214967,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>The standard error dialog requires the Message, Extra, File, Line and Hint properties to be &lt;a0&gt;own value properties&lt;/a0&gt;.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T134431Z" creationid="Ragnar-F" creationdate="20260915T134431Z">
-        <seg>Das reguläre Fehlerdialogfenster erfordert, dass Message, Extra, File, Line und Hint &lt;a0&gt;eigene Werteigenschaften&lt;/a0&gt; sind.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T204359Z" creationid="Ragnar-F" creationdate="20260915T134431Z">
+        <seg>Das Standardfehlerdialogfenster erfordert, dass Message, Extra, File, Line und Hint &lt;a0&gt;eigene Werteigenschaften&lt;/a0&gt; sind.</seg>
       </tuv>
     </tu>
     <tu>
