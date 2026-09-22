@@ -32,7 +32,7 @@ Loop Files, "target\docs\*.htm", "R"
 
     if (A_LoopFilePath = "target\docs\index.htm")
     {
-        content := RegExReplace(content, '<p><a.*?</a></p>', '<p>Eine deutsche &Uuml;bersetzung von <a href="https://www.autohotkey.com/docs/v2/">https://www.autohotkey.com/docs/v2/</a> (siehe <a href="https://autohotkey.com/boards/viewtopic.php?f=9&amp;t=43">hier</a> f&uuml;r mehr Details).</p>')
+        content := RegExReplace(content, '<p><a.*?</a></p>', '<p>Eine deutsche &Uuml;bersetzung von <a href="https://www.autohotkey.com/docs/alpha/">https://www.autohotkey.com/docs/alpha/</a> (siehe <a href="https://autohotkey.com/boards/viewtopic.php?f=9&amp;t=43">hier</a> f&uuml;r mehr Details).</p>')
     }
 
     ; add google analytics
@@ -48,6 +48,12 @@ Loop Files, "target\docs\*.htm", "R"
 
     if not InStr(content, replace)
         content := RegExReplace(content, "<script.*content.js.*?>.*</script>", replace)
+
+    ; add noindex
+    
+    meta_noindex := '<meta name="robots" content="noindex, nofollow" />'
+    if not InStr(content, meta_noindex)
+        content := RegExReplace(content, "</head>", meta_noindex "`n</head>")
 
     ; overwrite file if needed
 
