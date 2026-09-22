@@ -19,6 +19,7 @@ sortTable.input=function(a){for(var b=0;b<a.children.length;b++)if("object"==typ
 sortTable.init=function(){var a,b,d;b=document.querySelectorAll?document.querySelectorAll("table.js-sort-table"):document.getElementsByTagName("table");for(var c=0;c<b.length;c++)if((document.querySelectorAll||null!==b[c].className.match(/\bjs-sort-table\b/))&&!b[c].attributes["data-js-sort-table"]){b[c].tHead?a=b[c].tHead:(a=document.createElement("thead"),a.appendChild(b[c].rows[0]),b[c].insertBefore(a,b[c].children[0]));for(var e=0;e<a.rows.length;e++)for(var f=0,g=0;f<a.rows[e].cells.length;f++)a.rows[e].cells[f].setAttribute("data-js-sort-colNum",
 g),d=sortTable.getClickHandler(b[c],g),window.addEventListener?a.rows[e].cells[f].addEventListener("click",d):window.attachEvent&&a.rows[e].cells[f].attachEvent("onclick",d),g+=a.rows[e].cells[f].colSpan;b[c].setAttribute("data-js-sort-table","true")}};window.addEventListener?window.addEventListener("load",sortTable.init,!1):window.attachEvent&&window.attachEvent("onload",sortTable.init);
 </script>
+<meta name="robots" content="noindex, nofollow" />
 </head>
 
 <body><script>site.init();</script>
