@@ -45839,8 +45839,8 @@
       <tuv lang="en">
         <seg>&lt;c0&gt;Ctrl::Alt&lt;/c0&gt; no longer sends an unsuppressed &lt;c1&gt;{Ctrl up}&lt;/c1&gt;.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T174536Z" creationid="Ragnar-F" creationdate="20260921T174536Z">
-        <seg>&lt;c0&gt;Ctrl::Alt&lt;/c0&gt; sendet nun kein nicht-unterdrücktes &lt;c1&gt;{Ctrl up}&lt;/c1&gt; mehr.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260922T074219Z" creationid="Ragnar-F" creationdate="20260921T174536Z">
+        <seg>&lt;c0&gt;Ctrl::Alt&lt;/c0&gt; sendet nun kein ununterdrücktes &lt;c1&gt;{Ctrl up}&lt;/c1&gt; mehr.</seg>
       </tuv>
     </tu>
     <tu>
@@ -86015,8 +86015,8 @@
       <tuv lang="en">
         <seg>Changed &lt;c0&gt;Ctrl::Alt&lt;/c0&gt; to not send an unsuppressed &lt;c1&gt;{Ctrl up}&lt;/c1&gt;.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T064701Z" creationid="Ragnar-F" creationdate="20260912T064701Z">
-        <seg>Geändert: &lt;c0&gt;Ctrl::Alt&lt;/c0&gt; sendet nun kein nicht-unterdrücktes &lt;c1&gt;{Ctrl up}&lt;/c1&gt; mehr.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260922T073120Z" creationid="Ragnar-F" creationdate="20260912T064701Z">
+        <seg>Geändert: &lt;c0&gt;Ctrl::Alt&lt;/c0&gt; sendet nun kein ununterdrücktes &lt;c1&gt;{Ctrl up}&lt;/c1&gt; mehr.</seg>
       </tuv>
     </tu>
     <tu>
@@ -86488,8 +86488,8 @@
       <tuv lang="en">
         <seg>Changed the &lt;a0&gt;default DPI awareness&lt;/a0&gt; mode from system to per-monitor v2.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T192601Z" creationid="Ragnar-F" creationdate="20260911T184738Z">
-        <seg>Geändert: Der Modus der &lt;a0&gt;Standard-DPI-Sensitivität&lt;/a0&gt; ist nun "Pro-Bildschirm-v2" statt "System".</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260922T072853Z" creationid="Ragnar-F" creationdate="20260911T184738Z">
+        <seg>Geändert: Der Modus der &lt;a0&gt;Standard-DPI-Sensitivität&lt;/a0&gt; ist nun "Per Monitor v2" statt "System".</seg>
       </tuv>
     </tu>
     <tu>
@@ -94672,8 +94672,8 @@
       <tuv lang="en">
         <seg>DPI awareness now defaults to per-monitor v2 instead of system.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T174159Z" creationid="Ragnar-F" creationdate="20260921T174159Z">
-        <seg>Die DPI-Sensitivität verwendet nun standardmäßig "Pro-Bildschirm-v2" statt "System".</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260922T073110Z" creationid="Ragnar-F" creationdate="20260921T174159Z">
+        <seg>Die DPI-Sensitivität verwendet nun standardmäßig "Per Monitor v2" statt "System".</seg>
       </tuv>
     </tu>
     <tu>
@@ -105944,7 +105944,7 @@
       <tuv lang="en">
         <seg>Fixed &lt;c0&gt;return unset&lt;/c0&gt; from an OnMessage callback to act as &lt;c1&gt;return ""&lt;/c1&gt;.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122735Z" creationid="Ragnar-F" creationdate="20260911T122735Z">
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260922T062833Z" creationid="Ragnar-F" creationdate="20260911T122735Z">
         <seg>Behoben: &lt;c0&gt;return unset&lt;/c0&gt; in einem OnMessage-Rückruf verhält sich nun wie &lt;c1&gt;return ""&lt;/c1&gt;.</seg>
       </tuv>
     </tu>
@@ -106304,7 +106304,7 @@
       <tuv lang="en">
         <seg>Fixed Gui Control to pass itself (not the Gui) to message callbacks.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T053529Z" creationid="Ragnar-F" creationdate="20260912T053529Z">
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260922T062758Z" creationid="Ragnar-F" creationdate="20260912T053529Z">
         <seg>Behoben: Gui-Steuerelemente übergeben nun sich selbst (nicht die Gui) an Meldungsrückrufen.</seg>
       </tuv>
     </tu>
@@ -106992,7 +106992,7 @@
       <tuv lang="en">
         <seg>Fixed buffer overrun when RegExReplace callback returns a number/object.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T190349Z" creationid="Ragnar-F" creationdate="20260911T190349Z">
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260922T062807Z" creationid="Ragnar-F" creationdate="20260911T190349Z">
         <seg>Behoben: Pufferüberlauf, wenn ein RegExReplace-Rückruf eine Zahl oder ein Objekt zurückgibt.</seg>
       </tuv>
     </tu>
@@ -107978,7 +107978,7 @@
       <tuv lang="en">
         <seg>Fixed struct return types for typed callbacks.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T130821Z" creationid="Ragnar-F" creationdate="20260911T130821Z">
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260922T062815Z" creationid="Ragnar-F" creationdate="20260911T130821Z">
         <seg>Behoben: Struktur-Rückgabetypen für typisierte Rückrufe.</seg>
       </tuv>
     </tu>
@@ -118747,8 +118747,8 @@
       <tuv lang="en">
         <seg>Gets a handle to the font set by SetFont.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T144425Z" creationid="Ragnar-F" creationdate="20260921T144157Z">
-        <seg>Liefert ein Handle der via SetFont gesetzten Schrift.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260922T061807Z" creationid="Ragnar-F" creationdate="20260921T144157Z">
+        <seg>Liefert das Handle der von SetFont gesetzten Schriftart.</seg>
       </tuv>
     </tu>
     <tu>
@@ -119331,16 +119331,16 @@
       <tuv lang="en">
         <seg>Gets or sets the title match mode.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260310T085834Z" creationid="Ragnar-F" creationdate="20260310T085748Z">
-        <seg>Liefert oder setzt den Modus der Titelübereinstimmung.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T184006Z" creationid="Ragnar-F" creationdate="20260310T085748Z">
+        <seg>Liefert oder setzt den Titelvergleichsmodus.</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>Gets or sets the title match speed.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260310T085821Z" creationid="Ragnar-F" creationdate="20260310T085821Z">
-        <seg>Liefert oder setzt die Geschwindigkeit der Titelübereinstimmung.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T184018Z" creationid="Ragnar-F" creationdate="20260310T085821Z">
+        <seg>Liefert oder setzt die Titelvergleichsgeschwindigkeit.</seg>
       </tuv>
     </tu>
     <tu>
@@ -127492,8 +127492,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>If &lt;s0&gt;false&lt;/s0&gt;, the method will return immediately, allowing the script to continue execution while the menu is being displayed.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T063156Z" creationid="Ragnar-F" creationdate="20260916T063156Z">
-        <seg>Wenn &lt;s0&gt;false&lt;/s0&gt;, kehrt die Methode sofort zurück, damit das Skript während der Anzeige des Menüs weiter ausgeführt werden kann.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260922T071117Z" creationid="Ragnar-F" creationdate="20260916T063156Z">
+        <seg>Wenn &lt;s0&gt;false&lt;/s0&gt;, erfolgt die Rückgabe der Methode sofort, damit das Skript während der Anzeige des Menüs weiter ausgeführt werden kann.</seg>
       </tuv>
     </tu>
     <tu>
@@ -127620,8 +127620,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>If &lt;s0&gt;true&lt;/s0&gt;, the method will not return until after the menu is closed.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T063103Z" creationid="Ragnar-F" creationdate="20260916T063103Z">
-        <seg>Wenn &lt;s0&gt;true&lt;/s0&gt;, kehrt die Methode erst zurück, wenn das Menü geschlossen wird.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260922T070721Z" creationid="Ragnar-F" creationdate="20260916T063103Z">
+        <seg>Wenn &lt;s0&gt;true&lt;/s0&gt;, erfolgt die Rückgabe der Methode erst, wenn das Menü geschlossen wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -186262,8 +186262,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>See &lt;a3&gt;Structures&lt;/a3&gt; for general information and &lt;a4&gt;Using DefineProp&lt;/a4&gt; for an example.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260916T082759Z" creationid="Ragnar-F" creationdate="20260916T082759Z">
-        <seg>Allgemeine Informationen finden Sie unter &lt;a3&gt;Strukturen&lt;/a3&gt;, und ein Beispiel unter &lt;a4&gt;DefineProp verwenden&lt;/a4&gt;.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260922T071129Z" creationid="Ragnar-F" creationdate="20260916T082759Z">
+        <seg>Allgemeine Informationen finden Sie unter &lt;a3&gt;Strukturen&lt;/a3&gt;, und ein Beispiel unter &lt;a4&gt;Verwendung von DefineProp&lt;/a4&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -198238,8 +198238,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>Suppress the default error dialog and any remaining error callbacks.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20231029T131758Z" creationid="Ragnar-F" creationdate="20200606T180654Z">
-        <seg>Das reguläre Fehlerdialogfenster und alle verbleibenden Rückruffunktionen unterdrücken.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T204603Z" creationid="Ragnar-F" creationdate="20200606T180654Z">
+        <seg>Das Standardfehlerdialogfenster und alle verbleibenden Rückruffunktionen unterdrücken.</seg>
       </tuv>
     </tu>
     <tu>
@@ -214959,8 +214959,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>The standard error dialog displays a line with "Specifically:" followed by this string.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20251125T185612Z" creationid="Ragnar-F" creationdate="20251125T185612Z">
-        <seg>Das reguläre Fehlerdialogfenster zeigt eine Zeile mit "Specifically:" gefolgt von dieser Zeichenkette an.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T204535Z" creationid="Ragnar-F" creationdate="20251125T185612Z">
+        <seg>Das Standardfehlerdialogfenster zeigt eine Zeile mit "Specifically:" gefolgt von dieser Zeichenkette an.</seg>
       </tuv>
     </tu>
     <tu>
@@ -236943,8 +236943,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>Use &lt;c2&gt;-DPIResize&lt;/c2&gt; or &lt;c3&gt;+DPIResize&lt;/c3&gt; to set the default for all subsequently added controls, as an alternative to using it in each control's options.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T145249Z" creationid="Ragnar-F" creationdate="20260915T145249Z">
-        <seg>Mit &lt;c2&gt;-DPIResize&lt;/c2&gt; oder &lt;c3&gt;+DPIResize&lt;/c3&gt; können Sie die Standardeinstellung für alle danach hinzugefügten Steuerelemente festlegen – als Alternative zu der Möglichkeit, diese Option pro Steuerelement zu setzen.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260922T070336Z" creationid="Ragnar-F" creationdate="20260915T145249Z">
+        <seg>Mit &lt;c2&gt;-DPIResize&lt;/c2&gt; oder &lt;c3&gt;+DPIResize&lt;/c3&gt; können Sie die Standardeinstellung für alle danach hinzugefügten Steuerelemente festlegen – als Alternative zur Möglichkeit, diese Option pro Steuerelement zu setzen.</seg>
       </tuv>
     </tu>
     <tu>
