@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>StatusBarWait - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die StatusBarWait-Funktion wartet, bis die Statusleiste eines Fensters eine bestimmte Zeichenkette enthält." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>StatusBarWait</h1>
+
+<p>Wartet, bis die Statusleiste eines Fensters eine bestimmte Zeichenkette enthält.</p>
+
+<pre class="Syntax">Boolesch := <span class="func">StatusBarWait</span>(<span class="optional">LeisteText, Zeitlimit, SegmentNummer, FensterTitel, FensterText, Intervall, AusnahmeTitel, AusnahmeText</span>)</pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>LeisteText</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn leer oder weggelassen, wartet die Funktion, bis die Statusleiste leer ist. Andernfalls geben Sie den Text oder einen Teil des Textes an, auf dessen Erscheinen die Funktion warten soll. Der Text ist Groß-/Kleinschreibung-sensitiv. Das Übereinstimmungsverhalten wird durch <a href="SetTitleMatchMode.htm">SetTitleMatchMode</a> bestimmt, ähnlich wie bei <em>FensterTitel</em> unten.</p>
+    <p>Um stattdessen auf eine <em>Änderung</em> des Leistentextes zu warten, führen Sie <a href="StatusBarGetText.htm">StatusBarGetText</a> wiederholt mit einer Schleife aus oder verwenden Sie das RegEx-Beispiel am Ende dieser Seite.</p>
+  </dd>
+  
+  <dt>Zeitlimit</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#numbers">Float</a></p>
+    <p>Wenn weggelassen, wird die Funktion unendlich lang warten. Andernfalls geben Sie die maximale Wartezeit in Sekunden an. Um auf einen Bruchteil einer Sekunde zu warten, geben Sie eine Floating-Point-Zahl an, z.B. 0.25, um maximal 250 Millisekunden zu warten.</p>
+  </dd>
+  
+  <dt>SegmentNummer</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn weggelassen, wird standardmäßig 1 verwendet, was üblicherweise das Segment ist, das den Text von Interesse enthält. Andernfalls geben Sie die Nummer des Leistensegments an, dessen Text abgerufen werden soll.</p>
+  </dd>
+
+  <dt>FensterTitel, FensterText, AusnahmeTitel, AusnahmeText</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a>, <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#objects">Objekt</a></p>
+    <p>Wenn jeder dieser Parameter leer ist oder weggelassen wird, wird das <a href="../misc/WinTitle.htm#LastFoundWindow">Zuletzt Gefundene Fenster</a> verwendet. Andernfalls geben Sie für <em>FensterTitel</em> einen <a href="../misc/WinTitle.htm">Fenstertitel oder andere Kriterien</a> zur Identifizierung des Zielfensters und/oder für <em>FensterText</em> eine Teilzeichenkette aus einem Textelement des Zielfensters an (wie von <a href="../Program.htm#Window_Spy">Window Spy</a> angezeigt).</p>
+    <p><em>AusnahmeTitel</em> und <em>AusnahmeText</em> können verwendet werden, um ein oder mehrere Fenster anhand ihres Titels oder Textes auszuschließen. Ihre Angabe ähnelt der von <em>FensterTitel</em> und <em>FensterText</em>, außer dass <em>AusnahmeTitel</em> keine anderen Kriterien als den Fenstertitel erkennt.</p>
+    <p>Fenstertitel und -texte sind Groß-/Kleinschreibung-sensitiv. Standardmäßig werden versteckte Fenster nicht erkannt und versteckte Textelemente erkannt, was mit <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a> bzw. <a href="DetectHiddenText.htm">DetectHiddenText</a> geändert werden kann. Verwendet man <a href="../misc/WinTitle.htm#ahk_id">reine HWNDs</a>, werden versteckte Fenster immer erkannt. Standardmäßig kann ein Fenstertitel den angegebenen <em>FensterTitel</em> oder <em>AusnahmeTitel</em> an beliebiger Stelle enthalten, um eine Übereinstimmung zu sein, was mit <a href="SetTitleMatchMode.htm">SetTitleMatchMode</a> geändert werden kann.</p>
+  </dd>
+
+  <dt>Intervall</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn weggelassen, wird standardmäßig 50 verwendet. Andernfalls geben Sie an, wie oft die Statusleiste geprüft werden soll, während die Funktion wartet (in Millisekunden).</p>
+  </dd>
+
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#boolean">Integer (boolesch)</a></p>
+<p>Diese Funktion gibt 1 (true) zurück, wenn eine Übereinstimmung gefunden wurde, oder 0 (false), wenn die Funktion das Zeitlimit überschritten hat.</p>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Es wird ein <a href="Error.htm#TargetError">TargetError</a> ausgelöst, wenn das Zielfenster nicht gefunden werden konnte oder keine reguläre Statusleiste enthält.</p>
+<p>Es wird ein <a href="Error.htm#OSError">OSError</a> ausgelöst, wenn es ein Problem beim Senden der SB_GETPARTS-Meldung gab oder keine Antwort innerhalb von 2000&nbsp;ms erfolgte, oder wenn kein Speicher innerhalb des Prozesses, dem die Statusleiste gehört, reserviert werden konnte.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Diese Funktion versucht, die erste <em>reguläre</em> Statusleiste eines Fensters zu lesen (allgemeines Microsoft-Steuerelement: msctls_statusbar32). Einige Programme verwenden eigene Statusleisten oder spezielle Versionen des MS-Steuerelements – in diesem Fall werden solche Leisten nicht unterstützt.</p>
+<p>Anstatt <a href="StatusBarGetText.htm">StatusBarGetText</a> wiederholt mit einer Schleife auszuführen, ist es in der Regel effizienter, StatusBarWait zu verwenden, da es Optimierungen enthält, die den Overhead durch mehrfache Aufrufe von <a href="StatusBarGetText.htm">StatusBarGetText</a> vermeiden.</p>
+<p>StatusBarWait ermittelt das Zielfenster, bevor es damit beginnt, auf eine Übereinstimmung zu warten. Wenn dieses Zielfenster geschlossen wird, hört die Funktion auf zu warten, auch dann, wenn ein anderes Fenster mit demselben <em>FensterTitel</em> und <em>FensterText</em> existiert.</p>
+<p>Während die Funktion wartet, können neue <a href="../misc/Threads.htm">Threads</a> via <a href="../Hotkeys.htm">Hotkeys</a>, <a href="Menu.htm">benutzerdefinierte Menüpunkte</a> oder <a href="SetTimer.htm">Timer</a> gestartet werden.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="StatusBarGetText.htm">StatusBarGetText</a>, <a href="WinGetTitle.htm">WinGetTitle</a>, <a href="WinGetText.htm">WinGetText</a>, <a href="ControlGetText.htm">ControlGetText</a></p>
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExSearch">
+<p><a class="ex_number" href="#ExSearch"></a> Schreibt ein neues Suchmuster in ein existierendes Explorer-/Suchfenster.</p>
+<pre>if WinExist("Suchergebnisse") <em>; Setzt das zuletzt gefundene Fenster, um das folgende zu vereinfachen.</em>
+{
+    WinActivate
+    Send "{tab 2}!o*.txt{enter}"  <em>; Das Suchmuster in das Suchfenster schreiben.</em>
+    Sleep 400  <em>; Der Statusleiste Zeit geben, auf "wird durchsucht" zu wechseln.</em>
+    if StatusBarWait("gefunden", 30)
+        MsgBox "Die Suche war erfolgreich."
+    else
+        MsgBox "Die Funktion hat das Zeitlimit überschritten."
+}</pre>
+</div>
+
+<div class="ex" id="ExChange">
+<p><a class="ex_number" href="#ExChange"></a> Wartet auf eine Änderung der Statusleiste im aktiven Fenster.</p>
+<pre>SetTitleMatchMode "RegEx"  <em>; Akzeptiert <a href="SetTitleMatchMode.htm#RegEx">Reguläre Ausdrücke</a> für den nachfolgenden Gebrauch.</em>
+if WinExist("A")  <em>; Macht das aktive Fenster zum zuletzt gefundenen Fenster.</em>
+{
+    Originaltext := StatusBarGetText()
+    StatusBarWait "^(?!\Q" Originaltext "\E$)"  <em>; Dieser reguläre Ausdruck wartet auf eine Änderung des Textes.</em>
+}</pre>
+</div>
+
+</body>
+</html>

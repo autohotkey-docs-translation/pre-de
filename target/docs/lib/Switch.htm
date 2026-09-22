@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Switch - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die Switch-Anweisung vergleicht einen Wert mit mehreren Cases und führt die Anweisungen der ersten Übereinstimmung aus." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>Switch</h1>
+
+<p>Vergleicht einen Wert mit mehreren Cases und führt die <a href="../Concepts.htm#statement">Anweisungen</a> der ersten Übereinstimmung aus.</p>
+
+<pre class="Syntax"><span class="func">Switch</span> <span class="optional">SwitchWert, GroßKleinSensitiv</span>
+{
+<span class="func">Case</span> CaseWert1:
+    <i>Anweisungen1</i>
+<span class="func">Case</span> CaseWert2a, CaseWert2b:
+    <i>Anweisungen2</i>
+<span class="func">Default</span>:
+    <i>Anweisungen3</i>
+}</pre>
+
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>SwitchWert</dt>
+  <dd>
+    <p>Wenn dieser und der <em>GroßKleinSensitiv</em>-Parameter weggelassen werden, wird das erste Case ausgeführt, dessen Auswertung <a href="../Concepts.htm#boolean">True</a> (weder 0 noch leer) ergibt. Andernfalls wird <em>SwitchWert</em> einmal ausgewertet und mit jedem Case-Wert verglichen. Bei Übereinstimmung wird das entsprechende Case ausgeführt.</p>
+    <p>Wenn kein Case übereinstimmt, wird <em>Default</em> ausgeführt, falls vorhanden.</p>
+  </dd>
+
+  <dt>GroßKleinSensitiv</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a> oder <a href="../Concepts.htm#boolean">Integer (boolesch)</a></p>
+    <p>Wenn weggelassen, wird standardmäßig <em>On</em> verwendet. Andernfalls geben Sie einen der folgenden Werte an, wodurch alle Werte als Zeichenketten verglichen werden:</p>
+    <p><strong>On</strong> oder <strong>1</strong> (true): Jeder Vergleich erfolgt Groß-/Kleinschreibung-sensitiv.</p>
+    <p><strong>Off</strong> oder <strong>0</strong> (false): Jeder Vergleich erfolgt nicht Groß-/Kleinschreibung-sensitiv, d.h. die Großbuchstaben A bis Z und die entsprechenden Kleinbuchstaben werden als identisch betrachtet.</p>
+    <p id="Locale"><strong>Locale:</strong> Jeder Vergleich erfolgt nicht Groß-/Kleinschreibung-sensitiv, gemäß den Regeln der aktuellen Sprach- und Regionseinstellungen des Benutzers. Zum Beispiel behandeln die meisten englischen und westeuropäischen Sprach- und Regionseinstellungen die Großbuchstaben A bis Z, einschließlich ASCII-fremde Großbuchstaben wie Ä und Ü, und die entsprechenden Kleinbuchstaben als identisch. <em>Locale</em> ist 1- bis 8-mal langsamer als <em>Off</em>, abhängig von den zu vergleichenden Zeichenketten.</p>
+  </dd>
+  <dt>CaseWertN</dt>
+  <dd>
+    <p>Der zu prüfende oder zu vergleichende Wert, je nachdem, ob <em>SwitchWert</em> vorhanden ist.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Wie bei den Operatoren <code>=</code> und <code>==</code> wird, sofern <em>GroßKleinSensitiv</em> weggelassen wird, ein numerischer Vergleich durchgeführt, wenn sowohl <em>SwitchWert</em> als auch der Case-Wert reine Zahlen sind, oder wenn einer der Werte eine reine Zahl und der andere eine numerische Zeichenkette ist. Jeder Case-Wert wird separat behandelt und beeinflusst nicht den Vergleichstyp anderer Case-Werte.</p>
+<p>Wenn der <em>GroßKleinSensitiv</em>-Parameter vorhanden ist, werden alle Werte als Zeichenketten verglichen, nicht als Zahlen, und es wird ein <a href="Error.htm#TypeError">TypeError</a> ausgelöst, wenn die Auswertung von <em>SwitchWert</em> oder <em>CaseWert</em> ein Objekt ergibt.</p>
+<p>Wenn der <em>GroßKleinSensitiv</em>-Parameter weggelassen wird, sind Zeichenkettenvergleiche standardmäßig Groß-/Kleinschreibung-sensitiv.</p>
+<p>Für jedes Case können bis zu 20 Werte angegeben werden. Jeder Wert muss ein <a href="../Language.htm#expressions">Ausdruck</a> sein, aber es kann auch ein einfacher Ausdruck angegeben werden, z.B. eine direkt geschriebene Zahl, eine in Anführungszeichen gesetzte Zeichenkette oder eine Variable. <em>Case</em> und <em>Default</em> müssen mit einem Doppelpunkt enden.</p>
+<p>Die erste Anweisung eines Case kann entweder unter oder neben dem <em>Case</em> stehen. Jedes Case endet indirekt beim nächsten <em>Case</em>/<em>Default</em> oder bei der geschweiften Endklammer. Im Gegensatz zu den Switch-Anweisungen in einigen anderen Sprachen gibt es kein indirektes Fall-Through, außerdem wird kein <a href="Break.htm">Break</a> verwendet (außer um eine umschließende Schleife zu unterbrechen).</p>
+<p>Da sich alle Cases im selben Block befinden, kann ein Label, das in einem Case definiert ist, das Ziel von <a href="Goto.htm">Goto</a> in einem anderen Case sein. Wenn allerdings ein Label direkt über <em>Case</em> oder <em>Default</em> platziert wird, verweist es auf das Ende des vorherigen Case, nicht auf den Anfang des nächsten Case.</p>
+<p><em>Default</em> muss nicht als letztes aufgelistet werden.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="If.htm">If</a>, <a href="Else.htm">Else</a>, <a href="Block.htm">Blöcke</a></p>
+
+<h2 id="examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Vergleicht eine Zahl mit mehreren Cases und zeigt das Mitteilungsfenster der ersten Übereinstimmung an.</p>
+<pre>switch 2
+{
+case 1: MsgBox "keine Übereinstimmung"
+case 2: MsgBox "Übereinstimmung"
+case 3: MsgBox "keine Übereinstimmung"
+}</pre>
+</div>
+
+<div class="ex" id="ExBasicOmitted">
+<p><a class="ex_number" href="#ExBasicOmitted"></a> Der <em>SwitchWert</em>-Parameter kann weggelassen werden, um das erste Case auszuführen, dessen Auswertung True ergibt.</p>
+<pre>Zkette := "Franz jagt im komplett verwahrlosten Taxi quer durch Bayern."
+switch
+{
+case InStr(Zkette, "Bus"): MsgBox "false"
+case InStr(Zkette, "Taxi"): MsgBox "true"
+case InStr(Zkette, "Bahn"): MsgBox "false"
+}</pre>
+</div>
+
+<div class="ex" id="ExInput">
+<p><a class="ex_number" href="#ExInput"></a> Um dieses Beispiel zu testen, geben Sie <kbd>&lt;</kbd> gefolgt von einer der unten aufgelisteten Abkürzungen, weitere 5 Zeichen oder Enter/Esc/Tab/<kbd>.</kbd> ein; oder warten Sie 4 Sekunden.</p>
+<pre>~&lt;::
+{
+    ih := InputHook("V T5 L4 C", "{enter}.{esc}{tab}", "btw,otoh,fl,ahk,ca")
+    ih.Start()
+    ih.Wait()
+    switch ih.EndReason
+    {
+    case "Max":
+        MsgBox 'Ihre Eingabe "' ih.Input '" hat die maximale Textlänge erreicht'
+    case "Timeout":
+        MsgBox 'Sie haben "' ih.Input '" innerhalb der verfügbaren Zeit eingegeben'
+    case "EndKey":
+        MsgBox 'Sie haben "' ih.Input '" eingegeben und die Eingabe mit ' ih.EndKey ' beendet'
+    default:  <em>; Übereinstimmung</em>
+        switch ih.Input
+        {
+        case "btw":   Send "{backspace 3}by the way"
+        case "otoh":  Send "{backspace 4}on the other hand"
+        case "fl":    Send "{backspace 2}Florida"
+        case "ca":    Send "{backspace 2}California"
+        case "ahk":
+            Send "{backspace 3}"
+            Run "https://www.autohotkey.com"
+        }
+    }
+}</pre>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>ComObjType - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die ComObjType-Funktion ruft Typinformationen eines COM-Objekts ab." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>ComObjType</h1>
+
+<p>Ruft Typinformationen eines COM-Objekts ab.</p>
+
+<pre class="Syntax">Info := <span class="func">ComObjType</span>(ComObj <span class="optional">, InfoTyp</span>)</pre>
+
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>ComObj</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#objects">Objekt</a></p>
+    <p>Ein Wrapper-Objekt, das ein COM-Objekt oder einen typisierten Wert enthält. Weitere Informationen finden Sie unter <a href="ComValue.htm">ComValue</a>.</p>
+  </dd>
+
+  <dt>InfoTyp</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn weggelassen, wird ein ganzzahliger <a href="#vt">Variantentypcode</a> abgerufen, der den Typ des im COM-Wrapper-Objekt enthaltenen Wertes wiedergibt. Andernfalls geben Sie eine der folgenden Zeichenketten an, die die abzurufenden Typinformation wiedergibt:</p>
+    <p><strong>Name:</strong> Der Name des Standard-Interface des Objekts.</p>
+    <p><strong>IID:</strong> Der globale eindeutige Identifikator (GUID) des Standard-Interface des Objekts.</p>
+    <p><strong>Class:</strong> Der Klassenname des Objekts. Beachten Sie, dass dies nicht dasselbe ist wie eine Prog-ID (eine Prog-ID ist ein Name, der zur Identifizierung der Klasse in der System-Registry oder für <a href="ComObject.htm">ComObject</a> verwendet wird).</p>
+    <p><strong>CLSID:</strong> Der globale eindeutige Identifikator (GUID) der Klasse des Objekts. Klassen sind oft via CLSID im <code class="no-highlight">HKCR\CLSID</code>-Registry-Schlüssel registriert.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+<p>Der Rückgabewert ist vom <em>InfoTyp</em>-Wert abhängig. Es wird eine leere Zeichenkette zurückgegeben, wenn der Parameter ungültig ist oder wenn die angeforderten Typinformationen nicht abgerufen werden konnten.</p>
+
+<h2 id="vt">Variantentyp-Konstanten</h2>
+<p>COM verwendet die folgenden Werte, um grundlegende Datentypen zu identifizieren:</p>
+<pre>
+VT_EMPTY     :=      0  <em>; Kein Wert</em>
+VT_NULL      :=      1  <em>; SQL-artige Null</em>
+VT_I2        :=      2  <em>; vorzeichenfähiger 16-Bit-Integer</em>
+VT_I4        :=      3  <em>; vorzeichenfähiger 32-Bit-Integer</em>
+VT_R4        :=      4  <em>; 32-Bit-Floating-Point-Zahl</em>
+VT_R8        :=      5  <em>; 64-Bit-Floating-Point-Zahl</em>
+VT_CY        :=      6  <em>; Währung</em>
+VT_DATE      :=      7  <em>; Datum</em>
+VT_BSTR      :=      8  <em>; COM-Zeichenkette (Unicode mit Längenpräfix)</em>
+VT_DISPATCH  :=      9  <em>; COM-Objekt</em>
+VT_ERROR     :=    0xA  <em>; Fehlercode (32-Bit-Integer)</em>
+VT_BOOL      :=    0xB  <em>; Boolesches True (-1) oder False (0)</em>
+VT_VARIANT   :=    0xC  <em>; <a href="https://learn.microsoft.com/windows/win32/api/oaidl/ns-oaidl-variant">VARIANT</a> (in Kombination mit VT_ARRAY oder VT_BYREF)</em>
+VT_UNKNOWN   :=    0xD  <em>; IUnknown-Interface-Pointer</em>
+VT_DECIMAL   :=    0xE  <em>; (nicht unterstützt)</em>
+VT_I1        :=   0x10  <em>; vorzeichenfähiger 8-Bit-Integer</em>
+VT_UI1       :=   0x11  <em>; vorzeichenloser 8-Bit-Integer</em>
+VT_UI2       :=   0x12  <em>; vorzeichenloser 16-Bit-Integer</em>
+VT_UI4       :=   0x13  <em>; vorzeichenloser 32-Bit-Integer</em>
+VT_I8        :=   0x14  <em>; vorzeichenfähiger 64-Bit-Integer</em>
+VT_UI8       :=   0x15  <em>; vorzeichenloser 64-Bit-Integer</em>
+VT_INT       :=   0x16  <em>; vorzeichenfähiger Maschinen-Integer</em>
+VT_UINT      :=   0x17  <em>; vorzeichenloser Maschinen-Integer</em>
+VT_RECORD    :=   0x24  <em>; Benutzerdefinierter Typ -- NICHT UNTERSTÜTZT</em>
+VT_ARRAY     := 0x2000  <em>; <a href="https://learn.microsoft.com/windows/win32/api/oaidl/ns-oaidl-safearray">SAFEARRAY</a></em>
+VT_BYREF     := 0x4000  <em>; Pointer, der auf einen anderen Wertetyp verweist</em>
+<em>/*
+ VT_ARRAY und VT_BYREF müssen mit anderen Werten kombiniert werden (via
+ bitweisem OR), um den exakten Typ anzugeben. Zum Beispiel ist 0x2003 ein
+ <a href="https://learn.microsoft.com/windows/win32/api/oaidl/ns-oaidl-safearray">SAFEARRAY</a> mit vorzeichenfähigen 32-Bit-Integern und 0x400C ein Pointer,
+ der auf ein <a href="https://learn.microsoft.com/windows/win32/api/oaidl/ns-oaidl-variant">VARIANT</a> verweist.
+*/</em>
+</pre>
+
+<h2 id="General_Remarks">Allgemeine Bemerkungen</h2>
+<p>In den meisten Fällen werden Werte, die von einer Methode oder Eigenschaft eines COM-Objekts zurückgegeben werden, in einen für AutoHotkey geeigneten Datentyp umgewandelt. Unbehandelte Typen werden via <a href="https://learn.microsoft.com/windows/win32/api/oleauto/nf-oleauto-variantchangetype">VariantChangeType</a> in Zeichenketten gezwängt; wenn das fehlschlägt oder der Variantentyp das VT_ARRAY- oder VT_BYREF-Flag enthält, wird stattdessen ein Objekt zurückgegeben, das sowohl den Wert als auch dessen Typ enthält.</p>
+<p>Wenn <code>ComObjType(x)</code> einen Integer zurückgibt, enthält <i><i>x</i></i> einen COM-Objekt-Wrapper.</p>
+<p>Wenn <em>InfoTyp</em> <code>"Name"</code> oder <code>"IID"</code> ist, wird die Typinformation über die Interface-Methode <a href="https://learn.microsoft.com/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfo">IDispatch::GetTypeInfo</a> abgerufen. Der Variantentyp von <em>ComObj</em> muss VT_DISPATCH sein.</p>
+<p>Wenn <em>InfoTyp</em> <code>"Class"</code> oder <code>"CLSID"</code> ist, wird die Typinformation über die Interface-Methode <a href="https://learn.microsoft.com/windows/win32/api/ocidl/nf-ocidl-iprovideclassinfo-getclassinfo">IProvideClassInfo::GetClassInfo</a> abgerufen. Der Variantentyp von <em>ComObj</em> muss VT_DISPATCH oder VT_UNKNOWN sein, und das Objekt muss das IProvideClassInfo-Interface implementieren (einige Objekte tun das nicht).</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="ComObjValue.htm">ComObjValue</a>, <a href="ComValue.htm">ComValue</a>, <a href="ComObject.htm">ComObject</a>, <a href="ComObjGet.htm">ComObjGet</a>, <a href="ComObjActive.htm">ComObjActive</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Meldet verschiedene Typinformationen eines COM-Objekts.</p>
+<pre>
+d := ComObject("Scripting.Dictionary")
+MsgBox
+(
+    "Variantentyp:`t" ComObjType(d) "
+    Interfacename:`t" ComObjType(d, "Name") "
+    Interface-ID:`t" ComObjType(d, "IID") "
+    Klassenname:`t" ComObjType(d, "Class") "
+    Klassen-ID (CLSID):`t" ComObjType(d, "CLSID")
+)</pre>
+</div>
+
+</body>
+</html>

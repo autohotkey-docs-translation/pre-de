@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Tastatur- oder Mausmakros erstellen | AutoHotkey v2</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Dieses freie Makroprogramm ermöglicht die Aufzeichnung und Wiedergabe eines Tastatur- oder Mausmakros. Jedes Makro kann optional einem Hotkey zugewiesen werden.">
+<meta name="keywords" content="makro,makros,tastatur macro,maus macro">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+
+<body><script>site.init();</script>
+<h1>Tastatur- oder Mausmakros erstellen</h1>
+
+<p>Ein Makro ist eine Reihe von geskripteten Aktionen, die bei Bedarf "wiedergegeben" werden. Die häufigste Aktion eines Makros ist das Senden von <a href="../lib/Send.htm">simulierten Tastendrücken</a> oder <a href="../lib/Click.htm">Mausklicks</a> an ein oder mehrere Fenster. Solche Fenster reagieren auf Tastendrücke und Mausklicks, als hätte der Benutzer diese physisch gedrückt. Auf diese Weise lassen sich wiederkehrende Aufgaben schnell und zuverlässig automatisieren.</p>
+<p>Eine der bequemsten Arten der Makrowiedergabe ist die Verwendung von <a href="../Hotkeys.htm">Hotkeys</a> oder <a href="../Hotstrings.htm">Hotstrings</a>. Zum Beispiel würde der folgende Hotkey eine leere E-Mail-Nachricht erstellen und für einen bestimmten Empfänger vorbereiten, die Sie vor dem Versenden noch anpassen können:</p>
+<pre>^!s::  <em>; Hotkey STRG+ALT+S.</em>
+{
+    if not WinExist("Posteingang - Microsoft Outlook")
+        return  <em>; Falsches Outlook-Fenster geöffnet, also nichts tun.</em>
+    WinActivate  <em>; Das oben gefundene Fenster aktivieren.</em>
+    Send "^n"  <em>; Eine neue/leere E-Mail mit STRG+N erstellen.</em>
+    WinWaitActive "Unbenannt - Nachricht"
+    Send "{Tab 2}Produktrückruf für ACME Rocket Skates"  <em>; Betreffzeile setzen.</em>
+    Send "{Tab}Sehr geehrte Damen und Herren,{Enter 2}Wir haben soeben einen kleinen Fehler entdeckt ..."  <em>; etc.</em>
+} <em>; Diese Klammer markiert das Ende des Hotkeys.</em></pre>
+<p>Hotkey-Makros wie das obige sind besonders nützlich für Aufgaben, die mehrmals am Tag durchgeführt werden. Makros, die weniger häufig verwendet werden, können dagegen in einem eigenen Skript gespeichert werden, das über eine Verknüpfung im Startmenü oder auf dem Desktop gestartet werden kann.</p>
+<p>Um sofort mit der Erstellung Ihrer eigenen Makros und Hotkeys zu beginnen, siehe <a href="../Tutorial.htm">Schnellstart-Tutorial</a>.</p>
+</body>
+</html>

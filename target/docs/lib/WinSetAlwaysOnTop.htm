@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>WinSetAlwaysOnTop - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die WinSetAlwaysOnTop-Funktion bewirkt, dass ein Fenster immer über allen anderen Fenstern angezeigt wird (außer über anderen Immer-Im-Vordergrund-Fenstern)." />
+<meta name="ahk:equiv-v1" content="lib/WinSet.htm#AlwaysOnTop" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>WinSetAlwaysOnTop</h1>
+
+<p>Bewirkt, dass ein Fenster immer über allen anderen Fenstern angezeigt wird (außer über anderen Immer-Im-Vordergrund-Fenstern).</p>
+
+<pre class="Syntax"><span class="func">WinSetAlwaysOnTop</span> <span class="optional">NeueEinstellung, FensterTitel, FensterText, AusnahmeTitel, AusnahmeText</span></pre>
+
+<h2 id="Parameters">Parameter</h2>
+<dl>
+    <dt>NeueEinstellung</dt>
+    <dd>
+        <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+        <p>Wenn weggelassen, wird standardmäßig 1 verwendet. Andernfalls geben Sie einen der folgenden Werte an:</p>
+        <ul>
+            <li><code>1</code> oder <code>True</code> schaltet die Einstellung ein</li>
+            <li><code>0</code> oder <code>False</code> schaltet die Einstellung aus</li>
+            <li><code>-1</code> schaltet die Einstellung um (setzt sie auf den entgegengesetzten Zustand)</li>
+        </ul>
+    </dd>
+    <dt>FensterTitel, FensterText, AusnahmeTitel, AusnahmeText</dt>
+    <dd>
+        <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a>, <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#objects">Objekt</a></p>
+        <p>Wenn jeder dieser Parameter leer ist oder weggelassen wird, wird das <a href="../misc/WinTitle.htm#LastFoundWindow">Zuletzt Gefundene Fenster</a> verwendet. Andernfalls geben Sie für <em>FensterTitel</em> einen <a href="../misc/WinTitle.htm">Fenstertitel oder andere Kriterien</a> zur Identifizierung des Zielfensters und/oder für <em>FensterText</em> eine Teilzeichenkette aus einem Textelement des Zielfensters an (wie von <a href="../Program.htm#Window_Spy">Window Spy</a> angezeigt).</p>
+        <p><em>AusnahmeTitel</em> und <em>AusnahmeText</em> können verwendet werden, um ein oder mehrere Fenster anhand ihres Titels oder Textes auszuschließen. Ihre Angabe ähnelt der von <em>FensterTitel</em> und <em>FensterText</em>, außer dass <em>AusnahmeTitel</em> keine anderen Kriterien als den Fenstertitel erkennt.</p>
+        <p>Fenstertitel und -texte sind Groß-/Kleinschreibung-sensitiv. Standardmäßig werden versteckte Fenster nicht erkannt und versteckte Textelemente erkannt, was mit <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a> bzw. <a href="DetectHiddenText.htm">DetectHiddenText</a> geändert werden kann. Verwendet man <a href="../misc/WinTitle.htm#ahk_id">reine HWNDs</a>, werden versteckte Fenster immer erkannt. Standardmäßig kann ein Fenstertitel den angegebenen <em>FensterTitel</em> oder <em>AusnahmeTitel</em> an beliebiger Stelle enthalten, um eine Übereinstimmung zu sein, was mit <a href="SetTitleMatchMode.htm">SetTitleMatchMode</a> geändert werden kann.</p>
+    </dd>
+</dl>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Es wird ein <a href="Error.htm#TargetError">TargetError</a> ausgelöst, wenn das Fenster nicht gefunden werden konnte.</p>
+<p>Bei Misserfolg kann ein <a href="Error.htm#OSError">OSError</a> ausgelöst werden.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="WinGetAlwaysOnTop.htm">WinGetAlwaysOnTop</a>, <a href="WinMoveTop.htm">WinMoveTop</a>, <a href="WinMoveBottom.htm">WinMoveBottom</a>, <a href="Win.htm">Win-Funktionen</a>, <a href="Control.htm">Control-Funktionen</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Schaltet den Immer-Im-Vordergrund-Zustand des Taschenrechners um.</p>
+<pre>WinSetAlwaysOnTop -1, "Rechner"</pre>
+</div>
+
+</body>
+</html>

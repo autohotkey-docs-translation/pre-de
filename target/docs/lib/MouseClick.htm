@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>MouseClick - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die MouseClick-Funktion klickt eine Maustaste, hält sie gedrückt oder dreht das Mausrad." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>MouseClick</h1>
+
+<p>Klickt eine Maustaste, hält sie gedrückt oder dreht das Mausrad. Hinweis: Die <a href="Click.htm">Click</a>-Funktion ist in der Regel flexibler und einfacher zu verwenden.</p>
+
+<pre class="Syntax"><span class="func">MouseClick</span> <span class="optional">WelcheTaste, X, Y, KlicksAnzahl, Geschw, DownOderUp, Relativ</span></pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>WelcheTaste</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn leer oder weggelassen, wird standardmäßig Left verwendet (die linke Maustaste). Andernfalls geben Sie die zu klickende Taste oder die Dreh-/Kipprichtung des Mausrads an.</p>
+    <p><strong>Taste:</strong> Left, Right, Middle (oder jeweils nur der erste Buchstabe) oder X1 (vierte Maustaste) oder X2 (fünfte Maustaste). Zum Beispiel: <code>MouseClick "X1"</code>.</p>
+    <p>Left ist die primäre Maustaste und Right ist die sekundäre Maustaste. Wenn der Benutzer die Maustasten via Systemsteuerung vertauscht hat, sind die physischen Positionen der Maustasten vertauscht, aber der Effekt bleibt derselbe.</p>
+    <p><strong>Mausrad:</strong> Geben Sie WheelUp oder WU an, um das Mausrad nach oben zu drehen (von Ihnen weg); geben Sie WheelDown oder WD an, um es nach unten zu drehen (zu Ihnen hin). Geben Sie WheelLeft (oder WL) oder WheelRight (oder WR) an, um das Mausrad nach links bzw. rechts zu kippen. <em>KlicksAnzahl</em> ist die Anzahl der Schritte, um die das Mausrad gedreht werden soll.</p>
+  </dd>
+
+  <dt>X, Y</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn weggelassen, wird die aktuelle Position des Mauszeigers verwendet. Andernfalls geben Sie die X- und Y-Koordinate der Position an, auf die der Mauszeiger vor dem Klicken bewegt werden soll. Standardmäßig sind Koordinaten relativ zum Clientbereich des aktiven Fensters, was aber mit <a href="CoordMode.htm">CoordMode</a> geändert werden kann.</p>
+  </dd>
+
+  <dt>KlicksAnzahl</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn weggelassen, wird standardmäßig 1 verwendet. Andernfalls geben Sie an, wie oft die Maustaste geklickt oder das Mausrad gedreht werden soll.</p>
+  </dd>
+
+  <dt>Geschw</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn weggelassen, wird die Standardgeschwindigkeit verwendet (definiert durch <a href="SetDefaultMouseSpeed.htm">SetDefaultMouseSpeed</a> oder standardmäßig 2). Andernfalls geben Sie an, wie schnell der Mauszeiger bewegt werden soll, von 0 (schnell) bis 100 (langsam). Eine Geschwindigkeit von 0 bewegt den Mauszeiger sofort auf die neue Position.</p>
+    <p><em>Geschw</em> wird bei den Modi <a href="SendMode.htm#Input">SendInput</a> und <a href="SendMode.htm#Play">SendPlay</a> ignoriert; sie positionieren den Mauszeiger sofort auf die neuen Koordinaten (allerdings hat <a href="SetMouseDelay.htm">SetMouseDelay</a> einen Modus, der für SendPlay verwendet werden kann). Um den Mauszeiger visuell langsamer zu bewegen (z.B. um einem Publikum etwas vorzuführen), verwenden Sie <code><a href="Send.htm#Click">SendEvent "{Click 100 200}"</a></code> oder <code><a href="SendMode.htm">SendMode</a> "Event"</code> (optional in Verbindung mit <a href="BlockInput.htm">BlockInput</a>).</p>
+  </dd>
+
+  <dt>DownOderUp</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn leer oder weggelassen, besteht jeder Klick aus einem Down- und Up-Ereignis. Andernfalls geben Sie einen der folgenden Buchstaben an:</p>
+    <p><strong>D:</strong> Drückt die Maustaste nach unten, ohne sie wieder loszulassen (also ein Down-Ereignis).</p>
+    <p><strong>U:</strong> Lässt die Maustaste los (also ein Up-Ereignis).</p>
+  </dd>
+
+  <dt>Relativ</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn leer oder weggelassen, werden die X- und Y-Koordinate für die absolute Positionierung verwendet. Andernfalls geben Sie den folgenden Buchstaben an:</p>
+    <p><strong>R:</strong> Die X- und Y-Koordinate werden als Offsets von der aktuellen Mausposition behandelt. Mit anderen Worten, der Mauszeiger wird von seiner aktuellen Position aus um X Pixel nach rechts (nach links, wenn negativ) und um Y Pixel nach unten (nach oben, wenn negativ) bewegt.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Diese Funktion verwendet den via <a href="SendMode.htm">SendMode</a> gesetzten Send-Modus.</p>
+<p>Es wird empfohlen, die <a href="Click.htm">Click</a>-Funktion anstelle von MouseClick zu verwenden, da sie in der Regel flexibler und einfacher in der Handhabung ist. Allerdings unterstützt MouseClick den <em>Geschw</em>-Parameter, während für Click die <a href="SetDefaultMouseSpeed.htm">SetDefaultMouseSpeed</a>-Funktion verwendet werden muss, um die Geschwindigkeit des Mauszeigers zu ändern.</p>
+<p>Um einen UMSCHALT- oder STRG-modifizierten Klick zu erzeugen, verwenden Sie wie folgt die <a href="Send.htm">Send</a>-Funktion vor und nach der Operation:</p>
+<pre><em>; Beispiel #1: </em>
+Send "{Control down}"
+MouseClick "left", 55, 233
+Send "{Control up}"</pre>
+<pre>
+<em>; Beispiel #2:</em>
+Send "{Shift down}"
+MouseClick "left", 55, 233
+Send "{Shift up}"</pre>
+<p>Der <a href="SendMode.htm#Play">SendPlay-Modus</a> ist im Gegensatz zu den anderen Modi erfolgreicher darin, Mausereignisse in Videospielen zu erzeugen. Außerdem können einige Anwendungen und Videospiele Schwierigkeiten haben, dem Mauszeiger zu folgen, wenn er zu schnell bewegt wird. Mit dem <em>Geschw</em>-Parameter oder <a href="SetDefaultMouseSpeed.htm">SetDefaultMouseSpeed</a> kann die Geschwindigkeit reduziert werden (nur im <a href="SendMode.htm#Event">SendEvent-Modus</a>).</p>
+<p>Einige Anwendungen ignorieren eine <em>KlicksAnzahl</em> höher als 1 beim Drehen des Mausrads. Verwenden Sie stattdessen eine <a href="Loop.htm">Schleife</a> wie folgt:</p>
+<pre>Loop 5
+    MouseClick "WheelUp"</pre>
+<p>Die <a href="BlockInput.htm">BlockInput</a>-Funktion kann verwendet werden, um zu verhindern, dass physische Mausaktivitäten des Benutzers die künstlich erzeugten Mausereignisse stören. Allerdings ist das bei den Modi <a href="SendMode.htm#Input">SendInput</a> und <a href="SendMode.htm#Play">SendPlay</a> nicht notwendig, weil sie die physischen Mausaktivitäten des Benutzers automatisch hinauszögern.</p>
+<p>Nach jedem DOWN- und UP-Ereignis eines Mausklicks erfolgt automatisch eine Verzögerung (außer im <a href="SendMode.htm#Input">SendInput-Modus</a> und beim Drehen des Mausrads). Mit <a href="SetMouseDelay.htm">SetMouseDelay</a> kann die Verzögerungsdauer geändert werden.</p>
+<h2 id="Related">Siehe auch</h2>
+<p><a href="CoordMode.htm">CoordMode</a>, <a href="SendMode.htm">SendMode</a>, <a href="SetDefaultMouseSpeed.htm">SetDefaultMouseSpeed</a>, <a href="SetMouseDelay.htm">SetMouseDelay</a>, <a href="Click.htm">Click</a>, <a href="MouseClickDrag.htm">MouseClickDrag</a>, <a href="MouseGetPos.htm">MouseGetPos</a>, <a href="MouseMove.htm">MouseMove</a>, <a href="ControlClick.htm">ControlClick</a>, <a href="BlockInput.htm">BlockInput</a></p>
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExDoubleClick">
+<p><a class="ex_number" href="#ExDoubleClick"></a> Führt einen Doppelklick auf der aktuellen Mausposition aus.</p>
+<pre>MouseClick "left"
+MouseClick "left"</pre>
+</div>
+
+<div class="ex" id="ExDoubleClick2">
+<p><a class="ex_number" href="#ExDoubleClick2"></a> Wie oben.</p>
+<pre>MouseClick "left",,, 2</pre>
+</div>
+
+<div class="ex" id="ExMove">
+<p><a class="ex_number" href="#ExMove"></a> Bewegt den Mauszeiger auf eine bestimmte Position und führt einen Rechtsklick aus.</p>
+<pre>MouseClick "right", 200, 300</pre>
+</div>
+
+<div class="ex" id="ExWheel">
+<p><a class="ex_number" href="#ExWheel"></a> Simuliert das Drehen des Mausrads.</p>
+<pre>#up::MouseClick "WheelUp",,, 2  <em>; 2 Schritte drehen.</em>
+#down::MouseClick "WheelDown",,, 2</pre>
+</div>
+
+</body>
+</html>

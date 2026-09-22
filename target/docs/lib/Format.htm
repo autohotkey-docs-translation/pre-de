@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Format - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die Format-Funktion formatiert eine beliebige Anzahl von Eingabewerten gemäß einer Formatzeichenkette." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>Format</h1>
+
+<p>Formatiert eine beliebige Anzahl von Eingabewerten gemäß einer Formatzeichenkette.</p>
+
+<pre class="Syntax">Zkette := <span class="func">Format</span>(FormatZkette <span class="optional">, Werte...</span>)</pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>FormatZkette</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Eine Formatzeichenkette, bestehend aus direkt geschriebenem Text und Platzhaltern, im Format <code class="no-highlight">{<i>Index</i>:<i><a href="#FormatSpec">Format</a></i>}</code>.</p>
+    <p><em>Index</em> ist ein Integer, der angibt, welcher Eingabewert verwendet werden soll. 1 ist der erste Wert, 2 der zweite usw.</p>
+    <p><em>Format</em> ist eine optionale Formatspezifikation, wie unten beschrieben.</p>
+    <p>Lassen Sie die Indexnummer weg, um den nächsten Eingabewert in der Sequenz zu verwenden (selbst wenn die Indexnummer bereits zuvor in der Zeichenkette verwendet wurde). Zum Beispiel formatiert <code>"{2:i} {:i}"</code> den zweiten und dritten Eingabewert als dezimale Integer, getrennt durch ein Leerzeichen. Wenn <em>Index</em> weggelassen wird, muss <em>Format</em> weiterhin mit <code class="no-highlight">:</code> beginnen. Geben Sie leere geschweifte Klammern an, um den nächsten Eingabewert mit Standardformatierung zu verwenden: <code class="no-highlight">{}</code></p>
+    <p>Mit <code class="no-highlight">{{}</code> und <code class="no-highlight">{}}</code> können direkt geschriebene geschweifte Klammern in die Zeichenkette eingefügt werden. Alle anderen ungültigen Platzhalter werden unverändert in das Ergebnis eingefügt.</p>
+    <p>Leerraumzeichen innerhalb der geschweiften Klammern sind nicht erlaubt (nur als Flag).</p>
+  </dd>
+
+  <dt>Werte</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a>, <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#numbers">Float</a></p>
+    <p>Eingabewerte, die formatiert und in die finale Zeichenkette eingefügt werden sollen. Jeder Wert ist ein einzelner Parameter. Der erste Wert hat die Indexnummer 1.</p>
+    <p>Mit einem <a href="../Functions.htm#VariadicCall">variadischen Funktionsaufruf</a> kann ein Array von Werten übergeben werden:</p>
+    <pre>arr := [13, 240]
+MsgBox Format("{2:x}{1:02x}", arr*)</pre>
+  </dd>
+
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+<p>Diese Funktion gibt die formatierte Version der angegebenen Zeichenkette zurück.</p>
+
+<h2 id="FormatSpec">Formatspezifikationen</h2>
+<p>Jede Formatspezifikation kann die folgenden Komponenten enthalten (in genau dieser Reihenfolge, ohne Leerzeichen):</p>
+<pre class="Syntax">Flags Breite .Genauigkeit ULT Typ</pre>
+<p><strong>Flags:</strong> Beliebig viele Flags aus der <a href="#Flags">Flag-Tabelle</a> unten, um Präfix und Ausrichtung der Ausgabe zu beeinflussen.</p>
+<p><strong>Breite:</strong> Ein dezimaler Integer, der die Mindestbreite des formatierten Wertes bestimmt (in Zeichen). Standardmäßig werden Werte rechtsbündig gemacht und Leerzeichen zum Auffüllen verwendet. Diese Standardeinstellung kann mit den Flags <code class="no-highlight">-</code> (linksbündig) und <code class="no-highlight">0</code> (Null-Präfix) überschrieben werden.</p>
+<p><strong>.Genauigkeit:</strong> Ein dezimaler Integer, der je nach Ausgabetyp die maximale Anzahl von Zeichen, Dezimalstellen oder signifikanten Stellen festlegt. Es muss ein Dezimalpunkt davor sein. Die Angabe einer Genauigkeit kann dazu führen, dass der Wert gekürzt oder gerundet wird. Die folgende Auflistung zeigt, wie sich der Genauigkeitswert auf bestimmte Ausgabetypen auswirkt (eine Erklärung zu jedem Ausgabetyp finden Sie in der unteren Tabelle):</p>
+<ul>
+  <li><code class="no-highlight">f</code>, <code class="no-highlight">e</code>, <code class="no-highlight">E</code>: <em>Genauigkeit</em> bestimmt die Ziffernanzahl nach dem Dezimalpunkt. Standardmäßig 6.</li>
+  <li><code class="no-highlight">g</code>, <code class="no-highlight">G</code>: <em>Genauigkeit</em> bestimmt die maximale Anzahl signifikanter Stellen. Standardmäßig 6.</li>
+  <li><code class="no-highlight">s</code>: <em>Genauigkeit</em> bestimmt die maximale Anzahl von Zeichen, die angezeigt werden. Überschüssige Zeichen werden nicht angezeigt.</li>
+  <li>Bei den Integertypen (<code class="no-highlight">d</code>, <code class="no-highlight">i</code>, <code class="no-highlight">u</code>, <code class="no-highlight">x</code>, <code class="no-highlight">X</code>, <code class="no-highlight">o</code>) verhält sich <em>Genauigkeit</em> wie <em>Breite</em> mit <code class="no-highlight">0</code>-Präfix und einem Standardwert von 1.</li>
+</ul>
+<p id="ULT"><strong>ULT:</strong> Ändert die Groß-/Kleinschreibung eines Zeichenkettenwertes -- <b>U</b>pper (groß), <b>L</b>ower (klein) oder <b>T</b>itle (Anfangsbuchstabe groß). Nur in Verbindung mit <code class="no-highlight">s</code> gültig. Zum Beispiel <code class="no-highlight">{:U}</code> oder <code class="no-highlight">{:.20Ts}</code>. Die Kleinbuchstaben <code class="no-highlight">l</code> und <code class="no-highlight">t</code> werden ebenfalls unterstützt, aber <code class="no-highlight">u</code> ist für vorzeichenlose Integer reserviert.</p>
+<p><strong>Typ:</strong> Ein Zeichen aus der <a href="#Types">Typentabelle</a> unten, das angibt, wie der Eingabewert interpretiert werden soll. Wenn weggelassen, wird standardmäßig <code class="no-highlight">s</code> verwendet.</p>
+
+<h2 id="Flags">Flags</h2>
+<table class="info">
+  <tr><th>Flag</th><th>Bedeutung</th></tr>
+  <tr>
+    <td><code class="no-highlight">-</code></td>
+    <td>
+      <p>Macht das Ergebnis innerhalb der angegebenen Feldbreite linksbündig (und füllt die rechte Seite mit Leerzeichen, falls nötig). Zum Beispiel: <code>Format("{:-10}", 1)</code> gibt <code class="no-highlight" style="white-space: pre">1         </code> zurück.</p>
+      <p>Wenn weggelassen, wird das Ergebnis innerhalb der vorgegebenen Feldbreite rechtsbündig gemacht.</p>
+    </td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">+</code></td>
+    <td>
+      <p>Setzt ein Vorzeichen (+ oder -) vor einem vorzeichenfähigen Ausgabewert. Zum Beispiel: <code>Format("{:+d}", 1)</code> gibt <code class="no-highlight">+1</code> zurück.</p>
+      <p>Wenn weggelassen, erscheint das Vorzeichen nur bei negativen vorzeichenfähigen Werten (-).</p>
+    </td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">0</code></td>
+    <td>
+      <p>Wenn <em>Breite</em> mit einer 0 beginnt, werden solange Nullen auf der linken Seite hinzugefügt, bis die Mindestbreite erreicht wurde. Zum Beispiel: <code>Format("{:010}", 1)</code> gibt <code class="no-highlight">0000000001</code> zurück. Wurden sowohl <code class="no-highlight">0</code> als auch <code class="no-highlight">-</code> angegeben, wird die 0 ignoriert. Wenn 0 als Integer-Format (i, u, x, X, o, d) spezifiziert ist und eine Genauigkeit angegeben ist – zum Beispiel <code class="no-highlight">{:04.d}</code> – wird die 0 ignoriert.</p>
+      <p>Wenn weggelassen, wird der Wert nicht mit Nullen gefüllt.</p>
+    </td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight"> </code></td>
+    <td>
+      <p>Verwenden Sie ein Leerzeichen, um dem Ausgabewert ein <em>einzelnes</em> Leerzeichen voranzustellen, wenn der Wert vorzeichenfähig und positiv ist. Das Leerzeichen wird ignoriert, wenn sowohl das <code class="no-highlight"> </code>- als auch <code class="no-highlight">+</code>-Flag angegeben wurde. Zum Beispiel: <code>Format("{: 05d}", 1)</code> gibt <code class="no-highlight"> 0001</code> zurück.</p>
+      <p>Wenn weggelassen, erscheint kein Leerzeichen.</p>
+    </td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">#</code></td>
+    <td>
+      <p>Wenn dieses Flag mit dem o-, x- oder X-Format verwendet wird, beginnt ein Ausgabewert ungleich 0 mit <code class="no-highlight">0</code>, <code class="no-highlight">0x</code> bzw. <code class="no-highlight">0X</code>. Zum Beispiel: <code>Format("{:#x}", 1)</code> gibt <code class="no-highlight">0x1</code> zurück.</p>
+      <p>Wenn dieses Flag mit dem e-, E-, f-, a- oder A-Format verwendet wird, enthält der Ausgabewert immer einen Dezimalpunkt. Zum Beispiel: <code>Format("{:#.0f}", 1)</code> gibt <code class="no-highlight">1.</code> zurück.</p>
+      <p>Wenn dieses Flag mit dem g- oder G-Format verwendet wird, enthält der Ausgabewert immer einen Dezimalpunkt, und es werden keine Nullen am Ende entfernt.</p>
+      <p>Wenn dieses Flag mit dem c-, d-, i-, u- oder s-Format verwendet wird, wird es ignoriert.</p>
+    </td>
+  </tr>
+</table>
+
+<h2 id="Types">Typen</h2>
+<table class="info">
+  <tr><th abbr="Zeichen">Typzeichen</th><th style="min-width:7em">Argument</th><th abbr="Ausgabe">Ausgabeformat</th></tr>
+  <tr>
+    <td><code class="no-highlight">d</code> oder <code class="no-highlight">i</code></td>
+    <td>Integer</td>
+    <td>Vorzeichenfähiger dezimaler Integer. Zum Beispiel: <code>Format("{:d}", 1.23)</code> gibt <code class="no-highlight">1</code> zurück.</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">u</code></td>
+    <td>Integer</td>
+    <td>Vorzeichenloser dezimaler Integer.</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">x</code> oder <code class="no-highlight">X</code></td>
+    <td>Integer</td>
+    <td>Vorzeichenloser hexadezimaler Integer; ein kleines <code class="no-highlight">x</code> bewirkt, dass die Hexadezimalzeichen kleingeschrieben werden. Das <code class="no-highlight">0x</code>-Präfix ist nur enthalten, wenn das <code class="no-highlight">#</code>-Flag vorhanden ist, wie in <code class="no-highlight">{:#x}</code>. Mit <code class="no-highlight">0x{:x}</code> o.ä. kann immer das Präfix hinzugefügt werden. Zum Beispiel: <code>Format("{:X}", 255)</code> gibt <code class="no-highlight">FF</code> zurück.</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">o</code></td>
+    <td>Integer</td>
+    <td>Vorzeichenloser oktaler Integer. Zum Beispiel: <code>Format("{:o}", 255)</code> gibt <code class="no-highlight">377</code> zurück.</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">f</code></td>
+    <td>Floating-Point</td>
+    <td>Vorzeichenfähiger Wert im Format [ - ]<em>dddd</em>.<em>dddd</em>, wobei <em>dddd</em> eine oder mehrere Dezimalziffern sind. Die Ziffernanzahl vor dem Dezimalpunkt hängt von der Größe der Zahl ab, während die Ziffernanzahl nach dem Dezimalpunkt von der gewünschten Genauigkeit abhängt. Zum Beispiel: <code>Format("{:.2f}", 1)</code> gibt <code class="no-highlight">1.00</code> zurück.</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">e</code></td>
+    <td>Floating-Point</td>
+    <td>Vorzeichenfähiger Wert im Format [ - ]<em>d.dddd</em> e [<em>Vorzeichen</em>]<em>dd[d]</em>, wobei <em>d</em> eine Dezimalziffer ist, <em>dddd</em> eine oder mehrere Dezimalziffern sind, <em>dd[d]</em> zwei oder drei Dezimalziffern je nach Ausgabeformat und Größe des Exponenten sind und <em>Vorzeichen</em> + oder - ist. Zum Beispiel: <code>Format("{:e}", 255)</code> gibt <code class="no-highlight">2.550000e+02</code> zurück.</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">E</code></td>
+    <td>Floating-Point</td>
+    <td>Wie das <code class="no-highlight">e</code>-Format, außer dass der Exponent mit E statt e beginnt.</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">g</code></td>
+    <td>Floating-Point</td>
+    <td>Vorzeichenfähige Werte werden im <code class="no-highlight">f</code>- oder <code class="no-highlight">e</code>-Format angezeigt, je nachdem, welches Format den Wert und die Genauigkeit kompakter darstellen kann. Das <code class="no-highlight">e</code>-Format wird nur verwendet, wenn der Exponent des Wertes kleiner als -4 oder größer gleich <em>Genauigkeit</em> ist. Nullen am Ende werden entfernt; der Dezimalpunkt ist nur enthalten, wenn Dezimalstellen vorhanden sind.</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">G</code></td>
+    <td>Floating-Point</td>
+    <td>Wie das <code class="no-highlight">g</code>-Format, außer dass der Exponent ggf. mit E statt e beginnt.</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">a</code></td>
+    <td>Floating-Point</td>
+    <td>Vorzeichenfähiger hexadezimaler Floating-Point-Wert mit doppelter Genauigkeit im Format [?]0x<em>h.hhhh</em> <strong>p</strong>±<em>dd</em>, wobei <em>h.hhhh</em> die Hexadezimalziffern (unter Nutzung von Kleinbuchstaben) der Mantisse und <em>dd</em> eine oder mehrere Ziffern für den Exponenten sind. Die Genauigkeit bestimmt die Ziffernanzahl nach dem Punkt. Zum Beispiel: <code>Format("{:a}", 255)</code> gibt <code class="no-highlight">0x1.fe00000000000p+7</code> zurück.</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">A</code></td>
+    <td>Floating-Point</td>
+    <td>Wie das <code class="no-highlight">a</code>-Format, außer dass der Exponent mit P statt p beginnt.</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">p</code></td>
+    <td>Integer</td>
+    <td>Zeigt das Argument als Speicheradresse in Hexadezimalziffern an. Zum Beispiel: <code>Format("{:p}", 255)</code> gibt <code class="no-highlight">00000000000000FF</code> zurück.</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">s</code></td>
+    <td>Zeichenkette</td>
+    <td>Gibt eine Zeichenkette an. Wenn der Eingabewert numerisch ist, wird er automatisch in eine Zeichenkette umgewandelt, bevor die Argumente <em>Breite</em> und <em>Genauigkeit</em> angewendet werden.</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">c</code></td>
+    <td>Zeichencode</td>
+    <td>Gibt ein einzelnes Zeichen über seinen Ordinalwert an, ähnlich wie <code><a href="Chr.htm">Chr</a>(n)</code>. Wenn der Eingabewert außerhalb des erwarteten Wertebereichs liegt, wird er umgekehrt. Zum Beispiel: <code>Format("{:c}", 116)</code> gibt <code class="no-highlight">t</code> zurück.</td>
+  </tr>
+</table>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Größenspezifikationen wie bei <a href="https://learn.microsoft.com/cpp/c-runtime-library/format-specification-syntax-printf-and-wprintf-functions">printf</a> werden nicht unterstützt. Alle Integer und Floating-Point-Eingabewerte sind 64-Bit.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="FormatTime.htm">FormatTime</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Zeigt verschiedene Verwendungsmöglichkeiten.</p>
+<pre>
+s := ""
+<em>; Einfache Substitution</em>
+s .= Format("{2}, {1}!`r`n", "Welt", "Hallo")
+<em>; Mit Leerzeichen füllen</em>
+s .= Format("|{:-10}|`r`n|{:10}|`r`n", "Links", "Rechts")
+<em>; Hexadezimal</em>
+s .= Format("{1:#x} {2:X} 0x{3:x}`r`n", 3735928559, 195948557, 0)
+<em>; Floating-Point</em>
+s .= Format("{1:0.3f} {1:.10f}", 4*ATan(1))
+
+ListVars  <em>; Hauptfenster des Skripts zum Anzeigen gleichbreiter Zeichen nutzen.</em>
+WinWaitActive "ahk_class AutoHotkey"
+ControlSetText(s, "Edit1")
+WinWaitClose
+</pre>
+</div>
+
+</body>
+</html>

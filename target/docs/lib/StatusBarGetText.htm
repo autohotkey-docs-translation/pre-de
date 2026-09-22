@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>StatusbarGetText - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die StatusbarGetText-Funktion ruft den Text einer regulären Statusleiste ab." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>StatusBarGetText</h1>
+
+<p>Ruft den Text einer regulären Statusleiste ab.</p>
+
+<pre class="Syntax">Text := <span class="func">StatusBarGetText</span>(<span class="optional">SegmentNummer, FensterTitel, FensterText, AusnahmeTitel, AusnahmeText</span>)</pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>SegmentNummer</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn weggelassen, wird standardmäßig 1 verwendet, was üblicherweise das Segment ist, das den Text von Interesse enthält. Andernfalls geben Sie die Nummer des Leistensegments an, dessen Text abgerufen werden soll.</p>
+  </dd>
+
+  <dt>FensterTitel, FensterText, AusnahmeTitel, AusnahmeText</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a>, <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#objects">Objekt</a></p>
+    <p>Wenn jeder dieser Parameter leer ist oder weggelassen wird, wird das <a href="../misc/WinTitle.htm#LastFoundWindow">Zuletzt Gefundene Fenster</a> verwendet. Andernfalls geben Sie für <em>FensterTitel</em> einen <a href="../misc/WinTitle.htm">Fenstertitel oder andere Kriterien</a> zur Identifizierung des Zielfensters und/oder für <em>FensterText</em> eine Teilzeichenkette aus einem Textelement des Zielfensters an (wie von <a href="../Program.htm#Window_Spy">Window Spy</a> angezeigt).</p>
+    <p><em>AusnahmeTitel</em> und <em>AusnahmeText</em> können verwendet werden, um ein oder mehrere Fenster anhand ihres Titels oder Textes auszuschließen. Ihre Angabe ähnelt der von <em>FensterTitel</em> und <em>FensterText</em>, außer dass <em>AusnahmeTitel</em> keine anderen Kriterien als den Fenstertitel erkennt.</p>
+    <p>Fenstertitel und -texte sind Groß-/Kleinschreibung-sensitiv. Standardmäßig werden versteckte Fenster nicht erkannt und versteckte Textelemente erkannt, was mit <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a> bzw. <a href="DetectHiddenText.htm">DetectHiddenText</a> geändert werden kann. Verwendet man <a href="../misc/WinTitle.htm#ahk_id">reine HWNDs</a>, werden versteckte Fenster immer erkannt. Standardmäßig kann ein Fenstertitel den angegebenen <em>FensterTitel</em> oder <em>AusnahmeTitel</em> an beliebiger Stelle enthalten, um eine Übereinstimmung zu sein, was mit <a href="SetTitleMatchMode.htm">SetTitleMatchMode</a> geändert werden kann.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+<p>Diese Funktion gibt den Text eines Segments der Statusleiste zurück.</p>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Es wird ein <a href="Error.htm#TargetError">TargetError</a> ausgelöst, wenn das Zielfenster nicht gefunden werden konnte oder keine reguläre Statusleiste enthält.</p>
+<p>Es wird ein <a href="Error.htm#OSError">OSError</a> ausgelöst, wenn es ein Problem beim Senden der SB_GETPARTS-Meldung gab oder keine Antwort innerhalb von 2000&nbsp;ms erfolgte, oder wenn kein Speicher innerhalb des Prozesses, dem die Statusleiste gehört, reserviert werden konnte.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Diese Funktion versucht, die erste <em>reguläre</em> Statusleiste eines Fensters zu lesen (allgemeines Microsoft-Steuerelement: msctls_statusbar32). Einige Programme verwenden eigene Statusleisten oder spezielle Versionen des MS-Steuerelements – in diesem Fall kann der Text nicht abgerufen werden.</p>
+<p>Anstatt StatusBarGetText wiederholt mit einer Schleife auszuführen, ist es in der Regel effizienter, <a href="StatusBarWait.htm">StatusBarWait</a> zu verwenden, da es Optimierungen enthält, die den Overhead durch mehrfache Aufrufe von StatusBarGetText vermeiden.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="StatusBarWait.htm">StatusBarWait</a>, <a href="WinGetTitle.htm">WinGetTitle</a>, <a href="WinGetText.htm">WinGetText</a>, <a href="ControlGetText.htm">ControlGetText</a></p>
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Ermittelt und analysiert den Text des ersten Segments einer Statusleiste.</p>
+<pre>AbgerufenerText := StatusBarGetText(1, "Suchergebnisse")
+if InStr(AbgerufenerText, "Gefunden")
+    MsgBox "Suchergebnisse wurden gefunden."</pre>
+</div>
+
+</body>
+</html>

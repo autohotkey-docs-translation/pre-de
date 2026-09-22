@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>A_MaxHotkeysPerInterval / A_HotkeyInterval - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="A_MaxHotkeysPerInterval und A_HotkeyInterval sind interne Variablen, die bestimmen, wie viele Hotkeys innerhalb eines Zeitrahmens aktiviert werden können, bevor ein Warndialogfenster angezeigt wird." />
+<meta name="ahk:equiv-v1" content="lib/_MaxHotkeysPerInterval.htm" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>A_MaxHotkeysPerInterval / A_HotkeyInterval</h1>
+
+<p><em>A_MaxHotkeysPerInterval</em> und <em>A_HotkeyInterval</em> sind <a href="../Concepts.htm#built-in-variables">interne Variablen</a>, die bestimmen, wie viele <a href="../Hotkeys.htm">Hotkeys</a> innerhalb eines Zeitrahmens aktiviert werden können, bevor ein Warndialogfenster angezeigt wird.</p>
+<p><em>A_MaxHotkeysPerInterval</em> kann verwendet werden, um einen <a href="../Concepts.htm#numbers">Integer</a> abzurufen oder zu setzen, der die maximale Anzahl von Hotkeys repräsentiert, die innerhalb eines Zeitrahmens gedrückt werden können, ohne ein Warndialogfenster auszulösen.</p>
+<p><em>A_HotkeyInterval</em> kann verwendet werden, um einen <a href="../Concepts.htm#numbers">Integer</a> abzurufen oder zu setzen, der die Länge des Intervalls in Millisekunden repräsentiert.</p>
+<p>Die Standardeinstellungen sind 70 (Hotkeys) für <em>A_MaxHotkeysPerInterval</em> und 2000 (ms) für <em>A_HotkeyInterval</em>.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Diese internen Variablen sollten normalerweise beim Start des Skripts gesetzt werden (wenn die Standardeinstellungen nicht ausreichen), aber das Skript kann ihre Werte jederzeit abrufen oder setzen.</p>
+<p>Achten Sie darauf, die Einstellung nicht zu großzügig zu wählen, denn wenn Sie versehentlich eine Endlosschleife mit Tastendrücken erzeugen (via <a href="Send.htm">Send</a>-Funktion, die versehentlich andere Hotkeys auslöst), kann es passieren, dass Ihr Computer aufgrund vieler schneller Tastaturereignisse nicht mehr reagiert.</p>
+<p>Das stark vereinfachte Beispiel <code>^c::Send "^c"</code> würde eine Endlosschleife mit Tastendrücken erzeugen. Um das zu verhindern, fügen Sie das <a href="../Hotkeys.htm#prefixdollar">$-Präfix</a> in die Hotkey-Definition ein (z.B. <code>$^c::</code>), damit der Hotkey nicht mehr durch die Send-Funktion ausgelöst werden kann.</p>
+<p>Der Grenzwert kann auch auf andere Weise als durch eine Endlosschleife erreicht werden, zum Beispiel:</p>
+<ul>
+  <li>Tastenwiederholung, wenn der Grenzwert im Verhältnis zur Tastenwiederholrate zu niedrig ist oder das System stark ausgelastet ist.</li>
+  <li>Tastatur- oder Maus-Hardware, die Eingabeereignisse schneller als die typische Tastenwiederholrate sendet. Zum Beispiel wird bei einigen Mäusen beim Kippen des Mausrads nach links oder rechts eine hohe Anzahl von Ereignissen gesendet, was bei Hotkeys wie <code>WheelLeft::</code> und <code>WheelRight::</code> schnell an die Grenzen stoßen kann.</li>
+</ul>
+<p>Mit <code>A_HotkeyInterval := 0</code> kann das Warndialogfenster komplett deaktiviert werden.</p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Erlaubt das Drücken von maximal 200 Hotkeys innerhalb von 2000&nbsp;ms, ohne ein Warndialogfenster auszulösen.</p>
+<pre>A_HotkeyInterval := 2000  <em>; Das ist der Standardwert (in Millisekunden).</em>
+A_MaxHotkeysPerInterval := 200</pre>
+</div>
+
+</body>
+</html>

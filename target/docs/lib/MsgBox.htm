@@ -1,0 +1,337 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>MsgBox - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die MsgBox-Funktion zeigt einen bestimmten Text in einem kleinen Fenster an, das eine oder mehrere Schaltflächen enthält (z.B. Ja und Nein)." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+<style>
+  .sized1 {
+    width: 20em;
+  }
+  .sized2 {
+    width: 4em;
+  }
+</style>
+</head>
+<body><script>site.init();</script>
+
+<h1>MsgBox</h1>
+
+<p>Zeigt einen bestimmten Text in einem kleinen Fenster an, das eine oder mehrere Schaltflächen enthält (z.B. Ja und Nein).</p>
+
+<pre class="Syntax"><span class="func">MsgBox</span> <span class="optional">Text, Titel, Optionen</span>
+Ergebnis := <span class="func">MsgBox</span>(<span class="optional">Text, Titel, Optionen</span>)</pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>Text</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn weggelassen und "OK" die einzige Schaltfläche ist, wird standardmäßig die Zeichenkette "Press OK to continue." verwendet. Wenn in jedem anderen Fall weggelassen, wird standardmäßig eine leere Zeichenkette verwendet. Andernfalls geben Sie den Text an, der im Mitteilungsfenster angezeigt werden soll.</p>
+    <p>Mit <a href="../misc/EscapeChar.htm">Escapesequenzen</a> können Sonderzeichen dargestellt werden. Zum Beispiel kann mit einem Zeilenvorschubzeichen (`n) die aktuelle Zeile beendet und eine neue begonnen werden. Entsprechend würde <code>"Text1`n`nText2"</code> eine Leerzeile zwischen Text1 und Text2 erzeugen.</p>
+    <p>Wenn <em>Text</em> relativ lang ist, kann es via <a href="../Scripts.htm#continuation">Fortsetzungsbereich</a> in mehrere kurze Zeilen aufgeteilt werden, um die Übersichtlichkeit und Wartbarkeit des Skripts zu verbessern.</p>
+  </dd>
+
+  <dt>Titel</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn weggelassen, wird standardmäßig der aktuelle Wert von <a href="../Variables.htm#ScriptName">A_ScriptName</a> verwendet. Andernfalls geben Sie den Titel des Mitteilungsfensters an.</p>
+  </dd>
+
+  <dt>Optionen</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn leer oder weggelassen, wird standardmäßig 0 verwendet (nur eine OK-Schaltfläche anzeigen). Andernfalls geben Sie eine Kombination (Summe) von Werten oder eine Zeichenkette von einer oder mehreren Optionen aus den unteren Tabellen an, um den Typ des Mitteilungsfensters und die möglichen Schaltflächenkombinationen zu bestimmen.</p>
+    <p>Zusätzlich können beliebig viele der folgenden Optionen angegeben werden:</p>
+    <p id="OwnerOption"><strong>Owner:</strong> Um ein <a href="#Owner">übergeordnetes Fenster</a> für das Mitteilungsfenster zu bestimmen, verwenden Sie das Wort Owner gefolgt von einem <a href="../misc/WinTitle.htm#ahk_id">Fensterhandle (HWND)</a>.</p>
+    <p id="Timeout"><strong>T:</strong> Timeout (Zeitlimit). Um das Mitteilungsfenster automatisch zu schließen, wenn der Benutzer es nicht innerhalb einer bestimmten Zeit geschlossen hat, verwenden Sie den Buchstaben T gefolgt von einem Zeitlimit in Sekunden, das einen Dezimalpunkt enthalten kann. Wenn ein Zeitlimit höher als 2147483 (24,8 Tage) angegeben ist, wird es automatisch auf 2147483 zurückgesetzt. Wenn das Mitteilungsfenster das Zeitlimit überschreitet, ist der <a href="#Result">Rückgabewert</a> das Wort Timeout.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Options">Werte für den <em>Optionen</em>-Parameter</h2>
+<p>Der <em>Optionen</em>-Parameter kann entweder eine Kombination (Summe) von Werten aus den folgenden Gruppen sein, die direkt an die MessageBox-Funktion des Betriebssystems übergeben wird, oder eine Zeichenkette von beliebig vielen Optionen (nicht Groß-/Kleinschreibung-sensitiv), die mit mindestens einem Leer- oder Tabulatorzeichen voneinander getrennt sind. Die Zeichenkette kann auch beliebig viele numerische Optionen enthalten.</p>
+
+<h3 id="Group_1_Buttons">Gruppe #1: Schaltflächen</h3>
+<p>Um zu bestimmen, welche Schaltflächen im Mitteilungsfenster angezeigt werden, addieren Sie <u>einen</u> der folgenden Werte:</p>
+<table class="info">
+  <tr>
+    <th class="sized1">Funktion</th>
+    <th class="sized2 right">Dez</th>
+    <th class="sized2 right">Hex</th>
+    <th>Zkette</th>
+  </tr>
+  <tr>
+    <td>OK</td>
+    <td class="right">0</td>
+    <td class="right">0x0</td>
+    <td><code class="no-highlight">OK</code> oder <code class="no-highlight">O</code></td>
+  </tr>
+  <tr>
+    <td>OK, Abbrechen</td>
+    <td class="right">1</td>
+    <td class="right">0x1</td>
+    <td><code class="no-highlight">OKCancel</code>, <code class="no-highlight">O/C</code> oder <code class="no-highlight">OC</code></td>
+  </tr>
+  <tr>
+    <td>Abbrechen, Wiederholen, Ignorieren</td>
+    <td class="right">2</td>
+    <td class="right">0x2</td>
+    <td><code class="no-highlight">AbortRetryIgnore</code>, <code class="no-highlight">A/R/I</code> oder <code class="no-highlight">ARI</code></td>
+  </tr>
+  <tr>
+    <td>Ja, Nein, Abbrechen</td>
+    <td class="right">3</td>
+    <td class="right">0x3</td>
+    <td><code class="no-highlight">YesNoCancel</code>, <code class="no-highlight">Y/N/C</code> oder <code class="no-highlight">YNC</code></td>
+  </tr>
+  <tr>
+    <td>Ja, Nein</td>
+    <td class="right">4</td>
+    <td class="right">0x4</td>
+    <td><code class="no-highlight">YesNo</code>, <code class="no-highlight">Y/N</code> oder <code class="no-highlight">YN</code></td>
+  </tr>
+  <tr>
+    <td>Wiederholen, Abbrechen</td>
+    <td class="right">5</td>
+    <td class="right">0x5</td>
+    <td><code class="no-highlight">RetryCancel</code>, <code class="no-highlight">R/C</code> oder <code class="no-highlight">RC</code></td>
+  </tr>
+  <tr>
+    <td>Abbrechen, Wiederholen, Weiter</td>
+    <td class="right">6</td>
+    <td class="right">0x6</td>
+    <td><code class="no-highlight">CancelTryAgainContinue</code>, <code class="no-highlight">C/T/C</code> oder <code class="no-highlight">CTC</code></td>
+  </tr>
+</table>
+
+<h3 id="Group_2_Icon">Gruppe #2: Symbol</h3>
+<p>Um ein Symbol im Mitteilungsfenster darzustellen, addieren Sie <u>einen</u> der folgenden Werte:</p>
+<table class="info">
+  <tr>
+    <th class="sized1">Funktion</th>
+    <th class="sized2 right">Dez</th>
+    <th class="sized2 right">Hex</th>
+    <th>Zkette</th>
+  </tr>
+  <tr>
+    <td>Handsymbol (Stopp / Fehler)</td>
+    <td class="right">16</td>
+    <td class="right">0x10</td>
+    <td><code class="no-highlight">Iconx</code></td>
+  </tr>
+  <tr>
+    <td>Fragezeichensymbol</td>
+    <td class="right">32</td>
+    <td class="right">0x20</td>
+    <td><code class="no-highlight">Icon?</code></td>
+  </tr>
+  <tr>
+    <td>Ausrufezeichensymbol</td>
+    <td class="right">48</td>
+    <td class="right">0x30</td>
+    <td><code class="no-highlight">Icon!</code></td>
+  </tr>
+  <tr>
+    <td>Sternchensymbol (Info)</td>
+    <td class="right">64</td>
+    <td class="right">0x40</td>
+    <td><code class="no-highlight">Iconi</code></td>
+  </tr>
+</table>
+
+<h3 id="Group_3_Default_Button">Gruppe #3: Standardschaltfläche</h3>
+<p>Um die Standardschaltfläche zu bestimmen, addieren Sie <u>einen</u> der folgenden Werte:</p>
+<table class="info">
+  <tr>
+    <th class="sized1">Funktion</th>
+    <th class="sized2 right">Dez</th>
+    <th class="sized2 right">Hex</th>
+    <th>Zkette</th>
+  </tr>
+  <tr>
+    <td>Macht die zweite Schaltfläche zur Standardschaltfläche</td>
+    <td class="right">256</td>
+    <td class="right">0x100</td>
+    <td><code class="no-highlight">Default2</code></td>
+  </tr>
+  <tr>
+    <td>Macht die dritte Schaltfläche zur Standardschaltfläche</td>
+    <td class="right">512</td>
+    <td class="right">0x200</td>
+    <td><code class="no-highlight">Default3</code></td>
+  </tr>
+  <tr>
+    <td>Macht die vierte Schaltfläche zur Standardschaltfläche<br>(benötigt die <a href="#Help">Hilfe-Schaltfläche</a>)</td>
+    <td class="right">768</td>
+    <td class="right">0x300</td>
+    <td><code class="no-highlight">Default4</code></td>
+  </tr>
+</table>
+
+<h3 id="Group_4_Modality">Gruppe #4: Modalität</h3>
+<p>Um die Modalität des Dialogfensters zu bestimmen, addieren Sie <u>einen</u> der folgenden Werte:</p>
+<table class="info">
+  <tr>
+    <th class="sized1">Funktion</th>
+    <th class="sized2 right">Dez</th>
+    <th class="sized2 right">Hex</th>
+    <th>Zkette</th>
+  </tr>
+  <tr>
+    <td>System-Modal (immer im Vordergrund)</td>
+    <td class="right">4096</td>
+    <td class="right">0x1000</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Task-Modal</td>
+    <td class="right">8192</td>
+    <td class="right">0x2000</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Immer im Vordergrund (WS_EX_TOPMOST-Style)<br>(ähnlich wie System Modal, aber ohne Titelleistensymbol)</td>
+    <td class="right">262144</td>
+    <td class="right">0x40000</td>
+    <td>N/A</td>
+  </tr>
+</table>
+
+<h3 id="Group_5_Other_Options">Gruppe #5: Sonstige Optionen</h3>
+<p>Um sonstige Optionen anzugeben, addieren Sie <u>einen oder mehrere</u> der folgenden Werte:</p>
+<table class="info">
+  <tr>
+    <th class="sized1">Funktion</th>
+    <th class="sized2 right">Dez</th>
+    <th class="sized2 right">Hex</th>
+    <th>Zkette</th>
+  </tr>
+  <tr id="Help">
+    <td>Fügt eine Hilfe-Schaltfläche hinzu (siehe Bemerkungen)</td>
+    <td class="right">16384</td>
+    <td class="right">0x4000</td>
+    <td>N/A</td>
+    
+  </tr>
+  <tr>
+    <td>Macht den Text rechtsbündig</td>
+    <td class="right">524288</td>
+    <td class="right">0x80000</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Rechts-nach-Links-Leselayout für Hebräisch / Arabisch</td>
+    <td class="right">1048576</td>
+    <td class="right">0x100000</td>
+    <td>N/A</td>
+  </tr>
+</table>
+
+<h2 id="Result">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+<p>Diese Funktion gibt eine der folgenden Zeichenketten zurück, die die zuletzt gedrückte Schaltfläche repräsentiert:</p>
+<ul>
+  <li>OK</li>
+  <li>Cancel</li>
+  <li>Yes</li>
+  <li>No</li>
+  <li>Abort</li>
+  <li>Retry</li>
+  <li>Ignore</li>
+  <li>TryAgain</li>
+  <li>Continue</li>
+  <li>Timeout (wenn MsgBox das Zeitlimit überschreitet)</li>
+</ul>
+<p>Wenn das Dialogfenster nicht angezeigt werden konnte, wird eine leere Zeichenkette zurückgegeben. Dies tritt normalerweise nur auf, wenn das <a href="#max">MsgBox-Limit</a> erreicht wurde, kann aber auch in anderen Ausnahmefällen auftreten.</p>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Bei Misserfolg wird ein <a href="Error.htm">Error</a> ausgelöst, z.B. wenn die Optionen ungültig sind, das <a href="#max">MsgBox-Limit</a> erreicht wurde oder das Mitteilungsfenster aus anderen Gründen nicht angezeigt werden konnte.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Ein typisches Mitteilungsfenster sieht wie folgt aus:</p>
+<img src="../static/dlg_message.png" alt="MsgBox" />
+<p>Verwenden Sie den <a href="#Result">Rückgabewert</a> der Funktion, um festzustellen, welche Schaltfläche der Benutzer gedrückt hat. Zum Beispiel:</p>
+<pre>Ergebnis := MsgBox("Möchten Sie fortfahren? (drücken Sie Ja oder Nein)",, "YesNo")
+if Ergebnis = "Yes"
+    MsgBox "Sie haben Ja gedrückt."
+else
+    MsgBox "Sie haben Nein gedrückt."
+
+if MsgBox("Wiederholen oder Abbrechen?",, "R/C") = "Retry"
+    MsgBox("Sie haben Wiederholen gedrückt.")</pre>
+<p>Um die Namen der Schaltflächen anzupassen, siehe <a href="../scripts/index.htm#MsgBoxButtonNames">Schaltflächennamen der MsgBox ändern</a>.</p>
+<p class="note"><strong>Hinweis:</strong> Sie können <kbd>Strg</kbd>+<kbd>C</kbd> in einem aktiven Mitteilungsfenster drücken, um dessen Text in die Zwischenablage zu kopieren. Diese Methode kann auch bei AutoHotkey-fremden Mitteilungsfenstern angewendet werden.</p>
+<p id="Owner"><strong>MsgBox mit einem GUI-Fenster verwenden:</strong> Ein GUI-Fenster kann ein <em>modales</em> Mitteilungsfenster mittels <a href="Gui.htm#OwnDialogs">OwnDialogs-Option</a> darstellen. Ein <em>modales</em> Mitteilungsfenster hindert den Benutzer daran, mit dem GUI-Fenster zu interagieren, bis er das Mitteilungsfenster wieder schließt. In diesem Fall können die Optionen System-Modal oder Task-Modal weggelassen werden.</p>
+<p>Wenn die <a href="Gui.htm#OwnDialogs">OwnDialogs-Option</a> <em>nicht</em> aktiv ist, kann die Task-Modal-Option (8192) verwendet werden, um die Interaktion mit allen Skriptfenstern zu unterbinden, bis der Benutzer das Mitteilungsfenster schließt.</p>
+<p>Wenn die <code class="no-highlight">Owner<i>HWND</i></code>-Option angegeben ist, hat sie Vorrang vor allen anderen Einstellungen. <i>HWND</i> kann das <a href="../misc/WinTitle.htm#ahk_id">HWND</a> eines beliebigen Fensters sein, auch das eines Fensters, das nicht zum Skript gehört.</p>
+<p><strong>Die Hilfe-Schaltfläche:</strong> Wenn die Hilfe-Schaltfläche-Option (16384) in <em>Optionen</em> vorhanden ist, funktioniert die Hilfe-Schaltfläche nur unter den folgenden Bedingungen:</p>
+<ol>
+  <li>Das Mitteilungsfenster wurde einem GUI-Fenster mittels <a href="Gui.htm#OwnDialogs">OwnDialogs-Option</a> untergeordnet.</li>
+  <li>Das Skript überwacht die WM_HELP-Meldung (0x0053). Zum Beispiel: <code><a href="OnMessage.htm">OnMessage</a>(0x0053, WM_HELP)</code>. Dies bewirkt, dass die WM_HELP-Funktion aufgerufen wird, sobald der Benutzer die Hilfe-Schaltfläche drückt. Diese Funktion könnte z.B. ein anderes GUI-Fenster oder Mitteilungsfenster anzeigen, das Hilfestellungen für den Benutzer enthält.</li>
+</ol>
+<p><strong>Die Schließen-Schaltfläche (in der Titelleiste des Mitteilungsfensters):</strong> Da das Mitteilungsfenster ein vom Betriebssystem bereitgestelltes Feature ist, hängt die Verfügbarkeit und das Verhalten der X-Schaltfläche davon ab, welche Schaltflächen vorhanden sind. Wenn nur die OK-Schaltfläche vorhanden ist, wäre das Drücken von X das gleiche wie, als hätte man OK gedrückt. Andernfalls ist die X-Schaltfläche deaktiviert, es sei denn, die Abbrechen-Schaltfläche ist vorhanden, dann wäre das Drücken von X das gleiche wie, als hätte man Abbrechen gedrückt.</p>
+<p id="max"><strong>Maximal 7 aktive Aufrufe:</strong> Der <a href="../misc/Threads.htm">Thread</a>, der ein Mitteilungsfenster anzeigt, kann normalerweise unterbrochen werden, damit der neue Thread sein eigenes Mitteilungsfenster anzeigen kann, bevor der vorherige Aufruf zurückkehrt. Es sind maximal 7 aktive MsgBox-Aufrufe erlaubt. Jeder Aufruf nach dem siebten löst einen <a href="Error.htm">Error</a> aus. Beachten Sie, dass ein MsgBox-Aufruf in einem unterbrochenen Thread nicht zum Aufrufer zurückkehrt, bis der Thread fortgesetzt wird.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="InputBox.htm">InputBox</a>, <a href="FileSelect.htm">FileSelect</a>, <a href="DirSelect.htm">DirSelect</a>, <a href="ToolTip.htm">ToolTip</a>, <a href="Gui.htm">Gui-Objekt</a></p>
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Zeigt ein Mitteilungsfenster mit einem bestimmten Text an. Eine schnelle und einfache Möglichkeit, Informationen anzuzeigen. Der Benutzer kann eine OK-Schaltfläche drücken, um das Mitteilungsfenster zu schließen und die Ausführung fortzusetzen.</p>
+<pre>MsgBox "Das ist eine Zeichenkette."</pre>
+</div>
+
+<div class="ex" id="ExTitle">
+<p><a class="ex_number" href="#ExTitle"></a> Zeigt ein Mitteilungsfenster mit einem bestimmten Text und Titel an.</p>
+<pre>MsgBox "Diese MsgBox hat einen benutzerdefinierten Titel.", "Ein benutzerdefinierter Titel"</pre>
+</div>
+
+<div class="ex" id="ExNoParams">
+<p><a class="ex_number" href="#ExNoParams"></a> Zeigt ein Mitteilungsfenster mit dem Standardtext an. Überwiegend nützlich für Debugging-Zwecke, z.B. um schnell einen Haltepunkt im Skript zu setzen.</p>
+<pre>MsgBox <em>; "Press OK to continue."</em></pre>
+</div>
+
+<div class="ex" id="ExContSec">
+<p><a class="ex_number" href="#ExContSec"></a> Zeigt ein Mitteilungsfenster mit einem bestimmten Text, einem Titel und einem Infosymbol an. Außerdem wird ein <a href="../Scripts.htm#continuation">Fortsetzungsbereich</a> verwendet, um den mehrzeiligen Text übersichtlicher darzustellen.</p>
+<pre>
+MsgBox "
+  (
+    Der erste Parameter wird als Mitteilung angezeigt.
+    Der zweite Parameter ist der Fenstertitel.
+    Der dritte Parameter bestimmt den Typ des Mitteilungsfensters.
+  )", "Fenstertitel", "iconi"
+</pre>
+</div>
+
+<div class="ex" id="ExRetValue">
+<p><a class="ex_number" href="#ExRetValue"></a> Verwenden Sie den Rückgabewert, um festzustellen, welche MsgBox-Schaltfläche der Benutzer zuletzt gedrückt hat. Beachten Sie, dass in diesem Fall der MsgBox-Funktionsaufruf mit <a href="../Language.htm#function-call-statements">runden Klammern</a> angegeben werden muss.</p>
+<pre>Ergebnis := MsgBox("Möchten Sie fortfahren? (drücken Sie Ja oder Nein)",, "YesNo")
+if (Ergebnis = "No")
+    return</pre>
+</div>
+
+<div class="ex" id="ExTimeout">
+<p><a class="ex_number" href="#ExTimeout"></a> Verwenden Sie die T-Option (Zeitlimit), um das Mitteilungsfenster nach einer bestimmten Anzahl von Sekunden automatisch zu schließen.</p>
+<pre>Ergebnis := MsgBox("Diese MsgBox schließt sich automatisch in 5 Sekunden.  Weiter?",, "Y/N T5")
+if (Ergebnis = "Timeout")
+    MsgBox "Sie haben innerhalb der 5 Sekunden weder JA noch NEIN gedrückt."
+else if (Ergebnis = "No")
+    return</pre>
+</div>
+
+<div class="ex" id="ExExpr">
+<p><a class="ex_number" href="#ExExpr"></a> Fügen Sie eine Variable oder einen Teilausdruck in die Mitteilung ein. Siehe auch: <a href="../Variables.htm#concat">Verkettung</a></p>
+<pre>
+var := 10
+MsgBox "Der Initialwert ist: " var
+MsgBox "Das Ergebnis ist: " var * 2
+MsgBox <a href="Format.htm">Format</a>("Das Ergebnis ist: {1}", var * 2)
+</pre>
+</div>
+</body>
+</html>

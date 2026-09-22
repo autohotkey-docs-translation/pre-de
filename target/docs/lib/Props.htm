@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Props - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die Props-Funktion enumeriert die Eigenschaften eines Wertes." />
+<meta name="ahk:equiv-v1" content="index.htm" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>Props <span class="ver">[v2.1-alpha.18+]</span></h1>
+
+<p>Enumeriert die Eigenschaften eines Wertes.</p>
+
+<pre class="Syntax">For EigenschaftName <span class="optional">, EigenschaftWert</span> in <span class="func">Props</span>(Wert)</pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+  <dt>Wert</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#values">Beliebig</a></p>
+    <p>Ein Wert beliebigen Typs, außer vom Typ ComObject.</p>
+  </dd>
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: <a href="Enumerator.htm">Enumerator</a></p>
+<p>Diese Funktion gibt einen neuen <a href="Enumerator.htm">Enumerator</a> zurück. Der Enumerator wird typischerweise direkt an eine <a href="For.htm">For-Schleife</a> übergeben, die den Enumerator pro Schleifenwiederholung einmal aufruft. Jeder Aufruf des Enumerators gibt den nächsten Eigenschaftsnamen und/oder Wert zurück. Die Variablen der For-Schleife entsprechen den folgenden Parametern des Enumerators:</p>
+<dl>
+  <dt>EigenschaftName</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Der Name der Eigenschaft.</p>
+  </dd>
+  <dt>EigenschaftWert</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#values">Beliebig</a></p>
+    <p>Der Wert der Eigenschaft.</p>
+    <p>Wenn die Eigenschaft eine Getter-Methode hat, wird diese aufgerufen, um den Wert zu ermitteln (es sei denn, <em>EigenschaftWert</em> wird weggelassen).</p>
+  </dd>
+</dl>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Dynamische Eigenschaften werden nur enumeriert, wenn ein Getter definiert ist, der ohne Parameter aufgerufen werden kann. (Im Gegensatz zu <a href="Object.htm#OwnProps">OwnProps</a> gilt dies auch dann, wenn <em>EigenschaftWert</em> weggelassen wird.) Wenn <em>Wert</em> ein <a href="Class.htm#Prototype">Prototyp</a> ist, werden die dynamischen Eigenschaften nicht enumeriert.</p>
+<p class="warning"><strong>Hinweis:</strong> Methoden sind dynamische Eigenschaften, die in der Regel keinen Getter haben und daher nicht enumeriert werden.</p>
+<p>Im Gegensatz zu <a href="Object.htm#OwnProps">OwnProps</a> enumeriert Props geerbten Eigenschaften, inklusive <a href="../Structs.htm">typisierte Eigenschaften</a>.</p>
+<p>Wenn <em>EigenschaftWert</em> angegeben ist, versucht der Enumerator den Getter der Eigenschaft aufzurufen, um den Wert abzurufen. Wenn der Getter eine Ausnahme auslöst, wird sie propagiert (nicht unterdrückt). Der Aufrufer kann die Enumeration bei der nächsten Eigenschaft nur fortsetzen, wenn er eine Referenz zum Enumerator gespeichert hat (z.B. indem er den Rückgabewert von Props einer Variable zuweist, bevor er diese an <a href="For.htm">For</a> übergibt).</p>
+<p>Obwohl ein primitiver Wert (z.B. eine Zeichenkette oder ein Integer) keine eigenen Eigenschaften haben kann, kann er Eigenschaften vom jeweiligen <a href="../Objects.htm#primitive">Prototyp</a> erben.</p>
+<p>Die vordefinierte __Class-Eigenschaft einer Klassendefinition und <code>Any.Prototype.Base</code> werden nicht enumeriert.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="../Objects.htm">Objekte</a>, <a href="HasProp.htm">HasProp</a>, <a href="Object.htm#OwnProps">OwnProps</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Zeigt die Verwendung dieser Funktion.</p>
+<pre>
+for EigenschaftName, EigenschaftWert in Props(Map("Schlüssel", "Wert"))
+    MsgBox EigenschaftName "=" EigenschaftWert
+</pre>
+</div>
+
+</body>
+</html>

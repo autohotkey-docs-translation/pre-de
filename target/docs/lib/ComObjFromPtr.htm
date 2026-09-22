@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>ComObjFromPtr - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die ComObjFromPtr-Funktion wrappt einen rohen IDispatch-Pointer (COM-Objekt), damit er vom Skript verwendet werden kann." />
+<meta name="ahk:equiv-v1" content="lib/ComObjActive.htm" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>ComObjFromPtr</h1>
+
+<p>Wrappt einen rohen <a href="https://learn.microsoft.com/windows/win32/api/oaidl/nn-oaidl-idispatch">IDispatch</a>-Pointer (COM-Objekt), damit er vom Skript verwendet werden kann.</p>
+<pre class="Syntax">ComObj := <span class="func">ComObjFromPtr</span>(DispPtr)</pre>
+
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>DispPtr</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Ein Interface-Pointer ungleich Null für IDispatch oder ein abgeleitetes Interface.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Returns">Rückgabewert</h2>
+<p>Typ: <a href="ComObject.htm">ComObject</a></p>
+<p>Gibt ein Wrapper-Objekt zurück, das den <a href="ComObjType.htm#vt">Variantentyp</a> VT_DISPATCH und den angegebenen Pointer enthält.</p>
+<p>Das Wrappen eines COM-Objekts ermöglicht dem Skript eine natürlichere Interaktion mit diesem mittels <a href="../Objects.htm#Usage_Objects">Objektsyntax</a>. Die meisten Skripte müssen dies jedoch nicht manuell tun, da <a href="ComObject.htm">ComObject</a>, <a href="ComObjActive.htm">ComObjActive</a>, <a href="ComObjGet.htm">ComObjGet</a> und andere COM-Methoden, die ein Objekt zurückgeben, automatisch ein Wrapper-Objekt erstellen.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Das Wrapper-Objekt übernimmt die Verantwortung für die automatische Freigabe des Pointers, falls erforderlich. Diese Funktion versucht, das IDispatch-Interface des Objekts <a href="ComObjQuery.htm">anzufordern</a>; bei Erfolg wird <em>DispPtr</em> sofort freigegeben. Wenn das Skript also den Pointer nach dem Aufruf dieser Funktion weiter verwenden will, muss es zuerst <code><a href="ObjAddRef.htm">ObjAddRef</a>(DispPtr)</code> aufrufen.</p>
+<p><b>Bekannte Einschränkung:</b> Jedes Mal, wenn ein COM-Objekt gewrappt wird, wird ein neues Wrapper-Objekt erstellt. Vergleiche und Zuweisungen wie <code>obj1 == obj2</code> und <code>arr[obj1] := Wert</code> behandeln die beiden Wrapper-Objekte als nicht identisch, auch wenn sie dasselbe COM-Objekt enthalten.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="ComObject.htm">ComObject</a>, <a href="ComValue.htm">ComValue</a>, <a href="ComObjGet.htm">ComObjGet</a>, <a href="ComObjConnect.htm">ComObjConnect</a>, <a href="ComObjFlags.htm">ComObjFlags</a>, <a href="ObjAddRef.htm">ObjAddRef/ObjRelease</a>, <a href="ComObjQuery.htm">ComObjQuery</a>, <a href="https://learn.microsoft.com/windows/win32/api/oleauto/nf-oleauto-getactiveobject">GetActiveObject (Microsoft Docs)</a></p>
+
+</body>
+</html>

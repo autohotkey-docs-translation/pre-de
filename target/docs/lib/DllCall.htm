@@ -1,0 +1,549 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>DllCall - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die DllCall-Funktion ruft eine Funktion aus einer DLL-Datei auf, z.B. eine API-Funktion von Windows." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>DllCall</h1>
+
+<p>Ruft eine Funktion aus einer DLL-Datei auf, z.B. eine API-Funktion von Windows.</p>
+
+<pre class="Syntax">Ergebnis := <span class="func">DllCall</span>("<span class="optional">DllDatei\</span>Funktion" <span class="optional">, Typ1, Arg1, Typ2, Arg2, "CDecl RückgabeTyp"</span>)</pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>[DllDatei\]Funktion</dt>
+  <dd>
+      <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a> oder <a href="../Concepts.htm#numbers">Integer</a></p>
+      <p>Der Name einer DLL- oder EXE-Datei, gefolgt von einem umgekehrten Schrägstrich und dem Namen der Funktion. Zum Beispiel: <code>"MeineDLL\MeineFunktion"</code> (wenn die Dateiendung weggelassen wird, wird standardmäßig ".dll" verwendet). Wenn kein absoluter Pfad angegeben ist, wird <em>DllDatei</em> in einem der Pfade aus der PATH-Umgebungsvariable oder im <a href="../Variables.htm#WorkingDir">A_WorkingDir</a>-Verzeichnis vermutet. Beachten Sie, dass DllCall einen Pfad mit umgekehrten Schrägstrichen (\) erwartet. Nach rechts gerichtete Schrägstriche (/) werden nicht unterstützt.</p>
+      <p id="std"><em>DllDatei</em> kann weggelassen werden, wenn eine Funktion aus den Systemdateien User32.dll, Kernel32.dll, ComCtl32.dll oder Gdi32.dll aufgerufen wird. Zum Beispiel liefert <code>"User32\IsWindowVisible"</code> dasselbe Ergebnis wie <code>"IsWindowVisible"</code>.</p>
+      <p>Wenn unter dem angegebenen Namen keine Funktion gefunden wird, wird automatisch ein W (Unicode) angefügt. Zum Beispiel ist <code>"MessageBox"</code> dasselbe wie <code>"MessageBoxW"</code>.</p>
+      <p>Wenn die DLL <em>wiederholt</em> aufgerufen wird, ist es ratsam, <a href="#load">sie vorher zu laden</a>, um die Performanz drastisch zu erhöhen.</p>
+      <p>Dieser Parameter kann auch ein reiner Integer sein, der als Adresse einer Funktion zum Aufrufen interpretiert wird. Quellen für solche Adressen sind u.a. <a href="#COM">COM</a> und <a href="CallbackCreate.htm">CallbackCreate</a>.</p>
+      <p>Wenn dieser Parameter ein Objekt ist, wird der Wert der Ptr-Eigenschaft des Objekts verwendet. Wenn diese Eigenschaft nicht existiert, wird ein <a href="Error.htm#PropertyError">PropertyError</a> ausgelöst.</p>
+  </dd>
+
+  <dt>Typ1, Arg1</dt>
+  <dd>
+      <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a> oder <a href="Class.htm">Klasse</a></p>
+      <p>Jedes dieser Paare repräsentiert einen einzelnen Parameter, der an die Funktion übergeben werden soll. Die Anzahl der Paare ist unbegrenzt. Geben Sie für <em>Typ</em> einen Typ aus den <a href="#types">Typentabellen</a> unten an. Geben Sie für <em>Arg</em> einen Wert an, der an die Funktion übergeben werden soll.</p>
+  </dd>
+
+  <dt>CDecl RückgabeTyp</dt>
+  <dd>
+      <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+      <p id="CDecl"><span id="cdecl"></span>Das Wort <em>CDecl</em> wird normalerweise weggelassen, da die meisten Funktionen die Standardaufrufkonvention anstelle der C-Aufrufkonvention verwenden (Funktionen wie wsprintf, die eine unterschiedliche Anzahl von Argumenten akzeptieren, sind eine Ausnahme). Beachten Sie, dass die meisten objektorientierten C++-Funktionen die nicht unterstützte <em>thiscall</em>-Konvention verwenden.</p>
+      <p>Das Wort <em>CDecl</em> muss vor dem Rückgabetyp (falls vorhanden) stehen. Trennen Sie alle Wörter jeweils durch ein Leer- oder Tabulatorzeichen. Zum Beispiel: <code>"CDecl Str"</code>.</p>
+      <p>Da es im 64-Bit-Code keine separate C-Aufrufkonvention gibt, hat die Angabe von <em>CDecl</em> in 64-Bit-Builds von AutoHotkey keine Wirkung.</p>
+      <p><span class="ver">[v2.1-alpha.3+]</span>: Die Angabe von <em>CDecl</em> ist selbst bei 32-Bit-Builds wirkungslos und kann daher weggelassen werden. Frühere Versionen nutzten die <em>CDecl</em>-Option nur, um festzustellen, ob der Stackpointer (ESP) nach dem Aufruf überprüft werden soll. Dies geschieht nun bedingungslos; allerdings werden Funktionen, die keine Parameter akzeptieren, als <em>CDecl</em> vermutet (da keiner der Aufrufe ESP ändern würde).</p>
+      <p><em>RückgabeTyp</em>: Wenn die Funktion einen vorzeichenfähigen 32-Bit-Integer (Int), BOOL oder nichts zurückgibt, kann <em>RückgabeTyp</em> weggelassen werden. Andernfalls geben Sie einen der Argumenttypen aus den <a href="#types">Typentabellen</a> unten an. <a href="#Pointer_Types">Pointertypen</a> werden ebenfalls unterstützt.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a> oder <a href="../Concepts.htm#numbers">Integer</a></p>
+<p>DllCall gibt den Rückgabewert von <em>Funktion</em> zurück. Wenn <em>Funktion</em> keinen Rückgabewert hat, ist das Ergebnis ein undefinierter Wert des angegebenen Rückgabetyps (standardmäßig Integer).</p>
+
+<h2 id="types">Typen von Argumenten und Rückgabewerten</h2>
+<p>Typnamen müssen als Zeichenketten übergeben werden – entweder in Anführungszeichen oder als Ergebnis eines Ausdrucks. In <span class="ver">[v2.1-alpha.3+]</span> kann eine <a href="../Structs.htm">Strukturklasse</a> als Argumenttyp verwendet werden.</p>
+<p>Übersicht:
+  </p><ul>
+    <li><a href="#String_Types">Zeichenkettentypen</a></li>
+    <li><a href="#Numeric_Types">Numerische Typen</a></li>
+    <li><a href="#Other_Types">Sonstige Typen</a></li>
+    <li><a href="#Unsigned_Integer_Types">Vorzeichenlose Integertypen</a></li>
+    <li><a href="#Pointer_Types">Pointertypen</a></li>
+  </ul></p>
+
+<h3 id="String_Types">Zeichenkettentypen</h3>
+<table class="info">
+<tr>
+<th>Name</th>
+<th abbr="Beschr">Beschreibung</th>
+</tr>
+<tr id="Str">
+<td><span id="str"></span>Str</td>
+<td>
+  <p>Eine Zeichenkette wie z.B. <code>"Blau"</code> oder <code>MeineVar</code>, oder eine <a href="../Concepts.htm#variable-references">VarRef</a> wie z.B. <code>&amp;MeineVar</code>. Wenn die aufgerufene Funktion die Zeichenkette ändert und das Argument eine reine Variable oder eine VarRef ist, wird der Inhalt der Variable aktualisiert. Zum Beispiel würde der folgende Aufruf den Inhalt von <em>MeineVar</em> in Großbuchstaben umwandeln: <code>DllCall("CharUpper", "Str", <i>MeineVar</i>)</code>.</p>
+  <p>Wenn die Funktion eine Zeichenkette zurückgibt, die länger ist als der Eingabewert des Parameters (oder wenn der Parameter nur für die Ausgabe bestimmt ist), wird die folgende Vorgehensweise empfohlen: 1) Erstellen Sie ein <a href="Buffer.htm">Buffer</a>, 2) übergeben Sie es mit dem <a href="#Ptr">Ptr</a>-Typ, und 3) rufen Sie die Zeichenkette nach Abschluss der Funktion mit <a href="StrGet.htm">StrGet</a> ab, wie im <a href="#ExWsprintf">wsprintf-Beispiel</a> gezeigt.</p>
+  <p>Andernfalls sollten Sie vor dem Funktionsaufruf sicherstellen, dass die Variable groß genug ist. Rufen Sie hierfür <code><a href="VarSetStrCapacity.htm">VarSetStrCapacity</a>(&amp;MeineVar, 123)</code> auf, wobei 123 die Anzahl der 16-Bit-Einheiten (umgangssprachlich auch Zeichen genannt) ist, die <em>MeineVar</em> maximal enthalten soll. Wenn die Variable bei Return nicht nullterminiert ist, wird eine Fehlermeldung angezeigt und das Programm beendet, da wahrscheinlich der Speicher durch einen Pufferüberlauf korrumpiert wurde. Dies deutet typischerweise darauf hin, dass die Kapazität der Variable unzureichend war.</p>
+  <p>Ein Str-Argument darf kein <a href="../Variables.htm#Expressions">Ausdruck</a> sein, der nach der Auswertung eine Zahl ergibt (z.B. <code>i+1</code>). Ist dies der Fall, wird die Funktion nicht aufgerufen und ein <a href="Error.htm#TypeError">TypeError</a> ausgelöst.</p>
+  <p id="strp">Der selten verwendete <a href="#Pointer_Types">Str*</a>-Argumenttyp übergibt die Adresse einer temporären Variable, die die Adresse der Zeichenkette enthält. Wenn die Funktion eine neue Adresse in die temporäre Variable schreibt, wird die neue Zeichenkette in die Variable des Skripts kopiert, sofern eine <a href="../Concepts.htm#variable-references">VarRef</a> übergeben wurde. Dies kann für Funktionen verwendet werden, die so etwas wie <code class="no-highlight">TCHAR **</code> oder <code class="no-highlight">LPTSTR *</code> erwarten. Wenn die Funktion jedoch Speicher reserviert und erwartet, dass der Aufrufer ihn wieder freigibt (z.B. durch Aufruf von <a href="https://learn.microsoft.com/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree">CoTaskMemFree</a>), muss stattdessen der <a href="#Pointer_Types">Ptr*</a>-Argumenttyp verwendet werden.</p>
+  <p class="note"><strong>Hinweis:</strong> Wenn Sie eine Zeichenkette an eine Funktion übergeben, müssen Sie darauf achten, welchen <a href="../Compat.htm#DllCall"><em>Typ</em> von Zeichenkette</a> die Funktion erwartet.</p></td>
+</tr>
+<tr id="WStr">
+  <td><span id="wstr"></span>WStr</td>
+  <td>Da AutoHotkey nativ UTF-16 verwendet, ist WStr (Wide Character String) äquivalent zu <a href="#Str">Str</a>.</td>
+</tr>
+<tr id="AStr">
+  <td><span id="astr"></span>AStr</td>
+  <td>
+    <p>AStr bewirkt, dass der Eingabewert automatisch in ANSI umgewandelt wird. Da der für diese Umwandlung verwendete temporäre Speicher nur groß genug für die umgewandelte Eingabezeichenkette ist, werden alle Werte, die die Funktion in diese Zeichenkette schreibt, verworfen. Um eine ANSI-Zeichenkette als Ausgabeparameter zu empfangen, gehen Sie wie folgt vor:</p>
+<pre>buf := Buffer(<i>Länge</i>)  <em>; Temporären Pufferspeicher reservieren.</em>
+DllCall("<i>Funktion</i>", "ptr", buf)  <em>; Pufferspeicher an Funktion übergeben.</em>
+str := StrGet(buf, "cp0")  <em>; ANSI-Zeichenkette aus dem Pufferspeicher abrufen.</em>
+</pre>
+    <p>Der selten verwendete <a href="#Pointer_Types">AStr*</a>-Argumenttyp wird ebenfalls unterstützt und verhält sich ähnlich wie der <a href="#strp">Str*</a>-Typ, außer dass jede neue Zeichenkette von ANSI in das native Format (UTF-16) umgewandelt wird.</p>
+    <p>Weitere Informationen und äquivalente Win32-Typen finden Sie unter <a href="../Compat.htm#DllCall">Binärkompatibilität</a>.</p>
+  </td>
+</tr>
+</table>
+
+<h3 id="Numeric_Types">Numerische Typen</h3>
+<p>In <span class="ver">[v2.1-alpha.23+]</span> können <a href="../Structs.htm#numeric-types">Typklassen</a> anstelle von Typnamen übergeben werden. Zum Beispiel ist <code>DllCall("Sleep", "UInt", 100)</code> dasselbe wie <code>DllCall("Sleep", UInt32, 100)</code>.</p>
+<table class="info">
+<tr>
+<th>Name</th>
+<th style="min-width: 5em;">Klasse</th>
+<th abbr="Beschr">Beschreibung</th>
+</tr>
+<tr id="Int64">
+  <td>Int64</td>
+  <td><code>Int64</code></td>
+  <td rowspan="2">
+    <p>Ein 64-Bit-Integer im Bereich von -9223372036854775808 (-0x8000000000000000) bis 9223372036854775807 (0x7FFFFFFFFFFFFFFF).</p>
+  </td>
+</tr>
+<tr id="UInt64">
+  <td>UInt64</td>
+  <td>N/A</td>
+</tr>
+<tr id="Int">
+  <td>Int</td>
+  <td><code>Int32</code></td>
+  <td rowspan="2">
+    <p>Ein 32-Bit-Integer (der am häufigsten verwendete Integertyp) im Bereich von -2147483648 (-0x80000000) bis 2147483647 (0x7FFFFFFF). Ein Int wird manchmal auch als "Long" bezeichnet. Ein Int sollte auch für BOOL-Argumente verwendet werden (ein BOOL-Wert ist entweder 1 oder 0). Ein <a href="#Unsigned_Integer_Types">vorzeichenloser</a> Integer (UInt) ist ebenfalls recht häufig vertreten und kann zum Beispiel für DWORD-Argumente verwendet werden.</p>
+  </td>
+</tr>
+<tr id="UInt">
+  <td>UInt</td>
+  <td><code>UInt32</code></td>
+</tr>
+<tr id="Short">
+  <td>Short</td>
+  <td><code>Int16</code></td>
+  <td rowspan="2">
+    <p>Ein 16-Bit-Integer im Bereich von -32768 (-0x8000) bis 32767 (0x7FFF). Ein <a href="#Unsigned_Integer_Types">vorzeichenloser</a> 16-Bit-Integer (UShort) kann zum Beispiel für DWORD-Argumente verwendet werden.</p>
+  </td>
+</tr>
+<tr id="UShort">
+  <td>UShort</td>
+  <td><code>UInt16</code></td>
+</tr>
+<tr id="Char">
+  <td>Char</td>
+  <td><code>Int8</code></td>
+  <td rowspan="2">
+    <p>Ein 8-Bit-Integer im Bereich von -128 (-0x80) bis 127 (0x7F). Ein <a href="#Unsigned_Integer_Types">vorzeichenloser</a> 8-Bit-Integer (UChar) kann zum Beispiel für BYTE-Argumente verwendet werden.</p>
+  </td>
+</tr>
+<tr id="UChar">
+  <td>UChar</td>
+  <td><code>UInt8</code></td>
+</tr>
+<tr id="Float">
+  <td>Float</td>
+  <td><code>Float32</code></td>
+  <td>
+    <p>Eine 32-Bit-Floating-Point-Zahl mit einer Genauigkeit von 6 Dezimalstellen.</p>
+  </td>
+</tr>
+<tr id="Double">
+  <td>Double</td>
+  <td><code>Float64</code></td>
+  <td>
+    <p>Eine 64-Bit-Floating-Point-Zahl mit einer Genauigkeit von 15 Dezimalstellen.</p>
+  </td>
+</tr>
+<tr id="Ptr">
+  <td><span id="ptr"></span>Ptr</td>
+  <td><code>IntPtr</code></td>
+  <td rowspan="2"><p>Ein <a href="../Variables.htm#PtrSize">pointergroßer</a> Integer, äquivalent zu <a href="#Int">Int</a> oder <a href="#Int64">Int64</a>, je nachdem, ob die EXE-Datei, die das Skript ausführt, 32-Bit oder 64-Bit ist. Ptr sollte für Pointer verwendet werden, die auf Arrays oder Strukturen verweisen (wie RECT* oder LPPOINT), und für fast alle Handles (wie HWND, HBRUSH oder HBITMAP). Wenn der Parameter ein Pointer ist, der auf einen einzelnen numerischen Wert verweist, wie z.B. LPDWORD oder Int*, sollte grundsätzlich ein <a href="#Pointer_Types">Pointertyp</a> anstelle von Ptr verwendet werden. <span class="ver">[v2.1-alpha.22+]</span>: Für Pointer, die auf Strukturen verweisen, sollten in der Regel die spezifischeren <a href="../Structs.htm#pointers">Pointerklassen</a> verwendet werden.</p>
+  <p><a href="#Pointer_Types">Ptr*</a> wird ebenfalls unterstützt; es sollte mit Funktionen verwendet werden, die einen Pointer via LPVOID* oder ähnliches zurückgeben.</p>
+  <p>Wenn ein Objekt an ein Ptr-Argument übergeben wird, wird der Wert der Ptr-Eigenschaft des Objekts verwendet. Wenn diese Eigenschaft nicht existiert, wird ein <a href="Error.htm#PropertyError">PropertyError</a> ausgelöst. Das Objekt ist typischerweise ein <a href="Buffer.htm">Buffer</a>.</p>
+  <p>Wenn ein Objekt an ein <a href="#Pointer_Types">Ptr*</a>-Argument übergeben wird, wird der Wert der Ptr-Eigenschaft des Objekts vor dem Aufruf abgerufen und die Adresse einer temporären Variable, die diesen Wert enthält, an die Funktion übergeben. Nach Abschluss der Funktion wird der neue Wert wieder der Ptr-Eigenschaft des Objekts zugewiesen.</p>
+  <p>Ein <a href="#Unsigned_Integer_Types">vorzeichenloser</a> Pointer (UPtr) ist ebenfalls gültig, allerdings mit den folgenden Einschränkungen: 1) Er ist nur in 32-Bit-Builds vorzeichenlos, da AutoHotkey keine vorzeichenlosen 64-Bit-Integer unterstützt, und 2) Objekte sind nicht erlaubt.</p>
+  <p class="note"><strong>Hinweis:</strong> Um ein <strong>NULL</strong>-Handle oder -Pointer zu übergeben, verwenden Sie den Integer 0.</p></td>
+</tr>
+<tr id="UPtr">
+  <td>UPtr</td>
+  <td>N/A</td>
+</tr>
+</table>
+
+<h3 id="Other_Types">Sonstige Typen</h3>
+<table class="info">
+<tr>
+<th>Name</th>
+<th abbr="Beschr">Beschreibung</th>
+</tr>
+<tr id="HRESULT">
+  <td>HRESULT</td>
+  <td>
+    <p>Ein 32-Bit-Integer. Dies wird grundsätzlich für COM-Funktionen verwendet und ist nur als Rückgabetyp ohne Präfix oder Suffix gültig. Fehlerwerte (wie durch das <a href="https://learn.microsoft.com/windows/win32/api/winerror/nf-winerror-failed">FAILED-Makro</a> definiert) werden nie zurückgegeben; stattdessen wird ein <a href="Error.htm#OSError">OSError</a> ausgelöst. Daher ist der Rückgabewert ein Erfolgscode im Bereich von 0 bis 2147483647.</p>
+    <p>HRESULT ist der reguläre Rückgabetyp für <a href="ComCall.htm">ComCall</a>.</p>
+  </td>
+</tr>
+<tr id="Class">
+  <td><em>Klasse</em></td>
+  <td>
+    <p><span class="ver">[v2.1-alpha.3+]</span>: Eine <a href="../Structs.htm">Struktur</a> oder ein <a href="../Structs.htm#abstract">abstrakter Typ</a>, der als Wert übergeben werden soll. <em>Klasse</em> muss eine Referenz auf das Klassenobjekt sein, das die Struktur definiert. Die Klasse und andere Argumenttypen können mit <a href="Func.htm#Bind">Bind</a> verbunden werden, um ein Funktionsobjekt zu erstellen, das sich natürlicher aufrufen lässt, ohne dass bei jedem Aufruf die Parametertypen oder der Umwandlungscode wiederholt werden müssen.</p>
+    <p>Wenn der Parameterwert keine Instanz der Klasse ist, wird automatisch eine Instanz konstruiert (ohne Aufruf der statischen Call-Methode) und ihrer <a href="../Structs.htm#abstract">__Value-Eigenschaft</a> der Parameterwert zugewiesen (oder auf <code>unset</code> gesetzt, falls der Parameter weggelassen wurde).</p>
+    <p>Zum Beispiel verwendet man diesen Argumenttyp bei der <a href="https://learn.microsoft.com/windows/win32/api/winuser/nf-winuser-windowfrompoint">WindowFromPoint</a>-Funktion, da diese eine POINT-Struktur als Wert akzeptiert. <a href="https://learn.microsoft.com/windows/win32/api/winuser/nf-winuser-getwindowrect">GetWindowRect</a> akzeptiert hingegen kein RECT, sondern einen Pointer, der auf ein RECT verweist.</p>
+    <p><span class="ver">[v2.1-alpha.22+]</span>: <em>Klasse</em> muss von <a href="Struct.htm">Struct</a> abgeleitet werden.</p>
+    <p><span class="ver">[v2.1-alpha.26+]</span>: Wenn der Parameterwert weggelassen wird oder <code>unset</code> ist, und keine __Value-Eigenschaft definiert ist, wird kein Fehler ausgelöst. Stattdessen wird der Funktion eine Strukturinstanz übergeben, mit Standardwerten bei allen Feldern.</p>
+  </td>
+</tr>
+<tr id="void">
+  <td>void</td>
+  <td>
+    <p><span class="ver">[v2.1-alpha.30+]</span>: Kein Wert. Diese Zeichenkette kann nur als Rückgabetyp verwendet werden. DllCall gibt <a href="../v2.1-changes.htm#blank-unset"><em>leer-ungesetzt</em></a> zurück. Wenn <em>Funktion</em> einen Wert zurückgibt, wird dieser ignoriert.</p>
+  </td>
+</tr>
+</table>
+
+<span id="unsigned"></span><h3 id="Unsigned_Integer_Types">Vorzeichenlose Integertypen</h3>
+<p>Stellen Sie einem der obigen <a href="#Numeric_Types">Integertypen</a> den Buchstaben U voran, um den entsprechenden Wert als vorzeichenlosen Integer zu interpretieren (<a href="#UInt64">UInt64</a>, <a href="#UInt">UInt</a>, <a href="#UShort">UShort</a>, <a href="#UChar">UChar</a> und <a href="#UPtr">UPtr</a>). Streng genommen ist das nur für Rückgabetypen und <a href="#Pointer_Types">Pointertypen</a> notwendig, da es keine Rolle spielt, ob ein als Wert übergebenes Argument vorzeichenfähig oder vorzeichenlos ist (außer für <a href="#Int64">Int64</a>).</p>
+<p>Wenn ein negativer Integer bei einem vorzeichenlosen Argument angegeben ist, wechselt der Integer in den vorzeichenlosen Bereich. Zum Beispiel wird -1 zu 0xFFFFFFFF, wenn es als <a href="#UInt">UInt</a> gesendet wird.</p>
+<p><em>Vorzeichenlose</em> 64-Bit-Integer, die von einer Funktion erzeugt werden, werden nicht unterstützt. Um mit Zahlen größer gleich 0x8000000000000000 zu arbeiten, verzichten Sie auf das U-Präfix und interpretieren Sie alle negativen Werte, die von der Funktion zurückgegeben werden, als große Integer (Int64). Zum Beispiel wird eine Funktion, die -1 als <a href="#Int64">Int64</a> zurückgibt, eigentlich 0xFFFFFFFFFFFFFFFF zurückgeben, wenn sie für die Rückgabe eines <a href="#UInt64">UInt64</a> ausgelegt ist.</p>
+
+<span id="asterisk"></span><h3 id="Pointer_Types">Pointertypen</h3>
+<td><p>Fügen Sie ein Sternchen oder den Buchstaben P (beide optional mit Leerzeichen davor) an einen der obigen Typnamen für <a href="#String_Types">Zeichenketten</a> oder <a href="#Numeric_Types">Zahlen</a> an, um nicht den Wert selbst, sondern die Adresse des Arguments zu übergeben (die aufgerufene Funktion muss dafür ausgelegt sein, so etwas zu akzeptieren). Da der Wert eines solchen Arguments von der Funktion geändert werden kann, wird jedes Mal, wenn eine <a href="../Concepts.htm#variable-references">VarRef</a> als Argument übergeben wird, der Inhalt der Variable nach Abschluss der Funktion aktualisiert. Zum Beispiel würde der folgende Aufruf den Inhalt von MeineVar an MeineFunktion per Adresse übergeben, aber auch den Inhalt von MeineVar aktualisieren, um alle Änderungen widerzuspiegeln, die MeineFunktion an MeineVar vorgenommen hat: <code>DllCall("MeineDLL\MeineFunktion", "Int*", &amp;MeineVar)</code>.</p>
+<p>In der Regel wird ein Pointertyp verwendet, wenn eine Funktion einen Argument- oder Rückgabetyp hat, der mit "LP" beginnt. Das bekannteste Beispiel dafür ist LPDWORD (ein Pointer, der auf ein DWORD verweist). Da DWORD ein vorzeichenloser 32-Bit-Integer ist, können Sie <a href="#Pointer_Types">UInt*</a> oder <a href="#Pointer_Types">UIntP</a> für LPDWORD verwenden. Ein Pointertyp sollte nicht für Zeichenkettentypen wie LPTSTR, auf Strukturen verweisende Pointer wie LPRECT, oder Arrays verwendet werden; für solche Typen ist <a href="#Str">Str</a> oder <a href="#Ptr">Ptr</a> besser geeignet, je nachdem, ob eine Zeichenkette, eine Adresse oder ein <a href="Buffer.htm">Buffer</a> übergeben wird.</p>
+<p class="note"><strong>Hinweis:</strong> <a href="#Pointer_Types">Char*</a> ist nicht dasselbe wie <a href="#Str">Str</a>, weil <a href="#Pointer_Types">Char*</a> die Adresse einer 8-Bit-Zahl übergibt, während <a href="#Str">Str</a> die Adresse einer Zeichenkette übergibt, die je nach AutoHotkey-Version 16-Bit (Unicode) oder 8-Bit (für <a href="#AStr">AStr</a>) ist. Ähnlich verhält es sich mit <a href="#Pointer_Types">UInt*</a>: Da dieser Typ die Adresse einer 32-Bit-Zahl übergibt, ist er nicht für Funktionen geeignet, die ein Array mit Werten oder eine Struktur größer als 32 Bit erwarten.</p>
+<p>Da Variablen in AutoHotkey keinen festen Typ haben, verweist eine an die Funktion übergebene Adresse auf einen temporären Speicher, nicht auf die Variable des Aufrufers.</p>
+<p><span class="ver">[v2.1-alpha.22+]</span>: Eine <a href="../Structs.htm#pointers">Pointerklasse</a> funktioniert ähnlich und kann für Strukturen verwendet werden.</p>
+<p><span class="ver">[v2.1-alpha.23+]</span>: Jede <a href="../Structs.htm#numeric-types">numerische Typklasse</a> hat ihre eigene Pointerklasse, was äquivalent zum entsprechenden Typnamen ist. Zum Beispiel ist <code>Int32.Ptr</code> dasselbe wie <code>"Int*"</code>.</p>
+</td>
+
+<h2 id="error">Fehlerbehandlung</h2>
+<p>DllCall löst einen <a href="Error.htm">Error</a> aus, wenn eine der folgenden Bedingungen zutrifft:</p>
+<ul>
+  <li><a href="Error.htm#OSError">OSError</a>: Der <a href="#HRESULT">HRESULT</a>-Rückgabetyp wurde verwendet und die Funktion hat einen Fehlerwert (wie durch das <a href="https://learn.microsoft.com/windows/win32/api/winerror/nf-winerror-failed">FAILED-Makro</a> definiert) zurückgegeben. <code>Exception.Extra</code> enthält den hexadezimalen Fehlercode.</li>
+  <li><a href="Error.htm#TypeError">TypeError</a>: Der <em>[DllDatei\]Funktion</em>-Parameter ist eine Floating-Point-Zahl. Es wird eine Zeichenkette oder ein positiver Integer benötigt.</li>
+  <li><a href="Error.htm#ValueError">ValueError</a>: Der <a href="#types">Rückgabetyp</a> oder einer der angegebenen <a href="#types">Argumenttypen</a> ist ungültig.</li>
+  <li><a href="Error.htm#TypeError">TypeError</a>: Einem Argument wurde ein Wert unerwarteten Typs übergeben. Zum Beispiel die Übergabe eines <a href="../Variables.htm#Expressions">Ausdrucks</a>, dessen Auswertung eine Zahl ergibt, an ein Zeichenkettenargument (<a href="#Str">Str</a>), die Übergabe einer nicht-numerischen Zeichenkette an ein numerisches Argument oder die Übergabe eines Objekts an ein Argument, das <em>nicht</em> vom Typ <a href="#Ptr">Ptr</a> ist.</li>
+  <li><a href="Error.htm">Error</a>: Die angegebene <em>DllDatei</em> konnte nicht gelesen oder geladen werden. Wenn kein expliziter Pfad für <em>DllDatei</em> angegeben wurde, muss die Datei in einem der Pfade aus der PATH-Umgebungsvariable oder im <a href="../Variables.htm#WorkingDir">A_WorkingDir</a>-Verzeichnis vorhanden sein. Dieser Fehler kann auch auftreten, wenn der Benutzer keine Zugriffsrechte auf die Datei hat, oder wenn man mit einem 32-Bit-Build von AutoHotkey auf eine 64-Bit-DLL zugreift (oder umgekehrt).</li>
+  <li><a href="Error.htm">Error</a>: Die angegebene Funktion konnte in der DLL nicht gefunden werden.</li>
+  <li><a href="Error.htm">Error</a>: Die Funktion wurde aufgerufen, aber mit einer fatalen Ausnahme abgebrochen. <code>Exception.Extra</code> enthält den Ausnahmecode. 0xC0000005 bedeutet z.B. "Zugriffsverletzung". In solchen Fällen wird der Thread unterbrochen (wenn <a href="Try.htm">Try</a> nicht verwendet wird), während alle <a href="#Pointer_Types">Pointertypen</a> weiter aktualisiert werden. Eine fatale Ausnahme ist zum Beispiel die Dereferenzierung eines ungültigen Pointers wie NULL (0). Da eine <a href="#CDecl">CDecl</a>- oder x64-Funktion niemals den im nächsten Absatz beschriebenen Fehler erzeugt, löst die Funktion stattdessen eine Ausnahme aus, wenn ihr zu wenig Argumente übergeben werden.</li>
+  <li><a href="Error.htm">Error</a>: Die Funktion wurde erfolgreich aufgerufen, aber ihr wurden zu viele oder zu wenig Argumente übergeben. <code>Exception.Extra</code> enthält die Anzahl der Bytes, um wie viel die Argumentenliste inkorrekt war. Wenn es positiv ist, wurden zu viele Argumente (oder zu lange Argumente) übergeben, oder (vor <span class="ver">[v2.1-alpha.2]</span>) der Aufruf benötigt <a href="#CDecl">CDecl</a>. Wenn es negativ ist, wurden zu wenig Argumente übergeben. Dieser Fehler sollte behoben werden, um einen zuverlässigen Betrieb der Funktion zu gewährleisten. Dieser Fehler könnte auch ein Indikator dafür sein, dass eine Ausnahme aufgetreten ist. Beachten Sie, dass 64-Bit-Builds von AutoHotkey aufgrund der x64-Aufrufkonvention nicht in der Lage sind, diesen Fehler auszulösen.</li>
+</ul>
+
+<h2 id="except">Native Ausnahmen und A_LastError</h2>
+<p>Trotz der internen Ausnahmebehandlung kann ein DllCall das Skript immer noch zum Absturz bringen. Dies kann passieren, wenn eine Funktion nicht direkt eine Ausnahme auslöst, sondern etwas Falsches zurückgibt, wie z.B. einen fehlerhaften Pointer oder eine nicht-terminierte Zeichenkette. Dies ist nicht unbedingt die Schuld der Funktion, wenn das Skript ihr einen ungeeigneten Wert übergeben hat, wie z.B. einen fehlerhaften Pointer oder ein <a href="#Str">Str</a> mit unzureichender Kapazität. Ein Skript kann auch abstürzen, wenn es einen ungeeigneten Argument- oder Rückgabetyp spezifiziert, z.B. wenn es behauptet, dass ein gewöhnlicher Integer, der von einer Funktion zurückgegeben wird, ein <a href="#Pointer_Types">Pointertyp</a> oder <a href="#String_Types">Zeichenkettentyp</a> ist.</p>
+<p>Die interne Variable <a href="../Variables.htm#LastError">A_LastError</a> enthält das Ergebnis der Systemfunktion GetLastError().</p>
+
+<h2 id="load">Performanz</h2>
+<p>Wenn die DLL wiederholt aufgerufen wird, ist es ratsam, sie vorher zu laden, um die Performanz drastisch zu erhöhen (<em>das ist für eine <a href="#std">Standard-DLL</a> wie User32 nicht notwendig, da sie immer allgegenwärtig ist</em>). Dadurch wird vermieden, dass DllCall jedes Mal LoadLibrary und FreeLibrary intern aufrufen muss. Zum Beispiel:</p>
+<pre>hModule := DllCall("LoadLibrary", "Str", "MeineFunktionen.dll", "Ptr")  <em>; Verhindert, dass DllCall die Bibliothek in der Schleife laden muss.</em>
+Loop Files, "C:\Meine Dokumente\*.*", "R"
+    Ergebnis := DllCall("MeineFunktionen\DateiSichern", "Str", A_LoopFilePath)
+DllCall("FreeLibrary", "Ptr", hModule)  <em>; Um Speicherplatz zu sparen, kann die DLL nach Gebrauch wieder freigegeben werden.</em></pre>
+<p>Um die Performanz noch weiter zu erhöhen, kann die Adresse der Funktion im Voraus ermittelt werden. Zum Beispiel:</p>
+<pre><em>; Verwenden Sie in der folgenden Zeile LoadLibrary anstelle von GetModuleHandle, wenn die DLL noch nicht geladen ist.</em>
+MulDivProc := DllCall("GetProcAddress", "Ptr", DllCall("GetModuleHandle", "Str", "kernel32", "Ptr"), "AStr", "MulDiv", "Ptr")
+Loop 500
+    DllCall(MulDivProc, "Int", 3, "Int", 4, "Int", 3)</pre>
+<p>Wenn der erste Parameter von DllCall eine direkt geschriebene Zeichenkette wie <code>"MulDiv"</code> ist und die DLL der entsprechenden Funktion normal vor dem Start des Skripts geladen wird, oder erfolgreich mit <a href="_DllLoad.htm">#DllLoad</a> geladen wurde, wird die Zeichenkette automatisch in eine Funktionsadresse aufgelöst. Diese interne Optimierung ist effizienter als das obige Beispiel.</p>
+<p>Übergibt man eine Zeichenkettenvariable an eine Funktion, die die Länge der Zeichenkette nicht ändert, kann die Performanz erhöht werden, indem man die Variable <a href="StrPtr.htm">per Adresse</a> (z.B. <code>StrPtr(MeineVar)</code>) statt als <a href="#Str">Str</a> übergibt (insbesondere dann, wenn die Zeichenkette sehr lang ist). Das folgende Beispiel wandelt alle Buchstaben einer Zeichenkette in Großbuchstaben um: <code>DllCall("CharUpper", "<strong>Ptr</strong>", StrPtr(MeineVar), "Ptr")</code>.</p>
+
+<h2 id="struct">Strukturen und Arrays</h2>
+<p>Eine Struktur ist eine Sammlung von <em>Elementen</em> (Feldern), die nebeneinander im Speicher abgelegt sind. Die meisten Elemente sind für gewöhnlich Integer.</p>
+<p class="note"><strong>Hinweis:</strong> In <span class="ver">[v2.1-alpha.3+]</span> können typisierte Eigenschaften für die Definition von Strukturen verwendet werden. Siehe <a href="../Structs.htm">Strukturen</a>.</p>
+<p>Funktionen, die die Adresse einer Struktur (oder eines Speicherblock-Arrays) akzeptieren, können aufgerufen werden, indem man Speicher auf irgendeine Weise reserviert und die Speicheradresse an die Funktion übergibt. Hierfür wird das <a href="Buffer.htm">Buffer</a>-Objekt empfohlen. In der Regel geht man wie folgt vor:</p>
+<p>1) Rufen Sie <code>MeineStrukt := Buffer(123, 0)</code> auf, um Pufferspeicher für die Strukturdaten zu reservieren. Ersetzen Sie <code>123</code> mit einer Zahl, die mindestens der Größe der Struktur entspricht (in Bytes). Die 0 im letzten Parameter ist optional und bewirkt, dass alle Strukturelemente mit einer binären Null initialisiert werden, um häufige Aufrufe von NumPut zu vermeiden, wie im nächsten Schritt beschrieben.</p>
+<p>2) Wenn die Zielfunktion bereits zu Beginn bestimmte Werte in der Struktur benötigt, rufen Sie <code><a href="NumPut.htm">NumPut</a>("UInt", 123, MeineStrukt, 4)</code> auf, um ein beliebiges Element auf einen Wert ungleich 0 zu setzen. Ersetzen Sie <code>123</code> mit einem Integer, auf dem das Zielelement gesetzt werden soll (oder geben Sie <code>StrPtr(Var)</code> an, um die Adresse einer Zeichenkette zu hinterlegen). Ersetzen Sie <code>4</code> mit dem Offset des Zielelements (siehe Schritt #4, was ein "Offset" ist). Ersetzen Sie <code>"UInt"</code> mit dem entsprechenden Typ, z.B. <code>"Ptr"</code>, wenn das Element ein Pointer oder Handle ist.</p>
+<p>3) Rufen Sie die Zielfunktion auf und übergeben Sie <em>MeineStrukt</em> als <a href="#Ptr">Ptr</a>-Argument. Zum Beispiel <code>DllCall("MeineDLL\MeineFunk", "Ptr", MeineStrukt)</code>. Die Funktion wird einige Elemente auswerten und/oder ändern. DllCall verwendet automatisch die Adresse des Pufferspeichers, die normalerweise mit <code>MeineStrukt.Ptr</code> abgerufen wird.</p>
+<p>4) Verwenden Sie <code>MeinInteger := <a href="NumGet.htm">NumGet</a>(MeineStrukt, 4, "UInt")</code>, um einen beliebigen Integer aus der Struktur abzurufen. Ersetzen Sie <code>4</code> mit dem Offset des Zielelements in der Struktur. Das erste Element befindet sich immer auf Offset 0. Das zweite Element befindet sich auf Offset 0 plus der Größe des ersten Elements (typischerweise 4). Jedes nachfolgende Element befindet sich auf dem Offset des vorherigen Elements plus der Größe des vorherigen Elements. Die meisten Elemente -- wie z.B. DWORD, Int und <a href="#Int">andere Typen von 32-Bit-Integern</a> -- haben eine Größe von 4 Bytes. Ersetzen Sie <code>"UInt"</code> mit dem entsprechenden Typ, z.B. <code>"Ptr"</code>, wenn das Element ein Pointer oder Handle ist.</p>
+<p>Beispiele für Strukturen finden Sie im <a href="#ExStruct">Beispielabschnitt</a> weiter unten.</p>
+
+<h2 id="limits">Bekannte Einschränkungen</h2>
+<p>Übergibt man die Zeichenkettenadresse einer Variable (z.B. <code>StrPtr(MeineVar)</code>) an eine Funktion, die die Länge des Variableninhalts ändert, kann es vorkommen, dass die Variable bei späterer Verwendung ein fehlerhaftes Verhalten aufweist. Um das zu verhindern, gibt es folgende Lösungsmöglichkeiten: 1) Übergeben Sie <em>MeineVar</em> als <a href="#Str">Str</a>-Argument, nicht als <a href="#Ptr">Ptr</a>; 2) Rufen Sie <code><a href="VarSetStrCapacity.htm#neg1">VarSetStrCapacity</a>(&amp;MeineVar, -1)</code> auf, um die intern gespeicherte Länge der Variable nach dem Aufruf von DllCall zu aktualisieren.</p>
+<p>Eine binäre Null, die von einer Funktion in einer Variable hinterlegt wurde, kann als Terminator fungieren, wodurch alle Daten rechts von der Null von den meisten internen Funktionen weder abgerufen noch geändert werden können. Allerdings können solche Daten manipuliert werden, indem die Adresse der Zeichenkette via <a href="StrPtr.htm">StrPtr</a> abgerufen und an andere Funktionen wie <a href="NumPut.htm">NumPut</a>, <a href="NumGet.htm">NumGet</a>, <a href="StrGet.htm">StrGet</a>, <a href="StrPut.htm">StrPut</a> und DllCall selbst übergeben wird.</p>
+<p>Eine Funktion, die die Adresse einer der ihr übergebenen Zeichenketten zurückgibt, kann eine identische Zeichenkette zurückgeben, die auf einer anderen Speicheradresse liegt als erwartet. Zum Beispiel würde der Aufruf von <code>CharLower(CharUpper(MeineVar))</code> in einer anderen Programmiersprache bewirken, dass der Inhalt von <em>MeineVar</em> in Kleinbuchstaben umgewandelt wird. Aber wenn dasselbe mit DllCall gemacht wird, wäre <em>MeineVar</em> nach dem folgenden Aufruf in Großbuchstaben, weil CharLower mit einer anderen/temporären Zeichenkette gearbeitet hat, die mit <em>MeineVar</em> identisch ist:</p>
+<pre>MeineVar := "ABC"
+Ergebnis := DllCall("CharLower", "<strong><u>Str</u></strong>", DllCall("CharUpper", "Str", MeineVar, "<strong><u>Str</u></strong>"), "Str")</pre>
+<p>Um das zu umgehen, ersetzen Sie oben die zwei unterstrichenen Str-Werte mit Ptr. Dadurch wird sichergestellt, dass der Rückgabewert von CharUpper als reine Adresse interpretiert wird, die dann als Integer an CharLower übergeben wird.</p>
+<p>Beim Umgang mit Zeichenketten kann es zu Einschränkungen kommen. Weitere Informationen finden Sie unter <a href="../Compat.htm#DllCall">Binärkompatibilität</a>.</p>
+
+<h2 id="COM">Component Object Model (COM)</h2>
+<p>COM-Objekte, auf die VBScript und ähnliche Programmiersprachen zugreifen können, sind in der Regel auch für AutoHotkey über <a href="ComObject.htm">ComObject</a>, <a href="ComObjGet.htm">ComObjGet</a> oder <a href="ComObjActive.htm">ComObjActive</a> und die interne <a href="../Objects.htm#Usage_Objects">Objektsyntax</a> zugänglich.</p>
+<p>COM-Objekte, die <a href="https://learn.microsoft.com/windows/win32/api/oaidl/nn-oaidl-idispatch">IDispatch</a> nicht unterstützen, können mit DllCall verwendet werden, indem die Adresse einer Funktion aus der virtuellen Funktionstabelle des Objekt-Interfaces ermittelt wird. Weitere Informationen finden Sie <a href="#ExTaskbar">im Beispiel</a> weiter unten. Allerdings ist es in der Regel besser, <a href="ComCall.htm">ComCall</a> zu verwenden, was diese Prozedur vereinfacht.</p>
+
+<h2 id="dotnet">.NET Framework</h2>
+<p>.NET Framework-Bibliotheken werden von einer "virtuellen Maschine" ausgeführt, die als Common Language Runtime (CLR) bekannt ist. In diesem Fall sind .NET-DLL-Dateien anders formatiert als normale DLL-Dateien und enthalten in der Regel keine Funktionen, die von DllCall aufgerufen werden können.</p>
+<p>AutoHotkey kann jedoch die CLR über <a href="https://learn.microsoft.com/dotnet/standard/native-interop/com-callable-wrapper">COM Callable Wrapper</a> nutzen. Sofern die Bibliothek nicht auch als allgemeine COM-Komponente registriert ist, muss die CLR selbst zunächst manuell über DllCall initialisiert werden. Weitere Informationen finden Sie unter <a href="https://www.autohotkey.com/boards/viewtopic.php?t=4633">.NET Framework Interop</a>.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="../Compat.htm#DllCall">Binärkompatibilität</a>, <a href="Buffer.htm">Buffer-Objekt</a>, <a href="ComCall.htm">ComCall</a>, <a href="PostMessage.htm">PostMessage</a>, <a href="OnMessage.htm">OnMessage</a>, <a href="CallbackCreate.htm">CallbackCreate</a>, <a href="Run.htm">Run</a>, <a href="VarSetStrCapacity.htm">VarSetStrCapacity</a>, <a href="../Functions.htm">Funktionen</a>, <a href="SysGet.htm">SysGet</a>, <a href="_DllLoad.htm">#DllLoad</a>, <a href="https://learn.microsoft.com/windows/win32/apiindex/windows-api-list">Windows API Index</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExMessageBox">
+<p><a class="ex_number" href="#ExMessageBox"></a> Ruft die Windows-API-Funktion "MessageBox" auf und meldet, welche Schaltfläche der Benutzer gedrückt hat.</p>
+<pre>WelcheSchaltfl := DllCall("MessageBox", "Int", 0, "Str", "Ja oder Nein drücken", "Str", "Titel der Box", "Int", 4)
+MsgBox "Sie haben die Schaltfläche Nr. %WelcheSchaltfl% gedrückt."</pre>
+</div>
+
+<div class="ex" id="ExWallpaper">
+<p><a class="ex_number" href="#ExWallpaper"></a> Ersetzt das Hintergrundbild des Desktops mit der angegebenen Bitmap-Datei (.bmp).</p>
+<pre>DllCall("SystemParametersInfo", "UInt", 0x14, "UInt", 0, "Str", A_WinDir . "\winnt.bmp", "UInt", 1)</pre>
+</div>
+
+<div class="ex" id="ExIsWindowVisible">
+<p><a class="ex_number" href="#ExIsWindowVisible"></a> Ruft die API-Funktion "IsWindowVisible" auf, um herauszufinden, ob ein Notepad-Fenster sichtbar ist.</p>
+<pre>DetectHiddenWindows True
+if not DllCall("IsWindowVisible", "Ptr", WinExist("Unbenannt - Editor"))  <em>; WinExist gibt ein HWND zurück.</em>
+    MsgBox "Das Fenster ist nicht sichtbar."</pre>
+</div>
+
+<div class="ex" id="ExWsprintf">
+<p><a class="ex_number" href="#ExWsprintf"></a> Ruft die API-Funktion wsprintf() auf, um die linke Seite der Zahl 432 mit Nullen zu füllen, bis sie 10 Zeichen breit ist (0000000432).</p>
+<pre>AufgefüllteZahl := Buffer(20)  <em>; Stellt sicher, dass der Pufferspeicher groß genug für die neue Zeichenkette ist.</em>
+DllCall("wsprintf", "Ptr", AufgefüllteZahl, "Str", "%010d", "Int", 432, "CDecl")  <em>; Benötigt die CDecl-Aufrufkonvention.</em>
+MsgBox StrGet(AufgefüllteZahl)
+
+<em>; Alternativ kann die <a href="Format.htm">Format</a>-Funktion mit dem Null-Flag verwendet werden:</em>
+MsgBox Format("{:010}", 432)
+</pre>
+</div>
+
+<div class="ex" id="ExQPC">
+<p><a class="ex_number" href="#ExQPC"></a> Zeigt, wie mit QueryPerformanceCounter() eine höhere Präzision als die 10&nbsp;ms von <a href="../Variables.htm#TickCount">A_TickCount</a> erreicht werden kann.</p>
+<pre>DllCall("QueryPerformanceFrequency", "Int64*", &amp;freq := 0)
+DllCall("QueryPerformanceCounter", "Int64*", &amp;CounterDavor := 0)
+Sleep 1000
+DllCall("QueryPerformanceCounter", "Int64*", &amp;CounterDanach := 0)
+MsgBox "Die Differenz zwischen den Zeiten beträgt " . (CounterDanach - CounterDavor) / freq * 1000 " ms"</pre>
+</div>
+
+<div class="ex" id="ExMouseSpeed">
+<p><a class="ex_number" href="#ExMouseSpeed"></a> Drücken Sie einen Hotkey, um die Geschwindigkeit des Mauszeigers vorübergehend zu verringern, was eine genauere Positionierung ermöglicht. Halten Sie <kbd>F1</kbd> gedrückt, um den Mauszeiger zu verlangsamen. Lassen Sie die Taste wieder los, um die originale Geschwindigkeit wiederherzustellen.</p>
+
+<pre>
+F1::
+F1 up::
+{
+    static SPI_GETMOUSESPEED := 0x70
+    static SPI_SETMOUSESPEED := 0x71
+    static OrigMausGeschw := 0
+    
+    switch ThisHotkey
+    {
+    case "F1":
+        <em>; Ruft die aktuelle Geschwindigkeit ab, um sie später wiederherzustellen:</em>
+        DllCall("SystemParametersInfo", "UInt", SPI_GETMOUSESPEED, "UInt", 0, "Ptr*", &amp;OrigMausGeschw, "UInt", 0)
+        <em>; Verringert nun die Geschwindigkeit des Mauszeigers im vorletzten Parameter (im Bereich von 1 bis 20, 10 ist Standard):</em>
+        DllCall("SystemParametersInfo", "UInt", SPI_SETMOUSESPEED, "UInt", 0, "Ptr", 3, "UInt", 0)
+        KeyWait "F1"  <em>; Verhindert, dass DllCall durch die Autowiederholung der Tastatur wiederholt aufgerufen wird.</em>
+        
+    case "F1 up":
+        DllCall("SystemParametersInfo", "UInt", SPI_SETMOUSESPEED, "UInt", 0, "Ptr", OrigMausGeschw, "UInt", 0)  <em>; Stellt die Originalgeschwindigkeit wieder her.</em>
+    }
+}</pre>
+</div>
+
+<div class="ex" id="ExWatchScrollBar">
+<p><a class="ex_number" href="#ExWatchScrollBar"></a> Überwacht das aktive Fenster und zeigt die Position des vertikalen Scrollbalkens seines fokussierten Steuerelements an (in Echtzeit).</p>
+<pre>SetTimer ScrollbalkenÜberwachen, 100
+
+ScrollbalkenÜberwachen()
+{
+    FokusHwnd := 0
+    try FokusHwnd := ControlGetFocus("A")
+    if !FokusHwnd  <em>; Kein Steuerelement fokussiert.</em>
+        return
+    <em>; Vertikale oder horizontale Position des Scrollbalkens in einem Tooltip anzeigen:</em>
+    ToolTip DllCall("GetScrollPos", "Ptr", FokusHwnd, "Int", 1)  <em>;  Letzter Parameter kann 1 für SB_VERT und 0 für SB_HORZ sein.</em>
+}</pre>
+</div>
+
+<div class="ex" id="ExFile">
+<p><a class="ex_number" href="#ExFile"></a> Schreibt etwas Text in eine Datei und liest ihn zurück in den Speicher. Diese Methode ist performanter, wenn es darum geht, mehrere Dateien simultan zu lesen oder zu schreiben. Alternativ kann <a href="FileOpen.htm">FileOpen</a> verwendet werden, um <a href="FileOpen.htm#ExWriteRead">denselben Effekt</a> zu erzielen.</p>
+<pre>
+DateiName := FileSelect("S16",, "Neue Datei erstellen:")
+if DateiName = ""
+    return
+GENERIC_WRITE := 0x40000000  <em>; Öffnet eine Datei zum Schreiben statt zum Lesen.</em>
+CREATE_ALWAYS := 2  <em>; Erstellt eine neue Datei (überschreibt eine vorhandene Datei).</em>
+hFile := DllCall("CreateFile", "Str", DateiName, "UInt", GENERIC_WRITE, "UInt", 0, "Ptr", 0, "UInt", CREATE_ALWAYS, "UInt", 0, "Ptr", 0, "Ptr")
+if !hFile
+{
+    MsgBox "Kann '" DateiName "' nicht zum Schreiben öffnen."
+    return
+}
+TestZkette := "Das ist eine Zeichenkette.`r`n"  <em>; Wenn eine Datei auf diese Weise geschrieben wird, sollte `r`n anstelle von `n verwendet werden, um eine neue Zeile zu beginnen.</em>
+ZketteGröße := StrLen(TestZkette) * 2
+DllCall("WriteFile", "Ptr", hFile, "Str", TestZkette, "UInt", ZketteGröße, "UIntP", &amp;RealGeschriebeneBytes := 0, "Ptr", 0)
+DllCall("CloseHandle", "Ptr", hFile)  <em>; Schließt die Datei.</em>
+
+<em>; Die Datei wurde geschrieben, also lese ihren Inhalt zurück in den Speicher.</em>
+GENERIC_READ := 0x80000000  <em>; Öffnet die Datei zum Lesen statt zum Schreiben.</em>
+OPEN_EXISTING := 3  <em>; Dieser Modus bewirkt, dass die zu öffnende Datei bereits existieren muss.</em>
+FILE_SHARE_READ := 0x1 <em>; Dieser und der nächste Modus bestimmen, ob andere Prozesse die bereits geöffnete Datei öffnen dürfen.</em>
+FILE_SHARE_WRITE := 0x2
+hFile := DllCall("CreateFile", "Str", DateiName, "UInt", GENERIC_READ, "UInt", FILE_SHARE_READ|FILE_SHARE_WRITE, "Ptr", 0, "UInt", OPEN_EXISTING, "UInt", 0, "Ptr", 0)
+if !hFile
+{
+    MsgBox "Kann '" DateiName "' nicht zum Lesen öffnen."
+    return
+}
+<em>; Reserviert einen Bereich im Speicher für die zu lesende Zeichenkette:</em>
+Puf := Buffer(ZketteGröße)
+DllCall("ReadFile", "Ptr", hFile, "Ptr", Puf, "UInt", Puf.Size, "UIntP", &amp;RealGeleseneBytes := 0, "Ptr", 0)
+DllCall("CloseHandle", "Ptr", hFile)  <em>; Schließt die Datei.</em>
+MsgBox "Die folgende Zeichenkette wurde aus der Datei gelesen: " StrGet(Puf)</pre>
+</div>
+
+<div class="ex" id="ExHideCursor">
+<p><a class="ex_number" href="#ExHideCursor"></a> Versteckt den Mauszeiger, wenn Sie <kbd>WIN</kbd>+<kbd>C</kbd> drücken. Um den Mauszeiger wieder sichtbar zu machen, drücken Sie diesen Hotkey erneut.</p>
+<pre>OnExit (*) =&gt; SystemCursor("Show")  <em>; Stellt sicher, dass der Mauszeiger bei Beendigung des Skripts wieder sichtbar gemacht wird.</em>
+
+#c::SystemCursor("Toggle")  <em>; WIN+C-Hotkey zum Ein- und Ausschalten des Mauszeigers.</em>
+
+SystemCursor(cmd)  <em>; cmd = "Show|Hide|Toggle|Reload"</em>
+{
+    static visible := true, c := Map()
+    static sys_cursors := [32512, 32513, 32514, 32515, 32516, 32642
+                         , 32643, 32644, 32645, 32646, 32648, 32649, 32650]
+    if (cmd = "Reload" or !c.Count)  <em>; Neu laden bei Bedarf oder beim ersten Aufruf.</em>
+    {
+        for i, id in sys_cursors
+        {
+            h_cursor  := DllCall("LoadCursor", "Ptr", 0, "Ptr", id)
+            h_default := DllCall("CopyImage", "Ptr", h_cursor, "UInt", 2
+                , "Int", 0, "Int", 0, "UInt", 0)
+            h_blank   := DllCall("CreateCursor", "Ptr", 0, "Int", 0, "Int", 0
+                , "Int", 32, "Int", 32
+                , "Ptr", Buffer(32*4, 0xFF)
+                , "Ptr", Buffer(32*4, 0))
+            c[id] := {default: h_default, blank: h_blank}
+        }
+    }
+    switch cmd
+    {
+    case "Show": visible := true
+    case "Hide": visible := false
+    case "Toggle": visible := !visible
+    default: return
+    }
+    for id, handles in c
+    {
+        h_cursor := DllCall("CopyImage"
+            , "Ptr", visible ? handles.default : handles.blank
+            , "UInt", 2, "Int", 0, "Int", 0, "UInt", 0)
+        DllCall("SetSystemCursor", "Ptr", h_cursor, "UInt", id)
+    }
+}</pre>
+</div>
+
+<div class="ex" id="ExStruct">
+<p><a class="ex_number" href="#ExStruct"></a> Strukturbeispiel. Übergibt die Adresse einer RECT-Struktur an die GetWindowRect-Funktion, die die Struktur mit den Koordinaten der linken oberen und der rechten unteren Ecke des Fensters füllt (relativ zum Bildschirm).</p>
+<pre>Run "Notepad"
+WinWait "Unbenannt - Editor"  <em>; Setzt auch das "<a href="../misc/WinTitle.htm#LastFoundWindow">zuletzt gefundene Fenster</a>" für WinExist unten.</em>
+Rect := Buffer(16)  <em>; RECT ist eine Struktur bestehend aus vier 32-Bit-Integern (also 4*4=16).</em>
+DllCall("GetWindowRect", "Ptr", WinExist(), "Ptr", Rect)  <em>; WinExist gibt ein HWND zurück.</em>
+L := NumGet(Rect, 0, "Int"), O := NumGet(Rect, 4, "Int")
+R := NumGet(Rect, 8, "Int"), U := NumGet(Rect, 12, "Int")
+MsgBox Format("Links {1} Oben {2} Rechts {3} Unten {4}", L, O, R, U)</pre>
+</div>
+
+<div class="ex" id="ExStructRect">
+<p><a class="ex_number" href="#ExStructRect"></a> Strukturbeispiel. Übergibt FillRect() die Adresse einer RECT-Struktur, die einen Bereich des Bildschirms definiert, der kurzzeitig rot gefärbt werden soll.</p>
+<pre>Rect := Buffer(16)  <em>; Setzt die Kapazität zum Speichern von vier 4-Byte-Integern.</em>
+<a href="NumPut.htm">NumPut</a>( "Int", 0                  <em>; links</em>
+      , "Int", 0                  <em>; oben</em>
+      , "Int", A_ScreenWidth//2   <em>; rechts</em>
+      , "Int", A_ScreenHeight//2  <em>; unten</em>
+      , Rect)
+hDC := DllCall("GetDC", "Ptr", 0, "Ptr")  <em>; Übergibt Null, um den Gerätekontext des Desktops abzurufen.</em>
+hBrush := DllCall("CreateSolidBrush", "UInt", 0x0000FF, "Ptr")  <em>; Erstellt einen roten Pinsel (0x0000FF ist im BGR-Format).</em>
+DllCall("FillRect", "Ptr", hDC, "Ptr", Rect, "Ptr", hBrush)  <em>; Färbt das angegebene Rechteck mit dem obigen Pinsel.</em>
+DllCall("ReleaseDC", "Ptr", 0, "Ptr", hDC)  <em>; Gibt Speicher frei.</em>
+DllCall("DeleteObject", "Ptr", hBrush)  <em>; Gibt Speicher frei.</em></pre>
+</div>
+
+<div class="ex" id="ExSystemTime">
+<p><a class="ex_number" href="#ExSystemTime"></a> Strukturbeispiel. Setzt die Systemuhr auf ein bestimmtes Datum und eine bestimmte Uhrzeit. Seien Sie vorsichtig, wenn Sie ein zukünftiges Datum setzen, da dies dazu führen kann, dass geplante Tasks vorzeitig ausgeführt werden!</p>
+<pre>SetzeSystemuhr("20051008142211")  <em>; Übergeben Sie einen <a href="FileSetTime.htm#YYYYMMDD">Zeitstempel</a> (lokal, nicht UTC).</em>
+
+SetzeSystemuhr(YYYYMMDDHHMISS)
+<em>; Setzt die Systemuhr auf ein bestimmtes Datum und eine bestimmte Uhrzeit.
+; Der Aufrufer muss sicherstellen, dass der eingehende Parameter ein gültiger Zeitstempel ist
+; (Ortszeit, nicht UTC). Gibt bei Erfolg ungleich 0 zurück.</em>
+{
+    <em>; Konvertiert die im Parameter angegebene Ortszeit in UTC für SetSystemTime().</em>
+    UTC_Delta := DateDiff(A_Now, A_NowUTC, "Seconds")  <em>; Sekunden sind genauer, um Rundungsfehler zu vermeiden.</em>
+    UTC_Delta := Round(-UTC_Delta/60)  <em>; Rundet auf die nächste Minute für höhere Genauigkeit.</em>
+    YYYYMMDDHHMISS := DateAdd(YYYYMMDDHHMISS, UTC_Delta, "Minutes")  <em>; Wendet den Offset für die Konvertierung zu UTC an.</em>
+
+    Systemuhr := Buffer(16)  <em>; Diese Struktur besteht aus 8 UShorts (also 8*2=16).</em>
+
+    <a href="NumPut.htm">NumPut</a>( "UShort", SubStr(YYYYMMDDHHMISS, 1, 4)  <em>; YYYY (Jahr)</em>
+          , "UShort", SubStr(YYYYMMDDHHMISS, 5, 2)  <em>; MM (Monat des Jahres, 1-12)</em>
+          , "UShort", 0                             <em>; Unbenutzt (Wochentag)</em>
+          , "UShort", SubStr(YYYYMMDDHHMISS, 7, 2)  <em>; DD (Tag des Monats)</em>
+          , "UShort", SubStr(YYYYMMDDHHMISS, 9, 2)  <em>; HH (Stunden im 24-Stunden-Format)</em>
+          , "UShort", SubStr(YYYYMMDDHHMISS, 11, 2) <em>; MI (Minuten)</em>
+          , "UShort", SubStr(YYYYMMDDHHMISS, 13, 2) <em>; SS (Sekunden)</em>
+          , "UShort", 0                             <em>; Unbenutzt (Millisekunden)</em>
+          , Systemuhr)
+
+    return DllCall("SetSystemTime", "Ptr", Systemuhr)
+}</pre>
+<p>Weitere Strukturbeispiele:</p>
+<ul>
+  <li>Das <a href="../scripts/index.htm#WinLIRC">WinLIRC-Client-Skript</a> zeigt, wie mit DllCall eine Netzwerkverbindung zu einem TCP/IP-Server aufgebaut werden kann und Daten von diesem empfangen werden können.</li>
+  <li>Das Betriebssystem stellt Standarddialogfenster bereit, die der Benutzer zum Auswählen einer Schriftart, einer Farbe oder eines Symbols verwenden kann. Solche Dialogfenster verwenden Strukturen und können via DllCall in Kombination mit <a href="https://learn.microsoft.com/previous-versions/windows/desktop/legacy/ms646914(v=vs.85)">comdlg32\ChooseFont</a>, <a href="https://learn.microsoft.com/previous-versions/windows/desktop/legacy/ms646912(v=vs.85)">comdlg32\ChooseColor</a> bzw. <a href="https://learn.microsoft.com/windows/win32/api/shlobj_core/nf-shlobj_core-pickicondlg">shell32\PickIconDlg</a> angezeigt werden. Suchen Sie im Forum nach Beispielen.</li>
+</ul>
+</div>
+
+<div class="ex" id="ExTaskbar">
+<p><a class="ex_number" href="#ExTaskbar"></a> Entfernt das aktive Fenster für 3 Sekunden aus der Taskleiste. Äquivalent zum <a href="ComCall.htm#ExTaskbar">ComCall-Beispiel</a>.</p>
+<pre><em>/*
+  Methoden in der <a href="https://learn.microsoft.com/windows/win32/api/shobjidl_core/nn-shobjidl_core-itaskbarlist">ITaskbarList</a>-VTable:
+    IUnknown:
+      0 QueryInterface  -- nutze stattdessen <a href="ComObjQuery.htm">ComObjQuery</a>
+      1 AddRef          -- nutze stattdessen <a href="ObjAddRef.htm">ObjAddRef</a>
+      2 Release         -- nutze stattdessen <a href="ObjAddRef.htm">ObjRelease</a>
+    ITaskbarList:
+      3 HrInit
+      4 AddTab
+      5 DeleteTab
+      6 ActivateTab
+      7 SetActiveAlt
+*/</em>
+IID_ITaskbarList  := "{56FDF342-FD6D-11d0-958A-006097C9A090}"
+CLSID_TaskbarList := "{56FDF344-FD6D-11d0-958A-006097C9A090}"
+
+<em>; Das TaskbarList-Objekt erstellen.</em>
+tbl := ComObject(CLSID_TaskbarList, IID_ITaskbarList)
+
+activeHwnd := WinExist("A")
+
+DllCall(vtable(tbl.ptr,3), "ptr", tbl)                     <em>; tbl.<a href="https://learn.microsoft.com/windows/win32/api/shobjidl_core/nf-shobjidl_core-itaskbarlist-hrinit">HrInit</a>()</em>
+DllCall(vtable(tbl.ptr,5), "ptr", tbl, "ptr", activeHwnd)  <em>; tbl.<a href="https://learn.microsoft.com/windows/win32/api/shobjidl_core/nf-shobjidl_core-itaskbarlist-deletetab">DeleteTab</a>(activeHwnd)</em>
+Sleep 3000
+DllCall(vtable(tbl.ptr,4), "ptr", tbl, "ptr", activeHwnd)  <em>; tbl.<a href="https://learn.microsoft.com/windows/win32/api/shobjidl_core/nf-shobjidl_core-itaskbarlist-addtab">AddTab</a>(activeHwnd)</em>
+
+<em>; Interface-Pointer wird automatisch freigegeben.</em>
+
+vtable(ptr, n) {
+    <em>; NumGet(ptr, "ptr") gibt die Adresse der virtuellen Funktionstabelle
+    ; des Objekts (kurz: vtable) zurück. Der Rest des Ausdrucks ruft
+    ; die Adresse der n-ten Funktionsadresse aus der vtable ab.</em>
+    return NumGet(NumGet(ptr, "ptr"), n*A_PtrSize, "ptr")
+}
+</pre>
+</div>
+
+</body>
+</html>

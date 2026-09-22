@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Return - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die Return-Anweisung kehrt aus einer Funktion zurück, zu der die Ausführung zuvor via Funktionsaufruf, Hotkey-Aktivierung o.ä. gesprungen ist." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>Return</h1>
+
+<p>Kehrt aus einer Funktion zurück, zu der die Ausführung zuvor via <a href="../Functions.htm">Funktionsaufruf</a>, <a href="../Hotkeys.htm">Hotkey</a>-Aktivierung o.ä. gesprungen ist.</p>
+
+<pre class="Syntax"><span class="func">Return</span> <span class="optional">Ausdruck</span></pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>Ausdruck</dt>
+  <dd>
+    <p>Dieser Parameter kann nur innerhalb einer <a href="../Functions.htm">Funktion</a> verwendet werden.</p>
+    <p>Wenn dieser Parameter im v2.0-Modus weggelassen wird, gibt die Funktion standardmäßig eine leere Zeichenkette zurück. <span class="ver">[v2.1-alpha.29+]</span>: Wenn dieser Parameter im <a href="../v2.1-changes.htm#CompatMode">v2.1-Modus</a> weggelassen wird, gibt die Funktion standardmäßig <a href="../v2.1-changes.htm#blank-unset"><em>leer-ungesetzt</em></a> zurück, es sei denn, irgendwo anders in der Funktion wird <code>return <i>Ausdruck</i></code> verwendet, dann gibt die Funktion standardmäßig <code>unset</code> zurück.</p>
+    <p>Da dieser Parameter ein <a href="../Variables.htm#Expressions">Ausdruck</a> ist, sind alle folgenden Zeilen gültig:</p>
+<pre>return 3
+return "direkt geschriebene Zeichenkette"
+return MeineVar 
+return i + 1
+return true  <em>; Gibt die Zahl 1 als "wahr" zurück.</em>
+return ElementeAnzahl &lt; MaxElemente  <em>; Gibt einen wahren oder falschen Wert zurück.</em>
+return FindeFarbe(ZielFarbe)</pre>
+    </dd>
+
+</dl>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Das Leer- oder Tabulatorzeichen nach <em>Return</em> ist optional, wenn der Ausdruck in runden Klammern gesetzt ist, z.B. <code>return(Ausdruck)</code>.</p>
+<p>Wenn es keinen Aufrufer gibt, zu dem zurückgekehrt werden kann, wird <em>Return</em> stattdessen ein <a href="Exit.htm">Exit</a> ausführen.</p>
+<p>Es gibt verschiedene Möglichkeiten, wie eine Funktion mehrere Werte an ihren Aufrufer zurückgeben kann. Informationen dazu finden Sie unter <a href="../Functions.htm#return">Werte an den Aufrufer zurückgeben</a>.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="../Functions.htm">Funktionen</a>, <a href="Exit.htm">Exit</a>, <a href="ExitApp.htm">ExitApp</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Meldet den Rückgabewert der Funktion.</p>
+<pre>MsgBox returnTest() <em>; Zeigt 123</em>
+
+returnTest() {
+    return 123
+}</pre>
+</div>
+<div class="ex" id="ExUsage">
+<p><a class="ex_number" href="#ExUsage"></a> Das erste Return sorgt dafür, dass der darauffolgende Funktionsaufruf übersprungen wird, wenn die vorherige Bedingung wahr ist. Das zweite Return ist überflüssig, wenn es wie folgt am Ende einer Funktion verwendet wird.</p>
+<pre>#z::  <em>; WIN+Z</em>
+^#z::  <em>; STRG+WIN+Z</em>
+{
+    MsgBox "Ein Hotkey WIN+Z wurde gedrückt."
+    if GetKeyState("Ctrl")
+        return  <em>; Vorzeitig beenden, was den Funktionsaufruf unten überspringt.</em>
+    MeineFunktion()
+}
+
+MeineFunktion()
+{
+    Sleep 1000
+    return  <em>; Überflüssig, wenn es so am Ende der Funktion verwendet wird.</em>
+}</pre>
+</div>
+
+</body>
+</html>

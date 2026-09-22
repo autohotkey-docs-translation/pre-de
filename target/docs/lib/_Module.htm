@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>#Module - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die #Module-Direktive startet ein neues Modul oder öffnet ein existierendes Modul." />
+<meta name="ahk:equiv-v1" content="index.htm" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>#Module <span class="ver">[v2.1-alpha.11+]</span></h1>
+
+<p>Startet ein neues <a href="../Modules.htm">Modul</a> oder öffnet ein existierendes Modul.</p>
+
+<pre class="Syntax"><span class="func">#Module</span> ModulName</pre>
+
+<h2 id="Parameters">Parameter</h2>
+<dl>
+  <dt>ModulName</dt>
+  <dd>
+    <p>Ein eindeutiger Name, der für <a href="_Import.htm">#Import</a> verwendet wird.</p>
+    <p><span class="ver">[v2.1-alpha.21+]</span>: Dies muss ein gültiger <a href="../Concepts.htm#names">Identifikator</a> sein. Jedes aus einer Datei importierte Modul besitzt einen eigenen Satz von Modulnamen, die unabhängig vom Hauptskript sind.</p>
+  </dd>
+</dl>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Das neue Modul startet mit einem leeren globalen Namensraum und impliziten Import aus dem internen Modul.</p>
+<p><span class="ver">[v2.1-alpha.21+]</span>: Das Modul endet bei der nächsten #Module-Direktive in der aktuellen Datei oder am Ende der aktuellen Datei.</p>
+<p><span class="ver">[v2.1-alpha.21+]</span>: Die #Module-Direktive erstellt ein <em>untergeordnetes Modul</em> bzw. <em>Untermodul</em>, das entweder mit der Hauptskriptdatei oder mit einer via #Import importierten Datei verlinkt ist. Module, die mit derselben Datei verlinkt sind, können sich gegenseitig via <em>ModulName</em> importieren, während andere Module Untermodule mithilfe eines pfadqualifizierten Namens im Format "Pfad:Modulname" importieren können. Der Name <code class="no-highlight">__Init</code> kann verwendet werden, um das initiale Modul einer Gruppe zu importieren.</p>
+<p>Module, die auf diese Weise definiert werden, haben Vorrang vor Modulen im Dateisystem, jedoch nur für genau den in der Direktive verwendeten <em>ModulName</em>.</p>
+<p><span class="ver">[v2.1-alpha.20+]</span>: Handelt es sich bei <em>ModulName</em> um <code class="no-highlight">AHK</code>, <code class="no-highlight">__Main</code> oder einen Namen, der bei einer vorherigen #Module-Direktive verwendet wurde, wird das existierende Modul "erneut geöffnet", was das Hinzufügen von <a href="../Modules.htm#Execution">Startcode</a> und Definitionen ermöglicht.</p>
+<p><span class="ver">[v2.1-alpha.21+]</span>: Die Verwendung von #Module in einer Datei, die mehrfach via <a href="_Include.htm">#Include</a> geladen wird, ist nicht zulässig. Der Grund dafür ist, dass dadurch das Modul "erneut geöffnet" und sein Inhalt dupliziert werden würde, was häufig zu irreführenden Meldungen bezüglich doppelter Deklarationen führt. Beachten Sie, dass diese Restriktion nicht für mehrere Instanzen von #Include im selben Modul gilt, da die Datei in solchen Fällen nur einmal inkludiert wird.</p>
+<p>#Module kann nicht innerhalb eines Blocks oder als Körper einer Kontrollanweisung verwendet werden.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="../Modules.htm">Module</a>, <a href="_Import.htm">#Import</a>, <a href="_Include.htm">#Include</a></p>
+
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+  <title>Strukturen | AutoHotkey v2</title>
+<meta name="description" content="Erfahren Sie mehr darüber, wie man typisierte Eigenschaften verwendet und Strukturen definiert." />
+<meta name="ahk:equiv-v1" content="lib/DllCall.htm#struct" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="static/theme.css" rel="stylesheet" />
+<link href="static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="static/content.js" id="content_js"></script>
+<script src="static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>Strukturen</h1>
+<p>Eine Struktur oder <em>struct</em> ist eine Sammlung von <em>Elementen</em> (Feldern), die nebeneinander im Speicher abgelegt sind.</p>
+<p>Strukturen werden häufig bei externen Funktionen via <a href="lib/DllCall.htm">DllCall</a> oder bei GUI-Steuerelementen via <a href="lib/SendMessage.htm">SendMessage</a> verwendet. In solchen Fällen muss der Speicher-Offset jedes Feldes relativ zum Anfang der Struktur genau mit dem Offset übereinstimmen, den die externe Funktion oder das Steuerelement erwartet – in der Regel so, wie er in einem SDK oder in der Dokumentation für C/C++-Entwickler definiert ist.</p>
+<p>In AutoHotkey v2.0 und älteren Versionen wurden Strukturen in der Regel "definiert", indem man Speicher mit z.B. <a href="lib/Buffer.htm">Buffer</a> reservierte und diesen anschließend direkt mit <a href="lib/NumPut.htm">NumPut</a> und <a href="lib/NumGet.htm">NumGet</a> manipulierte. Für diesen Vorgang müssen die Offsets für jedes einzelne Feld berechnet werden. Das ist ziemlich mühsam und fehleranfällig. Felder werden grundsätzlich nicht per Name referenziert, was die Lesbarkeit und Pflege des Codes erschwert.</p>
+<p class="warning"><strong>Warnung:</strong> Dies ist eine Vorabdokumentation für v2.1. Details können sich mit jeder Alpha-Version ändern.</p>
+<p>Ab v2.1 ist es möglich, eine Struktur in Form einer Sequenz typisierter Eigenschaften zu definieren. Dies ermöglicht es, Felder per Name anzusteuern, unterstützt durch die automatische Berechnung von Offsets und Strukturgrößen. In der Regel wird dafür eine <a href="#classdef">Strukturklassendefinition</a> verwendet. Allerdings können Strukturklassen auch <a href="#defprop">während der Skriptausführung konstruiert werden</a>.</p>
+
+<h2 id="classdef">Verwendung einer Klassendefinition <span class="ver">[v2.1-alpha.22+]</span></h2>
+<p>Strukturklassen werden mit <code>struct</code> statt mit <code>class</code> definiert, und erweitern standardmäßig Struct statt Object.</p>
+<p>Um ein Feld in einer Struktur zu definieren, muss zunächst dessen Name, dann ein Doppelpunkt und anschließend ein Typbezeichner angegeben werden. Dies wird auch als typisierte Eigenschaft bezeichnet. Es ist möglich, mehrere typisierte Eigenschaften auf einer Zeile zu definieren, jeweils getrennt durch ein Komma. Zum Beispiel:</p>
+<pre>struct POINT {
+    x : Int32, y : Int32
+}</pre>
+<p>Bei der Konstruktion des Objekts werden alle Felder null-initialisiert, noch bevor die Initialisierer ausgewertet werden. Um ein Feld mit einem bestimmten Wert zu initialisieren, wird nach dem Typ eine Zuweisung eingefügt. Zum Beispiel:</p>
+<pre>struct LVINSERTMARK {
+    cbSize      : UInt32 := this.Size
+    dwFlags     : UInt32
+    iItem       : Int32
+    dwReserved  : UInt32
+}</pre>
+<p>Eine Strukturklasse kann auf die übliche Weise instanziiert werden, indem sie aufgerufen wird:</p>
+<pre>im := LVINSERTMARK()</pre>
+<p>Da Strukturen häufig aus externen Quellen stammen, kann mithilfe der <a href="lib/Struct.htm#At">At</a>-Methode eine Adresse in eine Referenz umgewandelt werden, die auf eine Struktur verweist.</p>
+<p>Felder einer Unterklasse werden immer hinter den Feldern der Basisklasse platziert. Wenn z.B. die Klasse StructB die Klasse StructA erweitert, ist das Layout dasselbe wie, als würde StructB die Klasse Object erweitern, jedoch beginnend mit einer verschachtelten StructA. Der Zugriff auf geerbte Eigenschaften erfolgt allerdings nicht über eine verschachtelte Struktur, sondern direkt.</p>
+<p>Mit <a href="lib/_StructPack.htm">#StructPack</a> kann die Standardausrichtung der Felder innerhalb der Struktur überschrieben werden.</p>
+<p>Alle Elemente einer <a href="Objects.htm#Custom_Classes">Klassendefinition</a> sind zulässig, aber ein Initialisierer wie z.B. <code>x := 0</code> kann keine neue Eigenschaft erstellen.</p>
+
+<h2 id="defprop">Verwendung von DefineProp</h2>
+<p>Eine Struktur kann während der Skriptausführung definiert werden, indem man ein <a href="lib/Class.htm">Class</a>-Objekt erstellt und mittels <a href="lib/Object.htm#DefineProp">DefineProp</a> typisierte Eigenschaften zu seinem <a href="lib/Class.htm#Prototype">Prototyp</a> hinzufügt. Zum Beispiel:</p>
+<pre>POINT := Class(Struct)  <em>; v2.1-alpha.21 und älter nutzten Object statt Struct.</em>
+DefineProp(POINT.Prototype, 'x', {type: Int32})
+DefineProp(POINT.Prototype, 'y', {type: Int32})
+pt := POINT()
+</pre>
+<p>Typischerweise wird das Klassenobjekt (POINT) einmal definiert und dazu verwendet, viele Instanzen (pt) zu erstellen.</p>
+<p>Anders als bei Deklarationen in einer Klassendefinition müssen direkt geschriebene, reservierte Typnamen wie "i32" in Anführungszeichen gesetzt werden, wenn DefineProp aufgerufen wird.</p>
+<p>Ähnlich wie bei einer Klassendefinition können Felder von der Basisklasse des Prototyps geerbt werden.</p>
+<p><span class="ver">[v2.1-alpha.19+]</span>: Mit <a href="lib/Object.htm#DefinePropPack">Pack</a> kann die Standardausrichtung der Felder innerhalb der Struktur überschrieben werden. Zum Beispiel:</p>
+<pre>
+AB := Class(Struct)
+DefineProp(AB.Prototype, 'a', {type: Int8})
+DefineProp(AB.Prototype, 'b', {type: Int32, pack: 1})
+MsgBox AB().Size
+</pre>
+
+<h2 id="type-specs">Typbezeichner <span class="ver">[v2.1-alpha.30+]</span></h2>
+<p>Ein Typbezeichner in einer Klassendefinition kann Folgendes sein:</p>
+<ul>
+  <li>Ein exakter Klassenname, wie z.B. <code>KlasseName.VerschachtelteKlasse</code>.</li>
+  <li>Ein in runde Klammern gesetzter Ausdruck.</li>
+  <li>Ein Ausdruck, der mit einem Identifikator beginnt, optional gefolgt von einer Parameterliste (was ihn zu einem Funktionsaufruf macht), optional gefolgt von einer beliebigen Anzahl von Eigenschaften oder Methodenaufrufen.</li>
+</ul>
+<p>Typbezeichner werden nacheinander mit statischen Eigenschaftsinitialisierern ausgewertet, wenn die Klasse initialisiert wird (nicht jedes Mal, wenn sie instanziiert wird).</p>
+<p>Der Typbezeichner muss bei der Auswertung eine Strukturklasse mit einer Größe ungleich Null ergeben. Die Auswertung erfolgt im Kontext <a href="Objects.htm#static__New">static __Init()</a>; d.h. <code>this</code> verweist auf das Klassenobjekt.</p>
+<p>Eine Strukturklasse ist eine beliebige Unterklasse von <a href="lib/Struct.htm">Struct</a>, einschließlich <a href="#numeric-types">numerischer Typen</a>, <a href="#arrays">Arrayklassen</a>, <a href="#pointers">Pointerklassen</a> und <code>Struct.Ptr</code> selbst.</p>
+
+<h3 id="numeric-types">Numerische Typen <span class="ver">[v2.1-alpha.23+]</span></h3>
+<p>Es gibt für numerische Typen die folgenden vordefinierten Strukturklassen:</p>
+<ul>
+  <li><code>Int8</code>, <code>Int16</code>, <code>Int32</code> und <code>Int64</code> sind vorzeichenfähige Integer; 8-Bit, 16-Bit, 32-Bit und 64-Bit.</li>
+  <li><code>UInt8</code>, <code>UInt16</code> und <code>UInt32</code> sind vorzeichenlose Integer; 8-Bit, 16-Bit und 32-Bit.</li>
+  <li><code>IntPtr</code> ist ein vorzeichenfähiger Integer; 32-Bit wenn A_PtrSize = 4, und 64-Bit wenn A_PtrSize = 8.</li>
+  <li><code>Float32</code> und <code>Float64</code> sind Floating-Point-Zahlen.</li>
+</ul>
+<p class="note"><strong>Hinweis:</strong> AutoHotkey unterstützt keine vorzeichenlosen 64-Bit-Integer. Verwenden Sie stattdessen vorzeichenfähige Integer.</p>
+<p>Da das Strukturklassen sind, verfügt jede über eine <a href="#pointers">Pointerklasse</a> und <a href="#arrays">Arrayklassen</a>. Zum Beispiel ist <code>UInt32.Ptr</code> dasselbe wie <code>"UInt*"</code> bei <a href="lib/DllCall.htm">DllCall</a>, und <code>UInt8[64]</code> ist die Klasse eines 64-Byte-Arrays.</p>
+<p>Wenn diese Strukturklassen als Eigenschaftstypen, DllCall-Parametertypen oder Array-Elementtypen verwendet werden, erfolgt die Umwandlung direkt. Die Klassen werden dabei nicht instanziiert. Bei DllCall beinhaltet das auch die Pointerklassen. Ein Rückgabewert vom Typ <code>Int32.Ptr</code> ist zum Beispiel genau dasselbe wie <code>"Int*"</code> und dereferenziert immer den Pointer (gibt den Integerwert zurück, auf den er zeigt), anstatt einen gekapselten Pointer zurückzugeben.</p>
+<p>Eine Instanz einer numerischen Strukturklasse agiert nicht als Zahl, sondern als <a href="Functions.htm#virtual-references">virtuelle Referenz</a>, die auf eine numerische Variable verweist. Wie bei Strukturinstanzen sprechen wir von einem <a href="#Boxed_Pointer">gekapselten Pointer</a>, wenn der Pointer unsicher ist, oder von einer <a href="#Boxed_Pointer">gekapselten Struktur</a>, wenn ihre Lebensdauer durch das Skript verwaltet wird. Eine Instanz kann wie folgt erstellt werden:</p>
+<ul>
+  <li>Der direkte Aufruf der Klasse erstellt eine gekapselte Struktur.</li>
+  <li>Eine Eigenschaft eines Pointertyps wie <code>Int32.Ptr</code> kann einen gekapselten Pointer zurückgeben.</li>
+  <li>Ein <a href="lib/CallbackCreate.htm">Rückruf</a> kann einen eingehenden Pointerwert in einen gekapselten Pointer umwandeln, wenn der Parametertyp ein Pointertyp wie z.B. <code>Int32.Ptr</code> ist.</li>
+  <li>Die <a href="lib/Struct.htm#At">At</a>-Methode erstellt einen gekapselten Pointer.</li>
+</ul>
+<p>Jede Instanz hat eine Eigenschaft namens __Value, und zwar vom Typ, der durch die Klasse repräsentiert wird. In der Regel geschieht dies indirekt durch den <a href="Variables.htm#deref">Dereferenzoperator</a> oder wenn die Instanz als <a href="Functions.htm#virtual-references">virtuelle Referenz</a> verwendet wird. Zum Beispiel würde <code>MouseGetPos(Int32.at(pt.ptr))</code> die X-Koordinate am Anfang der Struktur <code>pt</code> speichern.</p>
+
+<h2 id="nested-structs">Verschachtelte Strukturen</h2>
+<p>Verschachtelte Strukturen werden in der Reihenfolge ihrer Definition erstellt, noch bevor die äußere Struktur initialisiert wird. Die eigenen Feldinitialisierer der verschachtelten Struktur werden ausgewertet, und <a href="Objects.htm#Custom_NewDelete">__New</a> wird (ohne Parameter) aufgerufen, bevor irgendwelche Initialisierer in der äußeren Struktur ausgeführt werden.</p>
+<p class="note"><strong>Hinweis:</strong> Aufgrund der speziellen Anforderungen bezüglich Speicherreservierung und Initialisierung werden verschachtelte Strukturen direkt konstruiert, nicht durch Aufruf der statischen Call-Methode der Klasse.</p>
+<p>Wenn die äußere Struktur gelöscht wird, wird zunächst <a href="Objects.htm#Custom_NewDelete">__Delete</a> für die äußere Struktur aufgerufen, danach für jede verschachtelte Struktur (sofern definiert) in umgekehrter Reihenfolge ihrer Definition. Der Speicher der äußeren Struktur wird erst gelöscht, nachdem alle Destruktoren aufgerufen wurden.</p>
+<p>Die Eigenschaft, die einer verschachtelten Struktur entspricht, gibt standardmäßig eine Referenz zurück, die auf die verschachtelte Struktur verweist, und ist nicht zuweisbar. Dies kann durch die Definition eines Getters und/oder Setters für die <a href="#abstract">__Value-Eigenschaft</a> überschrieben werden. Wenn ein Setter, aber kein Getter definiert ist, wird standardmäßig die Struktur selbst zurückgegeben.</p>
+
+<h3 id="abstract">Abstrakte Typen</h3>
+<p>Mit einer Struktur können verschiedene abstrakte Typen implementiert werden, wie z.B. smarte Pointer, Arrays, Enums, spezialisierte Zeichenkettentypen oder Typen, die auf bestimmte Werte beschränkt sind. Das folgende Beispiel implementiert einen booleschen Typ ähnlich wie in C++:
+</p>
+<pre>struct bool {
+    value : UInt8  <em>; Dieser Eigenschaftsname hat keine besondere Bedeutung.</em>
+    __value {
+        get =&gt; this.value
+        set =&gt; this.value := !!value
+    }
+}
+
+struct Beispiel {
+    bInformed : bool
+    __new() {
+        for Wert in [false, "wahr", 3] {
+            this.bInformed := Wert
+            MsgBox Wert " konvertiert zu " this.bInformed
+        }
+    }
+}
+
+Beispiel()</pre>
+<p>Die __Value-Eigenschaft wird auch von DllCall verwendet. Wenn z.B. die Bool-Klasse als DllCall-Parametertyp verwendet wird, wird jeder eingehende Parameterwert wegen <code>!!value</code> automatisch in 0 oder 1 umgewandelt.</p>
+<p>Es gibt eine Vielzahl von Konventionen für Zeichenketten in Strukturen und DllCall. Derzeit unterstützen typisierte Eigenschaften intern keine Zeichenketten oder Arrays, können jedoch mithilfe dieser Mechanismen implementiert werden. Die Beispiele <a href="#ExCString">CString</a> und <a href="#ExBSTR">BSTR</a> veranschaulichen dies.</p>
+
+<h2 id="pointers">Pointer auf Strukturen <span class="ver">[v2.1-alpha.22+]</span></h2>
+<p>Jede Strukturklasse hat eine statische Eigenschaft namens <strong>Ptr</strong>, die eine Pointerklasse zurückgibt. Eine Pointerklasse wird in der Regel nicht instanziiert, sondern zusammen mit <a href="lib/DllCall.htm">DllCall</a> und typisierten Eigenschaften verwendet, um einen Parameter oder ein Feld anzugeben, der bzw. das auf eine Struktur verweist. Zum Beispiel repräsentiert <code>RECT.Ptr</code> den C-Typ <code>RECT*</code> oder <code>LPRECT</code>, sofern entsprechend eine Definition der RECT-Strukturklasse vorhanden ist.</p>
+
+<h3 id="Boxed_Pointer">Gekapselter Pointer</h3>
+<p>Anstatt Pointerwerte als eigenständigen Typ zu kapseln, werden sie als Instanzen der Zielstrukturklasse behandelt, mit denselben Eigenschaften und derselben Typidentität. Zur besseren Unterscheidung bezeichnen wir eine vom Skript konstruierte Instanz als "gekapselte Struktur" und eine Instanz, die einen Pointerwert kapselt, als "gekapselter Pointer".</p>
+<p>Eine Adresse (Pointerwert) kann durch Aufruf der <a href="lib/Struct.htm#At">At</a>-Methode gekapselt werden.</p>
+<pre>Ref := StructKlasse.At(Adresse)</pre>
+<p>Da Ref als Instanz von StructKlasse behandelt wird, ist <code>Ref is StructKlasse &amp;&amp; Ref.Ptr = Adresse</code> wahr, und <code>Ref.Size</code> gibt die Größe der Struktur (definiert durch die Klasse) zurück. Das bedeutet: Wenn Ref an einen von <a href="lib/DllCall.htm">DllCall</a> genutzten <a href="lib/DllCall.htm#Ptr">Ptr</a>-Parameter, <a href="lib/NumGet.htm">NumGet</a> oder <a href="lib/NumPut.htm">NumPut</a> übergeben wird, handelt es sich bei dem Parameterwert bzw. der Zieladresse um die Adresse der Struktur, nicht um die Adresse, auf der der Pointer gespeichert ist.</p>
+<p>Die Lebensdauer der eigentlichen Struktur ist unabhängig von der Lebensdauer eines gekapselten Pointers – die "Kapsel" enthält lediglich den Pointer, nicht die Struktur. Die meisten Strukturen stammen aus externen Quellen; die Art der Speicherreservierung kann variieren und ist ggf. unbekannt. Das Skript muss sicherstellen, dass nach dem Löschen der Struktur keine typisierten Eigenschaften mehr abgefragt werden.</p>
+<p class="warning"><strong>Warnung:</strong> Der Debugger kann Eigenschaften automatisch abfragen. Deshalb sollten gekapselte Pointer am besten immer freigegeben werden, bevor die Zielstruktur gelöscht wird.</p>
+<p>Da die Struktur vermutlich bereits konstruiert wurde (in der Regel durch externen Code), werden __Init und __New nicht von At aufgerufen.</p>
+<p>Es können beliebig viele gekapselte Pointer für eine bestimmte Adresse existieren, sogar mit unterschiedlichen Klassen. Verschiedene Instanzen werden nicht als gleich angesehen; die "Kapseln" werden verglichen, nicht die Pointerwerte.</p>
+
+<h3 id="pointers_DllCall">DllCall</h3>
+<p>Verwendet man <code>StructClass.Ptr</code> als DllCall-Parametertyp, wird es ähnlich wie ein Typ mit dem <a href="lib/DllCall.htm#Pointer_Types">Sternchen/P-Suffix</a> behandelt. Das heißt, der Parameter akzeptiert eine VarRef, einen Wert des Basistyps oder einen Wert, der in den Basistyp umgewandelt werden kann. Wird eine VarRef übergeben, wird der Wert nach dem Aufruf zurückgelesen und der VarRef zugewiesen, wobei der Wert dabei ggf. konvertiert wird. Konkret heißt das:</p>
+<ul>
+  <li>Wenn <a href="Language.htm#unset">ungesetzt</a>, wird ein Null-Pointer (0) übergeben.</li>
+  <li>Wenn ein StructKlasse.Ptr übergeben wird, wird der darin enthaltene Pointerwert übergeben (untypische Verwendung).</li>
+  <li>Wenn eine <a href="Concepts.htm#variable-references">VarRef</a> übergeben wird, wird ihr Wert (sofern vorhanden) als Eingabe verwendet.</li>
+  <li>Wenn die Eingabe eine Instanz von StructKlasse ist, wird deren Adresse übergeben.</li>
+  <li>In allen anderen Fällen wird eine neue Instanz von StructKlasse konstruiert.
+    <ul>
+      <li>Wenn ein Eingabewert angegeben wurde (keine ungesetzte VarRef), wird __Value für die Umwandlung zugewiesen. Es wird ein TypeError ausgelöst, wenn __Value nicht implementiert ist.</li>
+      <li>Wenn eine VarRef übergeben wurde, wird der VarRef einer der folgenden Werte zugewiesen:
+        <ul>
+          <li>Der Rückgabewert des __Value-Getters, sofern definiert.</li>
+          <li>Die neue Strukturinstanz. <code>StructKlasse.Ptr, &amp;Arg</code> liefert dasselbe Endergebnis wie <code>StructClass.Ptr, Arg := StructKlasse()</code>, außer dass Arg erst nach dem Aufruf etwas zugewiesen bekommt.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<p>Wenn der Rückgabewert als Rückgabetyp verwendet wird, ist er ein <a href="#Boxed_Pointer">gekapselter Pointer</a>, oder <a href="Language.htm#unset">ungesetzt</a>, falls Null.</p>
+
+<h3 id="pointers_fields">Pointer in Strukturen</h3>
+<p>Eine Pointerklasse kann als Typ eines Strukturfelds oder einer typisierten Eigenschaft verwendet werden.</p>
+<p>Sowohl bei der Zuweisung als auch bei der Rückgabe repräsentiert <a href="Language.htm#unset">ungesetzt</a> einen Null-Pointer (0).</p>
+<p>Bei ungleich Null ist der High-Level-Wert der Eigenschaft eine Instanz der Zielklasse (entweder ein <a href="#Boxed_Pointer">gekapselter Pointer</a> oder eine <a href="#Boxed_Pointer">gekapselte Struktur</a>).</p>
+<p>Wenn der Eigenschaft eine <a href="#Boxed_Pointer">gekapselte Struktur</a> eines geeigneten Typs zugewiesen wird, wird eine Referenz darauf beibehalten, um sicherzustellen, dass diese Struktur erst gelöscht wird, wenn das Skript seine Referenz auf die äußere Struktur oder den <a href="#Boxed_Pointer">gekapselten Pointer</a> freigibt. Zum Beispiel ist die Verwendung von <code>outer.lpEx := Beispiel()</code> in der Regel unbedenklich, während <code>meineVar := Beispiel().Ptr</code> die neue Struktur unmittelbar nach der Zuweisung freigeben würde. Wenn der zugrunde liegende Pointerwert verändert wurde, bewirkt die Auswertung von <code>outer.lpEx</code>, dass die zuvor gehaltene Referenz freigegeben wird.</p>
+<p>Wenn eine Pointerklasse direkt konstruiert wird, verhält sich ihre __Value-Eigenschaft wie oben beschrieben.</p>
+
+<h2 id="arrays">Strukturierte Arrays <span class="ver">[v2.1-alpha.23+]</span></h2>
+<p>Strukturierte Arrays haben eine feste Größe und alle ihre Elemente müssen vom gleichen Typ sein. Sowohl die Array-Länge als auch der Elementtyp werden von der Klasse definiert, die eine Unterklasse von <a href="lib/StructArray.htm">Struct.Array</a> ist. Die Unterklasse entsteht nicht durch eine Klassendefinition im Skript, sondern durch die Nutzung der <a href="lib/Struct.htm#__ItemClass">statischen __Item-Eigenschaft</a> einer Struct-Unterklasse. Zum Beispiel:</p>
+<pre>struct X {
+    y : Int32[10]
+}
+z := X()
+MsgBox z.Size <em>; 40</em>
+MsgBox z.y.Size <em>; 40</em>
+MsgBox z.y.Length <em>; 10</em>
+MsgBox z.y is Int32[10] <em>; wahr</em>
+MsgBox z.y is Int32[100] <em>; falsch</em>
+
+struct XX {
+    items : X[2]
+}
+zz := XX()
+MsgBox zz.Size <em>; 80</em></pre>
+
+<h2 id="Related">Siehe auch</h2>
+<ul>
+  <li><a href="lib/Object.htm#GetDataPtr">ObjGetDataPtr</a>: Gibt die Adresse der strukturierten Daten des Objekts zurück.</li>
+  <li><a href="lib/Object.htm#GetDataSize">ObjGetDataSize</a>: Gibt die Größe der Struktur des Objekts in Bytes zurück.</li>
+  <li><a href="lib/Object.htm#SetDataPtr">ObjSetDataPtr</a>: Setzt die Adresse der strukturierten Daten des Objekts.</li>
+</ul>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBind">
+<p><a class="ex_number" href="#ExBind"></a> Meldet den Klassennamen des Fensters/Steuerelements, auf dem sich der Mauszeiger befindet.</p>
+<pre>struct Point {
+    x : Int32, y : Int32
+}
+
+<em>; Mit der Klasse selbst als Wert übergeben (C-Typ: POINT).</em>
+WindowFromPoint := DllCall.Bind("WindowFromPoint", Point, unset, "uptr")
+
+<em>; Mit "ptr" per Referenz ohne Typüberprüfung übergeben (C-Typ: POINT*).</em>
+GetCursorPos := DllCall.Bind("GetCursorPos", "ptr", unset)
+pt1 := Point()
+GetCursorPos(pt1)
+MsgBox WinGetClass(WindowFromPoint(pt1))
+
+<em>; Mit .Ptr per Referenz übergeben oder Ausgabe via VarRef empfangen.</em>
+GetCursorPos := DllCall.Bind("GetCursorPos", Point.Ptr, unset)
+GetCursorPos(&amp;pt2)
+MsgBox WinGetClass(WindowFromPoint(pt2))</pre>
+</div>
+
+<div class="ex" id="ExMONITORINFO">
+<p><a class="ex_number" href="#ExMONITORINFO"></a> Ruft Informationen über den Bildschirm ab, auf dem sich der Mauszeiger befindet, wobei verschachtelte Strukturen verwendet werden.</p>
+<pre>struct RECT {
+    Left : Int32
+    Top : Int32
+    Right : Int32
+    Bottom : Int32
+}
+
+struct MONITORINFO {
+    cbSize : Int32 := 40
+    rcMonitor : RECT
+    rcWork : RECT
+    dwFlags : Int32
+}
+
+DllCall("GetCursorPos", "uint64*", &amp;point:=0)
+hMonitor := DllCall("MonitorFromPoint", "int64", point, "uint", 0, "ptr")
+DllCall("user32\GetMonitorInfo", "ptr", hMonitor, "ptr", MI := MONITORINFO())
+MsgBox(
+(
+    "Bildschirminfos vom Punkt:
+    Links: " MI.rcMonitor.Left "
+    Oben: " MI.rcMonitor.Top "
+    Rechts: " MI.rcMonitor.Right "
+    Unten: " MI.rcMonitor.Bottom "
+    ABLinks: " MI.rcWork.Left "
+    ABOben: " MI.rcWork.Top "
+    ABRechts: " MI.rcWork.Right "
+    ABUnten: " MI.rcWork.Bottom "
+    Primär: " MI.dwFlags
+))</pre>
+</div>
+
+<div class="ex" id="ExCString">
+<p><a class="ex_number" href="#ExCString"></a> Definiert eine Struktur, die eine Zeichenkette fester Größe in einer bestimmten Kodierung enthält.</p>
+<pre><em>; Eine wiederverwendbare "Metaklasse" oder "generische Klasse" für C-artige
+; Zeichenketten definieren. Der Aufruf von CString selbst gibt eine neue Klasse
+; zur Verwendung in einem Typausdruck zurück.</em>
+CString(n, cp:="UTF-16") {
+    c := Class(Struct)
+    unitSize := StrPut("", cp)  <em>; Größe in Bytes eines einzelnen "Zeichens".</em>
+    DefineProp(c.Prototype, '_chars', {type: unitSize=2 ? UInt16[n] : Int8[n]})
+    DefineProp(c.Prototype, '__value', {
+        get: (this)        =&gt; StrGet(this,, cp),
+        set: (this, value) =&gt; StrPut(value, this,, cp)
+    })
+    return c
+}
+
+<em>; Struktur definieren, die eine Zeichenkette mit höchstens
+; 32 UTF-8-Codeeinheiten enthält.</em>
+struct XStruct {
+  str : CString(32, "UTF-8")
+}
+
+x := XStruct()
+x.str := "Hallo!"
+MsgBox x.str
+</pre></div>
+
+<div class="ex" id="ExBSTR">
+<p><a class="ex_number" href="#ExBSTR"></a> Definiert eine Struktur, die Zeichenkettenumwandlungen in/von BSTR durchführt.</p>
+<pre>
+MsgBox DllCall("oleaut32\SysStringLen", BSTR, "abc" Chr(0) "123")
+MsgBox DllCall("oleaut32\SysAllocString", "wstr", "xyz", BSTR)
+
+struct BSTR {  <em>; Dieser Typ kann auch in einer Struktur verwendet werden.</em>
+    ptr : IntPtr
+    size =&gt; DllCall("oleaut32\SysStringByteLen", "ptr", this, "uint")
+    __value {
+        get =&gt; StrGet(this)
+        set {
+            if this.ptr  <em>; Bei Verwendung in einer Struktur.</em>
+                this.__delete()
+            this.ptr := DllCall("oleaut32\SysAllocStringLen", "wstr", value, "uint", StrLen(value), "ptr")
+        }
+    }
+    __delete() =&gt; DllCall("oleaut32\SysFreeString", "ptr", this)
+}
+</pre>
+</div>
+
+<div class="ex" id="Exlldiv">
+<p><a class="ex_number" href="#Exlldiv"></a> Ruft eine Funktion auf, die eine Struktur als Wert zurückgibt.</p>
+<pre>
+struct lldiv_t {
+    quot : Int64, rem : Int64
+}
+res := DllCall("ucrtbase\lldiv", "int64", 31558149, "int64", 3600, lldiv_t)
+MsgBox Format("Erdumlaufbahn: {} Stunden und {} Sekunden.", res.quot, res.rem)
+</pre>
+</div>
+
+<div class="ex" id="ExHMODULE">
+<p><a class="ex_number" href="#ExHMODULE"></a> Definiert eine Rückgabetyp-Struktur für Fehlerprüfung und automatisches Aufräumen.</p>
+<pre>
+struct LoadedHModule {
+    h : IntPtr
+    __value =&gt; this.h ? this : throw(OSError(A_LastError, -1))
+    __delete() =&gt; DllCall("FreeLibrary", "ptr", this.h)
+}
+
+check
+gdip := DllCall("LoadLibrary", "str", "gdiplus", LoadedHModule)
+check
+gdip := unset
+check
+
+DllCall("LoadLibrary", "str", "das muss scheitern", LoadedHModule) <em>; OSError(126)</em>
+
+<em>; Im Gegensatz zu LoadLibrary wird bei GetModuleHandle ein Rückgabewert von Null
+; erwartet, und ein Handle ungleich Null sollte nicht automatisch freigegeben werden.</em>
+check() =&gt; MsgBox(DllCall("GetModuleHandle", "str", "gdiplus", "ptr") ? "Geladen" : "Nicht geladen")
+</pre>
+</div>
+
+</body>
+</html>

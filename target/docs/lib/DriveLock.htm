@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>DriveLock - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die DriveLock-Funktion sperrt die Auswurffunktion eines bestimmten Laufwerks." />
+<meta name="ahk:equiv-v1" content="lib/Drive.htm#Lock" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>DriveLock</h1>
+
+<p>Sperrt die Auswurffunktion eines bestimmten Laufwerks.</p>
+
+<pre class="Syntax"><span class="func">DriveLock</span> Laufwerk</pre>
+
+<h2 id="Parameters">Parameter</h2>
+<dl>
+    <dt>Laufwerk</dt>
+    <dd>
+        <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+        <p>Der Laufwerksbuchstabe, gefolgt von einem Doppelpunkt und optional einem umgekehrten Schrägstrich (kann auch mit UNC-Pfaden und zugeordneten Laufwerken funktionieren).</p>
+    </dd>
+</dl>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Bei Misserfolg wird eine Ausnahme ausgelöst, z.B. wenn <em>Laufwerk</em> nicht existiert oder die Sperrfunktion nicht unterstützt.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Die meisten Laufwerke können nicht gesperrt werden, wenn sie offen sind. Allerdings könnte die Sperrung immer noch erfolgen, nachdem das Laufwerk geschlossen wurde.</p>
+<p>Diese Funktion hat keine Auswirkung auf Laufwerke, die keine Sperrung zulassen (was auf die meisten schreibgeschützten Laufwerke zutrifft).</p>
+<p>Mit <a href="DriveUnlock.htm">DriveUnlock</a> kann ein Laufwerk entsperrt werden. Die Sperrung eines Laufwerks bleibt auch nach Beendigung des verantwortlichen Skripts bestehen. Andere Skripte, Programme oder ein Neustart des Systems können die Sperre wieder aufheben.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="DriveUnlock.htm">DriveUnlock</a>, <a href="Drive.htm">Drive-Funktionen</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Sperrt das D-Laufwerk.</p>
+<pre>DriveLock "D:"</pre>
+</div>
+
+</body>
+</html>

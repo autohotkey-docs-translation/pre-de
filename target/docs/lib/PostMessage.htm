@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>PostMessage - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die PostMessage-Funktion platziert eine Meldung in die Meldungswarteschlange eines Fensters oder Steuerelements." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>PostMessage</h1>
+
+<p>Platziert eine Meldung in die Meldungswarteschlange eines Fensters oder Steuerelements.</p>
+
+<pre class="Syntax"><span class="func">PostMessage</span> MldNummer <span class="optional">, wParam, lParam, StrlmntID, FensterTitel, FensterText, AusnahmeTitel, AusnahmeText</span></pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>MldNummer</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Die zu sendende Meldungsnummer. Einige solcher Nummern finden Sie unter <a href="../misc/SendMessageList.htm">Windows-Meldungen</a>.</p>
+  </dd>
+
+  <dt>wParam, lParam</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn einer der Parameter weggelassen wird, wird 0 gesendet. Andernfalls geben Sie die erste und zweite Komponente der Meldung an.</p>
+    <p>Jeder Parameter muss ein <a href="../Concepts.htm#numbers">Integer</a> sein.</p>
+    <p>Wenn AutoHotkey oder das Zielfenster 32-Bit ist, werden nur die unteren 32 Bits des Parameters verwendet, d.h. die Werte werden gekürzt, wenn sie vorzeichenfähig sind und außerhalb des Bereichs von -2147483648 bis 4294967295 (-0x80000000 bis 0x7FFFFFFF) liegen oder wenn sie vorzeichenlos sind und außerhalb des Bereichs von 0 bis 4294967295 (0xFFFFFFFF) liegen. Wenn sowohl AutoHotkey als auch das Zielfenster 64-Bit sind, kann ein beliebiger <a href="../Concepts.htm#pure-numbers">von AutoHotkey unterstützter</a> Integerwert verwendet werden.</p>
+  </dd>
+
+  <dt>StrlmntID</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a>, <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#objects">Objekt</a></p>
+    <p>Wenn weggelassen, wird die Meldung direkt an das Zielfenster gepostet, nicht an eines seiner Steuerelemente. Andernfalls geben Sie die ClassNN, den Text oder das HWND des Steuerelements oder ein Objekt mit einer Hwnd-Eigenschaft an. Einzelheiten finden Sie unter <a href="../misc/ControlID.htm">Steuerelementidentifikatoren</a>.</p>
+    <p>Das HWND, falls angegeben, muss nicht unbedingt das HWND eines Steuerelements (bzw. eines untergeordneten Fensters) sein. Es kann auch das HWND eines Top-Level-Fensters verwendet werden.</p>
+  </dd>
+
+  <dt>FensterTitel, FensterText, AusnahmeTitel, AusnahmeText</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a>, <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#objects">Objekt</a></p>
+    <p>Wenn jeder dieser Parameter leer ist oder weggelassen wird, wird das <a href="../misc/WinTitle.htm#LastFoundWindow">Zuletzt Gefundene Fenster</a> verwendet. Andernfalls geben Sie für <em>FensterTitel</em> einen <a href="../misc/WinTitle.htm">Fenstertitel oder andere Kriterien</a> zur Identifizierung des Zielfensters und/oder für <em>FensterText</em> eine Teilzeichenkette aus einem Textelement des Zielfensters an (wie von <a href="../Program.htm#Window_Spy">Window Spy</a> angezeigt).</p>
+    <p><em>AusnahmeTitel</em> und <em>AusnahmeText</em> können verwendet werden, um ein oder mehrere Fenster anhand ihres Titels oder Textes auszuschließen. Ihre Angabe ähnelt der von <em>FensterTitel</em> und <em>FensterText</em>, außer dass <em>AusnahmeTitel</em> keine anderen Kriterien als den Fenstertitel erkennt.</p>
+    <p>Fenstertitel und -texte sind Groß-/Kleinschreibung-sensitiv. Standardmäßig werden versteckte Fenster nicht erkannt und versteckte Textelemente erkannt, was mit <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a> bzw. <a href="DetectHiddenText.htm">DetectHiddenText</a> geändert werden kann. Verwendet man <a href="../misc/WinTitle.htm#ahk_id">reine HWNDs</a>, werden versteckte Fenster immer erkannt. Standardmäßig kann ein Fenstertitel den angegebenen <em>FensterTitel</em> oder <em>AusnahmeTitel</em> an beliebiger Stelle enthalten, um eine Übereinstimmung zu sein, was mit <a href="SetTitleMatchMode.htm">SetTitleMatchMode</a> geändert werden kann.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Es wird ein <a href="Error.htm#TargetError">TargetError</a> ausgelöst, wenn das Fenster oder Steuerelement nicht gefunden werden konnte.</p>
+<p>Es wird ein <a href="Error.htm#OSError">OSError</a> ausgelöst, wenn die Meldung nicht gepostet werden konnte. Wenn z.B. das Zielfenster auf einer höheren Integritätsstufe läuft als das Skript (d.h. das Zielfenster läuft mit Adminrechten, das Skript nicht), können Meldungen blockiert werden.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Seien Sie vorsichtig bei der Verwendung dieser Funktion – das Senden einer Meldung an das falsche Fenster (oder das Senden einer ungültigen Meldung) kann dazu führen, dass die Zielanwendung falsch reagiert oder abstürzt. Die meisten Anwendungen sind nicht dafür ausgelegt, bestimmte Arten von Meldungen aus externen Quellen zu empfangen.</p>
+<p>PostMessage platziert die Meldung in die Meldungswarteschlange des Zielfensters, ohne auf eine Bestätigung oder Antwort zu warten. <a href="SendMessage.htm">SendMessage</a> hingegen wartet, bis das Zielfenster die Meldung verarbeitet hat oder bis das Zeitlimit überschritten wurde.</p>
+<p>Im Gegensatz zu <a href="SendMessage.htm">SendMessage</a> sendet PostMessage in der Regel nur einfache numerische Werte, keine Pointer, die auf Strukturen und Zeichenketten verweisen.</p>
+<p>Um eine Meldung an alle Fenster im Betriebssystem zu senden – auch an solche, die versteckt oder deaktiviert sind – fügen Sie <code>0xFFFF</code> in <em>FensterTitel</em> ein (0xFFFF ist HWND_BROADCAST). Diese Technik sollte nur für Meldungen verwendet werden, die zum Broadcasten geeignet sind.</p>
+<p>Mit <a href="OnMessage.htm">OnMessage</a> kann ein Skript eine Meldung abfangen. <span class="ver">[v2.1-alpha.1+]</span>: Damit ein <a href="Gui.htm">GUI</a>-Fenster oder in <span class="ver">[v2.1-alpha.7+]</span> ein GUI-Steuerelement eine Meldung empfängt, verwenden Sie die <a href="GuiOnMessage.htm">OnMessage-Methode</a>.</p>
+<p>Eine Erklärung zur Verwendung dieser Funktion finden Sie unter <a href="../misc/SendMessage.htm">PostMessage / SendMessage Tutorial</a>.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="SendMessage.htm">SendMessage</a>, <a href="../misc/SendMessageList.htm">Meldungsliste</a>, <a href="../misc/SendMessage.htm">PostMessage / SendMessage Tutorial</a>, <a href="OnMessage.htm">OnMessage</a>, <a href="GuiOnMessage.htm">OnMessage (GUI)</a>, <a href="../misc/Winamp.htm">Winamp automatisieren</a>, <a href="DllCall.htm">DllCall</a>, <a href="ControlSend.htm">ControlSend</a>, <a href="MenuSelect.htm">MenuSelect</a></p>
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExSwitchKeybLang">
+<p><a class="ex_number" href="#ExSwitchKeybLang"></a> Schaltet die Tastaturbelegung/Sprache des aktiven Fensters auf Englisch (US) um.</p>
+<pre>PostMessage 0x0050, 0, 0x4090409,, "A"  <em>; 0x0050 ist WM_INPUTLANGCHANGEREQUEST.</em></pre>
+</div>
+
+</body>
+</html>

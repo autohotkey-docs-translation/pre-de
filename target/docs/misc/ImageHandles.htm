@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Bild-Handles - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Bild-Handles anstelle von Bilddateinamen verwenden, um eine Bitmap oder ein Symbol aus dem Speicher zu verwenden." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+
+<body><script>site.init();</script>
+<h1>Bild-Handles</h1>
+
+<p>Mit der folgenden Syntax können Sie ein Symbol- oder Bitmap-Handle anstelle eines Bilddateinamens verwenden:</p>
+<pre class="Syntax">HBITMAP:<i>BitmapHandle</i>
+HICON:<i>SymbolHandle</i></pre>
+<p>Ersetzen Sie <em>BitmapHandle</em> oder <em>SymbolHandle</em> mit dem eigentlichen Handle-Wert. Zum Beispiel <code>"hicon:" handle</code>, wobei <em>handle</em> eine Variable ist, die ein Symbol-Handle enthält.</p>
+<p>Die folgenden Dinge unterstützen diese Syntax:</p>
+<ul>
+  <li><a href="../lib/GuiControls.htm#Picture">Gui.AddPicture</a> (und <a href="../lib/GuiControl.htm#Value">GuiControl.Value</a> zum Setzen des Inhalts eines Picture-Steuerelements).</li>
+  <li><a href="../lib/ListView.htm#IL_Add">IL_Add</a></li>
+  <li><a href="../lib/LoadPicture.htm">LoadPicture</a></li>
+  <li><a href="../lib/GuiControls.htm#SB_SetIcon">SB.SetIcon</a></li>
+  <li><a href="../lib/ImageSearch.htm">ImageSearch</a></li>
+  <li><a href="../lib/TraySetIcon.htm">TraySetIcon</a> oder <a href="../lib/Menu.htm#SetIcon">Menu.SetIcon</a></li>
+</ul>
+<p>Ein Bitmap- oder Symbol-Handle ist ein numerischer Wert, der eine Bitmap oder ein Symbol im Arbeitsspeicher identifiziert. Viele Skripte müssen sich nie mit Handles befassen, da AutoHotkey in den meisten Fällen automatisch das Bild aus der Datei lädt und es wieder freigibt, wenn es nicht mehr benötigt wird. Die oben gezeigte Syntax sollte nur verwendet werden, wenn das Skript ein Symbol- oder Bitmap-Handle aus einer anderen Quelle bezieht, z.B. durch Senden der WM_GETICON-Meldung an ein Fenster. Die Syntax kann auch in Kombination mit <a href="../lib/LoadPicture.htm">LoadPicture</a> verwendet werden, um das mehrfache Laden eines Bildes aus einer Datei zu vermeiden.</p>
+<p>Standardmäßig wird das Handle so behandelt, als hätte AutoHotkey das Bild aus einer Datei geladen – zum Beispiel wird eine Bitmap, die für ein Picture-Steuerelement verwendet wird, gelöscht, wenn die GUI zerstört wird, außerdem wird ein Bild grundsätzlich sofort gelöscht, wenn dessen Größe geändert werden muss. Um das zu verhindern, fügen Sie einfach ein Sternchen zwischen dem Doppelpunkt und dem Handle ein. Zum Beispiel: <code>"hbitmap:*" handle</code>. Diese Methode zwingt die Funktion (außer ImageSearch), eine Kopie des Bildes zu erstellen.</p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExHICON">
+<p><a class="ex_number" href="#ExHICON"></a> Zeigt ein Menü der ersten <em>n</em> gefundenen Dateien an, inklusive Symbole.</p>
+<pre>Suchmuster := A_ScriptDir "\*"
+n := 15
+
+<em>; Ein Menü erstellen.</em>
+DateiMenü := Menu()
+
+<em>; Speicher für eine SHFILEINFOW-Struktur reservieren.</em>
+DateiInfo := Buffer(DateiGröße := A_PtrSize + 688)
+
+Loop Files, Suchmuster, "FD"
+{
+    <em>; Menüpunkt pro Datei hinzufügen.</em>
+    DateiMenü.Add(A_LoopFileName, (*) =&gt; "") <em>; Nichts tun.</em>
+    
+    <em>; Symbol der Datei abrufen.</em>
+    if DllCall("shell32\SHGetFileInfoW", "WStr", A_LoopFileFullPath
+        , "UInt", 0, "Ptr", DateiInfo, "UInt", DateiGröße, "UInt", 0x100)
+    {
+        hicon := NumGet(DateiInfo, 0, "Ptr")
+        <em>; Symbol des Menüpunkts setzen.</em>
+        DateiMenü.SetIcon(A_Index "&amp;", "HICON:" hicon)
+        <em>; Da wir hier ":" statt ":*" verwenden, wird das Symbol automatisch
+        ; freigegeben, wenn das Programm beendet oder wenn das Menü oder der
+        ; Menüpunkt gelöscht wird.</em>
+    }
+}
+until A_Index = n
+DateiMenü.Show()
+</pre>
+</div>
+<p>Siehe auch <a href="../lib/LoadPicture.htm#ExSlideShow">LoadPicture-Beispiel #1</a>.</p>
+
+</body>
+</html>

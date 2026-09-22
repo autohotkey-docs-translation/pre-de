@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>IsObject - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die IsObject-Funktion gibt eine Zahl ungleich 0 zurück, wenn ein bestimmter Wert ein Objekt ist." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>IsObject</h1>
+
+<p>Gibt eine Zahl ungleich 0 zurück, wenn ein bestimmter Wert ein Objekt ist.</p>
+
+<pre class="Syntax">Boolesch := <span class="func">IsObject</span>(Wert)</pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>Wert</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#values">Beliebig</a></p>
+    <p>Der zu prüfende Wert.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#boolean">Integer (boolesch)</a></p>
+<p>Diese Funktion gibt 1 (true) zurück, wenn <em>Wert</em> ein Objekt ist, andernfalls 0 (false).</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Jeder Wert, der kein primitiver Wert (Zahl oder Zeichenkette) ist, wird als Objekt eingestuft, auch solche, die nicht von <a href="Object.htm">Object</a> abgeleitet sind, wie z.B. COM-Wrapper-Objekte. Diese Unterscheidung wird gemacht, weil Objekte im Gegensatz zu primitiven Werten mehrere gemeinsame Merkmale haben:</p>
+<ul>
+  <li>Für jedes Objekt wird dynamisch Speicher reserviert und dessen <a href="../Objects.htm#Reference_Counting">Referenzen gezählt</a>. Beliebig viele Variablen, Eigenschaften oder Array-Elemente können auf dasselbe Objekt verweisen. Für unveränderliche Werte ist diese Unterscheidung nicht wichtig, aber Objekte können veränderliche Eigenschaften haben.</li>
+  <li>Jedes Objekt hat eine <a href="../Objects.htm#ObjPtr">eindeutige Adresse</a>, die auch ein <a href="https://learn.microsoft.com/windows/win32/api/oaidl/nn-oaidl-idispatch">IDispatch</a>-kompatibler Interface-Pointer ist.</li>
+  <li>Ein Objekt und ein anderer Wert sind bei einem Vergleich nur dann gleich, wenn es sich um dasselbe Objekt handelt.</li>
+  <li>Es ist nicht möglich, ein Objekt direkt in eine Zeichenkette oder Zahl umzuwandeln.</li>
+</ul>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="../Objects.htm">Objekte</a></p>
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Meldet "Das ist ein Objekt.", weil der Wert ein Objekt ist.</p>
+<pre>obj := {Schlüssel: "Wert"}
+
+if IsObject(obj)
+    MsgBox "Das ist ein Objekt."
+else
+    MsgBox "Das ist kein Objekt."</pre>
+</div>
+
+</body>
+</html>

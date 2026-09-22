@@ -1,0 +1,442 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Verwendung des Programms | AutoHotkey v2</title>
+<meta name="description" content="Erfahren Sie mehr über das Erstellen, Bearbeiten und Ausführen eines Skripts, das Tray-Symbol, das versteckte Hauptfenster des Skripts, Befehlszeilennutzung, Portabilität und die Installer-Optionen." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="static/theme.css" rel="stylesheet" />
+<link href="static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="static/content.js" id="content_js"></script>
+<script src="static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+<h1>Verwendung des Programms</h1>
+<p>AutoHotkey macht nichts von selbst; es braucht ein Skript, das ihm sagt, was es tun soll. Ein Skript ist lediglich eine reine Textdatei mit der Dateiendung <code class="no-highlight">.ahk</code>, die Anweisungen für das Programm enthält – so ähnlich wie eine Konfigurationsdatei, nur viel mächtiger. Das Mindeste, was ein Skript tun kann, ist eine einzelne Aktion auszuführen und sich dann zu beenden. Die meisten Skripte definieren jedoch eine Reihe von <a href="Hotkeys.htm">Hotkeys</a>, von denen jeder eine oder mehrere Aktionen ausführt, sobald er gedrückt wird.</p>
+<pre>#z::Run "https://www.autohotkey.com"  <em>; WIN+Z</em>
+
+^!n::  <em>; STRG+ALT+N</em>
+{
+    if WinExist("Unbenannt - Editor")
+        WinActivate
+    else
+        Run "Notepad"
+}</pre>
+<p><strong>Tipp:</strong> Wenn Ihr Browser dies unterstützt, können Sie jeden Codeblock (wie den obigen) als Skriptdatei herunterladen, indem Sie den Mauszeiger über den Codeblock bewegen und oben rechts auf die Schaltfläche <span style="font-family: icons;">↓</span> klicken.</p>
+
+<h2 id="toc">Inhaltsverzeichnis</h2>
+<ul>
+  <li><a href="#create">Ein Skript erstellen</a></li>
+  <li><a href="#edit">Ein Skript bearbeiten (editieren)</a></li>
+  <li><a href="#run">Ein Skript ausführen</a></li>
+  <li><a href="#tray-icon">Tray-Symbol</a></li>
+  <li><a href="#main-window">Hauptfenster</a></li>
+  <li><a href="#Window_Spy">Window Spy</a></li>
+  <li><a href="#embedded-scripts">Eingebettete Skripte</a></li>
+  <li><a href="#cmd">Befehlszeilennutzung</a></li>
+  <li><a href="#portability">Portabilität von AutoHotkey.exe</a></li>
+  <li><a href="#launcher">Launcher</a></li>
+  <li><a href="#dash">Dash</a></li>
+  <li><a href="#newscript">New Script</a></li>
+  <li><a href="#install">Installation</a>
+  <ul>
+    <li><a href="#Installer_uiAccess">Mit UI-Access starten</a></li>
+  </ul></li>
+</ul>
+
+<h2 id="create">Ein Skript erstellen</h2>
+<p>Es gibt mehrere Möglichkeiten, eine Skriptdatei zu erstellen:</p>
+<ul>
+  <li>Speichern Sie mit Notepad (oder einem anderen <a href="misc/Editors.htm">Texteditor</a>) eine Datei mit der Endung <code class="no-highlight">.ahk</code>. Auf manchen Systemen müssen Sie den Namen in Anführungszeichen setzen, um sicherzustellen, dass der Editor keine weitere Dateiendung (wie z.B. .txt) hinzufügt.
+  <p class="note">Achten Sie darauf, die Datei unter UTF-8 mit BOM zu speichern, wenn ASCII-fremde Zeichen enthalten sind. Weitere Informationen finden Sie in der <a href="FAQ.htm#nonascii">FAQ</a>.</p></li>
+  <li>Rechtsklicken Sie im Explorer in den leeren Bereich des Ordners, wo Sie das Skript erstellen möchten, und wählen Sie <strong>Neu</strong> und <strong>AutoHotkey Script</strong> aus. Sie können dann einen Namen für das Skript eingeben (achten Sie darauf, die Dateiendung <code class="no-highlight">.ahk</code> nicht zu löschen, falls sie sichtbar ist).</li>
+  <li>Öffnen Sie <a href="#dash">Dash</a>, wählen Sie <a href="#newscript">New script</a> (neues Skript) aus, tragen Sie einen Namen für das Skript ein (ohne die <code class="no-highlight">.ahk</code>-Endung) und klicken Sie auf <em>Create</em> (erstellen) oder <em>Edit</em> (bearbeiten). In diesem Fenster können Sie die Vorlage, mit der das Skript erstellt wird, und den Speicherort konfigurieren. Außerdem können Sie diese bei Bedarf als Standard festlegen.</li>
+</ul>
+<p class="note">Weitere Informationen zum Schreiben eines Skripts finden Sie unter <a href="Language.htm">Skriptsprache</a>.</p>
+
+<h2 id="edit">Ein Skript bearbeiten (editieren)</h2>
+<p>Klicken Sie mit der rechten Maustaste auf die Skriptdatei und wählen Sie <strong>Edit Script</strong> aus, um ein Skript zum Editieren zu öffnen. Wenn das Skript bereits ausgeführt wird, können Sie die <a href="lib/Edit.htm">Edit</a>-Funktion verwenden oder auf das <a href="#tray-icon">Tray-Symbol</a> des Skripts rechtsklicken und <strong>Edit Script</strong> auswählen. Wenn Sie noch keinen Standardeditor ausgewählt haben, werden Sie dazu aufgefordert. Andernfalls ändern Sie Ihren Standardeditor über die <em>Editor settings</em> im <a href="#dash">Dash</a>. Natürlich können Sie jederzeit einen Texteditor starten und dann das Skript wie jede andere Textdatei öffnen.</p>
+<p>Wenn Sie ein Skript editiert haben, müssen Sie es ausführen oder <a href="lib/Reload.htm">neu laden</a>, damit die Änderungen wirksam werden. Ein laufendes Skript kann in der Regel über das <a href="#tray-icon">Tray-Menü</a> neu geladen werden.</p>
+
+<h2 id="run">Ein Skript ausführen</h2>
+<p>Sofern AutoHotkey installiert ist, gibt es mehrere Möglichkeiten, ein Skript auszuführen:</p>
+<ul>
+<li>Doppelklicken Sie im Explorer auf eine Skriptdatei (oder ihre Verknüpfung).</li>
+<li>Rufen Sie AutoHotkey.exe in der Befehlszeile auf und übergeben Sie den Dateinamen des Skripts als <a href="Scripts.htm#cmd">Befehlszeilenparameter</a>.</li>
+<li>Nachdem Sie <a href="Scripts.htm#defaultfile">das Standardskript</a> erstellt haben, starten Sie AutoHotkey über die Verknüpfung im Startmenü, um das Skript auszuführen.</li>
+<li>Wenn AutoHotkey an die Taskleiste oder das Startmenü unter Windows 7 oder höher angeheftet ist, können zuletzt gestartete oder angeheftete Skripte über die Sprungliste des Programms gestartet werden.</li>
+</ul>
+<p>Die meisten Skripte zeigen ihren Effekt nur während der Ausführung. Verwenden Sie das <a href="#tray-icon">Tray-Menü</a> oder die <a href="lib/ExitApp.htm">ExitApp</a>-Funktion, um ein Skript zu beenden. Skripte werden auch zur Beendigung gezwungen, wenn Windows heruntergefahren wird. Um ein Skript automatisch nach der Anmeldung des Benutzers zu starten, platzieren Sie einfach eine Verknüpfung der Skriptdatei im <a href="Variables.htm#Startup">Autostart</a>-Ordner.</p>
+<p>Skripte können auch <a href="Scripts.htm#ahk2exe">kompiliert</a> werden, d.h. ein Skript kann mit einer AutoHotkey-Binärdatei kombiniert werden, um eine eigenständige EXE-Datei zu erstellen.</p>
+
+<h2 id="tray-icon">Tray-Symbol</h2>
+<p>Standardmäßig fügt jedes Skript ein eigenes Symbol in den Infobereich der Taskleiste (auch Tray genannt) ein.</p>
+<p>Das Tray-Symbol sieht üblicherweise wie folgt aus:</p>
+<style>
+.img_center img {
+display: block;
+margin-right: .2em;
+}
+</style>
+<table style="margin-left: 1em;">
+  <tr>
+    <td class="img_center"><img src="static/ahk16.png" alt="grünes H-Symbol"></td>
+    <td>Das Standard-Tray-Symbol.</td>
+  </tr>
+  <tr>
+    <td class="img_center"><img src="static/ahk16_pause.png" alt="grünes Symbol mit einem Pausezeichen"></td>
+    <td>Das Skript ist <a href="lib/Pause.htm">pausiert</a>.</td>
+  </tr>
+  <tr>
+    <td class="img_center"><img src="static/ahk16_suspend.png" alt="grünes Symbol mit transparentem H"></td>
+    <td>Das Skript ist <a href="lib/Suspend.htm">suspendiert</a>.</td>
+  </tr>
+  <tr>
+    <td class="img_center"><img src="static/ahk16_pause_suspend.png" alt="grünes Symbol mit transparentem Pausezeichen"></td>
+    <td>Das Skript ist <a href="lib/Pause.htm">pausiert</a> und <a href="lib/Suspend.htm">suspendiert</a>.</td>
+  </tr>
+</table>
+<p>Rechtsklicken Sie auf das Tray-Symbol, um das Tray-Menü anzuzeigen, das standardmäßig die folgenden Optionen enthält:</p>
+<ul>
+<li>Open – Öffnet das <a href="#main-window">Hauptfenster</a> des Skripts.</li>
+<li>Help – Öffnet die Offline-Hilfe von AutoHotkey.</li>
+<li>Window Spy – Startet <a href="#Window_Spy">Window Spy</a>, das verschiedene Informationen über ein Fenster anzeigt.</li>
+<li>Reload Script – Lädt das Skript neu. Siehe <a href="lib/Reload.htm">Reload</a>.</li>
+<li>Edit Script – Öffnet das Skript im Standardeditor. Siehe <a href="lib/Edit.htm">Edit</a>.</li>
+<li>Suspend Hotkeys – Deaktiviert oder aktiviert Hotkeys via <a href="lib/Suspend.htm">Suspend</a>.</li>
+<li>Pause Script – Pausiert oder entpausiert das Skript. Siehe <a href="lib/Pause.htm">Pause</a>.</li>
+<li>Exit – Beendet das Skript.</li>
+</ul>
+<p>Standardmäßig bewirkt ein Doppelklick auf das Tray-Symbol, dass das <a href="#main-window">Hauptfenster</a> des Skripts angezeigt wird.</p>
+<p>Das Verhalten und Aussehen des Tray-Symbols und -Menüs können angepasst werden:</p>
+<ul>
+  <li><a href="Variables.htm#TrayMenu">A_TrayMenu</a> gibt ein <a href="lib/Menu.htm">Menu-Objekt</a> zurück, mit dem das Tray-Menü angepasst werden kann.</li>
+  <li><a href="Variables.htm#IconHidden">A_IconHidden</a> oder die <a href="lib/_NoTrayIcon.htm">#NoTrayIcon</a>-Direktive kann verwendet werden, um das Tray-Symbol zu verstecken (oder sichtbar zu machen).</li>
+  <li><a href="Variables.htm#IconTip">A_IconTip</a> kann verwendet werden, um den Tooltiptext des Tray-Symbols zu ändern.</li>
+  <li><a href="lib/TraySetIcon.htm">TraySetIcon</a> kann verwendet werden, um das Symbol zu ändern.</li>
+</ul>
+
+<h2 id="main-window">Hauptfenster</h2>
+<p>Das Hauptfenster des Skripts ist normalerweise versteckt, kann aber über das <a href="#tray-icon">Tray-Symbol</a> oder eine der unten aufgeführten Funktionen sichtbar gemacht werden, um Zugriff auf Informationen zu erhalten, die für das Debuggen des Skripts nützlich sind. Die Menüpunkte im <strong>View</strong>-Menü beeinflussen, was im Hauptfenster angezeigt wird:</p>
+<ul>
+<li>Lines most recently executed – Die zuletzt ausgeführten Zeilen. Siehe <a href="lib/ListLines.htm">ListLines</a>.</li>
+<li>Variables and their contents – Variablen und ihr Inhalt. Siehe <a href="lib/ListVars.htm">ListVars</a>.</li>
+<li>Hotkeys and their methods – Hotkeys und ihre Methoden. Siehe <a href="lib/ListHotkeys.htm">ListHotkeys</a>.</li>
+<li>Key history and script info – Tastenverlauf und Skriptinfos. Siehe <a href="lib/KeyHistory.htm">KeyHistory</a>.</li>
+</ul>
+<p>Die interne Variable <a href="Variables.htm#ScriptHwnd">A_ScriptHwnd</a> enthält die eindeutige ID (HWND) des Hauptfensters des Skripts.</p>
+<p>Wenn dieses Fenster mit <a href="lib/WinClose.htm">WinClose</a> geschlossen wird (auch von einem anderen Skript aus), wird das Skript beendet, aber die meisten anderen Methoden verstecken nur das Fenster und lassen das Skript weiterlaufen.</p>
+<p>Wenn das Hauptfenster minimiert wird, wird es automatisch versteckt. Dies ist notwendig, um zu verhindern, dass untergeordnete Fenster (z.B. GUI-Fenster oder einige Dialogfenster) automatisch minimiert werden, und um zu bewirken, dass die Schaltfläche in der Taskleiste des Hauptfensters versteckt wird. Um das Hauptfenster stattdessen normal minimieren zu lassen, überschreiben Sie das Standardverhalten mit <a href="lib/OnMessage.htm">OnMessage</a>. Zum Beispiel:</p>
+<pre>; Dies verhindert das Verstecken des Hauptfensters beim Minimieren:
+OnMessage 0x0112, AutoMinimierenVerhindern <em>; WM_SYSCOMMAND = 0x0112</em>
+OnMessage 0x0005, AutoMinimierenVerhindern <em>; WM_SIZE = 0x0005
+; Dies verhindert das automatische Minimieren untergeordneter GUI-Fenster (außer Dialogfenster):</em>
+OnMessage 0x0018, AutoMinimierenVerhindern
+Persistent
+
+AutoMinimierenVerhindern(wParam, lParam, uMsg, hwnd) {
+    if (uMsg = 0x0112 &amp;&amp; wParam = 0xF020 &amp;&amp; hwnd = A_ScriptHwnd) { <em>; SC_MINIMIZE = 0xF020</em>
+        WinMinimize
+        return 0 <em>; Das Verstecken des Hauptfensters verhindern.</em>
+    }
+    if (uMsg = 0x0005 &amp;&amp; wParam = 1 &amp;&amp; hwnd = A_ScriptHwnd) <em>; SIZE_MINIMIZED = 1</em>
+        return 0 <em>; Das Verstecken des Hauptfensters verhindern.</em>
+    if (uMsg = 0x0018 &amp;&amp; lParam = 1) <em>; SW_PARENTCLOSING = 1</em>
+        return 0 <em>; Das Verstecken des untergeordneten Fensters verhindern.</em>
+}</pre>
+
+<h3 id="title">Titel des Hauptfensters</h3>
+<p>Der Titel des Hauptfensters wird von <a href="lib/_SingleInstance.htm">#SingleInstance</a>- und <a href="lib/Reload.htm">Reload</a>-Mechanismen verwendet, um andere Instanzen desselben Skripts zu identifizieren. Das <a href="lib/WinSetTitle.htm">Ändern des Titels</a> verhindert, dass das Skript als solches identifiziert wird. Welcher Titel standardmäßig verwendet wird, hängt davon ab, wie das Skript geladen wurde:</p>
+<table class="info">
+  <tr><th>Geladen aus</th><th>Titelausdruck</th><th>Beispiel</th></tr>
+  <tr><td>.ahk-Datei</td><td><code>A_ScriptFullPath " - AutoHotkey v" A_AhkVersion</code></td><td>E:\Mein Skript.ahk - AutoHotkey v1.1.33.09</td></tr>
+  <tr><td>Hauptressource (kompiliertes Skript)</td><td><code>A_ScriptFullPath</code></td><td>E:\Mein Skript.exe</td></tr>
+  <tr><td>Jede andere Ressource</td><td><code>A_ScriptFullPath " - " A_LineFile</code></td><td>E:\Mein AutoHotkey.exe - *INTERNES-TOOL.AHK</td></tr>
+</table>
+<p>Der folgende Code zeigt, wie der Standardtitel mit dem Skript selbst ermittelt werden kann (wobei der tatsächliche Titel mit <a href="lib/WinGetTitle.htm">WinGetTitle</a> abgerufen werden kann):</p>
+<pre>
+Titel := A_ScriptFullPath
+if !A_IsCompiled
+    Titel .= " - AutoHotkey v" A_AhkVersion
+<em>; Für ein korrektes Ergebnis muss dies von der auszuführenden Ressource ausgewertet werden,
+; nicht von einem #Include (es sei denn, das #Include wurde mit Ahk2Exe in das Skript inkludiert):</em>
+else if SubStr(A_LineFile, 1, 1) = "*" &amp;&amp; A_LineFile != "*#1"
+    Titel .= " - " A_LineFile
+</pre>
+
+<h2 id="Window_Spy">Window Spy</h2>
+<p>Window Spy ist ein kleines Hilfsprogramm, das im Lieferumfang von AutoHotkey enthalten ist. Es zeigt detaillierte Informationen über ein Fenster an, darunter dessen Titel, Koordinaten, Größe und Steuerelementdaten. Dieses Programm dient als schnelle Hilfe beim Schreiben von Automatisierungsskripten und unterstützt Sie dabei, die genauen Werte für gängige interne Funktionen zu ermitteln.</p>
+<p>Sie können Window Spy über das <a href="#tray-icon">Tray-Symbol</a>, das Startmenü oder das AutoHotkey-Installationsverzeichnis starten.</p>
+<p>Standardmäßig werden Informationen über ein Fenster oder Steuerelement abgerufen, das sich unter dem Mauszeiger befindet. Um stattdessen Informationen über das aktive Fenster und sein fokussiertes Steuerelement abzurufen, deaktivieren Sie die Option "Follow Mouse" (Maus folgen) in der oberen rechten Ecke.</p>
+<p>Sie können die Informationsaktualisierung vorübergehend aussetzen, indem Sie entweder <kbd>Strg</kbd> oder <kbd>Umschalt</kbd> gedrückt halten, Window Spy aktivieren oder mit dem Mauszeiger darüberfahren.</p>
+<p>Window Spy ist in folgende Abschnitte unterteilt, die jeweils ein eigenes, schreibgeschütztes Eingabefeld haben:</p>
+<dl>
+  <dt>Window Title, Class and Process</dt>
+  <dd>
+    <pre class="no-highlight NoIndent">*Unbenannt - Editor
+ahk_class Notepad
+ahk_exe notepad.exe
+ahk_pid 4624
+ahk_id 68096</pre>
+    <p>Der Titel des Fensters, und dessen Klasse, Prozesspfad, Prozess-ID und HWND mit vorangestelltem <a href="misc/WinTitle.htm#ahk_">ahk_-Schlüsselwort</a>. Diese können alle als Kriterien (sogar in Kombination) im <a href="misc/WinTitle.htm">FensterTitel-Parameter</a> fensterspezifischer Funktionen wie <a href="lib/WinActivate.htm">WinActivate</a>, <a href="lib/WinWait.htm">WinWait</a> und <a href="lib/WinExist.htm">WinExist</a> angegeben werden.</p>
+  </dd>
+  <dt>Mouse Position</dt>
+  <dd>
+    <pre class="no-highlight NoIndent">Screen:  1017, 714
+Window:  733, 513
+Client:  724, 450 (default)
+Color:   FEFEFE (Red=FE Green=FE Blue=FE)</pre>
+<p>Die Koordinaten des Mauszeigers (relativ zum gesamten Bildschirm, Fenster und Clientbereich des Fensters) und die 6-stellige RGB-Farbe des Pixels auf diesen Koordinaten. Nützlich für Funktionen wie <a href="lib/Click.htm">Click</a> und <a href="lib/PixelSearch.htm">PixelSearch</a>.</p>
+  </dd>
+  <dt>Focused Control</dt>
+  <dt>Control Under Mouse Position</dt>
+  <dd>
+    <pre class="no-highlight NoIndent">ClassNN: Edit1
+Text:    Das ist Zeile 1. (...)
+Screen:  x: 869  y: 280  w: 997  h: 922
+Client:  x: 0    y: 0    w: 976  h: 922</pre>
+    <p>Die <a href="misc/ControlID.htm#ClassNN">ClassNN</a>, der Text (ggf. gekürzt), die Koordinaten (relativ zum gesamten Bildschirm) und die Größe des Steuerelements, das sich unterhalb des Mauszeigers befindet oder den Tastaturfokus hat, sowie die Koordinaten und Größe seines Clientbereichs (das ist der Bereich ohne Scrollbalken und Rahmen). Nützlich für Funktionen mit einem <a href="misc/ControlID.htm">StrlmntID-Parameter</a> wie <a href="lib/ControlClick.htm">ControlClick</a> und <a href="lib/ControlSend.htm">ControlSend</a>. Wenn das Steuerelement nicht ermittelt werden kann, wird das Eingabefeld leer sein.</p>
+  </dd>
+  <dt>Active Window Position</dt>
+  <dd>
+    <pre class="no-highlight NoIndent">Screen:  x: 781  y: 225  w: 1015 h: 1023
+Client:  x: 790  y: 288  w: 997  h: 951</pre>
+    <p>Die Koordinaten und Größe des Fensters, sowie die Koordinaten und Größe seines Clientbereichs (das ist der Bereich ohne Titelleiste, Menüleiste und Rahmen). Die Koordinaten sind relativ zum gesamten Bildschirm. Nützlich für fensterspezifische Funktionen wie <a href="lib/WinMove.htm">WinMove</a>.</p>
+  </dd>
+  <dt>Status Bar Text</dt>
+  <dd>
+    <pre class="no-highlight NoIndent">(1):     381 Elemente (Freier Speicherplatz: 5.39 GB)
+(2):     15.1 MB
+(3):     Arbeitsplatz</pre>
+    <p>Der Text jedes Segments in der Statusleiste des Fensters (sofern vorhanden). Window Spy versucht, die erste <em>reguläre</em> Statusleiste im Fenster zu lesen (allgemeines Microsoft-Steuerelement: msctls_statusbar32). Einige Programme verwenden eigene Statusleisten oder spezielle Versionen des MS-Steuerelements – in diesem Fall wird das Eingabefeld leer sein.</p>
+  </dd>
+  <dt>Visible Text</dt>
+  <dd>
+    <pre class="no-highlight NoIndent">&amp;Ja
+&amp;Nein
+Möchten Sie fortfahren?</pre>
+    <p>Nur der sichtbare Text des Fensters. Aktivieren Sie die Option "Slow TitleMatchMode" (langsamer Titelvergleichsmodus), um einen alternativen Textabrufmodus zu verwenden, der mit viel mehr Steuerelementen funktioniert.</p>
+  </dd>
+  <dt>All Text</dt>
+  <dd>
+    <p>Ähnlich wie oben, aber der sichtbare und versteckte Text des Fensters.</p>
+  </dd>
+</dl>
+
+<h2 id="embedded-scripts">Eingebettete Skripte</h2>
+<p>Skripte können in eine Standard-AutoHotkey-EXE-Datei eingebettet werden, indem sie mit dem <a href="Scripts.htm#ahk2exe">Ahk2Exe-Compiler</a> als Win32-Ressourcen (RCDATA) hinzugefügt werden. Zusätzliche Skripte können mit der <a href="misc/Ahk2ExeDirectives.htm#AddResource">AddResource</a>-Compilerdirektive hinzugefügt werden.</p>
+<p>Ein eingebettetes Skript kann auf der Befehlszeile oder mit <a href="lib/_Include.htm">#Include</a> durch Angabe eines Sternchens (*) gefolgt vom Ressourcennamen angegeben werden. Handelt es sich um eine Integer-ID, muss der Ressourcenname ein Rautezeichen (#) gefolgt von einer Dezimalzahl sein.</p>
+<p>Das Programm kann automatisch Skriptcode aus den folgenden Ressourcen laden, wenn diese in der Datei vorhanden sind:</p>
+<table class="info">
+  <tr><th>ID</th><th>Angabe</th><th>Verwendung</th></tr>
+  <tr>
+    <td>1</td><td>*#1</td>
+    <td>Dies ist das Mittel, mit dem ein <a href="Scripts.htm#ahk2exe">kompiliertes Skript</a> aus einer EXE-Datei erstellt wird. Dieses Skript wird automatisch ausgeführt, und die meisten Befehlszeilenoptionen werden an das Skript übergeben, anstatt vom Programm interpretiert zu werden. Externe Skripte und alternativ eingebettete Skripte können mit der Befehlszeilenoption <a href="Scripts.htm#SlashScript">/script</a> ausgeführt werden.</td>
+  </tr>
+  <tr>
+    <td>2</td><td>*#2</td>
+    <td>Wenn vorhanden, wird dieses Skript automatisch vor jedem Skript, das das Programm lädt, und vor jeder mit <a href="Scripts.htm#SlashInclude">/include</a> angegebenen Datei "inkludiert".</td>
+  </tr>
+</table>
+<p>Wenn die Quelle des Hauptskripts eine eingebettete Ressource ist, agiert das Programm im Modus "kompiliertes Skript", außer dass <a href="Variables.htm#AhkPath">A_AhkPath</a> immer den Pfad der aktuellen EXE-Datei enthält (derselbe wie <a href="Variables.htm#ScriptFullPath">A_ScriptFullPath</a>). Für andere Ressourcen als *#1 wird der Ressourcenbezeichner in den <a href="#title">Titel des Hauptfensters</a> eingefügt, um <a href="lib/_SingleInstance.htm">#SingleInstance</a> und <a href="lib/Reload.htm">Reload</a> zu unterstützen.</p>
+<p>Wenn <a href="Variables.htm#LineFile">A_LineFile</a> von einem Code referenziert wird, der aus einer eingebetteten Ressource stammt, enthält es ein Sternchen (*) gefolgt vom Ressourcennamen.</p>
+
+<h2 id="cmd">Befehlszeilennutzung</h2>
+<p>Unter <a href="Scripts.htm#cmd">Befehlszeilenparameter an ein Skript übergeben</a> finden Sie Informationen zur Befehlszeilennutzung und eine Liste von Befehlszeilenoptionen, die das Verhalten des Programms beeinflussen.</p>
+
+<h2 id="portability">Portabilität von AutoHotkey.exe</h2>
+<p>Zum Starten eines .ahk-Skripts ist nur die Datei AutoHotkey.exe erforderlich.</p>
+<p>Die Umbenennung von AutoHotkey.exe ändert auch, welches Skript <a href="Scripts.htm#defaultfile">standardmäßig</a> ausgeführt wird, was eine Alternative zum Kompilieren des Skripts für die Verwendung auf einem Computer ohne installiertes AutoHotkey ist. Zum Beispiel führt <i>MeinSkript</i>.exe automatisch <i>MeinSkript</i>.ahk aus, wenn kein Dateiname angegeben ist, kann aber auch andere Skripte ausführen.</p>
+
+<h2 id="launcher">Launcher</h2>
+<p>Der Launcher ermöglicht die gleichzeitige Nutzung von v1- und v2-Skripten auf einem System mit einer einzigen Dateiendung, ohne dass eine Version bevorzugt werden muss oder unterschiedliche Methoden zum Starten von Skripten erforderlich sind. Der Launcher sucht im Skript nach Anhaltspunkten bezüglich der verwendeten Version und lokalisiert anschließend eine geeignete EXE-Datei zum Starten des Skripts.</p>
+<p>Wenn das Skript die <a href="lib/_Requires.htm">#Requires</a>-Direktive enthält, sucht der Launcher nach einer EXE-Datei, die die Anforderung erfüllt. Andernfalls analysiert der Launcher optional die Syntax. Er sucht nach Mustern, die nur in einer der beiden Hauptversionen gültig sind. Einige der üblichen auffindbaren Muster sind:</p>
+<ul>
+  <li>v1: <code class="no-highlight">MsgBox, mit Komma</code>, <code class="no-highlight">MsgBox % "kein Prozent am Ende"</code> und <code class="no-highlight">Legacy = Zuweisung</code>.</li>
+  <li>v1: Mehrzeilige Hotkeys ohne geschweifte Klammern oder Funktionsdefinition.</li>
+  <li>Übliche Direktiven wie #NoEnv und #If (v1) oder <a href="lib/_HotIf.htm">#HotIf</a> (v2).</li>
+  <li>v2: Eindeutige Verwendung von <a href="Scripts.htm#continuation-expr">Fortsetzung durch Umschließen</a> oder <a href="Scripts.htm#continuation-line">Fortsetzungsoperatoren am Zeilenende</a>.</li>
+  <li>v2: Eindeutige Verwendung von <code>'einfachen Anführungszeichen'</code> oder <a href="Variables.htm#fat-arrow">Fat-Arrow <code>=&gt;</code></a> in einem Ausdruck.</li>
+</ul>
+<p>Die Erkennung ist konservativ; Mehrdeutigkeit wird in der Regel ignoriert.</p>
+<p>Wenn die Erkennung fehlschlägt, wird standardmäßig ein Menü angezeigt, das der Benutzer zum Auswählen einer Version verwenden kann. Dieses Standardverhalten kann geändert werden, so dass stattdessen entweder immer v1 oder v2 gestartet wird.</p>
+<p><strong>Bekannte Einschränkungen:</strong></p>
+<ul>
+  <li>Es wird nur die Hauptdatei analysiert.</li>
+  <li>Da es in v1 erlaubt ist, eine Zeile wie <code>/****/</code> einzufügen, aber <code>*/</code> am Zeilenende nur Kommentare in v2 schließt, kann eine solche Zeile dazu führen, dass ein Großteil des Skripts ignoriert wird (sowohl vom Launcher als auch vom v1-Interpreter).</li>
+  <li>Es wird nur die Syntax analysiert, nicht die Semantik. Zum Beispiel ist <code class="no-highlight">xyz,</code> in v2 ungültig und wird daher als gültiger v1-Befehl vermutet. <code class="no-highlight">xyz 1</code> kann in v2 eine Funktionsanweisung sein, wird aber auch als gültiger v1-Befehl vermutet und daher ignoriert.</li>
+  <li>Da es sich bei den erkannten Mustern im Grunde um Syntaxfehler in einer Version handelt, kann ein Skript mit tatsächlichen Syntaxfehlern oder einer inkorrekt gemischten Syntax falsch identifiziert werden.</li>
+</ul>
+<p class="note"><strong>Hinweis:</strong> Wenn Sie die erforderliche Version mit <a href="lib/_Requires.htm">#Requires</a> am Anfang der Hauptdatei deklarieren, entfällt jedwede Mehrdeutigkeit.</p>
+
+<h3 id="launcher-config">Launch Settings (Starteinstellungen)</h3>
+<p>Der Launcher kann in der Launch-Settings-GUI aktiviert, deaktiviert oder konfiguriert werden. Die GUI selbst ist über <a href="#dash">Dash</a> erreichbar.</p>
+<p><em>Run all scripts with a specific interpreter</em> (alle Skripte mit einem bestimmten Interpreter starten) deaktiviert den Launcher und erlaubt dem Benutzer, eine EXE-Datei auszuwählen, mit der alle Skripte gestartet werden sollen, was dem traditionellen Weg entspricht. Beachten Sie, dass die Auswahl einer v1-EXE die Ausführung der Hilfsskripte erschwert, außer über die Verknüpfung "AutoHotkey" im Startmenü.</p>
+<p><em>Auto-detect version when launching script</em> (Version beim Starten des Skripts automatisch erkennen) aktiviert den Launcher. Zusätzliche Einstellungen regeln, wie der Launcher den zu verwendenden Interpreter auswählt.</p>
+
+<h3 id="launcher-criteria">Kriterien</h3>
+<p>Wenn mehrere Interpreter mit der gleichen Versionsnummer gefunden werden, kann der Launcher diese nach einer vorgegebenen oder benutzerdefinierten Reihe von Kriterien in eine Rangliste einordnen. Die Kriterien können als kommagetrennte Liste von Teilzeichenketten angegeben werden, wobei jeder Teilzeichenkette ein "!" vorangestellt werden kann, um eine Übereinstimmung zu negieren. Auf Basis der übereinstimmenden Teilzeichenketten wird eine Punktzahl berechnet, wobei die ganz links befindliche Teilzeichenkette die höchste Priorität hat.</p>
+<p>Teilzeichenketten werden mit der Beschreibung der Datei abgeglichen, mit Ausnahme von "UIA", das übereinstimmt, wenn der Dateiname "_UIA" enthält.</p>
+<p>Zum Beispiel würde <code class="no-highlight">_H, 64, !ANSI</code> AutoHotkey_H (wenn verfügbar), 64-Bit (wenn möglich) und schließlich Unicode statt ANSI bevorzugen.</p>
+<p>Obwohl die Launch-Settings-GUI Auswahllisten mit Optionen wie "Unicode 32-bit" bereitstellt, ist es auch möglich, manuell eine Liste von Teilzeichenketten einzutragen.</p>
+<p>Zusätzliche (höherrangige) Kriterien können über die Befehlszeile mit der Launcher-Option <a href="#SlashRunWith">/RunWith</a> angegeben werden.</p>
+<p>Kriterien können im Skript mit der <a href="lib/_Requires.htm">#Requires</a>-Direktive entweder als Bedingung (sofern die Zielversion von AutoHotkey dies unterstützt) oder als Kommentar, der mit "prefer" beginnt und mit einem Punkt oder Zeilenende endet, angegeben werden. Zum Beispiel:</p>
+<pre>#Requires AutoHotkey v1.1.35 <em>; prefer 64-bit, Unicode. Mehr Kommentare.</em></pre>
+
+<h3 id="launcher-run">*Launch ausführen</h3>
+<p>Der Installer registriert ein verstecktes Shellverb namens "launch", das den Launcher mit der Befehlszeilenoption <a href="#SlashLaunch">/Launch</a> ausführt. Dieses Verb kann wie folgt verwendet werden:</p>
+<pre>pid := RunWait('*Launch "' PfadZumSkript '"')</pre>
+<p>Im Vergleich zur Standardaktion für .ahk-Dateien:</p>
+<ul>
+  <li>Mit /Launch wird die Prozess-ID (PID) des neuen Skripts, das gestartet wurde, als Exitcode des Launchers zurückgegeben, nicht wie sonst üblich der Exitcode des gestarteten Skripts. Der <em>AusgabeVarPID</em>-Parameter von Run gibt die PID des Launchers zurück.</li>
+  <li>Mit /Launch wird der Launcher sofort nach dem Start des Skripts beendet. Wenn /Launch nicht verwendet wird, muss der Launcher grundsätzlich davon ausgehen, dass sein übergeordneter Prozess so etwas wie <code>RunWait(PfadZumSkript)</code> macht, was nicht wie erwartet funktionieren würde, wenn der Launcher vor dem gestarteten Skript beendet wird.</li>
+</ul>
+
+<h3 id="launcher-cmd">Befehlszeilennutzung</h3>
+<p>Der Launcher kann explizit über die Befehlszeile ausgeführt werden, z.B. für den Fall, dass eingestellt wurde, dass .ahk-Dateien nicht standardmäßig den Launcher verwenden, oder um das Verhalten des Launchers genauer zu steuern. Wenn der Launcher kompiliert wurde, ist seine Verwendung grundsätzlich identisch mit der von AutoHotkey.exe, abgesehen von den zusätzlichen Launcher-Befehlszeilenoptionen. Andernfalls ist das Befehlszeilenformat wie folgt:</p>
+<pre class="no-highlight">AutoHotkeyUX.exe launcher.ahk [<i>Optionen</i>] [<i>Skriptdateiname</i>] [<i>Skriptparameter</i>]</pre>
+<p>Normalerweise werden vollständige Pfade und Anführungszeichen für den Pfad zu AutoHotkeyUX.exe und launcher.ahk verwendet, die sich im UX-Unterverzeichnis der AutoHotkey-Installation befinden. Es kann eine entsprechende Version von AutoHotkey32.exe oder AutoHotkey64.exe anstelle von AutoHotkeyUX.exe (das nur eine Kopie ist) verwendet werden.</p>
+<p><em>Optionen</em> können eine Mischung aus den <a href="Scripts.htm#cmd">Standardoptionen</a> und den folgenden Launcher-Optionen sein:</p>
+<table class="info">
+  <tr><th>Option</th><th>Bedeutung</th></tr>
+  <tr id="SlashLaunch">
+    <td>/Launch</td>
+    <td>Bewirkt, dass der Launcher sofort nach dem Start des Skripts beendet wird, anstatt im Hintergrund auf dessen Beendigung zu warten. Der Exitcode des Launchers ist die Prozess-ID (PID) des neuen Skriptprozesses.</td>
+  </tr>
+  <tr id="SlashRunWith">
+    <td>/RunWith <em>Kriterien</em></td>
+    <td>Gibt zusätzliche <a href="#launcher-criteria">Kriterien</a> zur Bestimmung der EXE-Datei an, die zum Starten des Skripts verwendet werden soll. Zum Beispiel <code class="no-highlight">/RunWith UIA</code>.</td>
+  </tr>
+  <tr id="SlashWhich">
+    <td>/Which</td>
+    <td>
+      <p>Veranlasst den Launcher zu identifizieren, welchen Interpreter er verwenden würde, und gibt diesen zurück, anstatt das Skript auszuführen.</p>
+      <p>Der Exitcode des Launchers ist die Hauptversionsnummer (1 oder 2), wenn sie über #Requires oder die Syntax (wenn die Syntaxerkennung aktiviert ist) identifiziert wurde, andernfalls 0.</p>
+      <p>Stdout erhält die folgenden UTF-8-Zeichenketten, die jeweils mit <code class="no-highlight">`n</code> enden:</p>
+      <ul>
+        <li>Die Versionsnummer. Wenn #Requires erkannt wurde, ist dies die angegebene Nummer ohne "v". Andernfalls ist dies ein Integer, der dem Exitcode entspricht, es sei denn, die Version wurde nicht erkannt, dann ist dies 0, um anzugeben, dass der Benutzer gefragt worden wäre, oder 1 oder 2, um die vom Benutzer bevorzugte Version anzugeben, wie in den Starteinstellungen konfiguriert.</li>
+        <li>Der Pfad der Interpreter-EXE, die verwendet werden würde, wenn eine gefunden worden wäre. Dies ist leer, wenn der Benutzer gefragt worden wäre oder kein kompatibler Interpreter gefunden wurde.</li>
+        <li>Jede zusätzliche Befehlszeilenoption, die der Launcher einfügen würde, wie z.B. <code class="no-highlight">/CP65001</code>.</li>
+      </ul>
+      <p>Zukünftig könnten weitere Zeilen zurückgegeben werden.</p>
+    </td>
+  </tr>
+</table>
+
+<h2 id="dash">Dash</h2>
+<p>Dash bietet Zugriff auf Hilfsskripte und Dokumentation. Es kann nach der Installation über die "AutoHotkey"-Verknüpfung im Startmenü oder durch direktes Starten von UX\ui-dash.ahk im Installationsverzeichnis geöffnet werden. Momentan ist es nicht viel mehr als ein Menü mit den folgenden Menüpunkten, aber es könnte jederzeit erweitert werden, um Einstellmöglichkeiten für aktive Skripte oder andere praktische Funktionen bereitzustellen.</p>
+<ul>
+  <li>New script: Ein neues Skript aus einer Vorlage erstellen.</li>
+  <li>Compile: Öffnet Ahk2Exe, oder fragt nach, ob es automatisch heruntergeladen und installiert werden soll.</li>
+  <li>Help files (F1): Zeigt ein Menü an, das die Hilfedateien und die Online-Dokumentation für v1 und v2 sowie alle anderen CHM-Dateien im Installationsverzeichnis enthält.</li>
+  <li><a href="#Window_Spy">Window Spy</a></li>
+  <li>Launch settings: Den Launcher konfigurieren.</li>
+  <li>Editor settings: Den Standardeditor für .ahk-Dateien setzen.</li>
+</ul>
+<p>Beachten Sie, dass Dash zwar über die Verknüpfung im Startmenü gestartet wird, aber wenn es an die Taskleiste (oder an das Startmenü in Windows 7 oder 10) angeheftet ist, enthält die Sprungliste alle zuletzt mit den Shellverben <em>open</em>, <em>runas</em> oder <em>UIAccess</em> gestarteten Skripte (die normalerweise über das Explorer-Kontextmenü oder durch Doppelklick auf eine Datei aufgerufen werden). Skripte können für einen schnellen Zugriff angeheftet werden.</p>
+<h3 id="update">Update-Überprüfung <span class="ver">[v2.0.24+]</span></h3>
+<p>Dash kann optional nach Updates suchen und einen Hinweis anzeigen, wenn ein Update vorhanden ist. Die Update-Überprüfung ist standardmäßig deaktiviert und kann durch Ändern eines Registry-Wertes wie unten gezeigt aktiviert werden:</p>
+<pre>RegWrite(1, "REG_DWORD", "HKCU\Software\AutoHotkey\Dash", "CheckForUpdates")</pre>
+<p>Löschen Sie den Wert oder setzen Sie ihn auf 0, um die Überprüfung zu deaktivieren. Beachten Sie, dass beim Deinstallieren von AutoHotkey dieser Schlüssel automatisch gelöscht wird.</p>
+<p>Pre-Release- und Bugfix-Updates werden für jede installierte Nebenversion (z.B. 2.0 und 2.1) berücksichtigt. Eine neuere Nebenversion wird angeboten, sobald sie mindestens den Beta-Status erreicht hat.</p>
+<p>Wenn Sie auf den Link im Update-Banner klicken, wird das Update automatisch heruntergeladen und installiert.</p>
+
+<h2 id="newscript">New Script</h2>
+<p>Die New-Script-GUI kann über Dash oder durch Rechtsklick auf einen Ordner im Explorer und Auswählen von Neu → AutoHotkey Script aufgerufen werden. Die GUI kann verwendet werden, um eine neue Skriptdatei aus einer vorinstallierten oder benutzerdefinierten Vorlage zu erstellen oder um eine Vorlage optional zur Bearbeitung zu öffnen.</p>
+<p>Wenn Sie auf eine Vorlage in der Liste rechtsklicken, stehen Ihnen die folgenden Optionen zur Verfügung:</p>
+<ul>
+  <li>Edit template: Die Vorlage im Standardeditor öffnen. Handelt es sich um eine vorinstallierte Vorlage, wird eine editierbare Kopie erstellt, anstatt das Original zu öffnen.</li>
+  <li>Hide template: Fügt den Namen der Vorlage zu einer Liste von Vorlagen hinzu, die nicht in der GUI angezeigt werden. Um eine Vorlage wieder sichtbar zu machen, löschen Sie den entsprechenden Registry-Wert unter <code class="no-highlight">HKCU\Software\AutoHotkey\New\HideTemplate</code>.</li>
+  <li>Set as default: Bestimmt eine Vorlage, die standardmäßig ausgewählt ist.</li>
+</ul>
+<p>Standardmäßig wird die GUI nach dem Erstellen einer Datei geschlossen, es sei denn, die STRG-Taste wird gedrückt gehalten.</p>
+<p>Weitere Einstellungen können über die Schaltfläche "Settings" unten links in der GUI vorgenommen werden:</p>
+<ul>
+  <li>Default to Create: Beim Drücken der Eingabetaste wird die Schaltfläche "Create" aktiviert, wodurch das Skript erstellt und im Explorer ausgewählt wird.</li>
+  <li>Default to Edit: Beim Drücken der Eingabetaste wird die Schaltfläche "Edit" aktiviert, wodurch das Skript erstellt und im vordefinierten Skripteditor geöffnet wird.</li>
+  <li>Stay open: Bei Aktivierung wird das Fenster, nachdem ein Skript erstellt wurde, nicht automatisch geschlossen.</li>
+  <li>Set folder as default: Bestimmt den aktuellen Ordner als Standardort für neue Skripte. Der Standardort wird verwendet, wenn das Fenster "New Script" direkt oder über das Dash geöffnet wird; er wird nicht verwendet, wenn "New Script" über das Explorer-Kontextmenü aufgerufen wird.</li>
+  <li>Open templates folder: Öffnet den Ordner zum Speichern von benutzerdefinierten <a href="#templates">Vorlagen</a>.</li>
+</ul>
+
+<h3 id="templates">Vorlagen (Templates)</h3>
+<p>Vorlagendateien werden aus dem Ordner UX\Templates (vorinstallierte Vorlagen) und dem Ordner <em>%A_MyDocuments%</em>\AutoHotkey\Templates (benutzerdefinierte Vorlagen) geholt, wobei zu beachten ist, dass eine benutzerdefinierte Vorlage eine vorinstallierte Vorlage gleichen Namens überschreibt. Wenn die Datei <em>%A_WinDir%</em>\ShellNew\Template.ahk existiert, wird sie als "Legacy" angezeigt und kann durch eine benutzerdefinierte Vorlage gleichen Namens überschrieben werden.</p>
+<p>Jede Vorlage kann wie folgt eine INI-Sektion enthalten:</p>
+<pre>/*
+[NewScriptTemplate]
+Description = Beschreibung
+Execute = true|false|1|0
+*/</pre>
+<p>Wenn die INI-Sektion wie oben gezeigt mit <code class="no-highlight">/*</code> beginnt und mit <code class="no-highlight">*/</code> endet, ist sie nicht in der erstellten Datei enthalten.</p>
+<p><strong>Description</strong> ist optional. Die Beschreibung wird in der GUI zusätzlich zum Dateinamen angezeigt.</p>
+<p><strong>Execute</strong> ist optional. Wenn dies auf true oder 1 gesetzt ist, wird das Vorlagenskript mit zusätzlichen Informationen ausgeführt: <code>A_Args[1]</code> enthält den Pfad der zu erstellenden Datei und <code>A_Args[2]</code> enthält entweder "Create" oder "Edit", je nachdem, auf welche Schaltfläche der Benutzer geklickt hat. Vom Vorlagenskript wird erwartet, dass es die Datei erstellt und sie ggf. zur Bearbeitung öffnet. Wenn das Vorlagenskript andere Dateien via <code>#Include</code> einbinden muss, platzieren Sie diese in einem Unterverzeichnis, um zu verhindern, dass sie in der Vorlagenliste angezeigt werden.</p>
+
+<h2 id="install">Installation</h2>
+<p>Dieser Installer und die zugehörigen Skripte sind so konzipiert, dass mehrere Versionen von AutoHotkey parallel existieren können. Der Installer bietet nur sehr wenige Optionen, da die meisten Dinge nach der Installation konfiguriert werden können. Bei der Installation müssen nur die folgenden Entscheidungen getroffen werden:</p>
+<ul>
+  <li>Wohin es installiert werden soll.</li>
+  <li>Ob die Installation für alle Benutzer oder nur für den aktuellen Benutzer erfolgen soll.</li>
+</ul>
+<p>Standardmäßig installiert der Installer das Programm in "%A_ProgramFiles%\AutoHotkey" für alle Benutzer. Dies wird empfohlen, da die UI-Access-Option voraussetzt, dass das Programm unter "Programme" installiert ist. Sollte der Installer noch nicht mit Adminrechten laufen, wird er versuchen, seine Rechte zu erhöhen, sobald die Install-Schaltfläche angeklickt wird, was durch das Schildsymbol auf der Schaltfläche angezeigt wird.</p>
+<p>Installationen für den aktuellen Benutzer erfordern keine Adminrechte, solange der Benutzer Schreibrechte für das ausgewählte Verzeichnis hat. Das Standardverzeichnis für solche Installationen ist "%LocalAppData%\Programme\AutoHotkey".</p>
+
+<h3 id="install_v1">Zusammen mit v1 installieren</h3>
+<p>Es gibt zwei Möglichkeiten, v1 und v2 zusammen zu installieren:</p>
+<ol>
+  <li>Zuerst v1 und dann v2 installieren. In diesem Fall werden die v1-Dateien im Root des Installationsverzeichnisses belassen, um Probleme mit externen Tools oder Verknüpfungen zu vermeiden, die auf den aktuellen Pfad angewiesen sind.</li>
+  <li>v1 als zusätzliche Version installieren. Die Ausführung eines Installers für v1.1.34.03 oder höher ermöglicht dies. Alternativ kann auch die unten beschriebene <code class="no-highlight">/install</code>-Option verwendet werden. Jede Version wird in einem eigenen Unterverzeichnis installiert.</li>
+</ol>
+<p>Die Ausführung eines Installers für v1.1.34.02 oder älter (oder einer benutzerdefinierten Installation mit v1.1.34.03 oder neuer) überschreibt einige der vom v2-Installer gesetzten Registry-Werte, z.B. die Versionsnummer, den Uninstaller-Eintrag und Teile der Dateitypregistrierung. Dabei wird auch der v1-Uninstaller registriert, der nicht in der Lage ist, beide Versionen korrekt zu deinstallieren. Um v2 neu zu registrieren, verwenden Sie erneut einen v2-Installer oder führen Sie UX\install.ahk mit AutoHotkey32.exe oder AutoHotkey64.exe aus.</p>
+
+<h3 id="installdef">Standardversion</h3>
+<p>Im Gegensatz zu einer v1-Installation wird beim Installieren keine Standardversion ausgewählt. Dies wird stattdessen dynamisch vom Launcher gehandhabt und kann benutzerspezifisch konfiguriert werden.</p>
+
+<h3 id="installcmd">Befehlszeilennutzung</h3>
+<p>Um das Programm direkt in <em>ZIEL</em> (ein Verzeichnis) zu installieren, verwenden Sie die Befehlszeilenoption <code class="no-highlight">/installto</code> oder <code class="no-highlight">/to</code> (beide sind untereinander austauschbar), wie unten gezeigt, ausgehend vom Quellverzeichnis. Verwenden Sie entweder eine heruntergeladene setup.exe oder Dateien, die aus einer heruntergeladenen ZIP-Datei oder einer anderen Quelle entpackt wurden.</p>
+<pre class="no-highlight">AutoHotkey_setup.exe /installto "%ZIEL%"</pre>
+<pre class="no-highlight">AutoHotkey32.exe UX\install.ahk /to "%ZIEL%"</pre>
+<p>Um eine zusätzliche Version aus <em>QUELLE</em> (möglichst ein Verzeichnis mit AutoHotkey*.exe-Dateien) zu installieren, führen Sie folgendes aus, ausgehend vom aktuellen Installationsverzeichnis (passen Sie den Pfad von AutoHotkey32.exe nach Bedarf an):</p>
+<pre class="no-highlight">AutoHotkey32.exe UX\install.ahk /install "%QUELLE%"</pre>
+<p>Die vollständige Befehlszeichenkette für oben wird als <em>InstallCommand</em> unter <code class="no-highlight">HKLM\Software\AutoHotkey</code> oder <code class="no-highlight">HKCU\Software\AutoHotkey</code> registriert, mit <code class="no-highlight">%1</code> als Platzhalter für das Quellverzeichnis. Die Verwendung dieses Registry-Wertes kann zukunftssicherer sein.</p>
+<p>Die aktuelle Installation kann wie folgt neu registriert werden:</p>
+<pre class="no-highlight">AutoHotkey32.exe UX\install.ahk</pre>
+<p>Die aktuelle Installation kann wie folgt deinstalliert werden:</p>
+<pre class="no-highlight">AutoHotkey32.exe UX\install.ahk /uninstall</pre>
+<p>Alternativ können Sie auch den <em>QuietUninstallString</em>-Wert von einem der folgenden Registry-Schlüssel lesen und ausführen:</p>
+<pre class="no-highlight">HKLM\Microsoft\Windows\CurrentVersion\Uninstall\AutoHotkey
+HKCU\Microsoft\Windows\CurrentVersion\Uninstall\AutoHotkey</pre>
+<p>Verwenden Sie die Befehlszeilenoption <code class="no-highlight">/silent</code>, um Warn- oder Bestätigungsfenster zu unterdrücken und zu verhindern, dass <a href="#dash">Dash</a> nach Abschluss der Installation angezeigt wird. Die folgenden Aktionen werden dann automatisch und ohne Warnung ausgeführt:</p>
+<ul>
+  <li>Skripte terminieren, damit AutoHotkey*.exe überschrieben werden kann.</li>
+  <li>Dateien überschreiben, die noch nicht vom Installer registriert wurden oder die seit der Registrierung geändert wurden.</li>
+</ul>
+
+<h3 id="Installer_IsHostApp">Taskleistenschaltflächen</h3>
+<p>Der v2-Installer bietet nicht die Option, die Schaltflächen der Taskleiste voneinander zu trennen. Bisher wurde dies erreicht, indem jede AutoHotkey-EXE als <a href="https://learn.microsoft.com/windows/win32/shell/app-registration">Host-Applikation (IsHostApp)</a> registriert wurde, aber dieser Ansatz hat Einschränkungen und ist weniger einfach zu handhaben, wenn mehrere Versionen installiert werden können. Stattdessen sollte jedes Skript den <a href="https://learn.microsoft.com/windows/win32/shell/appids">AppUserModelID</a>-Wert seines Prozesses oder seiner Fenster setzen, um die Gruppierung zu steuern.</p>
+
+<h3 id="Installer_uiAccess">Mit UI-Access starten</h3>
+<p>Bei der Installation unter "Programme" erstellt der Installer einen zusätzlichen Satz von AutoHotkey-EXE-Dateien, mit denen einige <a href="FAQ.htm#uac">häufige UAC-bezogene Probleme</a> umgangen werden können. Diese Dateien enden mit "_UIA.exe". Wenn eine dieser UIA.EXE-Dateien von einem Administrator zum Starten eines Skripts verwendet wird, kann das Skript mit Fenstern von höherberechtigten Programmen interagieren, ohne dass das Skript selbst mit solchen Rechten laufen muss.</p>
+<p>Der Installer macht folgendes:</p>
+<ul>
+  <li>Jede AutoHotkey*.exe nach AutoHotkey*_UIA.exe kopieren.</li>
+  <li><a href="https://learn.microsoft.com/windows/win32/winauto/uiauto-securityoverview">uiAccess-Attribut</a> im integrierten Manifest jeder UIA.EXE-Datei setzen.</li>
+  <li>Ein selbstsigniertes digitales Zertifikat namens "AutoHotkey" erstellen und jede UIA.EXE-Datei signieren.</li>
+  <li>Das <em>UIAccess</em>-Shellverb registrieren, das im Kontextmenü des Explorers als "Run with UI access" erscheint. Dies startet standardmäßig den <a href="#launcher">Launcher</a>, der versuchen wird, eine geeignete UIA.EXE-Datei zum Starten des Skripts auszuwählen.</li>
+</ul>
+<p>Der <a href="#launcher">Launcher</a> kann auch so konfiguriert werden, dass er standardmäßig v1-Skripte, v2-Skripte oder beide mit UI-Access startet, allerdings hat diese Option keinen Effekt, wenn für die gewählte Version und Build keine UIA.EXE-Datei vorhanden ist.</p>
+<p>Skripte, die andere Skripte mit UI-Access ausführen müssen, können einfach <a href="lib/Run.htm">Run</a> verwenden, um die entsprechende UIA.EXE-Datei mit den normalen <a href="#cmd">Befehlszeilenparametern</a> auszuführen. Wenn das <em>UIAccess</em>-Shellverb registriert ist, kann es alternativ auch via Run verwendet werden. Zum Beispiel: <code>Run '*UIAccess "Skript.ahk"'</code></p>
+<p><strong>Bekannte Einschränkungen:</strong></p>
+<ul>
+  <li>UIA funktioniert nur, wenn der Speicherort der Datei vertrauenswürdig ist, z.B. ein Unterverzeichnis des Ordners "Programme".</li>
+  <li>UIA.EXE-Dateien funktionieren nur auf anderen Computern, wenn das digitale Zertifikat, das zur Erstellung dieser Dateien verwendet wurde, auch auf diesen Computern installiert ist.</li>
+  <li>UIA.EXE-Dateien können aus Sicherheitsgründen nicht via CreateProcess gestartet werden. Stattdessen kann ShellExecute verwendet werden. <a href="lib/Run.htm">Run</a> versucht beides.</li>
+  <li>UIA.EXE-Dateien können nicht modifiziert werden, da dies ihre digitale Signatur ungültig machen würde.</li>
+  <li>Da UIA-Programme auf einer anderen "Integritätsstufe" laufen als normale Programme, können sie nur auf Objekte zugreifen, die von anderen UIA-Programmen registriert wurden. Zum Beispiel würde <code><a href="lib/ComObjActive.htm">ComObjActive</a>("Word.Application")</code> fehlschlagen, weil Word nicht für UI-Access markiert wurde.</li>
+  <li>Die Fenster des Skripts können aus Sicherheitsgründen nur von UIA-Programmen/Skripten automatisiert werden.</li>
+  <li>Die Ausführung eines Nicht-UIA-Skripts, das einen Maus-Hook verwendet (selbst ein einfaches <code>InstallMouseHook</code>), kann dazu führen, dass alle Maus-Hotkeys blockiert werden, wenn die Maus auf ein Fenster zeigt, das einem UIA-Skript gehört, sogar Hotkeys, die vom UIA-Skript selbst implementiert wurden. Ein Workaround besteht darin, sicherzustellen, dass die UIA-Skripte zuletzt geladen werden.</li>
+  <li>UIA verhindert, dass die Gui-Option <a href="lib/Gui.htm#Parent">+Parent</a> bei einem existierenden Fenster funktioniert, wenn das neue übergeordnete Fenster die Immer-Im-Vordergrund-Eigenschaft hat und das untergeordnete Fenster nicht.</li>
+</ul>
+<p>Weitere Informationen finden Sie unter <a href="https://www.autohotkey.com/board/topic/70449-enable-interaction-with-administrative-programs/">Enable interaction with administrative programs</a> (Interaktion mit administrativen Programmen ermöglichen) im archivierten Forum.</p>
+
+</body>
+</html>

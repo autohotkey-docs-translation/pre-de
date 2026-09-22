@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Struct.Array - Methoden &amp; Eigenschaften | AutoHotkey v2</title>
+<meta name="description" content="Struct.Array ist die Basisklasse für alle Struktur-Arrays." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>Struct.Array <span class="ver">[v2.1-alpha.23+]</span></h1>
+<pre class="NoIndent">class Struct.Array extends Struct</pre>
+
+<p>Struct.Array ist die Basisklasse für alle <a href="../Structs.htm#arrays">strukturierten Arrays</a>, die Arrays fester Größe mit Elementen festen Typs sind.</p>
+<p>"Obj" wird hier stellvertretend für eine beliebige Instanz der Struct.Array-Klasse verwendet.</p>
+<p>Zusätzlich zu den von <a href="Struct.htm">Struct</a> geerbten Methoden und Eigenschaften haben Struktur-Arrays die folgenden vordefinierten Methoden und Eigenschaften.</p>
+
+<h2 id="toc">Inhaltsverzeichnis</h2>
+<ul class="indent">
+  <li><a href="#Properties">Eigenschaften</a>:
+    <ul>
+      <li><a href="#Length">Length</a>: Liefert die Länge des Arrays.</li>
+      <li><a href="#__Item">__Item</a>: Liefert oder setzt den Wert eines Array-Elements.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="Properties">Eigenschaften</h2>
+
+<div class="methodShort" id="Length"><h3>Length</h3>
+<p>Liefert die Länge des Arrays.</p>
+<pre class="Syntax">Länge := Obj.<span class="func">Length</span></pre>
+</div>
+
+<div class="methodShort" id="__Item"><h3>__Item</h3>
+<p>Liefert oder setzt den Wert eines Array-Elements.</p>
+<pre class="Syntax">Wert := Obj[Index]
+Wert := Obj.<span class="func">__Item</span>[Index]</pre>
+<pre class="Syntax">Obj[Index] := Wert
+Obj.<span class="func">__Item</span>[Index] := Wert</pre>
+<p><em>Index</em> ist ein <a href="../Concepts.htm#numbers">Integer</a>, der einen gültigen Array-Index repräsentiert, d.h. ein Integer mit einem Absolutwert im Bereich von 1 bis <a href="#Length">Length</a>. Ein negativer Index kann verwendet werden, um auf Elemente in umgekehrter Richtung zuzugreifen, d.h. -1 ist das letzte Element, -2 ist das vorletzte Element usw. Der Versuch, einen Index zu verwenden, der außerhalb der Grenzen liegt (z.B. 0 oder wenn sein Absolutwert größer als die <a href="#Length">Länge</a> des Arrays ist), wird als Fehler gewertet und bewirkt, dass ein <a href="Error.htm#IndexError">IndexError</a> ausgelöst wird.</p>
+<p>Der Eigenschaftsname __Item wird typischerweise weggelassen, wie oben gezeigt, ist aber nützlich, um die Eigenschaft zu überschreiben.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>FileGetTime - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die FileGetTime-Funktion ruft den Zeitstempel einer Datei oder eines Ordners ab." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>FileGetTime</h1>
+
+<p>Ruft den Zeitstempel einer Datei oder eines Ordners ab.</p>
+
+<pre class="Syntax">Zeitstempel := <span class="func">FileGetTime</span>(<span class="optional">DateiName, WelcheZeit</span>)</pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>DateiName</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn weggelassen, wird die aktuelle Datei der innersten umschlossenen <a href="LoopFiles.htm">Datei-Schleife</a> verwendet. Andernfalls geben Sie den Namen der Zieldatei oder des Zielordners an. Wenn kein absoluter Pfad angegeben ist, wird die Datei oder der Ordner im <a href="../Variables.htm#WorkingDir">A_WorkingDir</a>-Verzeichnis vermutet.</p>
+  </dd>
+
+  <dt>WelcheZeit</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn leer oder weggelassen, wird standardmäßig M verwendet. Andernfalls geben Sie einen der folgenden Buchstaben an, um zu bestimmen, welcher Zeitstempel abgerufen werden soll:</p>
+    <ul>
+      <li>M = Zeitpunkt der letzten Änderung</li>
+      <li>C = Zeitpunkt der Erstellung</li>
+      <li>A = Zeitpunkt des letzten Zugriffs</li>
+    </ul>
+  </dd>
+
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+<p>Diese Funktion gibt eine Zeichenkette von Ziffern im <a href="FileSetTime.htm#YYYYMMDD">YYYYMMDDHH24MISS</a>-Format zurück. Die Zeit ist Ihre eigene Ortszeit, nicht UTC/GMT. Diese Zeichenkette sollte nicht als Zahl behandelt werden, d.h. es sollten keine Berechnungen oder numerischen Vergleiche mit ihr durchgeführt werden.</p>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Bei Misserfolg wird ein <a href="Error.htm#OSError">OSError</a> ausgelöst.</p>
+<p><a href="../Variables.htm#LastError">A_LastError</a> wird auf das Ergebnis der Systemfunktion GetLastError() gesetzt.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Eine Erklärung zu Datums- und Zeitwerten finden Sie unter <a href="FileSetTime.htm#YYYYMMDD">YYYYMMDDHH24MISS</a>.</p>
+<h2 id="Related">Siehe auch</h2>
+<p><a href="FileSetTime.htm">FileSetTime</a>, <a href="FormatTime.htm">FormatTime</a>, <a href="FileGetAttrib.htm">FileGetAttrib</a>, <a href="FileSetAttrib.htm">FileSetAttrib</a>, <a href="FileGetSize.htm">FileGetSize</a>, <a href="FileGetVersion.htm">FileGetVersion</a>, <a href="LoopFiles.htm">Datei-Schleife</a>, <a href="DateAdd.htm">DateAdd</a>, <a href="DateDiff.htm">DateDiff</a></p>
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Ruft den Zeitpunkt der letzten Änderung ab und speichert den Wert in <var>Zeitstempel</var>.</p>
+<pre>Zeitstempel := FileGetTime("C:\Meine Dokumente\test.doc")</pre>
+</div>
+
+<div class="ex" id="ExC">
+<p><a class="ex_number" href="#ExC"></a> Ruft den Zeitpunkt der Erstellung ab und speichert den Wert in <var>Zeitstempel</var>.</p>
+<pre>Zeitstempel := FileGetTime("C:\Meine Dokumente\test.doc", "C")</pre>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>FileGetVersion - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die FileGetVersion-Funktion ruft die Version einer Datei ab." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>FileGetVersion</h1>
+
+<p>Ruft die Version einer Datei ab.</p>
+
+<pre class="Syntax">Version := <span class="func">FileGetVersion</span>(<span class="optional">DateiName</span>)</pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>DateiName</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn weggelassen, wird die aktuelle Datei der innersten umschlossenen <a href="LoopFiles.htm">Datei-Schleife</a> verwendet. Andernfalls geben Sie den Namen der Zieldatei an. Wenn kein vollständiger Pfad angegeben ist, verwendet diese Funktion die von der Systemfunktion <a href="https://learn.microsoft.com/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya">LoadLibrary</a> vorgegebene Suchreihenfolge.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+<p>Diese Funktion gibt die Versionsnummer der angegebenen Datei zurück.</p>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Bei Misserfolg wird ein <a href="Error.htm#OSError">OSError</a> ausgelöst, z.B. wenn die Datei keine Versionsinformationen enthält.</p>
+<p><a href="../Variables.htm#LastError">A_LastError</a> wird auf das Ergebnis der Systemfunktion GetLastError() gesetzt.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Die meisten Nicht-EXE-Dateien (auch einige EXE-Dateien) haben keine Version, d.h. in solchen Fällen wird ein Fehler ausgelöst.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="FileGetAttrib.htm">FileGetAttrib</a>, <a href="FileSetAttrib.htm">FileSetAttrib</a>, <a href="FileGetTime.htm">FileGetTime</a>, <a href="FileSetTime.htm">FileSetTime</a>, <a href="FileGetSize.htm">FileGetSize</a>, <a href="LoopFiles.htm">Datei-Schleife</a></p>
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Ruft die Version einer Datei ab und speichert den Wert in <var>Version</var>.</p>
+<pre>Version := FileGetVersion("C:\Meine Anwendung.exe")</pre>
+</div>
+
+<div class="ex" id="ExBIV">
+<p><a class="ex_number" href="#ExBIV"></a> Ruft die Version der Datei "AutoHotkey.exe" im Installationsverzeichnis von AutoHotkey ab und speichert den Wert in <var>Version</var>.</p>
+<pre>Version := FileGetVersion(A_ProgramFiles "\AutoHotkey\AutoHotkey.exe")</pre>
+</div>
+
+</body>
+</html>

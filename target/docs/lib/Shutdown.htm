@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Shutdown - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die Shutdown-Funktion fährt das System herunter, startet es neu oder meldet es ab." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>Shutdown</h1>
+
+<p>Fährt das System herunter, startet es neu oder meldet es ab.</p>
+
+<pre class="Syntax"><span class="func">Shutdown</span> Flags</pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>Flags</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Eine Kombination (oder Summe) von Nummern aus der Tabelle unten, die den Shutdown-Typ angibt.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Shutdown_Types">Shutdown-Typen</h2>
+<table class="info">
+  <tr>
+    <th>Nummer</th>
+    <th abbr="Konstante">Windows-Konstante</th>
+    <th abbr="Beschr">Beschreibung</th>
+  </tr>
+  <tr>
+    <td>0x0 (0)</td>
+    <td>EWX_LOGOFF</td>
+    <td>Schließt alle Prozesse und meldet danach den Benutzer ab.</td>
+  </tr>
+  <tr>
+    <td>0x1 (1)</td>
+    <td>EWX_SHUTDOWN</td>
+    <td>Fährt das System so weit herunter, dass die Stromversorgung sicher unterbrochen werden kann. Alle Dateipuffer werden auf die Festplatte geflusht, und alle laufenden Prozesse werden beendet. Anschließend wird die Stromversorgung unterbrochen, sofern das System das Power-Off-Feature unterstützt.</td>
+  </tr>
+  <tr>
+    <td>0x2 (2)</td>
+    <td>EWX_REBOOT</td>
+    <td>Fährt das System herunter und startet es danach neu.</td>
+  </tr>
+  <tr>
+    <td>0x4 (4)</td>
+    <td>EWX_FORCE</td>
+    <td>Erzwingt das Schließen aller geöffneten Anwendungen. Dies sollte nur im Notfall verwendet werden, da es zu Datenverlust bei allen geöffneten Anwendungen führen kann.</td>
+  </tr>
+  <tr>
+    <td>0x8 (8)</td>
+    <td>EWX_POWEROFF</td>
+    <td>Fährt das System herunter und unterbricht die Stromversorgung. Das System muss das Power-Off-Feature unterstützen.</td>
+  </tr>
+  <tr>
+    <td>0x400000 (4194304)</td>
+    <td>EWX_HYBRID_SHUTDOWN</td>
+    <td>Bereitet das System auf den Schnellstart vor, fährt das System herunter und unterbricht die Stromversorgung. Benötigt Windows 8 oder höher, und die entsprechende Option muss in den Energieeinstellungen des Systems aktiviert sein (sofern verfügbar).</td>
+  </tr>
+</table>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Addieren oder kombinieren Sie die gewünschten Werte. Zum Beispiel können Sie 9 (1 + 8) angeben, um das System herunterzufahren und die Stromversorgung zu unterbrechen. Alternativ können Sie einen <a href="../Variables.htm#Expressions">Ausdruck</a> wie <code>1 + 8</code> oder <code>0x1 | 0x8</code> angeben.</p>
+<p>Um das System anzuhalten oder in den Ruhemodus zu versetzen, siehe <a href="#ExSuspend">Beispiel #2</a> am Ende dieser Seite.</p>
+<p>Um den Monitor auszuschalten, siehe <a href="SendMessage.htm#ExMonitorPower">SendMessage-Beispiel #1</a>.</p>
+<p>Ein Skript kann auch <a href="OnExit.htm">OnExit</a> verwenden, um zu erkennen, wann das System herunterfährt oder der Benutzer sich abmeldet.</p>
+<h2 id="Related">Siehe auch</h2>
+<p><a href="Run.htm">Run</a>, <a href="ExitApp.htm">ExitApp</a>, <a href="OnExit.htm">OnExit</a></p>
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Erzwingt einen Neustart (Neustart + Erzwingen = 2 + 4 = 6).</p>
+<pre>Shutdown 6</pre>
+</div>
+
+<div class="ex" id="ExSuspend">
+<p><a class="ex_number" href="#ExSuspend"></a> Ruft die Windows-API-Funktion "SetSuspendState" auf, um das System anzuhalten oder in den Ruhemodus zu versetzen. Beachten Sie, dass der zweite Parameter auf neueren Systemen möglicherweise überhaupt keine Wirkung hat.</p>
+<pre><em>; Parameter #1: 1 statt 0 übergeben, um den Ruhemodus statt Anhalten zu bewirken.
+; Parameter #2: 1 statt 0 übergeben, um Anhalten ohne Nachfrage zu erzwingen.
+; Parameter #3: 1 statt 0 übergeben, um alle Aufwachereignisse zu deaktivieren.</em>
+DllCall("PowrProf\SetSuspendState", "Int", 0, "Int", 0, "Int", 0)</pre>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>GuiControl-Objekt - Methoden &amp; Eigenschaften | AutoHotkey v2</title>
+<meta name="description" content="Das GuiControl-Objekt bietet eine Schnittstelle, um GUI-Steuerelemente zu ändern und Informationen über sie abzurufen." />
+<meta name="ahk:equiv-v1" content="lib/GuiControl.htm" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet">
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css">
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>GuiControl-Objekt</h1>
+<pre class="NoIndent">class Gui.Control extends Object</pre>
+
+<p>Bietet eine Schnittstelle, um GUI-Steuerelemente zu ändern und Informationen über sie abzurufen. <a href="Gui.htm#Add">Gui.Add</a>, <a href="Gui.htm#__Item">Gui.__Item</a> und <a href="GuiCtrlFromHwnd.htm">GuiCtrlFromHwnd</a> geben ein Objekt dieses Typs zurück.</p>
+
+<p>"GuiCtrl" wird hier stellvertretend für Instanzen der <code>Gui.Control</code>-Klasse verwendet.</p>
+<p><code>Gui.Control</code> dient als Basisklasse für alle GUI-Steuerelemente, aber jeder Steuerelementtyp hat seine eigene Klasse. Einige der folgenden Methoden sind durch den Prototyp der entsprechenden Klasse oder durch die <code>Gui.List</code>-Basisklasse definiert. Eine vollständige Liste finden Sie unter <a href="../ObjList.htm">Interne Klassen</a>.</p>
+<p>Zusätzlich zu den von <a href="Object.htm">Object</a> geerbten Methoden und Eigenschaften können GuiControl-Objekte die folgenden vordefinierten Methoden und Eigenschaften haben.</p>
+
+<h2 id="toc">Inhaltsverzeichnis</h2>
+<ul class="indent">
+  <li><a href="#Methods">Methoden</a>:
+    <ul>
+      <li><a href="#Add">Add</a>: Fügt neue Elemente in einem Multi-Element-Steuerelement an.</li>
+      <li><a href="#Choose">Choose</a>: Selektiert ein Element in einem Multi-Element-Steuerelement.</li>
+      <li><a href="#Delete">Delete</a>: Löscht ein oder alle Elemente aus einem Multi-Element-Steuerelement.</li>
+      <li><a href="#Focus">Focus</a>: Setzt den Tastaturfokus auf ein Steuerelement.</li>
+      <li><a href="#GetPos">GetPos</a>: Liefert die Position und Größe eines Steuerelements.</li>
+      <li><a href="#Move">Move</a>: Verschiebt ein Steuerelement und/oder ändert dessen Größe.</li>
+      <li><a href="#OnCommand">OnCommand</a>: Registriert eine Funktion oder Methode, die bei WM_COMMAND aufgerufen wird.</li>
+      <li><a href="#OnEvent">OnEvent</a>: Registriert eine Funktion oder Methode, die aufgerufen wird, wenn ein bestimmtes Ereignis ausgelöst wird.</li>
+      <li><a href="#OnMessage">OnMessage</a> <span class="ver">[v2.1-alpha.7+]</span>: Registriert eine Funktion oder Methode, die aufgerufen wird, wenn eine Meldung empfangen wird.</li>
+      <li><a href="#OnNotify">OnNotify</a>: Registriert eine Funktion oder Methode, die bei WM_NOTIFY aufgerufen wird.</li>
+      <li><a href="#Opt">Opt</a>: Fügt verschiedene Optionen und Styles hinzu oder entfernt sie.</li>
+      <li><a href="#Redraw">Redraw</a>: Zeichnet den Bereich des GUI-Fensters neu, der von einem Steuerelement beansprucht wird.</li>
+      <li><a href="#SetCue">SetCue</a> <span class="ver">[v2.1-alpha.7+]</span>: Setzt den Platzhaltertext eines Edit- oder ComboBox-Steuerelements.</li>
+      <li><a href="#SetFont">SetFont</a>: Ändert Schriftart, Schriftgröße, Schriftfarbe und/oder Schriftstil eines Steuerelements.</li>
+    </ul>
+  </li>
+  <li><a href="#Properties">Eigenschaften</a>:
+    <ul>
+      <li><a href="#ClassNN">ClassNN</a>: Liefert die ClassNN (Klassenname und Sequenznummer) eines Steuerelements.</li>
+      <li><a href="#Enabled">Enabled</a>: Liefert oder setzt, ob die Interaktion mit einem Steuerelement erlaubt ist.</li>
+      <li><a href="#Focused">Focused</a>: Liefert, ob ein Steuerelement den Tastaturfokus hat.</li>
+      <li><a href="#Gui">Gui</a>: Liefert das übergeordnete Fenster eines Steuerelements.</li>
+      <li><a href="#Hwnd">Hwnd</a>: Liefert das Fensterhandle (HWND) eines Steuerelements.</li>
+      <li><a href="#Name">Name</a>: Liefert oder setzt den expliziten Namen eines Steuerelements.</li>
+      <li><a href="#Text">Text</a>: Liefert oder setzt den Text oder die Beschriftung eines Steuerelements.</li>
+      <li><a href="#Type">Type</a>: Liefert den Typ eines Steuerelements.</li>
+      <li><a href="#Value">Value</a>: Liefert oder setzt den Inhalt eines wertefähigen Steuerelements.</li>
+      <li><a href="#Visible">Visible</a>: Liefert oder setzt, ob ein Steuerelement sichtbar ist.</li>
+    </ul>
+  </li>
+  <li>Allgemein:
+    <ul>
+      <li><a href="#Remarks">Bemerkungen</a></li>
+      <li><a href="#Related">Siehe auch</a></li>
+      <li><a href="#Examples">Beispiele</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="Methods">Methoden</h2>
+<div class="methodShort" id="Add">
+<h3>Add</h3>
+<p>Fügt neue Elemente in einem Multi-Element-Steuerelement (<a href="GuiControls.htm#ListBox">ListBox</a>, <a href="GuiControls.htm#DropDownList">DropDownList</a>, <a href="GuiControls.htm#ComboBox">ComboBox</a> oder <a href="GuiControls.htm#Tab">Tab</a>) an.</p>
+<pre class="Syntax">GuiCtrl.<span class="func">Add</span>(Elemente)</pre>
+<h4 id="Add_Parameters">Parameter</h4>
+<dl>
+  <dt>Elemente</dt>
+  <dd>
+    <p>Typ: <a href="Array.htm">Array</a></p>
+    <p>Ein Array von Zeichenketten, die als Elemente am Ende der Liste des Steuerelements eingefügt werden sollen. Zum Beispiel <code>["Rot", "Grün", "Blau"]</code>.</p>
+  </dd>
+</dl>
+<h4 id="Add_Remarks">Bemerkungen</h4>
+<p>Um die Liste stattdessen zu ersetzen (überschreiben), verwenden Sie davor <a href="#Delete">GuiControl.Delete</a>.</p>
+<p>Um neue Elemente zu einer <a href="ListView.htm">ListView</a> oder <a href="TreeView.htm">TreeView</a> hinzuzufügen, verwenden Sie <a href="ListView.htm#Add">LV.Add</a> oder <a href="TreeView.htm#Add">TV.Add</a>.</p>
+<p>Siehe <a href="#ExReplaceList">Beispiel #1</a> für eine Demonstration.</p>
+</div>
+
+<div class="methodShort" id="Choose">
+<h3>Choose</h3>
+<p>Selektiert ein Element in einem Multi-Element-Steuerelement (<a href="GuiControls.htm#ListBox">ListBox</a>, <a href="GuiControls.htm#DropDownList">DropDownList</a>, <a href="GuiControls.htm#ComboBox">ComboBox</a> oder <a href="GuiControls.htm#Tab">Tab</a>).</p>
+<pre class="Syntax">GuiCtrl.<span class="func">Choose</span>(Element)</pre>
+<h4 id="Choose_Parameters">Parameter</h4>
+<dl>
+  <dt>Element</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Geben Sie 1 für das erste Element, 2 für das zweite und so weiter an. Geben Sie 0 an, um alle Elemente abzuwählen.</p>
+    <p>Wenn eine Zeichenkette (oder numerische Zeichenkette) angegeben ist, wird ein Element ausgewählt, dessen Name mit der Zeichenkette beginnt. Die Suche erfolgt nicht Groß-/Kleinschreibung-sensitiv. Wenn ein Multi-Element-Steuerelement z.B. das Element "UNIX-Text" enthält, genügt die Angabe des Wortes unix (kleingeschrieben), um dieses Element auszuwählen. Bei einer <a href="GuiControls.htm#ListBoxMulti">Mehrfachauswahl-ListBox</a> werden alle übereinstimmenden Elemente ausgewählt.</p>
+  </dd>
+</dl>
+<h4 id="Choose_Remarks">Bemerkungen</h4>
+<p>Um alle Elemente in einer <a href="GuiControls.htm#ListBoxMulti">Mehrfachauswahl-ListBox</a> auszuwählen, verwenden Sie <code>PostMessage(0x0185, 1, -1, GuiCtrl)</code> (0x0185 ist <a href="https://learn.microsoft.com/windows/win32/controls/lb-setsel">LB_SETSEL</a>). Alternativ können Sie diese Methode für jedes Element im Array aufrufen, das von <a href="ControlGetItems.htm">ControlGetItems</a> zurückgegeben wird:</p>
+<pre>for index, text in ControlGetItems(GuiCtrl)
+    GuiCtrl.Choose(index)</pre>
+<p>Im Gegensatz zu <a href="ControlChooseIndex.htm">ControlChooseIndex</a> löst diese Methode kein <a href="GuiOnEvent.htm#Change">Change</a>- oder <a href="GuiOnEvent.htm#DoubleClick">DoubleClick</a>-Ereignis aus.</p>
+<p>Um ein Element in einer <a href="ListView.htm">ListView</a> oder <a href="TreeView.htm">TreeView</a> auszuwählen, verwenden Sie <a href="ListView.htm#Modify">LV.Modify</a> oder <a href="TreeView.htm#Modify">TV.Modify</a> mit der Select-Option.</p>
+</div>
+
+<div class="methodShort" id="Delete">
+<h3>Delete</h3>
+<p>Löscht ein oder alle Elemente aus einem Multi-Element-Steuerelement (<a href="GuiControls.htm#ListBox">ListBox</a>, <a href="GuiControls.htm#DropDownList">DropDownList</a>, <a href="GuiControls.htm#ComboBox">ComboBox</a> oder <a href="GuiControls.htm#Tab">Tab</a>).</p>
+<pre class="Syntax">GuiCtrl.<span class="func">Delete</span>(<span class="optional">Element</span>)</pre>
+<h4 id="Delete_Parameters">Parameter</h4>
+<dl>
+  <dt>Element</dt><dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn weggelassen, werden alle Elemente gelöscht. Andernfalls geben Sie 1 für das erste Element, 2 für das zweite und so weiter an.</p>
+  </dd>
+</dl>
+<h4 id="Delete_Remarks">Bemerkungen</h4>
+<p>Bei <a href="GuiControls.htm#Tab">Tab</a>-Steuerelementen sind und bleiben die Untersteuerelemente einer Registerkarte mit ihrer ursprünglichen Registerkartennummer verknüpft, d.h. sie sind nie mit dem Anzeigenamen ihrer Registerkarte verknüpft. Das Umbenennen oder Entfernen einer Registerkarte ändert nicht die Registerkartennummer, zu der die Untersteuerelemente gehören. Wenn zum Beispiel die drei Registerkarten <code>["Red", "Green", "Blue"]</code> vorhanden sind und die zweite Registerkarte mit <code>GuiCtrl.Delete(2)</code> entfernt wird, werden die ursprünglich mit Grün verknüpften Untersteuerelemente mit Blau verknüpft. Aufgrund dieses Verhaltens ist es ratsam, nur die am Ende befindlichen Registerkarten zu entfernen. Registerkarten, die auf diese Weise entfernt wurden, können später wieder hinzugefügt werden, um ihnen ihre ursprünglichen Steuerelemente zurückzugeben.</p>
+<p>Um ein Element in einer <a href="ListView.htm">ListView</a> oder <a href="TreeView.htm">TreeView</a> zu löschen, verwenden Sie <a href="ListView.htm#Delete">LV.Delete</a> oder <a href="TreeView.htm#Delete">TV.Delete</a>.</p>
+<p>Siehe <a href="#ExReplaceList">Beispiel #1</a> für eine Demonstration.</p>
+</div>
+
+<div class="methodShort" id="Focus">
+<h3>Focus</h3>
+<p>Setzt den Tastaturfokus auf ein Steuerelement.</p>
+<pre class="Syntax">GuiCtrl.<span class="func">Focus</span>()</pre>
+<p>Um den gewünschten Effekt zu erzielen, darf das Fenster weder minimiert noch versteckt sein.</p>
+<p>Um das aktuell fokussierte Steuerelement in einem GUI-Fenster zu ermitteln, verwenden Sie <a href="Gui.htm#FocusedCtrl">Gui.FocusedCtrl</a>.</p>
+<p>Um zu ermitteln, ob ein Steuerelement den Tastaturfokus hat, verwenden Sie <a href="#Focused">GuiControl.Focused</a>.</p>
+<p>Siehe <a href="#ExFocus">Beispiel #6</a> für eine Demonstration.</p>
+</div>
+
+<div class="methodShort" id="GetPos">
+<h3>GetPos</h3>
+<p>Liefert die Position und Größe eines Steuerelements.</p>
+<pre class="Syntax">GuiCtrl.<span class="func">GetPos</span>(<span class="optional">&amp;X, &amp;Y, &amp;Breite, &amp;Höhe</span>)</pre>
+<h4 id="GetPos_Parameters">Parameter</h4>
+<dl>
+  <dt>&amp;X, &amp;Y</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#variable-references">VarRef</a></p>
+    <p>Wenn weggelassen, wird der zugehörige Wert nicht gespeichert. Andernfalls geben Sie Referenzen an, die auf Ausgabevariablen verweisen, in denen die X- und Y-Koordinate (in Pixel) der oberen linken Ecke des Steuerelements gespeichert werden sollen. Diese Koordinaten sind relativ zur oberen linken Ecke des Clientbereichs des Fensters (das ist der Bereich ohne Titelleiste, Menüleiste und Rahmen).</p>
+  </dd>
+  <dt>&amp;Breite, &amp;Höhe</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#variable-references">VarRef</a></p>
+    <p>Wenn weggelassen, wird der zugehörige Wert nicht gespeichert. Andernfalls geben Sie Referenzen an, die auf Ausgabevariablen verweisen, in denen die Breite und Höhe (in Pixel) des Steuerelements gespeichert werden sollen.</p>
+  </dd>
+</dl>
+<h4 id="GetPos_Remarks">Bemerkungen</h4>
+<p>Im Gegensatz zu <a href="ControlGetPos.htm">ControlGetPos</a> wendet diese Methode die <a href="Gui.htm#DPIScale">DPI-Skalierung</a> auf die zurückgegebenen Koordinaten an (es sei denn, die <code class="no-highlight">-DPIScale</code>-Option wurde verwendet).</p>
+<p>Siehe <a href="#ExMoveResize">Beispiel #5</a> oder <a href="#ExGetPos">Beispiel #10</a> für eine Demonstration.</p>
+</div>
+
+<div class="methodShort" id="Move">
+<h3>Move</h3>
+<p>Verschiebt ein Steuerelement und/oder ändert dessen Größe.</p>
+<pre class="Syntax">GuiCtrl.<span class="func">Move</span>(<span class="optional">X, Y, Breite, Höhe</span>)</pre>
+<h4 id="Move_Parameters">Parameter</h4>
+<dl>
+  <dt>X, Y</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn einer der Parameter weggelassen wird, bleibt die Position des Steuerelements in dieser Dimension unverändert. Andernfalls geben Sie die X- und Y-Koordinate (in Pixel) der oberen linken Ecke der neuen Position des Steuerelements an. Die Koordinaten sind relativ zur oberen linken Ecke des Clientbereichs des Fensters (das ist der Bereich ohne Titelleiste, Menüleiste und Rahmen).</p>
+  </dd>
+  <dt>Breite, Höhe</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn einer der Parameter weggelassen wird, bleibt die Größe des Steuerelements in dieser Dimension unverändert. Andernfalls geben Sie die neue Breite und Höhe des Steuerelements (in Pixel) an.</p>
+  </dd>
+</dl>
+<h4 id="Move_Remarks">Bemerkungen</h4>
+<p>Im Gegensatz zu <a href="ControlMove.htm">ControlMove</a> wendet diese Methode die <a href="Gui.htm#DPIScale">DPI-Skalierung</a> auf die Koordinaten an (es sei denn, die <code class="no-highlight">-DPIScale</code>-Option wurde verwendet).</p>
+<p>Siehe <a href="#ExMove">Beispiel #4</a> oder <a href="#ExMoveResize">Beispiel #5</a> für eine Demonstration.</p>
+
+</div>
+
+<div class="methodShort" id="OnCommand">
+<h3>OnCommand</h3>
+<p>Registriert eine Funktion oder Methode, die aufgerufen wird, wenn eine Steuerelement­benachrichtigung via <a href="GuiOnCommand.htm#WM_COMMAND">WM_COMMAND</a>-Meldung empfangen wird.</p>
+<pre class="Syntax">GuiCtrl.<span class="func">OnCommand</span>(NachrichtCode, Rückruf <span class="optional">, HinzufügenEntfernen</span>)</pre>
+<p>Weitere Informationen finden Sie unter <a href="GuiOnCommand.htm">OnCommand</a>.</p>
+</div>
+
+<div class="methodShort" id="OnEvent">
+<h3>OnEvent</h3>
+<p>Registriert eine Funktion oder Methode, die aufgerufen wird, wenn ein bestimmtes <a href="GuiOnEvent.htm#Control_Events">Ereignis</a> ausgelöst wird.</p>
+<pre class="Syntax">GuiCtrl.<span class="func">OnEvent</span>(EreignisName, Rückruf <span class="optional">, HinzufügenEntfernen</span>)</pre>
+<p>Weitere Informationen finden Sie unter <a href="GuiOnEvent.htm">OnEvent</a>.</p>
+</div>
+
+<div class="methodShort" id="OnMessage">
+<h3>OnMessage <span class="ver">[v2.1-alpha.7+]</span></h3>
+<p>Registriert eine Funktion oder Methode, die aufgerufen wird, wenn eine Meldung empfangen wird.</p>
+<pre class="Syntax">GuiCtrl.<span class="func">OnMessage</span>(MldNummer, Rückruf <span class="optional">, HinzufügenEntfernen</span>)</pre>
+<p>Weitere Informationen finden Sie unter <a href="GuiOnMessage.htm">OnMessage</a>.</p>
+</div>
+
+<div class="methodShort" id="OnNotify">
+<h3>OnNotify</h3>
+<p>Registriert eine Funktion oder Methode, die aufgerufen wird, wenn eine Steuerelement­benachrichtigung via <a href="GuiOnNotify.htm#WM_NOTIFY">WM_NOTIFY</a>-Meldung empfangen wird.</p>
+<pre class="Syntax">GuiCtrl.<span class="func">OnNotify</span>(NachrichtCode, Rückruf <span class="optional">, HinzufügenEntfernen</span>)</pre>
+<p>Weitere Informationen finden Sie unter <a href="GuiOnNotify.htm">OnNotify</a>.</p>
+</div>
+
+<div class="methodShort" id="Opt">
+<h3>Opt</h3>
+<p>Fügt verschiedene Optionen und Styles hinzu oder entfernt sie.</p>
+<pre class="Syntax">GuiCtrl.<span class="func">Opt</span>(Optionen)</pre>
+<h4 id="Opt_Parameters">Parameter</h4>
+<dl>
+  <dt>Optionen</dt><dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Geben Sie beliebig viele <a href="GuiControls.htm">steuerelementspezifische</a> oder <a href="Gui.htm#Add_Options">allgemeine</a> Optionen und Styles an, die jeweils durch mindestens ein Leer- oder Tabulatorzeichen voneinander getrennt sind.</p>
+    <p>Zum Beispiel würde <code>"+Disabled -Background"</code>, ein Steuerelement <a href="Gui.htm#Disabled">deaktivieren</a> (die Interaktion mit ihm verbieten) und dessen <a href="Gui.htm#Background">Hintergrund</a> auf die Systemvorgabe zurücksetzen, während <code>"+Default"</code> eine <a href="GuiControls.htm#Button">Schaltfläche</a> zur neuen Standardschaltfläche machen würde.</p>
+  </dd>
+</dl>
+<h4 id="Opt_Remarks">Bemerkungen</h4>
+<p>In der Regel werden alle gültigen Optionen und Styles erkannt. Das bedeutet jedoch nicht, dass sie alle nach der Erstellung eines Steuerelements angewendet oder entfernt werden. Einige <a href="../misc/Styles.htm">Styles</a> können nicht nachträglich geändert werden. Für die <a href="Gui.htm#PosSize">Positionierungs- und Größenoptionen</a> können Sie stattdessen <a href="#Move">GuiControl.Move</a> verwenden, optional mit <a href="GuiControl.htm#GetPos">GuiControl.GetPos</a> für relative Anpassungen.</p>
+<p>Wenn eine Änderung nicht angewendet werden konnte, wird eine Ausnahme ausgelöst. Eine erfolgreich angewendete Änderung kann immer noch vom Steuerelement selbst ignoriert werden.</p>
+</div>
+<span id="redraw-remarks"></span><div class="methodShort" id="Redraw">
+<h3>Redraw</h3>
+<p>Zeichnet den Bereich des GUI-Fensters neu, der von einem Steuerelement beansprucht wird.</p>
+<pre class="Syntax">GuiCtrl.<span class="func">Redraw</span>()</pre>
+<p>Obwohl diese Methode bei wiederholtem und schnellem Aufruf zu unerwünschtem Flackern führen kann, ist sie in der Lage, fehlerhafte Darstellungen beim Zeichnen bestimmter Steuerelemente wie z.B. <a href="GuiControls.htm#GroupBox">GroupBox</a> zu verhindern.</p>
+<p>Das Hinzufügen sehr vieler Elemente von z.B. <a href="ListView.htm">ListView</a>, <a href="TreeView.htm">TreeView</a> oder <a href="GuiControls.htm#ListBox">ListBox</a> kann performanter gemacht werden, indem die Neuzeichnung des Steuerelements unterdrückt wird, während die Änderungen vorgenommen werden. Verwenden Sie hierfür <code>GuiCtrl.Opt("-Redraw")</code>, bevor Sie die Elemente hinzufügen, und danach <code>GuiCtrl.Opt("+Redraw")</code>. Änderungen am Steuerelement, die vor dem Deaktivieren der Neuzeichnung noch nicht sichtbar waren, werden in der Regel erst sichtbar, nachdem die Neuzeichnung wieder aktiviert wurde.</p>
+<p>Aus Performanzgründen führen Änderungen am Inhalt eines Steuerelements nicht dazu, dass das Steuerelement sofort neu gezeichnet wird, auch wenn die Neuzeichnung aktiv ist. Stattdessen wird ein Teil des Steuerelements "ungültig gemacht" und üblicherweise nach einer kurzen Verzögerung neu gezeichnet, sobald das Programm seine interne Meldungswarteschlange prüft. Das Skript kann mit <code>Sleep -1</code> erzwingen, dass dies sofort stattfindet.</p>
+</div>
+
+<div class="methodShort" id="SetCue">
+<h3>SetCue <span class="ver">[v2.1-alpha.7+]</span></h3>
+<p>Setzt den Platzhaltertext eines <a href="GuiControls.htm#Edit">Edit</a>- oder <a href="GuiControls.htm#ComboBox">ComboBox</a>-Steuerelements.</p>
+<pre class="Syntax">ComboBoxCtrl.<span class="func">SetCue</span>(NeuerText)
+EditCtrl.<span class="func">SetCue</span>(NeuerText <span class="optional">, ZeigenBeiFokus</span>)</pre>
+<h4 id="SetCue_Parameters">Parameter</h4>
+<dl>
+  <dt>NeuerText</dt><dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Der neue Platzhaltertext.</p>
+  </dd>
+  <dt>ZeigenBeiFokus</dt><dd>
+    <p>Typ: <a href="../Concepts.htm#boolean">Boolesch</a></p>
+    <p>Wenn weggelassen, wird standardmäßig false verwendet.</p>
+    <p>Wenn <strong>false</strong>, wird der Platzhaltertext nicht angezeigt, während das Steuerelement den Tastaturfokus hat.</p>
+    <p>Wenn <strong>true</strong>, wird der Platzhaltertext auch dann angezeigt, wenn das Steuerelement fokussiert ist.</p>
+  </dd>
+</dl>
+<h4 id="SetCue_Remarks">Bemerkungen</h4>
+<p>Der Platzhaltertext wird nur angezeigt, wenn das Steuerelement keinen Text enthält, und wird eventuell auch dann von einem ComboBox-Steuerelement angezeigt, wenn etwas ausgewählt ist (d.h. wenn <a href="#Value">Value</a> ungleich Null liefert, aber das ausgewählte Element keinen Text enthält).</p>
+</div>
+
+<div class="methodShort" id="SetFont">
+<h3>SetFont</h3>
+<p>Ändert Schriftart, Schriftgröße, Schriftfarbe und/oder Schriftstil eines Steuerelements.</p>
+<pre class="Syntax">GuiCtrl.<span class="func">SetFont</span>(<span class="optional">Optionen, SchriftName</span>)</pre>
+<p>Beide Parameter können weggelassen werden, um die aktuell via <a href="Gui.htm#SetFont">Gui.SetFont</a> definierte Schrift der GUI zu setzen. Andernfalls werden alle nicht angegebenen Schriftattribute von der vorherigen Schrift des Steuerelements übernommen. Die Schriftfarbe wird nur geändert, wenn sie in den <em>Optionen</em> angegeben ist.</p>
+<p>Einzelheiten zu beiden Parametern finden Sie unter <a href="Gui.htm#SetFont">Gui.SetFont</a>.</p>
+<p>Siehe <a href="#ExFont">Beispiel #7</a> für eine Demonstration.</p>
+</div>
+
+<h2 id="Properties">Eigenschaften</h2>
+<div class="methodShort" id="ClassNN">
+<h3>ClassNN</h3>
+<p>Liefert die <a href="../misc/ControlID.htm#ClassNN">ClassNN</a> (Klassenname und Sequenznummer) eines Steuerelements.</p>
+<pre class="Syntax">ClassNN := GuiCtrl.<span class="func">ClassNN</span></pre>
+</div>
+
+<div class="methodShort" id="Enabled">
+<h3>Enabled</h3>
+<p>Liefert oder setzt, ob die Interaktion mit einem Steuerelement erlaubt ist.</p>
+<pre class="Syntax">IstInteraktiv := GuiCtrl.<span class="func">Enabled</span></pre>
+<pre class="Syntax">GuiCtrl.<span class="func">Enabled</span> := NeuerZustand</pre>
+<p><em>IstInteraktiv</em> ist 1, wenn die Interaktion mit dem Steuerelement erlaubt ist, oder 0, wenn verboten. Die <a href="Gui.htm#Disabled">Disabled-Option</a> wirkt sich auf die Voreinstellung aus.</p>
+<p><em>NeuerZustand</em> muss ein <a href="../Concepts.htm#boolean">boolescher Wert</a> sein. Wenn true, wird die Interaktion mit dem Steuerelement erlaubt. Wenn false, wird die Interaktion mit dem Steuerelement verboten.</p>
+<p>Bei <a href="GuiControls.htm#Tab">Tab</a>-Steuerelementen verbietet oder erlaubt dies zudem die Interaktion mit den Untersteuerelementen. Beachten Sie aber, dass jedes Untersteuerelement, das explizit mit <code>GuiCtrl.Enabled := false</code> deaktiviert wurde, sich diese Einstellung merkt und demzufolge auch nach Reaktivierung des Tab-Steuerelements deaktiviert bleibt.</p>
+</div>
+
+<div class="methodShort" id="Focused">
+<h3>Focused</h3>
+<p>Liefert, ob ein Steuerelement den Tastaturfokus hat.</p>
+<pre class="Syntax">IstFokussiert := GuiCtrl.<span class="func">Focused</span></pre>
+<p><em>IstFokussiert</em> ist 1, wenn das Steuerelement den Tastaturfokus hat, oder 0 wenn nicht.</p>
+<p>Um den gewünschten Effekt zu erzielen, darf das Fenster weder minimiert noch versteckt sein.</p>
+<p>Um das aktuell fokussierte Steuerelement in einem GUI-Fenster zu ermitteln, verwenden Sie <a href="Gui.htm#FocusedCtrl">Gui.FocusedCtrl</a>.</p>
+<p>Um ein Steuerelement zu fokussieren, verwenden Sie <a href="#Focus">GuiControl.Focus</a>.</p>
+</div>
+
+<div class="methodShort" id="Gui">
+<h3>Gui</h3>
+<p>Liefert das übergeordnete Fenster eines Steuerelements.</p>
+<pre class="Syntax">GuiObj := GuiCtrl.<span class="func">Gui</span></pre>
+<p><em>GuiObj</em> ist das <a href="Gui.htm">Gui-Objekt</a> des übergeordneten Fensters.</p>
+</div>
+
+<div class="methodShort" id="Hwnd">
+<h3>Hwnd</h3>
+<p>Liefert das <a href="../misc/ControlID.htm#HWND">Fensterhandle (HWND)</a> eines Steuerelements.</p>
+<pre class="Syntax">HWND := GuiCtrl.<span class="func">Hwnd</span></pre>
+</div>
+
+<div class="methodShort" id="Name">
+<h3>Name</h3>
+<p>Liefert oder setzt den expliziten Namen eines Steuerelements.</p>
+<pre class="Syntax">AktuellerName := GuiCtrl.<span class="func">Name</span></pre>
+<pre class="Syntax">GuiCtrl.<span class="func">Name</span> := NeuerName</pre>
+<p><em>AktuellerName</em> ist der aktuelle Name des Steuerelements, oder eine leere Zeichenkette, wenn es keinen Namen hat. Die <a href="Gui.htm#var">V-Option</a> wirkt sich auf die Voreinstellung aus.</p>
+<p><em>NeuerName</em> ist der neue Name des Steuerelements.</p>
+<p>Dieser Name kann mit <a href="Gui.htm#__Item">Gui.__Item</a> verwendet werden, um das zugehörige GuiControl-Objekt abzurufen. Der Name wird auch von <a href="Gui.htm#Submit">Gui.Submit</a> verwendet.</p>
+</div>
+
+<div class="methodShort" id="Text">
+<h3>Text</h3>
+<p>Liefert oder setzt den Text oder die Beschriftung eines Steuerelements.</p>
+<pre class="Syntax">AktuellerText := GuiCtrl.<span class="func">Text</span></pre>
+<pre class="Syntax">GuiCtrl.<span class="func">Text</span> := NeuerText</pre>
+<p><em>AktuellerText</em> und <em>NeuerText</em> hängen vom aktuellen Steuerelement ab. Wenn das Steuerelement weder eine sichtbare Beschriftung noch einen (einzelnen) Textwert hat, wie z.B. bei <a href="GuiControls.htm#MonthCal">MonthCal</a>, bezieht sich diese Eigenschaft auf die versteckte Beschriftung des Steuerelements (ähnlich wie bei <a href="ControlGetText.htm">ControlGetText</a> und <a href="ControlSetText.htm">ControlSetText</a>). Siehe <a href="#ExCheckBox">Beispiel #9</a> für eine Demonstration.</p>
+
+<h4 id="Text_Control_Group_1"><a href="GuiControls.htm#Button">Button</a> / <a href="GuiControls.htm#CheckBox">CheckBox</a> / <a href="GuiControls.htm#GroupBox">GroupBox</a> / <a href="GuiControls.htm#Link">Link</a> / <a href="GuiControls.htm#Radio">Radio</a> / <a href="GuiControls.htm#Text">Text</a></h4>
+<p><em>AktuellerText</em> und <em>NeuerText</em> sind der aktuelle bzw. neue Beschriftungs-/Anzeigetext. Da sich hierbei die Größe des Steuerelements nicht automatisch erweitert, verwenden Sie <a href="#Move">GuiControl.Move</a>, um das Steuerelement breiter zu machen.</p>
+<h4 id="Text_Control_Group_2"><a href="GuiControls.htm#DateTime">DateTime</a></h4>
+<p><em>AktuellerText</em> ist der aktuell im Steuerelement angezeigte formatierte Text. <em>NeuerText</em> ist ungültig und löst eine Ausnahme aus. Um das angezeigte Datum und/oder die angezeigte Uhrzeit zu ändern, verwenden Sie <a href="#Value">GuiControl.Value</a> zum Setzen eines Zeitstempels im <a href="FileSetTime.htm#YYYYMMDD">YYYYMMDDHH24MISS</a>-Format.</p>
+<h4 id="Text_Control_Group_3"><a href="GuiControls.htm#ComboBox">ComboBox</a> / <a href="GuiControls.htm#DropDownList">DropDownList</a> / <a href="GuiControls.htm#ListBox">ListBox</a> / <a href="GuiControls.htm#Tab">Tab</a></h4>
+<p><em>AktuellerText</em> ist der Text des aktuell ausgewählten Elements (Listeneintrag oder Registerkarte), oder leer, wenn nichts ausgewählt ist. Bei einer ComboBox ist das der Text im Eingabefeld, wenn nichts ausgewählt ist. Bei einer <a href="GuiControls.htm#ListBoxMulti">Mehrfachauswahl-ListBox</a> ist das ein <a href="Array.htm">Array</a>, das den Text jedes ausgewählten Elements enthält, oder leer, wenn nichts ausgewählt ist.</p>
+<p><em>NeuerText</em> ist der vollständige Text (nicht Groß-/Kleinschreibung-sensitiv) eines Elements (Listeneintrag oder Registerkarte), das ausgewählt werden soll. Bei einer <a href="GuiControls.htm#ListBoxMulti">Mehrfachauswahl-ListBox</a> werden alle Elemente ausgewählt, die vollständig mit dem Text übereinstimmen. Um mehrere Elemente mit unterschiedlichem Text auszuwählen, rufen Sie <a href="#Choose">GuiControl.Choose</a> wiederholt auf. <a href="#Value">GuiControl.Value</a> wählt ein Element per Positionsnummer aus.</p>
+<h4 id="Text_Control_Group_4"><a href="GuiControls.htm#Edit">Edit</a></h4>
+<p><em>AktuellerText</em> und <em>NeuerText</em> sind der aktuelle bzw. neue Text. Wie bei anderen Steuerelementen wird der Text unverändert abgerufen oder gesetzt; es findet keine Zeilenumbruchübersetzung statt. Um den Text eines mehrzeiligen Edit-Steuerelements abzurufen oder zu setzen, inklusive Übersetzung zwischen einem Wagenrücklauf-Zeilenvorschub-Paar (`r`n) und Zeilenvorschub (`n), verwenden Sie <a href="#Value">GuiControl.Value</a>.</p>
+<h4 id="Text_Control_Group_5"><a href="GuiControls.htm#StatusBar">StatusBar</a></h4>
+<p><em>AktuellerText</em> und <em>NeuerText</em> sind der aktuelle bzw. neue Text des ersten Segments. Verwenden Sie <a href="GuiControls.htm#SB_SetText">StatusBar.SetText</a> für mehr Flexibilität.</p>
+</div>
+
+<div class="methodShort" id="Type">
+<h3>Type</h3>
+<p>Liefert den Typ eines Steuerelements.</p>
+<pre class="Syntax">AktuellerTyp := GuiCtrl.<span class="func">Type</span></pre>
+<p><em>AktuellerTyp</em> ist je nach <a href="GuiControls.htm">Steuerelement</a> eine der folgenden Zeichenketten: ActiveX, Button, CheckBox, ComboBox, Custom, DateTime, DDL, Edit, GroupBox, Hotkey, Link, ListBox, ListView, MonthCal, Pic, Progress, Radio, Slider, StatusBar, Tab, Tab2, Tab3, Text, TreeView, UpDown.</p>
+</div>
+
+<div class="methodShort" id="Value">
+<h3>Value</h3>
+<p>Liefert oder setzt den Inhalt eines wertefähigen Steuerelements.</p>
+<pre class="Syntax">AktuellerWert := GuiCtrl.<span class="func">Value</span></pre>
+<pre class="Syntax">GuiCtrl.<span class="func">Value</span> := NeuerWert</pre>
+<p><em>AktuellerWert</em> und <em>NeuerWert</em> hängen vom aktuellen Steuerelement ab. Wenn das Steuerelement nicht wertefähig ist, wird <em>AktuellerWert</em> leer sein und die Zuweisung von <em>NeuerWert</em> einen Fehler auslösen. Ungültige Werte lösen eine Ausnahme aus. Siehe <a href="#ExNewText">Beispiel #2</a>, <a href="#ExRadio">Beispiel #3</a>, <a href="#ExEdit">Beispiel #8</a> oder <a href="#ExCheckBox">Beispiel #9</a> für eine Demonstration.</p>
+<h4 id="Value_Control_Group_1"><a href="GuiControls.htm#ActiveX">ActiveX</a></h4>
+<p><em>AktuellerWert</em> ist das ActiveX-Objekt. Wenn das Steuerelement z.B. mit dem Komponentennamen <code>"Shell.Explorer"</code> erstellt wurde, wird das ein <a href="https://learn.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752043(v=vs.85)">WebBrowser</a>-Objekt sein. Es wird immer dasselbe <a href="ComValue.htm">Wrapper-Objekt</a> zurückgegeben. <em>NeuerWert</em> ist ungültig und löst eine Ausnahme aus.</p>
+<h4 id="Value_Control_Group_2"><a href="GuiControls.htm#CheckBox">CheckBox</a> / <a href="GuiControls.htm#Radio">Radio</a></h4>
+<p><em>AktuellerWert</em> und <em>NeuerWert</em> sind die aktuelle bzw. neue Einstellung: 1 für markiert, 0 für unmarkiert oder -1 für unbestimmt. Wenn ein Radio-Steuerelement markiert wird, das zu einer Radiogruppe gehört, werden alle anderen Radio-Steuerelemente in der Gruppe automatisch entmarkiert. Um stattdessen den Text bzw. die Beschriftung des Steuerelements abzurufen oder zu setzen, verwenden Sie <a href="#Text">GuiControl.Text</a>.</p>
+<h4 id="Value_Control_Group_3"><a href="GuiControls.htm#ComboBox">ComboBox</a> / <a href="GuiControls.htm#DropDownList">DropDownList</a> / <a href="GuiControls.htm#ListBox">ListBox</a> / <a href="GuiControls.htm#Tab">Tab</a></h4>
+<p><em>AktuellerWert</em> ist die Positionsnummer des aktuell ausgewählten Elements (Listeneintrag oder Registerkarte), oder 0, wenn nichts ausgewählt ist. Bei einer ComboBox mit eingegebenem Text ist das die Positionsnummer des ersten Elements, das vollständig mit dem Text übereinstimmt (nicht Groß-/Kleinschreibung-sensitiv), oder 0, wenn nichts übereinstimmt. Bei einer <a href="GuiControls.htm#ListBoxMulti">Mehrfachauswahl-ListBox</a> ist das ein <a href="Array.htm">Array</a>, das die Positionsnummer jedes ausgewählten Elements enthält, oder ein leeres Array, wenn nichts ausgewählt ist.</p>
+<p><em>NeuerWert</em> ist die Positionsnummer des Elements (Listeneintrag oder Registerkarte), das ausgewählt werden soll, oder 0, um die aktuelle Auswahl aufzuheben (dies funktioniert auch mit Tab-Steuerelementen). Um bei einer <a href="GuiControls.htm#ListBoxMulti">Mehrfachauswahl-ListBox</a> mehrere Elemente auszuwählen, rufen Sie <a href="#Choose">GuiCtrl.Choose</a> wiederholt auf. <a href="#Text">GuiControl.Text</a> wählt ein Element per Text aus.</p>
+<h4 id="Value_Control_Group_4"><a href="GuiControls.htm#DateTime">DateTime</a> / <a href="GuiControls.htm#MonthCal">MonthCal</a></h4>
+<p><em>AktuellerWert</em> und <em>NeuerWert</em> sind Zeitstempel im <a href="FileSetTime.htm#YYYYMMDD">YYYYMMDDHH24MISS</a>-Format, die das ausgewählte bzw. auszuwählende Datum/Uhrzeit im Steuerelement repräsentieren. Geben Sie <a href="../Variables.htm#Now">A_Now</a> für <em>NeuerWert</em> an, um das aktuelle Datum/Uhrzeit (heute) zu verwenden. Bei DateTime-Steuerelementen kann <em>NeuerWert</em> leer sein, um das Steuerelement ohne vorab ausgewähltes Datum/Uhrzeit anzuzeigen (wenn es mit <a href="GuiControls.htm#ChooseNone">dieser Option</a> erstellt wurde). Bei MonthCal-Steuerelementen kann ein Datumsbereich angegeben werden, wenn das Steuerelement eine <a href="GuiControls.htm#MonthCalMulti">Mehrfachauswahl</a> unterstützt.</p>
+<h4 id="Value_Control_Group_5"><a href="GuiControls.htm#Edit">Edit</a></h4>
+<p><em>AktuellerWert</em> ist der aktuelle Inhalt. Bei mehrzeiligen Steuerelementen werden alle Zeilenumbrüche als Zeilenvorschübe (`n) ausgegeben, nicht wie üblich als Wagenrücklauf-Zeilenvorschub-Paare (`r`n), die von Nicht-GUI-Funktionen wie <a href="ControlGetText.htm">ControlGetText</a> und <a href="ControlSetText.htm">ControlSetText</a> verwendet werden.</p>
+<p><em>NeuerWert</em> ist der neue Inhalt. Bei mehrzeiligen Steuerelementen wird jeder Zeilenvorschub (`n), dem kein Wagenrücklauf (`r) vorangestellt ist, automatisch in ein Wagenrücklauf-Zeilenvorschub-Paar (`r`n) übersetzt, um eine korrekte Darstellung zu gewährleisten. In der Regel sollte das keine Probleme bereiten, da bei der Verwendung von <a href="Gui.htm#Submit">Gui.Submit</a> oder beim Abrufen des Wertes diese Übersetzung automatisch rückgängig gemacht wird, indem ein Wagenrücklauf-Zeilenvorschub-Paar (`r`n) mit einem Zeilenvorschub (`n) ersetzt wird.</p>
+<p>Um den Text ohne Übersetzung zwischen Zeilenvorschub (`n) und Wagenrücklauf-Zeilenvorschub-Paar (`r`n) abzurufen oder zu setzen, verwenden Sie <a href="#Text">GuiControl.Text</a>.</p>
+<h4 id="Value_Control_Group_6"><a href="GuiControls.htm#Hotkey">Hotkey</a></h4>
+<p><em>AktuellerWert</em> und <em>NeuerWert</em> sind Zeichenketten bestehend aus Modifikatoren und einem Tastennamen, die den aktuell angezeigten bzw. anzuzeigenden Hotkey im Steuerelement repräsentieren. Zum Beispiel <code class="no-highlight">^!c</code>, <code class="no-highlight">^Numpad1</code> oder <code class="no-highlight">+Home</code>. <em>AktuellerWert</em> ist leer, wenn im Steuerelement kein Hotkey angegeben ist. <em>NeuerWert</em> kann leer sein, um das Steuerelement zu leeren. Es werden nur die Modifikatoren ^ (STRG), ! (ALT) und + (UMSCHALT) unterstützt. Weitere verfügbare Tastennamen finden Sie in der <a href="../KeyList.htm">Tastenliste</a>.</p>
+<h4 id="Value_Control_Group_7"><a href="GuiControls.htm#Picture">Picture</a></h4>
+<p><em>AktuellerWert</em> ist der Dateiname des Bildes, wie er ursprünglich bei der Erstellung des Steuerelements angegeben wurde. Dieser Name ändert sich auch dann nicht, wenn später ein anderer Dateiname angegeben wird.</p>
+<p><em>NeuerWert</em> ist der Dateiname oder ein <a href="../misc/ImageHandles.htm">Handle</a> des neuen Bildes, das geladen werden soll (siehe <a href="GuiControls.htm#Picture">Picture</a>, welche Dateitypen unterstützt werden). Direkt vor dem Dateinamen können beliebig viele der folgenden Optionen angegeben werden: <code class="no-highlight">*wN</code> (Breite N), <code class="no-highlight">*hN</code> (Höhe N) und <code class="no-highlight">*IconN</code> (Symbolgruppennummer N in einer DLL- oder EXE-Datei). Zum Beispiel bewirkt <code>"*icon2 *w100 *h-1 C:\Meine Anwendung.exe"</code>, dass das Standardsymbol aus der zweiten Symbolgruppe mit einer Breite von 100 Pixel und einer automatischen Höhe via "Seitenverhältnis beibehalten" geladen wird. Geben Sie <code class="no-highlight">*w0 *h0</code> an, um die aktuelle Breite und Höhe des Bildes zu verwenden. Wenn <code class="no-highlight">*w</code> und <code class="no-highlight">*h</code> weggelassen werden, wird die Größe des Bildes an die Größe des Steuerelements angepasst. Beim Laden eines Symbols aus einer ICO-Datei mit mehreren Symbolen hat die Angabe von Breite und Höhe zudem Einfluss darauf, welches Symbol geladen wird. Hinweis: Verwenden Sie nur ein Leer- oder Tabulatorzeichen zwischen der letzten Option und dem Dateinamen selbst; alle anderen Leer- oder Tabulatorzeichen werden als Teil des Dateinamens interpretiert.</p>
+<h4 id="Value_Control_Group_8"><a href="GuiControls.htm#Progress">Progress</a> / <a href="GuiControls.htm#Slider">Slider</a> / <a href="GuiControls.htm#UpDown">UpDown</a></h4>
+<p><em>AktuellerWert</em> und <em>NeuerWert</em> sind die aktuelle bzw. neue Position des Steuerelements. Wenn die neue Position außerhalb des gültigen Wertebereichs liegt, wird das Steuerelement auf den nächstmöglichen gültigen Wert gesetzt.</p>
+<h4 id="Value_Control_Group_9"><a href="GuiControls.htm#Text">Text</a></h4>
+<p><em>AktuellerWert</em> und <em>NeuerWert</em> sind der aktuelle bzw. neue Beschriftungs-/Anzeigetext. Da sich hierbei die Größe des Steuerelements nicht automatisch erweitert, verwenden Sie <a href="#Move">GuiControl.Move</a>, um das Steuerelement breiter zu machen.</p>
+</div>
+
+<div class="methodShort" id="Visible">
+<h3>Visible</h3>
+<p>Liefert oder setzt, ob ein Steuerelement sichtbar ist.</p>
+<pre class="Syntax">IstSichtbar := GuiCtrl.<span class="func">Visible</span></pre>
+<pre class="Syntax">GuiCtrl.<span class="func">Visible</span> := NeuerZustand</pre>
+<p><em>IstSichtbar</em> ist 1, wenn das Steuerelement sichtbar ist, oder 0, wenn versteckt. Die <a href="Gui.htm#Hidden">Hidden-Option</a> wirkt sich auf die Voreinstellung aus.</p>
+<p><em>NeuerZustand</em> muss ein <a href="../Concepts.htm#boolean">boolescher Wert</a> sein. Wenn true, wird das Steuerelement sichtbar gemacht. Wenn false, wird das Steuerelement versteckt.</p>
+<p>Bei <a href="GuiControls.htm#Tab">Tab</a>-Steuerelementen wird das zudem alle Untersteuerelemente verstecken oder sichtbar machen.</p>
+<p>Mit <code>GuiCtrl.Enabled := false</code> kann zusätzlich der Tastaturkurzbefehl eines Steuerelements (unterstrichene Buchstabe) deaktiviert werden.</p>
+</div>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Jede hier gelistete Methode und Eigenschaft ist nur für die Verwendung mit Steuerelementen in einem GUI-Fenster vorgesehen, also einem Fenster, das mit der <a href="Gui.htm#Call">Gui</a>-Funktion erstellt wurde. Für Nicht-GUI-Steuerelemente können Sie die <a href="Control.htm">Control-Funktionen</a> verwenden.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="GuiControls.htm">GUI-Steuerelemente</a>, <a href="Gui.htm">Gui-Objekt</a>, <a href="GuiCtrlFromHwnd.htm">GuiCtrlFromHwnd</a>, <a href="Control.htm">Control-Funktionen</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+
+<div class="ex" id="ExReplaceList">
+<p><a class="ex_number" href="#ExReplaceList"></a> Ersetzt die aktuelle Liste eines <a href="GuiControls.htm#ListBox">ListBox</a>-Steuerelements mittels <a href="#Delete">GuiControl.Delete</a> und <a href="#Add">GuiControl.Add</a>.</p>
+<pre>MeineGui := Gui()
+MeineListBox := MeineGui.Add("ListBox",, ["Schwarz", "Weiß"])
+MeineGui.Show()
+Sleep 1000 <em>; Warten zu Demonstrationszwecken.</em>
+MeineListBox.Delete()
+MeineListBox.Add(["Rot", "Grün", "Blau"])</pre>
+</div>
+
+<div class="ex" id="ExNewText">
+<p><a class="ex_number" href="#ExNewText"></a> Fügt neuen Text in ein <a href="GuiControls.htm#Edit">Edit</a>-Steuerelement mittels <a href="#Value">GuiControl.Value</a> ein.</p>
+<pre>MeineGui := Gui()
+MeinEdit := MeineGui.Add("Edit", "r2 w150", "Alte Textzeile.")
+MeineGui.Show()
+Sleep 1000 <em>; Warten zu Demonstrationszwecken.</em>
+MeinEdit.Value := "Neue Textzeile 1.`nNeue Textzeile 2."</pre>
+</div>
+
+<div class="ex" id="ExRadio">
+<p><a class="ex_number" href="#ExRadio"></a> Markiert ein <a href="GuiControls.htm#Radio">Radio</a>-Steuerelement, während alle anderen in der Gruppe automatisch entmarkiert werden, mittels <a href="#Value">GuiControl.Value</a>.</p>
+<pre>MeineGui := Gui()
+MeinRadio1 := MeineGui.Add("Radio", "Checked", "Optionsfeld 1")
+MeinRadio2 := MeineGui.Add("Radio",, "Optionsfeld 2")
+MeinRadio3 := MeineGui.Add("Radio",, "Optionsfeld 3")
+MeineGui.Show()
+Sleep 1000 <em>; Warten zu Demonstrationszwecken.</em>
+MeinRadio2.Value := 1</pre>
+</div>
+
+<div class="ex" id="ExMove">
+<p><a class="ex_number" href="#ExMove"></a> Verschiebt ein <a href="GuiControls.htm#Button">Button</a>-Steuerelement an eine neue Position mittels <a href="#Move">GuiControl.Move</a>.</p>
+<pre>MeineGui := Gui()
+MeinButton := MeineGui.Add("Button",, "OK")
+MeineGui.Show("w300 h300")
+Sleep 1000 <em>; Warten zu Demonstrationszwecken.</em>
+MeinButton.Move(100, 200)</pre>
+</div>
+
+<div class="ex" id="ExMoveResize">
+<p><a class="ex_number" href="#ExMoveResize"></a> Verschiebt und ändert die Größe eines <a href="GuiControls.htm#Edit">Edit</a>-Steuerelements relativ zu dessen aktueller Position und Größe mittels <a href="#GetPos">GuiControl.GetPos</a> und <a href="#Move">GuiControl.Move</a>.</p>
+<pre>MeineGui := Gui()
+MeinEdit := MeineGui.Add("Edit")
+MeineGui.Show("w300 h300")
+Sleep 1000 <em>; Warten zu Demonstrationszwecken.</em>
+MeinEdit.GetPos(&amp;X, &amp;Y, &amp;W, &amp;H)
+MeinEdit.Move(X+10, Y+5, W*2, H*1.5)</pre>
+</div>
+
+<div class="ex" id="ExFocus">
+<p><a class="ex_number" href="#ExFocus"></a> Setzt den Tastaturfokus auf ein <a href="GuiControls.htm#Edit">Edit</a>-Steuerelement mittels <a href="#Focus">GuiControl.Focus</a>.</p>
+<pre>MeineGui := Gui()
+MeineGui.Add("Text", "Section", "Vorname:")
+MeineGui.Add("Text",, "Nachname:")
+EditVorname := MeineGui.Add("Edit", "ys")
+EditNachname := MeineGui.Add("Edit")
+MeineGui.Show()
+Sleep 1000 <em>; Warten zu Demonstrationszwecken.</em>
+EditNachname.Focus()</pre>
+</div>
+
+<div class="ex" id="ExFont">
+<p><a class="ex_number" href="#ExFont"></a> Ändert die Schriftart und Textfarbe eines <a href="GuiControls.htm#Text">Text</a>-Steuerelements mittels <a href="#SetFont">GuiControl.SetFont</a>.</p>
+<pre>MeineGui := Gui()
+MeineGui.SetFont("s14")
+MeineGui.Add("Text",, "Das ist ein Test.")
+MeinText := MeineGui.Add("Text",, "Das ist ein Test.")
+MeineGui.Add("Text",, "Das ist ein Test.")
+MeineGui.Show()
+Sleep 1000 <em>; Warten zu Demonstrationszwecken.</em>
+MeinText.SetFont("cRed", "Times New Roman")</pre>
+</div>
+
+<div class="ex" id="ExEdit">
+<p><a class="ex_number" href="#ExEdit"></a> Ruft den Text eines <a href="GuiControls.htm#Edit">Edit</a>-Steuerelements mittels <a href="#Value">GuiControl.Value</a> ab.</p>
+<pre>MeineGui := Gui()
+MeinEdit := MeineGui.Add("Edit",, "Das ist ein Test.")
+MeineGui.Show()
+MsgBox MeinEdit.Value</pre>
+</div>
+
+<div class="ex" id="ExCheckBox">
+<p><a class="ex_number" href="#ExCheckBox"></a> Meldet die Beschriftung und den aktuellen Status eines <a href="GuiControls.htm#CheckBox">CheckBox</a>-Steuerelements, wenn es angeklickt wird.</p>
+<pre>MeineGui := Gui()
+MeineCheckBox1 := MeineGui.Add("CheckBox",, "Kontrollkästchen 1")
+MeineCheckBox2 := MeineGui.Add("CheckBox",, "Kontrollkästchen 2")
+MeineCheckBox1.OnEvent("Click", StatusMelden)
+MeineCheckBox2.OnEvent("Click", StatusMelden)
+MeineGui.Show()
+
+StatusMelden(MeineCheckBox, *)
+{
+    Beschriftung := MeineCheckBox.Text
+    Status := MeineCheckBox.Value
+    MsgBox Beschriftung " ist " (Status = 0 ? "unmarkiert" : "markiert")
+}</pre>
+</div>
+
+<div class="ex" id="ExGetPos">
+<p><a class="ex_number" href="#ExGetPos"></a> Ruft die Position und Größe eines <a href="GuiControls.htm#Picture">Picture</a>-Steuerelements mittels <a href="#GetPos">GuiControl.GetPos</a> ab und speichert die Werte in die Variablen X, Y, W und H.</p>
+<pre>MeineGui := Gui()
+MeinPicture := MeineGui.Add("Picture",, A_AhkPath)
+MeineGui.Show()
+MeinPicture.GetPos(&amp;X, &amp;Y, &amp;W, &amp;H)
+MsgBox "x" X ", y" Y ", w" W ", h" H</pre>
+</div>
+
+</body>
+</html>

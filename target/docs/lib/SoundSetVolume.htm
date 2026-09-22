@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>SoundSetVolume - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die SoundSetVolume-Funktion ändert eine Lautstärkeeinstellung eines Audiogeräts." />
+<meta name="ahk:equiv-v1" content="lib/SoundSet.htm" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>SoundSetVolume</h1>
+
+<p>Ändert eine Lautstärkeeinstellung eines Audiogeräts.</p>
+
+<pre class="Syntax"><span class="func">SoundSetVolume</span> NeueEinstellung <span class="optional">, Komponente, Gerät</span></pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>NeueEinstellung</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a>, <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#numbers">Float</a></p>
+    <p>Eine Zeichenkette, die eine Prozentzahl im Bereich von -100 bis 100 enthält. Wenn die Zahl mit einem Plus- oder Minuszeichen beginnt, wird die <u>aktuelle Einstellung</u> um den angegebenen Wert erhöht bzw. verringert. Andernfalls wird <em>NeueEinstellung</em> explizit gesetzt.</p>
+    <p>Wenn die Prozentzahl mit einem Minuszeichen beginnt oder vorzeichenlos ist, muss sie nicht in Anführungszeichen gesetzt werden.</p>
+  </dd>
+
+  <dt>Komponente</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a> oder <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn leer oder weggelassen, wird standardmäßig die Master-Lautstärkeeinstellung verwendet. Andernfalls geben Sie den Anzeigenamen und/oder die Indexnummer der Komponente an, z.B. <code>1</code>, <code>"Line in"</code> oder <code>"Line in:2"</code>.</p>
+    <p>Weitere Informationen finden Sie unter <a href="Sound.htm#component">Komponente (Sound-Funktionen)</a>.</p>
+  </dd>
+
+  <dt>Gerät</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a> oder <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn leer oder weggelassen, wird standardmäßig das Standardwiedergabegerät des Systems verwendet (was nicht unbedingt Gerät 1 ist). Andernfalls geben Sie den Anzeigenamen und/oder die Indexnummer des Geräts an, z.B. <code>1</code>, <code>"Lautsprecher"</code>, <code>"Lautsprecher:2"</code> oder <code>"Lautsprecher (Beispiel HD Audio)"</code>.</p>
+    <p>Weitere Informationen finden Sie unter <a href="Sound.htm#device">Gerät (Sound-Funktionen)</a>.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Es wird ein <a href="Error.htm#TargetError">TargetError</a> ausgelöst, wenn das Gerät oder die Komponente nicht gefunden werden konnte oder wenn die Komponente diesen Reglertyp nicht unterstützt. Andernfalls wird bei Misserfolg ein <a href="Error.htm#OSError">OSError</a> ausgelöst.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Um die Master-Lautstärke des gesamten Systems zu ändern, kann alternativ ein Skript verwendet werden, das lautstärkespezifische Tastendrücke sendet. Zum Beispiel:</p>
+<pre>Send "{Volume_Up}"  <em>; Master-Lautstärke um 1 Stufe erhöhen (normalerweise 5 %).</em>
+Send "{Volume_Down 3}"  <em>; Master-Lautstärke um 3 Stufen verringern.</em>
+</pre>
+<p>Um den Leistungsumfang der installierten Audiogeräte zu ermitteln – z.B. die Namen und verfügbaren Komponenten – führen Sie das <a href="Sound.htm#ExSoundcard">Soundkartenanalyse-Skript</a> aus.</p>
+<p>SoundSetVolume versucht, die bestehende Balance beim Ändern der Lautstärke beizubehalten.</p>
+<p>Mit <a href="SoundGetVolume.htm">SoundGetVolume</a> kann die aktuelle Lautstärkeeinstellung abgerufen werden.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="Sound.htm">Sound-Funktionen</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Setzt die Master-Lautstärke auf 50 Prozent. Anführungszeichen können weggelassen werden.</p>
+<pre>SoundSetVolume "50"</pre>
+<pre>SoundSetVolume 50</pre>
+</div>
+
+<div class="ex" id="ExPlus">
+<p><a class="ex_number" href="#ExPlus"></a> Erhöht die Master-Lautstärke um 10 Prozent. Anführungszeichen können <u>nicht</u> weggelassen werden.</p>
+<pre>SoundSetVolume "+10"</pre>
+</div>
+
+<div class="ex" id="ExMinus">
+<p><a class="ex_number" href="#ExMinus"></a> Verringert die Master-Lautstärke um 10 Prozent. Anführungszeichen können weggelassen werden.</p>
+<pre>SoundSetVolume "-10"</pre>
+<pre>SoundSetVolume -10</pre>
+</div>
+
+<div class="ex" id="ExMic">
+<p><a class="ex_number" href="#ExMic"></a> Erhöht die Mikrofonaufnahmelautstärke um 20 Prozent.</p>
+<pre>SoundSetVolume "+20", , "Mikrofon"</pre>
+</div>
+
+</body>
+</html>

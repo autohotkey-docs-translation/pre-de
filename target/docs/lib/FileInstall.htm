@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>FileInstall - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die FileInstall-Funktion fügt eine bestimmte Datei in die kompilierte Version des Skripts ein." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>FileInstall</h1>
+
+<p>Fügt eine bestimmte Datei in die <a href="../Scripts.htm#ahk2exe">kompilierte Version</a> des Skripts ein.</p>
+
+<pre class="Syntax"><span class="func">FileInstall</span> Quelle, Ziel <span class="optional">, Überschreiben</span></pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>Quelle</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Name einer einzelnen Datei, die in die kompilierte EXE-Datei eingefügt werden soll. Wenn kein absoluter Pfad angegeben ist, wird die Datei im (oder relativ zum) Arbeitsverzeichnis des Skripts vermutet.</p>
+    <p>Dieser Parameter muss eine <a href="../Language.htm#strings">in Anführungszeichen gesetzte, direkt geschriebene Zeichenkette</a> sein (keine Variable oder ein anderer Ausdruck) und muss rechts neben dem Funktionsnamen <em>FileInstall</em> stehen (also nicht in einer <a href="../Scripts.htm#continuation">Fortsetzungszeile</a> darunter).</p>
+  </dd>
+
+  <dt>Ziel</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Der Name einer Datei, die erstellt werden soll, wenn <em>Quelle</em> aus der EXE-Datei extrahiert wird. Wenn kein absoluter Pfad angegeben ist, wird die Datei im <a href="../Variables.htm#WorkingDir">A_WorkingDir</a>-Verzeichnis erstellt. Das Zielverzeichnis muss bereits existieren.</p>
+  </dd>
+
+  <dt>Überschreiben</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn weggelassen, wird standardmäßig 0 verwendet. Andernfalls geben Sie eine der folgenden Zahlen an, um festzulegen, ob bereits vorhandene Dateien überschrieben werden dürfen:</p>
+    <p><strong>0:</strong> Vorhandene Dateien werden nicht überschrieben. Die Operation wird fehlschlagen und keinen Effekt haben, wenn <em>Ziel</em> bereits existiert.</p>
+    <p><strong>1:</strong> Vorhandene Dateien werden überschrieben.</p>
+    <p>Andere Werte sind für zukünftige Zwecke reserviert.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Bei Misserfolg wird eine Ausnahme ausgelöst.</p>
+
+<p>Misserfolg ist, wenn die Datei nicht in das Ziel geschrieben werden kann. Zum Beispiel:</p>
+<ul>
+  <li>Die Zieldatei existiert bereits und der <em>Überschreiben</em>-Parameter war 0 oder wurde weggelassen.</li>
+  <li>Die Zieldatei konnte nicht geöffnet werden, weil ein Berechtigungsfehler vorliegt oder die Datei gerade verwendet wird.</li>
+  <li>Der Zielpfad war ungültig oder ist ein Ordner, der nicht existiert.</li>
+  <li>Die Quelldatei existiert nicht (nur bei unkompilierten Skripten).</li>
+</ul>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Wenn ein Aufruf dieser Funktion von <a href="../Scripts.htm#ahk2exe">Ahk2Exe</a> während der Kompilierung des Skripts gelesen wird, wird <em>Quelle</em> zum resultierenden kompilierten Skript hinzugefügt. Wenn die kompilierte Skript-EXE später ausgeführt wird und die Ausführung die Zeile mit FileInstall erreicht, wird die Datei aus der EXE extrahiert und in <em>Ziel</em> geschrieben.</p>
+<p>Dateien, die zu einem Skript hinzugefügt werden, werden während der Kompilierung nicht komprimiert oder verschlüsselt. Allerdings kann die kompilierte Skript-EXE via Ahk2Exe-Option komprimiert werden.</p>
+<p>Wenn diese Funktion in einem normalen (unkompilierten) Skript verwendet wird, wird stattdessen eine einfache Dateikopie durchgeführt – dies hilft beim Testen von Skripten, die später kompiliert werden. Es geschieht nichts, wenn die vollständigen Pfade von Quelle und Ziel identisch sind, da der Versuch, die Datei auf sich selbst zu kopieren, zu einem Fehler führen würde. Die Pfade werden mit <a href="https://learn.microsoft.com/windows/win32/api/winbase/nf-winbase-lstrcmpiw">lstrcmpi</a> verglichen, nachdem sie mit <a href="https://learn.microsoft.com/windows/win32/api/fileapi/nf-fileapi-getfullpathnamew">GetFullPathName</a> erweitert wurden.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="FileCopy.htm">FileCopy</a>, <a href="_Include.htm">#Include</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Fügt eine Textdatei in die kompilierte Version des Skripts ein. Wenn das kompilierte Skript später ausgeführt wird, wird die eingefügte Datei in ein anderes Verzeichnis mit einem anderen Dateinamen extrahiert. Wenn in diesem Verzeichnis bereits eine Datei mit diesem Namen existiert, wird diese überschrieben.</p>
+<pre>FileInstall "Meine Datei.txt", A_Desktop "\Beispieldatei.txt", 1</pre>
+</div>
+
+</body>
+</html>

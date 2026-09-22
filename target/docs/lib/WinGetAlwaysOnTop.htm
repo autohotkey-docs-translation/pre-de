@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>WinGetAlwaysOnTop - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die WinGetAlwaysOnTop-Funktion gibt eine Zahl ungleich 0 zurück, wenn ein bestimmtes Fenster immer im Vordergrund ist." />
+<meta name="ahk:equiv-v1" content="lib/WinGet.htm#ExStyle" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>WinGetAlwaysOnTop <span class="ver">[v2.1-alpha.1+]</span></h1>
+
+<p>Gibt eine Zahl ungleich 0 zurück, wenn ein bestimmtes Fenster immer im Vordergrund ist.</p>
+
+<pre class="Syntax">IstImmerImVordergrund := <span class="func">WinGetAlwaysOnTop</span>(<span class="optional">FensterTitel, FensterText, AusnahmeTitel, AusnahmeText</span>)</pre>
+
+<h2 id="Parameters">Parameter</h2>
+<dl>
+    <dt>FensterTitel, FensterText, AusnahmeTitel, AusnahmeText</dt>
+    <dd>
+        <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a>, <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#objects">Objekt</a></p>
+        <p>Wenn jeder dieser Parameter leer ist oder weggelassen wird, wird das <a href="../misc/WinTitle.htm#LastFoundWindow">Zuletzt Gefundene Fenster</a> verwendet. Andernfalls geben Sie für <em>FensterTitel</em> einen <a href="../misc/WinTitle.htm">Fenstertitel oder andere Kriterien</a> zur Identifizierung des Zielfensters und/oder für <em>FensterText</em> eine Teilzeichenkette aus einem Textelement des Zielfensters an (Textelemente können mit dem internen Tool "Window Spy" in Erfahrung gebracht werden).</p>
+        <p><em>AusnahmeTitel</em> und <em>AusnahmeText</em> können verwendet werden, um ein oder mehrere Fenster anhand ihres Titels oder Textes auszuschließen. Ihre Angabe ähnelt der von <em>FensterTitel</em> und <em>FensterText</em>, außer dass <em>AusnahmeTitel</em> keine anderen Kriterien als den Fenstertitel erkennt.</p>
+        <p>Fenstertitel und -texte sind Groß-/Kleinschreibung-sensitiv. Standardmäßig werden versteckte Fenster nicht erkannt und versteckte Textelemente erkannt, was mit <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a> und <a href="DetectHiddenText.htm">DetectHiddenText</a> geändert werden kann; wenn jedoch <a href="../misc/WinTitle.htm#ahk_id">reine HWNDs</a> verwendet werden, werden versteckte Fenster immer erkannt, unabhängig von DetectHiddenWindows. Standardmäßig kann ein Fenstertitel den angegebenen <em>FensterTitel</em> oder <em>AusnahmeTitel</em> an beliebiger Stelle enthalten, um eine Übereinstimmung zu sein, was mit <a href="SetTitleMatchMode.htm">SetTitleMatchMode</a> geändert werden kann.</p>
+    </dd>
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#boolean">Integer (boolesch)</a></p>
+<p>Diese Funktion gibt 1 (true) zurück, wenn das angegebene Fenster immer im Vordergrund ist, andernfalls 0 (false).</p>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Es wird ein <a href="Error.htm#TargetError">TargetError</a> ausgelöst, wenn das Fenster nicht gefunden werden konnte.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Der Immer-Im-Vordergrund-Status des Fensters wird durch Überprüfung des WS_EX_TOPMOST-Styles ermittelt.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="WinSetAlwaysOnTop.htm">WinSetAlwaysOnTop</a>, <a href="WinMoveTop.htm">WinMoveTop</a>, <a href="WinMoveBottom.htm">WinMoveBottom</a>, <a href="Win.htm">Win-Funktionen</a>, <a href="Control.htm">Control-Funktionen</a></p>
+
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>SysGet - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die SysGet-Funktion ruft Dimensionen von Systemobjekten und andere Systemeigenschaften ab." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>SysGet</h1>
+
+<p>Ruft Dimensionen von Systemobjekten und andere Systemeigenschaften ab.</p>
+
+<pre class="Syntax">Wert := <span class="func">SysGet</span>(Eigenschaft)</pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>Eigenschaft</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Geben Sie eine Nummer aus den unteren Tabellen an, um den entsprechenden Wert abzurufen.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+<p>Diese Funktion gibt den Wert der angegebenen Systemeigenschaft zurück.</p>
+
+<h2 id="Commonly_Used">Häufig verwendet</h2>
+<table class="info">
+  <tr>
+    <th>Nummer</th>
+    <th abbr="Beschr">Beschreibung</th>
+  </tr>
+  <tr>
+    <td>80</td>
+    <td>SM_CMONITORS: Anzahl der anzeigefähigen Bildschirme auf dem Desktop (also keine "nicht-anzeigefähige Pseudo-Bildschirme").</td>
+  </tr>
+  <tr>
+    <td>43</td>
+    <td>SM_CMOUSEBUTTONS: Anzahl der Maustasten (0, wenn keine Maus angeschlossen ist).</td>
+  </tr>
+  <tr>
+    <td>16, 17</td>
+    <td>SM_CXFULLSCREEN, SM_CYFULLSCREEN: Breite und Höhe des Clientbereichs eines Vollbildfensters auf dem primären anzeigefähigen Bildschirm (in Pixel).</td>
+  </tr>
+  <tr>
+    <td>61, 62</td>
+    <td>SM_CXMAXIMIZED, SM_CYMAXIMIZED: Breite und Höhe eines maximierten Top-Level-Fensters auf dem primären anzeigefähigen Bildschirm (in Pixel).</td>
+  </tr>
+  <tr>
+    <td>59, 60</td>
+    <td>SM_CXMAXTRACK, SM_CYMAXTRACK: Maximale Breite und Höhe eines Fensters mit einem Titel und Rahmen zum Ändern der Fenstergröße (in Pixel). Diese Metrik bezieht sich auf den gesamten Desktop. Der Benutzer kann den Fensterrahmen nicht auf eine Größe ziehen, die diese Dimensionen überschreiten würden.</td>
+  </tr>
+  <tr>
+    <td>28, 29</td>
+    <td>SM_CXMIN, SM_CYMIN: Minimale Breite und Höhe des Fensters (in Pixel).</td>
+  </tr>
+  <tr>
+    <td>57, 58</td>
+    <td>SM_CXMINIMIZED, SM_CYMINIMIZED: Dimensionen eines minimierten Fensters (in Pixel).</td>
+  </tr>
+  <tr>
+    <td>34, 35</td>
+    <td>SM_CXMINTRACK, SM_CYMINTRACK: Minimale Breite und Höhe eines Fensters (in Pixel). Der Benutzer kann den Fensterrahmen nicht auf eine Größe ziehen, die diese Dimensionen unterschreiten würden. Ein Fenster kann diese Werte durch Verarbeitung der WM_GETMINMAXINFO-Meldung überschreiben.</td>
+  </tr>
+  <tr>
+    <td>0, 1</td>
+    <td>SM_CXSCREEN, SM_CYSCREEN: Breite und Höhe des primären anzeigefähigen Bildschirms (in Pixel). Diese sind identisch mit den internen Variablen <a href="../Variables.htm#Screen">A_ScreenWidth</a> und <a href="../Variables.htm#Screen">A_ScreenHeight</a>.</td>
+  </tr>
+  <tr>
+    <td>78, 79</td>
+    <td>SM_CXVIRTUALSCREEN, SM_CYVIRTUALSCREEN: Breite und Höhe des virtuellen Bildschirms (in Pixel). Der virtuelle Bildschirm ist das umgebende Rechteck von allen anzeigefähigen Bildschirmen. SM_XVIRTUALSCREEN und SM_YVIRTUALSCREEN sind die Koordinaten der oberen linken Ecke des virtuellen Bildschirms.</td>
+  </tr>
+  <tr>
+    <td>19</td>
+    <td>SM_MOUSEPRESENT: Ungleich 0, wenn eine Maus angeschlossen ist, andernfalls 0.</td>
+  </tr>
+  <tr>
+    <td>75</td>
+    <td>SM_MOUSEWHEELPRESENT: Ungleich 0, wenn eine Maus mit Mausrad angeschlossen ist, andernfalls 0.</td>
+  </tr>
+  <tr>
+    <td>63</td>
+    <td>SM_NETWORK: Wenn ein Netzwerk vorhanden ist, wird das niederwertigste Bit gesetzt, andernfalls wird es gelöscht. Die anderen Bits sind für zukünftige Zwecke reserviert.</td>
+  </tr>
+  <tr>
+    <td>8193</td>
+    <td>SM_REMOTECONTROL: Diese Systemmetrik wird in einer Terminal Services-Umgebung verwendet. Ungleich 0, wenn die aktuelle Sitzung ferngesteuert wird, andernfalls 0.</td>
+  </tr>
+  <tr>
+    <td>4096</td>
+    <td>SM_REMOTESESSION: Diese Systemmetrik wird in einer Terminal Services-Umgebung verwendet. Wenn der aufrufende Prozess einer Terminal Services-Clientsitzung zugeordnet ist, wird ein Wert ungleich 0 zurückgegeben. Wenn der aufrufende Prozess einer Terminal Server-Konsolensitzung zugeordnet ist, wird 0 zurückgegeben. Die Konsolensitzung ist nicht unbedingt die physische Konsole.</td>
+  </tr>
+  <tr>
+    <td>70</td>
+    <td>SM_SHOWSOUNDS: Ungleich 0, wenn die Anwendung dem Benutzer Informationen visuell anzeigen soll, die sonst nur in akustischer Form ausgegeben werden, andernfalls 0.</td>
+  </tr>
+  <tr>
+    <td>8192</td>
+    <td>SM_SHUTTINGDOWN: Ungleich 0, wenn die aktuelle Sitzung heruntergefahren wird, andernfalls 0. <b>Windows 2000:</b> Der abgerufene Wert ist immer 0.</td>
+  </tr>
+  <tr>
+    <td>23</td>
+    <td>SM_SWAPBUTTON: Ungleich 0, wenn die Bedeutungen der linken und rechten Maustaste vertauscht sind, andernfalls 0.</td>
+  </tr>
+  <tr>
+    <td>76, 77</td>
+    <td>SM_XVIRTUALSCREEN, SM_YVIRTUALSCREEN: Koordinaten der oberen linken Ecke des virtuellen Bildschirms. Der virtuelle Bildschirm ist das umgebende Rechteck von allen anzeigefähigen Bildschirmen. SM_CXVIRTUALSCREEN und SM_CYVIRTUALSCREEN (siehe weiter oben) sind die Breite und Höhe des virtuellen Bildschirms.</td>
+  </tr>
+</table>
+
+<h2 id="Not_Commonly_Used">Selten verwendet</h2>
+<table class="info">
+  <tr>
+    <th>Nummer</th>
+    <th abbr="Beschr">Beschreibung</th>
+  </tr>
+  <tr>
+    <td>56</td>
+    <td>SM_ARRANGE: Flags, die angeben, wie das System minimierte Fenster anordnet. Siehe Microsoft Docs für weitere Informationen.</td>
+  </tr>
+  <tr>
+    <td>67</td>
+    <td><p>SM_CLEANBOOT: Gibt an, wie das System gestartet wurde:</p>
+      <ul>
+        <li>0 = Normaler Start</li>
+        <li>1 = Abgesicherter Start</li>
+        <li>2 = Abgesicherter Start mit Netzwerk</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>5, 6</td>
+    <td>SM_CXBORDER, SM_CYBORDER: Breite und Höhe eines Fensterrahmens (in Pixel). Entspricht dem SM_CXEDGE-Wert für Fenster im 3D-Look.</td>
+  </tr>
+  <tr>
+    <td>13, 14</td>
+    <td>SM_CXCURSOR, SM_CYCURSOR: Breite und Höhe eines Cursors (in Pixel). Das System kann keine Cursor in anderen Größen erstellen.</td>
+  </tr>
+  <tr>
+    <td>36, 37</td>
+    <td>SM_CXDOUBLECLK, SM_CYDOUBLECLK: Breite und Höhe des Rechtecks rund um die Position des ersten Klicks in einer Doppelklick-Sequenz (in Pixel). Der zweite Klick muss innerhalb dieses Rechtecks erfolgen, damit das System beide Klicks als Doppelklick erkennt. Außerdem müssen die beiden Klicks innerhalb einer bestimmten Zeitspanne erfolgen.</td>
+  </tr>
+  <tr>
+    <td>68, 69</td>
+    <td>SM_CXDRAG, SM_CYDRAG: Breite und Höhe des Rechtecks, zentriert auf einen Ziehpunkt, um eine begrenzte Bewegung des Mauszeigers zu ermöglichen, bevor ein Ziehvorgang startet. Diese Werte sind in Pixel. Dies ermöglicht dem Benutzer, die Maustaste zu drücken und loszulassen, ohne versehentlich einen Ziehvorgang zu starten.</td>
+  </tr>
+  <tr>
+    <td>45, 46</td>
+    <td>SM_CXEDGE, SM_CYEDGE: Dimensionen eines 3D-Rahmens (in Pixel). Dies sind die 3D-Äquivalente von SM_CXBORDER und SM_CYBORDER.</td>
+  </tr>
+  <tr>
+    <td>7, 8</td>
+    <td>SM_CXFIXEDFRAME, SM_CYFIXEDFRAME (synonym mit SM_CXDLGFRAME, SM_CYDLGFRAME): Dicke des Rahmens um ein Fenster, das eine Titelleiste hat, aber dessen Größe nicht geändert werden kann (in Pixel). SM_CXFIXEDFRAME ist die Höhe des horizontalen Rands und SM_CYFIXEDFRAME die Breite des vertikalen Rands.</td>
+  </tr>
+  <tr>
+    <td>83, 84</td>
+    <td>SM_CXFOCUSBORDER, SM_CYFOCUSBORDER: Höhe des oberen/unteren Rands und Breite des linken/rechten Rands des Fokusrechtecks eines Steuerelements. <b>Windows 2000:</b> Der abgerufene Wert ist immer 0.</td>
+  </tr>
+  <tr>
+    <td>21, 3</td>
+    <td>SM_CXHSCROLL, SM_CYHSCROLL: Breite der Pfeil-Bitmap eines horizontalen Scrollbalkens (in Pixel) und Höhe eines horizontalen Scrollbalkens (in Pixel).</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>SM_CXHTHUMB: Breite des Schiebereglers eines horizontalen Scrollbalkens (in Pixel).</td>
+  </tr>
+  <tr>
+    <td>11, 12</td>
+    <td>SM_CXICON, SM_CYICON: Standardbreite und -höhe eines Symbols (in Pixel).</td>
+  </tr>
+  <tr>
+    <td>38, 39</td>
+    <td>SM_CXICONSPACING, SM_CYICONSPACING: Dimensionen einer Rasterzelle für Elemente innerhalb der Große-Symbole-Ansicht (in Pixel). Jedes Element wird beim Anordnen in einem Rechteck dieser Größe platziert. Diese Werte sind immer größer gleich SM_CXICON und SM_CYICON.</td>
+  </tr>
+  <tr>
+    <td>71, 72</td>
+    <td>SM_CXMENUCHECK, SM_CYMENUCHECK: Dimensionen der Standard-Häkchen-Bitmap in einem Menü (in Pixel).</td>
+  </tr>
+  <tr>
+    <td>54, 55</td>
+    <td>SM_CXMENUSIZE, SM_CYMENUSIZE: Dimensionen von Schaltflächen in einer Menüleiste, wie z.B. die Schließen-Schaltfläche eines untergeordneten Fensters in einem Multiple Document Interface (in Pixel).</td>
+  </tr>
+  <tr>
+    <td>47, 48</td>
+    <td>SM_CXMINSPACING, SM_CYMINSPACING: Dimensionen einer Rasterzelle für ein minimiertes Fenster (in Pixel). Jedes minimierte Fenster wird beim Anordnen in einem Rechteck dieser Größe platziert. Diese Werte sind immer größer gleich SM_CXMINIMIZED und SM_CYMINIMIZED.</td>
+  </tr>
+  <tr>
+    <td>30, 31</td>
+    <td>SM_CXSIZE, SM_CYSIZE: Breite und Höhe einer normalen Titelleistenschaltfläche (in Pixel).</td>
+  </tr>
+  <tr>
+    <td>32, 33</td>
+    <td>SM_CXSIZEFRAME, SM_CYSIZEFRAME: Dicke des Rahmens um ein Fenster, dessen Größe geändert werden kann (in Pixel). SM_CXSIZEFRAME ist die Breite des horizontalen Rands und SM_CYSIZEFRAME die Höhe des vertikalen Rands. Synonym mit SM_CXFRAME und SM_CYFRAME.</td>
+  </tr>
+  <tr>
+    <td>49, 50</td>
+    <td>SM_CXSMICON, SM_CYSMICON: Empfohlene Dimensionen für ein kleines Symbol (in Pixel). Kleine Symbole werden normalerweise in der Titelleiste und in der Kleine-Symbole-Ansicht angezeigt.</td>
+  </tr>
+  <tr>
+    <td>52, 53</td>
+    <td>SM_CXSMSIZE SM_CYSMSIZE: Dimensionen der kleinen Titelleistenschaltflächen (in Pixel).</td>
+  </tr>
+  <tr>
+    <td>2, 20</td>
+    <td>SM_CXVSCROLL, SM_CYVSCROLL: Breite eines vertikalen Scrollbalkens und Höhe der Pfeil-Bitmap eines vertikalen Scrollbalkens (in Pixel).</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>SM_CYCAPTION: Höhe einer Titelleiste (in Pixel).</td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td>SM_CYKANJIWINDOW: Höhe des Kanji-Fensters am unteren Rand des Bildschirms für Systeme mit Doppelbyte-Zeichensatz (in Pixel).</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>SM_CYMENU: Höhe einer einzeiligen Menüleiste (in Pixel).</td>
+  </tr>
+  <tr>
+    <td>51</td>
+    <td>SM_CYSMCAPTION: Höhe einer kleinen Titelleiste (in Pixel).</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>SM_CYVTHUMB: Höhe des Schiebereglers eines vertikalen Scrollbalkens (in Pixel).</td>
+  </tr>
+  <tr>
+    <td>42</td>
+    <td>SM_DBCSENABLED: Ungleich 0, wenn User32.dll Doppelbyte-Zeichensatz unterstützt, andernfalls 0.</td>
+  </tr>
+  <tr>
+    <td>22</td>
+    <td>SM_DEBUG: Ungleich 0, wenn die Debug-Version von User.exe installiert ist, andernfalls 0.</td>
+  </tr>
+  <tr>
+    <td>82</td>
+    <td><p>SM_IMMENABLED: Ungleich 0, wenn Input Method Manager-/Input Method Editor-Features aktiviert sind, andernfalls 0.</p>
+        <p>SM_IMMENABLED gibt an, ob das System bereit ist, einen Unicode-basierten IME auf eine Unicode-Anwendung anzuwenden. Um sicherzustellen, dass ein sprachabhängiger IME ordnungsgemäß funktioniert, überprüfen Sie SM_DBCSENABLED und die ANSI-Codepage des Systems. Andernfalls könnte es sein, dass die ANSI-zu-Unicode-Konvertierung nicht korrekt durchgeführt wurde oder dass einige Komponenten wie Schriften oder Registry-Einstellungen nicht vorhanden sind.</p></td>
+  </tr>
+  <tr>
+    <td>40</td>
+    <td>SM_MENUDROPALIGNMENT: Ungleich 0, wenn Dropdown-Menüs rechtsbündig mit dem zugehörigen Menüleistenpunkt ausgerichtet sind, andernfalls 0.</td>
+  </tr>
+  <tr>
+    <td>74</td>
+    <td>SM_MIDEASTENABLED: Ungleich 0, wenn im System die Sprachunterstützung für Hebräisch und Arabisch aktiviert ist, andernfalls 0.</td>
+  </tr>
+  <tr>
+    <td>41</td>
+    <td>SM_PENWINDOWS: Ungleich 0, wenn die Microsoft Windows for Pen Computing-Erweiterungen installiert sind, andernfalls 0.</td>
+  </tr>
+  <tr>
+    <td>44</td>
+    <td>SM_SECURE: Ungleich 0, wenn Sicherheitsfunktionen eingeschaltet sind, andernfalls 0.</td>
+  </tr>
+  <tr>
+    <td>81</td>
+    <td>SM_SAMEDISPLAYFORMAT: Ungleich 0, wenn alle anzeigefähigen Bildschirme das gleiche Farbformat haben, andernfalls 0. Beachten Sie, dass zwei Bildschirme mit gleicher Farbtiefe unterschiedliche Farbformate haben können. Zum Beispiel ist es möglich, dass die roten, grünen und blauen Pixel mit einer unterschiedlichen Anzahl von Bits kodiert sind oder dass solche Bits an verschiedenen Stellen im Farbwert eines Pixels liegen.</td>
+  </tr>
+</table>
+<h2 id="Remarks">Bemerkungen</h2>
+<p>SysGet ruft die Funktion <a href="https://learn.microsoft.com/windows/win32/api/winuser/nf-winuser-getsystemmetrics">GetSystemMetrics</a> auf, die eventuell mehr Systemeigenschaften unterstützt als hier dokumentiert.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="DllCall.htm">DllCall</a>, <a href="Win.htm">Win-Funktionen</a>, <a href="Monitor.htm">Monitor-Funktionen</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Ruft die Anzahl der Maustasten ab und speichert den Wert in <var>MaustastenAnzahl</var>.</p>
+<pre>MaustastenAnzahl := SysGet(43)</pre>
+</div>
+
+<div class="ex" id="ExVirtScreenWH">
+<p><a class="ex_number" href="#ExVirtScreenWH"></a> Ruft die Breite und Höhe des virtuellen Bildschirms ab und speichert die Werte in <var>BildschirmVirtuelleBreite</var> und <var>BildschirmVirtuelleHöhe</var>.</p>
+<pre>BildschirmVirtuelleBreite := SysGet(78)
+BildschirmVirtuelleHöhe := SysGet(79)</pre>
+</div>
+
+</body>
+</html>

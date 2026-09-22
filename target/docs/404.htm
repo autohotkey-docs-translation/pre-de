@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<!-- This page serves as support for the real 404 handling. For example, GitHub Pages only allows the 404 page in the root of the website. The root's 404 page could then redirect to the docs' 404 page if the URL points to a missing document. See https://github.com/ahkde/ahkde.github.io/blob/master/404.html for what that might look like. -->
+<html lang="de">
+
+<head>
+  <title>404 | AutoHotkey v2</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="ahk:build-search-skip" content="true" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="static/theme.css" rel="stylesheet" />
+  <link href="static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+  <script src="static/content.js" id="content_js"></script>
+<script src="static/ga4.js"></script>
+</head>
+
+<body><script>site.init();</script>
+<script>
+  (function () {
+    if (!site.inFrame) return;
+    const title = document.title;
+    const urlFull = location.origin + getUrlParam('url');
+    const urlRelative = getUrlRelative(urlFull, site.urlBase);
+    host.postMessage('update', title, urlFull, urlRelative, null, null);
+  })();
+</script>
+<h1 style="border: none; font-size: 300%; font-weight: normal;">404 - Datei nicht gefunden</h1>
+<p>Das gesuchte Dokument scheint nicht zu existieren.</p>
+</body>
+
+</html>

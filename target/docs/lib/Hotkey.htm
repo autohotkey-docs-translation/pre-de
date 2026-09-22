@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Hotkey - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die Hotkey-Funktion erstellt, modifiziert, aktiviert oder deaktiviert einen Hotkey, während das Skript läuft." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>Hotkey</h1>
+
+<p>Erstellt, modifiziert, aktiviert oder deaktiviert einen Hotkey, während das Skript läuft.</p>
+<pre class="Syntax">
+<span class="func">Hotkey</span> TasteName <span class="optional">, Aktion, Optionen</span>
+</pre>
+
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>TasteName</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Name der Taste zum Aktivieren des Hotkeys, optional mit <a href="../Hotkeys.htm#Symbols">Modifikatorsymbolen</a>. Zum Beispiel wäre <code>"#c"</code> der Hotkey <kbd>Win</kbd>+<kbd>C</kbd>.</p>
+    <p>Wenn <em>TasteName</em> bereits als Hotkey existiert – entweder via Hotkey-Funktion oder <a href="../Hotkeys.htm">Zweifach-Doppelpunkt-Label</a> – wird dieser Hotkey mit den anderen Parameterwerten der Funktion aktualisiert.</p>
+    <p>Wenn der angegebene Hotkey bereits <em>existiert</em>, ist <em>TasteName</em> nicht Groß-/Kleinschreibung-sensitiv. Die Namen der Tasten müssen jedoch genauso geschrieben werden wie die des existierenden Hotkeys (z.B. ist Esc in diesem Fall nicht dasselbe wie Escape). Die Reihenfolge von <a href="../Hotkeys.htm#Symbols">Modifikatorsymbolen</a> wie z.B. <code class="no-highlight">^!+#</code> spielt keine Rolle. Mit <a href="GetKeyName.htm">GetKeyName</a> kann die Standardschreibweise eines Tastennamens abgerufen werden.</p>
+    <p>Jeder neu erstellte Hotkey – entweder via Hotkey-Funktion oder <a href="../Hotkeys.htm">Zweifach-Doppelpunkt-Syntax</a> – erhält einen festen Namen, der sich aus dem Tastennamen und der Reihenfolge der Modifikatorsymbolen zusammensetzt, widergespiegelt durch <a href="../Hotkeys.htm#ThisHotkey">ThisHotkey</a>. Dieser Name wird von allen <a href="_HotIf.htm#variant">Varianten</a> des Hotkeys verwendet, und ändert sich auch dann nicht, wenn die Hotkey-Funktion später mit einer anderen Symbolreihenfolge auf den Hotkey zugreift.</p>
+    <p>Wenn die Hotkey-Variante bereits existiert, wird ihr Verhalten gemäß der Tatsache aktualisiert, ob <em>TasteName</em> das <a href="../Hotkeys.htm#Tilde">Tilde-Präfix (~)</a> enthält oder nicht.</p>
+    <p>Das <a href="../Hotkeys.htm#prefixdollar">Hook-Präfix ($)</a> kann auf existierende Hotkeys angewendet werden. Dieses Präfix beeinflusst alle Varianten des Hotkeys und kann nicht entfernt werden.</p>
+  </dd>
+
+  <dt>Aktion</dt>
+  <dd>
+      <p>Typ: <a href="../misc/Functor.htm">Funktionsobjekt</a> oder <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+      <p>Wenn weggelassen und <em>TasteName</em> bereits als Hotkey existiert, bleibt seine Aktion unverändert. Dies ist z.B. nützlich, um nur die <em>Optionen</em> des Hotkeys zu ändern. Andernfalls geben Sie eine Rückruffunktion, den Namen eines <a href="../Hotkeys.htm">Hotkeys</a> ohne führende Doppelpunkte oder einen der unten aufgeführten Sonderwerte an.</p>
+      <hr>
+      <p>Geben Sie eine Funktion an, die beim Drücken des Hotkeys aufgerufen werden soll (als neuer <a href="../misc/Threads.htm">Thread</a>).</p>
+      <p>Die Rückruffunktion akzeptiert einen Parameter und kann wie folgt <a href="../Functions.htm#intro">definiert</a> werden:</p>
+      <pre class="NoIndent">MeinRückruf(HotkeyName) { ...</pre>
+      <p>Es spielt keine Rolle, welchen Namen Sie dem Parameter geben, allerdings wird ihm als Wert der <a href="../Hotkeys.htm#ThisHotkey">Hotkey-Name</a> zugewiesen.</p>
+      <p>Der Parameter der Rückruffunktion kann weggelassen werden, wenn die entsprechende Information nicht benötigt wird, aber dann muss ein Sternchen angegeben werden, z.B. <code>MeinRückruf(*)</code>.</p>
+      <p>Hotkeys, die mit der <a href="../Hotkeys.htm">Zweifach-Doppelpunkt-Syntax</a> definiert wurden, verwenden automatisch den Parameternamen <code>ThisHotkey</code>. Es ist auch möglich, Hotkeys <a href="../Hotkeys.htm#Function">einen Funktionsnamen zuzuweisen</a>, ohne die Hotkey-Funktion zu verwenden.</p>
+      <p class="note"><strong>Hinweis:</strong> Wenn eine Rückruffunktion angegeben ist, aber der Hotkey durch eine frühere Verwendung der Hotkey-Funktion deaktiviert wurde, bleibt der Hotkey deaktiviert. Um das zu verhindern, fügen Sie das Wort ON in <em>Optionen</em> ein.</p>
+      <hr>
+      <p>Geben Sie den Namen eines Hotkeys an, um seine originale Funktion zu verwenden, also die originale Funktion der Hotkey-Variante gemäß den aktuellen Kriterien von <a href="HotIf.htm">HotIf</a>. Dies wird in der Regel verwendet, um die originale Funktion eines Hotkeys wiederherzustellen, nachdem er geändert wurde, kann aber auch verwendet werden, um die Funktion eines anderen Hotkeys zuzuweisen, vorausgesetzt, dass beide Hotkeys die gleichen HotIf-Kriterien verwenden.</p>
+      <hr>
+      <p>Geben Sie einen der folgenden Sonderwerte an:</p>
+      <p><strong>On:</strong> Aktiviert den Hotkey. Wirkungslos, wenn der Hotkey bereits On ist.</p>
+      <p><strong>Off:</strong> Deaktiviert den Hotkey. Wirkungslos, wenn der Hotkey bereits Off ist.</p>
+      <p><strong>Toggle:</strong> Schaltet den Hotkey auf den entgegengesetzten Zustand (aktiviert oder deaktiviert).</p>
+      <p><strong>AltTab</strong> (und andere): Es gibt spezielle Alt-Tab-Hotkey-Aktionen, die <a href="../Hotkeys.htm#alttab">hier</a> beschrieben sind.</p>
+      </dd>
+
+  <dt id="Options">Optionen</dt>
+  <dd>
+      <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+      <p>Eine Zeichenkette, die aus beliebig vielen der folgenden Optionen besteht, optional durch Leerzeichen getrennt. Zum Beispiel: <code>"On B0"</code>.</p>
+      <p><strong>On:</strong> Aktiviert den Hotkey, wenn er aktuell deaktiviert ist.</p>
+      <p><strong>Off:</strong> Deaktiviert den Hotkey, wenn er aktuell aktiviert ist. Dies wird in der Regel verwendet, um einen Hotkey vorerst im deaktivierten Zustand zu erstellen.</p>
+      <p><strong>B</strong> oder <strong>B0</strong>: Geben Sie den Buchstaben B an, um den Hotkey zu puffern, wie in <a href="_MaxThreadsBuffer.htm">#MaxThreadBuffer</a> beschrieben. Geben Sie <code class="no-highlight">B0</code> (B mit der Zahl 0) an, um diese Art der Pufferung zu deaktivieren.</p>
+      <p><strong>P</strong><em>n</em>: Geben Sie den Buchstaben P an, gefolgt von der <a href="../misc/Threads.htm">Thread-Priorität</a> des Hotkeys. Wenn die P-Option beim Erstellen eines Hotkeys weggelassen wird, wird standardmäßig 0 verwendet.</p>
+      <p id="SuspendExempt"><strong>S</strong> oder <strong>S0</strong>: Geben Sie den Buchstaben S an, um den Hotkey vor einer <a href="Suspend.htm">Suspension</a> zu <a href="_SuspendExempt.htm">schützen</a>, so dass der Hotkey zum Ausschalten von Suspend verwendet werden kann. Geben Sie S0 (S mit der Zahl 0) an, um den Schutz zu entfernen, so dass der Hotkey wieder suspendiert werden kann.</p>
+      <p><strong>T</strong><em>n</em>: Geben Sie den Buchstaben T an, gefolgt von der Anzahl der Threads, die dieser Hotkey maximal haben darf, wie in <a href="_MaxThreadsPerHotkey.htm">#MaxThreadsPerHotkey</a> beschrieben. Zum Beispiel: <code class="no-highlight">T5</code>.</p>
+      <p><strong>I</strong><em>n</em> (InputLevel): Geben Sie den Buchstaben I (oder i) an, gefolgt vom <a href="_InputLevel.htm">Inputlevel</a> des Hotkeys. Zum Beispiel: <code class="no-highlight">I1</code>.</p>
+      <p>Wenn einer der Optionsbuchstaben weggelassen wird und der Hotkey bereits existiert, bleibt diese Option unverändert. Sollte der Hotkey aber noch nicht existieren (also wenn er kurz davor ist, von dieser Funktion erstellt zu werden), gelten als Optionen standardmäßig solche, die gerade eben aktiv sind. Zum Beispiel wird nur die Instanz von <a href="_MaxThreadsBuffer.htm">#MaxThreadsBuffer</a> verwendet, die dem Ende des Skripts am nächsten ist. Wenn die <a href="_MaxThreadsBuffer.htm">#MaxThreadsBuffer</a>-Direktive im Skript nicht vorkommt, wird ihre Standardeinstellung (in diesem Fall OFF) verwendet.</p>
+      </dd>
+
+</dl>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Es wird eine Ausnahme ausgelöst, wenn ein Parameter ungültig ist oder eine Speicherreservierung fehlschlägt.</p>
+<p>Eine der folgenden Ausnahmen wird ausgelöst, wenn der Hotkey ungültig ist oder nicht erstellt werden konnte:</p>
+<table class="info">
+  <tr>
+    <th abbr="Klasse">Error-Klasse</th>
+    <th>.Message</th>
+    <th style="width: 50%;" abbr="Beschr">Beschreibung</th>
+  </tr>
+  <tr>
+    <td rowspan="4"><a href="Error.htm#ValueError">ValueError</a></td>
+    <td>Invalid key name.</td>
+    <td>Der <em>TasteName</em>-Parameter enthält eine oder mehrere Tasten, die entweder nicht erkannt oder von der aktuellen Tastaturbelegung/Sprache nicht unterstützt werden. <a href="Error.htm#Extra">Exception.Extra</a> enthält den Namen der betroffenen Taste, z.B. "Entre" im Fall von <code class="no-highlight">!Entre</code>.</td>
+  </tr>
+  <tr>
+    <td>Unsupported prefix key.</td>
+    <td>Zum Beispiel wird die Verwendung des Mausrads als Präfix in einem Hotkey wie <code class="no-highlight">WheelDown &amp; Enter</code> nicht unterstützt. <a href="Error.htm#Extra">Exception.Extra</a> enthält die Präfixtaste.</td>
+  </tr>
+  <tr>
+    <td>This AltTab hotkey must have exactly one modifier/prefix.</td>
+    <td rowspan="2">Der <em>TasteName</em>-Parameter ist nicht für die Verwendung mit <a href="../Hotkeys.htm#alttab">AltTab oder ShiftAltTab</a> geeignet. Es ist eine Kombination aus (maximal) zwei Tasten erforderlich. Zum Beispiel: <code>RControl &amp; RShift::AltTab</code>. <a href="Error.htm#Extra">Exception.Extra</a> enthält <em>TasteName</em>.</td>
+  </tr>
+  <tr>
+    <td>This AltTab hotkey must specify which key (L or R).</td>
+  </tr>
+  <tr>
+    <td rowspan="2"><a href="Error.htm#TargetError">TargetError</a></td>
+    <td>Nonexistent hotkey.</td>
+    <td>Nicht-existierender Hotkey. Die Funktion versucht, einen nicht-existierenden Hotkey zu ändern. <a href="Error.htm#Extra">Exception.Extra</a> enthält <em>TasteName</em>.</td>
+  </tr>
+  <tr>
+    <td>Nonexistent hotkey variant (IfWin).</td>
+    <td>Nicht-existierende Hotkey-Variante (IfWin). Die Funktion versucht, eine nicht-existierende <a href="#variant">Variante</a> eines existierenden Hotkeys zu ändern. Um dieses Problem zu lösen, verwenden Sie <a href="HotIf.htm">HotIf</a>, um die Kriterien mit denen des zu ändernden Hotkeys abzustimmen. <a href="Error.htm#Extra">Exception.Extra</a> enthält <em>TasteName</em>.</td>
+  </tr>
+  <tr>
+    <td><a href="Error.htm">Error</a></td>
+    <td>Max hotkeys.</td>
+    <td>Maximum Hotkeys. Die Erstellung dieses Hotkeys würde die maximale Anzahl von 32762 Hotkeys pro Skript überschreiten (allerdings kann jeder Hotkey unendlich viele <a href="#variant">Varianten</a> haben; und die Anzahl der <a href="../Hotstrings.htm">Hotstrings</a> ist unbegrenzt).</td>
+  </tr>
+</table>
+<p>Tipp: Mit <a href="Try.htm">Try</a>-<a href="Catch.htm">Catch</a> kann geprüft werden, ob eine Hotkey-Variante existiert. Zum Beispiel:</p>
+<pre>
+try
+    Hotkey "^!p"
+catch TargetError
+    MsgBox "Der Hotkey existiert nicht oder hat keine Variante mit den aktuellen HotIf-Kriterien."
+</pre>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Die <a href="HotIf.htm">aktuelle HotIf-Einstellung</a> bestimmt die <a href="#variant">Variante</a> eines Hotkeys, mit der die Hotkey-Funktion arbeiten wird.</p>
+<p>Wenn das Ziel darin besteht, bestimmte Hotkeys abhängig vom Typ des aktiven Fensters automatisch zu deaktivieren, dann ist <code>Hotkey "^!c", "Off"</code> in der Regel weniger gut geeignet als die Verwendung von <a href="_HotIf.htm">#HotIf</a> mit <a href="WinActive.htm">WinActive</a>/<a href="WinExist.htm">WinExist</a> (oder die dynamischen Äquivalente <a href="HotIf.htm#IfWin">HotIfWinActive/Exist</a>).</p>
+<p>Die Erstellung von Hotkeys via <a href="../Hotkeys.htm">Zweifach-Doppelpunkt-Syntax</a> ist performanter als via Hotkey-Funktion, weil so die Hotkeys beim Start des Skripts gebündelt statt einzeln aktiviert werden können. Daher sollten mit dieser Funktion nur Hotkeys erstellt werden, deren Tastennamen erst nach dem Start des Skripts bekannt sind. Dies ist z.B. der Fall, wenn die Hotkeys eines Skripts über eine <a href="IniRead.htm">INI-Datei</a> konfigurierbar sind.</p>
+<p>Wenn das Skript <a href="Suspend.htm">suspendiert</a> ist und neue Hotkeys hinzugefügt oder aktiviert werden, werden diese ebenfalls suspendiert, bis die Suspension wieder aufgehoben wird (es sei denn, sie sind davor geschützt, wie im <a href="Suspend.htm">Suspend</a>-Abschnitt beschrieben).</p>
+<p>Die <a href="InstallKeybdHook.htm">Tastatur</a>- und/oder <a href="InstallMouseHook.htm">Maus</a>-Hooks werden bei dieser Funktion je nach Bedarf automatisch installiert oder entfernt.</p>
+<p>Obwohl die Hotkey-Funktion nicht in der Lage ist, Hotkeys anderer Skripte direkt zu aktivieren oder zu deaktivieren, kann sie diese durch Erstellen oder Aktivieren derselben Hotkeys <a href="../misc/Override.htm">überschreiben</a>. Ob das funktioniert, hängt von mehreren Faktoren ab: 1) Ob der Hotkey, der überschrieben werden soll, ein <a href="ListHotkeys.htm">Hook-Hotkey</a> im anderen Skript ist (hooklose Hotkeys können immer überschrieben werden); 2) Die Tatsache, dass die zuletzt gestarteten Hotkeys im Skript generell Vorrang vor den Hotkeys aus den anderen Skripten haben; 3) Ob der <a href="InstallKeybdHook.htm">Tastatur</a>- oder <a href="InstallMouseHook.htm">Maus</a>-Hook beim Aktivieren oder Erstellen des Hotkeys erneut aktiviert wird (in diesem Fall ist das Überschreiben immer erfolgreich).</p>
+<p>Sobald ein Skript mindestens einen Hotkey hat, wird es <a href="../Scripts.htm#persistent">persistent</a>; das heißt, dass <a href="ExitApp.htm">ExitApp</a> anstelle von <a href="Exit.htm">Exit</a> verwendet werden sollte, um dieses Skript zu terminieren.</p>
+
+<h2 id="variant">Hotkey-Varianten (-Duplikate)</h2>
+<p>Ein bestimmter Hotkey kann mehr als einmal erstellt werden, wenn für jede Definition ein anderes <a href="HotIf.htm">HotIf</a>-Kriterium angegeben wird. Diese werden als <em>Hotkey-Varianten</em> bezeichnet. Zum Beispiel:</p>
+<pre>HotIfWinActive "ahk_class Notepad"
+Hotkey "^!c", MeineFunkFürNotepad
+HotIfWinActive "ahk_class WordPadClass"
+Hotkey "^!c", MeineFunkFürWordPad
+HotIfWinActive
+Hotkey "^!c", MeineFunkFürAlleAnderenFenster</pre>
+<p>Wenn mehr als eine Variante eines Hotkeys zum Auslösen geeignet ist, wird nur die zuerst erstellte Variante ausgelöst. Die Ausnahme davon ist die globale Variante (die Variante ohne HotIf-Kriterium): Sie hat immer die niedrigste Priorität, also wird sie nur ausgelöst, wenn keine andere Variante zum Auslösen geeignet ist.</p>
+<p>Beim Erstellen von Hotkey-Duplikaten spielt die Reihenfolge von <a href="../Hotkeys.htm#Symbols">Modifikatorsymbolen</a> wie z.B. <code class="no-highlight">^!+#</code> keine Rolle. Zum Beispiel ist <code>"^!c"</code> dasselbe wie <code>"!^c"</code>. Die Tasten müssen jedoch einheitlich geschrieben sein. Zum Beispiel ist <em>Esc</em> in diesem Fall nicht dasselbe wie <em>Escape</em> (Groß-/Kleinschreibung ist jedoch egal). Außerdem werden Hotkeys mit einem <a href="../Hotkeys.htm#wildcard">Platzhalter-Präfix (*)</a> und platzhalterlose Hotkeys getrennt behandelt, z.B. hätten <code>"*F1"</code> und <code>"F1"</code> jeweils ihre eigenen Varianten.</p>
+<p>Weitere Informationen finden Sie unter <a href="HotIf.htm">HotIf</a> und <a href="_HotIf.htm#general-remarks">Allgemeine Bemerkungen von #HotIf</a>.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="../Hotkeys.htm">Hotkeys</a>, <a href="HotIf.htm">HotIf</a>, <a href="../Variables.htm#ThisHotkey">A_ThisHotkey</a>, <a href="_MaxThreadsBuffer.htm">#MaxThreadsBuffer</a>, <a href="_MaxThreadsPerHotkey.htm">#MaxThreadsPerHotkey</a>, <a href="Suspend.htm">Suspend</a>, <a href="../misc/Threads.htm">Threads</a>, <a href="Thread.htm">Thread</a>, <a href="Critical.htm">Critical</a>, <a href="Return.htm">Return</a>, <a href="Menu.htm">Menu-Objekt</a>, <a href="SetTimer.htm">SetTimer</a>, <a href="Hotstring.htm">Hotstring-Funktion</a></p>
+
+<h2 id="examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Erstellt einen STRG+ALT+Z-Hotkey.</p>
+<pre>Hotkey "^!z", MeineFunk
+
+MeineFunk(ThisHotkey)
+{
+    MsgBox "Sie haben " ThisHotkey " gedrückt."
+}</pre>
+</div>
+
+<div class="ex" id="ExAltTab">
+<p><a class="ex_number" href="#ExAltTab"></a> Veranlasst RCtrl &amp; RShift, sich wie Alt-Tab zu verhalten.</p>
+<pre>Hotkey "RCtrl &amp; RShift", "AltTab"</pre>
+</div>
+
+
+<div class="ex" id="ExOff">
+<p><a class="ex_number" href="#ExOff"></a> Deaktiviert den UMSCHALT+WIN+C-Hotkey.</p>
+<pre>Hotkey "$+#c", "Off"</pre>
+</div>
+
+<div class="ex" id="ExT">
+<p><a class="ex_number" href="#ExT"></a> Erlaubt 5 Threads für einen Hotkey.</p>
+<pre>Hotkey "^!a",, "T5"</pre>
+</div>
+
+<div class="ex" id="ExIfWin">
+<p><a class="ex_number" href="#ExIfWin"></a> Erstellt <kbd>Alt</kbd>+<kbd>W</kbd> als Hotkey, der nur in Notepad funktioniert.</p>
+<pre>HotIfWinActive "ahk_class Notepad"
+Hotkey "!w", ZeilenumbruchUmschalten  <em>; !w = Alt+W</em>
+
+ZeilenumbruchUmschalten(ThisHotkey)
+{
+    MenuSelect "A",, "Format", "Zeilenumbruch"
+}
+</pre>
+</div>
+
+<div class="ex" id="ExampleIfFn">
+<p><a class="ex_number" href="#ExampleIfFn"></a> Erstellt eine GUI, mit der primitive Drei-Tasten-Kombinations-Hotkeys registriert werden können.</p>
+<pre>
+HkGui := Gui()
+HkGui.Add("Text", "xm", "Präfixtaste:")
+HkGui.Add("Edit", "yp x100 w100 vPräfix", "Space")
+HkGui.Add("Text", "xm", "Suffix-Hotkey:")
+HkGui.Add("Edit", "yp x100 w100 vSuffix", "f &amp; j")
+HkGui.Add("Button", "Default", "Registrieren").OnEvent("Click", HotkeyRegistrieren)
+HkGui.OnEvent("Close", (*) =&gt; ExitApp())
+HkGui.OnEvent("Escape", (*) =&gt; ExitApp())
+HkGui.Show()
+
+HotkeyRegistrieren(*)
+{
+    Gespeichert := HkGui.Submit(false)
+    HotIf (*) =&gt; GetKeyState(Gespeichert.Präfix)
+    Hotkey Gespeichert.Suffix, (ThisHotkey) =&gt; MsgBox(ThisHotkey)
+}</pre>
+</div>
+
+</body>
+</html>

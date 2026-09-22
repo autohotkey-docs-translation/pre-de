@@ -1,0 +1,825 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Änderungen und neue Features | AutoHotkey v2</title>
+<meta name="description" content="Änderungen und neue Features, eingeführt durch den aktuellen Entwicklungszweig von AutoHotkey." />
+<meta name="ahk:equiv-v1" content="AHKL_ChangeLog.htm" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="static/theme.css" rel="stylesheet" />
+<link href="static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="static/content.js" id="content_js"></script>
+<script src="static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+<h1>Änderungen und neue Features</h1>
+<p>Nachfolgend ein Überblick über die Änderungen zwischen Haupt- und Nebenversionen:</p>
+<ul>
+  <li><a href="v2-changes.htm">Änderungen von v1.1 bis v2.0</a></li>
+  <li><a href="v2.1-changes.htm">Änderungen von v2.0 bis v2.1</a></li>
+</ul>
+<p>Alle technischen Einzelheiten zu den Änderungen finden Sie auf <a href="https://github.com/AutoHotkey/AutoHotkey">GitHub</a>.</p>
+
+<h2 id="v2.1-alpha.32">2.1-alpha.32 - 12. September 2026</h2>
+<p>Hinzugefügt: <a href="lib/Gui.htm#FontHandle">FontHandle-Eigenschaft (Gui)</a>.</p>
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Behoben: Kein Absturz mehr, wenn Until am Ende eines Moduls verwendet wird.</p>
+<p>Behoben: Einfache <code>a := b</code>-Zuweisungen, wobei b eine virtuelle Referenz ist.</p>
+
+<h2 id="v2.0.28">2.0.28 - September 12, 2026</h2>
+<p>Behoben: Gui.Move bewirkt nicht mehr, dass X oder Y DPI-skaliert werden.</p>
+
+<h2 id="v2.1-alpha.31">2.1-alpha.31 - 28. August 2026</h2>
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Geändert: Export für Namen, die innerhalb eines Moduls definiert sind, erfolgt nun implizit (aber importierte Namen werden standardmäßig weiterhin nicht exportiert).</p>
+<p>Behoben: #Import in #Module AHK.</p>
+<p>Behoben: Einige Ausgabeparameter wurden fälschlicherweise "ungesetzt gemacht", obwohl sie eigentlich "leer gemacht" werden sollten.</p>
+<p>Behoben: <code>Props(v)</code> behält nun den Wert von v bei, nicht Alias v.</p>
+<p>Behoben: Bei einem Multi-Level-Import wurde unset zu "" gemacht.</p>
+<p>Behoben: Folgezeichen in Fehlermeldung für unset return.</p>
+<p>Behoben: Kein Absturz mehr, wenn ein gekapselter Pointer mit einer verschachtelten Struktur zerstört wird.</p>
+<p>Behoben: GuiCtrl.OnMessage-Threads überschreiten nun nicht mehr das #MaxThreads-Limit.</p>
+<p>Behoben: Thread-Priorität &gt; 0 blockiert nun GuiCtrl.OnMessage-Threads.</p>
+
+<h2 id="v2.0.27">2.0.27 - 28. August 2026</h2>
+<p>Behoben: Haltepunkt auf einer Zeile, die <code>=&gt;</code> enthält und direkt einem Block untergeordnet ist.</p>
+<p>Behoben: <code>Send "{Click X Y Anzahl}"</code> bewegt sich nun nur einmal und nicht mehr <em>Anzahl</em>-mal.</p>
+<p>Behoben: IServiceProvider-Interface-Pointer-Leck in ComObjQuery.</p>
+<p>Behoben: Setter-Definition nach einem separaten Getter ist nun zulässig.</p>
+<p>Behoben: Der Item-Parameter des ContextMenu-Ereignisses, ausgelöst von der Kopfzeile einer ListView.</p>
+<p>Behoben: Klassendeklarationen erlauben nicht mehr, eine Klasse zur Unterklasse ihrer selbst zu machen.</p>
+
+<h2 id="v2.1-alpha.30">2.1-alpha.30 - 17. Mai 2026</h2>
+<p>Hinzugefügt: Rückgabetyp "void" für DllCall, ComCall und CallbackCreate.</p>
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Entfernt: <code>a?.()</code> und <code>a?.[]</code>; verwenden Sie stattdessen <code>(a?)()</code> und <code>(a?)[]</code>.</p>
+<p>Entfernt: Eigenschaftstypen-Zeichenketten (i32, u32 usw.).</p>
+<p>Entfernt: Typenlose typisierte Eigenschaften (Größenspezifikation ohne Klasse).</p>
+<p>Behoben: Klassenobjekte erlauben nun Base-Zuweisung. (fehlerhaft seit v2.1-alpha.28)</p>
+<p>Behoben: <code>String(x)</code> verursacht keinen Absturz mehr, wenn <code>x.ToString()</code> keinen Wert zurückgibt.</p>
+<p>Behoben: <code>x?.%y%</code> wird nun nicht mehr als Syntaxfehler interpretiert.</p>
+<p>Behoben: <code>StrGet(x, 0)</code> gab eine Zahl zurück. (fehlerhaft seit v2.1-alpha.28)</p>
+<p>Behoben: <code>StructKlasse.Ptr().__Value := unset</code> ist nun zulässig.</p>
+<p>Behoben: <code>Struct.Ptr()</code> verursacht keinen Absturz mehr (nur mit der Struct-Klasse selbst).</p>
+<p>Behoben: Zuweisungen virtueller Referenzen erlauben nun unset.</p>
+<p>Behoben: Fehler bei der Auswertung von DllCall-Ausgabeparametern führten zu einer fehlerhaften Weitergabe des Kontrollflusses.</p>
+<p>Behoben: Ausdrücke wie <code>!a ?? b</code> und <code>b + a ?? c</code> werden nun bereits beim Laden des Skripts abgefangen.</p>
+
+<h2 id="v2.1-alpha.29">2.1-alpha.29 - 10. Mai 2026</h2>
+<p>Geändert: Der Vielleicht-Operator (?) kann nun die meisten Operatoren kurzschließen.</p>
+<p>Geändert: Ausdrücke wie <code>X() =&gt; Y()</code> propagieren nun implizit eine <a href="v2.1-changes.htm#CompatMode"><em>Leer-Ungesetzt</em></a>-Rückgabe. Mit anderen Worten: Wenn Y ohne expliziten Rückgabewert oder ohne Unset-Ausdruck zurückkehrt, verhält sich X so, als hätte es dasselbe getan. Dies gilt nur für endständige Aufrufe von Funktionen und Methoden, nicht für Eigenschaften.</p>
+<p>Geändert: Die v2.1-Modus-Standardrückgabe, sobald irgendein <code>return Ausdruck</code> vorhanden ist.</p>
+<p>Geändert: Einige Funktionen/Eigenschaften geben im v2.1-Modus nun unset zurück.</p>
+<ul>
+  <li>Array().Delete()</li>
+  <li>Array().Pop()</li>
+  <li>Array().RemoveAt()</li>
+  <li>Object().DeleteProp()</li>
+  <li>Object().GetMethod()</li>
+  <li>Object().GetOwnPropDesc()</li>
+  <li>Gui().MenuBar</li>
+  <li>Gui().FocusedCtrl</li>
+  <li>Gui()[]</li>
+  <li>GuiFromHwnd</li>
+  <li>GuiCtrlFromHwnd</li>
+  <li>InputHook().On*</li>
+  <li>MenuFromHandle</li>
+  <li>ObjGetBase/Any.Prototype.Base</li>
+  <li>RegExMatch AusgabeVar (nichts gefunden)</li>
+</ul>
+
+<p><strong>Fehlerbehebungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Behoben: Map und Array lösen im v2.0-Modus keinen UnsetItemError mehr aus, wenn der Rückgabewert ungenutzt bleibt.</p>
+<p>Behoben: Struct.Array.Prototype erlaubt nun keine neuen typisierten Eigenschaften mehr.</p>
+<p>Behoben: ClassObj.Prototype.Base ist nun beschreibbar, wenn keine typisierten Eigenschaften.</p>
+
+<h2 id="v2.0.26">2.0.26 - 4. Mai 2026</h2>
+<p>Behoben: ControlGetItems/ControlGetChoice lösten bei Tab-Steuerelementen keine Ausnahme aus.</p>
+<p>Behoben: Fehlermeldung für ComObjArray().__Enum() korrigiert, falls dies jemals fehlschlagen sollte.</p>
+<p>Behoben: <code>TraySetIcon("HBITMAP:" Handle)</code> ohne *.</p>
+
+<h2 id="v2.1-alpha.28">2.1-alpha.28 - 26. April 2026</h2>
+<p>Geändert: #Requires setzt nun den <a href="lib/_Requires.htm#CompatMode">Kompatibilitätsmodus</a>. In dieser Version betrifft es nur die Standardrückgabewerte.</p>
+<p>Im v2.1-Modus geben benutzerdefinierte Funktionen und interne Funktionen ohne expliziten Rückgabewert nun <code>unset</code> statt <code>""</code> zurück.</p>
+
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Entfernt: #DefaultReturn.</p>
+<p>Geändert: StructKlasse.Prototype ist nun schreibgeschützt.</p>
+<p>Geändert: StructKlasse.At() erlaubt nun, dass StructKlasse keine Felder besitzt.</p>
+<p>Optimiert: Codegröße reduziert.</p>
+<p>Behoben: ObjSetDataPtr löst bei Erfolg keinen Fehler mehr aus.</p>
+<p>Behoben: StructKlasse.At() funktioniert nun korrekt, wenn StructKlasse eine verschachtelte Struktur enthält.</p>
+<p>Behoben: Klassen mit geerbten verschachtelten Strukturen.</p>
+<p>Behoben: <code>return unset</code> in einem OnMessage-Rückruf verhält sich nun wie <code>return ""</code>.</p>
+<p>Behoben: Map und Array lösen nun UnsetItemError statt UnsetError aus (wenn <code>?</code> und <code>??</code> nicht verwendet werden).</p>
+
+<h2 id="v2.0.25">2.0.25 - 26. April 2026</h2>
+<p>Behoben: ByRef-Alias einer globalen Variable wird in rekursiven Aufrufen nicht mehr "ungesetzt" gemacht.</p>
+<p>Behoben: Ein von Hotkey() ausgelöster Fehler übergab die Kontrolle nicht korrekt.</p>
+
+<h2 id="v2.1-alpha.27">2.1-alpha.27 - 19. April 2026</h2>
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Geändert: <code>a.Base := b</code> ist nun ungültig, wenn <code>a</code> oder <code>b</code> typisierte Eigenschaften besitzt.</p>
+<p>Die Konstruktion von Objekten mit typisierten Eigenschaften weiter überarbeitet, was den Speicherverbrauch senkt und die Performanz potenziell steigert.</p>
+<p>Behoben: Instanziierung, wo .Prototype kein Prototypobjekt ist.</p>
+<p>Behoben: Die Ptr-Klasse wird nun gelöscht, wenn die Zielstruktur keine Felder hat.</p>
+
+<h2 id="v2.0.24">2.0.24 - 19. April 2026</h2>
+<p>Behoben: Navigation per Tabulatortaste in einer Gui mit verschachtelter Gui (+Parent).</p>
+<strong>UX/Dash</strong>
+<p>Hinzugefügt: Eine <a href="Program.htm#update">optionale Überprüfung, ob AutoHotkey-Updates verfügbar sind</a>; standardmäßig deaktiviert. [basiert auf UX PR #11 von kczx3]</p>
+<p>Behoben: Fehlermeldungen beim Verwenden der Pfeiltasten im "Help Files"-Menü. [UX PR #24 von iPhilip]</p>
+<p>Behoben: install-version.ahk löscht nun das temporäre ".staging"-Verzeichnis nach einer Upgrade-Installation.</p>
+<p>Behoben: Das "Help Files"-Menü erscheint nun auf der Schaltfläche, nicht mehr beim Mauszeiger.</p>
+<p>Geändert: "New script" fügt die Datei nun zu den zuletzt geöffneten Dateien hinzu.</p>
+
+<h2 id="v2.1-alpha.26">2.1-alpha.26 - 12. April 2026</h2>
+<p>Geändert: Die Meldungsverarbeitung wurde angepasst, sodass Tastaturkurzbefehle (nicht Hotkeys) auch dann funktionieren, wenn ein modales Dialogfenster angezeigt wird. Dies betrifft sowohl die Tastaturkurzbefehle im Hauptfenster des Skripts als auch bestimmte Tastatureingaben in GUI- und Dialogfenstern (wenn mehrere angezeigt werden).</p>
+<p>Geändert: Die Verarbeitung bestimmter interner Meldungen bezüglich Dialogfenstern wurde angepasst.</p>
+<p>Geändert: #SingleInstance und Reload posten nun WM_CLOSE (statt einer undokumentierten Meldung), um die alte Instanz zu schließen.</p>
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Geändert: Definitionen typisierter Eigenschaften können nicht länger von einem Objekt besessen werden, das kein Prototypobjekt ist.</p>
+<p>Geändert: <code>DllCall(F, S, unset)</code> übergibt nun <code>S()</code> selbst, wenn es keinen __Value-Setter hat.</p>
+<p>Teile des Codes zur Objektkonstruktion wurden überarbeitet, was die Codegröße reduziert und die Performanz in einigen Fällen potenziell verbessert.</p>
+<p>Der Speicher für typisierte Eigenschaften wird nun zusammen mit dem Hauptobjekt reserviert, was den Speicher-Overhead reduziert und die Reservierung und Freigabe von Speicher beschleunigt.</p>
+<p>Behoben: Das Startmenü erscheint nun korrekt, wenn die Startschaltfläche angeklickt wird, während ein Skript, das mit Adminrechten oder UI-Access läuft, ein Menü anzeigt.</p>
+<p>Behoben: StructKlasse.Ptr versiegelt die StructKlasse-Struktur beim Auswerten nicht mehr.</p>
+<p>Behoben: Struktur-Rückgabetypen für typisierte Rückrufe.</p>
+<p>Behoben: Ausrichtung von Arrays innerhalb einer Struktur.</p>
+<p>Behoben: Einige Referenzzählungsfehler in CallbackCreate. [PR #356]</p>
+<p>Behoben: IsSet erlaubt nun Ausdrücke, die mit einem Fragezeichen enden.</p>
+
+<h2 id="v2.1-alpha.25">2.1-alpha.25 - 5. April 2026</h2>
+<p>Hinzugefügt: <a href="misc/WinTitle.htm#ahk_opt">ahk_opt</a> für FensterTitel-Parameter (überschreibt Standardeinstellungen).</p>
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Behoben: Die __Value-Definition jeder einzelnen Ptr-Klasse wurde in Struct.Ptr verschoben, was den Speicherverbrauch korrigiert.</p>
+<p>Behoben: <code>WinExist("", "Text")</code> ruft nicht mehr den Titel von jedem Fenster ab.</p>
+<p>Behoben: Einige Fehlermeldungen verwiesen nicht auf die Zeile, die den Fehler auslöste.</p>
+<p>Behoben: DllCall lehnt nun Arrayklassen als Rückgabetyp ab, anstatt einen Absturz zu verursachen.</p>
+<p>Behoben: <code>global g</code> innerhalb einer Funktion steht nicht mehr im Konflikt mit einem vorherigen <code>export global g</code>.</p>
+<p>Behoben: Kein Absturz mehr, wenn ein unset global via Modulobjekt aufgerufen wird.
+</p>
+<p>Behoben: Eine Modulinitialisierung verändert nicht mehr die Zeilennummer, die von nachfolgenden Fehlern gemeldet wird.</p>
+<p>Behoben: <code>A.B</code>, wobei B via Platzhalter in Modul A importiert wurde.</p>
+<p>Behoben: <code>ModulA.B</code> initialisiert nun Klassen und importierte Module.</p>
+<p>Behoben: GUI-Steuerelement-Berechnungen verursachten in OS-Versionen älter als Windows 10 Version 1607 einen kritischen Fehler; z.B. <code>Gui().AddButton()</code> ohne W-Option.</p>
+
+<h2 id="v2.0.23">2.0.23 - 5. April 2026</h2>
+<p>Geändert: Taste-Oben-Ereignisse korrelieren nun anders mit Taste-Unten-Ereignissen zwecks Bestimmung einer eventuellen Unterdrückung von Taste-Oben-Ereignissen. Ein Taste-Unten-Ereignis mit einem Sendlevel zwischen 1 und 7 korreliert nun nur noch mit Taste-Oben-Ereignissen desselben Levels. Wenn <code>#InputLevel 1</code> aktiv ist, wird dadurch behoben, dass <code>Right::Send "{Right}"</code> das Taste-Oben-Ereignis nicht unterdrückt, <code>RShift::RAlt</code> mit <code>RAlt::RShift</code> interferiert und umgekehrt. Ereignisse mit einem Sendlevel von 8 oder höher werden aus praktischen Gründen weiterhin mit ungesendeten Ereignissen gruppiert.</p>
+<p>Behoben: <code>WinExist("A",,,"B")</code> schließt nun keine Fenster mehr aus, die keine Steuerelemente enthalten.</p>
+<p>Behoben: Benutzerdefinierte Kombinations-Hotkeys funktionieren nun korrekt mit neutralen Modifikatoren (z.B. <code>Alt &amp; Esc::</code>) [fehlerhaft seit v2.0.22].</p>
+<p>Behoben: Taste-Oben-Hotkeys werden nun konsistent ausgelöst, wenn die Taste sowohl als Präfix als auch als Suffix verwendet wird (z.B. <code>a &amp; b::</code>, <code>b &amp; a::</code> und <code>a up::</code>).</p>
+<p>Behoben: Timer unterbrachen eine MsgBox nach Beginn der Zeitüberschreitung, aber vor dem Anzeigen des Fensters, z.B. wenn <code>SetTimer(MsgBox, -10)</code> unmittelbar vor <code>MsgBox(1,,"T1")</code> verwendet wurde.</p>
+
+<h2 id="v2.1-alpha.24">2.1-alpha.24 - 29. März 2026</h2>
+<p>Implementiert: <code>#Import Export <i>ModulName</i> {*}</code>.</p>
+<p>Erweitert: CallbackCreate akzeptiert nun optional ein Array von Parametertypen.</p>
+<p>Hinzugefügt: Offset-Unterparameter für DefineProp, was Unions erlaubt.</p>
+<p>Geändert: <code>StructKlasse.Ptr</code> macht nun <code>StructKlasse.base.Ptr</code> statt <code>Struct.Ptr</code> zur Unterklasse.</p>
+<p>Geändert: GetOwnPropDesc gibt nun Klassen für numerische Typen zurück.</p>
+<p>Behoben: Undefiniertes Verhalten beim Übergeben einer Struct-Klasse ohne Felder an DllCall.</p>
+<p>Behoben: <code>StructKlasse[N].Ptr</code> (Pointer, die auf Array-Typen verweisen).</p>
+<p>Behoben: <code>#Import ":N"</code> importiert nicht mehr die falsche Datei, wenn es unter einem #Module in einer #Include-Datei verwendet wird.</p>
+<p>Behoben: Undefiniertes Verhalten, wenn eine verschachtelte Struktur die letzte Referenz zur äußeren Struktur freigibt.</p>
+<p>Behoben: Undefiniertes Verhalten, wenn Struct.Array-Klassen wiederholt referenziert werden.</p>
+<p>Behoben: Zirkelbezüge verhindern nicht mehr, dass Struct.Ptr/Array-Klassen gelöscht werden.</p>
+
+<h2 id="v2.1-alpha.23">2.1-alpha.23 - 22. März 2026</h2>
+<p>Hinzugefügt: Klassen für <a href="Structs.htm#numeric-types">numerische Typen</a>, die Struct erweitern.</p>
+<p>Hinzugefügt: Klassen für <a href="Structs.htm#arrays">strukturierte Arrays</a>, erstellt mit <code><i>StructKlasse</i>[N]</code>.</p>
+
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Behoben: <code>#Import "Pfad:__Init"</code> wird nun auch ohne #Module aufgelöst.</p>
+<p>Behoben: Explizites Importieren interner Objekte aus dem AHK-Modul.</p>
+<p>Behoben: Struct.Prototype.Size gibt nun die Strukturgröße zurück, nicht die reservierte Speichergröße.</p>
+<p>Behoben: #Import verbietet nun Schleifen, z.B. wenn eine Variable auf sich selbst verweist.</p>
+<p>Behoben: <code>struct</code>/<code>class</code>-Validierung der Basisklasse ist nun unabhängig von der Reihenfolge.</p>
+<p>Behoben: Klassendeklarationen erlauben nicht mehr, eine Klasse zur Unterklasse ihrer selbst zu machen.</p>
+
+<h2 id="v2.0.22">2.0.22 - 22. März 2026</h2>
+<p>Entfernt: Es wurde ein undokumentierter Effekt entfernt, den ein Hotkey mit dem &lt;/&gt;-Präfix auf die entsprechende Modifikatortaste hatte; z.B. bewirkte <code>&lt;^a::</code>, dass <code>LCtrl::</code> beim Loslassen ausgelöst wurde, was inkonsistent mit der <a href="KeyList.htm#modifier">Dokumentation</a> war. Immer durch Drücken ausgelöst zu werden, sorgt für mehr Konsistenz und Flexibilität. Die Modifikatortaste selbst wurde seit v2.0.20 unterdrückt. Neutrale Modifikatoren wie <code>Ctrl::</code> werden immer beim Loslassen ausgelöst, und ein ähnliches Verhalten lässt sich mit <a href="Variables.htm#PriorKey">A_PriorKey</a> und <code>~LCtrl up::</code> implementieren.</p>
+<p>Geändert: Fehlerdialogfenster verwenden nun msftedit.dll statt riched20.dll, um die folgenden Probleme zu beheben:</p>
+<ul>
+  <li>Das Fenster hängt sich auf, wenn es per UI-Automatisierung inspiziert wird.</li>
+  <li>Fehlerhafte Zeichen und uneinheitliche Schriftarten, wenn die Fehlermeldung bestimmte Zeichensätze enthält (z.B. Emojis, chinesisch oder arabisch).</li>
+</ul>
+<p>Behoben: Fehler wurden innerhalb von __Delete unterdrückt, wenn ein Try/Catch-Block aktiv ist.</p>
+<p>Behoben: CallbackCreate validiert nun ParamAnzahl.</p>
+<p>Behoben: Erkennung von <code>DllCall(... "str",&amp;var:={} ...)</code> als Fehler.</p>
+<p>Behoben: <code>CapsLock::</code> unterdrückt nun auch dann, wenn CapsLock als Präfixtaste verwendet wird.</p>
+<p>Behoben: Neutrale Strg/Alt/Umschalt-Hotkeys unterdrücken die Taste nicht mehr [fehlerhaft seit v2.0.20].</p>
+<p>Behoben: Das Auslösen-beim-Loslassen-Verhalten der neutralen Strg/Alt/Umschalt-Hotkeys funktioniert nun korrekt, wenn eine Taste-Oben-Variante eingeschaltet, aber durch #HotIf deaktiviert ist.</p>
+<p>Behoben: <code>CapsLock &amp; 1::</code> setzt den CapsLock-Status nun auch dann zurück, wenn eine andere Präfixtaste gedrückt wird, bevor CapsLock losgelassen wird.</p>
+<p>Behoben: L/R-Modifikator-Taste-Oben-Ereignisse wurden in einigen Fällen, wo Taste-Unten-Ereignisse unterdrückt wurden, nicht unterdrückt.</p>
+<p>Behoben: L/R-Modifikator-Taste-Oben-Ereignisse werden nun weitergereicht, wenn <code class="no-highlight">~</code> verwendet wird, auch wenn Taste-Unten-Ereignisse unterdrückt wurden.</p>
+<p>Behoben: L/R-Modifikator-Hotkeys werden nun beim Drücken ausgelöst, auch wenn der entsprechende neutrale Modifikator vorhanden ist; z.B. <code>LCtrl::</code> mit <code>Ctrl::</code>.</p>
+<p>Behoben: Fehlerhafte Verarbeitung anführungszeichenloser Fortsetzungsbereiche mit Leerraumzeichen am Ende.</p>
+<p>Behoben: Datei-Stream-Eingabe/Ausgabe schreibt nun zwischengespeicherte Daten in die Datei, wenn die Datei beim Beenden des Prozesses nicht geschlossen wurde.</p>
+<p>Behoben: <code class="no-highlight">`;</code> in Fortsetzungsbereichen mit den Optionen <code class="no-highlight">`</code> (Escapezeichen als direkt geschriebenen Text behandeln) und <code class="no-highlight">C</code> (Kommentare erlauben).</p>
+<p>Code im Keyboard-/Maus-Hook etwas aufgeräumt.</p>
+
+<h2 id="v2.1-alpha.22">2.1-alpha.22 - 15. März 2026</h2>
+<p>Geändert: Type gibt nun "unset" zurück, wenn der Parameter weggelassen/ungesetzt ist.</p>
+<p>Geändert: IsSet erlaubt nun einen Unset-Ausdruck ohne Zuweisung.</p>
+<p>Hinzugefügt: DefineProp-Funktion.</p>
+<p>Hinzugefügt: Struct-Schlüsselwort und -Klasse.</p>
+<p>Hinzugefügt: Automatische <em>struct</em>.Ptr-Klassen.</p>
+
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Geändert: DllCall, StructFromPtr und typisierte Eigenschaften erfordern nun eine Struct-Unterklasse.</p>
+<p>Geändert: <code>export a() =&gt; b</code> ist nun wieder eine Funktionsaufrufanweisung wie in v2.0.</p>
+<p>Entfernt: StructFromPtr.</p>
+<p>Entfernt: ObjGetDataPtr-Fallback für DllCall-Ptr-Parameter.</p>
+<p>Behoben: <code>IsSet(p)</code> gibt nun 0 zurück, wenn p eine ungesetzte virtuelle Referenz ist.</p>
+<p>Behoben: <code>#Import __Init</code> schlägt nicht mehr fehl, wenn keine Untermodule vorhanden sind.</p>
+<p>Behoben: Am Ende einer Datei, die #Module enthält, wurde das falsche Modul wiederholt geöffnet.</p>
+<p>Behoben: RegExMatch-Negationsoperator (<code>!~=</code>).</p>
+
+<h2 id="v2.1-alpha.21">2.1-alpha.21 - 8. März 2026</h2>
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Geändert: Der RegExMatch-Negationsoperator wurde von <code>~!=</code> zu <code>!~=</code> geändert.</p>
+<p>Import-Anweisung entfernt und einige kleinere Probleme beim #Import-Parsing behoben.</p>
+<p>Geändert: #Module-Namen sind nun lokal für jedes dateibasierte Modul.</p>
+<p>Geändert: #Module endet nun am Ende der Datei, die es direkt enthält.</p>
+<p>Geändert: #Module erfordert nun einen gültigen Identifikator.</p>
+<p>Geändert: <code>#Module __Init</code> öffnet nun wiederholt das initiale Modul eines Datei-Imports.</p>
+<p>Hinzugefügt: <code>#Import "<i>Datei</i>:<i>Mod</i>"</code> zum Importieren von <code>#Module <i>Mod</i></code> aus <i>Datei</i>.</p>
+<p>Geändert: Die Reihenfolge der Modulinitialisierung wird nun durch die erste Referenz überschrieben.</p>
+<p>Geändert: #Import erkennt nun auch undeklarierte globale Variablen.</p>
+<p>Hinzugefügt: Fehlererkennung für ein via #Include wiederholtes #Module.</p>
+<p>Hinzugefügt: Fehlererkennung für #Module direkt nach einem Doppelpunktpaar-Hotkey-Label.</p>
+<p>Behoben: #Import lädt Module nicht mehr doppelt.</p>
+<p>Behoben: #Import erkennt nun importierte Namen unabhängig von der Importreihenfolge.</p>
+
+<h2 id="v2.1-alpha.20">2.1-alpha.20 - 1. März 2026</h2>
+<p>Hinzugefügt: <code>a ~!= b</code>, äquivalent zu <code>!(a ~= b)</code>.</p>
+<p>Hinzugefügt: <a href="lib/_Import.htm">#Import</a> (siehe unten).</p>
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Geändert: Syntax für Import und Export ist nun rückwärtskompatibel zu v2.0:</p>
+<ul>
+  <li><code>Export X</code> und <code>Import X</code> sind wieder Funktionsaufrufanweisungen.</li>
+  <li><code>Export Global X</code> exportiert eine globale Variable (das Schlüsselwort Global wurde hinzugefügt).</li>
+  <li>Alle anderen Formen der Import-Anweisung sind vorerst weiterhin zulässig. Dies ist möglich, da <code>as</code>, <code>from</code> und <code>X {}</code> in einem Ausdruck nicht zulässig sind.</li>
+  <li><a href="lib/_Import.htm">#Import</a> wurde hinzugefügt, mit derselben Syntax wie Import, außer der Platzierung des optionalen Schlüsselworts Export.</li>
+</ul>
+<p>Geändert: <code>Import x {}</code> fügt x nun auch ohne <code>as x</code> dem globalen Namensraum hinzu. <code>Import "x" {}</code> und <code>Import {} from x</code> hingegen verhindern weiterhin, dass x dem globalen Namensraum hinzugefügt wird.</p>
+<p>Geändert: Import prüft nun das Verzeichnis der aktuellen Datei vor dem Suchpfad.</p>
+<p>Geändert: #Module erlaubt nun das wiederholte Öffnen von Modulen.</p>
+<p>Behoben: Undefiniertes Verhalten bei der Initialisierung des Modulsuchpfads.</p>
+<p>Behoben: #Module entfernt nun Anführungszeichen um seinen Parameter.</p>
+
+<h2 id="v2.1-alpha.19">2.1-alpha.19 - 13. Februar 2026</h2>
+<p>Hinzugefügt: #StructPack und Pack-Unterparameter für DefineProp.</p>
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Geändert: Import erlaubt nun das mehrfache Importieren desselben Elements.</p>
+<p>Geändert: Modulobjekte erlauben nun den Zugriff auf beliebige globale Variablen.</p>
+<p>Behoben: <code>return</code> verhindert nicht mehr die Ausführung weiterer Module.</p>
+<p>Behoben: StructFromPtr unterstützt nun das Zuweisen von Werten an verschachtelten Strukturen mit __Value.</p>
+<p>Behoben: Der oberste Untermenüpunkt ignoriert nicht mehr gelegentlich Klicks, wenn beim Anzeigen des Menüs eine GUI aktiv ist.</p>
+<p>Behoben: <code>#Include &lt;A_B&gt;</code> verursacht keinen Absturz mehr, wenn weder A_B.ahk noch A.ahk existieren.</p>
+<p>Behoben: Globale/statische Objekte werden bei Exit wieder freigegeben (dies war deaktiviert in v2.1-alpha.11).</p>
+
+<h2 id="v2.0.21">2.0.21 - 9. Februar 2026</h2>
+<p>Behoben: StrGet verursachte einen Absturz, wenn eine Adresse, aber keine Länge übergeben wurde. (fehlerhaft seit v2.0.20)</p>
+
+<h2 id="v2.0.20">2.0.20 - 8. Februar 2026</h2>
+<p>Behoben: Mögliches undefiniertes Verhalten in Meldungsrückrufen während der Skriptterminierung.</p>
+<p>Behoben: Run schloss das Prozesshandle nicht.</p>
+<p>Behoben: GuiFromHwnd verursachte einen Absturz, wenn dieser Funktion ein GUI-Fenster-HWND eines anderen Skripts übergeben wurde.</p>
+<p>Behoben: Führendes Leerzeichen in <code>For( a in b )</code> löste fälschlicherweise einen Fehler aus.</p>
+<p>Behoben: Enumerator-Aufrufe (For) behandelten ein implizit zurückgegebenes "" als true.</p>
+<p>Behoben: <code>A_maxHotkeysPerInterval</code> und <code>A_Hotkeyinterval</code> gaben falsche Werte zurück, wenn sie in Kleinbuchstaben geschrieben wurden.</p>
+<p>Behoben: FileSelect duplizierte das Filtermuster, wenn es kein <code>*.</code> enthält.</p>
+<p>Behoben: ListBox-Tabstopp-Abstände sind nun korrekt, wenn die T-Option während der Erstellung des Steuerelements verwendet wird. [<a href="https://github.com/AutoHotkey/AutoHotkey/pull/346">PR #346</a>]</p>
+<p>Behoben: <code>~RAlt &amp; &lt;::</code> führte dazu, dass <code>RAlt::</code> trotz <code>~</code> beim Loslassen ausgelöst wurde (und ebenso bei anderen L/R-Modifikatortasten).</p>
+<p>Behoben: Neubelegung mit nicht-existierender Originaltaste führte zu stillem Exit.</p>
+<p>Behoben: Taste-Oben-Hotkeys verursachten ein unerwünschtes Passthrough, wenn die Modifikatoren nicht übereinstimmten. Zum Beispiel wurde das Loslassen von RButton nach der Aktivierung von <code>RButton::</code> nicht unterdrückt, wenn <code>^RButton up::</code> ebenfalls vorhanden ist.</p>
+<p>Behoben: Das Semikolon in <code>/* ; */</code> verhinderte den Abschluss des Blockkommentars.</p>
+<p>Behoben: IsOptional- und IsByRef-Rückgabewerte für interne Methoden sind nun korrekt.</p>
+<p>Behoben: RegWrite-Parameter #1 ist nun ein Pflichtparameter.</p>
+<p>Behoben: Zeichenketten-Rückgabewerte wurden während des Debuggens korrumpiert.</p>
+<p>Behoben: Fehlerhafte <code>Else</code>-Platzierung verursacht beim Laden keinen Absturz mehr, sondern erzeugt eine Fehlermeldung.</p>
+<p>Behoben: StrPut/StrGet-Behandlung von 32-Bit-Integer-Limitierungen unter x64.</p>
+<ul>
+  <li>Operationen, die keine Umwandlung erfordern, limitieren nicht mehr die Zeichenkettenlänge.</li>
+  <li>Umwandlungen werden nun konsistenter geworfen, wenn das API-Limit überschritten wurde.</li>
+</ul>
+<p>Behoben: <code>1::</code> wird nicht mehr ausgelöst, wenn <code>1 &amp; LButton up::</code> verwendet wird, und ähnliches.</p>
+<p>Behoben: Kein Absturz mehr, wenn ListView die Sort-Option hat und Add mit weggelassener Spalte1 aufgerufen wird.</p>
+<p>Behoben: Statische Funktionen nutzten keine statischen Variablen von Großelternfunktionen.</p>
+<p>Behoben: Unpaarige Taste-Oben-Hotkeys unterdrückten die Taste nicht, wenn sie auch als Präfix verwendet wird, aber die benutzerdefinierten Kombinationen deaktiviert sind oder den Tilde-Modifikator haben.</p>
+<p>Behoben: L/R-Modifikator-Hotkeys unterdrücken nun, auch wenn der entsprechende neutrale Modifikator vorhanden ist; z.B. <code>LCtrl::</code> mit <code>Ctrl::</code>.</p>
+
+<h2 id="v2.1-alpha.18">2.1-alpha.18 - 29. März 2025</h2>
+<p>Behoben: MinParams berücksichtigt nun Pflichtparameter, die rechts von einem optionalen Parameter in ControlGetPos, ControlMove, ListViewGetContent und MenuSelect stehen. Anders ausgedrückt, MinParams gibt die minimale erforderliche Länge der Parameterliste, nicht bloß die Anzahl von Pflichtparametern vor dem ersten optionalen Parameter.</p>
+<p>Geändert: Benutzerdefinierte Funktionen erlauben nun optionale Parameter inmitten der Parameterliste.</p>
+<p>Geändert: ahk_class ist nun nicht-Groß-/Kleinschreibung-sensitiv.</p>
+<p>Optimiert: Die Suche nach Fenstern; Einzelheiten finden Sie unter <a href="misc/WinTitle.htm#Performance">FensterTitel - Performanz</a>.</p>
+<p>Optimiert: ProcessGetPath/WinGetProcessPath.</p>
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Geändert: #HotIf beeinflusst jetzt nur das aktuelle Modul.</p>
+<p>Props wurde von Object.Prototype nach Any.Prototype verschoben und eine Props-Funktion hinzugefügt.</p>
+
+<h2 id="v2.1-alpha.17">2.1-alpha.17 - 22. März 2025</h2>
+<p>Hinzugefügt: RTL-Option für <a href="lib/Menu.htm#Add">Menu.Prototype.Add</a>.</p>
+
+<p><strong>Änderungen bei der Modulunterstützung:</strong></p>
+<p>Modulsuchpfad hinzugefügt und das Unterverzeichnis "Lib" aus den Standardorten entfernt.</p>
+<p>Hinzugefügt: Import aus einer Datei: <code>import "Pfad\Name"</code></p>
+<p>Hinzugefügt: Import aus einer Ressource: <code>import "*RESNAME"</code></p>
+<p>Hinzugefügt: Alternative Import-Syntax zur besseren Ausrichtung von Modulnamen: <code>import ModulName {*, Namen}</code></p>
+<p>Geändert: Import erfordert nun einen einzelnen Identifikator als Modulnamen, wenn nicht in Anführungszeichen gesetzt.</p>
+<p>Hinzugefügt: <code>export import</code>, um Namen gleichzeitig zu importieren und zu exportieren.</p>
+
+<p><strong>Sonstige Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Hinzugefügt: Automatische DPI-Neuskalierung für ListView-Spalten.</p>
+<p>Behoben: Gui-DPI-Skalierung erfolgt nun vor Erstellung des Fensters (z.B. für +MinSize).</p>
+<p>Behoben: Gui initialisiert nun mit der aktuellen DPI, nicht mit der DPI zum Prozessstart.</p>
+<p>Behoben: Diverse Gui-Berechnungen sind nun pro-Bildschirm-DPI-sensitiv.</p>
+<p>Behoben: Die Gui-Standardschrift passt sich nun dynamisch an DPI-Änderungen an.</p>
+<p>Behoben: <code>IsSet(v := a.b?)</code> und <code>IsSet(v := f()?)</code>, wenn v eine Zeichenkette ist.</p>
+
+<h2 id="v2.1-alpha.16">2.1-alpha.16 - 2. Februar 2025</h2>
+<p>Hinzugefügt: Das in der EXE eingebettete Manifest wurde um disableWindowFiltering ergänzt, wodurch mehr Fenster erkannt werden können.</p>
+<p>Geändert: Der Modus der <a href="v2.1-changes.htm#Default_DPI_Awareness">Standard-DPI-Sensitivität</a> ist nun "Per Monitor v2" statt "System".</p>
+<p>Implementiert: Grundlegende Unterstützung für Pro-Bildschirm-DPI-Sensitivität, einschließlich:</p>
+<ul>
+  <li>Automatische Anpassung der Schrift im Hauptfenster des Skripts.</li>
+  <li>Automatische Anpassung der Position, Größe und Schriftgröße von GUI-Steuerelementen.</li>
+  <li>Verwendung der GUI-DPI anstelle der System-DPI bei der Schriftgrößenberechnung.</li>
+</ul>
+<p>Einzelheiten finden Sie unter <a href="lib/Gui.htm#DPIResize">DPIResize (Gui)</a>.</p>
+
+<h2 id="v2.1-alpha.15">2.1-alpha.15 - 25. Januar 2025</h2>
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Behoben: HotIf(obj) findet nun vorhandene Kriterien.</p>
+<p>Behoben: #DefaultReturn in Verbindung mit verschachtelten Funktionen oder Klassenvariableninitialisierern.</p>
+<p>Behoben: Benannte Funktions-Hotkeys in Verbindung mit Parameter-Standardausdrücken.</p>
+<p>Behoben: Raw-lose Hotstrings, wo beide Seiten mit einem der Zeichen aus dem Set ^+!#{} beginnen.</p>
+<p>Behoben: Der Debugger interpretiert nun Namen, die mit "inf"/"nan" beginnen, nicht mehr als Float.</p>
+<p>Behoben: Pufferüberlauf, wenn ein RegExReplace-Rückruf eine Zahl oder ein Objekt zurückgibt.</p>
+<p>Behoben: Funktionsdefinitionsausdrücke in "einzeiligen" Hotkeys.</p>
+
+<h2 id="v2.0.19">2.0.19 - 25. Januar 2025</h2>
+<p>Behoben: Out-of-Bounds-Speicherzugriff während RegEx-Kompilierung.</p>
+<p>Behoben: Extern ausgelöste Modifikatoren werden nach einem Send nicht mehr "wiederhergestellt".</p>
+<p>Behoben: Modale Dialogfenster unterdrückten InputHook-Ereignisse.</p>
+<p>Behoben: Tasten-Oben wird nicht mehr fälschlicherweise unterdrückt, wenn es in einigen Fällen von Tastenwiederholungsdrücken nach unten gedrückt wird.</p>
+<p>Behoben: Kritischer Fehler beim Laden großer Symbole ohne Alphakanal.</p>
+<p>Behoben: MouseGetPos macht AusgabeVarStrlmnt nun leer, anstatt eine Ausnahme auszulösen, wenn ClassNN nicht ermittelt werden kann.</p>
+<p>Behoben: FileSelect validiert nun Optionen.</p>
+<p>Behoben: Unerwartetes Catch/Else/Finally/Until wurde in einigen Fällen nicht als Fehler gewertet.</p>
+<p>Behoben: Try/Catch/Else/Finally führte Finally nicht aus, wenn Else via Return zurückkehrt.</p>
+<p>Behoben: Ausführung von if-else-if-else-if, das Fat-Arrow-Funktionen enthält.</p>
+
+<h2 id="v2.0.18">2.0.18 - 6. Juli 2024</h2>
+<p>Behoben: A_Clipboard beendet sich nicht mehr stillschweigend, wenn GetClipboardData NULL zurückgibt.</p>
+<p>Behoben: <code>a.b[c] := d</code> ruft nun indirekt den Getter für <code>a.b</code> auf, wenn es keinen Setter gibt.</p>
+
+<h2 id="v2.1-alpha.14">2.1-alpha.14 - 23. Juni 2024</h2>
+<p>Hinzugefügt: <a href="lib/InputHook.htm#option-h">InputHook-Option H</a>, um das Abfangen von Hotkeys zu ermöglichen.</p>
+<p>Hinzugefügt: <a href="Variables.htm#HotIf">A_HotIf</a> und ein Rückgabewert für HotIf.</p>
+<p>Geändert: TraySetIcon aktualisiert nun auch das Symbol im Hauptfenster des Skripts.</p>
+<p>Geändert: Texteingabeerfassung und Behandlung von toten Tasten.
+</p>
+<ul>
+  <li>Behebt einige obskure Probleme und reduziert das Risiko, dass das aktive Fenster die Behandlung von toten Tasten beeinträchtigt.</li>
+  <li>Tote Tasten mit den InputHook-Optionen S und I haben keinen Einfluss mehr auf die Eingabeerfassung.</li>
+  <li>Die InputHook-Option M ermöglicht nun die Erfassung von Ziffern des Ziffernblocks bei gedrückter Alt-Taste und wirkt sich nicht mehr auf die Alt+nnnn-Eingabe aus, wenn die Zifferntasten unterdrückt sind.</li>
+  <li>Verkettete tote Tasten werden unterstützt, bis zu 3 tote Tasten in Folge.</li>
+</ul>
+<p>Geändert: InputHook behandelt {tote Taste}{BS} nun so, dass BS (Backspace) die tote Taste aufhebt.</p>
+
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Behoben: <code>#Include %A_TrayMenu%.ahk</code> (eigentlich ungültig) verursachte einen Ladezeitabsturz.</p>
+<p>Behoben: Dynamische Referenzen auf Modulebene werden nicht mehr falsch aufgelöst, wenn das Modul aufgrund eines Imports durch ein anderes Modul früher ausgeführt wird.</p>
+<p>Behoben: <code>import x</code> fügt x nun zur Modulliste hinzu, wenn aus einer Datei geladen wird.</p>
+
+<h2 id="v2.1-alpha.13">2.1-alpha.13 - 5. Juni 2024</h2>
+<p>Hinzugefügt: Es wird nun gewarnt, wenn UTF-8-Dekodierungsfehler in Skriptdateien auftreten.</p>
+<p>Geändert: Der Debugger listet nun auch Eigenschaften auf, die vom Prototyp für Object-fremde Klassen wie VarRef und ComValue definiert werden.</p>
+<p>Geändert: Das Debugger-Attribut "classname" von Prototypobjekten enthält nun den Klassennamen (z.B. "SomeClass.Prototype").</p>
+<p>Geändert: Der Debugger listet die nativ definierten Eigenschaften __Class und Base nicht mehr auf.</p>
+
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Behoben: <code>class A extends B</code> löst B nun zuverlässig auf, unabhängig von der Reihenfolge.</p>
+<p>Behoben: Fehlerdialogfenster zeigten keine Nachbarzeilen an.
+</p>
+<p>Behoben: Beim Abrufen/Setzen von virtuellen Referenzen werden geworfene Ausnahmen jetzt korrekt propagiert.</p>
+<p>Behoben: Der Debugger versucht nicht mehr, Eigenschafts-Getter direkt auf einem Prototype auszuwerten.</p>
+
+<h2 id="v2.0.17">2.0.17 - 5. Juni 2024</h2>
+<p>Optimiert: FensterText-Parameter-Optimierung von Descolada implementiert. [<a href="https://github.com/AutoHotkey/AutoHotkey/pull/335">PR #335</a>]</p>
+<p>Geändert: UnsetError-Meldung schlägt nun eine globale Deklaration vor, anstatt "(same name as a global)" hinter dem Variablennamen anzufügen.</p>
+<p>Geändert: VarUnset-Warnmeldung wurde geändert, um konsistent mit UnsetError zu sein.</p>
+<p>Behoben: Die Inkrement-/Dekrementoperatoren lösen nun UnsetError aus, wenn die Variable ungesetzt ist, nicht TypeError.</p>
+<p>Behoben: OwnProps weist nun den Eigenschaftsnamen sicher zu, wenn sich eine Eigenschaft selbst löscht.</p>
+<p>Behoben: Haltepunkte funktionieren jetzt auch in Fat-Arrow-Funktionen unter einer Kontrollanweisung ohne Block.</p>
+<p>Behoben: Der Debugger hält nun an der Zeile des Aufrufs beim Verlassen einer Funktion. (Dieses Verhalten wurde in Revision 31 hinzugefügt, aber ist seit v1.1.30.00 fehlerhaft.)</p>
+<p>Behoben: Das Verlassen einer Funktion, die als neuer Thread aufgerufen wurde, hält nun an der unterbrochenen Zeile, anstatt zu warten, bis die nächste Zeile erreicht ist.</p>
+<p>Behoben: Der Debugger löscht keine temporären Haltepunkte mehr, die bei der Auswertung von DBGp property_get oder context_get ignoriert werden.</p>
+
+<h2 id="v2.0.16">2.0.16 - 30. Mai 2024</h2>
+<p>Behoben: Keine Ladezeitfehler mehr, die an stdout gesendet wurden und in einigen Fällen eine falsche Datei oder Zeilennummer anzeigten.</p>
+<p>Behoben: ExitApp verwendet nun bei Fehler-/Warndialogfenstern während der Ladezeit den Exitcode 2.</p>
+<p>Behoben: WindowSpy.ahk wird nun bei Installationen unter dem aktuellen Benutzer (Nicht-Admin) gefunden.</p>
+<p>Behoben (erneut): property_get bezifferte Elemente falsch.</p>
+<p>Behoben: StrPut schlägt nicht mehr fehl, wenn Länge/Buffer angegeben ist und <a href="https://learn.microsoft.com/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar">MultiByteToWideChar</a> das Flag WC_NO_BEST_FIT_CHARS für die gewünschte Codepage nicht unterstützt.</p>
+<p>Behoben: Download versucht nun eine anonyme Authentifizierung, wenn der Server eine Client-Authentifizierung verlangt.</p>
+
+<h2 id="v2.1-alpha.12">2.1-alpha.12 - 26. Mai 2024</h2>
+<p>Geändert: Die Art und Weise, wie <a href="lib/_Warn.htm">#Warn</a>-Einstellungen angewendet werden.</p>
+<ul>
+  <li>#Module kopiert Einstellungen vom vorherigen Modul.</li>
+  <li><code>#Warn Typ, Modus</code>: Wie zuvor.</li>
+  <li><code>#Warn Modus</code>: Setzt den programmweiten Standardmodus.</li>
+  <li><code>#Warn Typ[, On]</code>: Aktiviert Warnung und verwendet den programmweiten Standardmodus.</li>
+  <li><code>#Warn</code>: Setzt Warnungen auf Standard zurück (vorgesehen für die Verwendung in einem Modul).</li>
+</ul>
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Behoben: #Warn LocalSameAsGlobal verursacht keinen Ladezeitabsturz mehr.</p>
+<p>Behoben: Interne Imports und Platzhalter-Imports in Assume-Global-Funktionen.</p>
+
+<h2 id="v2.1-alpha.11">2.1-alpha.11 - 24. Mai 2024</h2>
+<p>Hinzugefügt: <a href="Modules.htm">Module</a>, <a href="lib/_Module.htm">#Module</a>, <a href="lib/_Import.htm">#Import</a> und Export.</p>
+
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Behoben: Lecks durch virtuelle Referenzen, die Objekte zurückgeben.</p>
+<p>Behoben: __Set (fehlerhaft seit v2.1-alpha.10).</p>
+<p>Behoben: Lecks beim Enumerieren von Eigenschaften im Debugger.</p>
+
+<h2 id="v2.0.15">2.0.15 - 16. Mai 2024</h2>
+<p>Behoben: DBGp property_get konnte aufgrund falscher Bezifferung keine Eigenschaften abrufen (seit v2.0.14).</p>
+<p>Behoben: DBGp-Eigenschaftsauswertung ließ Try ohne Catch fehlschlagen (seit v2.0.14).</p>
+<p>Behoben: Die &lt;base&gt;-Pseudoeigenschaft des Debuggers ließ eine Referenz durchsickern (seit v2.0.14).</p>
+
+<h2 id="v2.1-alpha.10">2.1-alpha.10 - 7. Mai 2024</h2>
+<p>Geändert: Die Art und Weise, wie KeyOpt (InputHook) das Entfernen von Optionen für SC-basierte Tasten anwendet.</p>
+<p>Geändert: FensterTitel mit zwei unterschiedlichen ahk_id-Werten findet nichts mehr.</p>
+<p>Geändert: RegExReplace unterstützt nun binären Nullen im Ersatz-Parameter.</p>
+<p>Implementiert: <a href="Functions.htm#virtual-references">Virtuelle Referenzen</a>.</p>
+<p>Hinzugefügt: Object.Prototype.Props(), das eigene und geerbte Eigenschaften enumeriert.</p>
+<p>Verbessert: DBGp-Eigenschaft und Kontextbefehle:</p>
+<ul>
+  <li>Geerbte Eigenschaften werden direkt dem Eigenschaftselement des Objekts untergeordnet.</li>
+  <li>Eigenschafts-Getter und Funktionsaufrufe erlauben mehrere Parameter.</li>
+  <li>Eigenschaftsnamen können als Parameter verwendet werden.</li>
+</ul>
+<p>Geändert: DBGp verwendet jetzt standardmäßig max_children = 1000 und max_depth = 1.</p>
+<p>Hinzugefügt: <a href="lib/Error.htm#Show">Error.Prototype.Show(Modus?)</a>.</p>
+
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Behoben: <code>Class(X)</code> ruft nicht mehr __Init (geerbt von X) bei der neuen Klasse auf.</p>
+<p>Behoben: <code>IsSet(x := y?)</code>.</p>
+<p>Behoben: Gui-Steuerelemente übergeben nun sich selbst (nicht die Gui) an Meldungsrückrufen.</p>
+<p>Behoben: RegEx-Callouts ohne Funktionsnamen, z.B. <code>(?C)</code>.</p>
+<p>Behoben: <code>x.y() =&gt; z</code> wird nun als Syntaxfehler erkannt.</p>
+<p>Geändert: Throw ist nun wieder nicht-fortsetzbar, wie bereits in v2.0.</p>
+
+<h2 id="v2.0.14">2.0.14 - 6. Mai 2024</h2>
+<p>Behoben: Das Fehlerdialogfenster reagiert nun auch auf Tastaturkurzbefehle, wenn der Text fokussiert ist.</p>
+<p>Behoben: Die Breitenwerte von MonthCal W-<em>n</em> (Anzahl der Monate) werden nicht mehr von der DPI-Skalierung beeinflusst.</p>
+<p>Behoben: Click gibt keinen Integer mehr zurück.</p>
+<p>Behoben: <code class="no-highlight"><i>Taste</i>::try {</code> wird nicht mehr als Fehler erkannt.</p>
+<p>Behoben: <code>:B0*O:XY::Z</code> erzeugt nun XYZ statt XZ (also statt Y zu unterdrücken).</p>
+<p>Behoben: Send lässt ein vorheriges <code class="no-highlight">{<i>Modifikator</i> Down}</code> wirksam, auch wenn die Taste physisch gedrückt gehalten wird.</p>
+<p>Verbessert: Das Skript nimmt nun zuverlässiger den Fokus, wenn ein Kontextmenü angezeigt wird.</p>
+
+<p><strong>Debugger-Verbesserungen:</strong></p>
+<p>Behoben: stdout/stderr-Pakete, die während der Verarbeitung eines anderen Befehls gesendet werden, korrumpieren nicht mehr die bevorstehende Antwort.</p>
+<p>Behoben: <code class="no-highlight">property_get -n &lt;exception&gt;.message</code> und ähnliches.</p>
+<p>Behoben: Es werden keine korrumpierten Ergebnisse von property_get mehr erzeugt, wenn eine Eigenschaft ein temporäres Objekt mit einer Zeichenkette zurückgibt, wie z.B. <code>x.y.z</code>, wobei <code>y =&gt; {z:"a"}</code>.</p>
+<p>Behoben: Es kommt nicht mehr zu Abstürzen, wenn ein asynchroner Befehl während der Verarbeitung eines anderen Befehls empfangen wird.</p>
+<p>Behoben: Ausnahmen wurden nicht gelöscht, nachdem sie via property_set unterdrückt wurden.</p>
+<p>Behoben: <code class="no-highlight">property_get -c 0 -d 0</code> erlaubt nun globale Variablen, wie sie bereits von <code class="no-highlight">-d 1</code> erlaubt werden.</p>
+<p>Behoben: property_get bezifferte enumerierte Elemente falsch.</p>
+
+<p>Verbessert: property_get unterstützt nun auch Eigenschafts-Getter mit einem Parameter (bisher wurde dies nur von der impliziten __Item-Eigenschaft unterstützt).</p>
+<p>Verbessert: property_get unterstützt nun auch Eigenschaften von primitiven Werten. Der Wert muss nach wie vor in einer Variable enthalten sein oder von einer Eigenschaft zurückgegeben werden.</p>
+<p>Verbessert: property_get erlaubt nun den Aufruf von Funktionen mit &lt;=1 Parametern.</p>
+<p>Verbessert: property_get unterstützt nun Float-Schlüssel/Parameter.</p>
+
+<p>Geändert: Der Debugger unterdrückt nun Ausnahmen bei der Auswertung von Eigenschaften.</p>
+<p>Geändert: Der Debugger ignoriert nun Fehler, die durch __Enum ausgelöst werden (als keine Elemente behandeln).</p>
+<p>Geändert: Die Pseudo-Eigenschaft &lt;enum&gt; erfordert nun __Enum. Dadurch wird verhindert, dass das Objekt selbst als Enumerator aufgerufen wird.</p>
+<p>Kleine Optimierungen der Codegröße im Debugger.</p>
+
+<h2 id="v2.0.13">2.0.13 - 20. April 2024</h2>
+<p>Geändert: Die Hotkey-Funktion löst nun einen ValueError aus, wenn ihr Optionen-Parameter eine ungültige Option enthält.</p>
+<p>Behoben: InputHook respektiert nun die +S-Option für Backspace, wenn es als "rückgängig machen" fungiert.</p>
+<p>Behoben: Der Debugger handhabt nun sicher das Löschen von Eigenschaften während einer Enumeration.</p>
+<p>Behoben: Der Inhalt der OLE-Zwischenablage (z.B. Fehlerdialogtext) ging beim Beenden verloren.</p>
+<p>Behoben: Die Erkennung eines ungültigen Suffixes bei einem Hotkey, wie z.B. <code>Hotkey "a pu"</code>.</p>
+<p>Behoben: Der <code class="no-highlight">AStr*</code>-Argumenttyp von DllCall wird nur noch zurückkopiert, wenn sich die Adresse ändert.</p>
+<p>Behoben: #Include "schließt" nun korrekt jede interne Variable, die es liest (keine bekannten Auswirkungen auf reale Skripte).</p>
+<p>Behoben: FensterTitel mit zwei verschiedenen ahk_id-Werten ergaben keine Übereinstimmung.</p>
+
+<h2 id="v2.1-alpha.9">2.1-alpha.9 - 24. März 2024</h2>
+<p>Hinzugefügt: Rudimentäre Struktur-Pointer (<a href="Structs.htm#pointers">StructFromPtr</a>).</p>
+<p>Geändert: MouseGetPos löst nun einen OSError aus, wenn die Mausposition nicht ermittelt werden kann.</p>
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Behoben: <code>static var := unset</code>.</p>
+<p>Behoben: <code>throw()</code> innerhalb von Catch wirft nun erneut.</p>
+<p>Behoben: Für Nicht-Struktur-Objekte werden standardmäßig keine Daten mehr reserviert.</p>
+<p>Behoben: Speicherlecks bei gescheiterter Konstruktion von Strukturklassen.</p>
+<p>Behoben: Kein Absturz mehr, wenn ein Blockende direkt nach If/Loop/etc. folgt.</p>
+<p>Behoben: Ladezeiterkennung von doppelt typisierten Eigenschaften.</p>
+<p>Behoben: Kein Absturz mehr, wenn ein Objekt konstruiert wird, bei dem eine Eigenschaft vom Strukturtyp neu definiert oder gelöscht wurde.</p>
+<p>Behoben: Ein Objekt wurde nie gelöscht, wenn ein verschachtelter Struct-__Value indirekt aufgerufen wurde.</p>
+
+<h2 id="v2.0.12">2.0.12 - 23. März 2024</h2>
+<p>Behoben: Gui GetPos/GetClientPos bei einer Gui mit einem übergeordneten Fenster oder +DPIScale.</p>
+<p>Behoben: Until verhinderte die Rekursion von Unterordnern in Dateischleifen.</p>
+<p>Behoben: DllCall löst nun eine Ausnahme beim UStr-Argumenttyp aus.</p>
+<p>Behoben: Ein Speicherleck, das bei jedem Regex-Callout auftrat.</p>
+<p>Behoben: Send löste fälschlicherweise einen Modifikator aufgrund einer Race Condition aus. Zum Beispiel löste <code>~LAlt::Send "{Blind}x"</code> gelegentlich LAlt aus, wenn ein anderer Tastatur-Hook als der eigene Hook des Skripts installiert war.</p>
+<p>Behoben: Der Symbol-Lader bevorzugt nun eine höhere Bittiefe, wenn mehrere Bitmaps gleicher Größe vorhanden sind.</p>
+<p>Behoben: SendInput konnte LCtrl nicht loslassen, wenn es bereits RAlt losgelassen hatte und das Layout kein AltGr hatte.</p>
+<p>Behoben: Taste-Oben-Hotkeys werden nicht mehr ausgelöst, wenn die Taste nach einer Modifikatoränderung wiederholt gedrückt wird. Zum Beispiel sollte <code>F1::Send "{Ctrl down}"</code> die Ausführung von <code>F1 up::</code> erlauben, wenn die Taste losgelassen wird, obwohl Ctrl unten ist, aber erlaubte es nicht nach einer Tastenwiederholung.</p>
+<p>Behoben: Eine Fehlermeldung bezog sich auf #HotIf statt auf #IfWin. [PR #327]</p>
+<p>Behoben: OwnProps übersprang fälschlicherweise Eigenschaften mit optionalen Parametern.</p>
+<p>Behoben: Inkonsistentes Verhalten von geklonten dynamischen Eigenschaften.</p>
+<ul>
+  <li>OwnProps, das keine geklonten Eigenschaften mit Pflichtparametern überspringt.</li>
+  <li>Parameter, die nicht rekursiv an parameterlose Eigenschaften übergeben werden (d.h. damit <code>a.b[c]</code> als <code>(a.b)[c]</code> ausgewertet werden kann).</li>
+</ul>
+<p>Behoben: SysGetIPAddresses verursacht keinen kritischen Fehler mehr, wenn das Netzwerk-Subsystem nicht funktionsfähig ist, z.B. im abgesicherten Modus von Windows.</p>
+<p>Geändert: ControlGetFocus gibt nun 0 zurück, wenn der Fokus nicht ermittelt werden kann, z.B. wenn ein Konsolenfenster aktiv ist.</p>
+
+<h2 id="v2.1-alpha.8">2.1-alpha.8 - 23. Dezember 2023</h2>
+<p>Optimiert: Automatisch-ersetzende Hotstrings vermeiden nun nach Möglichkeit das erneute Tippen eines identischen führenden Teils.</p>
+<p>Geändert: Folgende Dinge sind nun nicht-Groß-/Kleinschreibung-sensitiv auf ASCII-Basis, nicht mehr gemäß den aktuellen Sprach- und Regionseinstellungen des Benutzers: UseTab-Methode (mit Ausnahme des VollNameVergleich-Modus, der bereits ausschließlich ASCII-basiert war), Choose-Methode und Text-Eigenschaft (Tab-Steuerelement); Add-Methode (Menu).</p>
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Behoben: A_ThisFunc und dynamische Referenzen in Parameter-Standardausdrücken.</p>
+
+<h2 id="v2.0.11">2.0.11 - 23. Dezember 2023</h2>
+<p>Hinzufügt: Workaround für das erste angezeigte Menü, das in Windows 10 keine Tastatureingaben akzeptierte.</p>
+<p>Behoben: Die <a href="lib/Gui.htm#Add">Add-Methode (Gui)</a> unterstützt nun die ShortDate-Option für DateTime-Steuerelemente.</p>
+<p>Behoben: Referenzzählungsfehler bei mehrstufiger Funktionsverschachtelung.</p>
+<p>Behoben: <code>#Include &lt;x&gt;</code> verursachte einen Ladezeitabsturz, wenn es innerhalb einer Funktion verwendet wurde.</p>
+<p>Behoben: <code>ListView.Opt("NoSort")</code>.</p>
+<p>Behoben: Ein Speicherleck beim Klonen eines Objekts ohne eigene Eigenschaften.</p>
+<p>Behoben: #Include und FileInstall (nicht kompiliert) vergleichen Dateinamen nun <a href="https://learn.microsoft.com/windows/win32/intl/handling-sorting-in-your-applications#sort-strings-ordinally">ordinal</a>, nicht linguistisch.</p>
+
+<h2 id="v2.1-alpha.7">2.1-alpha.7 - 7. Oktober 2023</h2>
+<p>Hinzugefügt: SetCue-Methode für Edit- und ComboBox-Steuerelemente. [PR #315]</p>
+<p>Geändert: Der Tastenkürzel-Parameter von FileCreateShortcut erlaubt nun die Modifikatoren <code>^</code>, <code>+</code> und <code>!</code>. [PR #310]</p>
+<p>Hinzugefügt: A_KeybdHookInstalled und A_MouseHookInstalled. [PR #326]</p>
+<p>Hinzugefügt: GuiControl.Prototype.OnMessage, das Fenster-Subclassing verwendet.</p>
+<p>Geändert: Menu ToggleCheck/ToggleEnable geben nun den neuen Zustand zurück.</p>
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Behoben: Gui.Prototype.OnMessage setzt nun A_EventInfo, analog zu OnMessage.</p>
+<p>Behoben: Kein Absturz mehr beim Laden, wenn der erste Klassenvariableninitialisierer <code>=&gt;</code> verwendet.</p>
+
+<h2 id="v2.0.10">2.0.10 - 24. September 2023</h2>
+<p>Behoben: Kein Absturz mehr, wenn ein benannter Funktions-Hotkey nach #HotIf verwendet wird.</p>
+<p>Behoben: Direkt geschriebene Zahlen, die mit einem Punkt enden, bewirken keine Zeilenfortsetzung mehr.</p>
+<p>Behoben: Vorherige Inkrementierung/Dekrementierung funktioniert nun auch mit verketteten Array-Indexierungen.</p>
+<p>Behoben: OnNotify/OnCommand wendete Styles an, die nur für OnEvent gelten.</p>
+<p>Behoben: FileExist/DirExist gab Handles nicht frei, wenn <code class="no-highlight">LeeresVerz\*</code> verwendet wird.</p>
+<p>Behoben: DirExist gab Handles nicht frei, wenn nur Dateien übereinstimmen.</p>
+
+<h2 id="v2.1-alpha.6">2.1-alpha.6 - 20. September 2023</h2>
+<p>Behoben: Fehler, die mit v2.1-alpha.5 dazukamen:</p>
+<ul>
+  <li><code>return (){</code> wurde wie <code>return return (){</code> interpretiert.</li>
+  <li>Closures funktionierten nicht innerhalb von Funktionsdefinitionsausdrücken.</li>
+  <li>Einige Funktionen sahen Variablen nicht, die durch Assume-Global-Zuweisungen erstellt wurden.</li>
+</ul>
+
+<h2 id="v2.1-alpha.5">2.1-alpha.5 - 17. September 2023</h2>
+<p>Geändert: <code>Ctrl::Alt</code> sendet nun kein ununterdrücktes <code class="no-highlight">{Ctrl up}</code> mehr. Dies war ursprünglich dazu gedacht, ein Problem bei der systemseitigen Behandlung der Modifikatortasten zu umgehen, wurde jedoch in v2.0.8 von einem besseren Workaround abgelöst.</p>
+<p>Hinzugefügt: WheelUp, WheelDown, WheelLeft und WheelRight können nun auf beiden Seiten einer Neubelegung verwendet werden.</p>
+<p>Entfernt: Ein Längenlimit für Parameter-Standardzeichenketten (aber nicht für Ausdrücke).</p>
+<p>Optimiert: Beim ternären Operator wurde eine überflüssige Prüfung entfernt, ob ein Wert eine Zahl ist.</p>
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Behoben: Ein Referenzzählungsfehler beim Konstruieren verschachtelter Strukturen.</p>
+<p>Behoben: Probleme mit Funktionsdefinitionsausdrücken.</p>
+<ul>
+  <li>Skript konnte nicht geladen werden, wenn die Funktion Blöcke enthielt.</li>
+  <li><code>x::y(h?){</code> wurde zwar implizit zugelassen, verhielt sich aber nicht intuitiv; es wird nun so interpretiert, als stünde <code>y</code> auf einer neuen Zeile.</li>
+  <li>Funktionsdefinitionen, die innerhalb einer Fat-Arrow-Funktion oder eines Parameterinitialisierers beginnen, wurden fälschlicherweise im äußeren Gültigkeitsbereich definiert.</li>
+  <li>Der Körper einer Funktion wurde nicht korrekt erkannt, wenn ihre Definition innerhalb von Fat-Arrow-Ausdrücken, #HotIfs, Parameterinitialisierern oder Klassenvariableninitialisierern begann.</li>
+</ul>
+<p>Behoben: <code>&amp;x:=unset</code> wird nun korrekt zugelassen.</p>
+
+<h2 id="v2.0.9">2.0.9 - 17. September 2023</h2>
+<p>Behoben: Stapelung von Hotstrings mit der X-Option.</p>
+<p>Behoben: Debugger listet nun lokale Variablen auf, wenn sich die Funktion am Ende des Stapels befindet.</p>
+<p>Behoben: Gui-Threads werden nun im Aufrufstapel des Debuggers angezeigt.</p>
+<p>Behoben: Einige &amp;/ByRef-Kombinationen, die einen Stapelüberlauf in ExitApp verursachten.</p>
+
+<h2 id="v2.0.8">2.0.8 - 11. September 2023</h2>
+<p>Behoben: ByRef-Parameter weisen der VarRef des Aufrufers nicht mehr fälschlicherweise den Standardwert zu, wenn ungesetzt.</p>
+<p>Behoben: Einige Probleme mit unterdrückten Alt/Strg/Umschalt/Win-Hotkeys, wie zum Beispiel:</p>
+<ul>
+  <li><code>*LCtrl::</code> blockierte LCtrl vom aktiven Fenster, aber das Senden von Alt-Tastenkombinationen würde fehlschlagen, weil das System denkt, dass Ctrl unten ist, und daher WM_KEYDOWN statt WM_SYSKEYDOWN senden würde.</li>
+  <li><code>*LAlt::</code> hat das System dazu veranlasst, alle vorherigen <code class="no-highlight">{LAlt DownR}</code> zu vergessen, sodass sich eine Neubelegung wie z.B. <code>LCtrl::LAlt</code> nicht korrekt verhält, wenn LAlt physisch unten ist, auch wenn LAlt unterdrückt wurde.</li>
+  <li>Andere potenzielle Probleme, bei denen das Low-Level-Tracking einer Modifikatortaste durch das System nicht mit dem logischen Zustand übereinstimmt.</li>
+</ul>
+<p>Behoben: Einige Probleme bzgl. Fortsetzungsbereiche:</p>
+<ul>
+  <li>Escapesequenzen in der Join-Option wurden doppelt übersetzt, was dazu führte, dass <code class="no-highlight">````</code> zu einem statt zwei direkt geschriebenen <code class="no-highlight">`</code> wurde, <code class="no-highlight">``n</code> zu einem Zeilenvorschub wurde, usw.</li>
+  <li><code class="no-highlight">`"</code> oder <code class="no-highlight">`'</code> erzeugten ein direkt geschriebenes umgekehrtes Häkchen und beendeten die Zeichenkette, anstatt ein direkt geschriebenes Anführungszeichen zu erzeugen, wenn der Fortsetzungsbereich in Anführungszeichen desselben Typs gesetzt ist und nicht die <code class="no-highlight">`</code>-Option hat.</li>
+</ul>
+<p>Optimiert: Das automatische Escaping von Anführungszeichen und umgekehrten Häkchen in Fortsetzungsbereichen.</p>
+<p>Behoben: breakpoint_list (Debugger) gab Duplikate bei Zeilen zurück, die Fat-Arrow-Funktionen enthalten.</p>
+<p>Behoben: <code class="no-highlight">+BackgroundDefault</code> konnte die BackColor-Eigenschaft von Gui nicht überschreiben.</p>
+
+<h2 id="v2.1-alpha.4">2.1-alpha.4 - 4. September 2023</h2>
+<p>Behoben: Fehler, die mit v2.1-alpha.3 dazukamen:</p>
+<ul>
+  <li>Kontrollanweisungen, unmittelbar gefolgt von einer geschweiften Startklammer, wurden nicht erkannt; z.B. <code>else{</code>.</li>
+  <li>Statische Eigenschaften wurden fälschlicherweise zu einer einzelnen Zeile zusammengeführt; z.B. <code>static Prop { get =&gt; 1 }</code>.</li>
+</ul>
+
+<h2 id="v2.1-alpha.3">2.1-alpha.3 - 3. September 2023</h2>
+<p>Hinzugefügt: <a href="Functions.htm#funcexpr">Funktionsdefinitionsausdrücke</a>.</p>
+<p>Hinzugefügt: Typisierte Eigenschaften (<a href="Structs.htm">Strukturen</a>).</p>
+<p>Hinzugefügt: <code>Class(Name, BasisKlasse, Args*)</code> und <code>Class(BasisKlasse, Args*)</code> (siehe <a href="lib/Class.htm#StaticCall">Class.Call</a>).</p>
+<p>Hinzugefügt: Unterstützung für Links-/Rechts-Modifikatoren in {Blind}, wie in <code class="no-highlight">{Blind&gt;^}</code>.</p>
+<p>Geändert: Neubelegungen nutzen nun Links-/Rechts-Modifikatoren in Blind; z.B. bewirkt <code>&gt;^a::b</code>, dass RCtrl-A zu B und LCtrl-RCtrl-A zu LCtrl-B umbelegt wird, statt einfach nur zu B.</p>
+<p>Geändert: DllCall erlaubt nun das Weglassen von CDecl für alle Funktionen (siehe <a href="lib/DllCall.htm#CDecl">CDecl</a>).</p>
+<p>Überarbeitet: Das Parsen von Anweisungen. Globale, lokale und statische Variablendeklarationen mit mehreren Initialisierern werden nun als eine Einheit ausgewertet, sodass man beim Debuggen nicht mehr jeden Initialisierer einzeln überspringen muss.</p>
+<p>Geändert: ListVars zeigt ungesetzte Variablen nun als "varname: unset" an.</p>
+<p>Geändert: Throw ist nun eine Funktion, <strike>was geworfene Fehler fortsetzbar macht</strike> (siehe <a href="lib/Throw.htm#Remarks">Throw</a>).</p>
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Geändert: <code>(...)?</code> und <code>(...) ?? x</code> aktivieren nun niemals einen unset return. Dies beseitigt Inkonsistenzen wie etwa:</p>
+<ul>
+  <li><code>(a ? b : c)?</code> ließ nur c als unset zu, während <code>(a ? b? : c)?</code> nur b als unset zuließ.</li>
+  <li><code>(x.y)?</code> erlaubte y, unset zurückzugeben, während <code>(x?.y)?</code> dies nicht tat.</li>
+</ul>
+<p>Behoben: <code>a[b]:=unset</code> für Array und Map.</p>
+<p>Behoben: Der Debugger gab typisierte Untereigenschaften nicht zurück.</p>
+<p>Behoben: <code>a? .b</code>.</p>
+<p>Behoben: <code>f(a?.b?)</code> löste fälschlicherweise einen Ladezeitfehler aus.</p>
+
+<h2 id="v2.0.7">2.0.7 - 2. September 2023</h2>
+<p>Behoben: Bei MouseClickDrag können nun X1 und Y1 weggelassen werden.</p>
+<p>Behoben: Maus-AltTab-Hotkeys unterdrückten nicht die Ausführung eines Präfix-Hotkeys, z.B. <code>1::</code> für <code>1 &amp; WheelDown::AltTab</code>. (fehlerhaft seit v2.0.4)</p>
+<p>Behoben: Hook-Hotkeys erkannten keine Modifikatoren, die mit SendInput nach unten gedrückt wurden.</p>
+<p>Behoben: A_AhkPath ist nun nicht mehr auf die Groß-/Kleinschreibung oder das Format der Befehlszeile angewiesen, die/das zum Starten des Prozesses verwendet wird.</p>
+<p>Behoben: Heap-Korruption bei einer Fenstersuche mit Gruppen. (fehlerhaft seit v2.0.6)</p>
+<p><strong>Launcher</strong></p>
+<p>Behoben: #Requires wurde nicht erkannt, wenn dahinter ein anderer Kommentar als <code>; prefer <i>xxx</i></code> stand. (fehlerhaft seit v2.0.6)</p>
+<p>Behoben: Syntaxerkennung fehlinterpretierte mehrzeilige automatisch-ersetzende Hotstrings.</p>
+<p><strong>Window Spy</strong></p>
+<p>Geändert: Window Spy verwendet nun die Schriftart Segoe UI mit der Schriftgröße 9, in Übereinstimmung mit Dash.</p>
+
+<h2 id="v2.0.6">2.0.6 - 30. August 2023</h2>
+<p>Behoben: Mehrdeutigkeiten bei COM-Aufrufen, z.B. wenn <code>x.y</code> als <code>x.y()</code> fungiert.</p>
+<p>Behoben: Haltepunkte bei Kontrollanweisungen wurden "getroffen", wenn eine Fat-Arrow-Funktion in der Zeile darunter zurückkehrt.</p>
+<p>Behoben: <code>Default :</code> verbindet sich nicht mehr mit der Zeile darunter. Dies verhinderte die Verwendung von <code>Default :</code> am Ende eines Switch-Blocks und führte dazu, dass jede nachfolgende Zeile die Zeilennummer des Defaults erhielt.</p>
+<p>Optimiert: ProcessGetPath, ProcessSetPriority und ProcessClose durchlaufen nicht mehr alle Prozesse, wenn eine gültige PID angegeben ist, auch wenn der Zugriff auf den Prozess verweigert wird.</p>
+<p>Behoben: <code>LWin::Alt</code> konnte nicht zum Aktivieren einiger Alt-Tastenkombinationen verwendet werden.</p>
+<p>Behoben: TypeError, ausgelöst durch <code>x is y</code>, zeigt nun "Class" statt "Object" an.</p>
+<p>Behoben: FensterTitel unterstützt nun Kriterien länger als 1023 Zeichen.</p>
+<p>Behoben: Es gab Probleme, wenn <code>&amp;ref</code> auf verschiedene Aliase derselben Variable angewendet wurde.</p>
+<p>Behoben: Bestimmte Standardausdrücke von optionalen Parametern (außer einfache direkt geschriebene Werte) verhinderten die Verwendung von Assume-Global/Assume-Static.</p>
+
+<h2 id="v2.1-alpha.2">2.1-alpha.2 - 12. August 2023</h2>
+<p><strong>Fehlerbehebungen</strong></p>
+<p>Behoben: Ladezeitprüfungen erkannten fehlende Parameter bei MenuSelect nicht.</p>
+<p>Behoben: Kontextmenüs erschienen unter dem aktiven GUI-Fenster, wenn dieses AlwaysOnTop war.</p>
+<p><strong>Optimierungen</strong></p>
+<p>Optimiert: Pause lässt den System-Thread nun schlafen, bis Meldungen eintreffen, statt den Pausezustand häufig abzufragen. In Tests sank die CPU-Auslastung dadurch von 0,04&nbsp;% auf 0,00&nbsp;%.
+</p>
+<p>Optimiert: ProcessWaitClose und RunWait lassen den System-Thread nun schlafen, bis das Prozesshandle signalisiert wird oder Meldungen eintreffen. Dies senkt die CPU-Auslastung (wie oben) und verbessert die Reaktionszeit.</p>
+<p>Optimiert: Prüfungen von Dialogfensterklassen.</p>
+<p><strong>Änderungen</strong></p>
+<p>Geändert: ImageSearch und PixelSearch erlauben nun das Weglassen von X und Y.</p>
+<p>Geändert: ProcessWait zeigt in ListLines nun "STILL WAITING" an, analog zu WinWait.</p>
+<p>Hinzugefügt: Funktionen und Eigenschaften können nun <code>unset</code> zurückgeben; das Ergebnis kann mit den Operatoren <a href="Variables.htm#maybe">Vielleicht (?)</a> und <a href="Variables.htm#or-maybe">Oder-Vielleicht (??)</a> zugelassen bzw. behandelt werden.</p>
+<p>Hinzugefügt: Optionale Verkettung mit dem Vielleicht-Operator (<code>a?.b</code>).</p>
+<p>Hinzugefügt: Vielleicht-Zuweisungsoperator (<a href="Variables.htm#maybe-assign">??=</a>).</p>
+<p>Geändert: Eigenschafts-Setter erlauben nun, dass der value-Parameter ungesetzt ist.</p>
+<p>Verbessert: Ladezeitvalidierung für <code>unset</code>, <code>?</code> und <code>??</code>.</p>
+<p>Hinzugefügt: Experimentelle Direktive <code>#DefaultReturn unset|""</code>.</p>
+
+<h2 id="v2.0.5">2.0.5 - 12. August 2023</h2>
+<p>Behoben: Ein Speicherleck, das durch falsche Referenzzählung verursacht wurde, wenn ein Objekt via COM enumeriert wird. [PR# 325]</p>
+<p>Behoben: Interne Aufrufe von __Enum rufen nun nicht mehr __Call auf.</p>
+<p>Behoben: Fehlermeldungen bezüglich Parameter #65535.</p>
+<p>Behoben: Falsche IEnumVARIANT-Rückgabeanzahl.</p>
+<p>Behoben: Download löste OSError(0) aus, obwohl der Fehler ungleich Null sein sollte.</p>
+<p>Behoben: LV.Add/Insert/Modify verursachte einen Absturz, wenn die Mindestanzahl von Parametern übergeben wird.</p>
+<p>Behoben: Stacktraces ignorieren nun __new-Aufrufe für Error-Unterklassen.</p>
+
+<h2 id="v2.0.4">2.0.4 - 3. Juli 2023</h2>
+<p>Geändert: Die Reload-Schaltfläche in Fehler-/Warndialogfenstern schließt das Fenster nun explizit, auch dann, wenn die aktuelle Skriptinstanz nicht terminiert ist.</p>
+<p>Entfernt: Eine Optimierung für <code>return var</code>, die dazu führte, dass die Variable beim Zugriff innerhalb eines <code>finally</code>-Blocks leer erschien.</p>
+<p>Behoben: Default (Switch) erlaubt nun Leerzeichen vor dem Doppelpunkt.</p>
+<p>Behoben: Array.Prototype.RemoveAt gibt nun den entfernten Wert zurück, wenn Länge mit <code>unset</code> oder <code>var?</code> "explizit weggelassen" wird.</p>
+<p>Behoben: Kein Absturz mehr, wenn ein ComObject an eine For-Schleife übergeben wird, bei der nur die zweite Variable angegeben ist.</p>
+<p><strong>Änderungen von v1.1.37.00 und v1.1.37.01 übernommen:</strong></p>
+<p>Geändert: COM-Methodenaufrufe und -Eigenschaftsaufrufe übergeben große Integer nun als VT_I8, nicht mehr als VT_R8 (Floating-Point), um den ursprünglichen Typ und die Genauigkeit beizubehalten. Integer im 32-Bit-Bereich werden weiterhin als VT_I4 übergeben.</p>
+<p>Hinzugefügt: Unterstützung für Multi-Variablen-Enumeratoren (For-Schleifen) mit IDispatch-gewrappten AutoHotkey-Objekten. Sowohl das Skript, das das Objekt indirekt aufruft, als auch das Objekt selbst müssen mit einer unterstützten AutoHotkey-Version ausgeführt werden.</p>
+<p>Behoben: Weggelassene Parameter erhalten nun ihre Standardwerte und nicht mehr den Marker "optionales Argument", wenn eine AutoHotkey-Methode über IDispatch (COM) aufgerufen wird. Die umgekehrte Übersetzung wurde bereits in früheren Versionen beim <em>Aufruf</em> von COM-Methoden durchgeführt.</p>
+<p>Behoben: <code>VerCompare(a, "&gt;" b)</code> und geringfügige Reduzierung der Codegröße.</p>
+<p>Behoben: AltTab-bezogene Ladezeitfehler sind nun konsistent mit anderen Fehlern.</p>
+<p>Behoben: Fehler, die durch einen ComObject-Wrapper ausgelöst werden, wurden nicht korrekt weitergegeben, wenn dieser über ein Objekt/COM aufgerufen wird.</p>
+<p>Behoben: Das Hotkey-GUI-Steuerelement erlaubt nun das Setzen der Symbole <code class="no-highlight">^</code>, <code class="no-highlight">!</code> und <code class="no-highlight">+</code> als Hotkeys.</p>
+<p>Behoben: Das Hotkey-Steuerelement inkludiert nun Modifikatoren, wenn sein Wert auf ein Symbol gesetzt ist.</p>
+<p>Behoben: Mögliches Fehlverhalten von InputHook.KeyOpt() bei einzelnen Zeichen.</p>
+<ul>
+<li>Die Entfernung einer Option hat potenziell keinen Einfluss auf den entsprechenden SC.</li>
+<li>Optionen, die potenziell auch auf sc000 angewendet werden.</li>
+</ul>
+<p>Behoben: Ein Bug bei benutzerdefinierten Kombos, bei dem ein Satz von Hotkeys wie <code>a &amp; b::</code>, <code>a::</code> und <code>a up::</code> das Loslassen von <kbd>a</kbd> nicht unterdrücken konnte, wenn <code>a::</code> allein mit #HotIf deaktiviert wurde.</p>
+<p>Behoben: Ein Bug, bei dem ein Taste-Unten-Ereignis korrekt durch einen Hotkey unterdrückt wurde, aber das Senden eines zusätzlichen Taste-Unten mit SendLevel &gt; 0 verhinderte, dass das nachfolgende Taste-Oben unterdrückt wurde, selbst wenn das gesendete Ereignis aufgrund von #InputLevel ignoriert wurde.</p>
+<p>Behoben: <code>a &amp; b up::</code> unterdrückte <kbd>b</kbd> nicht, wenn <code>a &amp; b::</code> vorhanden, aber durch #HotIf deaktiviert ist.</p>
+<p>Behoben: Hotkeys wurden aufgrund einer Race Condition nicht ausgelöst. Wenn ein Modifikator-Hotkey wie <code>~*RWin::</code> zu früh Send oder GetKeyState aufruft, kann das System melden, dass RWin nicht unten ist, wodurch der Modifikatorstatus des Hooks "korrigiert" wird und Hotkeys fälschlicherweise ausgelöst oder nicht ausgelöst werden. Dies trat wahrscheinlich nur auf, wenn ein anderer Tastatur-Hook vor dem Hook des Skripts installiert wurde, da in diesem Fall das System den Status der Tasten nicht aktualisiert, bis der Thread des anderen Hooks fortgesetzt wird und zurückkehrt.</p>
+<p>Behoben: Hotstrings verwenden nun das Zuletzt Gefundene Fenster von #HotIf.</p>
+<p>Behoben: Der Versuch, den Tastatur- oder Maus-Hook neu zu installieren, schlug fehl, wenn das System den Hook automatisch deinstalliert hat. Nach wie vor müssen bestimmte Bedingungen erfüllt sein, bevor ein solcher Versuch unternommen werden kann.</p>
+<p>Optimiert: Speicherreservierung von zwischengespeicherten COM-Eigenschaftsnamen für internes IDispatch.</p>
+<p>Code überarbeitet: Unterstützung einer Build-Konfiguration für AutoHotkey als DLL.</p>
+
+<h2 id="v2.1-alpha.1">2.1-alpha.1 - 23. Juni 2023</h2>
+<p>Basiert auf v2.0.3.</p>
+<p>Verbessert: <a href="lib/RegExReplace.htm">RegExReplace</a> unterstützt nun die Angabe einer Rückruffunktion anstelle eines Ersatztextes, basierend auf PR #307 von thqby.</p>
+<p>Hinzugefügt: <a href="lib/WinGetEnabled.htm">WinGetEnabled</a>.</p>
+<p>Hinzugefügt: <a href="lib/WinGetAlwaysOnTop.htm">WinGetAlwaysOnTop</a>.</p>
+<p>Hinzugefügt: Optionaler <em>DateiName</em>-Parameter für <a href="lib/Edit.htm">Edit</a>.</p>
+<p>Hinzugefügt: Die Gui-Klasse hat nun eine <a href="lib/Gui.htm#OnMessage">OnMessage</a>-Methode, basierend auf Code von thqby.</p>
+<p>Hinzugefügt: Nicht-modale Menüs.</p>
+<ul>
+<li>Neue Threads können nun ausgeführt werden, ohne dass das Menü einfriert.</li>
+<li>Hinzugefügt: <em>Warten</em>-Parameter (#3) für <a href="lib/Menu.htm#Show">Menu.Prototype.Show</a>.</li>
+<li>Geändert: Das Tray-Menü blockiert den unterbrochenen Thread nicht mehr.</li>
+</ul>
+<p>Hinzugefügt: <code>ATan2(y, x)</code>. [PR #319 von sswwaagg]</p>
+<p>Enthält Änderungen aus dem v1.1-Zweig:</p>
+<ul>
+<li>Hinzugefügt: Unterstützung für ByRef VARIANT in eingehenden COM-Aufrufen.</li>
+<li>Behoben: Weggelassene IDispatch-Parameter werden nun korrekt als SYM_MISSING übersetzt.</li>
+<li>Hinzugefügt: Unterstützung für Zwei-Variablen-Enumeratoren (For-Schleifen) mit IDispatch-gewrappten AutoHotkey-Objekten.</li>
+</ul>
+
+<h2 id="v2.0.3">2.0.3 - 19. Juni 2023</h2>
+<p>Behoben: <code>Hotkey("a", "b")</code> verwendet nun die Originalfunktion von "b", nicht "a". [PR #318]</p>
+<p>Behoben: FileSetAttrib stürzt nicht mehr ab, wenn es in einer dateilesenden Schleife verwendet wird. [PR #323]</p>
+<p>Behoben: Fehler bzgl. doppelter Gui-Steuerelement-Namen brechen den Thread nun korrekt ab.</p>
+<p>Behoben: Die Range-Option von DateTime/MonthCal wendete nicht den Minimalwert an.</p>
+<p>Behoben: <code>s[x] =&gt; x</code> und andere einzeilige Eigenschaften, die mit "s" beginnen.</p>
+<p>Behoben: Bug beim Löschen eines Haltepunkts auf einer static-Zeile, die <code>=&gt;</code> enthält.</p>
+<p>Behoben: Das Button-Steuerelement wurde nicht zur Standardschaltfläche, wenn es angeklickt wurde.</p>
+<p>Behoben: PixelSearch macht X nun leer, wenn das Pixel nicht gefunden wird.</p>
+<p>Behoben: Ein Hotstring mit Escapesequenz führte dazu, dass die nächste Zeile übersprungen wurde.</p>
+<p>Behoben: FensterTitel ignorierte Zeichen 1, wenn "ahk_" bei Zeichen 2 ist.</p>
+<p>Behoben: Neubelegung verwendet nun den rechten Modifikator, der gerade unten ist. Zum Beispiel wird <code>+x::+y</code> nicht mehr RShift loslassen, um LShift zu drücken.</p>
+<p>Geändert: Fehlermeldung für <code>a == b &amp;&amp; c()</code> und ähnliche Fälle, um Hinweise auf das Legacy-<code>=</code> zu vermeiden.</p>
+<p>Verbessert: Fehlermeldung für einige Fälle von unbeabsichtigter Zeilenfortsetzung.</p>
+<p>Behoben: Reservierte Wörter können nun als Methodennamen verwendet werden, wie dokumentiert.</p>
+<p>Behoben: Doppelte OnMessage-Aufrufe für einige Tastaturmeldungen.</p>
+<p>Behoben: Ineinander referenzierte Closures wurden vorzeitig gelöscht.</p>
+<p>Behoben: SetFont erlaubt nun Leerzeichen am Anfang im Options-Parameter.</p>
+<p>Behoben: Senden von <code class="no-highlight">{ASC nnnn}</code>.</p>
+<p>Behoben: <code>a.base := a</code> löst nun einen Fehler aus.</p>
+<p>Behoben: <code>x.y := unset</code> führte zu Abstürzen oder undefiniertem Verhalten.</p>
+<p>Behoben: GuiControl.Move() ist nun relativ zum Clientbereich der GUI, selbst wenn die GUI nicht übergeordnet ist.</p>
+<p>Behoben: Menu Add überschrieb Menüpunkte, die mit Menu Insert angefügt wurden.</p>
+<strong>Launcher</strong>
+<p>Dash ausführen, anstatt die alte Willkommensseite in der Dokumentation anzuzeigen, wenn es ohne Parameter ausgeführt wird.</p>
+<p>Behoben: Die Versionsauswahl-GUI verursachte einen Fehler, wenn Enter gedrückt wurde, ohne eine Version auszuwählen. [PR UX/#4]</p>
+<p>Fehler unterdrücken, wenn geprüft wird, ob eine fehlende Version heruntergeladen werden kann.</p>
+<p>Behoben: Die Aufforderung zum Herunterladen einer fehlenden Version zeigt nicht mehr das UAC-Schild an, wenn UAC deaktiviert ist.</p>
+<p>Behoben: Probleme bei der Interpretation von #Requires.</p>
+<ul>
+<li>Unterstützung für das Weglassen des Präfixes "v".</li>
+<li>Unterstützung für die Operatoren (<code class="no-highlight">&gt; &gt;= &lt; &lt;= =</code>).</li>
+<li>Unterstützung für Versionen mit nur einer Ziffer.</li>
+</ul>
+<strong>Installation</strong>
+<p>Behoben: Standard-Installationsverzeichnis für die Befehlszeilenverwendung.</p>
+<p>Die Startmenüverknüpfung wurde von "AutoHotkey" in "AutoHotkey Dash" umbenannt.</p>
+<p>Behoben: EnableUIAccess bei der Ausführung als SYSTEM.</p>
+<p>Behoben: EnableUIAccess verifiziert nun den Privatschlüssel bei der Auswahl eines Zertifikats.</p>
+<strong>Dash</strong>
+<p>Behoben: Launch Config GUI aktualisiert nun die Optionen "Run as administrator" und "Run with UI access".</p>
+<p>Behoben: Nach-Oben/Unten-Pfeiltasten-Handhabung in der Launch Config GUI.</p>
+
+<h2 id="v2.0.2">2.0.2 - 2. Januar 2023</h2>
+<p>Behoben: Kurze DllCall-Arg-Typen und undefiniertes Verhalten bei ungültigen Typen.</p>
+<p>Behoben: (Nicht-Zeichenketten-)Dateiversionsnummer bei AutoHotkey-Binärdateien.</p>
+<p>Behoben: Parametertypfehler zeigen nun die richtige Parameternummer an.</p>
+
+<h2 id="v2.0.1">2.0.1 - 1. Januar 2023</h2>
+<p>Behoben: Func.IsOptional(1) gab manchmal 0 zurück, wo es nicht sollte.</p>
+<p>Behoben: GUI-Ereignishandler-Funktionen lassen den Gui-Parameter nicht mehr weg, wenn die GUI ihr eigener Event-Sink ist.</p>
+<p>Behoben: COM-Fehler zeigen nicht mehr "(null)" an, wenn keine Beschreibung verfügbar ist.</p>
+<p>Behoben: ToolTips wurden manchmal an der falschen Stelle angezeigt.</p>
+<p>Behoben: __Enum(unset) erlaubt nun eine zweite Variable für Array, Match und Gui.</p>
+<p>Behoben: "#Include &lt;&gt;"-Fehlermeldungen zeigen nun "Script library" statt "Function library" an.</p>
+<p>Behoben: Neue Threads konnten eine Meldungsüberprüfung mit Critical nicht verhindern.</p>
+<p>Optimiert: Konvertierung von DllCall-Typnamen.</p>
+<p>Optimiert: Triviale, aber effektive Optimierungen der Codegröße.</p>
+
+<h2 id="Pre-Release">Pre-Release</h2>
+<p>Einen Verlauf der Änderungen vor dem v2.0.0-Release finden Sie an folgenden Orten (beachten Sie jedoch, dass einige Änderungen inzwischen hinfällig sind):</p>
+<ul>
+  <li><a href="https://www.autohotkey.com/boards/viewtopic.php?f=24&t=110696">v2.0 Release Candidates</a></li>
+  <li><a href="https://www.autohotkey.com/boards/viewtopic.php?f=24&t=95688">v2.0-beta Releases</a></li>
+  <li><a href="https://www.autohotkey.com/boards/viewtopic.php?f=37&t=2120">v2.0-alpha Releases</a></li>
+</ul>
+</body>
+</html>

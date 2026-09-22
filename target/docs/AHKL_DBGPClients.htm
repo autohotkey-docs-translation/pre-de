@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Debugging-Clients | AutoHotkey v2</title>
+<meta name="description" content="Diese Seite listet einige Debugging-Clients oder UIs auf, von denen bekannt ist, dass sie mit AutoHotkey kompatibel sind." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="static/theme.css" rel="stylesheet" />
+<link href="static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="static/content.js" id="content_js"></script>
+<script src="static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>Debugging-Clients</h1>
+
+<p><a href="https://xdebug.org/docs/dbgp">DBGp</a> ist ein häufig verwendetes Debugger-Protokoll für Programmiersprachen und Debugger-UI-Kommunikation. Dieses Protokoll ermöglicht den Zugriff auf erweiterte Features zur Fehleranalyse. Weitere Informationen finden Sie unter <a href="Scripts.htm#idebug">Interaktives Debugging</a>. Auf dieser Seite sind einige UIs oder "Clients" aufgelistet, von denen bekannt ist, dass sie mit AutoHotkey kompatibel sind:</p>
+<ul>
+  <li><a href="#SciTE4AutoHotkey">SciTE4AutoHotkey</a></li>
+  <li><a href="#XDebugClient">XDebugClient</a></li>
+  <li><a href="#Notepad++">DBGp-Plugin für Notepad++</a></li>
+  <li><a href="#dbgp.ahk">Skriptbasierte Clients</a></li>
+  <li><a href="#command-line-client">Befehlszeilen-Client</a></li>
+  <li><a href="#others">Sonstige</a></li>
+</ul>
+
+<h2 id="SciTE4AutoHotkey">SciTE4AutoHotkey</h2>
+<p><a href="https://www.autohotkey.com/scite4ahk/">SciTE4AutoHotkey</a> ist ein kostenloser Texteditor für AutoHotkey-Skripte auf Basis von <a href="https://www.scintilla.org/SciTE.html">SciTE</a>. Dieser Texteditor unterstützt neben DBGp auch Syntaxhervorhebung, Calltips/Parameterinformation, Autovervollständigung und weitere nützliche Editierfunktionen und Scripting-Tools.</p>
+<p>Folgende Debugging-Features sind enthalten:</p>
+<ul>
+  <li>Haltepunkte.</li>
+  <li>Ausführen, Betreten, Überspringen, Verlassen.</li>
+  <li>Aufrufliste anzeigen.</li>
+  <li>Namen und Inhalte von lokalen/globalen Variablen auflisten.</li>
+  <li>Mauszeiger über die Variable bewegen, um den Inhalt anzuzeigen.</li>
+  <li>Variableninhalte prüfen und bearbeiten.</li>
+  <li>Struktur von Objekten anzeigen.</li>
+</ul>
+<p><a href="https://www.autohotkey.com/scite4ahk/">https://www.autohotkey.com/scite4ahk/</a></p>
+
+<h2 id="VSCode">Visual Studio Code</h2>
+<p>Mit der <a href="https://marketplace.visualstudio.com/items?itemName=zero-plusplus.vscode-autohotkey-debug">vscode-autohotkey-debug</a>-Erweiterung kann <a href="https://code.visualstudio.com/">Visual Studio Code</a> als Debugger-Client für AutoHotkey fungieren. Die Erweiterung unterstützt alle grundlegenden Debugging-Funktionen sowie einige erweiterte Funktionen wie Haltepunktdirektiven (als Kommentare) und bedingte Haltepunkte.</p>
+
+<h2 id="XDebugClient">XDebugClient</h2>
+<p><a href="https://code.google.com/archive/p/xdebugclient/">XDebugClient</a> ist ein einfacher Open-Source-Frontend-DBGp-Client auf Basis von <b>.NET Framework 2.0</b>. XDebugClient wurde ursprünglich für PHP mit Xdebug entwickelt. Allerdings finden Sie weiter unten einen benutzerdefinierten Build, der mit AutoHotkey kompatibel ist.</p>
+<p><b>Änderungen:</b></p>
+<ul>
+  <li>Die Debugger-Engine kann auch mit anderen Sprachen als "php" interagieren.</li>
+  <li>Syntaxhervorhebung für AutoHotkey hinzugefügt.</li>
+  <li>Stellt sofort eine Verbindung her, wenn die Debugger-Engine eine Anfrage sendet, und nicht erst, wenn der Benutzer auf <em>Start Listening</em> klickt.</li>
+  <li>Eigenschaftswerte werden beim ersten Null-Zeichen gekürzt, da AutoHotkey derzeit den gesamten Variableninhalt zurückgibt und XDebugClient keine geeignete Oberfläche zur Darstellung binärer Inhalte hat.</li>
+</ul>
+<p><b>Download:</b> <a href="https://www.autohotkey.com/download/tools/XDebugClient.zip">Binärdateien</a>; <a href="https://www.autohotkey.com/download/tools/XDebugClient_src.zip">Quellcode</a></p>
+<p><b>Verwendung:</b></p>
+<ul>
+  <li>Starten Sie XDebugClient.</li>
+  <li>Starten Sie AutoHotkey /Debug. XDebugClient sollte die Skriptdatei automatisch öffnen.</li>
+  <li>Klicken Sie auf den linken Rand, um zumindest einen Haltepunkt zu setzen.</li>
+  <li>Wählen Sie Run im Debug-Menü aus oder drücken Sie <kbd>F5</kbd>.</li>
+  <li>Wenn die Ausführung einen Haltepunkt erreicht hat, können Sie das Debug-Menü oder die entsprechenden Tastaturkurzbefehle verwenden, um das Skript schrittweise durchzugehen oder fortzusetzen.</li>
+</ul>
+<p><b>Features:</b></p>
+<ul>
+  <li>Schreibgeschützte Ansicht des Quellcodes mit Syntaxhervorhebung.</li>
+  <li>Haltepunkte.</li>
+  <li>Ausführen, Betreten, Überspringen, Verlassen.</li>
+  <li>Aufrufliste anzeigen.</li>
+  <li>Variablen prüfen – markieren Sie dazu den Namen einer Variable, rechtsklicken Sie darauf und wählen Sie Inspect aus.</li>
+</ul>
+<p><b>Probleme:</b></p>
+<ul>
+  <li>Die Benutzeroberfläche reagiert nicht auf Benutzereingaben, während das Skript läuft.</li>
+  <li>Es gibt keine Mechanismen, um Variablen aufzulisten oder ihre Werte zu setzen.</li>
+</ul>
+
+<h2 id="Notepad++">DBGp-Plugin für Notepad++</h2>
+<p><a href="https://notepad-plus-plus.org/">Notepad++</a> <strong>32-Bit</strong> kann via Plugin als DBGp-Client verwendet werden. Es ist für PHP konzipiert, funktioniert aber auch mit AutoHotkey. Das Plugin wurde seit 2012 nicht mehr aktualisiert und ist nicht für Notepad++ 64-Bit verfügbar.</p>
+<p><b>Download:</b> Siehe <a href="https://sourceforge.net/projects/npp-plugins/files/DBGP%20Plugin/">DBGp-Plugin für Notepad++</a>.</p>
+<p><b>Verwendung:</b></p>
+<ul>
+  <li>Starten Sie Notepad++.</li>
+  <li>Konfigurieren Sie das DBGp-Plugin über <i>Erweiterungen</i>, <i>DBGp</i>, <i>Config...</i>
+    <p class="note"><b>Hinweis:</b> Dateizuordnung muss konfiguriert werden. Da Sie vermutlich kein ferngesteuertes Debugging durchführen werden, können Sie ein Häkchen bei <i>Bypass all mapping (local windows setup)</i> setzen.</p>
+  </li>
+  <li>Öffnen Sie das Debugger-Fenster via Symbolleiste oder <b>Erweiterungen</b>, <b>DBGp</b>, <b>Debugger</b>.</li>
+  <li>Öffnen Sie das Skript, das Sie debuggen möchten.</li>
+  <li>Setzen Sie mindestens einen Haltepunkt.</li>
+  <li>Starten Sie AutoHotkey /Debug.</li>
+  <li>Verwenden Sie die Debugger-Symbolleiste oder die entsprechenden Tastaturkurzbefehle, um den Debugger zu steuern.</li>
+</ul>
+<p><b>Features:</b></p>
+<ul>
+  <li>Syntaxhervorhebung, wenn vom Benutzer konfiguriert.</li>
+  <li>Haltepunkte.</li>
+  <li>Ausführen, Betreten, Überspringen, Verlassen, Ausführen bis zur Einfügemarke, Stopp.</li>
+  <li>Lokale/globale Variablen anschauen.</li>
+  <li>Benutzerdefinierte Variablen überwachen.</li>
+  <li>Aufrufliste anzeigen.</li>
+  <li>Mauszeiger über die Variable bewegen, um den Inhalt anzuzeigen.</li>
+  <li>Frei konfigurierbare Tastaturkurzbefehle – Einstellungen, Tastatur ..., Plugin commands.</li>
+</ul>
+<p><b>Probleme:</b></p>
+<ul>
+  <li>Wenn Sie den Mauszeiger über den Namen einer Variable bewegen, der nur aus einem Buchstaben besteht, wird der Inhalt dieser Variable nicht angezeigt – wenn Sie zum Beispiel den Mauszeiger über <code class="no-highlight">a</code> bewegen, wird versucht, den Inhalt von <code class="no-highlight"> a</code> oder <code class="no-highlight">a </code> abzurufen.</li>
+  <li>Wenn Sie den Mauszeiger über einen Text bewegen, wird immer versucht, eine Variable abzurufen, egal ob der Text ungültige Zeichen enthält oder nicht.</li>
+  <li>Notepad++ wird instabil, wenn property_get fehlschlägt, was in Anbetracht zu oben zu Problemen führen kann. Um das zu umgehen, sendet AutoHotkey eine leere Eigenschaft anstelle eines Fehlercodes, wenn eine nicht existierende oder ungültige Variable angefordert wird.</li>
+</ul>
+
+<h2 id="dbgp.ahk">Skriptbasierte Clients</h2>
+<p>Eine skriptbasierte DBGp-Bibliothek und Beispiel-Clients sind auf GitHub erhältlich.</p><ul>
+  <li>dbgp_console.ahk: Einfacher Befehlszeilen-Client.</li>
+  <li>dbgp_test.ahk: Zeigt asynchrones Debugging.</li>
+  <li>dbgp_listvars.ahk: Ein Beispiel-Client, der nur die Variablen aller laufenden Skripte auflistet.</li>
+</ul>
+<p>GitHub: <a href="https://github.com/Lexikos/dbgp">Lexikos / <strong>dbgp</strong></a></p>
+<p>Das DebugVars-Skript bietet eine grafische Benutzeroberfläche, mit der man Inhalte von Variablen und Objekten in jedem laufenden Skript (außer kompilierten Skripten) untersuchen und ändern kann. Es zeigt auch, wie die dbgp.ahk-Bibliothek verwendet werden kann.</p>
+<p>GitHub: <a href="https://github.com/Lexikos/DebugVars.ahk#debugvars">Lexikos / <strong>DebugVars</strong></a></p>
+
+<h2 id="command-line-client">Befehlszeilen-Client</h2>
+<p>Ein Befehlszeilen-Client ist auf <a href="https://xdebug.org/">xdebug.org</a> erhältlich, aber beachten Sie, dass dieser Client solide Kenntnisse über DBGp (das Protokoll) voraussetzt.</p>
+
+<h2 id="others">Sonstige</h2>
+<p>Es gibt viele andere DBGp-Clients, die aber noch nicht mit AutoHotkey getestet wurden. Siehe <a href="https://xdebug.org/docs/remote">Xdebug: Dokumentation</a>.</p>
+
+</body>
+</html>

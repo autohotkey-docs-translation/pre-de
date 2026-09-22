@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Edit - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die Edit-Funktion öffnet das aktuelle Skript (oder eine bestimmte Datei) zum Editieren im Standardeditor." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>Edit</h1>
+
+<p>Öffnet das aktuelle Skript (oder eine bestimmte Datei) zum Editieren im Standardeditor.</p>
+
+<pre class="Syntax"><span class="func">Edit</span> <span class="optional">DateiName</span></pre>
+
+<h2 id="Parameters">Parameter</h2>
+<dl>
+  <dt>DateiName <span class="ver">[v2.1-alpha.1+]</span></dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn weggelassen, wird standardmäßig <a href="../Variables.htm#ScriptFullPath">A_ScriptFullPath</a> (die Hauptdatei des aktuellen Skripts) verwendet. Andernfalls geben Sie den Namen der Datei an, die zum Editieren geöffnet werden soll. Wenn kein absoluter Pfad angegeben ist, wird die Datei im <a href="../Variables.htm#ScriptDir">A_ScriptDir</a>-Verzeichnis vermutet. <a href="SetWorkingDir.htm">SetWorkingDir</a> ist wirkungslos.</p>
+  </dd>
+</dl>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Die Edit-Funktion öffnet die Datei zum Editieren mithilfe des zugeordneten Verbs "edit", das in der Registry angegeben ist (oder in Notepad, wenn kein Verb vorhanden ist). Wenn die Datei jedoch bereits in einem Editorfenster geöffnet ist (abhängig vom Fenstertitel), und ruft man Edit ohne den Parameter <em>DateiName</em> auf, aktiviert Edit dieses Fenster, anstatt eine neue Instanz des Editors zu öffnen.</p>
+<p>Programme, Skripte oder Befehlszeilen, die standardmäßig mit dem Verb "edit" ausgeführt werden, können über die <em>Editor settings</em> (Editoreinstellungen) im <a href="../Program.htm#dash">Dash</a> geändert werden (dies gilt nur für .ahk-Dateien).</p>
+<p>Diese Funktion hat keine Wirkung, wenn sie ohne den Parameter <em>DateiName</em> innerhalb eines kompilierten Skripts aufgerufen wird.</p>
+<p>Beachten Sie, dass bei <a href="../misc/Editors.htm">vielen Editoren</a> eine Syntaxhervorhebung für AutoHotkey aktiviert werden kann. Zusätzlich kann mit <a href="../scripts/index.htm#ContextSensitiveHelp">diesem Beispiel</a> eine kontextabhängige Hilfe für AutoHotkey-Funktionen aktiviert werden. Zur Steigerung der Produktivität kann ein Autovervollständigungs-Tool wie <a href="https://www.autohotkey.com/boards/viewtopic.php?f=60&t=31484">das Skript von boiler</a> oder <a href="https://www.autohotkey.com/boards/viewtopic.php?f=60&t=27882">das Skript von Helgef</a> verwendet werden, das mit fast jedem Editor funktioniert. Es überwacht, was Sie eingeben, und zeigt Menüs und Parameterlisten an, die Ihnen einen Teil der Tipparbeit abnehmen und Sie an die Reihenfolge der Parameter erinnern.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="Reload.htm">Reload</a>, <a href="../Program.htm#edit">Wie man ein Skript editiert</a>, <a href="../misc/Editors.htm">Editoren mit AutoHotkey-Unterstützung</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Öffnet das Skript zum Editieren.</p>
+<pre>Edit</pre>
+</div>
+
+<div class="ex" id="ExDefaultEditor">
+<p><a class="ex_number" href="#ExDefaultEditor"></a> Wenn die Befehlszeilenverwendung Ihres Editors ungefähr wie <code class="no-highlight">Editor.exe "Kompletter Pfad des Skripts.ahk"</code> aussieht, können Sie ihn wie folgt als Standardeditor für AHK-Dateien festlegen. Wenn Sie das Skript ausführen, werden Sie aufgefordert, die EXE-Datei Ihres Editors auszuwählen.</p>
+<pre>Editor := FileSelect(2,, "Wählen Sie Ihren Editor aus", "Programme (*.exe)")
+if Editor = ""
+    ExitApp
+RegWrite Format('"{1}" "%L"', Editor), "REG_SZ", "HKCR\AutoHotkeyScript\Shell\Edit\Command"</pre>
+</div>
+
+</body>
+</html>

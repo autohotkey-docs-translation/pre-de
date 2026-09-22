@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Änderungen von v2.0 bis v2.1 | AutoHotkey v2</title>
+<meta name="description" content="Änderungen zwischen v2.0 und v2.1." />
+<meta name="ahk:equiv-v1" content="AHKL_ChangeLog.htm" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="static/theme.css" rel="stylesheet" />
+<link href="static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="static/content.js" id="content_js"></script>
+<script src="static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+<h1>Änderungen von v2.0 bis v2.1</h1>
+<p>Diese Seite enthält eine vollständige Übersicht über alle Änderungen zwischen AutoHotkey v2.0 und v2.1. Änderungen nach v2.1 finden Sie im <a href="ChangeLog.htm">Änderungsprotokoll</a>. Technische Details zu den Änderungen erhalten Sie auf <a href="https://github.com/AutoHotkey/AutoHotkey/tree/alpha">GitHub</a>.</p>
+
+<h2 id="toc">Inhaltsverzeichnis</h2>
+<ul>
+  <li><a href="#High_Impact">Hohe Auswirkung</a>
+    <ul>
+      <li><a href="#Modeless_Menus">Nicht-modale Menüs</a></li>
+      <li><a href="#Default_DPI_Awareness">Standard-DPI-Sensitivität</a></li>
+    </ul>
+  </li>
+
+  <li><a href="#CompatMode">Kompatibilitätsmodus</a>
+    <ul>
+      <li><a href="#v21mode">v2.1-Modus</a></li>
+    </ul>
+  </li>
+
+  <li><a href="#Low_Impact">Geringe Auswirkung</a>
+    <ul>
+      <li><a href="#New_Return_Values">Neue Rückgabewerte</a></li>
+      <li><a href="#Keyboard_Input">Tastatureingabe</a></li>
+      <li><a href="#Debugger">Debugger</a></li>
+      <li><a href="#DPI_Awareness">DPI-Sensitivität</a></li>
+    </ul>
+  </li>
+
+  <li><a href="#Backward-Compatible">Abwärtskompatibel</a>
+    <ul>
+      <li><a href="#Syntax_and_Core_Objects">Syntax und Kernobjekte</a></li>
+      <li><a href="#Keyboard_and_Mouse">Tastatur und Maus</a></li>
+      <li><a href="#Built-in_Functions">Interne Funktionen</a></li>
+      <li><a href="#Built-in_Variables">Interne Variablen</a></li>
+      <li><a href="#Built-in_Classes">Interne Klassen</a></li>
+      <li><a href="#Misc">Sonstiges</a></li>
+      <li><a href="#Optimizations">Optimierungen</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="High_Impact">Hohe Auswirkung</h2>
+<p>Diese Änderungen können dazu führen, dass v2.0-Skripte im aktuellen Release nicht wie erwartet funktionieren.</p>
+
+<h3 id="Modeless_Menus">Nicht-modale Menüs</h3>
+<p>Das Tray-Menü und <a href="lib/Menu.htm#Show">Menu.Show</a> verwenden nun nicht-modale Menüs. Dadurch können neue Threads gestartet werden, ohne dass das Menü einfriert. Die systemseitige Unterstützung für nicht-modale Menüs verursacht einige Bugs in Bezug auf die Z-Reihenfolge und die Möglichkeit, auf den ersten Menüpunkt in einem Untermenü zu klicken. Derzeit sind nicht-modale Menüs standardmäßig aktiviert. Dies kann sich jedoch ändern, wenn keine Lösungen für die Bugs gefunden werden.</p>
+
+<h3 id="Default_DPI_Awareness">Standard-DPI-Sensitivität</h3>
+<p>Die DPI-Sensitivität verwendet nun standardmäßig "Per Monitor v2" statt "System".</p>
+<p>Skripte sind von dieser Änderung nur in bestimmten Szenarien betroffen, wie unter <a href="misc/DPIScaling.htm#OS_DPI_Scaling">OS-DPI-Skalierung</a> beschrieben. Um die Auswirkungen dieser Änderung zu verstehen, ist ein grundlegendes Verständnis über die <a href="misc/DPIScaling.htm">DPI-Skalierung</a> erforderlich, insbesondere im Hinblick auf zwei Phänomene, die bei einer DPI-Diskrepanz Auswirkungen auf System-DPI-sensitive Skripte haben:</p>
+<ul>
+  <li>Die Fenster des Skripts werden vom System bitmap-skaliert. Dadurch bleiben GUI-Fenster in der Regel auch bei DPI-Übergängen ohne zusätzlichen Aufwand seitens des Skripts nutzbar. Allerdings erscheinen alle Fenster, die nicht der System-DPI entsprechen, unscharf.</li>
+  <li>Koordinaten werden virtualisiert; das heißt, sie werden auf Basis der System-DPI zwischen physischen Pixeln und einem Koordinatenraum umgerechnet. Virtualisierte Koordinaten sind im Zusammenhang mit den automatisch skalierten Fenstern des Skripts sinnvoll, können jedoch in Skripten, die mit externen Fenstern arbeiten, zu unerwarteten Ergebnissen führen.</li>
+</ul>
+<p>Pro-Bildschirm-DPI-Sensitivität deaktiviert die DPI-Virtualisierung und Bitmap-Skalierung und verlangt folglich vom Programm, auf DPI-Änderungen zu reagieren, z.B. durch Größenänderung der GUI und ihrer Steuerelemente. Dies geschieht nun standardmäßig automatisch, es sei denn, das Skript deaktiviert <a href="lib/Gui.htm#DPIResize">DPIResize</a> für die GUI oder das Steuerelement. Die interne Skalierung ist nicht perfekt und erfordert in manchen Fällen zusätzliche Unterstützung durch das Skript.</p>
+<p>Skripte, die mit der neuen Standardeinstellung nicht zurechtkommen, können den bisherigen Modus in einem engeren Kontext wiederherstellen, wie unter <a href="misc/DPIScaling.htm#Mixed_Settings">DPI-Skalierung: Gemischte Einstellungen</a> beschrieben.</p>
+<p>Skripte, <a href="misc/DPIScaling.htm#Workarounds">die bereits für den Pro-Bildschirm-Modus ausgelegt sind</a>, bleiben wahrscheinlich von dieser Änderung weitgehend unberührt. Bei solchen Skripten wurde möglicherweise bereits beobachtet, dass sich der Modus unter bestimmten Bedingungen unerwartet zurücksetzt. Das liegt daran, dass das Hauptfenster des Skripts erstellt wird, bevor das Skript den Modus setzt. Einzelheiten finden Sie unter <a href="misc/DPIScaling.htm#New_Threads">DPI-Skalierung: Neue Threads</a>.</p>
+<p>Hardcodierte Bildschirmkoordinaten und Offsets müssen für sekundäre Bildschirme möglicherweise angepasst werden. Dies wäre jedoch ohnehin erforderlich, wenn sich die Anzeigeeinstellungen ändern würden.</p>
+
+<h2 id="CompatMode">Kompatibilitätsmodus <span class="ver">[v2.1-alpha.29+]</span></h2>
+<p>Einige Änderungen am Verhalten des Skripts werden nur aktiviert, wenn mit <a href="lib/_Requires.htm">#Requires</a> eine Versionsanforderung angegeben wird, die von "2.0.x" nicht erfüllt werden kann. Derzeit gibt es zwei Modi: v2.0-Modus und v2.1-Modus. Der Modus kann für jedes <a href="Modules.htm">Modul</a> und jede <a href="Functions.htm">Funktion</a> separat festgelegt werden. Einzelheiten dazu, wie die Direktive funktioniert, finden Sie unter <a href="lib/_Requires.htm#CompatMode">Kompatibilitätsmodus (#Requires)</a>.</p>
+<p>Standardmäßig wird der v2.0-Modus verwendet, was jedoch die Nutzung von Features, die v2.1 erfordern, nicht ausschließt.</p>
+<h3 id="blank-unset">Leer-Ungesetzt</h3>
+<p>Dieser Begriff wird im Zusammenhang mit Eigenschaften und Rückgabewerten verwendet. In v2.0 und bei Rückgabe an einen Aufrufer im v2.0-Modus ist der Wert <code>""</code> (eine leere Zeichenkette). Wenn eine <a href="Variables.htm#fat-arrow">Fat-Arrow-Funktion</a> einen endständigen Aufruf wie <code>X() =&gt; Y()</code> ausführt, kann ein <em>Leer-Ungesetzt</em>-Ergebnis ohne den <a href="Variables.htm#maybe">Vielleicht-Operator (?)</a> propagiert werden. Andernfalls ist es äquivalent zu <code>unset</code>.</p>
+<p>Interne Funktionen geben <em>leer-ungesetzt</em> zurück, wenn sie keinen dokumentierten Rückgabewert besitzen.</p>
+<p>Folgende Dinge geben <em>leer-ungesetzt</em> zurück, wenn bestimmte Bedingungen erfüllt sind, unter denen zuvor <code>""</code> zurückgegeben wurde:</p>
+<ul>
+  <li><a href="lib/Array.htm">Array</a>: Delete, Pop, RemoveAt</li>
+  <li><a href="lib/Object.htm">Object</a>: DeleteProp</li>
+  <li><a href="lib/Gui.htm">Gui</a>: __Item, FocusedCtrl, MenuBar</li>
+  <li><a href="lib/GuiFromHwnd.htm">GuiFromHwnd</a></li>
+  <li><a href="lib/GuiCtrlFromHwnd.htm">GuiCtrlFromHwnd</a></li>
+  <li><a href="lib/InputHook.htm">InputHook</a>: OnChar, OnEnd, OnKeyDown, OnKeyUp</li>
+  <li><a href="lib/MenuFromHandle.htm">MenuFromHandle</a></li>
+  <li><a href="lib/Any.htm#GetBase">ObjGetBase</a> und <a href="lib/Any.htm#Base">Base (Any)</a></li>
+  <li><a href="lib/RegExMatch.htm">RegExMatch</a>: AusgabeVar</li>
+</ul>
+
+<h3 id="Default_Return">Standardrückgabe</h3>
+<p>Wenn das Ende eines Funktionskörpers erreicht ist oder <code>return</code> ohne Parameter verwendet wird, kann die Funktion <code>""</code> (eine leere Zeichenkette), <code>unset</code> oder <a href="#blank-unset"><em>leer-ungesetzt</em></a> zurückgeben.</p>
+<ul>
+  <li>Funktionen im v2.0-Modus verwenden standardmäßig <code>""</code>.</li>
+  <li>Funktionen im v2.1-Modus verwenden standardmäßig <code>unset</code>, wenn <code>return</code> mit einem Parameter irgendwo innerhalb der Funktion verwendet wird.</li>
+  <li>Andernfalls wird standardmäßig <a href="#blank-unset"><em>leer-ungesetzt</em></a> verwendet.</li>
+</ul>
+
+<h3 id="v20mode">v2.0-Modus</h3>
+<p>Wenn eine Funktion oder Eigenschaft im v2.0-Modus aufgerufen wird und <a href="#blank-unset"><em>leer-ungesetzt</em></a> zurückgibt, wird der Rückgabewert in <code>""</code> (eine leere Zeichenkette) übersetzt.</p>
+<p>Siehe auch: <a href="#Default_Return">Standardrückgabe</a>, <a href="#blank-unset"><em>Leer-Ungesetzt</em></a></p>
+
+<h3 id="v21mode">v2.1-Modus</h3>
+<p>Folgende Dinge geben <code>unset</code> zurück, wenn bestimmte Bedingungen erfüllt sind, anstatt einen Fehler auszulösen:</p>
+<ul>
+  <li><a href="lib/Array.htm">Array</a>: __Item, Get</li>
+  <li><a href="lib/Gui.htm">Gui</a>: __Item</li>
+  <li><a href="lib/Map.htm">Map</a>: __Item, Delete, Get</li>
+  <li><a href="lib/Object.htm">Object</a>: GetMethod, GetOwnPropDesc</li>
+</ul>
+<p>Insgesamt wird <code>unset</code> bei fehlenden Elementen oder Werten konsistenter zurückgegeben. In v2.0 (und im v2.0-Modus) geben einige Methoden oder Eigenschaften hingegen <code>""</code> zurück, während andere einen UnsetItemError auslösen.</p>
+<p>Siehe auch: <a href="#Default_Return">Standardrückgabe</a>, <a href="#blank-unset"><em>Leer-Ungesetzt</em></a></p>
+
+<h2 id="Low_Impact">Geringe Auswirkung</h2>
+<p>Diese Änderungen sollten die Funktionsfähigkeit von v2.0-Skripten nicht beeinträchtigen, können jedoch das Programmverhalten beeinflussen. Dazu gehören einige Änderungen am Verhalten, das bisher nicht dokumentiert war (auf das sich ein Skript daher nicht hätte verlassen sollen), sowie einige Änderungen am dokumentierten Verhalten, die grundsätzlich keine Anpassungen an bestehenden Skripten erfordern sollten.</p>
+<p><a href="lib/InputHook.htm">InputHook</a>: Wenn man jetzt mit <a href="lib/InputHook.htm#KeyOpt">KeyOpt</a> eine Option per Name von einer SC-basierten Taste entfernt, wird die Option auch vom entsprechenden VK entfernt (das Gegenteil war bereits der Fall).</p>
+<p><a href="lib/ListVars.htm">ListVars</a> zeigt ungesetzte Variablen nun als "VarName: unset", anstatt Zeichenkettenlänge und -kapazität anzuzeigen.</p>
+<p><a href="lib/MouseGetPos.htm">MouseGetPos</a> löst nun einen OSError aus, wenn die Mausposition nicht ermittelt werden kann.</p>
+<p><a href="lib/RegExReplace.htm">RegExReplace</a> kürzt <em>Ersatz</em> nicht mehr beim ersten Nullzeichen (sofern vorhanden).</p>
+<p>Wenn das Tray-Menü angezeigt wird, wird der aktuelle Thread nicht mehr blockiert.</p>
+<p><a href="lib/_Warn.htm">#Warn</a> ohne Parameter aktiviert nun VarUnset und Unreachable und deaktiviert LocalSameAsGlobal für das aktuelle <a href="Modules.htm">Modul</a>, anstatt alle Warnungen zu aktivieren und in den MsgBox-Modus zu wechseln (wie <code>#Warn All, MsgBox</code>).</p>
+<p>Es wird nun <a href="lib/_Warn.htm#UTF8">gewarnt</a>, wenn UTF-8-Dekodierungsfehler in Skriptdateien auftreten.</p>
+<p><a href="misc/WinTitle.htm">FensterTitel</a>-Parameter mit zwei unterschiedlichen <a href="misc/WinTitle.htm#ahk_id">ahk_id</a>-Werten finden nun nichts, anstatt einen der beiden Werte willkürlich zu ignorieren.</p>
+<p>Das in der EXE eingebettete Manifest hat nun disableWindowFiltering, wodurch mehr Fenster erkannt werden können.</p>
+<p>Folgende Dinge sind nun nicht-Groß-/Kleinschreibung-sensitiv auf ASCII-Basis, nicht mehr gemäß den aktuellen Sprach- und Regionseinstellungen des Benutzers: Tab-Steuerelement-Methode <a href="lib/GuiControls.htm#Tab_UseTab">UseTab</a> (mit Ausnahme des <em>VollNameVergleich</em>-Modus, der bereits ausschließlich ASCII-basiert war), Methode <a href="lib/GuiControl.htm#Choose">Choose</a> und Eigenschaft <a href="lib/GuiControl.htm#Text">Text</a>; Menu-Methode <a href="lib/Menu.htm#Add">Add</a>.</p>
+<ul>
+  <li>Dies ist nun konsistent mit der Nicht-Groß-/Kleinschreibung-Sensitivität der Namen von Variablen, Eigenschaften und GUI-Steuerelementen.</li>
+  <li>Wenn das Ziel darin besteht, ein zuvor hinzugefügtes Element zu identifizieren, sollte man am besten genau dieselbe Zeichenkette verwenden (was in der Regel auch erwartet wird). ASCII-fremde Zeichen wie "À" müssen in der originalen Groß-/Kleinschreibung angegeben werden. Kanonisch äquivalente Unicode-Sequenzen, die binär nicht äquivalent sind, werden nicht mehr als gleich angesehen, selbst wenn sie identisch aussehen. Ein Beispiel hierfür sind die Zeichen LATIN SMALL LETTER A WITH RING ABOVE (U+00E5) und LATIN SMALL LETTER A + COMBINING RING ABOVE (U+0061 U+030A), die beide als "å" dargestellt werden.</li>
+  <li>Bestimmte Unicode-Zeichen werden bei Vergleichen nun nicht mehr fälschlicherweise ignoriert. Zum Beispiel wurde ein Menüpunktname, der ausschließlich aus den folgenden Zeichen bestand, bisher als Trennlinie (leerer Name) interpretiert: ⮙⮝⮛⮟</li>
+</ul>
+<p>Eigenschafts-Setter, die in einer Klasse definiert sind, erlauben nun das Weglassen des <code>value</code>-Parameters (unset), sodass Zuweisungen wie <code>x.y := unset</code> behandelt werden können. Setter, die das nicht berücksichtigen, könnten zunächst mit der Ausführung beginnen und dann bei der <code>value</code>-Auswertung einen UnsetError auslösen, statt sofort beim Setter-Aufruf einen Error auszulösen.</p>
+
+<h3 id="New_Return_Values">Neue Rückgabewerte</h3>
+<p>Einige Funktionen, die bisher immer "" zurückgaben (wo nicht dokumentiert), geben nun einen nützlicheren Wert zurück:</p>
+<p><a href="lib/HotIf.htm">HotIf</a> gibt nun den vorherigen Wert von <a href="Variables.htm#HotIf">A_HotIf</a> zurück.</p>
+<p>Die Methoden <a href="lib/Menu.htm#ToggleCheck">ToggleCheck</a> und <a href="lib/Menu.htm#ToggleEnable">ToggleEnable</a> von <a href="lib/Menu.htm">Menu</a> geben nun den neuen Zustand zurück.</p>
+
+<h3 id="Keyboard_Input">Tastatureingabe</h3>
+<p>Texteingabeerfassung und Behandlung von toten Tasten wurden geändert:
+</p>
+<ul>
+  <li>Behebt einige obskure Probleme und reduziert das Risiko, dass das aktive Fenster die Behandlung von toten Tasten beeinträchtigt.</li>
+  <li>Tote Tasten mit den InputHook-Optionen S und I haben keinen Einfluss mehr auf die Eingabeerfassung.</li>
+  <li>Die InputHook-Option M ermöglicht nun die Erfassung von Ziffern des Ziffernblocks bei gedrückter Alt-Taste und wirkt sich nicht mehr auf die Alt+nnnn-Eingabe aus, wenn die Zifferntasten unterdrückt sind.</li>
+  <li>Verkettete tote Tasten werden unterstützt, bis zu 3 tote Tasten in Folge.</li>
+</ul>
+<p>InputHook behandelt {tote Taste}{BS} nun so, dass BS (Backspace) die tote Taste aufhebt.</p>
+<p>Neubelegungen nutzen nun Links-/Rechts-Modifikatoren in Blind; z.B. bewirkt <code>&gt;^a::b</code>, dass RCtrl-A zu B und LCtrl-RCtrl-A zu LCtrl-B umbelegt wird, statt einfach nur zu B.</p>
+<p><code>Ctrl::Alt</code> sendet nun kein ununterdrücktes <code class="no-highlight">{Ctrl up}</code> mehr. Dies war ursprünglich dazu gedacht, ein Problem bei der systemseitigen Behandlung der Modifikatortasten zu umgehen, wurde jedoch in v2.0.8 von einem besseren Workaround abgelöst.</p>
+
+<h3 id="Debugger">Debugger</h3>
+<p>DBGp-Eigenschaft und Kontextbefehle wurden verbessert:</p>
+<ul>
+  <li>Geerbte Eigenschaften werden direkt dem Eigenschaftselement des Objekts untergeordnet.</li>
+  <li>Eigenschafts-Getter und Funktionsaufrufe erlauben mehrere Parameter.</li>
+  <li>Eigenschaftsnamen können als Parameter verwendet werden.</li>
+</ul>
+<p>DBGp verwendet jetzt standardmäßig max_children = 1000 und max_depth = 1.</p>
+<p>Der Debugger listet nun Eigenschaften auf, die vom Prototyp für Object-fremde Klassen wie VarRef und ComValue definiert werden, nicht mehr einen hartcodierten (potenziell leeren) Satz von Pseudo-Eigenschaften.</p>
+<p>Das Debugger-Attribut "classname" von Prototypobjekten enthält nun den Klassennamen (z.B. "SomeClass.Prototype").</p>
+<p>Der Debugger listet die nativ definierten Eigenschaften __Class und Base nicht mehr auf.</p>
+<p>Globale, lokale und statische Variablendeklarationen mit mehreren Initialisierern werden nun als einzelner Ausdruck ausgewertet, sodass man beim Debuggen nicht mehr jeden Initialisierer einzeln überspringen muss.</p>
+
+<h3 id="DPI_Awareness">DPI-Sensitivität</h3>
+<p>Grundlegende Unterstützung für Pro-Bildschirm-DPI-Sensitivität ist nun verfügbar, einschließlich:</p>
+<ul>
+  <li>Automatische Anpassung der Schrift im Hauptfenster des Skripts.</li>
+  <li>Automatische Anpassung der Position, Größe und Schriftgröße von GUI-Steuerelementen.</li>
+  <li>Verwendung der GUI-DPI anstelle der System-DPI bei der Schriftgrößenberechnung.</li>
+</ul>
+<p>Einzelheiten finden Sie unter <a href="lib/Gui.htm#DPIResize">DPIResize (Gui)</a>.</p>
+
+
+<h2 id="Backward-Compatible">Abwärtskompatibel</h2>
+<p>Diese Änderungen sollten keinerlei Auswirkungen auf v2.0-Skripte haben.</p>
+
+<h3 id="Syntax_and_Core_Objects">Syntax und Kernobjekte</h3>
+<p><a href="Modules.htm">Module</a>, <a href="lib/_Module.htm">#Module</a> und <a href="lib/_Import.htm">#Import</a> sind nun verfügbar.</p>
+<p><a href="Functions.htm#funcexpr">Funktionsdefinitionsausdrücke</a> werden nun unterstützt.</p>
+<p>Der Operator <code>a !~= b</code> ist nun verfügbar, der äquivalent zu <code>!(a ~= b)</code> ist (<a href="Variables.htm#regex">Kurzform</a> für "nicht <a href="lib/RegExMatch.htm">RegExMatch</a>").</p>
+<p>Typisierte Eigenschaften (<a href="Structs.htm">Strukturen</a>) werden nun unterstützt.</p>
+<p>Funktionen und Eigenschaften können nun <code>unset</code> zurückgeben; das Ergebnis kann mit den Operatoren <a href="Variables.htm#maybe">Vielleicht (?)</a> und <a href="Variables.htm#or-maybe">Oder-Vielleicht (??)</a> zugelassen bzw. behandelt werden.</p>
+<p>Pflichtparameter können nun rechts neben optionalen Parametern definiert werden, z.B. <code>Fn(a?, b)</code>.</p>
+<p>Optionale Verkettung mit dem Vielleicht-Operator (<code>a?.b</code>) wird nun unterstützt.</p>
+<p>Der <a href="Variables.htm#maybe-assign">Vielleicht-Zuweisungsoperator (??=)</a> ist nun verfügbar.</p>
+<p>Ladezeitvalidierung für <code>unset</code>, <code>?</code> und <code>??</code> wurde verbessert.</p>
+<p>Ein Längenlimit für Parameter-Standardzeichenketten (aber nicht für Ausdrücke) wurde entfernt.</p>
+<p><a href="lib/Any.htm#Props">Any.Prototype.Props()</a> und <a href="lib/Props.htm">Props</a> sind nun verfügbar, um eigene und geerbte Eigenschaften zu enumerieren.</p>
+<p><a href="Functions.htm#virtual-references">Virtuelle Referenzen</a> werden nun unterstützt:</p>
+<ul>
+  <li>Jedes Objekt mit einer __Value-Eigenschaft kann als virtuelle Referenz fungieren.</li>
+  <li>Virtuelle Referenzen werden von &amp;ByRef-Parametern, internen Ausgabeparametern und dem Dereferenzoperator (%ref%) akzeptiert.</li>
+  <li>Der Referenzoperator (&amp;) erlaubt interne/virtuelle Variablen.</li>
+  <li>Der Referenzoperator (&amp;) kann mit einer Eigenschaft (ohne Parameter) verwendet werden; z.B. <code>&amp;x.y</code> ruft <code>x.__ref('y')</code> indirekt auf.</li>
+  <li><a href="lib/Object.htm#__Ref">Object.Prototype.__Ref</a> ermittelt eine verschachtelte Struktur oder <a href="lib/PropRef.htm">PropRef</a> (eine virtuelle Referenz, die auf eine Eigenschaft verweist).</li>
+  <li>VarRef und ComValueRef haben eine __Value-Eigenschaft.</li>
+</ul>
+<p><a href="lib/Class.htm#StaticCall">Class.Call</a> akzeptiert nun zusätzliche optionale Parameter, um die dynamische Erstellung von Klassen zu erleichtern. Insbesondere können dadurch Skripte Prototypobjekte dynamisch erstellen, die auf anderen nativen Typen als Object basieren, z.B. Map und Array.</p>
+
+<h3 id="Keyboard_and_Mouse">Tastatur und Maus</h3>
+<p>{Blind} unterstützt nun Links-/Rechts-Modifikatoren, wie in <code class="no-highlight">{Blind&gt;^}</code>.</p>
+<p>Neubelegungen unterstützen nun WheelUp, WheelDown, WheelLeft und WheelRight auf beiden Seiten.</p>
+<p>Automatisch-ersetzende Hotstrings vermeiden nun nach Möglichkeit das erneute Tippen eines identischen führenden Teils.</p>
+<p>InputHook unterstützt nun die <a href="lib/InputHook.htm#option-h">H-Option</a>, um Hotkeys abzufangen.</p>
+
+<h3 id="Built-in_Functions">Interne Funktionen</h3>
+<p><a href="lib/Math.htm#ATan2">ATan2</a>: Neue Funktion.</p>
+<p><a href="lib/CallbackCreate.htm">CallbackCreate</a>: Anstelle der Parameteranzahl kann nun ein Array von Parametertypen angegeben werden.</p>
+<p><a href="lib/DllCall.htm">DllCall</a>: <a href="lib/DllCall.htm#CDecl">CDecl</a> kann nun weggelassen werden, egal welche Aufrufkonvention die Funktion verwendet.</p>
+<p><a href="lib/Edit.htm">Edit</a>: Optionaler <em>DateiName</em>-Parameter hinzugefügt.</p>
+<p><a href="lib/FileCreateShortcut.htm">FileCreateShortcut</a>: Der <em>Tastenkürzel</em>-Parameter erlaubt nun die Modifikatoren <code>^</code>, <code>+</code> und <code>!</code>.</p>
+<p><a href="lib/ImageSearch.htm">ImageSearch</a>: X und Y können nun weggelassen werden.</p>
+<p><a href="lib/IsSet.htm">IsSet</a>: Akzeptiert nun beliebige <a href="Language.htm#unset">Unset-Ausdrücke</a>. Zum Beispiel: <code>IsSet(X?.Y)</code></p>
+<p><a href="lib/PixelSearch.htm">PixelSearch</a>: X und Y können nun weggelassen werden.</p>
+<p><a href="lib/ProcessWait.htm">ProcessWait</a>: ListLines zeigt nun "STILL WAITING" an, wenn das Warten unterbrochen und dann fortgesetzt wurde, so wie es bereits bei WinWait der Fall war.</p>
+<p><a href="lib/RegExReplace.htm">RegExReplace</a>: <em>Ersatz</em> kann nun eine Rückruffunktion anstelle eines Ersatztextes sein.</p>
+<p><a href="lib/Throw.htm">Throw</a>: Nun eine Funktion, für mehr Flexibilität.</p>
+<p><a href="lib/TraySetIcon.htm">TraySetIcon</a>: Aktualisiert nun auch das Symbol im <a href="Program.htm#main-window">Hauptfenster</a> des Skripts.</p>
+<p><a href="lib/Type.htm">Type</a>: Gibt nun die Zeichenkette "unset" zurück, wenn <em>Wert</em> ungesetzt ist. Zum Beispiel: <code>Type(MeineVar?)</code></p>
+<p><a href="lib/WinGetAlwaysOnTop.htm">WinGetAlwaysOnTop</a>: Neue Funktion.</p>
+<p><a href="lib/WinGetEnabled.htm">WinGetEnabled</a>: Neue Funktion.</p>
+
+<h3 id="Built-in_Variables">Interne Variablen</h3>
+<p><a href="Variables.htm#HookInstalled">A_KeybdHookInstalled</a> und <a href="Variables.htm#HookInstalled">A_MouseHookInstalled</a> sind nun verfügbar.</p>
+<p><a href="Variables.htm#HotIf">A_HotIf</a> ist nun verfügbar.</p>
+
+<h3 id="Built-in_Classes">Interne Klassen</h3>
+<p><a href="lib/Error.htm">Error</a>: Neue Methode <a href="lib/Error.htm#Show">Show</a>.</p>
+<p><a href="lib/Gui.htm">Gui</a>:</p>
+<ul>
+  <li>Neue Methode <a href="lib/Gui.htm#OnMessage">OnMessage</a>.</li>
+  <li>Neue Methode <a href="lib/GuiControl.htm#SetCue">SetCue</a> für Edit- und ComboBox-Steuerelemente.</li>
+</ul>
+<p><a href="lib/Menu.htm">Menu</a>:</p>
+<ul>
+  <li>Neuer Parameter <em>Warten</em> (#3) für <a href="lib/Menu.htm#Show">Menu.Prototype.Show</a>.</li>
+  <li>Neue Option RTL für <a href="lib/Menu.htm#Add">Menu.Prototype.Add</a>.</li>
+</ul>
+
+<h3 id="Misc">Sonstiges</h3>
+<p><a href="misc/WinTitle.htm#ahk_class">ahk_class</a> ist nun nicht-Groß-/Kleinschreibung-sensitiv, sofern nicht im RegEx-Modus.</p>
+
+<h3 id="Optimizations">Optimierungen</h3>
+<p>Diese Optimierungen verbessern die Performanz, haben aber sonst keinen Einfluss auf das Verhalten.</p>
+<p>Pause lässt den System-Thread nun schlafen, bis Meldungen eintreffen, statt den Pausezustand häufig abzufragen. In Tests sank die CPU-Auslastung dadurch von 0,04&nbsp;% auf 0,00&nbsp;%.
+</p>
+<p>ProcessWaitClose und RunWait lassen den System-Thread nun schlafen, bis das Prozesshandle signalisiert wird oder Meldungen eintreffen. Dies senkt die CPU-Auslastung (wie oben) und verbessert die Reaktionszeit.</p>
+<p>Optimierungen bei den Prüfungen von Dialogfensterklassen.</p>
+<p>Der ternäre Operator führt keine überflüssige Prüfung mehr durch, ob ein Wert eine Zahl ist.</p>
+<p>Optimierungen bei der Suche nach Fenstern; Einzelheiten finden Sie unter <a href="misc/WinTitle.htm#Performance">FensterTitel - Performanz</a>.</p>
+
+</body>
+</html>

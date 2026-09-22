@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Exit - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die Exit-Funktion beendet den aktuellen Thread." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>Exit</h1>
+
+<p>Beendet den <a href="../misc/Threads.htm">aktuellen Thread</a>.</p>
+
+<pre class="Syntax"><span class="func">Exit</span> <span class="optional">ExitCode</span></pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>ExitCode</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn weggelassen, wird standardmäßig 0 verwendet (0 wird traditionell verwendet, um Erfolg zu melden). Andernfalls geben Sie einen Integer zwischen -2147483648 und 2147483647 an, der bei Beendigung des Skripts zurückgegeben werden soll. Dieser Code ist für jedes Programm zugänglich, das den Start des Skripts veranlasst hat, wie z.B. ein anderes Skript (per RunWait) oder eine Batch-Datei (.bat).</p>
+  </dd>
+
+</dl>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Die Exit-Funktion terminiert nur den <a href="../misc/Threads.htm">aktuellen Thread</a>. Mit anderen Worten, alle Funktionen, die direkt oder indirekt durch ein <a href="Menu.htm">Menü</a>, <a href="SetTimer.htm">Timer</a> oder <a href="../Hotkeys.htm">Hotkey</a> aufgerufen wurden, werden beendet, als wären sie alle an einem <a href="Return.htm">Return</a> angekommen. Wenn Exit direkt in so einer Funktion (oder in <a href="../Language.htm#global-code">globalem Code</a>) verwendet wird, ist Exit äquivalent zu <a href="Return.htm">Return</a>.</p>
+<p>Wenn das Skript nicht <a href="../Scripts.htm#persistent">persistent</a> ist und dies der letzte Thread ist, wird das Skript nach Beendigung des Threads terminiert.</p>
+
+<p>Verwenden Sie <a href="ExitApp.htm">ExitApp</a>, um ein <a href="../Scripts.htm#persistent">persistentes</a> Skript vollständig zu terminieren.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="ExitApp.htm">ExitApp</a>, <a href="OnExit.htm">OnExit</a>, <a href="../Functions.htm">Funktionen</a>, <a href="Return.htm">Return</a>, <a href="../misc/Threads.htm">Threads</a>, <a href="Persistent.htm">Persistent</a></p>
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> In diesem Beispiel terminiert die Exit-Funktion sowohl die Exit_aufrufen-Funktion als auch die aufrufende Funktion.</p>
+<pre>
+#z::
+{
+    Exit_aufrufen
+    MsgBox "Diese MsgBox wird aufgrund von Exit nie erscheinen."
+    Exit_aufrufen() 
+    {
+        Exit <em>; Terminiert sowohl diese Funktion als auch die aufrufende Funktion.</em>
+    }
+}
+</pre>
+</div>
+
+</body>
+</html>

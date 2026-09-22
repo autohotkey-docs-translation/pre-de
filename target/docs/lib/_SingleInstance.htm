@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>#SingleInstance - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die #SingleInstance-Direktive bestimmt, ob ein bereits laufendes Skript erneut ausgeführt werden darf." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>#SingleInstance</h1>
+
+<p>Bestimmt, ob ein bereits laufendes Skript erneut ausgeführt werden darf.</p>
+
+<pre class="Syntax"><span class="func">#SingleInstance</span> <span class="optional">ForceIgnorePromptOff</span></pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>ForceIgnorePromptOff</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn weggelassen, wird standardmäßig <em>Force</em> verwendet. Andernfalls geben Sie eines der folgenden Wörter an:</p>
+    <p><strong>Force:</strong> Überspringt das Dialogfenster und ersetzt automatisch die alte Instanz, was einen ähnlichen Effekt hat wie die <a href="Reload.htm">Reload</a>-Funktion.</p>
+    <p><strong>Ignore:</strong> Überspringt das Dialogfenster und lässt die alte Instanz weiterlaufen. Das heißt, dass jegliche Versuche, ein bereits laufendes Skript zu starten, ignoriert werden.</p>
+    <p><strong>Prompt:</strong> Zeigt ein Dialogfenster an, das den Benutzer fragt, ob die alte Instanz beibehalten oder mit einer neuen Instanz ersetzt werden soll.</p>
+    <p><strong>Off:</strong> Erlaubt die gleichzeitige Ausführung mehrerer Instanzen des Skripts.</p>
+  </dd>
+
+</dl>
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Wenn diese Direktive im Skript nicht angegeben ist, verhält sie sich so, als wäre sie auf <em>Prompt</em> gesetzt.</p>
+<p>Diese Direktive wird ignoriert, wenn eine der folgenden <a href="../Scripts.htm#cmd">Befehlszeilenoptionen</a> verwendet wird: /force /restart</p>
+<p>#SingleInstance kann wie alle anderen Direktiven nicht bedingt ausgeführt werden.</p>
+<p>Standardmäßig kann die alte Instanz nicht automatisch terminiert werden, wenn sie auf einer höheren Integritätsstufe läuft als die neue Instanz, z.B. wenn die alte Instanz als Administrator oder mit UI-Access ausgeführt wurde und die neue Instanz nicht. <span class="ver">[v2.1-alpha.26+]</span>: Es wird eine <a href="https://learn.microsoft.com/en-us/windows/win32/winmsg/wm-close">WM_CLOSE-Meldung</a> gesendet, um die alte Instanz zu terminieren. Um allen anderen Prozessen zu erlauben, das Skript zu terminieren, entblocken Sie die WM_CLOSE-Meldung wie unten gezeigt. Frühere Versionen nutzten eine undokumentierte Meldung, die nicht entblockt werden sollte.</p>
+<pre>DllCall("ChangeWindowMessageFilterEx", "uint", A_ScriptHwnd, "uint", 0x10, "uint", 1, "ptr", 0)</pre>
+
+<h2 id="Limitations">Einschränkungen</h2>
+<p>Um ältere Instanzen des Skripts zu identifizieren, wird nach einem <a href="../Program.htm#main-window">Hauptfenster</a> mit dem <a href="../Program.htm#title">Standardtitel</a> gesucht. Dies hat zur Folge, dass eine ältere Instanz nicht gefunden wird, wenn Folgendes zutrifft:</p>
+<ul>
+  <li>Der Titel ihres Hauptfensters wurde geändert.</li>
+  <li>Die Instanz läuft mit einer anderen AutoHotkey-Version.</li>
+  <li>Ihr Hauptfenster ist nicht mehr das Top-Level-Fenster, z.B. wenn das Skript <a href="https://learn.microsoft.com/windows/win32/api/winuser/nf-winuser-setparent">SetParent</a> verwendet hat, um dessen übergeordnetes Fenster auf etwas anderes als NULL (0) zu ändern.</li>
+</ul>
+<p>Es wird höchstens eine ältere Instanz erkannt und zum Schließen aufgefordert (durch Senden einer Meldung). Dies führt zu folgenden zusätzlichen Einschränkungen:</p>
+<ul>
+  <li>Wenn es mehrere Instanzen gibt (z.B. wenn ältere Instanzen des Skripts den <code>#SingleInstance Off</code>-Modus verwendet haben), wird nur die oberste übereinstimmende Instanz zum Schließen aufgefordert – alle anderen werden nicht berücksichtigt.</li>
+  <li>Läuft die ältere Instanz auf einer höheren Integritätsstufe als die neue Instanz (wobei Als Administrator ausführen &gt; <a href="../Program.htm#Installer_uiAccess">Mit UI-Access starten</a> &gt; Normal), kann sie aus Sicherheitsgründen nicht geschlossen werden.</li>
+</ul>
+<p>Wenn mehrere Instanzen des Skripts gleichzeitig gestartet werden, kann es vorkommen, dass sie sich gegenseitig nicht erkennen oder alle auf dieselbe ältere Instanz verweisen. Dies würde dazu führen, dass mehrere Instanzen des Skripts gestartet werden.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="Reload.htm">Reload</a></p>
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Überspringt das Dialogfenster und ersetzt automatisch die alte Instanz.</p>
+<pre>#SingleInstance Force</pre>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Suspend - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die Suspend-Funktion deaktiviert oder aktiviert alle oder bestimmte Hotkeys und Hotstrings." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>Suspend</h1>
+
+<p>Deaktiviert oder aktiviert alle oder bestimmte <a href="../Hotkeys.htm">Hotkeys</a> und <a href="../Hotstrings.htm">Hotstrings</a>.</p>
+
+<pre class="Syntax"><span class="func">Suspend</span> <span class="optional">NeuerZustand</span></pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>NeuerZustand</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn weggelassen, wird standardmäßig -1 verwendet. Andernfalls geben Sie einen der folgenden Werte an:</p>
+    <p><code>1</code> oder <code>True</code>: Suspendiert (deaktiviert) alle <a href="../Hotkeys.htm">Hotkeys</a> und <a href="../Hotstrings.htm">Hotstrings</a>, außer denen, die im Abschnitt "Bemerkungen" erklärt werden.</p>
+    <p><code>0</code> oder <code>False</code>: Reaktiviert alle Hotkeys und Hotstrings, die mit Suspend deaktiviert wurden.</p>
+    <p><code>-1</code>: Schaltet die aktuelle Einstellung auf den entgegengesetzten Zustand (On oder Off).</p>
+  </dd>
+
+</dl>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Standardmäßig kann das Skript auch über das <a href="../Program.htm#tray-icon">Tray-Symbol</a> oder das <a href="../Program.htm#main-window">Hauptfenster</a> suspendiert werden.</p>
+<p>Um einen Hotkey/Hotstring vor einer Suspension zu schützen, stellen Sie ihm die Direktive <a href="_SuspendExempt.htm">#SuspendExempt</a> voran. Ein geschützter Hotkey/Hotstring bleibt auch dann aktiviert, wenn die Suspension eingeschaltet ist. Auf diese Weise kann die Suspension über einen Hotkey ausgeschaltet werden, was sonst nicht möglich wäre, da der Hotkey suspendiert werden würde.</p>
+<p>Die <a href="InstallKeybdHook.htm">Tastatur</a>- und/oder <a href="InstallMouseHook.htm">Maus</a>-Hooks werden bei dieser Funktion je nach Bedarf automatisch installiert oder entfernt.</p>
+<p>Mit <a href="_HotIf.htm">#HotIf</a> können je nach Bedingung bestimmte Hotkeys/Hotstrings automatisch deaktiviert werden.</p>
+<p>Die Suspension von Hotkeys eines Skripts hat nicht zur Folge, dass laufende <a href="../misc/Threads.htm">Threads</a> des Skripts (falls vorhanden) gestoppt werden; verwenden Sie stattdessen <a href="Pause.htm">Pause</a>.</p>
+<p>Wenn die Hotkeys eines Skripts suspendiert sind, ändert sich dessen <a href="../Program.htm#tray-icon">Tray-Symbol</a> in <img src="../static/ahk16_suspend.png" alt="ein grünes Symbol mit transparentem H" style="vertical-align:-.2em;"> (oder in <img src="../static/ahk16_pause_suspend.png" alt="ein grünes Symbol mit transparentem Pausezeichen" style="vertical-align:-.2em;">, wenn das Skript zusätzlich <a href="Pause.htm">pausiert</a> ist). Diese Symboländerung lässt sich vermeiden, indem das Symbol mit <code><a href="TraySetIcon.htm">TraySetIcon</a>(,, true)</code> eingefroren wird.</p>
+<p>Die interne Variable <strong>A_IsSuspended</strong> enthält 1, wenn das Skript suspendiert ist, andernfalls 0.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="_SuspendExempt.htm">#SuspendExempt</a>, <a href="../Hotkeys.htm">Hotkeys</a>, <a href="../Hotstrings.htm">Hotstrings</a>, <a href="_HotIf.htm">#HotIf</a>, <a href="Pause.htm">Pause</a>, <a href="ExitApp.htm">ExitApp</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExHotkey">
+<p><a class="ex_number" href="#ExHotkey"></a> Drücken Sie einen Hotkey, um alle Hotkeys und Hotstrings zu suspendieren. Drücken Sie ihn erneut, um die Suspension wieder aufzuheben.</p>
+<pre>#SuspendExempt
+^!s::Suspend  <em>; STRG+ALT+S</em>
+#SuspendExempt False</pre>
+</div>
+
+<div class="ex" id="ExPostMessage">
+<p><a class="ex_number" href="#ExPostMessage"></a> Sendet einen Suspend-Befehl an ein anderes Skript.</p>
+<pre>DetectHiddenWindows True
+WM_COMMAND := 0x0111
+ID_FILE_SUSPEND := 65404
+<a href="PostMessage.htm">PostMessage</a> WM_COMMAND, ID_FILE_SUSPEND,,, "C:\DeinSkript.ahk ahk_class AutoHotkey"</pre>
+</div>
+
+</body>
+</html>

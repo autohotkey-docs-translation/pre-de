@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>ComObjArray - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die ComObjArray-Funktion erstellt ein SafeArray, das für COM verwendet werden kann." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>ComObjArray</h1>
+
+<p>Erstellt ein SafeArray, das für COM verwendet werden kann.</p>
+
+<pre class="Syntax">ArrayObj := <span class="func">ComObjArray</span>(VarTyp, Anzahl1 <span class="optional">, Anzahl2, ... Anzahl8</span>)</pre>
+<p><code>ComObjArray</code> selbst ist eine <a href="Class.htm">Klasse</a>, die von <code>ComValue</code> abgeleitet ist, aber nur zum Erstellen oder Identifizieren von SafeArray-Wrapper-Objekten verwendet wird.</p>
+
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>VarTyp</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    Der Basistyp des Arrays (der VARTYPE jedes Array-Elements). Der VARTYPE ist auf eine Teilmenge der Variantentypen beschränkt. Weder das VT_ARRAY- noch das VT_BYREF-Flag können gesetzt werden. VT_EMPTY und VT_NULL sind keine gültigen Basistypen für das Array. Alle anderen Typen sind zulässig.
+    <p>Eine Liste möglicher Werte finden Sie unter <a href="ComObjType.htm">ComObjType</a>.</p>
+  </dd>
+
+  <dt>Anzahl<i>N</i></dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Die Größe jeder Dimension. Es werden Arrays mit bis zu 8 Dimensionen unterstützt.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: ComObjArray</p>
+<p>Diese Funktion gibt ein Wrapper-Objekt zurück, das ein neues SafeArray enthält.</p>
+
+<h2 id="Methods">Methoden</h2>
+<p>ComObjArray-Objekte unterstützen die folgenden Methoden:</p>
+<ul>
+    <li><code>.MaxIndex(n)</code>: Gibt die Obergrenze der <i>n</i>-ten Dimension zurück. Wenn <i>n</i> weggelassen wird, wird standardmäßig 1 verwendet.</li>
+    <li><code>.MinIndex(n)</code>: Gibt die Untergrenze der <i>n</i>-ten Dimension zurück. Wenn <i>n</i> weggelassen wird, wird standardmäßig 1 verwendet.</li>
+    <li><code>.Clone()</code>: Gibt eine Kopie des Arrays zurück.</li>
+    <li><code>.__Enum()</code>: Wird üblicherweise nicht via Skript aufgerufen; ermöglicht die Nutzung von <a href="For.htm">For-Schleifen</a> mit SafeArrays.</li>
+</ul>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>ComObjArray-Objekte können auch von COM-Methoden und <a href="ComValue.htm">ComValue</a> zurückgegeben werden. Skripte können wie folgt prüfen, ob ein Wert ein ComObjArray ist:</p>
+<pre><em>; Klasse prüfen</em>
+if obj is ComObjArray
+    MsgBox "Array-Untertyp: " . ComObjType(obj) &amp; 0xfff
+else
+    MsgBox "Kein Array."
+
+<em>; Prüfen, ob VT_ARRAY existiert</em>
+if ComObjType(obj) &amp; 0x2000
+    MsgBox "obj ist ein ComObjArray"
+
+<em>; Bestimmten Array-Typ prüfen</em>
+if ComObjType(obj) = 0x2008
+    MsgBox "obj ist ein ComObjArray von Zeichenketten"</pre>
+<p>Es werden Arrays mit bis zu 8 Dimensionen unterstützt.</p>
+<p>Da SafeArrays nicht für die Unterstützung von Mehrfachreferenzen ausgelegt sind, wird beim Zuweisen eines SafeArrays an ein Element eines anderen SafeArrays eine separate Kopie erstellt. Dies geschieht jedoch nur, wenn das Wrapper-Objekt das F_OWNVALUE-Flag hat, um zu kennzeichnen, dass es für die Zerstörung des Arrays verantwortlich ist. Dieses Flag kann mit <a href="ComObjFlags.htm">ComObjFlags</a> entfernt werden.</p>
+<p>Wenn eine via COM-Client aufgerufene Funktion oder Methode ein SafeArray mit dem F_OWNVALUE-Flag zurückgibt, wird eine Kopie erstellt und stattdessen zurückgegeben, da das originale SafeArray automatisch zerstört wird.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="ComValue.htm">ComValue</a>, <a href="ComObjType.htm">ComObjType</a>, <a href="ComObjValue.htm">ComObjValue</a>, <a href="ComObjActive.htm">ComObjActive</a>, <a href="ComObjFlags.htm">ComObjFlags</a>, <a href="https://learn.microsoft.com/previous-versions/windows/desktop/automat/array-manipulation-functions">Array Manipulation Functions (Microsoft Docs)</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Einfache Verwendung.</p>
+<pre>arr := ComObjArray(VT_VARIANT:=12, 3)
+arr[0] := "Auto"
+arr[1] := "Hot"
+arr[2] := "key"
+t := ""
+Loop arr.MaxIndex() + 1
+    t .= arr[A_Index-1]
+MsgBox t
+</pre>
+</div>
+
+<div class="ex" id="ExMultiDims">
+<p><a class="ex_number" href="#ExMultiDims"></a> Mehrere Dimensionen.</p>
+<pre>arr := ComObjArray(VT_VARIANT:=12, 3, 4)
+
+<em>; Ruft die Anzahl von Dimensionen ab:</em>
+dim := DllCall("oleaut32\SafeArrayGetDim", "ptr", ComObjValue(arr))
+
+<em>; Ruft die Grenzen jeder Dimension ab:</em>
+dims := ""
+Loop dim
+    dims .= arr.MinIndex(A_Index) " .. " arr.MaxIndex(A_Index) "`n"
+MsgBox dims
+
+<em>; Einfache Verwendung:</em>
+Loop 3 {
+    x := A_Index-1
+    Loop 4 {
+        y := A_Index-1
+        arr[x, y] := x * y
+    }
+}
+MsgBox arr[2, 3]
+</pre>
+</div>
+
+</body>
+</html>

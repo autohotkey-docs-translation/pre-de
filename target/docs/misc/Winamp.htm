@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Winamp automatisieren | AutoHotkey v2</title>
+<meta name="description" content="Erfahren Sie, wie Winamp mit Hotkeys gesteuert werden kann, selbst wenn es minimiert oder inaktiv ist." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+
+<body><script>site.init();</script>
+<h1>Winamp automatisieren</h1>
+
+<p>Auf dieser Seite wird gezeigt, wie Winamp mit Hotkeys gesteuert werden kann, selbst wenn es minimiert oder inaktiv ist. Diese Information wurde mit Winamp 2.78c getestet, sollte aber auch für andere Hauptversionen funktionieren. Bitte posten Sie Änderungen und Verbesserungen im Forum.</p>
+<p>Dieses Beispiel bewirkt, dass beim Drücken des Hotkeys <kbd>Strg</kbd>+<kbd>Alt</kbd>+<kbd>P</kbd> die Pause/Wiedergabe-Schaltfläche in Winamp gedrückt wird:</p>
+<pre>^!p::
+{
+    if not WinExist("ahk_class Winamp v1.x")
+        return
+<em>; Andernfalls gilt das "zuletzt gefundene" Fenster von oben:</em>
+<a href="../lib/ControlSend.htm">ControlSend</a> "c"  <em>; Pause/Wiedergabe</em>
+}</pre>
+<p>Hier einige Tastaturkurzbefehle, die in Winamp 2.x zur Verfügung stehen (die auch in anderen Versionen funktionieren können). Das obige Beispiel kann so geändert werden, dass es eine der folgenden Tasten verwendet:</p>
+<table class="info" style="width:50%">
+  <tr>
+    <th style="width:29%">Taste zum Senden</th>
+    <th>Effekt</th>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">c</code></td>
+    <td>Pause/Wiedergabe</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">x</code></td>
+    <td>Abspielen/Wiedergabe neu starten</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">v</code></td>
+    <td>Stopp</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">+v</code></td>
+    <td>Stopp mit Ausblenden</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">^v</code></td>
+    <td>Nach jetzigem Titel stoppen</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">b</code></td>
+    <td>Nächster Titel</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">z</code></td>
+    <td>Vorheriger Titel</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">{left}</code></td>
+    <td>5 Sekunden zurückspulen</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">{right}</code></td>
+    <td>5 Sekunden vorspulen</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">{up}</code></td>
+    <td>Lautstärke erhöhen</td>
+  </tr>
+  <tr>
+    <td><code class="no-highlight">{down}</code></td>
+    <td>Lautstärke verringern</td>
+  </tr>
+</table>
+<p>Das folgende Beispiel fragt Winamp, welche Titelnummer gerade aktiv ist:</p>
+<pre>
+TitelNummer := <a href="../lib/SendMessage.htm">SendMessage</a>(0x0400, 0, 120,, "ahk_class Winamp v1.x")
+if (TitelNummer != "")
+{
+    TitelNummer += 1  <em>; Zählung von Winamp beginnt bei 0, also um 1 erhöhen.</em>
+    MsgBox "Titel Nr. " TitelNummer " ist aktiv oder wird gerade abgespielt."
+}</pre>
+</body>
+</html>

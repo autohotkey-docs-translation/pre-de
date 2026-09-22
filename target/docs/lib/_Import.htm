@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>#Import - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die #Import-Direktive importiert ein Modul und optional Namen aus einem Modul." />
+<meta name="ahk:equiv-v1" content="index.htm" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>#Import <span class="ver">[v2.1-alpha.20+]</span></h1>
+
+<p>Importiert ein <a href="../Modules.htm">Modul</a> und optional Namen aus einem Modul.</p>
+
+<pre class="Syntax">
+<span class="func">#Import <span class="optional">Export</span></span> ModulName <span class="optional"><span class="func">as</span> ModulAlias</span> <span class="optional">{ *, ExportName ... }</span>
+</pre>
+
+<h2 id="Parameters">Parameter</h2>
+<dl>
+  <dt>ModulName</dt>
+  <dd>
+    <p>Ein Modulname, ein Pfad oder einen Ressourcenbezeichner. Es muss entweder ein gültiger <a href="../Concepts.htm#names">Identifikator</a> oder eine <a href="../Language.htm#strings">direkt geschriebene Zeichenkette</a> sein. Beim Importieren eines via <a href="_Module.htm">#Module</a> definierten Moduls oder einer Datei kann jedoch eine beliebige Syntax verwendet werden.</p>
+    <p>Pfade können absolut oder relativ zu den <a href="../Modules.htm#Search_Path">Suchverzeichnissen</a> sein.</p>
+    <p>Um ein <a href="../Program.htm#embedded-scripts">eingebettetes Skript</a> als Modul zu laden, geben Sie ein Sternchen gefolgt vom Ressourcennamen an. Zum Beispiel: <code>"*RESNAME"</code>.</p>
+    <p><span class="ver">[v2.1-alpha.21+]</span>: Um ein <a href="_Module.htm">Untermodul</a> aus einer anderen Gruppe zu importieren, verwenden Sie einen pfadqualifizierten Namen im Format "Pfad:ModulName". <em>Pfad</em> sollte das Hauptmodul der Gruppe identifizieren, das entweder das Skript selbst oder eine via #Import importierte Datei ist.</p>
+  </dd>
+  <dt>ModulAlias</dt>
+  <dd>
+    <p>Ein Identifikator, der innerhalb des aktuellen Moduls verwendet werden soll, um auf das importierte Modul zu verweisen.</p>
+  </dd>
+  <dt>ExportName</dt>
+  <dd>
+    <p>Ein Identifikator, der aus dem Modul exportiert wird.</p>
+    <p><span class="ver">[v2.1-alpha.21+]</span>: Dies kann der Name einer beliebigen Funktion, Klasse oder globalen Variable sein, einschließlich der Aliase der Namen, die das Modul importiert hat.</p>
+  </dd>
+  <dt>Alias</dt>
+  <dd>
+    <p>Ein Identifikator, der innerhalb des aktuellen Moduls anstelle von <em>ExportName</em> verwendet werden soll.</p>
+  </dd>
+</dl>
+
+<h2 id="Imported_Modules">Import aus einer Datei</h2>
+<p>Importe werden verarbeitet, nachdem die Hauptskriptdatei geparst wurde, in einer unbestimmten Reihenfolge. Wenn <em>ModulName</em> (ohne Anführungszeichen) kein Modul findet, das via <a href="_Module.htm">#Module</a> definiert oder zuvor aus einer Datei importiert wurde, versucht #Import, eine Moduldatei zu lokalisieren und zu laden. Weitere Informationen finden Sie unter <a href="../Modules.htm#Search_Path">Suchpfad</a>.</p>
+
+<h2 id="Imported_Names">Importierte Namen</h2>
+<p>Das Modul selbst wird nur zum globalen Namensraum des aktuellen Moduls hinzugefügt, wenn <em>ModulAlias</em> angegeben oder <em>ModulName</em> anführungszeichenlos ist.</p>
+<p id="Wildcard_Import">Wenn <code>*</code> verwendet wird, kann jeder nicht zugewiesene und nicht deklarierte Name im aktuellen Modul implizit zu einem aus <em>ModulName</em> exportierten Namen aufgelöst werden. Wenn ein Name aus mehreren importierten Modulen exportiert wird, hat der letzte Import Vorrang. Explizite Importe und andere Deklarationen haben Vorrang vor impliziten Importen, unabhängig von der Reihenfolge.</p>
+<p><span class="ver">[v2.1-alpha.31+]</span>: Jedes Modul exportiert alle globalen Namen, die nicht mit einem Unterstrich beginnen, außer Namen, die ohne das Schlüsselwort Export importiert wurden.</p>
+<p class="note"><strong>Hinweis:</strong> Eine implizit importierte Variable kann nicht das Ziel einer Zuweisung sein, da die Existenz einer Zuweisung dazu führen würde, dass eine neue Variable im aktuellen Modul erstellt wird.</p>
+<p>Es wird ein Ladezeitfehler ausgelöst, wenn ein Name, der in einem expliziten Import verwendet wird, auch in einer anderen Deklaration innerhalb des aktuellen Moduls verwendet wird.</p>
+
+<h2 id="Export">Export <span class="ver">[v2.1-alpha.31+]</span></h2>
+<p>Die importierten Namen werden nur exportiert (zugänglich für Platzhalterimporte in anderen Modulen), wenn das Schlüsselwort Export verwendet wird. Zum Beispiel:</p>
+<pre>
+#Module TestB
+  #Import LibB {*}
+  <em>; Sowohl B als auch F sind definiert.</em>
+  MsgBox Format("B: {}`nF: {}`n_internal: {}", B(), Type(F?), Type(_internal?)), "TestB"
+
+#Module LibB
+  #Import Export _internal {*}
+  B() =&gt; Type(F?)
+
+#Module TestA
+  #Import LibA {*}
+  <em>; Nur A ist definiert.</em>
+  MsgBox Format("A: {}`nF: {}`n_internal: {}", A(), Type(F?), Type(_internal?)), "TestA"
+
+#Module LibA
+  #Import _internal {*}
+  A() =&gt; Type(F?)
+
+#Module _internal
+  F() =&gt; 0
+</pre>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Zeilenumbrüche können innerhalb der geschweiften Klammern verwendet werden, dank <a href="../Scripts.htm#continuation-expr">Fortsetzung durch Umschließen</a>.</p>
+<p>Klassen und Funktionen stehen bereits zur Verfügung, noch bevor das Quellmodul ausgeführt wurde, z.B. wenn das Modul, das sie importiert, aufgrund eines zirkulären Imports zuerst läuft.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="../Modules.htm">Module</a>, <a href="_Module.htm">#Module</a>, <a href="_Include.htm">#Include</a></p>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>MenuFromHandle - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die MenuFromHandle-Funktion ruft ein Menu- oder MenuBar-Objekt über dessen Win32-Menü-Handle ab." />
+<meta name="ahk:equiv-v1" content="lib/Menu.htm" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>MenuFromHandle</h1>
+
+<p>Ruft ein <a href="Menu.htm">Menu- oder MenuBar-Objekt</a> über dessen Win32-Menü-Handle ab.</p>
+
+<pre class="Syntax">Menu := <span class="func">MenuFromHandle</span>(Handle)</pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+  <dt>Handle</dt><dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Der Handle eines Win32-Menüs (vom Typ <code class="no-highlight">HMENU</code>).</p>
+  </dd>
+</dl>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Wenn das Handle ungültig ist oder nicht zu einem Menü gehört, das von diesem Skript erstellt wurde, gibt die Funktion <a href="../v2.1-changes.htm#CompatMode"><em>leer-ungesetzt</em></a> zurück.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="Menu.htm#Win32_Menus">Win32-Menüs</a>, <a href="Menu.htm">Menu/MenuBar-Objekt</a>, <a href="Menu.htm#Handle">Menu.Handle</a>, <a href="Menu.htm#Call">Menu()</a></p>
+
+</body>
+</html>

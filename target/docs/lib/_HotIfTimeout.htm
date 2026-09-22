@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>#HotIfTimeout - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die #HotIfTimeout-Direktive bestimmt die maximale Zeit, die zur Auswertung eines einzelnen #HotIf-Ausdrucks aufgebracht wird." />
+<meta name="ahk:equiv-v1" content="lib/_IfTimeout.htm" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+
+<h1>#HotIfTimeout</h1>
+
+<p>Bestimmt die maximale Zeit, die zur Auswertung eines einzelnen <a href="_HotIf.htm">#HotIf</a>-Ausdrucks aufgebracht wird.</p>
+
+<pre class="Syntax"><span class="func">#HotIfTimeout</span> Zeitlimit</pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>Zeitlimit</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Zeitlimit-Wert in Millisekunden, der global gelten soll.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Wenn diese Direktive im Skript nicht angegeben ist, verhält sie sich so, als wäre sie auf 1000 (Millisekunden) gesetzt.</p>
+<p>Das Zeitlimit wurde implementiert, um zu verhindern, dass lang laufende Ausdrücke den Tastatureingabeprozess blockieren. Sobald das Zeitlimit überschritten ist, wird der Ausdruck weiter ausgewertet, aber der Tastatur-Hook fortgesetzt, als hätte der Ausdruck bereits False zurückgegeben.</p>
+<p id="LowLevelHooksTimeout">Beachten Sie, dass das System sein eigenes Zeitlimit implementiert, das im DWORD-Wert <em>LowLevelHooksTimeout</em> des folgenden Registry-Schlüssels definiert ist:</p>
+<p><b>HKEY_CURRENT_USER\Control Panel\Desktop</b></p>
+<p>Wenn das Systemzeitlimit überschritten ist, kann es passieren, dass das System den Tastatur-Hook des Skripts nicht mehr aufruft und folglich Hook-Hotkeys nicht mehr funktionieren, bis der Hook neu registriert oder das Skript <a href="Reload.htm">neu geladen</a> wird. Der Hook kann <em>üblicherweise</em> durch <a href="Suspend.htm">Suspendieren</a> und Entsuspendieren aller Hotkeys neu registriert werden.</p>
+<p>Genauere Angaben zu diesem Zeitlimit sind in der Dokumentation von Microsoft nicht zu finden, aber Untersuchungen haben ergeben, dass für Windows 7 und höher folgendes gilt: Wenn <em>LowLevelHooksTimeout</em> nicht definiert ist, gilt standardmäßig ein Zeitlimit von 300&nbsp;ms. Der Hook kann das Zeitlimit maximal 10-mal überschreiten, bevor er beim 11. Mal stillschweigend entfernt wird.</p>
+<p>Wenn ein bestimmter Hotkey mehrere #HotIf-Varianten hat, könnte das Zeitlimit auf jede Variante separat angewendet werden, was die Wahrscheinlichkeit erhöht, dass das Systemzeitlimit überschritten wird. Dieser Sachverhalt könnte in einer zukünftigen Version geändert werden.</p>
+<p>#HotIfTimeout kann wie alle anderen Direktiven nicht bedingt ausgeführt werden.</p>
+<h2 id="Related">Siehe auch</h2>
+<p><a href="_HotIf.htm">#HotIf</a></p>
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Setzt das #HotIf-Zeitlimit auf 10&nbsp;ms statt 1000&nbsp;ms.</p>
+<pre>#HotIfTimeout 10</pre>
+</div>
+
+</body>
+</html>

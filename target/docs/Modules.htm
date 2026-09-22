@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+  <title>Module | AutoHotkey v2</title>
+<meta name="description" content="Erfahren Sie mehr über Module und wie man sie verwendet." />
+<meta name="ahk:equiv-v1" content="index.htm" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="static/theme.css" rel="stylesheet" />
+<link href="static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="static/content.js" id="content_js"></script>
+<script src="static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>Module <span class="ver">[v2.1-alpha.11+]</span></h1>
+<p>Ein Modul ist im Grunde ein Skript innerhalb des Skripts. Jedes Modul hat einen eigenen:</p>
+<ul>
+  <li><em>Globalen Namensraum</em> für Variablen, Funktionen und Klassen.</li>
+  <li><em>Körper</em>, der manchmal auch als automatischer Ausführungsbereich bezeichnet wird.</li>
+</ul>
+<p>Durch die Aufteilung eines Skripts in Module lassen sich seine Bestandteile leichter wiederverwenden und pflegen.</p>
+<p>Standardmäßig werden alle Codezeilen und globalen Variablen (einschließlich Funktionen und Klassen) einem implizit definierten Modul namens "__Main" hinzugefügt. Das Skript kann mit <a href="lib/_Module.htm">#Module</a> ein neues Modul starten oder mit <a href="lib/_Import.htm">#Import</a> ein Modul aus einer Datei laden.</p>
+<p>Mit einer <a href="lib/_Import.htm">#Import</a>-Direktive kann ein Modul oder einige seiner Funktionen, Klassen und Variablen innerhalb des aktuellen Moduls zugänglich gemacht werden.</p>
+<p>Alle Module importieren implizit aus dem internen Modul "AHK", das alle internen Klassen, Variablen und Funktionen enthält. Eine Deklaration oder Zuweisung innerhalb eines Moduls kann den Namen einer internen Klasse oder Funktion wiederverwenden. In diesem Fall ist die entsprechende Klasse oder Funktion nur über das AHK-Modul zugänglich (z.B. <code>#Import AHK</code>, <code>AHK.MsgBox()</code>). Interne Variablen (A_) lassen sich ohne Deklaration oder Import zuweisen,
+und ihre Namen sind nicht wiederverwendbar. <code>A_Args</code> ist eine Ausnahme (es ist eine normale in __Main definierte Variable).</p>
+<p>Ein Modulname gelangt erst durch den Import in den globalen Namensraum eines Moduls; etwaige Konflikte lassen sich durch ein Alias für das importierte Modul im Zielmodul lösen.</p>
+<p><a href="lib/_Include.htm">#Include</a> kann jeweils nur eine Datei pro Modul inkludieren.
+</p>
+<p>Mit <a href="lib/_Warn.htm">#Warn</a> können Warnungen innerhalb des aktuellen Moduls aktiviert oder deaktiviert werden, ohne dass andere Module davon betroffen sind. Weitere Informationen finden Sie in den <a href="lib/_Warn.htm#Remarks">#Warn-Bemerkungen</a>.</p>
+<p><a href="lib/_HotIf.htm">#HotIf</a> beeinflusst nur das aktuelle Modul. #HotIf und <a href="lib/HotIf.htm">HotIf</a>-Ausdrücke gelten nur innerhalb ihres Moduls, da sie Referenzen enthalten können, die auf Variablen im Modul verweisen. Zum Beispiel ist der Effekt von <code>#HotIf meinSchalter</code> davon abhängig, welchen Wert <em>meinSchalter</em> im aktuellen Modul hat.</p>
+
+<h2 id="Execution">Ausführung</h2>
+<p>Sobald das Programm gestartet wird, wird der Körper jedes Moduls vom <a href="Scripts.htm#auto">Auto-Execute-Thread</a> ausgeführt. Die Ausführung startet mit dem zuletzt definierten oder geladenen Modul. Enthält das Modul keine Importe, wird als Nächstes das vorletzte Modul ausgeführt. Dies wiederholt sich, bis alle Module ausgeführt wurden.</p>
+<p><span class="ver">[v2.1-alpha.21+]</span>: Wird eine Variable oder Konstante eines Moduls referenziert, bevor dessen Ausführung begonnen hat, wird das Modul sofort ausgeführt. Die #Import-Direktive selbst hat keinen Einfluss auf die Reihenfolge. Zum Beispiel:</p>
+<pre>#Module A
+MsgBox "A wird ausgeführt"  <em>; wird als Zweites angezeigt.</em>
+global ANTWORT := 42
+
+#Module B
+#Import A {ANTWORT}
+MsgBox "B wird ausgeführt"  <em>; wird als Erstes angezeigt.</em>
+MsgBox ANTWORT         <em>; wird als Drittes angezeigt.</em></pre>
+<p><span class="ver">[v2.1-alpha.20]</span> und älter: Jedes Modul führt seine importierten Module vor seinem eigenen Körper aus, mit Ausnahme von bereits gestarteten Modulen. Das funktioniert jedoch weniger gut, wenn Module zirkuläre Abhängigkeiten aufweisen.</p>
+
+<h2 id="Search_Path">Suchpfad <span class="ver">[v2.1-alpha.20+]</span></h2>
+<p>Der Modulsuchpfad ist eine Liste von Verzeichnissen, die von der <a href="lib/_Import.htm">#Import</a>-Direktive genutzt wird, um Moduldateien zu finden. Das Verzeichnis der Datei, die die #Import-Direktive enthält, wird immer zuerst durchsucht. Die Umgebungsvariable <code class="no-highlight">AhkImportPath</code> kann eine semikolongetrennte Liste von Verzeichnissen enthalten, die ebenfalls durchsucht werden sollen. Wenn diese Variable nicht verwendet wird, gilt die folgende Standardliste:</p>
+<pre class="no-highlight">%A_ScriptDir%;%A_MyDocuments%\AutoHotkey;%A_AhkPath%\..</pre>
+<p>Interne Variablen können in der Liste angegeben werden, müssen aber in Prozentzeichen gesetzt werden. Prozentzeichen, die nicht zu einer gültigen Variablenreferenz gehören, werden als direkt geschriebener Text interpretiert. Referenzen, die auf Umgebungsvariablen verweisen, werden von AutoHotkey nicht aufgelöst, da dies in der Regel bereits vor dem Prozessstart erfolgt. Die Einträge in der Liste können absolute Pfade oder relativ zum Verzeichnis des Skripts (<a href="Variables.htm#ScriptDir">A_ScriptDir</a>) sein. Die Liste wird nur einmal aufgelöst, daher verweist <a href="Variables.htm#LineFile">A_LineFile</a> immer auf das Hauptskript.</p>
+<p>Die Verzeichnisse werden in der Reihenfolge ihrer Auflistung durchsucht. Innerhalb jedes Verzeichnisses werden die Dateien in folgender Reihenfolge abgearbeitet:</p>
+<ul>
+  <li><code class="no-highlight"><i>ModulName</i></code></li>
+  <li><code class="no-highlight"><i>ModulName</i>\__Init.ahk</code></li>
+  <li><code class="no-highlight"><i>ModulName</i>.ahk</code></li>
+</ul>
+<p>Zum Beispiel könnte <code>#Import M</code> die Datei mit dem exakten Namen <code class="no-highlight">M</code>, <code class="no-highlight">M\__Init.ahk</code> oder <code class="no-highlight">M.ahk</code> laden. <code>#Import "M"</code> verhält sich genauso, nur dass der Name <em>M</em> nicht zum aktuellen Modul hinzugefügt wird.</p>
+
+<h2 id="Examples">Beispiele</h2>
+
+<div class="ex" id="ExSimple"><p><a class="ex_number" href="#ExSimple"></a> Jedes Modul hat seine eigenen globalen Variablen (<code>MeineVar</code> und <code>VarZeigen</code>).</p>
+<pre>
+#Import Anderes  <em>; Benötigt v2.1-alpha.20+.</em>
+MeineVar := 1
+VarZeigen()  <em>; Unsere MeineVar ist 1.</em>
+Anderes.VarZeigen()  <em>; Andere MeineVar ist immer noch 2.</em>
+MsgBox "Im Haupt, Anderes.MeineVar = " (Anderes.MeineVar ?? "unzugänglich")  <em>; MeineVar ist zugänglich in v2.1-alpha.19+.</em>
+VarZeigen() =&gt; MsgBox("Haupt MeineVar = " MeineVar)
+
+#Module Anderes
+MeineVar := 2
+VarZeigen() =&gt; MsgBox("Anderes MeineVar = " MeineVar)
+</pre></div>
+
+<div class="ex" id="ExAlias"><p><a class="ex_number" href="#ExAlias"></a> Verwenden Sie ein Alias, um einen Konflikt zu lösen. Jedes Modul hat sein eigenes <code>Berechnen</code>, das Vorrang vor jedem Platzhalterimport hat.</p>
+<pre>
+#Import "X" {Berechnen as XBerechnen}
+#Import "Y" {*}
+
+MeineVar := 1
+MsgBox Berechnen()
+MsgBox XBerechnen()
+MsgBox Prüfen(3)
+MsgBox "X = " (X ?? "nicht importiert")
+MsgBox "Y = " (Y ?? "nicht importiert")
+
+Berechnen() =&gt; 1
+
+#Module X
+Berechnen() =&gt; 2
+
+#Module Y
+Berechnen() =&gt; 3
+Prüfen(n) =&gt; n = Berechnen()
+</pre></div>
+
+<div class="ex" id="ExAHK"><p><a class="ex_number" href="#ExAHK"></a> Zugriff auf "überschriebene" interne Funktionen.</p>
+<pre>
+#Import AHK
+
+MsgBox "Hallo, Welt!",, "T2"
+
+<em>; Infosymbol standardmäßig hinzufügen.</em>
+MsgBox(Text?, Titel?, Optionen:="") {
+    return AHK.MsgBox(Text?, Titel?, "Iconi " Optionen)
+}
+
+#Module Anderes
+MsgBox "Anderes hat noch die originale MsgBox.",, "T2"
+</pre></div>
+
+</body>
+</html>

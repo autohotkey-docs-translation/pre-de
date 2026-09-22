@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>DirExist - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die DirExist-Funktion prüft, ob ein Ordner existiert, und gibt seine Attribute zurück." />
+<meta name="ahk:equiv-v1" content="lib/FileExist.htm" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>DirExist</h1>
+
+<p>Prüft, ob ein Ordner existiert, und gibt seine Attribute zurück.</p>
+
+<pre class="Syntax">AttributZkette := <span class="func">DirExist</span>(DateiMuster)</pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>DateiMuster</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Name eines Ordners oder ein Platzhaltermuster wie <code>"C:\Program*"</code>. Wenn kein absoluter Pfad angegeben ist, wird <em>DateiMuster</em> im <a href="../Variables.htm#WorkingDir">A_WorkingDir</a>-Verzeichnis vermutet.</p>
+    <p>Als Platzhalter werden sowohl Sternchen (<code class="no-highlight">*</code>) als auch Fragezeichen (<code class="no-highlight">?</code>) unterstützt. <code class="no-highlight">*</code> findet null oder mehr Zeichen und <code class="no-highlight">?</code> findet ein beliebiges Zeichen. Anwendungsbeispiele:</p>
+    <ul>
+        <li><code class="no-highlight">*</code> findet alle Ordner.</li>
+        <li><code class="no-highlight">gr?y</code> findet z.B. gray und grey.</li>
+        <li><code class="no-highlight">*report*</code> findet Ordner, deren Namen das Wort "report" enthalten.</li>
+    </ul>
+  </dd>
+
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+<p>Diese Funktion gibt die Attribute des ersten gefundenen Ordners zurück. Diese Zeichenkette ist eine Teilmenge von <code class="no-highlight">RASHDOC</code>, wobei jeder Buchstabe die folgende Bedeutung hat:</p>
+<ul>
+    <li>R = READONLY (schreibgeschützt)</li>
+    <li>A = ARCHIVE (archiviert)</li>
+    <li>S = SYSTEM (Systemdatei)</li>
+    <li>H = HIDDEN (versteckt)</li>
+    <li>D = DIRECTORY (Verzeichnis)</li>
+    <li>O = OFFLINE</li>
+    <li>C = COMPRESSED (komprimiert)</li>
+</ul>
+<p>Da diese Funktion nur prüft, ob ein Ordner existiert, ist "D" immer im Rückgabewert enthalten. Wenn kein Ordner gefunden wurde, wird eine leere Zeichenkette zurückgegeben.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Beachten Sie, dass eine Suche wie <code>DirExist("MeinOrdner\*")</code>, wobei <em>MeinOrdner</em> Dateien und Unterordner enthält, nur mitteilt, ob ein Ordner existiert. Um zu prüfen, ob Dateien <u>und</u> Ordner existieren, verwenden Sie stattdessen <a href="FileExist.htm">FileExist</a>.</p>
+<p>Im Gegensatz zu <a href="FileGetAttrib.htm">FileGetAttrib</a> unterstützt DirExist die Verwendung von Platzhaltermustern und gibt immer einen nicht-leeren Wert zurück, wenn ein passender Ordner gefunden wurde.</p>
+<p>Da eine leere Zeichenkette als "falsch" angesehen wird, kann der Rückgabewert der Funktion immer als boolescher Scheinwert verwendet werden. Zum Beispiel ist die Anweisung <code>if DirExist("C:\MeinOrdner")</code> wahr, wenn der Ordner existiert, andernfalls falsch.</p>
+<p>Da <em>DateiMuster</em> auch Platzhalterzeichen enthalten kann, ist DirExist möglicherweise nicht geeignet, um zu prüfen, ob ein Ordnerpfad gültig ist, der in Verbindung mit einer anderen Funktion oder einem anderen Programm verwendet werden soll. Zum Beispiel kann <code>DirExist("Program*")</code> Attribute zurückgeben, auch dann, wenn "Program*" kein gültiger Ordnername ist. Für solche Fälle wird <a href="FileGetAttrib.htm">FileGetAttrib</a> empfohlen.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="FileExist.htm">FileExist</a>, <a href="FileGetAttrib.htm">FileGetAttrib</a>, <a href="LoopFiles.htm">Datei-Schleife</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Zeigt ein Mitteilungsfenster an, wenn ein Ordner existiert.</p>
+<pre>if DirExist("C:\Windows")
+    MsgBox "Der Zielordner existiert."</pre>
+</div>
+
+<div class="ex" id="ExPattern">
+<p><a class="ex_number" href="#ExPattern"></a> Zeigt ein Mitteilungsfenster an, wenn mindestens ein Programmordner existiert.</p>
+<pre>if DirExist("C:\Program*")
+    MsgBox "Mindestens ein Programmordner existiert."</pre>
+</div>
+
+<div class="ex" id="ExNot">
+<p><a class="ex_number" href="#ExNot"></a> Zeigt ein Mitteilungsfenster an, wenn ein Ordner <u>nicht</u> existiert.</p>
+<pre>if not DirExist("C:\Temp")
+    MsgBox "Der Zielordner existiert nicht."</pre>
+</div>
+
+<div class="ex" id="ExAttr">
+<p><a class="ex_number" href="#ExAttr"></a> Zeigt, wie man einen Ordner auf ein bestimmtes Attribut hin überprüft.</p>
+<pre>if InStr(DirExist("C:\System Volume Information"), "H")
+    MsgBox "Der Ordner ist versteckt."</pre>
+</div>
+
+</body>
+</html>

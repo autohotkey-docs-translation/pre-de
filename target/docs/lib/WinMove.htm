@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>WinMove - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die WinMove-Funktion ändert die Position und/oder Größe eines bestimmten Fensters." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>WinMove</h1>
+
+<p>Ändert die Position und/oder Größe eines bestimmten Fensters.</p>
+
+<pre class="Syntax"><span class="func">WinMove</span> <span class="optional">X, Y, Breite, Höhe, FensterTitel, FensterText, AusnahmeTitel, AusnahmeText</span></pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+  <dt>X, Y</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn einer der Parameter weggelassen wird, bleibt die Position in dieser Dimension unverändert. Andernfalls geben Sie die X- und Y-Koordinate (in Pixel) der oberen linken Ecke der neuen Position des Zielfensters an. Das obere linke Pixel des Bildschirms befindet sich auf 0, 0.</p>
+  </dd>
+
+  <dt>Breite, Höhe</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn einer der Parameter weggelassen wird, bleibt die Größe in dieser Dimension unverändert. Andernfalls geben Sie die neue Breite und Höhe des Fensters (in Pixel) an.</p>
+  </dd>
+
+  <dt>FensterTitel, FensterText, AusnahmeTitel, AusnahmeText</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a>, <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#objects">Objekt</a></p>
+    <p>Wenn jeder dieser Parameter leer ist oder weggelassen wird, wird das <a href="../misc/WinTitle.htm#LastFoundWindow">Zuletzt Gefundene Fenster</a> verwendet. Andernfalls geben Sie für <em>FensterTitel</em> einen <a href="../misc/WinTitle.htm">Fenstertitel oder andere Kriterien</a> zur Identifizierung des Zielfensters und/oder für <em>FensterText</em> eine Teilzeichenkette aus einem Textelement des Zielfensters an (wie von <a href="../Program.htm#Window_Spy">Window Spy</a> angezeigt).</p>
+    <p><em>AusnahmeTitel</em> und <em>AusnahmeText</em> können verwendet werden, um ein oder mehrere Fenster anhand ihres Titels oder Textes auszuschließen. Ihre Angabe ähnelt der von <em>FensterTitel</em> und <em>FensterText</em>, außer dass <em>AusnahmeTitel</em> keine anderen Kriterien als den Fenstertitel erkennt.</p>
+    <p>Fenstertitel und -texte sind Groß-/Kleinschreibung-sensitiv. Standardmäßig werden versteckte Fenster nicht erkannt und versteckte Textelemente erkannt, was mit <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a> bzw. <a href="DetectHiddenText.htm">DetectHiddenText</a> geändert werden kann. Verwendet man <a href="../misc/WinTitle.htm#ahk_id">reine HWNDs</a>, werden versteckte Fenster immer erkannt. Standardmäßig kann ein Fenstertitel den angegebenen <em>FensterTitel</em> oder <em>AusnahmeTitel</em> an beliebiger Stelle enthalten, um eine Übereinstimmung zu sein, was mit <a href="SetTitleMatchMode.htm">SetTitleMatchMode</a> geändert werden kann.</p>
+  </dd>
+</dl>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Es wird ein <a href="Error.htm#TargetError">TargetError</a> ausgelöst, wenn das Fenster nicht gefunden werden konnte.</p>
+<p>Es wird ein <a href="Error.htm#OSError">OSError</a> ausgelöst, wenn ein codeinterner Funktionsaufruf einen Fehler meldet. Es kann jedoch auch Erfolg gemeldet werden, wenn sich das Fenster nicht bewegt hat, z.B. wenn das Fenster seine eigene Bewegung einschränkt.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Wenn <em>Breite</em> oder <em>Höhe</em> gering (oder negativ) ist, werden die meisten Fenster mit einer Titelleiste in der Regel nicht kleiner als 112 x 27 Pixel gemacht (einige Fenstertypen können jedoch eine andere Mindestgröße haben). Wenn <em>Breite</em> oder <em>Höhe</em> hoch ist, werden die meisten Fenster nicht größer als etwa 12 Pixel über die Dimensionen des Desktops gemacht.</p>
+<p>Negative X- und Y-Koordinaten sind erlaubt, um Multi-Bildschirm-Systeme zu unterstützen und um Fenster über den Bildschirmrand hinaus zu verschieben.</p>
+<p>Obwohl WinMove minimierte Fenster nicht verschieben kann, kann es versteckte Fenster verschieben, wenn <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a> eingeschaltet ist.</p>
+<p>Die Geschwindigkeit von WinMove wird durch <a href="SetWinDelay.htm">SetWinDelay</a> beeinflusst.</p>
+
+<p>Auf Systemen mit mehreren Bildschirmen, die unterschiedliche DPI-Einstellungen haben, kann die endgültige Position und Größe des Fensters aufgrund der <a href="../misc/DPIScaling.htm">OS-DPI-Skalierung</a> von den gewünschten Werten abweichen.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="ControlMove.htm">ControlMove</a>, <a href="WinGetPos.htm">WinGetPos</a>, <a href="WinHide.htm">WinHide</a>, <a href="WinMinimize.htm">WinMinimize</a>, <a href="WinMaximize.htm">WinMaximize</a>, <a href="Win.htm">Win-Funktionen</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExLastFound">
+<p><a class="ex_number" href="#ExLastFound"></a> Öffnet den Taschenrechner, wartet bis er existiert und verschiebt ihn in die obere linke Ecke des Bildschirms.</p>
+<pre>Run "calc.exe"
+WinWait "Rechner"
+WinMove 0, 0 <em>; Verwendet das von WinWait gefundene Fenster.</em></pre>
+</div>
+
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Erstellt ein Popup-Fenster mit fester Größe, das den Inhalt der Zwischenablage anzeigt, und verschiebt es in die obere linke Ecke des Bildschirms.</p>
+<pre>MeineGui := Gui("ToolWindow -Sysmenu Disabled", "Die Zwischenablage enthält:")
+MeineGui.Add("Text",, A_Clipboard)
+MeineGui.Show("w400 h300")
+WinMove 0, 0,,, MeineGui
+MsgBox "Drücken Sie OK, um das Popup-Fenster zu schließen"
+MeineGui.Destroy()</pre>
+</div>
+
+<div class="ex" id="ExCenter">
+<p><a class="ex_number" href="#ExCenter"></a> Zentriert ein Fenster auf dem Bildschirm.</p>
+<pre>FensterZentrieren("ahk_class Notepad")
+
+FensterZentrieren(FensterTitel)
+{
+    WinGetPos ,, &amp;Breite, &amp;Höhe, FensterTitel
+    WinMove (A_ScreenWidth/2)-(Breite/2), (A_ScreenHeight/2)-(Höhe/2),,, FensterTitel
+}</pre>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>ExitApp - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die ExitApp-Funktion terminiert das Skript." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>ExitApp</h1>
+
+<p>Terminiert das Skript.</p>
+
+<pre class="Syntax"><span class="func">ExitApp</span> <span class="optional">ExitCode</span></pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>ExitCode</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn weggelassen, wird standardmäßig 0 verwendet (0 wird traditionell verwendet, um Erfolg zu melden). Andernfalls geben Sie einen Integer zwischen -2147483648 und 2147483647 an, der bei Beendigung des Skripts zurückgegeben werden soll. Dieser Code ist für jedes Programm zugänglich, das den Start des Skripts veranlasst hat, wie z.B. ein anderes Skript (per RunWait) oder eine Batch-Datei (.bat).</p>
+  </dd>
+
+</dl>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>ExitApp entspricht der Auswahl des Menüpunkts "Exit" im Tray- oder Hauptmenü des Skripts.</p>
+<p>Jede via <a href="OnExit.htm">OnExit</a> registrierte Funktion wird aufgerufen, bevor das Skript terminiert wird. Wenn eine solche Funktion einen Integer ungleich 0 zurückgibt, wird das Skript nicht terminiert; stattdessen wird nur der aktuelle <a href="../misc/Threads.htm">Thread</a> beendet, als hätte man <a href="Exit.htm">Exit</a> aufgerufen.</p>
+<p>Die Terminierung des Skripts ist nicht dasselbe wie, als würde man alle Threads beenden. Zum Beispiel werden <a href="Finally.htm">Finally</a>-Blöcke nicht ausgeführt und <a href="../Objects.htm#Custom_NewDelete">__Delete</a> wird nicht für Objekte aufgerufen, die in lokalen Variablen enthalten sind.</p>
+<p>ExitApp wird grundsätzlich nur für <a href="../Scripts.htm#persistent">persistente</a> Skripte benötigt.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="Exit.htm">Exit</a>, <a href="OnExit.htm">OnExit</a>, <a href="Persistent.htm">Persistent</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExHotkey">
+<p><a class="ex_number" href="#ExHotkey"></a> Drücken Sie einen Hotkey, um das Skript zu terminieren.</p>
+<pre>#x::ExitApp  <em>; WIN+X</em></pre>
+</div>
+
+</body>
+</html>

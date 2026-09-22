@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>WinSetTransparent - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die WinSetTransparent-Funktion macht ein bestimmtes Fenster halbtransparent." />
+<meta name="ahk:equiv-v1" content="lib/WinSet.htm#Transparent" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>WinSetTransparent</h1>
+
+<p>Macht ein bestimmtes Fenster halbtransparent.</p>
+
+<pre class="Syntax"><span class="func">WinSetTransparent</span> N, <span class="optional">FensterTitel, FensterText, AusnahmeTitel, AusnahmeText</span></pre>
+
+<h2 id="Parameters">Parameter</h2>
+<dl>
+    <dt>N</dt>
+    <dd>
+        <p>Typ: <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+        <p>Um ein Fenster transparent zu machen, geben Sie eine Zahl zwischen 0 und 255 für die Transparenzstärke an: 0 macht das Fenster durchsichtig und 255 undurchsichtig.</p>
+        <p>Geben Sie <code>"Off"</code> (nicht Groß-/Kleinschreibung-sensitiv) oder eine leere Zeichenkette an, um die Transparenz eines Fensters komplett zu deaktivieren. Dies hat denselben Effekt wie <code><a href="WinSetTransColor.htm">WinSetTransColor</a> "Off"</code>. Das Wort Off unterscheidet sich vom Wert 255, da es die Performanz verbessern und den Verbrauch von Systemressourcen verringern kann (aber wahrscheinlich nur, wenn die Desktopgestaltung deaktiviert ist).</p>
+    </dd>
+    <dt>FensterTitel, FensterText, AusnahmeTitel, AusnahmeText</dt>
+    <dd>
+        <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a>, <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#objects">Objekt</a></p>
+        <p>Wenn jeder dieser Parameter leer ist oder weggelassen wird, wird das <a href="../misc/WinTitle.htm#LastFoundWindow">Zuletzt Gefundene Fenster</a> verwendet. Andernfalls geben Sie für <em>FensterTitel</em> einen <a href="../misc/WinTitle.htm">Fenstertitel oder andere Kriterien</a> zur Identifizierung des Zielfensters und/oder für <em>FensterText</em> eine Teilzeichenkette aus einem Textelement des Zielfensters an (wie von <a href="../Program.htm#Window_Spy">Window Spy</a> angezeigt).</p>
+        <p><em>AusnahmeTitel</em> und <em>AusnahmeText</em> können verwendet werden, um ein oder mehrere Fenster anhand ihres Titels oder Textes auszuschließen. Ihre Angabe ähnelt der von <em>FensterTitel</em> und <em>FensterText</em>, außer dass <em>AusnahmeTitel</em> keine anderen Kriterien als den Fenstertitel erkennt.</p>
+        <p>Fenstertitel und -texte sind Groß-/Kleinschreibung-sensitiv. Standardmäßig werden versteckte Fenster nicht erkannt und versteckte Textelemente erkannt, was mit <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a> bzw. <a href="DetectHiddenText.htm">DetectHiddenText</a> geändert werden kann. Verwendet man <a href="../misc/WinTitle.htm#ahk_id">reine HWNDs</a>, werden versteckte Fenster immer erkannt. Standardmäßig kann ein Fenstertitel den angegebenen <em>FensterTitel</em> oder <em>AusnahmeTitel</em> an beliebiger Stelle enthalten, um eine Übereinstimmung zu sein, was mit <a href="SetTitleMatchMode.htm">SetTitleMatchMode</a> geändert werden kann.</p>
+    </dd>
+</dl>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Es wird ein <a href="Error.htm#TargetError">TargetError</a> ausgelöst, wenn das Fenster nicht gefunden werden konnte.</p>
+<p>Es wird ein <a href="Error.htm#OSError">OSError</a> ausgelöst, wenn die Änderung nicht angewendet werden konnte.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Mit <code>WinSetTransparent 150, "ahk_class Shell_TrayWnd"</code> kann die Taskleiste transparent gemacht werden. Um das klassische Startmenü transparent zu machen, siehe <a href="#ExTransStartMenu">Beispiel #2</a>. Um die Untermenüs des Startmenüs transparent zu machen, fügen Sie zusätzlich das Skript aus <a href="#ExTransMenu">Beispiel #3</a> ein.</p>
+<p>Wenn die Transparenzstärke vor der Verwendung von Off auf 255 gesetzt wird, können Probleme beim Neuzeichnen von Fenstern, wie z.B. ein schwarzer Hintergrund, vermieden werden. Wenn das Fenster immer noch nicht korrekt neu gezeichnet wird, finden Sie unter <a href="WinRedraw.htm">WinRedraw</a> einen möglichen Workaround.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="WinSetTransColor.htm">WinSetTransColor</a>, <a href="Win.htm">Win-Funktionen</a>, <a href="Control.htm">Control-Funktionen</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Macht Notepad ein wenig transparent.</p>
+<pre>WinSetTransparent 200, "Unbenannt - Editor"</pre>
+</div>
+
+<div class="ex" id="ExTransStartMenu">
+<p><a class="ex_number" href="#ExTransStartMenu"></a> Macht das klassische Startmenü transparent (um auch die Untermenüs des Startmenüs transparent zu machen, siehe <a href="#ExTransMenu">Beispiel #3</a>).</p>
+<pre>DetectHiddenWindows True
+WinSetTransparent 150, "ahk_class BaseBar"</pre>
+</div>
+
+<div class="ex" id="ExTransMenu">
+<p><a class="ex_number" href="#ExTransMenu"></a> Macht alle oder bestimmte Menüs systemweit transparent, sobald sie erscheinen. Beachten Sie, dass so ein Skript nur die Menüs von anderen Skripten transparent machen kann, nicht seine eigenen.</p>
+<pre>SetTimer AufMenüWarten, 5
+
+AufMenüWarten()
+{
+    DetectHiddenWindows True  <em>; Könnte eine frühere Erkennung des Menüs ermöglichen.</em>
+    if WinExist("ahk_class #32768")
+        WinSetTransparent 150  <em>; Verwendet das gefundene Fenster von der Zeile darüber.</em>
+}</pre>
+</div>
+
+<div class="ex" id="ExTransHotkey">
+<p><a class="ex_number" href="#ExTransHotkey"></a> Zeigt die Effekte von WinSetTransparent und <a href="WinSetTransColor.htm">WinSetTransColor</a>. Hinweis: Wenn Sie einen dieser Hotkeys drücken, während sich der Mauszeiger über einem Pixel befindet, das mit TransColor unsichtbar gemacht wurde, interagiert der Hotkey stattdessen mit dem Fenster hinter dem Pixel!</p>
+<pre>#t::  <em>; Drücken Sie WIN+T, um die Farbe unter dem Mauszeiger unsichtbar zu machen.</em>
+{
+    MouseGetPos &amp;MausX, &amp;MausY, &amp;MausFenster
+    MausRGB := PixelGetColor(MausX, MausY)
+    <em>; Scheinbar muss zuerst eine vorhandene Transparenz ausgeschaltet werden:</em>
+    WinSetTransColor "Off", MausFenster
+    WinSetTransColor MausRGB " 220", MausFenster
+}
+
+#o::  <em>; Drücken Sie WIN+O, um die Transparenz des Fensters unter dem Mauszeiger auszuschalten.</em>
+{
+    MouseGetPos ,, &amp;MausFenster
+    WinSetTransColor "Off", MausFenster
+}
+
+#g::  <em>; Drücken Sie WIN+G, um die aktuellen Einstellungen des Fensters unter dem Mauszeiger anzuzeigen.</em>
+{
+    MouseGetPos ,, &amp;MausFenster
+    TransStärke := WinGetTransparent(MausFenster)
+    TransFarbe := WinGetTransColor(MausFenster)
+    ToolTip "Durchsichtigkeit:`t" TransStärke "`nTransFarbe:`t" TransFarbe
+}</pre>
+</div>
+
+</body>
+</html>

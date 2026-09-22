@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html lang="de">
+
+<head>
+<title>Skriptbeispiele | AutoHotkey v2</title>
+<meta name="description" content="Diese Seite listet Skripte verschiedener Autoren auf, die einige Möglichkeiten von AutoHotkey aufzeigen." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+
+<body><script>site.init();</script>
+
+<h1>AutoHotkey-Skriptbeispiele</h1>
+<p>Diese Seite listet Skripte verschiedener Autoren auf, die einige Möglichkeiten von AutoHotkey aufzeigen. Weitere einsatzbereite Skripte und Funktionen finden Sie im <a href="https://www.autohotkey.com/boards/viewforum.php?f=83">AutoHotkey-v2-Forum für Skripte und Funktionen</a>.</p>
+
+<h2 id="toc">Inhaltsverzeichnis</h2>
+<ul>
+  <li><a href="#ContextSensitiveHelp">Kontextabhängige Hilfe in einem beliebigen Editor</a></li>
+  <li><a href="#EasyWindowDrag">Einfache Fensterverschiebung</a></li>
+  <li><a href="#EasyWindowDrag_(KDE)">Einfache Fensterverschiebung (KDE-Style)</a></li>
+  <li><a href="#FavoriteFolders">Einfacher Zugriff auf Lieblingsordner</a></li>
+  <li><a href="#ControllerMouse">Controller als Maus verwenden</a></li>
+  <li><a href="#ControllerTest">Controller-Testskript</a></li>
+  <li><a href="#KeyboardOnScreen">Bildschirmtastatur</a></li>
+  <li><a href="#MinimizeToTrayMenu">Fenster in das Tray-Menü minimieren</a></li>
+  <li><a href="#MsgBoxButtonNames">Schaltflächennamen der MsgBox ändern</a></li>
+  <li><a href="#Numpad000">Numpad-Taste 000</a></li>
+  <li><a href="#NumpadMouse">Tastatur-Ziffernblock als Maus verwenden</a></li>
+  <li><a href="#Seek_(SearchTheStartMenu)">Seek (Startmenü durchsuchen)</a></li>
+  <li><a href="#TooltipMouseMenu">Tooltip-Mausmenü</a></li>
+  <li><a href="#VolumeOSD">Lautstärke-Bildschirmanzeige (OSD)</a></li>
+  <li><a href="#WindowShading">Window Shading</a></li>
+  <li><a href="#WinLIRC">WinLIRC-Client</a></li>
+  <li><a href="#HTML_Entities_Encoding">Kodierung von HTML-Entitäten</a></li>
+  <li><a href="#Custom_Increments_for_UpDown_Controls">Andere Schrittweiten für UpDown-Steuerelemente</a></li>
+  <li><a href="#Scripts_and_Functions_Forum">AutoHotkey-v1-Forum für Skripte und Funktionen</a></li>
+</ul>
+
+<h2 id="ContextSensitiveHelp">Kontextabhängige Hilfe in einem beliebigen Editor</h2>
+<p>Basiert auf dem v1-Skript von Rajat</p>
+<p>Dieses Skript bewirkt, dass <kbd>Strg</kbd>+<kbd>2</kbd> (oder ein anderer Hotkey Ihrer Wahl) die Dokumentation der ausgewählten AutoHotkey-Funktion oder -Schlüsselworts in der Hilfedatei anzeigt. Wenn nichts ausgewählt ist, wird der Funktionsname vom Anfang der aktuellen Zeile extrahiert.</p>
+<p class="show_code"><a href="ContextSensitiveHelp.ahk">Code anzeigen</a></p>
+
+<h2 id="EasyWindowDrag">Einfache Fensterverschiebung</h2>
+<p>Normalerweise kann ein Fenster nur durch Klicken auf die Titelleiste verschoben werden. Dieses Skript ermöglicht es Ihnen, einen beliebigen Punkt innerhalb eines Fensters anzuklicken, um es zu verschieben. Um diesen Modus zu aktivieren, halten Sie beim Klicken <kbd>Feststell</kbd> oder die mittlere Maustaste gedrückt und ziehen Sie das Fenster auf die neue Position.</p>
+<p class="show_code"><a href="EasyWindowDrag.ahk">Code anzeigen</a></p>
+
+<h2 id="EasyWindowDrag_(KDE)">Einfache Fensterverschiebung (KDE-Style)</h2>
+<p>Basiert auf dem v1-Skript von Jonny</p>
+<p>Mit diesem Skript ist es viel einfacher, ein Fenster zu verschieben oder dessen Größe zu ändern: 1) Halten Sie <kbd>Alt</kbd> und Linksklick irgendwo im Fenster gedrückt, um es auf eine neue Position zu ziehen; 2) Halten Sie <kbd>Alt</kbd> und Rechtsklick irgendwo im Fenster gedrückt, um es kleiner/größer zu machen; 3) Drücken Sie <kbd>Alt</kbd> zweimal, aber bevor Sie die Taste das zweite Mal loslassen, machen Sie einen Linksklick, um das Fenster unter dem Mauszeiger zu minimieren, einen Rechtsklick, um es zu maximieren, oder einen Mittelklick, um es zu schließen.</p>
+<p class="show_code"><a href="EasyWindowDrag_(KDE).ahk">Code anzeigen</a></p>
+
+<h2 id="FavoriteFolders">Einfacher Zugriff auf Lieblingsordner</h2>
+<p>Basiert auf dem v1-Skript von Savage</p>
+<p>Dieses Skript zeigt ein Menü mit favorisierten Ordnern an, wenn Sie die mittlere Maustaste drücken, während bestimmte Fenstertypen aktiv sind. Wenn Sie einen Favoriten auswählen, wechselt das Skript sofort zu diesem Ordner innerhalb des aktiven Fensters. Es werden folgende Fenstertypen unterstützt: 1) Standarddialogfenster zum Öffnen oder Speichern von Dateien; 2) Explorerfenster; 3) Konsolenfenster (Eingabeaufforderung). Optional kann das Menü auch für nicht unterstützte Fenstertypen angezeigt werden. In diesem Fall wird der ausgewählte Favorit in einem neuen Explorerfenster geöffnet.</p>
+<p class="show_code"><a href="FavoriteFolders.ahk">Code anzeigen</a></p>
+
+<h2 id="ControllerMouse">Controller als Maus verwenden</h2>
+<p>Dieses Skript verwandelt einen Controller (Gamepad, Joystick usw.) in eine Maus mit drei Tasten. Es ermöglicht Ihnen, den Mauszeiger mit dem Controllerstick zu bewegen und Maustasten mit den Controllertasten zu drücken. Außerdem beschleunigt es die Mausbewegung, je weiter Sie den Stick von der Mitte wegdrücken. Am Anfang des Skripts können Sie verschiedene Einstellungen vornehmen.</p>
+<p>Hinweis: Bei Xbox Controllern ab 2013 (alle neueren als der Xbox 360 Controller) funktioniert dieses Skript nur, wenn ein zugehöriges Fenster aktiv ist, z.B. ein <a href="../lib/MsgBox.htm">Mitteilungsfenster</a>, eine <a href="../lib/Gui.htm">GUI</a> oder das <a href="../Program.htm#main-window">Hauptfenster des Skripts</a>.</p>
+<p class="show_code"><a href="ControllerMouse.ahk">Code anzeigen</a></p>
+
+<h2 id="ControllerTest">Controller-Testskript</h2>
+<p>Dieses Skript hilft Ihnen, die Tastennummern und andere Attribute Ihres Controllers (Gamepad, Joystick usw.) zu ermitteln. Es zeigt Ihnen auch, ob Ihr Controller eventuell kalibriert werden muss, d.h. ob der Bewegungsbereich jeder Achse wie vorgesehen zwischen 0 und 100 Prozent liegt. Wenn eine Kalibrierung erforderlich ist, können Sie die Systemsteuerung des Betriebssystems oder die Software Ihres Controllers verwenden.</p>
+<p class="show_code"><a href="ControllerTest.ahk">Code anzeigen</a></p>
+
+<h2 id="KeyboardOnScreen">Bildschirmtastatur</h2>
+<p>Basiert auf dem v1-Skript von Jon</p>
+<p>Dieses Skript erstellt eine virtuelle Tastatur am unteren Bildschirmrand und zeigt die gedrückten Tasten in Echtzeit an. Der ursprüngliche Zweck dieser Bildschirmtastatur war es, mir das Blindschreiben beizubringen (um mich daran zu gewöhnen, nicht auf die Tastatur zu schauen). Die Größe der Bildschirmtastatur kann am Anfang des Skripts angepasst werden. Sie können die Tastatur auch durch einen Doppelklick auf das <a href="../Program.htm#tray-icon">Tray-Symbol</a> ein- oder ausblenden.</p>
+<p class="show_code"><a href="KeyboardOnScreen.ahk">Code anzeigen</a></p>
+
+<h2 id="MinimizeToTrayMenu">Fenster in das Tray-Menü minimieren</h2>
+<p>Dieses Skript definiert einen Hotkey Ihrer Wahl, mit dem Sie ein bestimmtes Fenster verstecken können, das dann als Menüpunkt im Tray-Menü des Skripts angezeigt wird. Diese Fenster können einzeln oder alle auf einmal wieder sichtbar gemacht werden, indem Sie den entsprechenden Menüpunkt auswählen. Wenn das Skript aus irgendeinem Grund beendet wird, werden alle Fenster, die das Skript versteckt hat, automatisch wieder sichtbar gemacht.</p>
+<p class="show_code"><a href="MinimizeToTrayMenu.ahk">Code anzeigen</a></p>
+
+<h2 id="MsgBoxButtonNames">Schaltflächennamen der MsgBox ändern</h2>
+<p>Dieses Skript verwendet einen Timer, um die Schaltflächennamen eines Mitteilungsfensters zu ändern. Trotz der geänderten Schaltflächennamen verlangt der Rückgabewert von MsgBox weiterhin, dass die Schaltflächen anhand ihrer ursprünglichen Namen identifiziert werden.</p>
+<p class="show_code"><a href="MsgBoxButtonNames.ahk">Code anzeigen</a></p>
+
+<h2 id="Numpad000">Numpad-Taste 000</h2>
+<p>Dieses Skript bewirkt, dass die spezielle <kbd>000</kbd>-Taste, die auf einigen Ziffernblöcken zu finden ist, ein Gleichheitszeichen sendet. Um stattdessen eine andere Aktion auszuführen, ersetzen Sie <code>Send "="</code> mit eine oder mehrere Zeilen Ihrer Wahl.</p>
+<p class="show_code"><a href="Numpad000.ahk">Code anzeigen</a></p>
+
+<h2 id="NumpadMouse">Tastatur-Ziffernblock als Maus verwenden</h2>
+<p>Basiert auf dem v1-Skript von deguix</p>
+<p>Dieses Skript macht die Mausbedienung via Tastatur fast so einfach wie mit einer echten Maus (für manche Aufgaben vielleicht sogar noch einfacher). Es unterstützt bis zu fünf Maustasten und das Drehen des Mausrads. Die Bewegungsgeschwindigkeit, Beschleunigung und "Achsenumkehr" können ebenfalls angepasst werden.</p>
+<p class="show_code"><a href="NumpadMouse.ahk">Code anzeigen</a></p>
+
+<h2 id="Seek_(SearchTheStartMenu)">Seek (Startmenü durchsuchen)</h2>
+<p>Basiert auf dem v1-Skript von Phi</p>
+<p>Die Navigation durch das Startmenü kann sehr umständlich sein, besonders wenn man im Laufe der Zeit viele Programme installiert hat. Seek ermöglicht es Ihnen, nicht-Groß-/Kleinschreibung-sensitive Schlüsselwörter/-phrasen anzugeben, um bestimmte Programme und Verzeichnisse im Startmenü zu filtern, und dann aus einer Handvoll gefundener Einträge einfach das Zielprogramm zu öffnen. Dadurch entfällt das mühsame Durchsuchen des Startmenüs.</p>
+<p class="show_code"><a href="Seek_(SearchTheStartMenu).ahk">Code anzeigen</a></p>
+
+<h2 id="TooltipMouseMenu">Tooltip-Mausmenü</h2>
+<p>Basiert auf dem v1-Skript von Rajat</p>
+<p>Dieses Skript zeigt ein Kontextmenü an, wenn Sie die mittlere Maustaste kurz gedrückt halten. Wählen Sie einen Menüpunkt via Linksklick aus. Machen Sie einen Linksklick außerhalb des Menüs, um es zu schließen. Der Inhalt des Menüs kann sich ändern, je nachdem, welcher Fenstertyp aktiv ist (Notepad und Word dienen hierbei als Beispiel).</p>
+<p class="show_code"><a href="TooltipMouseMenu.ahk">Code anzeigen</a></p>
+
+<h2 id="VolumeOSD">Lautstärke-Bildschirmanzeige (OSD)</h2>
+<p>Basiert auf dem v1-Skript von Rajat</p>
+<p>Dieses Skript definiert Hotkeys Ihrer Wahl, mit denen Sie die Master-Lautstärke erhöhen und verringern können.</p>
+<p class="show_code"><a href="VolumeOSD.ahk">Code anzeigen</a></p>
+
+<h2 id="WindowShading">Window Shading</h2>
+<p>Basiert auf dem v1-Skript von Rajat</p>
+<p>Dieses Skript definiert einen Hotkey, mit dem Sie ein Fenster in dessen Titelleiste minimieren oder dessen Originalgröße wiederherstellen können. Es können beliebig viele Fenster auf diese Weise minimiert werden (das Skript merkt sich diese). Wenn das Skript aus irgendeinem Grund beendet wird, werden alle "zusammengerollten" Fenster automatisch wieder "aufgerollt".</p>
+<p class="show_code"><a href="WindowShading.ahk">Code anzeigen</a></p>
+
+<h2 id="WinLIRC">WinLIRC-Client</h2>
+<p>Dieses Skript empfängt Benachrichtigungen von <a href="https://sourceforge.net/projects/winlirc/">WinLIRC</a>, wann immer Sie eine Taste auf Ihrer Fernbedienung drücken. Es kann zur Automatisierung von Winamp, Windows Media Player usw. verwendet werden. Es ist einfach zu konfigurieren. Wenn WinLIRC zum Beispiel eine Taste namens "VolUp" auf Ihrer Fernbedienung erkennt, können Sie ein Label namens VolUp erstellen und direkt auf der nächsten Zeile die Funktion <code>SoundSetVolume "+5"</code> angeben, um die Lautstärke der Soundkarte um 5&nbsp;% zu erhöhen.</p>
+<p class="show_code"><a href="WinLIRC.ahk">Code anzeigen</a></p>
+
+<h2 id="HTML_Entities_Encoding">Kodierung von HTML-Entitäten</h2>
+<p>Ähnlich wie <a href="https://www.autohotkey.com/docs/v1/lib/Transform.htm#HTML">Transform HTML</a> von AutoHotkey v1 wandelt diese Funktion eine Zeichenkette in ihr HTML-Äquivalent um, indem sie Zeichen, deren ASCII-Wert größer als 127 ist, in ihre HTML-Namen übersetzt (z.B. wird <code class="no-highlight">£</code> zu <code class="no-highlight">&amp;pound;</code>). Außerdem werden die vier Zeichen <code class="no-highlight">"&amp;&lt;&gt;</code> in <code class="no-highlight">&amp;quot;&amp;amp;&amp;lt;&amp;gt;</code> und jeder Zeilenvorschub (<code class="no-highlight">`n</code>) in <code class="no-highlight">&lt;br&gt;`n</code> übersetzt (d.h. <code class="no-highlight">&lt;br&gt;</code> gefolgt von einem Zeilenvorschub).</p>
+<p class="show_code"><a href="EncodeHTML.ahk">Code anzeigen</a></p>
+
+<h2 id="Custom_Increments_for_UpDown_Controls">Andere Schrittweiten für UpDown-Steuerelemente</h2>
+<p>Basiert auf dem v1-Skript von numEric</p>
+<p>Dieses Skript zeigt, wie man die Schrittweite eines <a href="../lib/GuiControls.htm#UpDown">UpDown</a>-Steuerelements auf einen anderen Wert als 1 ändert (z.B. 5 oder 0.1).</p>
+<p class="show_code"><a href="UpDownCustomIncrements.ahk">Code anzeigen</a></p>
+
+<h2 id="Scripts_and_Functions_Forum">AutoHotkey-v1-Forum für Skripte und Funktionen</h2>
+<p>Dieses Forum enthält viele weitere Skripte, von denen die meisten jedoch erst angepasst werden müssen, damit sie mit AutoHotkey v2.0 funktionieren.</p>
+<p><a href="https://www.autohotkey.com/boards/viewforum.php?f=6">AutoHotkey-v1-Forum für Skripte und Funktionen</a></p>
+
+<!-- following elements are required for translation -->
+<p class="hide_code" style="display: none;">Code verstecken</p>
+<p class="loading_code" style="display: none;">Lade Code...</p>
+
+<script>
+  (function () {
+    const as = document.querySelectorAll('.show_code a');
+    const text_show_code = as[0].innerHTML;
+    const text_hide_code = document.querySelector('.hide_code').innerHTML;
+    const text_loading_code = document.querySelector('.loading_code').innerHTML;
+    load(as[0].href, function () { // Check whether it is possible to get a file
+      as.forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          if (a.innerHTML != text_hide_code) {
+            a.innerHTML = text_hide_code;
+            if (!a.nextElementSibling) {
+              const pre = document.createElement('pre');
+              pre.className = 'NoIndent';
+              pre.setAttribute('filename', a.href);
+              pre.innerHTML = text_loading_code;
+              a.parentNode.insertBefore(pre, a.nextSibling);
+              load(a.href, function (data) {
+                pre.textContent = data.replace(/\r\n/g, '\n');
+                frame.content.addCodeBoxButtons([pre]);
+                frame.content.addSyntaxColors([pre]);
+              });
+            }
+            else
+              a.nextElementSibling.show();
+          }
+          else {
+            a.innerHTML = text_show_code;
+            a.nextElementSibling.hide();
+          }
+        });
+      });
+    }, function () {
+      if (!/::/.test(location.href)) // CHM
+        as.forEach(function (a) { a.setAttribute('target', '_blank'); });
+    });
+
+    function load(url, callback, fail) {
+      try {
+        const x = new XMLHttpRequest();
+        x.open('GET', url, true);
+        x.responseType = 'text';
+        x.onreadystatechange = function () {
+          if (x.readyState === 4) {
+            if (x.status === 200)
+              callback(x.responseText)
+            else if (fail)
+              fail();
+          }
+        };
+        x.send();
+      } catch (e) {
+        if (fail) fail();
+      }
+    }
+  })();
+</script>
+</body>
+
+</html>

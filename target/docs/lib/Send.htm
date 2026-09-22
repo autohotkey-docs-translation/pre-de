@@ -1,0 +1,574 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Send - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die Send-Funktion und ihre Varianten senden simulierte Tastendrücke und Mausklicks an das aktive Fenster." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>Send / SendText / SendEvent / SendInput / SendPlay</h1>
+
+<p>Sendet simulierte Tastendrücke und Mausklicks an das <a href="WinActivate.htm">aktive</a> Fenster.</p>
+
+<pre class="Syntax"><span class="func">Send</span> Tasten
+<span class="func">SendText</span> Tasten
+<span class="func">SendEvent</span> Tasten
+<span class="func">SendInput</span> Tasten
+<span class="func">SendPlay</span> Tasten
+</pre>
+
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>Tasten</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Eine Sequenz von Tasten, die gesendet werden sollen.</p>
+    <p>Standardmäßig (also wenn weder SendText noch der <a href="#Raw">Raw-Modus</a> oder <a href="#Text">Text-Modus</a> verwendet wird) haben die Zeichen <code class="no-highlight">^+!#{}</code> eine besondere Bedeutung. Die Zeichen <code class="no-highlight">^+!#</code> repräsentieren die Modifikatortasten <kbd>Strg</kbd>, <kbd>Umschalt</kbd>, <kbd>Alt</kbd> und <kbd>Win</kbd>. Sie wirken sich nur auf die jeweils nächste Taste aus. Um die entsprechende Modifikatortaste separat zu senden, umschließen Sie den Tastennamen mit geschweiften Klammern. Um die Taste nur gedrückt zu halten oder loszulassen, fügen Sie nach dem Tastennamen das Wort "down" oder "up" an, wie unten gezeigt.</p>
+    <style>
+      #modifierkeys td:not(:last-child) {
+        white-space: nowrap;
+        text-align: center
+      }
+    </style>
+    <table id="modifierkeys" class="info">
+      <tr>
+        <th>Symbol</th>
+        <th>Taste</th>
+        <th>Drücken</th>
+        <th>Loslassen</th>
+        <th>Beispiele</th>
+      </tr>
+      <tr>
+        <td>^</td>
+        <td>{Ctrl}</td>
+        <td>{Ctrl down}</td>
+        <td>{Ctrl up}</td>
+        <td><code>Send "^{Home}"</code> drückt <kbd>Strg</kbd>+<kbd>Pos1</kbd></td>
+      </tr>
+      <tr>
+        <td>+</td>
+        <td>{Shift}</td>
+        <td>{Shift down}</td>
+        <td>{Shift up}</td>
+        <td><code>Send "+abC"</code> sendet den Text "AbC"<br>
+          <code>Send "!+a"</code> drückt <kbd>Alt</kbd>+<kbd>Umschalt</kbd>+<kbd>A</kbd></td>
+      </tr>
+      <tr>
+        <td>!</td>
+        <td>{Alt}</td>
+        <td>{Alt down}</td>
+        <td>{Alt up}</td>
+        <td><code>Send "!a"</code> drückt <kbd>Alt</kbd>+<kbd>A</kbd></td>
+      </tr>
+      <tr>
+        <td>#</td>
+        <td>{LWin}<br>{RWin}</td>
+        <td>{LWin down}<br>{RWin down}</td>
+        <td>{LWin up}<br>{RWin up}</td>
+        <td><code>Send "#e"</code> hält <kbd>Win</kbd> gedrückt und drückt <kbd>E</kbd></td>
+      </tr>
+    </table>
+    <p class="note"><strong>Hinweis:</strong> Da durch Senden von <kbd>Umschalt</kbd> Großbuchstaben erzeugt werden, hat <code class="no-highlight">A</code> in einigen Programmen einen anderen Effekt als <code class="no-highlight">a</code>. Zum Beispiel bewirkt <code class="no-highlight">!A</code>, dass <kbd>Alt</kbd>+<kbd>Umschalt</kbd>+<kbd>A</kbd> gedrückt wird, und <code class="no-highlight">!a</code>, dass <kbd>Alt</kbd>+<kbd>A</kbd> gedrückt wird. Im Zweifelsfall immer Kleinbuchstaben verwenden.</p>
+    <p>Die Zeichen <code class="no-highlight">{}</code> werden verwendet, um <a href="#keynames">Tastennamen und andere Optionen</a> zu umschließen und um die spezielle Bedeutung einiger Zeichen außer Kraft zu setzen. Zum Beispiel wird <code class="no-highlight">{Tab}</code> <kbd>Tab</kbd> drücken und <code class="no-highlight">{!}</code> ein normales Ausrufezeichen senden.</p>
+    <p>Wenn ein reiner ASCII-Buchstabe (a-z oder A-Z) mit geschweiften Klammern umschlossen wird, ist Send gezwungen, den Buchstaben als virtuellen Tastencode zu senden, egal ob das Zeichen in der aktuellen Tastaturbelegung existiert oder nicht. Mit anderen Worten, <code>Send "a"</code> erzeugt den Buchstaben "a", während <code>Send "{a}"</code> vielleicht je nach Tastaturbelegung den Buchstaben "a" erzeugt. Einzelheiten finden Sie unter <a href="#AZ">Bemerkungen</a>.</p>
+  </dd>
+
+</dl>
+
+<span id="Send_variants"></span><h2 id="Send_Variants">Send-Varianten</h2>
+<p><strong>Send:</strong> Sendet Tastendrücke via <a href="SendMode.htm#Input">SendInput-Modus</a>, kann aber via <a href="SendMode.htm">SendMode</a> zum Synonym für SendEvent oder SendPlay gemacht werden.</p>
+<p><strong>SendText:</strong> Ähnlich wie Send, außer dass alle Zeichen in <em>Tasten</em> als direkt geschriebener Text interpretiert und gesendet werden. Weitere Informationen finden Sie unter <a href="#Text">Text-Modus</a>.</p>
+<p id="SendEvent"><strong>SendEvent:</strong> Sendet Tastendrücke explizit via traditionellem <a href="SendMode.htm#Event">SendEvent-Modus</a>.</p>
+<p id="SendInput"><strong>SendInput:</strong> Sendet Tastendrücke explizit via <a href="SendMode.htm#Input">SendInput-Modus</a>, der schneller und grundsätzlich zuverlässiger als SendEvent und SendPlay ist. Außerdem puffert er alle physischen Tastatur- und Mausaktionen des Benutzers während des Sendens, um zu verhindern, dass die Tastendrücke des Benutzers mit den Gesendeten vermischt werden.</p>
+<p id="SendPlay"><strong>SendPlay:</strong> Sendet Tastendrücke explizit via <a href="SendMode.htm#Play">SendPlay-Modus</a>, der schneller als SendEvent ist und möglicherweise dort funktioniert, wo andere Modi versagen, insbesondere in einigen Videospielen oder Anwendungen mit ungewöhnlicher Eingabeverarbeitung.</p>
+
+<span id="Special_modes"></span><h2 id="Special_Modes">Spezielle Modi</h2>
+<p>Die folgenden Modi beeinflussen die Interpretation der Zeichen in <em>Tasten</em> oder das Verhalten von Funktionen, die Tasten senden, wie z.B. Send, <a href="ControlSend.htm">ControlSend</a> und ihre Varianten. Diese Modi müssen in Form von <code class="no-highlight">{x}</code> in <em>Tasten</em> angegeben werden, wobei x entweder Raw, Text oder Blind ist. Zum Beispiel <code class="no-highlight">{Raw}</code>.</p>
+
+<h3 id="Raw">Raw-Modus</h3>
+<p id="SendRaw">Der Raw-Modus kann mit <code class="no-highlight">{Raw}</code> aktiviert werden und interpretiert alle nachfolgenden Zeichen einschließlich <code class="no-highlight">^+!#{}</code> als direkt geschriebenen Text, anstatt <code class="no-highlight">{Enter}</code> in <kbd>Enter</kbd>, <code class="no-highlight">^c</code> in <kbd>Strg</kbd>+<kbd>C</kbd> usw. zu übersetzen. Zum Beispiel bewirkt <code>Send "{Raw}{Tab}"</code>, dass <code class="no-highlight">{Tab}</code> statt <kbd>Tab</kbd> gesendet wird.</p>
+<p>Der Raw-Modus hat keinen Einfluss auf die Interpretation von <a href="../misc/EscapeChar.htm">Escapesequenzen</a> und <a href="../Variables.htm#Expressions">Ausdrücken</a>. Zum Beispiel bewirkt <code>Send "{Raw}``100`%"</code>, dass die Zeichenkette <code class="no-highlight">`100%</code> gesendet wird.</p>
+
+<h3 id="Text">Text-Modus</h3>
+<p id="SendText">Der Text-Modus kann entweder mit <code class="no-highlight">{Text}</code>, SendText oder <a href="ControlSend.htm">ControlSendText</a> aktiviert werden und bewirkt dasselbe wie der Raw-Modus, allerdings ohne den Versuch, Zeichen (außer <code class="no-highlight">`r</code>, <code class="no-highlight">`n</code>, <code class="no-highlight">`t</code> und <code class="no-highlight">`b</code>) in Tastencodes umzuwandeln; stattdessen wird für alle übrigen Zeichen die <a href="#fallback">Fallback-Methode</a> angewendet. Dies verbessert zwar die Zuverlässigkeit von SendEvent, SendInput und <a href="ControlSend.htm">ControlSend</a>, da die Zeichen kaum noch vom korrekten Modifikatorstatus abhängig sind, allerdings wird dabei jede via <a href="SetKeyDelay.htm">SetKeyDelay</a> gesetzte Druckdauer ignoriert. Dieser Modus kann mit dem Blind-Modus kombiniert werden, um das Loslassen von Modifikatortasten zu vermeiden: <code>Send "{Blind}{Text}Ihr Text"</code>. Einige Anwendungen erfordern jedoch, dass Modifikatortasten losgelassen werden.</p>
+<p><code class="no-highlight">`n</code>, <code class="no-highlight">`r</code> und <code class="no-highlight">`r`n</code> werden in einen einzelnen <kbd>Enter</kbd>-Tastendruck übersetzt, im Gegensatz zum Standardverhalten und dem Raw-Modus, wo <code class="no-highlight">`r`n</code> in zwei <kbd>Enter</kbd>-Tastendrücke übersetzt wird. <code class="no-highlight">`t</code> wird in <kbd>Tab</kbd> und <code class="no-highlight">`b</code> in <kbd>Backspace</kbd> übersetzt, während alle anderen Zeichen ohne Übersetzung gesendet werden.</p>
+<p>Wie der Blind-Modus ignoriert auch der Text-Modus <a href="SetStoreCapsLockMode.htm">SetStoreCapsLockMode</a> (d.h. der Status von <kbd>Feststell</kbd> bleibt unverändert) und wartet nicht auf <a href="../Hotkeys.htm#win-l">das Loslassen von <kbd>Win</kbd></a>. Der Grund dafür ist, dass der Text-Modus in der Regel nicht vom Status von <kbd>Feststell</kbd> abhängig ist und nicht den systeminternen <kbd>Win</kbd>+<kbd>L</kbd>-Hotkey auslösen kann. Dies gilt jedoch nur, wenn <em>Tasten</em> mit <code class="no-highlight">{Text}</code> oder <code class="no-highlight">{Blind}{Text}</code> beginnt.</p>
+
+<h3 id="Blind">Blind-Modus</h3>
+<p id="blind">Der Blind-Modus kann mit <code class="no-highlight">{Blind}</code> aktiviert werden und gibt dem Skript mehr Kontrolle, indem eine Reihe von Dingen deaktiviert werden, die normalerweise automatisch vorgenommen werden, damit die Dinge wie erwartet funktionieren. <code class="no-highlight">{Blind}</code> muss das erste Element in der Zeichenkette sein, um den Blind-Modus zu aktivieren. Dieser Modus hat die folgenden Auswirkungen:</p>
+<ul>
+  <li>Der Blind-Modus verhindert, dass nach unten gedrückte Modifikatortasten (Alt, Strg, Umschalt und Win) wieder automatisch losgelassen werden, es sei denn, der Modifikator wurde <a href="#blind-exclude">ausgeschlossen</a>. Zum Beispiel würde der Hotkey <code>+s::Send "{Blind}abc"</code> ABC statt abc senden, wenn der Benutzer <kbd>Umschalt</kbd> gedrückt hält.</li>
+  <li>Modifikatortasten werden auf andere Weise wiederhergestellt, damit ein Send die Modifikatoren eines Hotkeys ausschalten kann, auch dann, wenn der Benutzer sie physisch noch gedrückt hält. Zum Beispiel bewirkt <code>^space::Send "{Ctrl up}"</code>, dass <kbd>Strg</kbd> automatisch wieder nach unten gedrückt wird, wenn der Benutzer <kbd>Strg</kbd> noch physisch gedrückt hält, während <code>^space::Send "{Blind}{Ctrl up}"</code> zulässt, dass <kbd>Strg</kbd> logisch oben ist, obwohl es physisch unten ist.</li>
+  <li><a href="SetStoreCapsLockMode.htm">SetStoreCapsLockMode</a> wird ignoriert, d.h. der Status von <kbd>Feststell</kbd> bleibt unverändert.</li>
+  <li><a href="A_MenuMaskKey.htm">Menü-Maskierung</a> ist deaktiviert. Das bedeutet, dass Send die zusätzlichen Tastendrücke ignoriert, die sonst gesendet werden würden, um Folgendes zu verhindern: 1) Öffnen des Startmenüs beim Drücken einer Win-Taste (LWin/RWin); 2) Aktivierung der Menüleiste beim Drücken einer Alt-Taste. Der Blind-Modus verhindert jedoch nicht die Maskierung durch den Tastatur-Hook nach Aktivierung einer Hook-Taste.</li>
+  <li>Send wartet nicht auf das Loslassen von <kbd>Win</kbd>, auch dann nicht, wenn der Text einen <kbd>L</kbd>-Tastendruck enthält. Dies geschieht normalerweise, um zu verhindern, dass Send den System-Hotkey "Arbeitsplatz sperren" (<kbd>Win</kbd>+<kbd>L</kbd>) auslöst. Weitere Informationen finden Sie unter <a href="../Hotkeys.htm#win-l">Hotkeys</a>.</li>
+</ul>
+<p id="blind-exclude">Nach dem Wort "Blind" können ein oder mehrere Modifikatorsymbole (<code class="no-highlight">!#^+</code>) folgen, damit diese Modifikatoren bei Bedarf automatisch losgelassen werden können. Zum Beispiel bewirkt <code>*^a::Send "{Blind^}b"</code>, dass <kbd>Umschalt</kbd>+<kbd>B</kbd> statt <kbd>Strg</kbd>+<kbd>Umschalt</kbd>+<kbd>B</kbd> gesendet wird, wenn <kbd>Strg</kbd>+<kbd>Umschalt</kbd>+<kbd>A</kbd> gedrückt wurde. <code class="no-highlight">{Blind!#^+}</code> erlaubt das Loslassen aller Modifikatoren bei Bedarf, aktiviert aber auch die anderen Effekte des Blind-Modus. <span class="ver">[v2.1-alpha.3+]</span>: Die Modifikatoren <code class="no-highlight">&lt;</code> (links) und <code class="no-highlight">&gt;</code> (rechts) können verwendet werden, um nur die linke bzw. rechte Taste zu beeinflussen. Zum Beispiel kann <code class="no-highlight">{Blind&lt;^}</code> die linke <kbd>Strg</kbd>-Taste automatisch loslassen, wird aber die rechte <kbd>Strg</kbd>-Taste nicht automatisch loslassen.</p>
+<p>AutoHotkey verwendet automatisch den Blind-Modus beim <a href="../misc/Remap.htm">Neubelegen einer Taste</a>. Zum Beispiel würde die Neubelegung <code>a::b</code> Folgendes erzeugen: 1) "b", wenn "a" eingegeben wird; 2) großes "B", wenn ein großes "A" eingegeben wird; und 3) <kbd>Strg</kbd>+<kbd>B</kbd>, wenn <kbd>Strg</kbd>+<kbd>A</kbd> eingegeben wird. Wenn Modifikatoren bei der Originaltaste angegeben sind (einschließlich <kbd>Umschalt</kbd>, wenn die Originaltaste ein Großbuchstabe ist), werden diese wie oben beschrieben ausgeschlossen. Zum Beispiel erzeugt <code>^a::b</code> ein normales <kbd>B</kbd>, kein <kbd>Strg</kbd>+<kbd>B</kbd>. <span class="ver">[v2.1-alpha.3+]</span>: Beim Ausschließen werden auch die Modifikatoren <code class="no-highlight">&lt;</code> und <code class="no-highlight">&gt;</code> berücksichtigt.</p>
+<p><code class="no-highlight">{Blind}</code> wird nicht von SendText und <a href="ControlSend.htm">ControlSendText</a> unterstützt; verwenden Sie stattdessen <code class="no-highlight">{Blind}{Text}</code>.</p>
+<p>Der Blind-Modus wird von <a href="SendMode.htm#Play">SendPlay</a> nur teilweise unterstützt, insbesondere wenn es sich um die Modifikatortasten (Strg, Alt, Umschalt und Win) handelt.</p>
+
+<h2 id="keynames">Tastennamen</h2>
+<p>Die folgende Tabelle listet alle speziellen Tasten auf, die gesendet werden können (jeder Tastenname muss mit geschweiften Klammern umschlossen werden):</p>
+<table class="info">
+  <tr>
+    <th abbr="Taste">Tastenname</th>
+    <th abbr="Beschr">Beschreibung</th>
+  </tr>
+  <tr>
+    <td>{F1} – {F24}</td>
+    <td>Funktionstasten. Zum Beispiel: {F12} ist <kbd>F12</kbd>.</td>
+  </tr>
+  <tr>
+    <td>{!}</td>
+    <td>!</td>
+  </tr>
+  <tr>
+    <td>{#}</td>
+    <td>#</td>
+  </tr>
+  <tr>
+    <td>{+}</td>
+    <td>+</td>
+  </tr>
+  <tr>
+    <td>{^}</td>
+    <td>^</td>
+  </tr>
+  <tr>
+    <td>{{}</td>
+    <td>{</td>
+  </tr>
+  <tr>
+    <td>{}}</td>
+    <td>}</td>
+  </tr>
+  <tr>
+    <td>{Enter}</td>
+    <td><kbd>Enter</kbd> im Hauptblock</td>
+  </tr>
+  <tr>
+    <td>{Escape} oder {Esc}</td>
+    <td><kbd>Esc</kbd></td>
+  </tr>
+  <tr>
+    <td>{Space}</td>
+    <td><kbd>Leer</kbd> (wird nur für Leerzeichen am Anfang oder Ende der zu sendenden Zeichenkette benötigt – Leerzeichen in der Mitte können direkt geschrieben werden)</td>
+  </tr>
+  <tr>
+    <td>{Tab}</td>
+    <td><kbd>Tab</kbd></td>
+  </tr>
+  <tr>
+    <td>{Backspace} oder {BS}</td>
+    <td><kbd>Backspace</kbd></td>
+  </tr>
+  <tr>
+    <td>{Delete} oder {Del}</td>
+    <td><kbd>Entf</kbd></td>
+  </tr>
+  <tr>
+    <td>{Insert} oder {Ins}</td>
+    <td><kbd>Einfg</kbd></td>
+  </tr>
+  <tr>
+    <td>{Up}</td>
+    <td><kbd>↑</kbd> (Nach-Oben-Taste) im Hauptblock</td>
+  </tr>
+  <tr>
+    <td>{Down}</td>
+    <td><kbd>↓</kbd> (Nach-Unten-Taste) im Hauptblock</td>
+  </tr>
+  <tr>
+    <td>{Left}</td>
+    <td><kbd>←</kbd> (Nach-Links-Taste) im Hauptblock</td>
+  </tr>
+  <tr>
+    <td>{Right}</td>
+    <td><kbd>→</kbd> (Nach-Rechts-Taste) im Hauptblock</td>
+  </tr>
+  <tr>
+    <td>{Home}</td>
+    <td><kbd>Pos1</kbd> im Cursorblock</td>
+  </tr>
+  <tr>
+    <td>{End}</td>
+    <td><kbd>Ende</kbd> im Cursorblock</td>
+  </tr>
+  <tr>
+    <td>{PgUp}</td>
+    <td><kbd>Bild↑</kbd> im Cursorblock</td>
+  </tr>
+  <tr class="sep_below">
+    <td>{PgDn}</td>
+    <td><kbd>Bild↓</kbd> im Cursorblock</td>
+  </tr>
+  <tr>
+    <td>{CapsLock}</td>
+    <td><kbd>Feststell</kbd> (<a href="SetNumScrollCapsLockState.htm">SetCapsLockState</a> ist zuverlässiger). Zum Senden von {CapsLock} ist möglicherweise vorher <code><a href="SetStoreCapsLockMode.htm">SetStoreCapsLockMode</a> False</code> erforderlich.</td>
+  </tr>
+  <tr>
+    <td>{ScrollLock}</td>
+    <td><kbd>Rollen</kbd> (siehe auch: <a href="SetNumScrollCapsLockState.htm">SetScrollLockState</a>)</td>
+  </tr>
+  <tr class="sep_below">
+    <td>{NumLock}</td>
+    <td><kbd>Num</kbd> (siehe auch: <a href="SetNumScrollCapsLockState.htm">SetNumLockState</a>)</td>
+  </tr>
+  <tr>
+    <td>{Control} oder {Ctrl}</td>
+    <td><kbd>Strg</kbd> (technische Info: Sendet die neutrale virtuelle Taste, aber den linken Scancode)</td>
+  </tr>
+  <tr>
+    <td>{LControl} oder {LCtrl}</td>
+    <td>Linke <kbd>Strg</kbd>-Taste (technische Info: Sendet die linke virtuelle Taste, nicht die neutrale)</td>
+  </tr>
+  <tr>
+    <td>{RControl} oder {RCtrl}</td>
+    <td>Rechte <kbd>Strg</kbd>-Taste</td>
+  </tr>
+  <tr class="sep_below">
+    <td>{Control down} oder {Ctrl down}</td>
+    <td>Hält <kbd>Strg</kbd> gedrückt, bis {Ctrl up} gesendet wird. Um stattdessen die linke oder rechte Taste gedrückt zu halten, ersetzen Sie Ctrl mit LCtrl oder RCtrl.</td>
+  </tr>
+  <tr>
+    <td>{Alt}</td>
+    <td><kbd>Alt</kbd> (technische Info: Sendet die neutrale virtuelle Taste, aber den linken Scancode)</td>
+  </tr>
+  <tr>
+    <td>{LAlt}</td>
+    <td>Linke <kbd>Alt</kbd>-Taste (technische Info: Sendet die linke virtuelle Taste, nicht die neutrale)</td>
+  </tr>
+  <tr>
+    <td>{RAlt}</td>
+    <td>Rechte <kbd>Alt</kbd>-Taste (oder <kbd>AltGr</kbd> je nach Tastaturbelegung)</td>
+  </tr>
+  <tr class="sep_below">
+    <td>{Alt down}</td>
+    <td>Hält <kbd>Alt</kbd> gedrückt, bis {Alt up} gesendet wird. Um stattdessen die linke oder rechte Taste gedrückt zu halten, ersetzen Sie Alt mit LAlt oder RAlt.</td>
+  </tr>
+  <tr>
+    <td>{Shift}</td>
+    <td><kbd>Umschalt</kbd> (technische Info: Sendet die neutrale virtuelle Taste, aber den linken Scancode)</td>
+  </tr>
+  <tr>
+    <td>{LShift}</td>
+    <td>Linke <kbd>Umschalt</kbd>-Taste (technische Info: Sendet die linke virtuelle Taste, nicht die neutrale)</td>
+  </tr>
+  <tr>
+    <td>{RShift}</td>
+    <td>Rechte <kbd>Umschalt</kbd>-Taste</td>
+  </tr>
+  <tr class="sep_below">
+    <td>{Shift down}</td>
+    <td>Hält <kbd>Umschalt</kbd> gedrückt, bis {Shift up} gesendet wird. Um stattdessen die linke oder rechte Taste gedrückt zu halten, ersetzen Sie Shift mit LShift oder RShift.</td>
+  </tr>
+  <tr>
+    <td>{LWin}</td>
+    <td>Linke <kbd>Win</kbd>-Taste</td>
+  </tr>
+  <tr>
+    <td>{RWin}</td>
+    <td>Rechte <kbd>Win</kbd>-Taste</td>
+  </tr>
+  <tr>
+    <td>{LWin down}</td>
+    <td>Hält die linke <kbd>Win</kbd>-Taste gedrückt, bis {LWin up} gesendet wird</td>
+  </tr>
+  <tr class="sep_below">
+    <td>{RWin down}</td>
+    <td>Hält die rechte <kbd>Win</kbd>-Taste gedrückt, bis {RWin up} gesendet wird</td>
+  </tr>
+  <tr>
+    <td>{AppsKey}</td>
+    <td><kbd>Menü</kbd> (öffnet das Rechtsklick- bzw. Kontextmenü)</td>
+  </tr>
+  <tr>
+    <td>{Sleep}</td>
+    <td><kbd>Sleep</kbd></td>
+  </tr>
+  <tr id="asc">
+    <td>{ASC nnnnn}</td>
+    <td><p>Sendet eine <kbd>Alt</kbd>+nnnnn-Ziffernblock-Tastenkombination. Dies ermöglicht die Erzeugung von Sonderzeichen, die auf der Tastatur nicht existieren.</p>
+    <p>Um sichtbare ASCII-Zeichen oder andere Zeichen aus der OEM- bzw. DOS-Codepage des Systems zu erzeugen, geben Sie eine Zahl zwischen 1 und 255 an. <code>DllCall("GetOEMCP", "UInt")</code> gibt die aktuelle OEM-Codepage-Nummer zurück, z.B. <a href="https://en.wikipedia.org/wiki/Code_page_437">437 (Vereinigte Staaten)</a> oder <a href="https://en.wikipedia.org/wiki/Code_page_850">850 (Westeuropa)</a>.</p>
+    <p>Um ANSI-Zeichen zu erzeugen (Standard in den meisten Sprachen), geben Sie eine Zahl zwischen 128 und 255 an, aber stellen Sie ihr eine Null voran, z.B. <code class="no-highlight">{Asc 0133}</code>. <code>DllCall("GetACP", "UInt")</code> gibt die aktuelle ANSI-Codepage-Nummer zurück, z.B. <a href="https://en.wikipedia.org/wiki/Windows-1252">1252 (Vereinigte Staaten, Westeuropa usw.)</a>.</p>
+    <p>Um Unicode-Zeichen zu erzeugen, geben Sie eine Zahl zwischen 256 und 65535 an (ohne Null am Anfang). Dies wird jedoch nicht von allen Anwendungen unterstützt. Alternativen finden Sie im nächsten Abschnitt.</p></td>
+  </tr>
+  <tr id="Unicode">
+    <td>{U+nnnn}</td>
+    <td><p id="sendu">Sendet ein Unicode-Zeichen, wobei <em>nnnn</em> der Hexadezimalwert des Zeichens ohne 0x-Präfix ist. Dies wird normalerweise nicht benötigt, da Send und ControlSend automatisch Unicode-Text unterstützen.</p>
+    <p>Zum Senden des Zeichens wird <a href="https://learn.microsoft.com/windows/win32/api/winuser/nf-winuser-sendinput">SendInput()</a> oder <a href="https://learn.microsoft.com/windows/win32/inputdev/wm-char">WM_CHAR</a> verwendet. Außerdem hat der aktuelle Send-Modus keinen Effekt. Derart gesendete Zeichen lösen in der Regel keine Tastaturkurzbefehle oder Hotkeys aus.</p></td>
+  </tr>
+  <tr id="vk" class="sep_below">
+    <td><p>{vkXX}<br>
+      {scYYY}<br>
+    {vkXXscYYY}</p></td>
+    <td><p>Sendet einen Tastendruck mit dem virtuellen Tastencode XX und dem Scancode YYY. Zum Beispiel: <code>Send "{vkFFsc159}"</code>. Wenn der sc- oder vk-Teil weggelassen wird, wird stattdessen der am besten passende Wert gesendet.</p>
+      <p>Die Werte für XX und YYY sind hexadezimal und können üblicherweise über den Menüpunkt <a href="KeyHistory.htm">View-&gt;Key history</a> im <a href="../Program.htm#main-window">Hauptfenster</a> ermittelt werden. Siehe auch: <a href="../KeyList.htm#SpecialKeys">Sondertasten</a></p>
+      <p class="warning"><strong>Warnung:</strong> Die Kombination von vk und sc auf diese Weise ist nur mit Send gültig.</p></td>
+  </tr>
+  <tr>
+    <td>{Numpad0} – {Numpad9}</td>
+    <td>Ziffernblocktasten (wenn <kbd>Num</kbd> eingeschaltet ist). Zum Beispiel: {Numpad5} ist <kbd>5</kbd>.</td>
+  </tr>
+  <tr>
+    <td>{NumpadDot}</td>
+    <td><kbd>,</kbd> (Komma-Taste im Ziffernblock) (wenn <kbd>Num</kbd> eingeschaltet ist)</td>
+  </tr>
+  <tr>
+    <td>{NumpadEnter}</td>
+    <td><kbd>Enter</kbd> im Ziffernblock</td>
+  </tr>
+  <tr>
+    <td>{NumpadMult}</td>
+    <td><kbd>*</kbd> (Multiplikationstaste im Ziffernblock)</td>
+  </tr>
+  <tr>
+    <td>{NumpadDiv}</td>
+    <td><kbd>/</kbd> (Divisionstaste im Ziffernblock)</td>
+  </tr>
+  <tr>
+    <td>{NumpadAdd}</td>
+    <td><kbd>+</kbd> (Additionstaste im Ziffernblock)</td>
+  </tr>
+  <tr class="sep_below">
+    <td>{NumpadSub}</td>
+    <td><kbd>-</kbd> (Subtraktionstaste im Ziffernblock)</td>
+  </tr>
+  <tr>
+    <td>{NumpadDel}</td>
+    <td><kbd>Entf</kbd> im Ziffernblock (diese und die folgenden Ziffernblocktasten sind nur verwendbar, wenn <kbd>Num</kbd> ausgeschaltet ist)</td>
+  </tr>
+  <tr>
+    <td>{NumpadIns}</td>
+    <td><kbd>Einfg</kbd> im Ziffernblock</td>
+  </tr>
+  <tr>
+    <td>{NumpadClear}</td>
+    <td>Funktionslose Taste im Ziffernblock (üblicherweise <kbd>5</kbd>, wenn <kbd>Num</kbd> ausgeschaltet ist).</td>
+  </tr>
+  <tr>
+    <td>{NumpadUp}</td>
+    <td><kbd>↑</kbd> (Nach-Oben-Taste) im Ziffernblock</td>
+  </tr>
+  <tr>
+    <td>{NumpadDown}</td>
+    <td><kbd>↓</kbd> (Nach-Unten-Taste) im Ziffernblock</td>
+  </tr>
+  <tr>
+    <td>{NumpadLeft}</td>
+    <td><kbd>←</kbd> (Nach-Links-Taste) im Ziffernblock</td>
+  </tr>
+  <tr>
+    <td>{NumpadRight}</td>
+    <td><kbd>→</kbd> (Nach-Rechts-Taste) im Ziffernblock</td>
+  </tr>
+  <tr>
+    <td>{NumpadHome}</td>
+    <td><kbd>Pos1</kbd> im Ziffernblock</td>
+  </tr>
+  <tr>
+    <td>{NumpadEnd}</td>
+    <td><kbd>Ende</kbd> im Ziffernblock</td>
+  </tr>
+  <tr>
+    <td>{NumpadPgUp}</td>
+    <td><kbd>Bild↑</kbd> im Ziffernblock</td>
+  </tr>
+  <tr class="sep_below">
+    <td>{NumpadPgDn}</td>
+    <td><kbd>Bild↓</kbd> im Ziffernblock</td>
+  </tr>
+  <tr>
+    <td>{Browser_Back}</td>
+    <td>Browser "Zurück"</td>
+  </tr>
+  <tr>
+    <td>{Browser_Forward}</td>
+    <td>Browser "Vorwärts"</td>
+  </tr>
+  <tr>
+    <td>{Browser_Refresh}</td>
+    <td>Browser "Aktualisieren"</td>
+  </tr>
+  <tr>
+    <td>{Browser_Stop}</td>
+    <td>Browser "Stopp"</td>
+  </tr>
+  <tr>
+    <td>{Browser_Search}</td>
+    <td>Browser "Suchen"</td>
+  </tr>
+  <tr>
+    <td>{Browser_Favorites}</td>
+    <td>Browser "Favoriten"</td>
+  </tr>
+  <tr>
+    <td>{Browser_Home}</td>
+    <td>Startet den Browser und öffnet die Startseite</td>
+  </tr>
+  <tr>
+    <td>{Volume_Mute}</td>
+    <td>Master-Lautstärke stummschalten bzw. Stummschaltung aufheben. Standardmäßig äquivalent zu <code><a href="SoundSetMute.htm">SoundSetMute</a> -1</code>.</td>
+  </tr>
+  <tr>
+    <td>{Volume_Down}</td>
+    <td>Master-Lautstärke verringern. Standardmäßig äquivalent zu <code><a href="SoundSetVolume.htm">SoundSetVolume</a> -5</code>.</td>
+  </tr>
+  <tr>
+    <td>{Volume_Up}</td>
+    <td>Master-Lautstärke erhöhen. Standardmäßig äquivalent zu <code><a href="SoundSetVolume.htm">SoundSetVolume</a> "+5"</code>.</td>
+  </tr>
+  <tr>
+    <td>{Media_Next}</td>
+    <td>Media Player "Nächster Titel"</td>
+  </tr>
+  <tr>
+    <td>{Media_Prev}</td>
+    <td>Media Player "Vorheriger Titel"</td>
+  </tr>
+  <tr>
+    <td>{Media_Stop}</td>
+    <td>Media Player "Stopp"</td>
+  </tr>
+  <tr>
+    <td>{Media_Play_Pause}</td>
+    <td>Media Player "Wiedergabe/Anhalten"</td>
+  </tr>
+  <tr>
+    <td>{Launch_Mail}</td>
+    <td>E-Mail-Programm starten</td>
+  </tr>
+  <tr>
+    <td>{Launch_Media}</td>
+    <td>Media Player starten</td>
+  </tr>
+  <tr>
+    <td>{Launch_App1}</td>
+    <td>Benutzerdefiniertes Programm 1 starten</td>
+  </tr>
+  <tr class="sep_below">
+    <td>{Launch_App2}</td>
+    <td>Benutzerdefiniertes Programm 2 starten</td>
+  </tr>
+  <tr>
+    <td>{PrintScreen}</td>
+    <td><kbd>Druck</kbd></td>
+  </tr>
+  <tr>
+    <td>{CtrlBreak}</td>
+    <td><kbd>Strg</kbd>+<kbd>Pause</kbd></td>
+  </tr>
+  <tr class="sep_below">
+    <td>{Pause}</td>
+    <td><kbd>Pause</kbd></td>
+  </tr>
+  <tr id="Click">
+    <td>{Click [Optionen]}</td>
+    <td>Sendet einen Mausklick mit denselben Optionen wie die <a href="Click.htm">Click</a>-Funktion. Zum Beispiel bewirkt <code>Send "{Click}"</code>, dass einmal mit der linken Maustaste auf die aktuelle Position des Mauszeigers geklickt wird, oder <code>Send "{Click 100 200}"</code>, dass auf die Koordinaten 100, 200 geklickt wird (gemäß <a href="CoordMode.htm">CoordMode</a>). Um den Mauszeiger ohne Klicken zu bewegen, geben Sie 0 nach den Koordinaten an, z.B. <code>Send "{Click 100 200 0}"</code>. Die Verzögerung zwischen den Mausklicks wird durch <a href="SetMouseDelay.htm">SetMouseDelay</a> (nicht <a href="SetKeyDelay.htm">SetKeyDelay</a>) bestimmt.</td>
+  </tr>
+  <tr id="mouse-buttons">
+    <td>{WheelDown}, {WheelUp}, {WheelLeft}, {WheelRight}, {LButton}, {RButton}, {MButton}, {XButton1}, {XButton2}</td>
+    <td>
+      <p>Sendet ein Maustastenereignis an die aktuelle Position des Mauszeigers (um Kontrolle über die Position und andere Optionen zu haben, verwenden Sie <a href="Click.htm">{Click}</a> oben). Die Verzögerung zwischen den Mausklicks wird durch <a href="SetMouseDelay.htm">SetMouseDelay</a> bestimmt.</p>
+      <p>LButton ist die primäre Maustaste und RButton die sekundäre Maustaste. Normalerweise befindet sich die primäre Maustaste (LButton) auf der linken Seite, aber der Benutzer kann die Maustasten über die Systemsteuerung vertauschen.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>{Blind}</td>
+    <td>Aktiviert den <a href="#blind">Blind-Modus</a>, der dem Skript mehr Kontrolle gibt, indem eine Reihe von Dingen deaktiviert werden, die normalerweise automatisch vorgenommen werden, damit die Dinge wie erwartet funktionieren. <code class="no-highlight">{Blind}</code> muss am Anfang der Zeichenkette stehen.</td>
+  </tr>
+  <tr>
+    <td>{Raw}</td>
+    <td>Aktiviert den <a href="#SendRaw">Raw-Modus</a>, der dafür sorgt, dass die folgenden Zeichen als direkt geschriebener Text interpretiert werden: <code class="no-highlight">^+!#{}</code>. Obwohl <code class="no-highlight">{Raw}</code> nicht am Anfang der Zeichenkette stehen muss, bleibt sie, wenn sie einmal angegeben wurde, für den Rest der Zeichenkette aktiv.</td>
+  </tr>
+  <tr>
+    <td>{Text}</td>
+    <td>Aktiviert den <a href="#SendText">Text-Modus</a>, der eine Kette von Zeichen anstelle von Tastendrücken sendet. Wie der Raw-Modus bewirkt der Text-Modus, dass die folgenden Zeichen als direkt geschriebener Text interpretiert werden: <code class="no-highlight">^+!#{}</code>. Obwohl <code class="no-highlight">{Text}</code> nicht am Anfang der Zeichenkette stehen muss, bleibt sie, wenn sie einmal angegeben wurde, für den Rest der Zeichenkette aktiv.</td>
+  </tr>
+</table>
+
+<h2 id="Repeating_or_Holding_Down_a_Key">Mehrfaches oder haltendes Drücken einer Taste</h2>
+<p id="repeat"><strong>Mehrfaches Drücken:</strong> Geben Sie in geschweiften Klammern den Namen der Taste und die Anzahl der Wiederholungen an. Zum Beispiel:</p>
+<pre>Send "{DEL 4}"  <em>; Drückt viermal die ENTF-Taste.</em>
+Send "{S 30}"   <em>; Sendet 30-mal ein großes S.</em>
+Send "+{TAB 4}"  <em>; Drückt viermal UMSCHALT+TAB.</em></pre>
+<p id="Down"><strong>Halten oder Loslassen:</strong> Geben Sie in geschweiften Klammern den Namen der Taste und das Wort <strong>Down</strong> oder <strong>Up</strong> an. Zum Beispiel:</p>
+<pre>Send "{b down}{b up}"
+Send "{TAB down}{TAB up}"
+Send "{Up down}"  <em>; Drückt die NACH-OBEN-Taste nach unten.</em>
+Sleep 1000  <em>; Hält sie eine Sekunde lang gedrückt.</em>
+Send "{Up up}"  <em>; Lässt die NACH-OBEN-Taste los.</em></pre>
+<p>Wenn eine Taste mit der obigen Methode gedrückt gehalten wird, wird sie nicht automatisch wiederholt, wie es beim physischen Gedrückthalten der Fall wäre (da Autowiederholung ein Treiber/Hardware-Feature ist). Es kann jedoch eine <a href="Loop.htm">Schleife</a> verwendet werden, um eine Autowiederholung zu simulieren. Das folgende Beispiel sendet 20 Tabulatortastendrücke:</p>
+<pre>Loop 20
+{
+    Send "{Tab down}"  <em>; Autowiederholung besteht aus fortlaufenden Down-Ereignissen (ohne Up-Ereignisse).</em>
+    Sleep 30  <em>; Verzögerung in Millisekunden zwischen den Tastendrücken (oder <a href="SetKeyDelay.htm">SetKeyDelay</a> verwenden).</em>
+}
+Send "{Tab up}"  <em>; Taste loslassen.</em></pre>
+<p>Standardmäßig lässt Send eine Modifikatortaste (Strg, Umschalt, Alt und Win) nicht automatisch los, wenn diese Modifikatortaste durch Senden "nach unten gedrückt" wurde. Zum Beispiel kann sich <code>Send "a"</code> ähnlich wie <code>Send "<a href="#blind">{Blind}</a>{Ctrl up}a{Ctrl down}"</code> verhalten, wenn der Benutzer <kbd>Strg</kbd> physisch gedrückt hält, während <code>Send "{Ctrl Down}"</code> gefolgt von <code>Send "a"</code> bewirkt, dass <kbd>Strg</kbd>+<kbd>A</kbd> erzeugt wird. <em>DownTemp</em> und <em>DownR</em> können verwendet werden, um dieses Verhalten zu überschreiben. <em>DownTemp</em> und <em>DownR</em> haben die gleiche Wirkung wie <em>Down</em>, außer bei den Modifikatortasten (Strg, Umschalt, Alt und Win).</p>
+<p id="DownTemp"><strong>DownTemp</strong> teilt nachfolgenden Sends mit, dass die Taste nicht dauerhaft unten ist und jederzeit losgelassen werden kann, wenn ein Tastendruck dies erfordert. Zum Beispiel würde <code>Send "{Control DownTemp}"</code>, später gefolgt von <code>Send "a"</code>, <kbd>A</kbd> erzeugen, nicht <kbd>Strg</kbd>+<kbd>A</kbd>. Jede Verwendung von Send kann dazu führen, dass der Modifikator dauerhaft losgelassen wird, daher ist <em>DownTemp</em> nicht unbedingt für die <a href="../misc/Remap.htm">Neubelegung</a> von Modifikatortasten geeignet.</p>
+<p id="DownR"><strong>DownR</strong> (das "R" steht für <a href="../misc/Remap.htm">Remapping</a> bzw. Neubelegung, was dessen Hauptzweck darstellt) teilt nachfolgenden Sends mit, dass die Taste, wenn sie automatisch losgelassen wird, nach Abschluss des Sends erneut gedrückt werden soll. Zum Beispiel würde <code>Send "{Control DownR}"</code>, später gefolgt von <code>Send "a"</code>, <kbd>A</kbd> erzeugen, nicht <kbd>Strg</kbd>+<kbd>A</kbd>, aber <kbd>Strg</kbd> für eventuelle Tastaturkurzbefehle gedrückt lassen. Mit anderen Worten, <em>DownR</em> hat denselben Effekt wie, als würde man die Taste physisch drücken.</p>
+<p>Wenn ein Zeichen nicht zu einer virtuellen Taste in der aktuellen Tastaturbelegung gehört, kann es weder "gedrückt" noch "losgelassen" werden. Zum Beispiel hat <code>Send "{µ up}"</code> bei die meisten Belegungen keinen Effekt, während <code>Send "{µ down}"</code> äquivalent zu <code>Send "µ"</code> ist.</p>
+
+<h2 id="Remarks">Allgemeine Bemerkungen</h2>
+<span id="SendPlayDetail"></span><p id="SendInputDetail">AutoHotkey verwendet drei Methoden, um simulierte Tastendrücke und Mausklicks zu senden: <a href="SendMode.htm#Event">SendEvent</a>, <a href="SendMode.htm#Input">SendInput</a> und <a href="SendMode.htm#Play">SendPlay</a>. Jeder Modus hat unterschiedliche Stärken und Schwächen, und Anwendungen können je nach Art der Eingabe unterschiedlich reagieren. Diese Unterschiede zu verstehen ist hilfreich, um den am besten geeigneten Modus für ein bestimmtes Skript oder die Zielanwendung zu finden. Weitere Informationen finden Sie unter <a href="SendMode.htm#Sending_Modes">Sendemodi</a>.</p>
+<p id="characters"><strong>Zeichen vs. Tasten:</strong> Standardmäßig werden Zeichen gesendet, indem sie zunächst in Tastendrücke übersetzt werden. Wenn diese Übersetzung nicht möglich ist (also wenn die aktuelle Tastaturbelegung keine Taste oder Tastenkombination enthält, die das Zeichen erzeugen würde) oder wenn der <a href="#Text">Text-Modus</a> aktiv ist, wird das Zeichen mit einer der folgenden Fallback-Methoden gesendet:</p>
+<ul id="fallback">
+  <li>SendEvent und SendInput verwenden <a href="https://learn.microsoft.com/windows/win32/api/winuser/nf-winuser-sendinput">SendInput()</a> mit dem <a href="https://learn.microsoft.com/windows/win32/api/winuser/ns-winuser-keybdinput#keyeventf_unicode">KEYEVENTF_UNICODE-Flag</a>. Jede via <a href="SetKeyDelay.htm">SetKeyDelay</a> gesetzte Druckdauer wird ignoriert.</li>
+  <li>SendPlay verwendet die <a href="#asc">Alt+nnnnn</a>-Methode, die nur Unicode erzeugt, wenn es von der Zielanwendung unterstützt wird.</li>
+  <li>ControlSend postet eine <a href="https://learn.microsoft.com/windows/win32/inputdev/wm-char">WM_CHAR</a>-Meldung.</li>
+</ul>
+<p class="warning"><strong>Hinweis:</strong> Zeichen, die mit einer der oben genannten Methoden gesendet werden, lösen in der Regel keine Tastaturkurzbefehle oder Hotkeys aus.</p>
+<p id="AZ">Jedes Zeichen im Bereich von a-z oder A-Z (reine ASCII-Buchstaben), das nicht in der aktuellen Tastaturbelegung existiert, kann entweder als Zeichen oder als entsprechender virtueller Tastencode (vk41-vk5A) gesendet werden:</p>
+<ul>
+  <li>Wenn ein reiner Buchstabe (also ohne Modifikatoren oder geschweifte Klammern) gesendet wird oder wenn der <a href="#Raw">Raw-Modus</a> aktiv ist, wird der Buchstabe als Zeichen gesendet. Zum Beispiel sendet <code>Send "{Raw}Regards"</code> den erwarteten Text, selbst wenn das Drücken von <kbd>R</kbd> (vk52) ein anderes Zeichen erzeugt (z.B. <kbd>К</kbd> in der russischen Belegung). <code class="no-highlight">{Raw}</code> kann in diesem Fall weggelassen werden, es sei denn, eine Modifikatortaste wurde durch ein vorheriges Send wirksam.</li>
+  <li>Wenn eine oder mehrere Modifikatortasten durch die Send-Funktion wirksam wurden oder wenn der Buchstabe in geschweiften Klammern gesetzt ist, wird der Buchstabe als Tastencode gesendet (mit <kbd>Umschalt</kbd> modifiziert, wenn es sich um einen Großbuchstaben handelt). Dadurch kann das Skript auf einfache Weise die vordefinierten Tastaturkurzbefehle aktivieren. Zum Beispiel würden <code class="no-highlight">^c</code> und <code class="no-highlight">{Ctrl down}c{Ctrl up}</code> den vordefinierten Tastaturkurzbefehl <kbd>Strg</kbd>+<kbd>C</kbd> aktivieren, während <code class="no-highlight">{c}</code> äquivalent zu <code class="no-highlight">{vk43}</code> ist.</li>
+</ul>
+<p>Wenn der Buchstabe in der aktuellen Tastaturbelegung existiert, wird er als Tastencode gesendet, den die Belegung mit diesem Buchstaben assoziiert (es sei denn, der <a href="#SendText">Text-Modus</a> wird verwendet, dann wird das Zeichen auf andere Weise gesendet). Mit anderen Worten, der obige Abschnitt ist nur für nicht-lateinbasierte Belegungen relevant, wie z.B. Russisch.</p>
+<p id="mask"><strong>Modifikatorstatus:</strong> Wenn Send den Status der Modifikatortasten <kbd>Win</kbd> oder <kbd>Alt</kbd> ändern muss (z.B. wenn der Benutzer eine dieser Tasten gedrückt hält), kann es zusätzliche Tastendrücke injizieren (standardmäßig <kbd>Strg</kbd>), um zu verhindern, dass das Startmenü oder das Fenstermenü angezeigt wird. Weitere Informationen finden Sie unter <a href="A_MenuMaskKey.htm">A_MenuMaskKey</a>.</p>
+<p><strong>BlockInput vs. SendInput/SendPlay:</strong> Obwohl die <a href="BlockInput.htm">BlockInput</a>-Funktion verhindern kann, dass physische Tastendrücke den Fluss von simulierten Tastendrücken unterbrechen, ist es oft besser, <a href="SendMode.htm#Input">SendInput</a> oder <a href="SendMode.htm#Play">SendPlay</a> zu verwenden, damit Tastendrücke und Mausklicks nicht unterbrochen werden können. SendInput/Play verhindert im Gegensatz zu BlockInput, dass die Tastendrücke des Benutzers während des Sendens verworfen werden; stattdessen werden solche Tastendrücke gepuffert und danach gesendet.</p>
+<p>Beim Senden vieler Tastendrücke kann ein <a href="../Scripts.htm#continuation">Fortsetzungsbereich</a> verwendet werden, um die Übersichtlichkeit und Wartbarkeit des Skripts zu verbessern.</p>
+<p>Da das Betriebssystem das Simulieren von <kbd>Strg</kbd>+<kbd>Alt</kbd>+<kbd>Entf</kbd> nicht erlaubt, wird so etwas wie <code>Send "^!{Delete}"</code> nicht funktionieren.</p>
+<p><b>Send hat möglicherweise keine Wirkung</b>, wenn das aktive Fenster mit Adminrechten ausgeführt wird und das Skript nicht. Dies ist auf einen Sicherheitsmechanismus namens Benutzeroberflächen-Rechteisolierung (engl. User Interface Privilege Isolation, kurz UIPI) zurückzuführen.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="SendMode.htm">SendMode</a>, <a href="SetKeyDelay.htm">SetKeyDelay</a>, <a href="SetStoreCapsLockMode.htm">SetStoreCapsLockMode</a>, <a href="../misc/EscapeChar.htm">Escapesequenzen (z.B. `n)</a>, <a href="ControlSend.htm">ControlSend</a>, <a href="BlockInput.htm">BlockInput</a>, <a href="../Hotstrings.htm">Hotstrings</a>, <a href="WinActivate.htm">WinActivate</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Schreibt eine zweizeilige Signatur.</p>
+<pre>Send "Mit freundlichen Grüßen,{enter}Max Mustermann"</pre>
+</div>
+
+<div class="ex" id="ExModifier">
+<p><a class="ex_number" href="#ExModifier"></a> Wählt Datei-&gt;Speichern im Menü aus (ALT+D gefolgt von S).</p>
+<pre>Send "!ds"</pre>
+</div>
+
+<div class="ex" id="ExBrace">
+<p><a class="ex_number" href="#ExBrace"></a> Springt zum Ende des Textes und sendet viermal UMSCHALT+NACH-LINKS.</p>
+<pre>Send "{End}+{Left 4}"</pre>
+</div>
+
+<div class="ex" id="ExSendInputRaw">
+<p><a class="ex_number" href="#ExSendInputRaw"></a> Sendet eine lange Sequenz von <a href="#Raw">Rohzeichen</a> mit der schnellsten Methode (<a href="SendMode.htm#Input">SendInput</a>, das Standard ist).</p>
+<pre>SendInput "{Raw}Eine lange Sequenz von Rohzeichen, die mit der schnellsten Methode gesendet wurden."</pre>
+</div>
+
+<div class="ex" id="ExVar">
+<p><a class="ex_number" href="#ExVar"></a> Hält eine Taste gedrückt, die in einer <a href="../Variables.htm">Variable</a> enthalten ist.</p>
+<pre>MeineTaste := "Shift"
+Send "{" MeineTaste " down}"  <em>; Hält die Umschalttaste gedrückt.</em>
+</pre>
+</div>
+
+</body>
+</html>

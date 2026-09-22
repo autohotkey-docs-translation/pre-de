@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>OnClipboardChange - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die OnClipboardChange-Funktion registriert eine Funktion, die jedes Mal automatisch aufgerufen wird, wenn sich der Inhalt der Zwischenablage ändert." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>OnClipboardChange</h1>
+<p>Registriert eine <a href="../Functions.htm">Funktion</a>, die jedes Mal automatisch aufgerufen wird, wenn sich der Inhalt der Zwischenablage ändert.</p>
+
+<pre class="Syntax"><span class="func">OnClipboardChange</span> Rückruf <span class="optional">, HinzufügenEntfernen</span></pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>Rückruf</dt>
+  <dd>
+    <p>Typ: <a href="../misc/Functor.htm">Funktionsobjekt</a></p>
+    <p>Eine Funktion, die aufgerufen werden soll.</p>
+    <p>Die Rückruffunktion akzeptiert einen Parameter und kann wie folgt <a href="../Functions.htm#intro">definiert</a> werden:</p>
+    <pre class="NoIndent">MeinRückruf(DatenTyp) { ...</pre>
+    <p>Es spielt keine Rolle, welchen Namen Sie dem Parameter geben, allerdings wird ihm als Wert eine der folgenden Zahlen zugewiesen:</p>
+    <ul>
+      <li>0 = Die Zwischenablage ist jetzt leer.</li>
+      <li>1 = Die Zwischenablage enthält etwas, das als Text ausgegeben werden kann (z.B. <a href="A_Clipboard.htm#CopiedFiles">kopierte Dateien</a> aus einem Explorer-Fenster).</li>
+      <li>2 = Die Zwischenablage enthält etwas, das nicht als Text ausgegeben werden kann, z.B. ein Bild.</li>
+    </ul>
+    <p>Der Parameter der Rückruffunktion kann weggelassen werden, wenn die entsprechende Information nicht benötigt wird, aber dann muss ein Sternchen angegeben werden, z.B. <code>MeinRückruf(*)</code>.</p>
+    <p>Wenn dies die letzte oder einzige Rückruffunktion ist, wird der Rückgabewert ignoriert. Andernfalls kann sie einen Integer ungleich 0 zurückgeben, um zu verhindern, dass nachfolgende Rückruffunktionen aufgerufen werden.</p>
+  </dd>
+  
+  <dt>HinzufügenEntfernen</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn weggelassen, wird standardmäßig 1 verwendet. Andernfalls geben Sie eine der folgenden Zahlen an:</p>
+    <ul>
+      <li>1 = Die Rückruffunktion nach anderen zuvor registrierten Rückruffunktionen aufrufen.</li>
+      <li>-1 = Die Rückruffunktion vor anderen zuvor registrierten Rückruffunktionen aufrufen.</li>
+      <li>0 = Die Rückruffunktion nicht aufrufen.</li>
+    </ul>
+  </dd>
+
+</dl>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Wenn sich die Zwischenablage ändert, während eine Rückruffunktion ausgeführt wird, geht dieses Benachrichtigungsereignis verloren. Falls das unerwünscht ist, verwenden Sie <a href="Critical.htm">Critical</a>. Allerdings werden dadurch auch andere <a href="../misc/Threads.htm">Threads</a> gepuffert/verzögert (z.B. das Drücken eines Hotkeys), die während der Ausführung des OnClipboardChange-Threads auftreten.</p>
+<p>Wenn das Skript selbst die Zwischenablage ändert, werden die Rückruffunktionen in der Regel nicht sofort ausgeführt. Daher kann es vorkommen, dass Anweisungen, die unmittelbar nach der Anweisung folgen, die für die Änderung der Zwischenablage verantwortlich ist, noch ausgeführt werden. Um die sofortige Ausführung der Rückruffunktionen zu erzwingen, veranlassen Sie nach der Änderung der Zwischenablage eine kurze Verzögerung, z.B. <code><a href="Sleep.htm">Sleep</a> 20</code>.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="A_Clipboard.htm">A_Clipboard</a>, <a href="OnExit.htm">OnExit</a>, <a href="OnMessage.htm">OnMessage</a>, <a href="CallbackCreate.htm">CallbackCreate</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Zeigt bei jeder Änderung der Zwischenablage kurz einen Tooltip an.</p>
+<pre>OnClipboardChange ZwischenablageGeändert
+
+ZwischenablageGeändert(DatenTyp) {
+    ToolTip "Datentyp der Zwischenablage: " DatenTyp
+    Sleep 1000
+    ToolTip  <em>; Tooltip ausschalten.</em>
+}</pre>
+</div>
+
+</body>
+</html>

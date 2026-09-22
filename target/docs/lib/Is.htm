@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Liste mit Is-Funktionen - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Funktionen zum Prüfen des Typs und anderer Bedingungen eines bestimmten Wertes." />
+<meta name="ahk:equiv-v1" content="lib/IfIs.htm" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>Is-Funktionen</h1>
+<p>Funktionen zum Prüfen des Typs und anderer Bedingungen eines bestimmten Wertes.</p>
+<pre class="Syntax">Ergebnis := Is<i>Etwas</i>(Wert <span class="optional">, Modus</span>)</pre>
+
+<p>Es gibt drei Kategorien:</p>
+<ul>
+  <li><a href="#cat-type">Typ</a>: Den Typ eines Wertes prüfen, oder prüfen, ob eine Zeichenkette als Wert dieses Typs interpretierbar ist.</li>
+  <li><a href="#cat-misc">Sonstiges</a>: Verschiedene Bedingungen auf Basis eines Wertes oder einer Variablenreferenz prüfen.</li>
+  <li><a href="#cat-string">Zeichenkette</a>: Prüfen, ob eine Zeichenkette einem bestimmten Muster entspricht.</li>
+</ul>
+<p><em>Modus</em> gilt nur für IsAlpha, IsAlnum, IsUpper und IsLower. Standardmäßig werden nur ASCII-Buchstaben berücksichtigt. Um stattdessen gemäß den Regeln der aktuellen Sprach- und Regionseinstellungen des Benutzers zu prüfen, geben Sie die Zeichenkette <code>"Locale"</code> für <em>Modus</em> an. Der Standardmodus kann auch durch Angabe von 0 oder 1 verwendet werden.</p>
+
+<h2 id="cat-type">Typ</h2>
+<p>Den Typ eines Wertes prüfen, oder prüfen, ob eine Zeichenkette als Wert dieses Typs interpretierbar ist.</p>
+<table class="info">
+  <tr>
+    <th style="width:15%">Funktion</th>
+    <th abbr="Beschr">Beschreibung</th>
+  </tr>
+  <tr id="integer">
+    <td>IsInteger</td>
+    <td>Wahr, wenn <em>Wert</em> ein Integer oder eine rein-numerische Zeichenkette (dezimal oder hexadezimal) ohne Dezimalpunkt ist. Leer- und Tabulatorzeichen am Anfang und Ende sind erlaubt. Die Zeichenkette kann mit einem Plus- oder Minuszeichen beginnen und sollte nicht leer sein.</td>
+  </tr>
+  <tr id="float">
+    <td>IsFloat</td>
+    <td>Wahr, wenn <em>Wert</em> eine Floating-Point-Zahl oder eine rein-numerische Zeichenkette (dezimal oder hexadezimal) mit Dezimalpunkt ist. Leer- und Tabulatorzeichen am Anfang und Ende sind erlaubt. Die Zeichenkette kann mit einem Pluszeichen, Minuszeichen oder Dezimalpunkt beginnen und sollte nicht leer sein.</td>
+  </tr>
+  <tr id="number">
+    <td>IsNumber</td>
+    <td>Wahr, wenn <code>IsInteger(<i>Wert</i>) or IsFloat(<i>Wert</i>)</code> wahr ist.</td>
+  </tr>
+  <tr id="object">
+    <td><a href="IsObject.htm">IsObject</a></td>
+    <td>Wahr, wenn <em>Wert</em> ein <a href="../Objects.htm">Objekt</a> ist. Dazu gehören Objekte, die von <a href="Object.htm">Object</a> abgeleitet sind, und Prototypobjekte wie <code>0.base</code> und COM-Objekte, aber keine Zahlen oder Zeichenketten.</td>
+  </tr>
+</table>
+
+<h2 id="cat-misc">Sonstiges</h2>
+<p>Verschiedene Bedingungen auf Basis eines Wertes oder einer Variablenreferenz prüfen.</p>
+<table class="info">
+  <tr>
+    <th style="width:15%">Funktion</th>
+    <th abbr="Beschr">Beschreibung</th>
+  </tr>
+  <tr id="label">
+    <td><a href="IsLabel.htm">IsLabel</a></td>
+    <td>Wahr, wenn <em>Wert</em> der Name eines <a href="../misc/Labels.htm">Labels</a> ist, das im aktuellen Gültigkeitsbereich definiert ist.</td>
+  </tr>
+  <tr id="set">
+    <td><a href="IsSet.htm">IsSet</a></td>
+    <td>Wahr, wenn die Variable <em>Wert</em> einen Wert zugewiesen bekommen hat.</td>
+  </tr>
+  <tr id="setref">
+    <td><a href="IsSet.htm">IsSetRef</a></td>
+    <td>Wahr, wenn die in <em>Wert</em> enthaltene <a href="../Concepts.htm#variable-references">VarRef</a> einen Wert zugewiesen bekommen hat.</td>
+  </tr>
+</table>
+
+<h2 id="cat-string">Zeichenkette</h2>
+<p>Prüfen, ob eine Zeichenkette einem bestimmten Muster entspricht. <em>Wert</em> muss eine Zeichenkette sein, sonst wird ein <a href="Error.htm#TypeError">TypeError</a> ausgelöst.</p>
+<table class="info">
+  <tr>
+    <th style="width:15%">Funktion</th>
+    <th abbr="Beschr">Beschreibung</th>
+  </tr>
+  <tr id="digit">
+    <td>IsDigit</td>
+    <td>Wahr, wenn <em>Wert</em> ein positiver Integer, eine leere Zeichenkette oder eine Zeichenkette bestehend aus den Zeichen 0 bis 9 ist. Andere Zeichen wie die folgenden sind nicht erlaubt: Leerzeichen, Tabulatorzeichen, Pluszeichen, Minuszeichen, Dezimalpunkte, Hexadezimalziffern und 0x-Präfix.</td>
+  </tr>
+  <tr id="xdigit">
+    <td>IsXDigit</td>
+    <td>Hexadezimalziffer: Dasselbe wie <a href="#digit">IsDigit</a>, außer dass auch die Zeichen A bis F (in Groß- oder Kleinschreibung) erlaubt sind. Das 0x-Präfix wird toleriert, falls vorhanden.</td>
+  </tr>
+  <tr id="alpha">
+    <td>IsAlpha</td>
+    <td>
+      <p>Wahr, wenn <em>Wert</em> eine Zeichenkette ist, und entweder leer ist oder nur alphabetische Zeichen enthält. Falsch, wenn Zahlen, Leerzeichen, Tabulatorzeichen, Punkte oder andere nicht-alphabetische Zeichen irgendwo in der Zeichenkette enthalten sind. Wenn <em>Wert</em> beispielsweise ein Leerzeichen gefolgt von einem Buchstaben enthält, wird die Variable <em>nicht</em> als <em>alpha</em> angesehen.</p>
+      <p>Standardmäßig werden nur ASCII-Buchstaben berücksichtigt. Um stattdessen gemäß den Regeln der aktuellen Sprach- und Regionseinstellungen des Benutzers zu prüfen, verwenden Sie <code>IsAlpha(Wert, "Locale")</code>.</p>
+    </td>
+  </tr>
+  <tr id="upper">
+    <td>IsUpper</td>
+    <td>
+      <p>Wahr, wenn <em>Wert</em> eine Zeichenkette ist und entweder leer ist oder nur Großbuchstaben enthält. Falsch, wenn Zahlen, Leerzeichen, Tabulatorzeichen, Punkte oder andere Zeichen außer Großbuchstaben irgendwo in der Zeichenkette enthalten sind.</p>
+      <p>Standardmäßig werden nur ASCII-Buchstaben berücksichtigt. Um stattdessen gemäß den Regeln der aktuellen Sprach- und Regionseinstellungen des Benutzers zu prüfen, verwenden Sie <code>IsUpper(Wert, "Locale")</code>.</p>
+    </td>
+  </tr>
+  <tr id="lower">
+    <td>IsLower</td>
+    <td>
+      <p>Wahr, wenn <em>Wert</em> eine Zeichenkette ist und entweder leer ist oder nur Kleinbuchstaben enthält. Falsch, wenn Zahlen, Leerzeichen, Tabulatorzeichen, Punkte oder andere Zeichen außer Kleinbuchstaben irgendwo in der Zeichenkette enthalten sind.</p>
+      <p>Standardmäßig werden nur ASCII-Buchstaben berücksichtigt. Um stattdessen gemäß den Regeln der aktuellen Sprach- und Regionseinstellungen des Benutzers zu prüfen, verwenden Sie <code>IsLower(Wert, "Locale")</code>.</p>
+    </td>
+  </tr>
+  <tr id="alnum">
+    <td>IsAlnum</td>
+    <td>Dasselbe wie <a href="#alpha">IsAlpha</a>, außer dass auch die Ziffern 0 bis 9 erlaubt sind.</td>
+  </tr>
+  <tr id="space">
+    <td>IsSpace</td>
+    <td>Wahr, wenn <em>Wert</em> eine Zeichenkette ist und entweder leer ist oder nur Leerraumzeichen enthält, die folgende sein können: Leerzeichen (<a href="../Variables.htm">A_Space</a> oder `s), Tabulator (<a href="../Variables.htm">A_Tab</a> oder `t), Zeilenvorschub (`n), Wagenrücklauf (`r), vertikaler Tabulator (`v) und Seitenvorschub (`f).</td>
+  </tr>
+  <tr id="time">
+    <td>IsTime</td>
+    <td><p>Wahr, wenn <em>Wert</em> ein gültiger Zeitstempel im <a href="FileSetTime.htm#YYYYMMDD">YYYYMMDDHH24MISS</a>-Format ist (alles oder nur der beginnende Teil). Zum Beispiel wird eine 4-stellige Zeichenkette wie 2004 als gültig angesehen. Mit <a href="StrLen.htm">StrLen</a> kann festgestellt werden, ob zusätzliche Zeitkomponenten vorhanden sind.</p>
+      <p><em>Wert</em> muss eine gerade Anzahl von 4 bis 14 Ziffern haben, um gültig zu sein.</p>
+      <p>Jahre älter als 1601 werden nicht als gültig angesehen, weil das Betriebssystem sie generell nicht unterstützt. Das höchste als gültig angesehenes Jahr ist 9999. </p>
+    </td>
+  </tr>
+</table>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Da direkt geschriebene Zahlen wie <code>128</code>, <code>0x7F</code> und <code>1.0</code> bereits vor Beginn der Skriptausführung in reine Zahlen umgewandelt werden, geht ihr Format verloren. Um Verwirrung zu vermeiden, lösen die oben genannten Zeichenkettenfunktionen eine Ausnahme aus, wenn ihnen eine reine Zahl übergeben wird.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="../Variables.htm#YYYY">A_YYYY</a>, <a href="FileGetTime.htm">FileGetTime</a>, <a href="If.htm">If</a>, <a href="StrLen.htm">StrLen</a>, <a href="InStr.htm">InStr</a>, <a href="StrLower.htm">StrUpper</a>, <a href="DateAdd.htm">DateAdd</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Prüft, ob <var>var</var> eine Floating-Point-Zahl oder ein Integer ist, und prüft, ob es ein gültiger Zeitstempel ist.</p>
+<pre>
+if isFloat(var)
+    MsgBox var " ist eine Floating-Point-Zahl."
+else if isInteger(var)
+    MsgBox var " ist ein Integer."
+if isTime(var)
+    MsgBox var " ist auch ein gültiger Zeitstempel."
+</pre>
+</div>
+
+</body>
+</html>

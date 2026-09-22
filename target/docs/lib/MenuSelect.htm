@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>MenuSelect - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die MenuSelect-Funktion wählt einen Menüpunkt in der Menüleiste eines bestimmten Fensters aus." />
+<meta name="ahk:equiv-v1" content="lib/WinMenuSelectItem.htm" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>MenuSelect</h1>
+
+<p>Wählt einen Menüpunkt in der Menüleiste eines bestimmten Fensters aus.</p>
+
+<pre class="Syntax"><span class="func">MenuSelect</span> <span class="optional">FensterTitel, FensterText, Menü, Untermenü1, Untermenü2, Untermenü3, Untermenü4, Untermenü5, Untermenü6, AusnahmeTitel, AusnahmeText</span></pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>FensterTitel, FensterText, AusnahmeTitel, AusnahmeText</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a>, <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#objects">Objekt</a></p>
+    <p>Wenn jeder dieser Parameter leer ist oder weggelassen wird, wird das <a href="../misc/WinTitle.htm#LastFoundWindow">Zuletzt Gefundene Fenster</a> verwendet. Andernfalls geben Sie für <em>FensterTitel</em> einen <a href="../misc/WinTitle.htm">Fenstertitel oder andere Kriterien</a> zur Identifizierung des Zielfensters und/oder für <em>FensterText</em> eine Teilzeichenkette aus einem Textelement des Zielfensters an (wie von <a href="../Program.htm#Window_Spy">Window Spy</a> angezeigt).</p>
+    <p><em>AusnahmeTitel</em> und <em>AusnahmeText</em> können verwendet werden, um ein oder mehrere Fenster anhand ihres Titels oder Textes auszuschließen. Ihre Angabe ähnelt der von <em>FensterTitel</em> und <em>FensterText</em>, außer dass <em>AusnahmeTitel</em> keine anderen Kriterien als den Fenstertitel erkennt.</p>
+    <p>Fenstertitel und -texte sind Groß-/Kleinschreibung-sensitiv. Standardmäßig werden versteckte Fenster nicht erkannt und versteckte Textelemente erkannt, was mit <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a> bzw. <a href="DetectHiddenText.htm">DetectHiddenText</a> geändert werden kann. Verwendet man <a href="../misc/WinTitle.htm#ahk_id">reine HWNDs</a>, werden versteckte Fenster immer erkannt. Standardmäßig kann ein Fenstertitel den angegebenen <em>FensterTitel</em> oder <em>AusnahmeTitel</em> an beliebiger Stelle enthalten, um eine Übereinstimmung zu sein, was mit <a href="SetTitleMatchMode.htm">SetTitleMatchMode</a> geändert werden kann.</p>
+  </dd>
+
+  <dt>Menü</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Der Name (oder ein Präfix des Namens) des Top-Level-Menüpunkts, z.B. <code>"Datei"</code>, <code>"Bearbeiten"</code>, <code>"Ansicht"</code>. Es kann auch die Position des gewünschten Menüpunkts angegeben werden, z.B. ist <code>"1&amp;"</code> das erste Menü, <code>"2&amp;"</code> das zweite Menü usw. Dieser Parameter ist ein Pflichtparameter, d.h. er darf weder leer sein noch weggelassen werden.</p>
+    <p>Die Suche erfolgt nicht Groß-/Kleinschreibung-sensitiv, gemäß den aktuellen Sprach- und Regionseinstellungen des Benutzers, und endet beim ersten gefundenen Menüpunkt. Das Und-Zeichen (&amp;), welches verwendet wird, um den unterstrichenen Buchstaben in einem Menüpunkt zu kennzeichnen, kann <em>normalerweise</em> weggelassen werden (d.h. <code>"&amp;Datei"</code> ist dasselbe wie <code>"Datei"</code>).</p>
+    <p><strong>Bekannte Einschränkung:</strong> Wenn der Parameter ein Und-Zeichen enthält, muss er genau mit dem Namen des Menüpunkts übereinstimmen, einschließlich aller nicht direkt geschriebenen Und-Zeichen (die versteckt sind oder als Unterstrich angezeigt werden). Wenn der Parameter kein Und-Zeichen enthält, werden alle Und-Zeichen (auch die direkt geschriebenen) ignoriert. Zum Beispiel findet <code class="no-highlight">a &amp;&amp; b</code> oder <code class="no-highlight">a b</code> einen Menüpunkt, der als "a &amp; b" dargestellt wird.</p>
+    <p>Geben Sie <code>"0&amp;"</code> an, um das <a href="#sys">Systemmenü</a> des Fensters zu verwenden.</p>
+  </dd>
+
+  <dt>Untermenü1</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Name oder Position des Menüpunkts, der ausgewählt werden soll. Dies kann weggelassen werden, wenn der Top-Level-Menüpunkt kein Menü enthält (selten).</p>
+  </dd>
+
+  <dt>Untermenü2, Untermenü3, Untermenü4, Untermenü5, Untermenü6</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn das vorherige Untermenü selbst ein Menü enthält, ist dies der Name oder die Position des darin befindlichen Menüpunkts.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Es wird ein <a href="Error.htm#TargetError">TargetError</a> ausgelöst, wenn das Fenster oder Steuerelement nicht gefunden werden konnte oder kein Standard-Win32-Menü hat.</p>
+<p>Es wird ein <a href="Error.htm#ValueError">ValueError</a> ausgelöst, wenn ein Menü, Untermenü oder Menüpunkt nicht gefunden werden konnte oder wenn sich der letzte Menüparameter auf einen Menüpunkt bezieht, der ein Untermenü öffnet.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Diese Funktion funktioniert auch, wenn das Zielfenster nicht aktiv ist. Es ist jedoch möglich, dass sich einige Fenster in einem <a href="WinRestore.htm">nicht-minimierten</a> Zustand befinden müssen.</p>
+<p>Diese Funktion <strong>funktioniert nicht</strong>, wenn Programme nicht-standardisierte Menüleisten verwenden. Zum Beispiel verwenden Microsoft Outlook und Outlook Express versteckte Symbolleisten für ihre Menüleisten. In solchen Fällen können Sie <a href="ControlSend.htm">ControlSend</a> oder <a href="PostMessage.htm">PostMessage</a> verwenden, da sie in der Lage sind, mit einigen dieser nicht-standardisierten Menüleisten zu interagieren.</p>
+<p>Für die Menü-Parameter können auch Positionsnummern angegeben werden. Diese Methode existiert, um Menüs zu unterstützen, die keine Texte enthalten (z.B. Bilder statt Texte). Position 1&amp; ist der erste Menüpunkt (z.B. das Datei-Menü), Position 2&amp; ist der zweite Menüpunkt (z.B. das Bearbeiten-Menü), und so weiter. Menütrennlinien zählen bei der Positionsbestimmung ebenfalls als Menüpunkte.</p>
+
+<h2 id="sys">Systemmenü</h2>
+<p>Für <em>Menü</em> kann <code>"0&amp;"</code> angegeben werden, um einen Menüpunkt im Systemmenü des Fensters auszuwählen. Dieses Menü kann normalerweise durch Drücken von <kbd>Alt</kbd>+<kbd>Leer</kbd> oder durch Klicken auf das Symbol in der Titelleiste des Fensters angezeigt werden. Zum Beispiel:</p>
+<pre><em>; Einen Befehl in cmd.exe einfügen, ohne das Fenster zu aktivieren.</em>
+A_Clipboard := "echo Hallo, Welt!`r"
+MenuSelect "ahk_exe cmd.exe",, "0&amp;", "Bearbeiten", "Einfügen"</pre>
+<p class="warning"><strong>Achtung:</strong> Verwenden Sie diese Methode nur für Fenster, die benutzerdefinierte Menüpunkte in ihrem Systemmenü haben.</p>
+<p>Wenn das Fenster noch kein benutzerdefiniertes Systemmenü hat, wird eine Kopie des Standard-Systemmenüs erstellt und als Nebeneffekt dem Zielfenster zugeordnet. Diese Kopie wird vom System zerstört, wenn das Skript beendet wird, wodurch andere Skripte nicht mehr darauf zugreifen können. Vermeiden Sie daher die Verwendung von 0&amp; für die Standardmenüpunkte, die alle Fenster haben. Posten Sie stattdessen direkt die <a href="https://learn.microsoft.com/windows/win32/menurc/wm-syscommand">WM_SYSCOMMAND</a>-Meldung. Zum Beispiel:</p>
+<pre><em>; Wie [<a href="WinMinimize.htm">WinMinimize</a> "A"], spielt aber auch den Systemsound fürs Minimieren ab.</em>
+WM_SYSCOMMAND := 0x0112
+SC_MINIMIZE := 0xF020
+PostMessage WM_SYSCOMMAND, SC_MINIMIZE, 0,, "A"</pre>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="ControlSend.htm">ControlSend</a>, <a href="PostMessage.htm">PostMessage</a></p>
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Wählt <code class="no-highlight">Datei -&gt; Öffnen</code> in Notepad aus. Dieses Beispiel kann unter Windows 11 oder höher fehlschlagen, da es die klassische Version von Notepad erfordert.</p>
+<pre>MenuSelect "Unbenannt - Editor",, "Datei", "Öffnen"</pre>
+</div>
+
+<div class="ex" id="ExPos">
+<p><a class="ex_number" href="#ExPos"></a> Wie oben, außer dass die Auswahl über die Position erfolgt, nicht über den Namen. In Windows 10 muss 2&amp; mit 3&amp; ersetzt werden, da es den neuen Menüpunkt "Neues Fenster" gibt. Dieses Beispiel kann unter Windows 11 oder höher fehlschlagen, da es die klassische Version von Notepad erfordert.</p>
+<pre>MenuSelect "Unbenannt - Editor",, "1&amp;", "2&amp;"</pre>
+</div>
+
+<div class="ex" id="ExMainWin">
+<p><a class="ex_number" href="#ExMainWin"></a> Wählt <code class="no-highlight">View -&gt; Lines most recently executed</code> im <a href="../Program.htm#main-window">Hauptfenster</a> aus.</p>
+<pre>WinShow "ahk_class AutoHotkey"
+MenuSelect "ahk_class AutoHotkey",, "View", "Lines most recently executed"</pre>
+</div>
+
+</body>
+</html>

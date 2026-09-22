@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>SoundSetMute - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die SoundSetMute-Funktion ändert die Stummschalteinstellung eines Audiogeräts." />
+<meta name="ahk:equiv-v1" content="lib/SoundSet.htm" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>SoundSetMute</h1>
+
+<p>Ändert die Stummschalteinstellung eines Audiogeräts.</p>
+
+<pre class="Syntax"><span class="func">SoundSetMute</span> NeueEinstellung <span class="optional">, Komponente, Gerät</span></pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>NeueEinstellung</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Einer der folgenden Werte:</p>
+    <ul>
+      <li><code>1</code> oder <code>True</code> schaltet die Einstellung ein</li>
+      <li><code>0</code> oder <code>False</code> schaltet die Einstellung aus</li>
+      <li><code>-1</code> schaltet die Einstellung um (setzt sie auf den entgegengesetzten Zustand)</li>
+    </ul>
+  </dd>
+
+  <dt>Komponente</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a> oder <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn leer oder weggelassen, wird standardmäßig die Master-Stummschalteinstellung verwendet. Andernfalls geben Sie den Anzeigenamen und/oder die Indexnummer der Komponente an, z.B. <code>1</code>, <code>"Line in"</code> oder <code>"Line in:2"</code>.</p>
+    <p>Weitere Informationen finden Sie unter <a href="Sound.htm#component">Komponente (Sound-Funktionen)</a>.</p>
+  </dd>
+
+  <dt>Gerät</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a> oder <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn leer oder weggelassen, wird standardmäßig das Standardwiedergabegerät des Systems verwendet (was nicht unbedingt Gerät 1 ist). Andernfalls geben Sie den Anzeigenamen und/oder die Indexnummer des Geräts an, z.B. <code>1</code>, <code>"Lautsprecher"</code>, <code>"Lautsprecher:2"</code> oder <code>"Lautsprecher (Beispiel HD Audio)"</code>.</p>
+    <p>Weitere Informationen finden Sie unter <a href="Sound.htm#device">Gerät (Sound-Funktionen)</a>.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Es wird ein <a href="Error.htm#TargetError">TargetError</a> ausgelöst, wenn das Gerät oder die Komponente nicht gefunden werden konnte oder wenn die Komponente diesen Reglertyp nicht unterstützt. Andernfalls wird bei Misserfolg ein <a href="Error.htm#OSError">OSError</a> ausgelöst.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Zum Umschalten der Master-Stummschalteinstellung des Standardwiedergabegeräts kann alternativ auch ein Skript verwendet werden, das Tastendrücke sendet. Zum Beispiel:</p>
+<pre>Send "{Volume_Mute}"  <em>; Master-Lautstärke stummschalten bzw. Stummschaltung aufheben.</em></pre>
+<p>Um den Leistungsumfang der installierten Audiogeräte zu ermitteln – z.B. die Namen und verfügbaren Komponenten – führen Sie das <a href="Sound.htm#ExSoundcard">Soundkartenanalyse-Skript</a> aus.</p>
+<p>Mit <a href="SoundGetMute.htm">SoundGetMute</a> kann die aktuelle Stummschalteinstellung abgerufen werden.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="Sound.htm">Sound-Funktionen</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExMuteOn">
+<p><a class="ex_number" href="#ExMuteOn"></a> Schaltet die Master-Stummschaltung ein.</p>
+<pre>SoundSetMute true</pre>
+</div>
+
+<div class="ex" id="ExMuteOff">
+<p><a class="ex_number" href="#ExMuteOff"></a> Schaltet die Master-Stummschaltung aus.</p>
+<pre>SoundSetMute false</pre>
+</div>
+
+<div class="ex" id="ExMuteToggle">
+<p><a class="ex_number" href="#ExMuteToggle"></a> Schaltet die Master-Stummschaltung um (setzt sie auf den entgegengesetzten Zustand).</p>
+<pre>SoundSetMute -1</pre>
+</div>
+
+<div class="ex" id="ExMuteLineIn">
+<p><a class="ex_number" href="#ExMuteLineIn"></a> Schaltet Line-In stumm.</p>
+<pre>SoundSetMute true, "Line In"</pre>
+</div>
+
+<div class="ex" id="ExMuteMicRecord">
+<p><a class="ex_number" href="#ExMuteMicRecord"></a> Schaltet Mikrofonaufnahme stumm.</p>
+<pre>SoundSetMute true,, "Mikrofon"</pre>
+</div>
+
+</body>
+</html>

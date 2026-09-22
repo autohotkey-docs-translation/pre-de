@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>File-Objekt - Methoden &amp; Eigenschaften | AutoHotkey v2</title>
+<meta name="description" content="Das File-Objekt bietet eine Schnittstelle für die Datei-Ein-/Ausgabe, z.B. das Lesen oder Schreiben von Text oder das Abrufen seiner Länge." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>File-Objekt</h1>
+<pre class="NoIndent">class File extends Object</pre>
+
+<p>Bietet eine Schnittstelle für die Datei-Ein-/Ausgabe, z.B. das Lesen oder Schreiben von Text oder das Abrufen seiner Länge. <a href="FileOpen.htm">FileOpen</a> gibt ein Objekt dieses Typs zurück.</p>
+
+<p>"FileObj" wird hier stellvertretend für ein beliebiges File-Objekt verwendet, da "File" die Klasse selbst ist.</p>
+<p>Zusätzlich zu den von <a href="Object.htm">Object</a> geerbten Methoden und Eigenschaften haben File-Objekte die folgenden vordefinierten Methoden und Eigenschaften.</p>
+
+<h2 id="toc">Inhaltsverzeichnis</h2>
+<ul class="indent">
+  <li><a href="#Methods">Methoden</a>:
+    <ul>
+      <li><a href="#Read">Read</a>: Liest eine Zeichenkette aus der Datei und rückt den Dateizeiger vor.</li>
+      <li><a href="#Write">Write</a>: Schreibt eine Zeichenkette in die Datei und rückt den Dateizeiger vor.</li>
+      <li><a href="#ReadLine">ReadLine</a>: Liest eine Textzeile aus der Datei und rückt den Dateizeiger vor.</li>
+      <li><a href="#WriteLine">WriteLine</a>: Schreibt eine Textzeile in die Datei und rückt den Dateizeiger vor.</li>
+      <li><a href="#ReadNum">Read<em>ZahlTyp</em></a>: Liest eine Zahl aus der Datei und rückt den Dateizeiger vor.</li>
+      <li><a href="#WriteNum">Write<em>ZahlTyp</em></a>: Schreibt eine Zahl in die Datei und rückt den Dateizeiger vor.</li>
+      <li><a href="#RawRead">RawRead</a>: Liest rohe Binärdaten aus der Datei in den Speicher und rückt den Dateizeiger vor.</li>
+      <li><a href="#RawWrite">RawWrite</a>: Schreibt rohe Binärdaten in die Datei und rückt den Dateizeiger vor.</li>
+      <li><a href="#Seek">Seek</a>: Verschiebt den Dateizeiger.</li>
+      <li><a href="#Close">Close</a>: Schließt die Datei, entleert alle Daten im Cache auf die Festplatte und hebt Freigabesperren auf.</li>
+    </ul>
+  </li>
+  <li><a href="#Properties">Eigenschaften</a>:
+    <ul>
+      <li><a href="#Pos">Pos</a>: Liefert oder setzt die Position des Dateizeigers.</li>
+      <li><a href="#Length">Length</a>: Liefert oder setzt die Größe der Datei.</li>
+      <li><a href="#AtEOF">AtEOF</a>: Liefert eine Zahl ungleich 0, wenn der Dateizeiger das Ende der Datei erreicht hat.</li>
+      <li><a href="#Encoding">Encoding</a>: Liefert oder setzt die Textkodierung des File-Objekts.</li>
+      <li><a href="#Handle">Handle</a>: Liefert ein System-Datei-Handle, das für DllCall verwendet werden kann.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="Methods">Methoden</h2>
+
+<div class="methodShort" id="Read"><h3>Read</h3>
+<p>Liest eine Zeichenkette aus der Datei und rückt den Dateizeiger vor.</p>
+<pre class="Syntax">Zkette := FileObj.<span class="func">Read</span>(<span class="optional">ZeichenAnzahl</span>)</pre>
+<h4 id="Read_Parameters">Parameter</h4>
+<dl>
+  <dt>ZeichenAnzahl</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn weggelassen, wird der Rest der Datei gelesen und als einzelne Zeichenkette zurückgegeben. Andernfalls geben Sie die maximale Anzahl der zu lesenden Zeichen an. Wenn das File-Objekt von einem Handle erzeugt wurde, das auf ein nicht-suchendes Device wie Konsolenpuffer oder Pipe verweist, kann das Weglassen dieses Parameters dazu führen, dass die Methode fehlschlägt oder nur die aktuell verfügbaren Daten zurückgibt.</p>
+  </dd>
+</dl>
+<h4 id="Read_Return_Value">Rückgabewert</h4>
+<p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+<p>Diese Methode gibt die gelesene Zeichenkette zurück.</p>
+</div>
+
+<div class="methodShort" id="Write"><h3>Write</h3>
+<p>Schreibt eine Zeichenkette in die Datei und rückt den Dateizeiger vor.</p>
+<pre class="Syntax">ByesGeschrieben := FileObj.<span class="func">Write</span>(Zkette)</pre>
+<h4 id="Write_Parameters">Parameter</h4>
+<dl>
+  <dt>Zkette</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Die zu schreibende Zeichenkette.</p>
+  </dd>
+</dl>
+<h4 id="Write_Return_Value">Rückgabewert</h4>
+<p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+<p>Diese Methode gibt die Anzahl der geschriebenen Bytes (nicht Zeichen) zurück.</p>
+</div>
+
+<div class="methodShort" id="ReadLine"><h3>ReadLine</h3>
+<p>Liest eine Textzeile aus der Datei und rückt den Dateizeiger vor.</p>
+<pre class="Syntax">TextZeile := FileObj.<span class="func">ReadLine</span>()</pre>
+<h4 id="ReadLine_Return_Value">Rückgabewert</h4>
+<p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+<p>Diese Methode gibt eine Textzeile zurück, ohne Zeilenumbruchzeichen.</p>
+<h4 id="ReadLine_Remarks">Bemerkungen</h4>
+<p>Es können Zeilen mit einer Länge von bis zu 65534 Zeichen gelesen werden. Wenn eine Zeile diese Länge überschreitet, wird der Rest der Zeile durch nachfolgende Aufrufe dieser Methode zurückgegeben.</p></div>
+
+<div class="methodShort" id="WriteLine"><h3>WriteLine</h3>
+<p>Schreibt eine Textzeile in die Datei und rückt den Dateizeiger vor.</p>
+<pre class="Syntax">ByesGeschrieben := FileObj.<span class="func">WriteLine</span>(<span class="optional">Zkette</span>)</pre>
+<h4 id="WriteLine_Parameters">Parameter</h4>
+<dl>
+  <dt>Zkette</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn leer oder weggelassen, wird eine leere Zeile geschrieben. Andernfalls geben Sie die zu schreibende Zeichenkette an, die immer mit <code class="no-highlight">`n</code> oder <code class="no-highlight">`r`n</code> endet, abhängig von den Zeilenumbruch-Flags, die zum Öffnen der Datei verwendet wurden.</p>
+  </dd>
+</dl>
+<h4 id="WriteLine_Return_Value">Rückgabewert</h4>
+<p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+<p>Diese Methode gibt die Anzahl der geschriebenen Bytes (nicht Zeichen) zurück.</p>
+</div>
+
+<div class="methodShort" id="ReadNum"><h3>Read<i>ZahlTyp</i></h3>
+<p>Liest eine Zahl aus der Datei und rückt den Dateizeiger vor.</p>
+<pre class="Syntax">Zahl := FileObj.<span class="func">Read<i>ZahlTyp</i></span>()</pre>
+<p><em>ZahlTyp</em> ist entweder UInt, Int, Int64, Short, UShort, Char, UChar, Double oder Float. Diese Typnamen haben die gleiche Bedeutung wie bei <a href="DllCall.htm#types">DllCall</a>.</p>
+<h4 id="ReadNum_Return_Value">Rückgabewert</h4>
+<p>Typ: <a href="../Concepts.htm#numbers">Integer</a>, <a href="../Concepts.htm#numbers">Float</a> oder <a href="../Concepts.htm#nothing">Zeichenkette (leer)</a></p>
+<p>Bei Erfolg gibt diese Methode eine Zahl zurück. Bei Misserfolg gibt sie eine leere Zeichenkette zurück.</p>
+<h4 id="ReadNum_Remarks">Bemerkungen</h4>
+<p>Wenn die Anzahl der gelesenen Bytes ungleich 0, aber kleiner als die Größe von <em>ZahlTyp</em> ist, werden die fehlenden Bytes als 0 vermutet.</p>
+</div>
+
+<div class="methodShort" id="WriteNum"><h3>Write<i>ZahlTyp</i></h3>
+<p>Schreibt eine Zahl in die Datei und rückt den Dateizeiger vor.</p>
+<pre class="Syntax">ByesGeschrieben := FileObj.<span class="func">Write<i>ZahlTyp</i></span>(Zahl)</pre>
+<p><em>ZahlTyp</em> ist entweder UInt, Int, Int64, Short, UShort, Char, UChar, Double oder Float. Diese Typnamen haben die gleiche Bedeutung wie bei <a href="DllCall.htm#types">DllCall</a>.</p>
+<h4 id="WriteNum_Parameters">Parameter</h4><dl>
+  <dt>Zahl</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#numbers">Float</a></p>
+    <p>Die zu schreibende Zahl.</p>
+  </dd>
+</dl>
+<h4 id="WriteNum_Return_Value">Rückgabewert</h4>
+<p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+<p>Diese Methode gibt die Anzahl der geschriebenen Bytes zurück. Zum Beispiel gibt <code>FileObj.WriteUInt(42)</code> bei Erfolg 4 zurück.</p>
+</div>
+
+<div class="methodShort" id="RawRead"><h3>RawRead</h3>
+<p>Liest rohe Binärdaten aus der Datei in den Speicher und rückt den Dateizeiger vor.</p>
+<pre class="Syntax">BytesGelesen := FileObj.<span class="func">RawRead</span>(Puffer <span class="optional">, Bytes</span>)</pre>
+<h4 id="RawRead_Parameters">Parameter</h4>
+<dl>
+  <dt>Puffer</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#objects">Objekt</a> oder <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Ein <a href="Buffer.htm">Buffer</a>-ähnliches Objekt oder eine Speicheradresse, die die Daten empfängt.</p>
+    <p>Es wird empfohlen, ein <a href="Buffer.htm">Buffer</a> zu verwenden. Wenn <em>Bytes</em> weggelassen wird, wird standardmäßig die Größe des Pufferspeichers verwendet. Es wird eine Ausnahme ausgelöst, wenn <em>Bytes</em> die Größe des Pufferspeichers überschreitet.</p>
+    <p>Wenn eine Speicheradresse übergeben wird, muss auch <em>Bytes</em> angegeben werden.</p>
+  </dd>
+  <dt>Bytes</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Die maximale Anzahl der Bytes, die gelesen werden sollen. Dies ist optional, wenn <em>Puffer</em> ein Objekt ist, andernfalls muss es angegeben werden.</p>
+  </dd>
+</dl>
+<h4 id="RawRead_Return_Value">Rückgabewert</h4>
+<p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+<p>Diese Methode gibt die Anzahl der gelesenen Bytes zurück.</p>
+</div>
+
+<div class="methodShort" id="RawWrite"><h3>RawWrite</h3>
+<p>Schreibt rohe Binärdaten in die Datei und rückt den Dateizeiger vor.</p>
+<pre class="Syntax">ByesGeschrieben := FileObj.<span class="func">RawWrite</span>(Daten <span class="optional">, Bytes</span>)</pre>
+<h4 id="RawWrite_Parameters">Parameter</h4>
+<dl>
+  <dt>Daten</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#objects">Objekt</a>, <a href="../Concepts.htm#strings">Zeichenkette</a> oder <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Ein <a href="Buffer.htm">Buffer</a>-ähnliches Objekt, eine Zeichenkette mit binären Daten oder eine Speicheradresse. Wenn ein Objekt oder eine Zeichenkette angegeben ist, ist <em>Bytes</em> optional und verwendet standardmäßig die Größe des Pufferspeichers oder der Zeichenkette. Andernfalls muss auch <em>Bytes</em> angegeben werden.</p>
+  </dd>
+  <dt>Bytes</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Die maximale Anzahl der Bytes, die geschrieben werden sollen. Dies ist optional, wenn <em>Daten</em> ein Objekt oder eine Zeichenkette ist, andernfalls muss es angegeben werden.</p>
+  </dd>
+</dl>
+<h4 id="RawWrite_Return_Value">Rückgabewert</h4>
+<p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+<p>Diese Methode gibt die Anzahl der geschriebenen Bytes zurück.</p>
+</div>
+
+<div class="methodShort" id="Seek"><h3>Seek</h3>
+<p>Verschiebt den Dateizeiger.</p>
+<pre class="Syntax">Verschoben := FileObj.<span class="func">Seek</span>(Distanz <span class="optional">, Startpunkt</span>)</pre>
+<h4 id="Seek_Parameters">Parameter</h4>
+<dl>
+  <dt>Distanz</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Die Anzahl der Bytes, um die verschoben werden soll. Je kleiner der Wert, desto näher befindet sich der Dateizeiger am Anfang der Datei.</p>
+  </dd>
+  <dt>Startpunkt</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn weggelassen, wird standardmäßig 2 verwendet, wenn <em>Distanz</em> negativ ist, andernfalls 0. Andernfalls geben Sie eine der folgenden Zahlen an, um den Startpunkt festzulegen, von dem aus der Dateizeiger verschoben werden soll.</p>
+    <ul>
+      <li>0 (SEEK_SET): Anfang der Datei. <i>Distanz</i> muss 0 oder größer sein.</li>
+      <li>1 (SEEK_CUR): Aktuelle Position des Dateizeigers.</li>
+      <li>2 (SEEK_END): Ende der Datei. <i>Distanz</i> sollte normalerweise negativ sein.</li>
+    </ul>
+  </dd>
+</dl>
+<h4 id="Seek_Return_Value">Rückgabewert</h4>
+<p>Typ: <a href="../Concepts.htm#boolean">Integer (boolesch)</a></p>
+<p>Bei Erfolg gibt diese Methode 1 (true) zurück. Bei Misserfolg gibt sie 0 (false) zurück.</p>
+<h4 id="Seek_Remarks">Bemerkungen</h4>
+<p>Diese Methode ist äquivalent zu <code>FileObj.Pos := Distanz</code>, wenn <em>Distanz</em> nicht negativ ist und <em>Startpunkt</em> weggelassen wird oder 0 (SEEK_SET) ist.</p>
+</div>
+
+<div class="methodShort" id="Close"><h3>Close</h3>
+<p>Schließt die Datei, entleert alle Daten im Cache auf die Festplatte und hebt Freigabesperren auf.</p>
+<pre class="Syntax">FileObj.<span class="func">Close</span>()</pre>
+<p>Obwohl die Datei beim Freigeben des Objekts automatisch geschlossen wird, ist es ratsam, die Datei so früh wie möglich zu schließen.</p></div>
+
+<h2 id="Properties">Eigenschaften</h2>
+
+<div class="methodShort" id="Pos"><h3>Pos</h3>
+<p>Liefert oder setzt die Position des Dateizeigers.</p>
+<pre class="Syntax">AktuellePos := FileObj.<span class="func">Pos</span></pre>
+<pre class="Syntax">FileObj.<span class="func">Pos</span> := NeuePos</pre>
+<p><em>AktuellePos</em> und <em>NeuePos</em> sind ein Offset vom Anfang der Datei (in Bytes), wobei 0 das erste Byte ist. Wenn Daten in die Datei geschrieben oder aus ihr gelesen werden, verschiebt sich der Dateizeiger automatisch auf das nächste Byte hinter diesen Daten.</p>
+<p>Diese Eigenschaft ist äquivalent zu <code>FileObj.Seek(NeuePos)</code>.</p>
+</div>
+
+<div class="methodShort" id="Length"><h3>Length</h3>
+<p>Liefert oder setzt die Größe der Datei.</p>
+<pre class="Syntax">AktuelleGröße := FileObj.<span class="func">Length</span></pre>
+<pre class="Syntax">FileObj.<span class="func">Length</span> := NeueGröße</pre>
+<p><em>AktuelleGröße</em> und <em>NeueGröße</em> sind die Größe der Datei in Bytes.</p>
+<p>Diese Eigenschaft sollte nur mit einer echten Datei verwendet werden. Wenn das File-Objekt von einem Handle erzeugt wurde, das auf ein Pipe verweist, kann Length die Menge der Daten zurückgeben, die gerade im internen Pufferspeicher des Pipe verfügbar sind, aber dieses Verhalten ist nicht garantiert.</p></div>
+
+<div class="methodShort" id="AtEOF"><h3>AtEOF</h3>
+  <p>Liefert eine Zahl ungleich 0, wenn der Dateizeiger das Ende der Datei erreicht hat, andernfalls 0.</p>
+<pre class="Syntax">AmEndeDerDatei := FileObj.<span class="func">AtEOF</span></pre>
+  <p>Diese Eigenschaft sollte nur mit einer echten Datei verwendet werden. Wenn das File-Objekt von einem Handle erzeugt wurde, das auf ein nicht-suchendes Device wie Konsolenpuffer oder Pipe verweist, kann der Rückgabewert bedeutungslos sein, da solche Devices logischerweise kein "End of File" haben.</p></div>
+
+<div class="methodShort" id="Encoding"><h3>Encoding</h3>
+<p>Liefert oder setzt die Textkodierung des File-Objekts.</p>
+<pre class="Syntax">AktuelleKodierung := FileObj.<span class="func">Encoding</span></pre>
+<pre class="Syntax">FileObj.<span class="func">Encoding</span> := NeueKodierung</pre>
+  <p><em>NeueKodierung</em> kann ein numerischer Codepageidentifikator (siehe <a href="https://learn.microsoft.com/windows/win32/intl/code-page-identifiers">Microsoft Docs</a>) oder eine der folgenden Zeichenketten sein.</p>
+  <p><em>AktuelleKodierung</em> ist eine der folgenden Zeichenketten:</p>
+  <ul>
+	<li><code class="no-highlight">UTF-8</code>: Unicode UTF-8, äquivalent zu CP65001.</li>
+	<li><code class="no-highlight">UTF-16</code>: Unicode UTF-16 mit Little-Endian-Byte-Order, äquivalent zu CP1200.</li>
+	<li><code class="no-highlight">CP<i>nnn</i></code>: Eine Codepage mit dem numerischen Identifikator <i>nnn</i>.</li>
+  </ul>
+  <p><em>AktuelleKodierung</em> kann nie ein Wert mit dem Suffix <code class="no-highlight">-RAW</code> sein, unabhängig davon, wie die Datei geöffnet wurde oder ob sie eine Byte-Order-Markierung (BOM) enthält. <em>NeueKodierung</em> bewirkt nicht, dass eine BOM hinzugefügt oder entfernt wird, da eine BOM normalerweise beim Erstellen der Datei hinzugefügt wird.</p>
+  <p>Das Setzen von <em>NeueKodierung</em> auf <code class="no-highlight">UTF-8-RAW</code> oder <code class="no-highlight">UTF-16-RAW</code> ist erlaubt, aber das Suffix <code class="no-highlight">-RAW</code> wird ignoriert. Dies gilt nur für <code>FileObj.Encoding</code>, nicht für <a href="FileOpen.htm">FileOpen</a>.</p>
+</div>
+
+<div class="methodShort" id="Handle"><h3>Handle</h3>
+  <p>Liefert ein System-Datei-Handle, das für <a href="DllCall.htm">DllCall</a> verwendet werden kann. Siehe <a href="https://learn.microsoft.com/windows/win32/api/fileapi/nf-fileapi-createfilea">CreateFile</a>.</p>
+<pre class="Syntax">Handle := FileObj.<span class="func">Handle</span></pre>
+<p>File-Objekte puffern intern Lese- und Schreibvorgänge. Daten, die in den internen Pufferspeicher des Objekts geschrieben wurden, werden auf die Festplatte übertragen, bevor das Handle zurückgegeben wird. Enthält der Pufferspeicher Daten, die aus einer Datei gelesen wurden, werden diese verworfen und der Dateizeiger auf die logische Position (widergespiegelt durch die <a href="#Pos">Pos</a>-Eigenschaft) zurückgesetzt.</p></div>
+
+</body>
+</html>

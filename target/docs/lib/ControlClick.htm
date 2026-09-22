@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>ControlClick - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die ControlClick-Funktion sendet einen Mausklick oder eine Mausradaktion an ein Fenster oder Steuerelement." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>ControlClick</h1>
+
+<p>Sendet einen Mausklick oder eine Mausradaktion an ein Fenster oder Steuerelement.</p>
+
+<pre class="Syntax"><span class="func">ControlClick</span> <span class="optional">StrlmntID-oder-Pos, FensterTitel, FensterText, WelcheTaste, KlicksAnzahl, Optionen, AusnahmeTitel, AusnahmeText</span></pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>StrlmntID-oder-Pos</dt>
+  <dd>
+      <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a>, <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#objects">Objekt</a></p>
+      <p>Wenn weggelassen, wird das Zielfenster selbst angeklickt. Andernfalls verwenden Sie einen der folgenden Modi:</p>
+      <p><strong>Modus 1 (Position):</strong> Geben Sie die X- und Y-Koordinate relativ zur oberen linken Ecke des Clientbereichs des Zielfensters an (das ist der Bereich ohne Titelleiste, Menüleiste und Rahmen). Die X-Koordinate muss vor der Y-Koordinate stehen und beide müssen durch mindestens ein Leer- oder Tabulatorzeichen voneinander getrennt sein. Zum Beispiel: <code>"X55 Y33"</code>. Befindet sich auf den angegebenen Koordinaten ein Steuerelement, wird das Klickereignis an dieses Steuerelement weitergeleitet. Wenn dort kein Steuerelement ist, wird das Klickereignis an das Zielfenster selbst gesendet (was je nach Art des Fensters keinen Effekt haben könnte).</p>
+    <p class="note"><strong>Hinweis:</strong> Im Modus 1 werden die Optionsbuchstaben X und Y in <em>Optionen</em> ignoriert.</p>
+      <p><strong>Modus 2 (Steuerelementidentifikator):</strong> Geben Sie die ClassNN, den Text oder das HWND des Steuerelements an, oder ein Objekt mit einer Hwnd-Eigenschaft. Einzelheiten finden Sie unter <a href="../misc/ControlID.htm">Steuerelementidentifikatoren</a>.</p>
+      <p>Standardmäßig hat Modus 2 eine höhere Priorität als Modus 1. Sollte zum Beispiel der seltene Fall eintreten, dass ein Steuerelement einen Text oder eine ClassNN im Format "Xnnn Ynnn" aufweist, würde Modus 2 in Kraft treten. Um dieses Problem zu umgehen und Modus 1 zu erzwingen, geben Sie wie folgt das Wort Pos in den <em>Optionen</em> an: <code>ControlClick "x255 y152", FensterTitel,,,, "Pos"</code>.</p>
+  </dd>
+
+  <dt>FensterTitel, FensterText, AusnahmeTitel, AusnahmeText</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a>, <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#objects">Objekt</a></p>
+    <p>Wenn jeder dieser Parameter leer ist oder weggelassen wird, wird das <a href="../misc/WinTitle.htm#LastFoundWindow">Zuletzt Gefundene Fenster</a> verwendet. Andernfalls geben Sie für <em>FensterTitel</em> einen <a href="../misc/WinTitle.htm">Fenstertitel oder andere Kriterien</a> zur Identifizierung des Zielfensters und/oder für <em>FensterText</em> eine Teilzeichenkette aus einem Textelement des Zielfensters an (wie von <a href="../Program.htm#Window_Spy">Window Spy</a> angezeigt).</p>
+    <p><em>AusnahmeTitel</em> und <em>AusnahmeText</em> können verwendet werden, um ein oder mehrere Fenster anhand ihres Titels oder Textes auszuschließen. Ihre Angabe ähnelt der von <em>FensterTitel</em> und <em>FensterText</em>, außer dass <em>AusnahmeTitel</em> keine anderen Kriterien als den Fenstertitel erkennt.</p>
+    <p>Fenstertitel und -texte sind Groß-/Kleinschreibung-sensitiv. Standardmäßig werden versteckte Fenster nicht erkannt und versteckte Textelemente erkannt, was mit <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a> bzw. <a href="DetectHiddenText.htm">DetectHiddenText</a> geändert werden kann. Verwendet man <a href="../misc/WinTitle.htm#ahk_id">reine HWNDs</a>, werden versteckte Fenster immer erkannt. Standardmäßig kann ein Fenstertitel den angegebenen <em>FensterTitel</em> oder <em>AusnahmeTitel</em> an beliebiger Stelle enthalten, um eine Übereinstimmung zu sein, was mit <a href="SetTitleMatchMode.htm">SetTitleMatchMode</a> geändert werden kann.</p>
+  </dd>
+
+  <dt>WelcheTaste</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn leer oder weggelassen, wird standardmäßig Left verwendet (die linke Maustaste). Andernfalls geben Sie die zu klickende Taste oder die Dreh-/Kipprichtung des Mausrads an.</p>
+    <p><strong>Taste:</strong> Left, Right, Middle (oder jeweils nur der erste Buchstabe) oder X1 (vierte Maustaste) oder X2 (fünfte Maustaste).</p>
+    <p><strong>Mausrad:</strong> Geben Sie WheelUp oder WU an, um das Mausrad nach oben zu drehen (von Ihnen weg); geben Sie WheelDown oder WD an, um es nach unten zu drehen (zu Ihnen hin). Geben Sie WheelLeft (oder WL) oder WheelRight (oder WR) an, um das Mausrad nach links bzw. rechts zu kippen. <em>KlicksAnzahl</em> ist die Anzahl der Schritte, um die das Mausrad gedreht werden soll.</p>
+    </dd>
+
+  <dt>KlicksAnzahl</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn weggelassen, wird standardmäßig 1 verwendet. Andernfalls geben Sie an, wie oft die Maustaste geklickt oder das Mausrad gedreht werden soll.</p>
+  </dd>
+
+  <dt>Optionen</dt>
+  <dd>
+      <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+      <p>Wenn leer oder weggelassen, besteht jeder Klick aus einem Down- und Up-Ereignis, das in der Mitte des Steuerelements erfolgt (sofern Modus 2 verwendet wird). Andernfalls geben Sie eine oder mehrere der folgenden Optionen an, jeweils getrennt durch beliebig viele Leer- oder Tabulatorzeichen. Zum Beispiel: <code>"d x50 y25"</code>.</p>
+      <p><strong>NA:</strong> Kann die Zuverlässigkeit erhöhen. Siehe <a href="#Reliability">Zuverlässigkeit</a> weiter unten.</p>
+      <p><strong>D:</strong> Drückt die Maustaste nach unten, ohne sie wieder loszulassen (also ein Down-Ereignis). Fehlt sowohl die D- als auch U-Option, wird ein vollständiger Mausklick gesendet (also ein Down- und Up-Ereignis).</p>
+      <p><strong>U:</strong> Lässt die Maustaste los (also ein Up-Ereignis). Diese Option sollte nicht verwendet werden, wenn die D-Option bereits vorhanden ist (und umgekehrt).</p>
+      <p><strong>Pos:</strong> Geben Sie das Wort Pos in <em>Optionen</em> an, um den X/Y-Positioniermodus zu erzwingen, wie oben im <em>StrlmntID-oder-Pos</em>-Parameter beschrieben.</p>
+      <p><strong>X</strong><em>n</em>: Geben Sie für <em>n</em> die X-Position an, auf der geklickt werden soll, relativ zur oberen linken Ecke des Steuerelements. Wenn weggelassen, erfolgt der Mausklick in der horizontalen Mitte des Steuerelements.</p>
+      <p><strong>Y</strong><em>n</em>: Geben Sie für <em>n</em> die Y-Position an, auf der geklickt werden soll, relativ zur oberen linken Ecke des Steuerelements. Wenn weggelassen, erfolgt der Mausklick in der vertikalen Mitte des Steuerelements.</p>
+      <p>Verwenden Sie dezimale (nicht hexadezimale) Zahlen für die Optionen X und Y. Die Zahlen sind in Pixel.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Es wird in folgenden Fällen eine Ausnahme ausgelöst:</p>
+<ul>
+  <li><a href="Error.htm#TargetError">TargetError</a>: Das Zielfenster konnte nicht gefunden werden.</li>
+  <li><a href="Error.htm#TargetError">TargetError</a>: Das Zielsteuerelement konnte nicht gefunden werden und <em>StrlmntID-oder-Pos</em> enthält keine gültige Position.</li>
+  <li><a href="Error.htm#OSError">OSError</a> (sehr selten): Die X- oder Y-Position wurde weggelassen und die Position des Steuerelements konnte nicht ermittelt werden.</li>
+  <li><a href="Error.htm#ValueError">ValueError</a> oder <a href="Error.htm#TypeError">TypeError</a>: Es wurden ungültige Parameter erkannt.</li>
+</ul>
+
+<h2 id="Reliability">Zuverlässigkeit</h2>
+<p>Um die Zuverlässigkeit zu erhöhen – insbesondere dann, wenn der Benutzer die Maus während eines ControlClicks physisch bewegt – kann eine oder beide der folgenden Maßnahmen helfen:</p>
+<p>1) Verwenden Sie <code><a href="SetControlDelay.htm">SetControlDelay</a> -1</code> vor ControlClick. Dadurch wird verhindert, dass die Maustaste während des Klicks gedrückt gehalten wird, was wiederum Störungen durch physische Mausbewegungen reduziert.</p>
+<p>2) Geben Sie die Zeichenkette NA im sechsten Parameter (<em>Optionen</em>) wie unten gezeigt an:</p>
+<pre>SetControlDelay -1
+ControlClick "Toolbar321", FensterTitel,,,, "NA"</pre>
+<p>Die NA-Option verhindert einerseits, dass das Zielfenster als aktiv markiert wird, und andererseits, dass die Eingabeverarbeitung des Fensters und des Skripts vermischt werden, was eventuelle Störungen durch physische Mausbewegungen unterdrückt (aber normalerweise nur, wenn das Zielfenster nicht aktiv ist). Diese Methode funktioniert möglicherweise nicht für alle Arten von Fenstern und Steuerelementen.</p>
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Diese Funktion ist für die Verwendung mit Steuerelementen in einem Nicht-GUI-Fenster vorgesehen, also einem Fenster, das nicht mit der <a href="Gui.htm#Call">Gui</a>-Funktion erstellt wurde. Sie funktioniert am besten mit den gängigen oder vordefinierten Steuerelementen von Microsoft. Einige Anwendungen verwenden jedoch benutzerdefinierte oder modifizierte Steuerelemente – in diesem Fall funktioniert die Funktion möglicherweise nicht wie erwartet. Für <a href="GuiControls.htm">GUI-Steuerelemente</a> ist es in der Regel sinnvoller, diese direkt mit ihrem <a href="GuiControl.htm">GuiControl</a>-Objekt zu manipulieren (sofern es ein entsprechendes Gegenstück gibt) oder ihren <a href="GuiOnEvent.htm#Click">Click-Ereignis-Rückruf</a> aufzurufen.</p>
+<p>Einige Anwendungen ignorieren eine <em>KlicksAnzahl</em> höher als 1 beim Drehen des Mausrads. Für solche Anwendungen können Sie eine Schleife nutzen, um das Mausrad mehr als einen Schritt zu drehen. Das folgende Beispiel dreht das Mausrad fünf Schritte:</p>
+<pre>Loop 5
+    ControlClick StrlmntID, FensterTitel, FensterText, "WheelUp"</pre>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="SetControlDelay.htm">SetControlDelay</a>, <a href="Control.htm">Control-Funktionen</a>, <a href="Click.htm">Click</a></p>
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Klickt auf die OK-Schaltfläche in einem GUI- oder Nicht-GUI-Fenster.</p>
+<pre>ControlClick "OK", "Beliebiger Fenstertitel"</pre>
+</div>
+
+<div class="ex" id="ExCoord">
+<p><a class="ex_number" href="#ExCoord"></a> Klickt auf bestimmte Koordinaten in einem GUI- oder Nicht-GUI-Fenster.</p>
+<pre>ControlClick "x55 y77", "Beliebiger Fenstertitel"</pre>
+</div>
+
+<div class="ex" id="ExReliability">
+<p><a class="ex_number" href="#ExReliability"></a> Klickt zuverlässiger auf bestimmte Koordinaten relativ zu einem Steuerelement in einem GUI- oder Nicht-GUI-Fenster.</p>
+<pre>SetControlDelay -1  <em>; Kann Zuverlässigkeit erhöhen und Nebeneffekte reduzieren.</em>
+ControlClick "Toolbar321", "Beliebiger Fenstertitel",,,, "NA x192 y10"</pre>
+</div>
+
+</body>
+</html>

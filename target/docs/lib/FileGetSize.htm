@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>FileGetSize - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die FileGetSize-Funktion ruft die Größe einer Datei ab." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>FileGetSize</h1>
+
+<p>Ruft die Größe einer Datei ab.</p>
+
+<pre class="Syntax">Größe := <span class="func">FileGetSize</span>(<span class="optional">DateiName, Einheit</span>)</pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>DateiName</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn weggelassen, wird die aktuelle Datei der innersten umschlossenen <a href="LoopFiles.htm">Datei-Schleife</a> verwendet. Andernfalls geben Sie den Namen der Zieldatei an. Wenn kein absoluter Pfad angegeben ist, wird die Datei im <a href="../Variables.htm#WorkingDir">A_WorkingDir</a>-Verzeichnis vermutet.</p>
+  </dd>
+
+  <dt>Einheit</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn leer oder weggelassen, wird standardmäßig B verwendet. Andernfalls geben Sie einen der folgenden Buchstaben an, um das Ergebnis in einer bestimmten Einheit auszugeben:</p>
+    <ul>
+      <li>B = Bytes</li>
+      <li>K = Kilobytes</li>
+      <li>M = Megabytes</li>
+    </ul>
+  </dd>
+
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+<p>Diese Funktion gibt die Größe der angegebenen Datei zurück (auf die nächste ganze Zahl abgerundet).</p>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Bei Misserfolg wird ein <a href="Error.htm#OSError">OSError</a> ausgelöst.</p>
+<p><a href="../Variables.htm#LastError">A_LastError</a> wird auf das Ergebnis der Systemfunktion GetLastError() gesetzt.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Es werden Dateien in beliebiger Größe unterstützt, auch solche, die größer als 4 GB sind, und auch, wenn Bytes als <em>Einheit</em> verwendet wird.</p>
+<p>Handelt es sich bei der Zieldatei um ein Verzeichnis, wird eine vom Betriebssystem vermutete Größe abgerufen (vermutlich 0 in den meisten Fällen).</p>
+<p>Um die Größe des Ordners mit all seinen Dateien zu berechnen, gehen Sie wie folgt vor:</p>
+<pre>OrdnerGröße := 0
+WelcherOrdner := DirSelect()  <em>; Benutzer einen Ordner auswählen lassen.</em>
+Loop Files, WelcherOrdner "\*.*", "R"
+    OrdnerGröße += A_LoopFileSize
+MsgBox WelcherOrdner " ist " OrdnerGröße " Bytes groß."</pre>
+<h2 id="Related">Siehe auch</h2>
+<p><a href="FileGetAttrib.htm">FileGetAttrib</a>, <a href="FileSetAttrib.htm">FileSetAttrib</a>, <a href="FileGetTime.htm">FileGetTime</a>, <a href="FileSetTime.htm">FileSetTime</a>, <a href="FileGetVersion.htm">FileGetVersion</a>, <a href="LoopFiles.htm">Datei-Schleife</a></p>
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Ruft die Größe in Bytes ab und speichert den Wert in <var>Größe</var>.</p>
+<pre>Größe := FileGetSize("C:\Meine Dokumente\test.doc")</pre>
+</div>
+
+<div class="ex" id="ExKB">
+<p><a class="ex_number" href="#ExKB"></a> Ruft die Größe in Kilobytes ab und speichert den Wert in <var>Größe</var>.</p>
+<pre>Größe := FileGetSize("C:\Meine Dokumente\test.doc", "K")</pre>
+</div>
+
+</body>
+</html>

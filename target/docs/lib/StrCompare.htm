@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>StrCompare - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die StrCompare-Funktion vergleicht zwei Zeichenketten alphabetisch." />
+<meta name="ahk:equiv-v1" content="index.htm" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet">
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css">
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>StrCompare</h1>
+<p>Vergleicht zwei Zeichenketten alphabetisch.</p>
+<pre class="Syntax">Ergebnis := <span class="func">StrCompare</span>(Zkette1, Zkette2 <span class="optional">, GroßKleinSensitiv</span>)</pre>
+
+<h2 id="Parameters">Parameter</h2>
+<dl>
+  <dt>Zkette1, Zkette2</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Die zu vergleichenden Zeichenketten.</p>
+  </dd>
+  <dt>GroßKleinSensitiv</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a> oder <a href="../Concepts.htm#boolean">Integer (boolesch)</a></p>
+    <p>Wenn weggelassen, wird standardmäßig <em>Off</em> verwendet. Andernfalls geben Sie einen der folgenden Werte an:</p>
+    <p><strong>On</strong> oder <strong>1</strong> (true): Der Vergleich erfolgt Groß-/Kleinschreibung-sensitiv.</p>
+    <p><strong>Off</strong> oder <strong>0</strong> (false): Der Vergleich erfolgt nicht Groß-/Kleinschreibung-sensitiv, d.h. die Großbuchstaben A bis Z und die entsprechenden Kleinbuchstaben werden als identisch betrachtet.</p>
+    <p id="Locale"><strong>Locale:</strong> Der Vergleich erfolgt nicht Groß-/Kleinschreibung-sensitiv, gemäß den Regeln der aktuellen Sprach- und Regionseinstellungen des Benutzers. Zum Beispiel behandeln die meisten englischen und westeuropäischen Sprach- und Regionseinstellungen die Großbuchstaben A bis Z, einschließlich ASCII-fremde Großbuchstaben wie Ä und Ü, und die entsprechenden Kleinbuchstaben als identisch. <em>Locale</em> ist 1- bis 8-mal langsamer als <em>Off</em>, abhängig von den zu vergleichenden Zeichenketten.</p>
+    <p id="Logical"><strong>Logical:</strong> Wie <em>Locale</em>, außer dass Ziffern in den Zeichenketten als numerischer Inhalt behandelt werden, nicht als Text. Zum Beispiel ist <code>"A2"</code> in diesem Fall kleiner als <code>"A10"</code>. Wenn sich jedoch zwei Zahlen nur durch das Vorhandensein einer Null am Anfang unterscheiden, wird die Zeichenkette mit einer Null am Anfang möglicherweise so behandelt, als wäre sie <u>kleiner</u> als die andere Zeichenkette. Das genaue Verhalten kann je nach Systemversion variieren.</p>
+  </dd>
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+<p>Diese Funktion gibt folgendes zurück, um die Beziehung zwischen <em>Zkette1</em> und <em>Zkette2</em> anzugeben:</p>
+<ul>
+  <li>0, wenn <em>Zkette1</em> gleich <em>Zkette2</em> ist</li>
+  <li>eine positive Zahl, wenn <em>Zkette1</em> größer als <em>Zkette2</em> ist</li>
+  <li>eine negative Zahl, wenn <em>Zkette1</em> kleiner als <em>Zkette2</em> ist</li>
+</ul>
+<p>Um eine bestimmte Beziehung zwischen den beiden Zeichenketten zu überprüfen, vergleichen Sie das Ergebnis mit 0. Zum Beispiel:</p>
+<pre>a_kleiner_als_b := StrCompare(a, b) &lt; 0
+a_größer_gleich_b := StrCompare(a, b) &gt;= 0</pre>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Diese Funktion wird hauptsächlich für <a href="Sort.htm#callback">Sort-Rückruffunktionen</a> verwendet.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="Sort.htm">Sort</a>, <a href="VerCompare.htm">VerCompare</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExCaseSens">
+<p><a class="ex_number" href="#ExCaseSens"></a> Zeigt den Unterschied zwischen einem nicht-Groß-/Kleinschreibung-sensitiven und Groß-/Kleinschreibung-sensitiven Vergleich.</p>
+<pre>MsgBox StrCompare("Abc", "abc") <em>; Gibt 0 zurück</em>
+MsgBox StrCompare("Abc", "abc", true) <em>; Gibt -1 zurück</em></pre>
+</div>
+
+</body>
+</html>

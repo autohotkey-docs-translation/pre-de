@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>SoundGetVolume - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die SoundGetVolume-Funktion ruft die Lautstärkeeinstellung eines Audiogeräts ab." />
+<meta name="ahk:equiv-v1" content="lib/SoundGet.htm" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>SoundGetVolume</h1>
+
+<p>Ruft die Lautstärkeeinstellung eines Audiogeräts ab.</p>
+
+<pre class="Syntax">Einstellung := <span class="func">SoundGetVolume</span>(<span class="optional">Komponente, Gerät</span>)</pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>Komponente</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a> oder <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn leer oder weggelassen, wird standardmäßig die Master-Lautstärkeeinstellung verwendet. Andernfalls geben Sie den Anzeigenamen und/oder die Indexnummer der Komponente an, z.B. <code>1</code>, <code>"Line in"</code> oder <code>"Line in:2"</code>.</p>
+    <p>Weitere Informationen finden Sie unter <a href="Sound.htm#component">Komponente (Sound-Funktionen)</a>.</p>
+  </dd>
+
+  <dt>Gerät</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a> oder <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn leer oder weggelassen, wird standardmäßig das Standardwiedergabegerät des Systems verwendet (was nicht unbedingt Gerät 1 ist). Andernfalls geben Sie den Anzeigenamen und/oder die Indexnummer des Geräts an, z.B. <code>1</code>, <code>"Lautsprecher"</code>, <code>"Lautsprecher:2"</code> oder <code>"Lautsprecher (Beispiel HD Audio)"</code>.</p>
+    <p>Weitere Informationen finden Sie unter <a href="Sound.htm#device">Gerät (Sound-Funktionen)</a>.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#numbers">Float</a></p>
+<p>Diese Funktion gibt eine Floating-Point-Zahl zwischen 0.0 und 100.0 zurück.</p>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Es wird ein <a href="Error.htm#TargetError">TargetError</a> ausgelöst, wenn das Gerät oder die Komponente nicht gefunden werden konnte oder wenn die Komponente diesen Reglertyp nicht unterstützt. Andernfalls wird bei Misserfolg ein <a href="Error.htm#OSError">OSError</a> ausgelöst.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Um den Leistungsumfang der installierten Audiogeräte zu ermitteln – z.B. die Namen und verfügbaren Komponenten – führen Sie das <a href="Sound.htm#ExSoundcard">Soundkartenanalyse-Skript</a> aus.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="Sound.htm">Sound-Funktionen</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExMasterVol">
+<p><a class="ex_number" href="#ExMasterVol"></a> Ermittelt und meldet die Master-Lautstärke.</p>
+<pre>MasterLautstärke := SoundGetVolume()
+MsgBox "Master-Lautstärke ist bei " MasterLautstärke " Prozent."</pre>
+</div>
+
+<div class="ex" id="ExMicListenVol">
+<p><a class="ex_number" href="#ExMicListenVol"></a> Ermittelt und meldet die Abhörlautstärke des Mikrofons.</p>
+<pre>MikroLautstärke := SoundGetVolume("Mikrofon")
+MsgBox "Abhörlautstärke des Mikrofons ist bei " MikroLautstärke " Prozent."</pre>
+</div>
+
+<div class="ex" id="ExMicRecordVol">
+<p><a class="ex_number" href="#ExMicRecordVol"></a> Ermittelt und meldet die Aufnahmelautstärke des Mikrofons.</p>
+<pre>MikroLautstärke := SoundGetVolume( , "Mikrofon")
+MsgBox "Aufnahmelautstärke des Mikrofons ist bei " MikroLautstärke " Prozent."</pre>
+</div>
+
+</body>
+</html>

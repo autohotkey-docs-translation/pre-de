@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>ComObject - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die ComObject-Funktion erstellt ein COM-Objekt." />
+<meta name="ahk:equiv-v1" content="lib/ComObjActive.htm" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>ComObject</h1>
+<p>Erstellt ein COM-Objekt.</p>
+<pre class="Syntax">ComObj := <span class="func">ComObject</span>(CLSID <span class="optional">, IID</span>)</pre>
+<p><code>ComObject</code> selbst ist eine <a href="Class.htm">Klasse</a>, die von <code>ComValue</code> abgeleitet ist, aber nur zum Erstellen oder Identifizieren von COM-Objekten verwendet wird.</p>
+
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>CLSID</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>CLSID oder eine visuell lesbare ProgID des COM-Objekts.</p>
+  </dd>
+
+  <dt>IID</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn weggelassen, wird standardmäßig <code>"{00020400-0000-0000-C000-000000000046}"</code> (IID_IDispatch) verwendet. Andernfalls geben Sie den Identifikator eines Interfaces an, das zurückgegeben werden soll. In den meisten Fällen wird dies weggelassen.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#objects">Objekt</a></p>
+<p>Diese Funktion gibt ein COM-Wrapper-Objekt zurück, dessen Typ vom IID-Parameter abhängt.</p>
+<table class="info">
+  <tr><th>IID</th><th>Klasse</th><th abbr="Typ">Variantentyp</th><th abbr="Beschr">Beschreibung</th></tr>
+  <tr>
+    <td>IID_IDispatch</td>
+    <td><code style="white-space:nowrap">ComObject</code></td>
+    <td><span style="white-space:nowrap">VT_DISPATCH (9)</span></td>
+    <td>Erlaubt dem Skript, Eigenschaften und Methoden des Objekts mit normaler <a href="../Objects.htm#Usage_Objects">Objektsyntax</a> aufzurufen.</td>
+  </tr>
+  <tr>
+    <td>Andere IID</td>
+    <td><code style="white-space:nowrap">ComValue</code></td>
+    <td><span style="white-space:nowrap">VT_UNKNOWN (13)</span></td>
+    <td>Stellt nur eine <code class="no-highlight">Ptr</code>-Eigenschaft bereit, mit der das Objekt an <a href="DllCall.htm">DllCall</a> oder <a href="ComCall.htm">ComCall</a> übergeben werden kann.</td>
+  </tr>
+</table>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Bei Misserfolg wird eine Ausnahme ausgelöst, z.B. wenn ein Parameter ungültig ist oder das Objekt nicht das angegebene Interface in <em>IID</em> unterstützt.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="ComValue.htm">ComValue</a>, <a href="ComObjGet.htm">ComObjGet</a>, <a href="ComObjActive.htm">ComObjActive</a>, <a href="ComObjConnect.htm">ComObjConnect</a>, <a href="ComObjArray.htm">ComObjArray</a>, <a href="ComObjQuery.htm">ComObjQuery</a>, <a href="ComCall.htm">ComCall</a>, <a href="https://learn.microsoft.com/previous-versions/dcw63t7z(v=vs.85)">CreateObject (Microsoft Docs)</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<p>Eine lange Liste von v1.1-Beispielen finden Sie in <a href="https://www.autohotkey.com/board/topic/56987-">diesem archivierten Forumsthread</a>.</p>
+<div class="ex" id="ExIE">
+<p><a class="ex_number" href="#ExIE"></a> Startet eine Instanz des Internet Explorers, macht ihn sichtbar und navigiert zu einer Webseite.</p>
+<pre>ie := ComObject("InternetExplorer.Application")
+ie.Visible := true  <em>; Funktioniert nicht korrekt unter IE7.</em>
+ie.Navigate("https://www.autohotkey.com/")
+</pre>
+</div>
+<div class="ex" id="ExWallpaper">
+<p><a class="ex_number" href="#ExWallpaper"></a> Ruft den Pfad des aktuellen Hintergrundbildes (Wallpaper) auf dem Desktop ab.</p>
+<pre>
+AD_GETWP_BMP := 0
+AD_GETWP_LAST_APPLIED := 0x00000002
+CLSID_ActiveDesktop := "{75048700-EF1F-11D0-9888-006097DEACF9}"
+IID_IActiveDesktop := "{F490EB00-1240-11D1-9888-006097DEACF9}"
+cchWallpaper := 260
+GetWallpaper := 4
+
+AD := ComObject(CLSID_ActiveDesktop, IID_IActiveDesktop)
+wszWallpaper := Buffer(cchWallpaper * 2)
+ComCall(GetWallpaper, AD, "ptr", wszWallpaper, "uint", cchWallpaper, "uint", AD_GETWP_LAST_APPLIED)
+Wallpaper := StrGet(wszWallpaper, "UTF-16")
+MsgBox "Wallpaper: " Wallpaper
+</pre>
+</div>
+
+</body>
+</html>

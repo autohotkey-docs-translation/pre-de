@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>SoundGetInterface - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die SoundGetInterface-Funktion ruft ein natives COM-Interface eines Audiogeräts oder einer Komponente ab." />
+<meta name="ahk:equiv-v1" content="lib/SoundGet.htm" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>SoundGetInterface</h1>
+
+<p>Ruft ein natives COM-Interface eines Audiogeräts oder einer Komponente ab.</p>
+
+<pre class="Syntax">InterfacePtr := <span class="func">SoundGetInterface</span>(IID, <span class="optional">Komponente, Gerät</span>)</pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>IID</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Ein Interface-Identifikator (GUID) im Format "{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}".</p>
+  </dd>
+
+  <dt>Komponente</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a> oder <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn leer oder weggelassen, wird ein Interface abgerufen, das vom Gerät selbst implementiert wurde. Andernfalls geben Sie den Anzeigenamen und/oder die Indexnummer der Komponente an, z.B. <code>1</code>, <code>"Line in"</code> oder <code>"Line in:2"</code>.</p>
+    <p>Weitere Informationen finden Sie unter <a href="Sound.htm#component">Komponente (Sound-Funktionen)</a>.</p>
+  </dd>
+
+  <dt>Gerät</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a> oder <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn leer oder weggelassen, wird standardmäßig das Standardwiedergabegerät des Systems verwendet (was nicht unbedingt Gerät 1 ist). Andernfalls geben Sie den Anzeigenamen und/oder die Indexnummer des Geräts an, z.B. <code>1</code>, <code>"Lautsprecher"</code>, <code>"Lautsprecher:2"</code> oder <code>"Lautsprecher (Beispiel HD Audio)"</code>.</p>
+    <p>Weitere Informationen finden Sie unter <a href="Sound.htm#device">Gerät (Sound-Funktionen)</a>.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+<p>Bei Erfolg wird ein Interface-Pointer zurückgegeben.</p>
+<p>Wenn das Interface nicht unterstützt wird, wird 0 zurückgegeben.</p>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Es wird ein <a href="Error.htm#TargetError">TargetError</a> ausgelöst, wenn das Gerät oder die Komponente nicht gefunden werden konnte. Andernfalls wird bei Misserfolg ein <a href="Error.htm#OSError">OSError</a> ausgelöst.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Das Interface wird von einer der folgenden Quellen abgerufen:</p>
+<ul>
+  <li>Wenn <em>Komponente</em> weggelassen wird, wird <a href="https://learn.microsoft.com/windows/win32/api/mmdeviceapi/nf-mmdeviceapi-immdevice-activate">IMMDevice::Activate</a> aufgerufen, um das Interface abzurufen.</li>
+  <li><a href="https://learn.microsoft.com/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)">QueryInterface</a> wird für den via <em>Komponente</em> identifizierten Konnektor aufgerufen. Wenn dieser Aufruf erfolgreich war, wird der Interface-Pointer zurückgegeben. Dies kann verwendet werden, um das <a href="https://learn.microsoft.com/windows/win32/api/devicetopology/nn-devicetopology-ipart">IPart</a>- oder <a href="https://learn.microsoft.com/windows/win32/api/devicetopology/nn-devicetopology-iconnector">IConnector</a>-Interface des Konnektors abzurufen.</li>
+  <li><a href="https://learn.microsoft.com/windows/win32/api/devicetopology/nf-devicetopology-ipart-activate">IPart::Activate</a> wird für jede Untereinheit aufgerufen, die für die angegebene <em>Komponente</em> eindeutig ist. Zum Beispiel kann <em>IID</em> <code>"{7FB7B48F-531D-44A2-BCB3-5AD5A134B3DC}"</code> sein, um das IAudioVolumeLevel-Interface abzurufen, das Zugriff auf Lautstärkeregler pro Kanal bietet.</li>
+</ul>
+<p>Sobald der Interface-Pointer abgerufen wurde, kann <a href="ComCall.htm">ComCall</a> verwendet werden, um seine Methoden aufzurufen. Die korrekte Indexnummer einer Methode finden Sie in den Windows SDK-Header-Dateien.</p>
+<p>Der Interface-Pointer muss durch Übergabe an <a href="ObjAddRef.htm">ObjRelease</a> freigegeben werden, wenn er nicht mehr benötigt wird. Um das zu bewerkstelligen, "wrappen" Sie den Pointer mit <a href="ComValue.htm">ComValue</a>. Der gewrappte Wert (ein Objekt) kann direkt an <a href="ComCall.htm">ComCall</a> übergeben werden.</p>
+<pre>Interface := ComValue(13, InterfacePtr)</pre>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="Sound.htm">Sound-Funktionen</a>, <a href="https://learn.microsoft.com/windows/win32/coreaudio/devicetopology-api">DeviceTopology API</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExPeakMeter">
+<p><a class="ex_number" href="#ExPeakMeter"></a> Pegelmesser. Dieses Beispiel zeigt einen Tooltip mit dem aktuellen Lautstärkepegel an, außer wenn der Pegelwert Null ist (also wenn kein Sound wiedergegeben wird).</p>
+<pre><em>; IAudioMeterInformation</em>
+audioMeter := SoundGetInterface("{C02216F6-8C67-4B5B-9D00-D008E73E0064}")
+if audioMeter
+{
+    try loop  <em>; Bis das Skript beendet wird oder ein Fehler auftritt.</em>
+    {
+        <em>; audioMeter-&gt;GetPeakValue(&amp;peak)</em>
+        ComCall 3, audioMeter, "float*", &amp;peak:=0
+        ToolTip peak &gt; 0 ? peak : ""
+        Sleep 15
+    }
+    ObjRelease audioMeter
+}
+else
+    MsgBox "Pegelmesser kann nicht abgerufen werden"
+</pre>
+</div>
+
+</body>
+</html>

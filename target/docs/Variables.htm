@@ -1,0 +1,1045 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Variablen und Ausdrücke - Definition &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Erfahren Sie mehr über Variablen, Ausdrücke, Operatoren, interne Variablen und Kapazität und Speicher von Variablen." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="static/theme.css" rel="stylesheet" />
+<link href="static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="static/content.js" id="content_js"></script>
+<script src="static/ga4.js"></script>
+</head>
+
+<body><script>site.init();</script>
+<h1>Variablen und Ausdrücke</h1>
+
+<h2 id="toc">Inhaltsverzeichnis</h2>
+<ul>
+  <li><a href="#Intro">Variablen</a></li>
+  <li><a href="#Expressions">Ausdrücke (Expressions)</a></li>
+  <li><a href="#Operators">Operatoren in Ausdrücken</a></li>
+  <li><a href="#BuiltIn">Interne Variablen</a></li>
+  <li><a href="#cap">Kapazität und Speicher von Variablen</a></li>
+</ul>
+<span id="Variables"></span><h2 id="Intro">Variablen</h2>
+<p>Eine allgemeine Erklärung und Details zur Funktionsweise finden Sie unter <a href="Concepts.htm#variables">Variablen</a>.</p>
+<p id="assigning"><strong>Werte in Variablen speichern:</strong> Um eine Zeichenkette oder Zahl in eine Variable zu speichern, verwenden Sie den <a href="#AssignOp">Doppelpunkt-Gleich-Operator (:=)</a>, gefolgt von einer Zahl, einer in Anführungszeichen gesetzten Zeichenkette oder einem <a href="Language.htm#expressions">Ausdruck</a> beliebigen Typs. Zum Beispiel:</p>
+<pre>MeineZahl := 123
+MeineZkette := "Dies ist eine direkt geschriebene Zeichenkette."
+KopieVonVar := Var</pre>
+<p>Eine Variable kann nicht explizit gelöscht werden, aber ihr vorheriger Wert kann durch Zuweisung eines neuen Wertes, z.B. einer leeren Zeichenkette, freigegeben werden:</p>
+<pre>MeineVar := ""</pre>
+<p>Einer Variable kann auch indirekt ein Wert zugewiesen werden, indem man <a href="#ref">ihre Referenz nimmt</a> und eine <a href="#deref">Doppeldereferenz</a> (double-deref) verwendet oder sie an eine Funktion übergibt. Zum Beispiel:</p>
+<pre><a href="lib/MouseGetPos.htm">MouseGetPos</a> &amp;x, &amp;y</pre>
+<p>Den Wert einer Variable zu lesen, der kein Wert zugewiesen wurde, wird als Fehler gewertet. Dieser Zustand kann mit <a href="lib/IsSet.htm">IsSet</a> erkannt werden.</p>
+<p id="retrieving"><strong>Inhalte von Variablen abrufen:</strong> Mit einer <a href="#concat">Verkettung</a> oder der <a href="lib/Format.htm">Format</a>-Funktion kann der Inhalt einer Variable in eine Zeichenkette eingefügt werden. Zum Beispiel:</p>
+<pre><a href="lib/MsgBox.htm">MsgBox</a> "Der Wert von Var ist " . Var . "."
+MsgBox "Der Wert in der Variable namens Var ist " Var "."
+MsgBox Format("Var hat den Wert {1}.", Var)
+</pre>
+<p>Teilausdrücke können auf dieselbe Weise mit Zeichenketten kombiniert werden. Zum Beispiel:</p>
+<pre>MsgBox("Die Summe von X und Y ist " . (X + Y))
+</pre>
+<p><strong>Variablen vergleichen:</strong> Bitte lesen Sie sich den folgenden Abschnitt durch, um zu erfahren, welche Vergleiche es gibt.</p>
+<h2 id="Expressions">Ausdrücke (Expressions)</h2>
+<p class="note">Eine strukturierte Übersicht und zusätzliche Erklärungen finden Sie unter <a href="Language.htm#expressions">Ausdrücke (Expressions)</a>.</p>
+<p>Ausdrücke werden verwendet, um eine oder mehrere Operationen auf eine Reihe von Variablen, direkt geschriebenen Zeichenketten und/oder direkt geschriebenen Zahlen anzuwenden.</p>
+<p>Reine Wörter in Ausdrücken werden als Variablennamen interpretiert. Folglich müssen direkt geschriebene Zeichenketten in einfache oder doppelte Anführungszeichen gesetzt werden, um sie von Variablen zu unterscheiden. Zum Beispiel:</p>
+<pre>if (AktuelleEinstellung &gt; 100 or GefundeneFarbe != "Blau")
+    MsgBox "Die Einstellung ist zu hoch oder die Farbe ist falsch."</pre>
+<p>Im obigen Beispiel ist "Blau" in Anführungszeichen gesetzt, da es sich um eine direkt geschriebene Zeichenkette handelt. Einfache Anführungszeichen (') und doppelte Anführungszeichen (") sind funktionsgleich, außer dass eine Zeichenkette, die von einfachen Anführungszeichen umschlossen ist, direkt geschriebene doppelte Anführungszeichen enthalten kann, und umgekehrt. Um daher ein <em>tatsächliches</em> Anführungszeichen in eine direkt geschriebene Zeichenkette einzufügen, versehen Sie das Anführungszeichen mit einem <a href="misc/EscapeChar.htm">Escapezeichen</a> oder umschließen Sie die Zeichenkette mit gegenteiligen Anführungszeichen. Zum Beispiel:</p>
+<pre>MsgBox "Sie sagte: `"Ein Apfel pro Tag.`""
+MsgBox 'Sie sagte: "Ein Apfel pro Tag."'</pre>
+<p><strong>Leere Zeichenketten:</strong> Um eine leere Zeichenkette in einem Ausdruck anzugeben, verwenden Sie ein leeres Anführungszeichenpaar. Zum Beispiel wäre die Anweisung <code>if (MeineVar != "")</code> wahr, wenn <em>MeineVar</em> nicht leer ist.</p>
+<p><strong>Ergebnis eines Ausdrucks speichern:</strong> Um einer Variable das Ergebnis eines Ausdrucks zuzuweisen, verwenden Sie den <a href="#AssignOp">Doppelpunkt-Gleich-Operator (:=)</a>. Zum Beispiel:</p>
+<pre>NettoPreis := Preis * (1 - Rabatt/100)</pre>
+<p id="Boolean"><strong>Boolesche Werte:</strong> In Fällen, wo die Auswertung eines Ausdrucks entweder True (wahr) oder False (falsch) ergeben muss (z.B. bei einer IF-Anweisung), wird eine leere Zeichenkette oder 0 als False und alle anderen Ergebnisse als True angesehen. Zum Beispiel wäre die Anweisung <code>if ElementeAnzahl</code> nur dann False, wenn ElementeAnzahl leer oder 0 ist. Der Ausdruck <code>if not ElementeAnzahl</code> würde das gegenteilige Ergebnis liefern.</p>
+<p>Operatoren wie NOT/&gt;/=/&lt; erzeugen automatisch einen True- oder False-Wert: 1 für True und 0 für False. Die Operatoren AND/OR hingegen erzeugen immer einen der Eingabewerte. Im folgenden Beispiel wird 1 in die <em>Done</em>-Variable gespeichert, wenn A_Index größer als 5 ist, andernfalls der Wert von <em>FoundIt</em>:</p>
+<pre>Done := A_Index &gt; 5 or FoundIt</pre>
+<p>Wie oben angedeutet, kann eine Variable zum Speichern eines False-Wertes verwendet werden, indem sie einfach leer gemacht oder ihr 0 zugewiesen wird. Verwenden Sie dann die Kurzanweisung <code>if Done</code>, um zu prüfen, ob die Done-Variable True oder False ist.</p>
+<p><span id="True"></span><span id="False"></span>In einem Ausdruck werden die Schlüsselwörter <em>True</em> und <em>False</em> in 1 bzw. 0 aufgelöst. Diese können verwendet werden, um die Lesbarkeit eines Skripts zu verbessern. Zum Beispiel:</p>
+<pre>GroßKleinSensitiv := false
+SucheFortsetzen := true</pre>
+<p id="numbers"><strong>Integer (ganze Zahlen) und Floating-Point-Zahlen (Gleitkommazahlen):</strong> Innerhalb eines Ausdrucks werden Zahlen, die einen Dezimalpunkt enthalten oder mit der wissenschaftlichen Schreibweise angegeben sind, als Floating-Point-Zahlen behandelt, andernfalls sind sie Integer. Für die meisten Operatoren wie Addition und Multiplikation gilt: Wenn einer der Eingabewerte eine Floating-Point-Zahl ist, ist auch das Ergebnis eine Floating-Point-Zahl.</p>
+<p>Innerhalb und außerhalb von Ausdrücken können Integer sowohl im hexadezimalen als auch dezimalen Format geschrieben werden. Hexadezimalzahlen beginnen mit dem 0x-Präfix. Zum Beispiel ist <code>Sleep 0xFF</code> äquivalent zu <code>Sleep 255</code>. Floating-Point-Zahlen können optional mit der wissenschaftlichen Schreibweise angegeben werden, mit oder ohne Dezimalpunkt (z.B. <code>1e4</code> oder <code>-2.1E-4</code>).</p>
+<p>Innerhalb von Ausdrücken werden direkt geschriebene Zahlen ohne Anführungszeichen wie <code>128</code>, <code>0x7F</code> und <code>1.0</code> bereits vor Beginn der Skriptausführung in reine Zahlen umgewandelt. Folglich kann die Umwandlung der Zahl in eine Zeichenkette einen Wert erzeugen, der vom direkt geschriebenen Originalwert abweicht. Zum Beispiel:</p>
+<pre>MsgBox(0x7F)  <em>; Zeigt 128</em>
+MsgBox(1.00)  <em>; Zeigt 1.0</em></pre>
+
+<h2 id="Operators">Operatoren in Ausdrücken</h2>
+<p class="note">Allgemeine Informationen zu Operatoren finden Sie unter <a href="Language.htm#operators">Operatoren</a>.</p>
+<p>Sofern nicht anders unten angegeben, werden leere Werte (leere Zeichenketten) oder nicht-numerische Werte innerhalb einer mathematischen Operation <strong>nicht</strong> als 0 interpretiert. Stattdessen wird ein <a href="lib/Error.htm#TypeError">TypeError</a> ausgelöst. Wenn <a href="lib/Try.htm">Try</a> nicht verwendet wird, führt die unbehandelte Ausnahme standardmäßig zu einem Fehlerdialogfenster.</p>
+
+<h3 id="operators">Ausdrucksoperatoren (absteigende Priorität)</h3>
+<table class="info">
+  <tr>
+    <th class="center">Operator</th>
+    <th abbr="Beschr">Beschreibung</th>
+  </tr>
+  <tr id="deref">
+    <td class="center bold">%Ausdr%</td>
+    <td>
+      <p><strong>Dereferenzierung</strong> oder <strong>Namensubstitution</strong>.</p>
+      <p>Wenn die Auswertung von <em>Ausdr</em> eine <a href="Concepts.htm#variable-references">VarRef</a> ergibt, greift <code>%Ausdr%</code> auf die entsprechende Variable zu. Zum Beispiel nimmt <code>x := &amp;y</code> eine Referenz, die auf <em>y</em> verweist, und weist sie <em>x</em> zu, dann weist <code>%x% := 1</code> der Variable <em>y</em> etwas zu und <code>%x%</code> liest ihren Wert.</p>
+      <p><span class="ver">[v2.1-alpha.10+]</span>: Wenn die Auswertung von <em>Ausdr</em> ein anderes Objekt ergibt, wird die <a href="Functions.htm#virtual-references">__Value-Eigenschaft</a> des Objekts aufgerufen (Get oder Set, je nachdem, ob die Dereferenzierung das Ziel einer Zuweisung ist).</p>
+      <p>Andernfalls wird der Wert des Teilausdrucks <em>Ausdr</em> als Name oder Teilname einer Variable oder Eigenschaft verwendet. Auf diese Weise kann das Skript auf eine Variable oder Eigenschaft verweisen, deren Name durch die Auswertung von <em>Ausdr</em> ermittelt wird, was typischerweise eine andere Variable ist. Variablen können nicht dynamisch erstellt werden, aber eine Variable kann dynamisch zugewiesen werden, wenn sie irgendwo im Skript nicht-dynamisch deklariert oder referenziert wurde.</p>
+      <p class="note"><strong>Hinweis:</strong> Das <u>Ergebnis</u> des Teilausdrucks <em>Ausdr</em> muss der Name oder Teilname der Variable oder Eigenschaft sein, auf die zugegriffen werden soll.</p>
+      <p>Prozentzeichen dürfen wegen ihrer Mehrdeutigkeit nicht direkt in <em>Ausdr</em> verwendet werden, können aber innerhalb von runden Klammern verschachtelt werden. Andernfalls kann <em>Ausdr</em> ein beliebiger Ausdruck sein.</p>
+      <p>Eventuell angrenzende <em>%Ausdr%</em>-Sequenzen und teilweise vorhandene <a href="Concepts.htm#names">Namen</a> (ohne Leerzeichen oder andere Zeichen dazwischen) werden zu einem einzigen Namen kombiniert.</p>
+      <p>Standardmäßig wird ein <a href="lib/Error.htm">Error</a> ausgelöst, wenn die Variable noch nicht existiert oder wenn sie uninitialisiert ist und ihr Wert gelesen wird. Um diesen Fall zu vermeiden, kann mit dem <a href="#or-maybe">Oder-Vielleicht-Operator (??)</a> ein Standardwert bereitgestellt werden. Zum Beispiel: <code>%'keineVar'% ?? 42</code>.</p>
+      <p>Obwohl historisch als "double-deref" (Doppeldereferenz) bekannt, ist dieser Begriff ungenau, wenn <em>Ausdr</em> keine Variable enthält (erste Dereferenzierung), und wenn die resultierende Variable, die das Ziel einer Zuweisung ist, nicht dereferenziert wird (zweite Dereferenzierung).</p>
+    </td>
+  </tr>
+  <tr id="objdot">
+    <td class="center bold">x.y<br>x.%z%</td>
+    <td><strong>Objektelementzugriff</strong>. Abrufen (Get), Setzen (Set) oder Aufrufen (Call) einer Eigenschaft des Objekts <i>x</i>, wobei <i>y</i> ein direkt geschriebener Name und <em>z</em> ein Ausdruck ist, dessen Auswertung einen Namen ergibt. Weitere Informationen finden Sie unter <a href="Objects.htm#Usage_Objects">Objektsyntax</a>.</td>
+  </tr>
+  <tr id="maybe">
+    <td class="center"><em>Var</em><strong>?</strong></td>
+    <td>
+      <p><strong>Vielleicht</strong>. Erlaubt einer Variable (oder in <span class="ver">[v2.1-alpha.2+]</span> einer Eigenschaft, Methode oder einem Funktionsaufruf), <a href="Concepts.htm#unset">ungesetzt</a> zu sein. Dies ist <a href="Language.htm#unset-valid">nur in bestimmten Fällen gültig</a>. Geben Sie das Fragezeichen direkt rechts vom Variablen- oder Eigenschaftsnamen (wenn keine Parameter vorhanden sind) oder direkt rechts von der Endklammer der Parameterliste (<code>]?</code> oder <code>)?</code>) an. Nach dem Fragezeichen muss eines der folgenden Symbole folgen: <code class="no-highlight">)]},:?.</code>.</p>
+      <p>Für Variablen, die keine Funktionsparameter sind, kann beim Laden des Skripts immer noch eine <a href="lib/_Warn.htm#VarUnset">VarUnset-Warnung</a> angezeigt werden, wenn andere Referenzen zu der Variable existieren, aber keine Zuweisungen.</p>
+      <p><span class="ver">[v2.1-alpha.2+]</span>: Wenn dem Operator unmittelbar ein Eigenschaftsname vorangestellt ist, wie in <code>x.y?</code>, wird der Ausdruck <em>ungesetzt</em> sein, falls die Eigenschaft nicht existiert. Im Gegensatz dazu erlaubt <code>x.y[z]?</code> der Eigenschaft, ein <code>return unset</code> zu machen, setzt jedoch voraus, dass die Eigenschaft selbst existiert.</p>
+      <p><span class="ver">[v2.1-alpha.2+]</span>: Nach dem Fragezeichen kann eine Sequenz von <a href="#objdot">Objektelementzugriffen</a> folgen, um eine "optionale Kette" zu bilden. Wenn der linke Operand <em>ungesetzt</em> ist, wird die Kette bei der Auswertung kurzgeschlossen. Zum Beispiel bewirkt <code>(x?.y(z()))</code>, dass weder <code>z()</code> noch <code>.y()</code> ausgewertet werden, wenn <em>x</em> ungesetzt ist; allerdings darf nur <em>x</em> selbst ungesetzt sein, sofern keine weiteren Fragezeichen hinzugefügt werden. Eine Kette reicht nicht über die Klammern hinaus, aber es kann eine neue Kette gestartet werden, wie in <code>(w ?? x?.y)?.z()</code>, wodurch nur <em>w</em> und <em>x</em> ungesetzt sein dürfen.</p>
+      <p id="unset-short"><span class="ver">[v2.1-alpha.29+]</span>: Dieser Operator kann jeden Teil eines Ausdrucks kurzschließen, der fehlschlagen würde, wenn dessen Eingabe ungesetzt ist, kann jedoch weder einen Funktionsaufruf innerhalb der Parameterliste noch eine Zuweisung auf der rechten Seite überspringen. Zum Beispiel bewirkt <code>r := x?.y + 1</code>, dass <code>unset</code> an <em>r</em> zugewiesen wird, wenn <em>x</em> ungesetzt ist, aber <code>1 + (r := x?.y)</code> ist nicht zulässig, da das Ergebnis der Zuweisung ungesetzt sein kann.</p>
+      <p class="note"><strong>Tipp:</strong> Durch Kurzschließen kann der Vielleicht-Operator komplexe Ausdrücke vereinfachen, wo mehrere Eingaben ungesetzt sein können. Zum Beispiel: <code>((a?) &lt; b?.c &amp;&amp; f()?) ?? false</code> statt <code>IsSet(a) &amp;&amp; IsSet(b) &amp;&amp; a &lt; b.c &amp;&amp; (f() ?? false)</code>.</p>
+      <p>Eine optionale Kette unterliegt denselben <a href="Language.htm#unset-valid">Einschränkungen</a> wie ein Unset-Ausdruck. <a href="Language.htm#unset-chain">Hinzu kommt die Einschränkung</a>, dass ein finales Fragezeichen erforderlich ist, wenn die Kette als "Parameter weglassen" interpretiert werden soll.</p>
+      <p><span class="ver">[v2.1-alpha.29+]</span>: Auf der linken Seite einer Zuweisung kann eine optionale Kette verwendet werden. In diesem Fall darf die Kette jedoch nicht mit <code>?</code> enden.</p>
+      <p>Siehe auch: <a href="Language.htm#unset">Ungesetzt (technische Details)</a>, <a href="Concepts.htm#unset">Ungesetzt (Konzept)</a></p>
+    </td>
+  </tr>
+  <tr id="IncDec">
+    <td class="center bold">++<br>
+    --</td>
+    <td>
+      <p><strong>Vorherige und nachherige Inkrementierung/Dekrementierung</strong>. Erhöht oder verringert eine Variable um 1. Der Operator kann entweder vor oder hinter dem Namen der Variable stehen. Wenn der Operator <em>vor</em> dem Namen steht, wird die Operation ausgeführt und das Ergebnis wird von der nächsten Operation verwendet (das Ergebnis ist in diesem Fall eine Variablenreferenz). Zum Beispiel bewirkt <code>Var := ++X</code>, dass X um 1 erhöht und der Wert in <em>Var</em> gespeichert wird. Wenn der Operator hingegen <em>hinter</em> dem Namen einer Variable steht, ist das Ergebnis der Wert von X vor der Ausführung der Operation. Zum Beispiel bewirkt <code>Var := X++</code>, dass X um 1 erhöht wird, aber <em>Var</em> erhält den Wert, den X vor der Inkrementierung hatte.</p>
+      <p>Diese Operatoren können auch mit einer Eigenschaft eines Objekts verwendet werden, z.B. <code>meinArray.Length++</code> oder <code>--meinArray[i]</code>. In diesen Fällen ist das Ergebnis des Teilausdrucks immer eine Zahl, keine Variablenreferenz.</p>
+    </td>
+  </tr>
+  <tr id="pow">
+    <td class="center bold">**</td>
+    <td>
+      <p><strong>Potenz</strong>. Anwendungsbeispiel: <code>Basis**Exponent</code>. Sowohl <em>Basis</em> als auch <em>Exponent</em> können einen Dezimalpunkt enthalten. Wenn <em>Exponent</em> negativ ist, wird das Ergebnis in eine Floating-Point-Zahl umgewandelt, auch dann, wenn <em>Basis</em> und <em>Exponent</em> Integer sind. Da dieser Operator eine höhere Priorität als ein unäres Minuszeichen hat, wird <code>-2**2</code> wie <code>-(2**2)</code> ausgewertet und somit -4 zurückgeben. Um eine direkt geschriebene negative Zahl zu potenzieren, umschließen Sie diese mit runden Klammern, z.B. <code>(-2)**2</code>.</p>
+      <p>Der Potenzoperator ist rechtsassoziativ. Zum Beispiel wird <code>x ** y ** z</code> als <code>x ** (y ** z)</code> ausgewertet.</p>
+      <p class="note"><strong>Hinweis:</strong> Eine negative <em>Basis</em> mit einem gebrochenen <em>Exponenten</em> wie <code>(-2)**0.5</code> wird nicht unterstützt und führt dazu, dass eine Ausnahme ausgelöst wird. Allerdings werden sowohl <code>(-2)**2</code> als auch <code>(-2)**2.0</code> unterstützt. Wenn <em>Basis</em> und <em>Exponent</em> 0 sind, ist das Ergebnis undefiniert und führt dazu, dass eine Ausnahme ausgelöst wird.</p>
+    </td>
+  </tr>
+  <tr id="unary">
+    <td class="center bold">-<br>
+    !<br>
+    ~<br>
+    &amp;</td>
+    <td>
+      <p><strong>Unäres Minuszeichen (-):</strong> Invertiert das Vorzeichen des Operanden.</p>
+      <p><strong>Unäres Pluszeichen (+):</strong> <code>+N</code> ist dasselbe wie <code>-(-N)</code>. Dieser Operator hat keinen Effekt, wenn er auf eine reine Zahl angewendet wird, ist aber nützlich, um numerische Zeichenketten in reine Zahlen umzuwandeln.</p>
+      <p><strong>Logisches NICHT (!):</strong> Wenn dieser Operator auf einen Operanden angewendet wird, der leer oder 0 ist, ist das Ergebnis 1 (true). Andernfalls ist das Ergebnis 0 (false). Zum Beispiel: <code>!x or !(y and z)</code>. Hinweis: Das Wort NOT ist synonym mit <strong>!</strong>, allerdings hat <strong>!</strong> eine höhere Priorität. Aufeinanderfolgende unäre Operatoren wie <code>!!Var</code> sind erlaubt, da sie von rechts nach links ausgewertet werden.</p>
+      <p><strong>Bitweises NICHT (~):</strong> Dieser Operator invertiert jedes Bit seines Operanden. Da vorzeichenfähige 64-Bit-Integer verwendet werden, führt ein positiver Eingabewert immer zu einem negativen Ergebnis und umgekehrt. Zum Beispiel ergibt die Auswertung von <code>~0xf0f</code> -0xf10 (-3856), was binär äquivalent zu 0xfffffffffffff0f0 ist. Wenn ein vorzeichenloser 32-Bit-Wert beabsichtigt ist, kann das Ergebnis mit <code><i>Ergebnis</i> &amp; 0xffffffff</code> gekürzt werden. Wenn der Operand eine Floating-Point-Zahl ist, wird ein <a href="lib/Error.htm#TypeError">TypeError</a> ausgelöst.</p>
+      <p id="ref"><strong>Referenz (&amp;):</strong> Ruft einen Wert ab, der eine Referenz auf eine Variable oder Eigenschaft repräsentiert. Dabei handelt es sich in der Regel um eine <a href="Concepts.htm#variable-references">VarRef</a> oder allgemeiner um eine <a href="Functions.htm#virtual-references">virtuelle Referenz</a>, mit der der Wert des Ziels indirekt abgerufen oder gesetzt werden kann. Zum Beispiel bewirkt <code>Ref := &amp;Ziel</code> gefolgt von <code>%Ref% := 1</code>, dass 1 in <em>Ziel</em> gespeichert wird. Die Referenz wird normalerweise an eine Funktion übergeben, kann aber auch in ein Array oder eine Eigenschaft gespeichert werden. Siehe auch: <a href="#deref">Dereferenz</a>, <a href="Functions.htm#ByRef">ByRef</a>.</p>
+      <p>Das Abrufen einer Referenz auf eine interne Variable wie z.B. <a href="lib/A_Clipboard.htm">A_Clipboard</a> wird nur unterstützt, wenn sie direkt an einen <em>AusgabeVar</em>-Parameter einer internen Funktion übergeben wird.</p>
+      <p><span class="ver">[v2.1-alpha.10+]</span>: Interne Variablen, die eine Zuweisung zulassen, werden vollständig unterstützt.</p>
+      <p><span class="ver">[v2.1-alpha.10+]</span>: Wendet man den Operator auf eine Eigenschaft an, wird die __Ref-Methode aufgerufen, mit dem Namen der Eigenschaft als Parameter. Zum Beispiel ist <code>&amp;x.y</code> dasselbe wie <code>x.__Ref('y')</code>. Dies entspricht in der Regel <a href="lib/Object.htm#__Ref">__Ref (Object)</a>, das eine verschachtelte Struktur oder eine virtuelle Referenz auf die Eigenschaft zurückgibt. Eigenschaftsparameter und Indexierung (Array-/Map-Elemente) werden nicht unterstützt.</p>
+    </td>
+  </tr>
+  <tr id="MulDiv">
+    <td class="center bold">*<br>
+    /<br>
+    //
+    </td>
+    <td><p><strong>Multiplikation (*):</strong> Das Ergebnis ist ein Integer, wenn beide Eingabewerte Integer sind, andernfalls ist es eine Floating-Point-Zahl.</p>
+      <p><strong>Andere Verwendungen:</strong> Das Sternchensymbol (*) kann auch in <a href="Functions.htm#VariadicCall">variadischen Funktionsaufrufen</a> verwendet werden.</p>
+      <p id="divide"><strong>Echte Division (/):</strong> Die echte Division liefert immer eine Floating-Point-Zahl, auch dann, wenn beide Eingabewerte Integer sind. Zum Beispiel ergibt <code>3/2</code> 1.5 statt 1 und <code>4/2</code> 2.0 statt 2.</p>
+      <p id="IntegerDivide"><strong>Integer-Division (//):</strong> Der Doppelschrägstrich-Operator verwendet eine hochperformante Integer-Division. Zum Beispiel ergibt <code>5//3</code> 1 und <code>5//-3</code> -1. Wenn einer der Eingabewerte im Floating-Point-Format ist, wird ein <a href="lib/Error.htm#TypeError">TypeError</a> ausgelöst. Um stattdessen eine Division mit Rest (Modulo) durchzuführen, siehe <a href="lib/Math.htm#Mod">Mod</a>.</p>
+    <p>Die <a href="#AssignOp">Operatoren *= und /=</a> sind Kurzschreibweisen zum Multiplizieren oder Dividieren eines Variablenwerts mit einem anderen Wert. Zum Beispiel liefert <code>Var *= 2</code> dasselbe Ergebnis wie <code>Var := Var * 2</code> (obwohl Ersteres performanter ist).</p>
+    <p>Eine Division durch 0 bewirkt, dass ein <a href="lib/Error.htm#ZeroDivisionError">ZeroDivisionError</a> ausgelöst wird.</p></td>
+  </tr>
+  <tr id="AddSub">
+    <td class="center bold">+<br>
+    -</td>
+    <td><p><strong>Addition (+)</strong> und <strong>Subtraktion (-)</strong>. Die <a href="#AssignOp">Operatoren += und -=</a> sind Kurzschreibweisen zum Erhöhen oder Verringern eines Variablenwerts um einen beliebigen Wert. Zum Beispiel liefert <code>Var += 2</code> dasselbe Ergebnis wie <code>Var := Var + 2</code> (obwohl Ersteres performanter ist). Ebenso kann eine Variable mit <a href="#IncDec">Var++, Var--, ++Var oder --Var</a> schrittweise um 1 erhöht oder verringert werden.</p>
+      <p><strong>Andere Verwendungen:</strong> Wenn dem Plus- oder Minuszeichen kein Wert (oder Teilausdruck, der einen Wert zurückgibt) vorangestellt ist, wird es stattdessen als <a href="#unary">unärer Operator</a> interpretiert.</p>
+    </td>
+  </tr>
+  <tr id="bitshift">
+    <td class="center bold">&lt;&lt;<br>
+    &gt;&gt;<br>
+    &gt;&gt;&gt;</td>
+    <td>
+      <p><strong>Bitweise Verschiebung nach links (&lt;&lt;)</strong>. Anwendungsbeispiel: <code>Wert1 &lt;&lt; Wert2</code>. Entspricht der Multiplikation von <em>Wert1</em> mit "2 hoch <em>Wert2</em>".</p>
+      <p><strong>Arithmetische bitweise Verschiebung nach rechts (&gt;&gt;)</strong>. Anwendungsbeispiel: <code>Wert1 &gt;&gt; Wert2</code>. Entspricht der Division von <em>Wert1</em> durch "2 hoch <em>Wert2</em>" und der Rundung des Ergebnisses auf den am nächsten links befindlichen Integer. Zum Beispiel ergibt <code>-3&gt;&gt;1</code> -2.</p>
+      <p><strong>Logische bitweise Verschiebung nach rechts (&gt;&gt;&gt;)</strong>. Anwendungsbeispiel: <code>Wert1 &gt;&gt;&gt; Wert2</code>. Im Gegensatz zur arithmetischen bitweisen Verschiebung nach rechts wird bei dieser Verschiebung das Vorzeichen der Zahl nicht beibehalten. Zum Beispiel hat -1 die gleiche Bitdarstellung wie der vorzeichenlose 64-Bit-Integer 0xffffffffffffffffff, daher ist <code>-1 &gt;&gt;&gt; 1</code> 0x7fffffffffffffffff.</p>
+      <p>Das Folgende gilt für alle drei Operatoren:</p>
+      <ul>
+        <li>Wenn einer der Eingabewerte eine Floating-Point-Zahl ist, wird ein <a href="lib/Error.htm#TypeError">TypeError</a> ausgelöst.</li>
+        <li>Es wird eine 64-Bit-Operation durchgeführt und das Ergebnis ist ein vorzeichenfähiger 64-Bit-Integer.</li>
+        <li>Wenn <em>Wert2</em> kleiner als 0 oder größer als 63 ist, wird eine Ausnahme ausgelöst.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr id="bitwise">
+    <td class="center bold">&amp;<br>
+    ^<br>
+    |
+    </td>
+    <td>
+      <p><strong>Bitweises UND (&amp;)</strong>, <strong>bitweises exklusives ODER (^)</strong> und <strong>bitweises ODER (|)</strong>. Von diesen drei Operatoren hat <strong>&amp;</strong> die höchste Priorität und <strong>|</strong> die niedrigste Priorität.</p>
+      <p>Das Folgende gilt für alle drei Operatoren:</p>
+      <ul>
+        <li>Wenn einer der Eingabewerte eine Floating-Point-Zahl ist, wird ein <a href="lib/Error.htm#TypeError">TypeError</a> ausgelöst.</li>
+        <li>Es wird eine 64-Bit-Operation durchgeführt und das Ergebnis ist ein vorzeichenfähiger 64-Bit-Integer.</li>
+      </ul>
+      <p>Siehe auch: <a href="#unary">Bitweises NICHT (~)</a></p>
+    </td>
+  </tr>
+  <tr id="concat">
+    <td class="center bold">.</td>
+    <td>
+      <p><strong>Verkettung</strong>. Ein Punkt mit mindestens einem Leer- oder Tabulatorzeichen auf beiden Seiten wird verwendet, um zwei Elemente zu einer einzelnen Zeichenkette zu kombinieren. Dasselbe kann auch ohne diesen Punkt erzielt werden (außer bei Mehrdeutigkeiten wie <code>x -y</code> oder wenn dem rechts befindlichen Element ein ++ oder -- vorangestellt ist). Wenn der Punkt weggelassen wird, muss zwischen den Elementen mindestens ein Leer- oder Tabulatorzeichen stehen.</p>
+      <pre>Var := "Die Farbe ist " . GefundeneFarbe  <em>; Explizite Verkettung</em>
+Var := "Die Farbe ist " GefundeneFarbe    <em>; Auto-Verkettung</em>
+</pre>
+      <p>Teilausdrücke können auch verkettet werden. Zum Beispiel: <code>Var := "Der Nettopreis ist " . Preis * (1 - Rabatt/100)</code>.</p>
+      <p>Eine Zeile, die mit einem Punkt (oder einem anderen Operator) beginnt, wird automatisch mit der darüber liegenden Zeile <a href="Scripts.htm#continuation">verbunden</a>.</p>
+      <p>Es wird immer die volle <a href="lib/StrLen.htm">Länge</a> jedes Eingabewertes verwendet, auch dann, wenn binäre Nullen enthalten sind. Zum Beispiel erzeugt <code>Chr(0x2010) Chr(0x0000) Chr(0x4030)</code> die folgende Zeichenkette von Bytes (wegen der UTF-16-LE-Kodierung): 0x10, 0x20, 0, 0, 0x30, 0x40. Das Ergebnis hat einen zusätzlichen Nullterminator (binäre Null), der nicht zur Länge hinzugezählt wird.</p>
+      <p><strong>Andere Verwendungen:</strong> Wenn kein Leer- oder Tabulatorzeichen rechts vom Punkt steht, wird dies entweder als direkt geschriebene <a href="#numbers">Floating-Point-Zahl</a> oder als <a href="#objdot">Objektelementzugriff</a> interpretiert. Zum Beispiel ist <code>1.1</code> oder <code>(.5)</code> eine Zahl, <code>A_Args.Has(3)</code> ein Methodenaufruf und <code>A_Args.Length</code> ein Eigenschaftszugriff.</p>
+    </td>
+  </tr>
+  <tr id="regex">
+    <td class="center bold">~=<br>!~=</td>
+    <td>
+      <p>Kurzschreibweise für <a href="lib/RegExMatch.htm">RegExMatch</a>. Zum Beispiel bewirkt <code>"abc123" ~= "\d"</code>, dass 4 (die Position des ersten numerischen Zeichens) zurückgegeben wird.</p>
+      <p><span class="ver">[v2.1-alpha.21+]</span>: <code>a !~= b</code> ist dasselbe wie <code>!(a ~= b)</code> oder <code>!RegExMatch(a, b)</code>.</p>
+    </td>
+  </tr>
+  <tr id="compare">
+    <td class="center bold">&gt;&nbsp;&nbsp;&nbsp;&lt;<br>
+    &gt;= &lt;=</td>
+    <td>
+      <p><strong>Größer (&gt;)</strong>, <strong>kleiner (&lt;)</strong>, <strong>größer gleich (&gt;=)</strong> und <strong>kleiner gleich (&lt;=)</strong>. Die Eingabewerte werden numerisch verglichen. Es wird ein <a href="lib/Error.htm#TypeError">TypeError</a> ausgelöst, wenn einer der Eingabewerte weder eine Zahl noch eine numerische Zeichenkette ist.</p>
+    </td>
+  </tr>
+  <tr id="equal">
+    <td class="center bold">=<br>
+      ==<br>
+      !=<br>
+      !==</td>
+    <td>
+      <p><strong>nicht-Groß-/Kleinschreibung-sensitiv gleich (=) / ungleich (!=)</strong> und <strong>Groß-/Kleinschreibung-sensitiv gleich (==) / ungleich (!==)</strong>. Die Operatoren <strong>==</strong> und <strong>=</strong> verhalten sich gleich, wenn beide Eingabewerte numerisch sind, es sei denn, einer der Eingabewerte ist nicht numerisch (oder beide sind Zeichenketten), dann ist <strong>==</strong> immer Groß-/Kleinschreibung-sensitiv und <strong>=</strong> immer nicht-Groß-/Kleinschreibung-sensitiv. Die Operatoren <strong>!=</strong> und <strong>!==</strong> verhalten sich wie ihre Gegenstücke ohne <strong>!</strong>, außer dass das Ergebnis invertiert ist.</p>
+      <p>Mit den Operatoren <strong>==</strong> und <strong>!==</strong> können Zeichenketten verglichen werden, die binäre Nullen enthalten. Alle anderen Vergleichsoperatoren außer <strong>~=</strong> vergleichen Zeichenketten nur bis zur ersten binären Null.</p>
+      <p>Bei nicht-Groß-/Kleinschreibung-sensitiven Vergleichen werden nur die ASCII-Großbuchstaben A bis Z und die entsprechenden Kleinbuchstaben als identisch betrachtet. Um stattdessen gemäß den Regeln der aktuellen Sprach- und Regionseinstellungen des Benutzers zu vergleichen, verwenden Sie <a href="lib/StrCompare.htm">StrCompare</a> und geben Sie "Locale" im <em>GroßKleinSensitiv</em>-Parameter an.</p>
+    </td>
+  </tr>
+  <tr id="is_in_contains">
+    <td class="center bold">IS<br>IN<br>CONTAINS</td>
+    <td>
+      <p id="is"><code><i>Wert</i> is <i>Klasse</i></code> ist 1 (true), wenn <em>Wert</em> eine Instanz von <em>Klasse</em> ist, andernfalls 0 (false). <em>Klasse</em> muss ein <a href="lib/Object.htm">Object</a> mit einer eigenen <a href="lib/Class.htm#Prototype">Prototype</a>-Eigenschaft sein, aber in der Regel ist die Eigenschaft implizit durch eine Klassendefinition definiert. Diese Operation ist grundsätzlich äquivalent zu <code>HasBase(<i>Wert</i>, <i>Klasse</i>.Prototype)</code>.</p>
+      <p id="in"><span id="contains"></span><code>in</code> und <code>contains</code> sind für zukünftige Zwecke reserviert.</p>
+    </td>
+  </tr>
+  <tr id="not">
+    <td class="center bold">NOT</td>
+    <td><strong>Logisches NICHT</strong>. Abgesehen von der niedrigeren Priorität ist dies dasselbe wie der <strong>!</strong>-Operator. Zum Beispiel ist <code>not (x = 3 or y = 3)</code> dasselbe wie <code>!(x = 3 or y = 3)</code>.</td>
+  </tr>
+    <tr id="and">
+      <td class="center bold">AND<br>
+      &amp;&amp;</td>
+      <td><p>Beide Operatoren sind ein <strong>logisches UND</strong>. Zum Beispiel: <code>x &gt; 3 and x &lt; 10</code>.</p>
+        <p>In einem Ausdruck, wo alle Operanden wahr sind, wird der <u>letzte</u> Operand zurückgegeben. Andernfalls wird der <u>erste</u> Operand, der falsch ist, zurückgegeben. Mit anderen Worten, das Ergebnis ist nur wahr, wenn alle Operanden wahr sind. Boolesche Ausdrücke werden einer <a href="Functions.htm#ShortCircuit">Kurzschlussauswertung</a> unterzogen (von links nach rechts), um die Performanz zu verbessern.</p>
+        <p>Im folgenden Beispiel sind alle Operanden wahr und werden ausgewertet:</p>
+        <pre>A := 1, B := {}, C := 20, D := true, E := "Zkette"
+MsgBox(A &amp;&amp; B &amp;&amp; C &amp;&amp; D &amp;&amp; E) <em>; Zeigt "Zkette" (E).</em></pre>
+        <p>Im folgenden Beispiel werden nur die ersten beiden Operanden ausgewertet, da B falsch ist. Der Rest wird ignoriert, d.h. auch C wird nicht inkrementiert:</p>
+        <pre>A := 1, B := "", C := 0, D := false, E := "Zkette"
+MsgBox(A &amp;&amp; B &amp;&amp; ++C &amp;&amp; D &amp;&amp; E) <em>; Zeigt "" (B).</em></pre>
+        <p>Eine Zeile, die mit <code>AND</code> oder <code>&amp;&amp;</code> (oder einem anderen Operator) beginnt, wird automatisch mit der darüber liegenden Zeile <a href="Scripts.htm#continuation">verbunden</a>.</p></td>
+    </tr>
+    <tr id="or">
+      <td class="center bold">OR<br>
+      ||</td>
+      <td><p>Beide Operatoren sind ein <strong>logisches ODER</strong>. Zum Beispiel: <code>x &lt;= 3 or x &gt;= 10</code>.</p>
+        <p>In einem Ausdruck, wo mindestens ein Operand wahr ist, wird der <u>erste</u> Operand, der wahr ist, zurückgegeben. Andernfalls wird der <u>letzte</u> Operand, der falsch ist, zurückgegeben. Mit anderen Worten, wenn mindestens ein Operand wahr ist, ist auch das Ergebnis wahr. Boolesche Ausdrücke werden einer <a href="Functions.htm#ShortCircuit">Kurzschlussauswertung</a> unterzogen (von links nach rechts), um die Performanz zu verbessern.</p>
+        <p>Im folgenden Beispiel ist mindestens ein Operand wahr. Alle Operanden bis zu D werden ausgewertet. E wird ignoriert und nie inkrementiert:</p>
+        <pre>A := "", B := false, C := 0, D := "Zkette", E := 20
+MsgBox(A || B || C || D || ++E) <em>; Zeigt "Zkette" (D).</em></pre>
+        <p>Im folgenden Beispiel sind alle Operanden falsch und werden ausgewertet:</p>
+        <pre>A := "", B := false, C := 0
+MsgBox(A || B || C) <em>; Zeigt "0" (C).</em></pre>
+        <p>Eine Zeile, die mit <code>OR</code> oder <code>||</code> (oder einem anderen Operator) beginnt, wird automatisch mit der darüber liegenden Zeile <a href="Scripts.htm#continuation">verbunden</a>.</p></td>
+    </tr>
+  <tr id="or-maybe">
+    <td class="center bold">??</td>
+    <td>
+      <p><strong>Oder-Vielleicht</strong>, auch Koaleszenzoperator genannt. Wenn der linke Operand einen Wert hat, wird dieser als Ergebnis verwendet und der rechte Zweig übersprungen. Andernfalls wird der rechte Operand als Ergebnis verwendet. Mit anderen Worten, <code>A ?? B</code> verhält sich wie <code>A || B</code> (<a href="#or">logisches OR</a>), außer dass die Bedingung <code>IsSet(A)</code> ist.</p>
+      <p>Dieser Operator wird typischerweise verwendet, um einen Standardwert anzugeben, wenn bekannt ist, dass eine Variable oder ein optionaler Parameter noch keinen Wert haben wird. Zum Beispiel:</p>
+      <pre>MsgBox MeineVar ?? "Standardwert"</pre>
+      <p>Da die Variable in diesem Fall <a href="Concepts.htm#uninitialized-variables">uninitialisiert</a> sein kann, wird kein Fehler ausgelöst. Im Gegensatz zu <code>IsSet(A) ? A : B</code> kann beim Laden des Skripts immer noch eine <a href="lib/_Warn.htm#VarUnset">VarUnset-Warnung</a> angezeigt werden, wenn andere Referenzen zu der Variable existieren, aber keine Zuweisungen.</p>
+      <p><span class="ver">[v2.1-alpha.2+]</span>: Der linke Operand kann ein beliebiger <a href="Language.htm#unset">Unset-Ausdruck</a> sein (unter Berücksichtigung der Operatorpriorität). Wenn dem Operator ein Eigenschafts-, Methoden- oder Funktionsaufruf vorangestellt ist, der nicht Teil einer <a href="#maybe">optionalen Kette</a> ist, ist der Effekt derselbe wie, als würde man den <a href="#maybe">Vielleicht-Operator</a> verwenden. Zum Beispiel ist <code>x.y ?? z</code> dasselbe wie <code>(x.y?) ?? z</code>, wo <em>y</em> ungesetzt sein darf, <em>x</em> aber nicht. <code>x?.y ?? z</code> hingegen erlaubt <em>x</em>, ungesetzt zu sein, <em>y</em> aber nicht.</p>
+    </td>
+  </tr>
+  <tr id="ternary">
+    <td class="center bold">?:</td>
+    <td>
+      <p><strong>Ternärer Operator</strong>. Dieser Operator ist die Kurzschreibweise für eine <a href="lib/If.htm">if-else-Anweisung</a>. Er wertet die Bedingung auf seiner linken Seite aus, um zu bestimmen, welche seiner beiden Verzweigungen als Endergebnis dienen soll. Zum Beispiel bewirkt <code>Var := x&gt;y ? 2 : 3</code>, dass 2 in <em>Var</em> gespeichert wird, wenn x größer als y ist, andernfalls wird 3 gespeichert. Zur Verbesserung der Performanz wird nur die gewinnende Verzweigung ausgewertet (siehe <a href="Functions.htm#ShortCircuit">Kurzschlussauswertung</a>).</p>
+      <p>Siehe auch: <a href="#maybe">Vielleicht (<em>Var</em>?)</a>, <a href="#or-maybe">Oder-Vielleicht (??)</a></p>
+      <p class="warning"><strong>Hinweis:</strong> Wenn dieser Operator am Anfang einer Zeile verwendet wird, ist es ratsam, die ternäre Bedingung in runde Klammern zu setzen, um Mehrdeutigkeiten mit anderen Anweisungsarten zu vermeiden. Einzelheiten finden Sie unter <a href="Language.htm#expression-statements">Ausdrucksanweisungen</a>.</p>
+    </td>
+  </tr>
+  <tr id="AssignOp">
+    <td class="center bold">:=<br>
+        +=<br>
+        -=<br>
+        *=<br>
+        /=<br>
+        //=<br>
+        .=<br>
+        |=<br>
+        &amp;=<br>
+        ^=<br>
+        &gt;&gt;=<br>
+        &lt;&lt;=<br>
+        &gt;&gt;&gt;=<br>
+        ??=
+    </td>
+    <td><p><strong>Zuweisung</strong>. Führt eine Operation am Inhalt einer Variable durch und speichert das Ergebnis wieder in dieselbe Variable. Der einfachste Zuweisungsoperator ist Doppelpunkt-Gleich (:=), der das Ergebnis eines Ausdrucks in eine Variable speichert. Eine Beschreibung der anderen Operatoren finden Sie in den entsprechenden Einträgen dieser Tabelle. Zum Beispiel führt <code>Var //= 2</code> eine <a href="#IntegerDivide">Integer-Division</a> durch, um <em>Var</em> durch 2 zu teilen, und speichert das Ergebnis wieder in <em>Var</em>. Ein weiteres Beispiel ist <code>Var .= "abc"</code>, was die Kurzschreibweise für <code>Var := Var . "abc"</code> ist.</p>
+      <p>Im Gegensatz zu den meisten anderen Operatoren werden Zuweisungen von rechts nach links ausgewertet. Folglich bewirkt eine Zeile wie <code>Var1 := Var2 := 0</code>, dass zuerst 0 in <em>Var2</em> und dann <em>Var2</em> in <em>Var1</em> gespeichert wird.</p>
+    <p>Wenn eine Zuweisung als Eingabe für einen anderen Operator verwendet wird, ist der Eingabewert die Variable selbst. Zum Beispiel ist der Ausdruck <code>(Var += 2) &gt; 50</code> wahr, wenn der soeben erhöhte Wert in <em>Var</em> größer als 50 ist. Eine Zuweisung kann auch mit dem <a href="#ref">Referenzoperator</a> kombiniert werden, wie in <code>&amp;(Var := "Startwert")</code>.</p>
+    <p>Die Priorität der Zuweisungsoperatoren wird automatisch erhöht, wenn dadurch ein Syntaxfehler vermieden oder ein intuitiveres Verhalten erreicht wird. Zum Beispiel: <code>not x := y</code> ist äquivalent zu <code>not (x := y)</code>. Außerdem wird <code>x==y &amp;&amp; z:=1</code> als <code>x==y &amp;&amp; (z:=1)</code> ausgewertet, und <a href="Functions.htm#ShortCircuit">kurzgeschlossen</a>, wenn x ungleich y ist. Ebenso wird <code>++Var := X</code> als <code>++(Var := X)</code> und <code>Z &gt; 0 ? X := 2 : Y := 2</code> als <code>Z &gt; 0 ? (X := 2) : (Y := 2)</code> ausgewertet.</p>
+    <p>Die Zuweisung von <code>unset</code> hat mitunter eine <a href="Language.htm#unset-assign">besondere Bedeutung</a>, z.B. das Löschen einer Eigenschaft oder eines Map-Elements, oder andere Auswirkungen, wenn das Ziel eine dynamische Eigenschaft ist. Wenn das Ziel eine Variable ist, wird ihr Wert entfernt. Zum Beispiel: <code>Var := unset</code>, <code>Var1 := (Var2?)</code>.</p>
+    <p>Eine Zuweisung kann auch mit einer Eigenschaft eines Objekts verwendet werden, z.B. <code>meinArray.Length += n</code> oder <code>meinArray[i] .= t</code>. Bei einer Eigenschaft ist der Zuweisungswert das Ergebnis des Teilausdrucks, keine Variablenreferenz.</p>
+    <p id="maybe-assign"><span class="ver">[v2.1-alpha.2+]</span>: <code>x ??= y</code> ist die Kurzschreibweise für <code>x := x ?? y</code>. <em>y</em> wird nur ausgewertet und dem <em>x</em> zugewiesen, wenn <em>x</em> gleich <a href="Concepts.htm#unset">unset</a> ist. Dies bietet eine verkürzte Möglichkeit, eine Variable, eine Eigenschaft oder ein Array-/Map-Element nur zu initialisieren, wenn noch kein Wert gesetzt wurde.</p>
+    </td>
+  </tr>
+  <tr id="fat-arrow">
+    <td class="center"><strong>() =&gt;</strong> <em>Ausdr</em></td>
+    <td>
+      <p><strong>Fat-Arrow-Funktion</strong>. Definiert eine einfache <a href="Functions.htm">Funktion</a> und gibt ein <a href="lib/Func.htm">Func</a>- oder <a href="Functions.htm#closures">Closure</a>-Objekt zurück. Schreiben Sie die <a href="Functions.htm#param">Parameterliste</a> der Funktion (optional mit vorangestelltem Funktionsnamen) links neben den Operator. Wenn die Funktion aufgerufen wird (über die zurückgegebene Referenz), wertet sie den Teilausdruck <em>Ausdr</em> aus und gibt das Ergebnis zurück.</p>
+      <p>Die folgenden zwei Beispiele sind äquivalent:</p>
+      <pre>sumfn := Sum(a, b) =&gt; a + b</pre>
+      <pre>Sum(a, b) {
+    return a + b
+}
+sumfn := Sum</pre>
+      <p>In beiden Fällen wird die Funktion zum Zeitpunkt des Skriptstarts <strong>bedingungslos</strong> definiert, aber die Funktionsreferenz wird erst nach Auswertung der Zuweisung in <em>sumfn</em> gespeichert.</p>
+      <p>Wenn der Funktionsname weggelassen wird und die Parameterliste nur aus einem einzigen Parameternamen besteht, können die runden Klammern weggelassen werden. Das folgende Beispiel definiert eine anonyme Funktion mit dem Parameter <code>a</code> und speichert ihre Referenz in die Variable <code>double</code>:</p>
+      <pre>double := a =&gt; a * 2</pre>
+      <p>Variablenreferenzen in <em>Ausdr</em> werden auf die gleiche Weise aufgelöst wie in der äquivalenten vollständigen Funktionsdefinition. Zum Beispiel kann <em>Ausdr</em> auf die lokalen Variablen einer äußeren Funktion verweisen (wie in jeder <a href="Functions.htm#nested">verschachtelten Funktion</a>), woraufhin ein neues <a href="Functions.htm#closures">Closure</a> erzeugt wird, das jedes Mal seinen Wert zurückgibt, wenn der Fat-Arrow-Ausdruck ausgewertet wird. Die Funktion ist immer eine <a href="Functions.htm#AssumeLocal">Assume-Local</a>-Funktion, da Deklarationen nicht verwendet werden können.</p>
+      <p>Gibt man der Funktion einen Namen, kann sie rekursiv oder von anderen verschachtelten Funktionen aufgerufen werden, ohne dass in der Funktion selbst eine Referenz zum <a href="Functions.htm#closures">Closure</a> gespeichert werden muss (und dadurch ein problematischer <a href="Objects.htm#Circular_References">Zirkelbezug</a> entsteht). Dies kann auch fürs Debuggen hilfreich sein, z.B. mit <a href="lib/Func.htm#Name">Func.Name</a> oder zum Anzeigen auf dem Aufrufstapel des Debuggers.</p>
+      <p>Die Fat-Arrow-Syntax kann auch zum Definieren von Shorthand-<a href="Objects.htm#Custom_Classes_property_short">Eigenschaften</a> und -<a href="Objects.htm#Custom_Classes_method">Methoden</a> verwendet werden.</p>
+      <p><span class="ver">[v2.1-alpha.29+]</span>: Wenn eine Fat-Arrow-Funktion einen endständigen Aufruf an eine Funktion oder Methode ausführt, die <a href="v2.1-changes.htm#CompatMode"><em>leer-ungesetzt</em></a> zurückgibt, wird die Fat-Arrow-Funktion <em>leer-ungesetzt</em> zurückgeben und keinen UnsetError auslösen. Mit anderen Worten, <code>X() =&gt; Y()</code> kann äquivalent zu einer Funktion mit <code>return Y()</code> oder nur <code>Y()</code> sein, je nachdem, wie die Rückgabe von Y ausfällt. Wenn Y explizit unset zurückgibt, wird davon ausgegangen, dass Y manchmal einen Wert zurückgeben soll; daher muss X den <a href="#maybe">Vielleicht-Operator (?)</a> verwenden, um zu zeigen, dass der Rückgabewert optional ist.</p>
+    </td>
+
+  </tr>
+  <tr id="comma">
+    <td class="center bold">,</td>
+    <td><p><strong>Komma (Mehrfachanweisung)</strong>. Kommas können verwendet werden, um mehrere Teilausdrücke auf eine Zeile zu schreiben. Dies wird üblicherweise verwendet, um mehrere Zuweisungen oder Funktionsaufrufe zu gruppieren. Zum Beispiel: <code>x:=1, y+=2, ++index, MeineFunk()</code>. Solche Anweisungen werden von links nach rechts ausgeführt.</p>
+      <p class="note"><strong>Hinweis:</strong> Eine Zeile, die mit einem Komma (oder einem anderen Operator) beginnt, wird automatisch mit der darüber liegenden Zeile <a href="Scripts.htm#continuation">verbunden</a>.</p>
+      <p>Das Komma wird auch verwendet, um die Parameter eines Funktionsaufrufs oder einer Kontrollanweisung voneinander zu trennen. Um einen Mehrfachanweisungsausdruck in eine Parameterliste einzufügen, umschließen Sie ihn mit einem zusätzlichen Paar runder Klammern. Zum Beispiel wertet <code>MeineFn((x, y))</code> sowohl x als auch y aus, übergibt aber y als den ersten und einzigen Parameter von MeineFn.</p>
+    </td>
+  </tr>
+</table>
+<p>Die folgenden Arten von Teilausdrücken überschreiben die Priorität bzw. die Reihenfolge der Auswertung:</p>
+<table class="info">
+  <tr>
+    <th class="center">Ausdruck</th>
+    <th abbr="Beschr">Beschreibung</th>
+  </tr>
+  <tr>
+    <td class="center"><strong>(</strong><em>Ausdruck</em><strong>)</strong></td>
+    <td>
+      <p>Ein beliebiger Teilausdruck in runden Klammern. Zum Beispiel bewirkt <code>(3 + 2) * 2</code>, dass <code>3 + 2</code> zuerst ausgewertet wird.</p>
+      <p>Bei einer Mehrfachanweisung wird das Ergebnis der <u>letzten</u> Anweisung zurückgegeben. Zum Beispiel bewirkt <code>(a := 1, b := 2, c := 3)</code>, dass 3 zurückgegeben wird.</p>
+    </td>
+  </tr>
+  <tr>
+    <td class="center"><p>Mod<strong>()</strong><br>
+        Round<strong>()</strong><br>
+    Abs<strong>()</strong></p></td>
+    <td rowspan="2"><p><strong>Funktionsaufruf</strong>. Zwischen dem Funktionsnamen/Ausdruck und der runden Startklammer, die die Parameterliste beginnt, dürfen keine Leerzeichen stehen. Einzelheiten finden Sie unter <a href="Language.htm#function-calls">Funktionsaufrufe</a>.</p>
+    <p><em>(Ausdruck)</em> muss nicht in Klammern gesetzt werden, aber dadurch können Mehrdeutigkeiten vermieden werden. Zum Beispiel liest <code>(x.y)()</code> eine Funktion aus einer Eigenschaft und ruft sie dann ohne Parameter auf, während <code>x.y()</code> implizit <code>x</code> als ersten Parameter übergeben würde.</p>
+    </td>
+  </tr>
+  <tr>
+    <td class="center" style="white-space: nowrap;"><p><em>(Ausdruck)</em><strong>()</strong></p></td>
+  </tr>
+  <tr id="method-call">
+    <td class="center"><p>x<strong>.y()</strong></p></td>
+    <td>
+      <p><strong>Methodenaufruf</strong>. Das Zielobjekt <em>x</em> ist ein Ausdruck, während <em>y</em> ein direkt geschriebener Eigenschaftsname ist. Auf beiden Seiten des Methodennamens darf kein Leerraumzeichen stehen. Dem Punkt können jedoch Leerraumzeichen, inklusive Zeilenumbrüche, vorangestellt werden.</p>
+      <p>Das Objekt <em>x</em> wird implizit als erster Parameter der Funktion der Methode übergeben. Dies entspricht normalerweise <code>this</code> und sollte nicht explizit in einer <a href="Objects.htm#Custom_Classes_method">Methodendefinition</a> definiert werden. Jede andere Art von <a href="Language.htm#functions">Funktionsdefinition</a> sollte dies jedoch in der Parameterliste berücksichtigen.</p>
+    </td>
+  </tr>
+  <tr>
+    <td class="center">Fn(<strong><em>Params</em>*</strong>)</td>
+    <td><p><a href="Functions.htm#VariadicCall">Variadischer Funktionsaufruf</a>. <em>Params</em> ist ein enumerierbares Objekt (ein Objekt mit einer <a href="Objects.htm#__Enum">__Enum</a>-Methode), z.B. ein <a href="lib/Array.htm">Array</a> von Parameterwerten.</p></td>
+  </tr>
+  <tr id="square-brackets">
+    <td class="center"><strong>x[y]<br>[a, b, c]</strong></td>
+    <td>
+      <p><strong>Objektelementzugriff</strong>. Ermittelt oder setzt die <a href="Objects.htm#__Item">__Item</a>-Eigenschaft (oder Standardeigenschaft) des Objekts <em>x</em> mit dem Parameter <em>y</em> (oder mehreren Parametern anstelle von <em>y</em>). Dies entspricht typischerweise einem Array-Element oder einem Element in einer Collection, wobei <em>y</em> der Index oder Schlüssel des Elements ist. Um dem Element einen Wert zuzuweisen, verwenden Sie einen <a href="#AssignOp">Zuweisungsoperator</a> direkt nach der eckigen Endklammer. Zum Beispiel <code>x[y] := z</code>.</p>
+      <p><strong>Direkt geschriebenes Array</strong>. Wenn der eckigen Klammer kein Wert (oder kein Teilausdruck, der einen Wert zurückgibt) vorangestellt ist, wird die Klammer als Beginn eines direkt geschriebenen Arrays interpretiert. Zum Beispiel ist <code>[a, b, c]</code> äquivalent zu <code>Array(a, b, c)</code> (a, b und c sind Variablen).</p>
+      <p>Weitere Informationen zur allgemeinen Verwendung finden Sie unter <a href="Objects.htm#Usage_Simple_Arrays">Arrays</a> und <a href="Objects.htm#Usage_Associative_Arrays">Maps</a>.</p>
+    </td>
+  </tr>
+  <tr id="curly-braces">
+    <td class="center"><strong>{a: b, c: d}</strong></td>
+    <td>
+      <p><strong>Objektliteral</strong> (direkt geschriebenes Objekt). Erstellt ein <a href="lib/Object.htm">Objekt</a>. Jedes Paar besteht aus einem direkt geschriebenen Eigenschaftsnamen <code>a</code> und einem Eigenschaftswertausdruck <code>b</code>. Zum Beispiel ist <code>x := {a: b}</code> äquivalent zu <code>x := Object(), x.a := b</code>. <a href="lib/Object.htm#Base">Base</a> kann innerhalb des direkt geschriebenen Objekts gesetzt werden, aber alle anderen Eigenschaften werden als <em>eigene Werteigenschaften</em> gesetzt, mit der Möglichkeit (oder Gefahr), die vom Basisobjekt geerbten Eigenschaften zu überschreiben.</p>
+      <p>Um einen dynamischen Eigenschaftsnamen zu verwenden, umschließen Sie den Teilausdruck mit Prozentzeichen. Zum Beispiel: <code>{%NameVar%: WertVar}</code>.</p>
+    </td>
+  </tr>
+</table>
+
+<h2 id="BuiltIn">Interne Variablen</h2>
+<p>Die folgenden Variablen sind fest in das Programm integriert und können normal referenziert werden.</p>
+<p class="note">Allgemeine Informationen finden Sie unter <a href="Concepts.htm#built-in-variables">Interne Variablen</a>.</p>
+<h3 id="BuiltIn_TOC">Inhaltsverzeichnis</h3>
+<ul>
+  <li>Sonderzeichen: <a href="#Space">A_Space</a>, <a href="#Tab">A_Tab</a></li>
+  <li>Skripteigenschaften: <a href="#Args">Befehlszeilenparameter</a>, <a href="#WorkingDir">A_WorkingDir</a>, <a href="#ScriptDir">A_ScriptDir</a>, <a href="#ScriptName">A_ScriptName</a>, <a href="#prop">(...mehr...)</a></li>
+  <li>Datum und Zeit: <a href="#YYYY">A_YYYY</a>, <a href="#MM">A_MM</a>, <a href="#DD">A_DD</a>, <a href="#Hour">A_Hour</a>, <a href="#Min">A_Min</a>, <a href="#Sec">A_Sec</a>, <a href="#date">(...mehr...)</a></li>
+  <li>Skripteinstellungen: <a href="#IsSuspended">A_IsSuspended</a>, <a href="#ListLines">A_ListLines</a>, <a href="#TitleMatchMode">A_TitleMatchMode</a>, <a href="#settings">(...mehr...)</a></li>
+  <li>Inaktivität des Benutzers: <a href="#TimeIdle">A_TimeIdle</a>, <a href="#TimeIdlePhysical">A_TimeIdlePhysical</a>, <a href="#TimeIdleKeyboard">A_TimeIdleKeyboard</a>, <a href="#TimeIdleMouse">A_TimeIdleMouse</a></li>
+  <li>Hotkeys, Hotstrings und benutzerdefinierte Menüpunkte: <a href="#ThisHotkey">A_ThisHotkey</a>, <a href="#EndChar">A_EndChar</a>, <a href="#h">(...mehr...)</a></li>
+  <li>Betriebssystem und Benutzerinformationen: <a href="#OSVersion">A_OSVersion</a>, <a href="#Screen">A_ScreenWidth</a>, <a href="#Screen">A_ScreenHeight</a>, <a href="#os">(...mehr...)</a></li>
+  <li>Sonstiges: <a href="#Clipboard">A_Clipboard</a>, <a href="#Cursor">A_Cursor</a>, <a href="#EventInfo">A_EventInfo</a>, <a href="#misc">(...mehr...)</a></li>
+  <li>Loop: <a href="#Index">A_Index</a>, <a href="#loop">(...mehr...)</a></li>
+</ul>
+<h3 id="Special_Characters">Sonderzeichen</h3>
+<table class="info">
+  <tr>
+    <th abbr="Var">Variable</th>
+    <th abbr="Beschr">Beschreibung</th>
+  </tr>
+  <tr id="Space">
+    <td>A_Space</td>
+    <td>Enthält ein einzelnes Leerzeichen.</td>
+  </tr>
+  <tr id="Tab">
+    <td>A_Tab</td>
+    <td>Enthält ein einzelnes Tabulatorzeichen.</td>
+  </tr>
+</table>
+<h3 id="prop">Skripteigenschaften</h3>
+<table class="info">
+  <tr>
+    <th abbr="Var">Variable</th>
+    <th abbr="Beschr">Beschreibung</th>
+  </tr>
+  <tr id="Args">
+    <td>A_Args</td>
+    <td>Enthält ein <a href="Objects.htm#Usage_Simple_Arrays">Array</a> von Befehlszeilenparametern. Einzelheiten finden Sie unter <a href="Scripts.htm#cmd">Befehlszeilenparameter an ein Skript übergeben</a>.</td>
+  </tr>
+  <tr id="WorkingDir">
+    <td>A_WorkingDir</td>
+    <td><p>Liefert oder setzt das aktuelle Arbeitsverzeichnis, von dem aus das Skript standardmäßig auf Dateien zugreift. Der letzte umgekehrte Schrägstrich ist nicht enthalten, es sei denn, es handelt sich um das Stammverzeichnis. Zwei Beispiele: C:\ und C:\Meine Dokumente.</p>
+    <p><a href="lib/SetWorkingDir.htm">SetWorkingDir</a> kann auch verwendet werden, um das Arbeitsverzeichnis zu ändern.</p>
+    <p>Das Arbeitsverzeichnis des Skripts ist standardmäßig immer <a href="#ScriptDir">A_ScriptDir</a>, egal wie das Skript gestartet wurde.</p></td>
+  </tr>
+  <tr id="InitialWorkingDir">
+    <td>A_InitialWorkingDir</td>
+    <td>Das anfängliche Arbeitsverzeichnis des Skripts, abhängig davon, wie das Skript gestartet wurde. Wenn das Skript z.B. über eine Verknüpfung (z.B. im Startmenü) gestartet wurde, richtet sich dessen anfängliches Arbeitsverzeichnis nach dem Feld "Ausführen in" im Eigenschaftenfenster der Verknüpfung.</td>
+  </tr>
+  <tr id="ScriptDir">
+    <td>A_ScriptDir</td>
+    <td>
+      <p>Der vollständige Pfadname des Verzeichnisses, das das aktuelle Skript enthält. Der letzte umgekehrte Schrägstrich wird weggelassen (auch bei Stammverzeichnissen).</p>
+      <p>Wenn der Skripttext nicht aus der Datei, sondern <a href="Scripts.htm#stdin">aus der Standardeingabe (stdin) gelesen wird</a>, enthält diese Variable das <a href="#InitialWorkingDir">anfängliche Arbeitsverzeichnis</a>.</p></td>
+  </tr>
+  <tr id="ScriptName">
+    <td>A_ScriptName</td>
+    <td>
+      <p>Liefert oder setzt den Standardtitel für <a href="lib/MsgBox.htm">MsgBox</a>, <a href="lib/InputBox.htm">InputBox</a>, <a href="lib/FileSelect.htm">FileSelect</a>, <a href="lib/DirSelect.htm">DirSelect</a> und <a href="lib/Gui.htm">Gui</a>. Wenn nicht vom Skript gesetzt, enthält diese Variable den Dateinamen des aktuellen Skripts, ohne Pfad, z.B. MeinSkript.ahk.</p>
+      <p>Wenn der Skripttext nicht aus der Datei, sondern <a href="Scripts.htm#stdin">aus der Standardeingabe (stdin) gelesen wird</a>, enthält diese Variable ein Sternchen (*).</p>
+      <p>Wenn das Skript <a href="Scripts.htm#ahk2exe">kompiliert</a> oder <a href="Program.htm#embedded-scripts">eingebettet</a> ist, enthält diese Variable den Namen der aktuellen EXE-Datei.</p>
+    </td>
+  </tr>
+  <tr id="ScriptFullPath">
+    <td>A_ScriptFullPath</td>
+    <td>
+      <p>Der vollständige Pfadname des aktuellen Skripts, z.B. C:\Skripte\MeinSkript.ahk</p>
+      <p>Wenn der Skripttext nicht aus der Datei, sondern <a href="Scripts.htm#stdin">aus der Standardeingabe (stdin) gelesen wird</a>, enthält diese Variable ein Sternchen (*).</p>
+      <p>Wenn das Skript <a href="Scripts.htm#ahk2exe">kompiliert</a> oder <a href="Program.htm#embedded-scripts">eingebettet</a> ist, enthält diese Variable den vollständigen Pfadnamen der aktuellen EXE-Datei.</p>
+    </td>
+  </tr>
+  <tr id="ScriptHwnd">
+    <td>A_ScriptHwnd</td>
+    <td>Die <a href="misc/WinTitle.htm#ahk_id">eindeutige ID (HWND/Handle)</a> des versteckten <a href="Program.htm#main-window">Hauptfensters</a> des Skripts.</td>
+  </tr>
+  <tr id="LineNumber">
+    <td>A_LineNumber</td>
+    <td><p>Die Nummer der aktuell ausgeführten Zeile innerhalb des Skripts (oder innerhalb einer <a href="lib/_Include.htm">#Include-Datei</a>, falls vorhanden). Diese Zeilennummer entspricht der via <a href="lib/ListLines.htm">ListLines</a> angezeigten Zeilennummer; dies ist z.B. nützlich, um einen Fehler zu melden: <code>MsgBox "Konnte nicht in die Logdatei schreiben (Zeile Nr. " A_LineNumber ")"</code>.</p>
+    <p>Da bei einer <a href="Scripts.htm#ahk2exe">Skriptkompilierung</a> alle <a href="lib/_Include.htm">#Include-Dateien</a> zu einem großen Skript zusammengefasst werden, kann die Zeilennummerierung von der im unkompilierten Modus abweichen.</p></td>
+  </tr>
+  <tr id="LineFile">
+    <td>A_LineFile</td>
+    <td>
+      <p>Der vollständige Pfadname der Datei, zu der <a href="#LineNumber">A_LineNumber</a> gehört. Wenn das Skript aus einer externen Datei geladen wurde, ist diese Variable äquivalent zu <a href="#ScriptFullPath">A_ScriptFullPath</a>, es sei denn, die Zeile gehört zu einer der <a href="lib/_Include.htm">#Include-Dateien</a> des Skripts.</p>
+      <p>Wenn das Skript mit einer <a href="Scripts.htm#ahk2exe-base">BIN-Datei</a> <a href="Scripts.htm#ahk2exe">kompiliert</a> wurde, enthält diese Variable den vollständigen Pfadnamen der aktuellen EXE-Datei, äquivalent zu <a href="#ScriptFullPath">A_ScriptFullPath</a>.</p>
+      <p>Wenn das Skript <a href="Program.htm#embedded-scripts">eingebettet</a> ist, enthält A_LineFile ein Sternchen (*), gefolgt vom Namen der Ressource; z.B. *#1</p>
+    </td>
+  </tr>
+  <tr id="ThisFunc">
+    <td>A_ThisFunc</td>
+    <td>Der Name der <a href="Functions.htm">benutzerdefinierten Funktion</a>, die gerade ausgeführt wird (andernfalls leer), z.B. MeineFunktion. Siehe auch: <a href="lib/Func.htm#Name">Name-Eigenschaft (Func)</a></td>
+  </tr>
+  <tr id="AhkVersion">
+    <td>A_AhkVersion</td>
+    <td>Enthält die Version von AutoHotkey, mit der das Skript ausgeführt wird, z.B. 1.0.22. Im Falle eines <a href="Scripts.htm#ahk2exe">kompilierten Skripts</a> enthält diese Variable die Version, mit der das Skript ursprünglich kompiliert wurde. Der Aufbau der Versionsnummer erlaubt es, mit "&gt;" oder "&gt;=" zu prüfen, ob A_AhkVersion größer als eine bestimmte Mindestversionsnummer ist. Zum Beispiel: <code>if (A_AhkVersion &gt;= "1.0.25.07")</code>. Siehe auch: <a href="lib/_Requires.htm">#Requires</a> und <a href="lib/VerCompare.htm">VerCompare</a></td>
+  </tr>
+  <tr id="AhkPath">
+    <td>A_AhkPath</td>
+    <td>
+      <p>Für unkompilierte oder <a href="Program.htm#embedded-scripts">eingebettete</a> Skripte: Der vollständige Pfadname der EXE-Datei, mit der das aktuelle Skript gerade ausgeführt wird. Zum Beispiel: C:\Program Files\AutoHotkey\AutoHotkey.exe</p>
+      <p>Für <a href="Scripts.htm#ahk2exe">kompilierte Skripte</a>, die auf einer <a href="Scripts.htm#ahk2exe-base">BIN-Datei</a> basieren, wird der Wert ermittelt, indem das Installationsverzeichnis aus der Registry gelesen und "\AutoHotkey.exe" angefügt wird. Wenn AutoHotkey nicht installiert ist, ist der Wert leer. Das folgende Beispiel ist äquivalent:</p>
+      <pre>InstallDir := RegRead("HKLM\SOFTWARE\AutoHotkey", "InstallDir", "")
+AhkPath := InstallDir ? InstallDir "\AutoHotkey.exe" : ""</pre>
+      <p>Für kompilierte Skripte, die auf einer EXE-Datei basieren, enthält A_AhkPath den vollständigen Pfadnamen des kompilierten Skripts. Dies kann in Kombination mit <a href="Scripts.htm#SlashScript">/script</a> verwendet werden, um externe Skripte auszuführen. Um stattdessen die installierte Kopie von AutoHotkey zu lokalisieren, lesen Sie die Registry wie oben gezeigt.</p>
+    </td>
+  </tr>
+  <tr id="IsCompiled">
+    <td>A_IsCompiled</td>
+    <td>Enthält 1, wenn das Skript als <a href="Scripts.htm#ahk2exe">kompilierte EXE-Datei</a> ausgeführt wird, andernfalls 0 (das als <a href="#Boolean">falsch</a> angesehen wird).</td>
+  </tr>
+</table>
+<h3 id="date">Datum und Zeit</h3>
+<table class="info">
+  <tr>
+    <th abbr="Var">Variable</th>
+    <th abbr="Beschr">Beschreibung</th>
+  </tr>
+  <tr id="YYYY">
+    <td>A_YYYY</td>
+    <td>
+      <p>Das aktuelle 4-stellige Jahr (z.B. 2004). A_Year enthält denselben Wert.</p>
+      <p class="note"><strong>Hinweis:</strong> Um die formatierte Version einer Uhrzeit oder eines Datums gemäß Ihrer aktuellen Sprach- und Regionseinstellungen abzurufen, verwenden Sie <code><a href="lib/FormatTime.htm">FormatTime</a>()</code> (Uhrzeit und langes Datum) oder <code><a href="lib/FormatTime.htm">FormatTime</a>(, "LongDate")</code> (langes Datumformat).</p>
+    </td>
+  </tr>
+  <tr id="MM">
+    <td>A_MM</td>
+    <td>Der aktuelle 2-stellige Monat (01-12). A_Mon enthält denselben Wert.</td>
+  </tr>
+  <tr id="DD">
+    <td>A_DD</td>
+    <td>Der aktuelle 2-stellige Tag des Monats (01-31). A_MDay enthält denselben Wert.</td>
+  </tr>
+  <tr id="MMMM">
+    <td>A_MMMM</td>
+    <td>Der aktuelle vollständige Monatsname in der aktuellen Sprache des Benutzers, z.B. Juli</td>
+  </tr>
+  <tr id="MMM">
+    <td>A_MMM</td>
+    <td>Der aktuelle abgekürzte Monatsname in der aktuellen Sprache des Benutzers, z.B. Jul</td>
+  </tr>
+  <tr id="DDDD">
+    <td>A_DDDD</td>
+    <td>Der aktuelle vollständige Wochentagsname in der aktuellen Sprache des Benutzers, z.B. Sonntag</td>
+  </tr>
+  <tr id="DDD">
+    <td>A_DDD</td>
+    <td>Der aktuelle abgekürzte Wochentagsname in der aktuellen Sprache des Benutzers, z.B. So</td>
+  </tr>
+  <tr id="WDay">
+    <td>A_WDay</td>
+    <td>Der aktuelle 1-stellige Wochentag (1-7). 1 ist Sonntag in allen Sprach- und Regionseinstellungen.</td>
+  </tr>
+  <tr id="YDay">
+    <td>A_YDay</td>
+    <td>Der aktuelle Tag des Jahres (1-366). Der Wert enthält keine führenden Nullen, z.B. wird 9 abgerufen, nicht 009. Um einen Wert mit führenden Nullen abzurufen, verwenden Sie folgendes: <code><a href="lib/FormatTime.htm">FormatTime</a>(, "YDay0")</code>.</td>
+  </tr>
+  <tr id="YWeek">
+    <td>A_YWeek</td>
+    <td>Aktuelles Jahr und aktuelle Kalenderwoche (z.B. 200453) gemäß ISO 8601. Um das Jahr von der Woche zu trennen, verwenden Sie <code>Jahr := <a href="lib/SubStr.htm">SubStr</a>(A_YWeek, 1, 4)</code> und <code>Woche := <a href="lib/SubStr.htm">SubStr</a>(A_YWeek, -2)</code>. Genaue Definition von A_YWeek: Wenn die Woche mit dem 1. Januar mindestens vier Tage im neuen Jahr hat, ist sie Woche 1. Andernfalls ist sie die letzte Woche des Vorjahres und die nächste Woche die erste Woche des neuen Jahres.</td>
+  </tr>
+  <tr id="Hour">
+    <td>A_Hour</td>
+    <td>Die aktuelle 2-stellige Stunde (00-23) im 24-Stunden-Format. Um die Zeit im 12-Stunden-Format mit einem AM/PM-Indikator abzurufen, gehen Sie wie folgt vor: <code><a href="lib/FormatTime.htm">FormatTime</a>(, "h:mm:ss tt")</code></td>
+  </tr>
+  <tr id="Min">
+    <td>A_Min</td>
+    <td><p>Die aktuelle 2-stellige Minute (00-59).</p></td>
+  </tr>
+  <tr id="Sec">
+    <td>A_Sec</td>
+    <td>Die aktuelle 2-stellige Sekunde (00-59).</td>
+  </tr>
+  <tr id="MSec">
+    <td>A_MSec</td>
+    <td>Die aktuelle 3-stellige Millisekunde (000-999). Die führenden Nullen können z.B. wie folgt entfernt werden: <code>Millisekunden := A_MSec + 0</code>.</td>
+  </tr>
+  <tr id="Now">
+    <td>A_Now</td>
+    <td>
+      <p>Die aktuelle Ortszeit im <a href="lib/FileSetTime.htm#YYYYMMDD">YYYYMMDDHH24MISS</a>-Format.</p>
+      <p class="note"><strong>Hinweis:</strong> Datums- und Zeitberechnungen können mit <a href="lib/DateAdd.htm">DateAdd</a> und <a href="lib/DateDiff.htm">DateDiff</a> durchgeführt werden. Außerdem können Sie <a href="lib/FormatTime.htm">FormatTime</a> verwenden, um das Datum und/oder die Uhrzeit gemäß Ihrer aktuellen Sprach- und Regionseinstellungen zu formatieren.</p>
+    </td>
+  </tr>
+  <tr id="NowUTC">
+    <td>A_NowUTC</td>
+    <td>Die aktuelle koordinierte Weltzeit (engl. Coordinated Universal Time, kurz UTC) im <a href="lib/FileSetTime.htm#YYYYMMDD">YYYYMMDDHH24MISS</a>-Format. UTC ist grundsätzlich dasselbe wie die mittlere Greenwich-Zeit (engl. Greenwich Mean Time, kurz GMT).</td>
+  </tr>
+  <tr id="TickCount">
+    <td>A_TickCount</td>
+    <td><p>Die seit dem Systemstart verstrichene Zeit in Millisekunden, bis zu einem Maximum von 49,7 Tagen. Um diese verstrichene Zeit zu messen, speichern Sie A_TickCount in eine Variable und subtrahieren Sie diese später vom aktuellen A_TickCount-Wert. Zum Beispiel:</p>
+        <pre>StartZeit := A_TickCount
+Sleep 1000
+VerstricheneZeit := A_TickCount - StartZeit
+MsgBox VerstricheneZeit " Millisekunden sind verstrichen."</pre>
+<p>Wenn Sie eine höhere Genauigkeit als die 10&nbsp;ms von A_TickCount benötigen, verwenden Sie <a href="lib/DllCall.htm#ExQPC">QueryPerformanceCounter()</a>.</p>
+</td>
+  </tr>
+</table>
+<h3 id="settings">Skripteinstellungen</h3>
+<table class="info">
+  <tr>
+    <th abbr="Var">Variable</th>
+    <th abbr="Beschr">Beschreibung</th>
+  </tr>
+  <tr id="IsSuspended">
+    <td>A_IsSuspended</td>
+    <td>Enthält 1, wenn das Skript <a href="lib/Suspend.htm">suspendiert</a> ist, andernfalls 0.</td>
+  </tr>
+  <tr id="IsPaused">
+    <td>A_IsPaused</td>
+    <td>Enthält 1, wenn der <a href="misc/Threads.htm">Thread</a> direkt unterhalb des aktuellen Threads <a href="lib/Pause.htm">pausiert</a> ist, andernfalls 0.</td>
+  </tr>
+  <tr id="IsCritical">
+    <td>A_IsCritical</td>
+    <td>Enthält 0, wenn <a href="lib/Critical.htm">Critical</a> im <a href="misc/Threads.htm">aktuellen Thread</a> ausgeschaltet ist. Andernfalls enthält A_IsCritical einen Integer größer als 0, nämlich das von Critical verwendete <a href="lib/Critical.htm#Interval">Meldungsüberprüfintervall</a>. Um den aktuellen Status von Critical zu speichern und wiederherzustellen, verwenden Sie <code>Alt_IsCritical := A_IsCritical</code> und später <code>Critical Alt_IsCritical</code>.</td>
+  </tr>
+  <tr id="ListLines">
+    <td>A_ListLines</td>
+    <td>Liefert oder setzt, ob Zeilen protokolliert werden. Mögliche Werte sind 0 (deaktiviert) und 1 (aktiviert). Einzelheiten finden Sie unter <a href="lib/ListLines.htm">ListLines</a>.</td>
+  </tr>
+  <tr id="TitleMatchMode">
+    <td>A_TitleMatchMode</td>
+    <td>Liefert oder setzt den Titelvergleichsmodus. Mögliche Werte sind 1, 2, 3 und RegEx. Einzelheiten finden Sie unter <a href="lib/SetTitleMatchMode.htm">SetTitleMatchMode</a>.</td>
+  </tr>
+  <tr id="TitleMatchModeSpeed">
+    <td>A_TitleMatchModeSpeed</td>
+    <td>Liefert oder setzt die Titelvergleichsgeschwindigkeit. Mögliche Werte sind Fast und Slow. Einzelheiten finden Sie unter <a href="lib/SetTitleMatchMode.htm">SetTitleMatchMode</a>.</td>
+  </tr>
+  <tr id="DetectHiddenWindows">
+    <td>A_DetectHiddenWindows</td>
+    <td>Liefert oder setzt, ob versteckte Fenster erkannt werden. Mögliche Werte sind 0 (deaktiviert) und 1 (aktiviert). Einzelheiten finden Sie unter <a href="lib/DetectHiddenWindows.htm">DetectHiddenWindows</a>.</td>
+  </tr>
+  <tr id="DetectHiddenText">
+    <td>A_DetectHiddenText</td>
+    <td>Liefert oder setzt, ob versteckte Texte in einem Fenster erkannt werden. Mögliche Werte sind 0 (deaktiviert) und 1 (aktiviert). Einzelheiten finden Sie unter <a href="lib/DetectHiddenText.htm">DetectHiddenText</a>.</td>
+  </tr>
+  <tr id="FileEncoding">
+    <td>A_FileEncoding</td>
+    <td>Liefert oder setzt die Standardkodierung für verschiedene interne Funktionen. Einzelheiten finden Sie unter <a href="lib/FileEncoding.htm">FileEncoding</a>.</td>
+  </tr>
+  <tr id="SendMode">
+    <td>A_SendMode</td>
+    <td>Liefert oder setzt den Sendemodus. Mögliche Werte sind Event, Input, Play und InputThenPlay. Einzelheiten finden Sie unter <a href="lib/SendMode.htm">SendMode</a>.</td>
+  </tr>
+  <tr id="SendLevel">
+    <td>A_SendLevel</td>
+    <td>Liefert oder setzt den Sendlevel, ein Integer von 0 bis 100. Einzelheiten finden Sie unter <a href="lib/SendLevel.htm">SendLevel</a>.</td>
+  </tr>
+  <tr id="StoreCapsLockMode">
+    <td>A_StoreCapsLockMode</td>
+    <td>Liefert oder setzt, ob der Status der FESTSTELL-Taste nach dem Senden simulierter Tastendrücke wiederhergestellt wird. Mögliche Werte sind 0 (deaktiviert) und 1 (aktiviert). Einzelheiten finden Sie unter <a href="lib/SetStoreCapsLockMode.htm">SetStoreCapsLockMode</a>.</td>
+  </tr>
+  <tr id="KeyDelay">
+    <td>A_KeyDelay<br>
+    A_KeyDuration</td>
+    <td>Liefert oder setzt die Verzögerung oder Dauer für Tastendrücke, die via traditionellem <a href="lib/SendMode.htm#Event">SendEvent-Modus</a> gesendet werden, in Millisekunden. Einzelheiten finden Sie unter <a href="lib/SetKeyDelay.htm">SetKeyDelay</a>.</td>
+  </tr>
+  <tr id="KeyDelayPlay">
+    <td>A_KeyDelayPlay<br>
+    A_KeyDurationPlay</td>
+    <td>Liefert oder setzt die Verzögerung oder Dauer für Tastendrücke, die via <a href="lib/SendMode.htm#Play">SendPlay-Modus</a> gesendet werden, in Millisekunden. Einzelheiten finden Sie unter <a href="lib/SetKeyDelay.htm">SetKeyDelay</a>.</td>
+  </tr>
+  <tr id="WinDelay">
+    <td>A_WinDelay</td>
+    <td>Liefert oder setzt die Verzögerung für fensterspezifische Funktionen, in Millisekunden. Einzelheiten finden Sie unter <a href="lib/SetWinDelay.htm">SetWinDelay</a>.</td>
+  </tr>
+  <tr id="ControlDelay">
+    <td>A_ControlDelay</td>
+    <td>Liefert oder setzt die Verzögerung für steuerelement­modifizierende Funktionen, in Millisekunden. Einzelheiten finden Sie unter <a href="lib/SetControlDelay.htm">SetControlDelay</a>.</td>
+  </tr>
+  <tr id="MenuMaskKey">
+    <td>A_MenuMaskKey</td>
+    <td>Liefert oder setzt die Taste, mit der Win- oder Alt-Taste-Oben-Ereignisse maskiert werden. Einzelheiten finden Sie unter <a href="lib/A_MenuMaskKey.htm">A_MenuMaskKey</a>.</td>
+  </tr>
+  <tr id="MouseDelay">
+    <td>A_MouseDelay<br>
+    A_MouseDelayPlay</td>
+    <td>Liefert oder setzt die Verzögerung für Mausfunktionen, in Millisekunden. A_MouseDelay gilt für den traditionellen <a href="lib/SendMode.htm#Event">SendEvent-Modus</a>, A_MouseDelayPlay für den <a href="lib/SendMode.htm#Play">SendPlay-Modus</a>. Einzelheiten finden Sie unter <a href="lib/SetMouseDelay.htm">SetMouseDelay</a>.</td>
+  </tr>
+  <tr id="DefaultMouseSpeed">
+    <td>A_DefaultMouseSpeed</td>
+    <td>Liefert oder setzt die Standardgeschwindigkeit für Mausfunktionen, ein Integer von 0 (schnell) bis 100 (langsam). Einzelheiten finden Sie unter <a href="lib/SetDefaultMouseSpeed.htm">SetDefaultMouseSpeed</a>.</td>
+  </tr>
+  <tr id="CoordMode">
+    <td>A_CoordModeToolTip<br>
+    A_CoordModePixel<br>
+    A_CoordModeMouse<br>
+    A_CoordModeCaret<br>
+    A_CoordModeMenu</td>
+    <td>Liefert oder setzt den Bereich, zu dem Koordinaten relativ sind. Mögliche Werte sind Screen, Window und Client. Einzelheiten finden Sie unter <a href="lib/CoordMode.htm">CoordMode</a>.</td>
+  </tr>
+  <tr id="RegView">
+    <td>A_RegView</td>
+    <td>Liefert oder setzt die Registry-Ansicht. Mögliche Werte sind 32, 64 und Default. Einzelheiten finden Sie unter <a href="lib/SetRegView.htm">SetRegView</a>.</td>
+  </tr>
+  <tr id="TrayMenu">
+    <td>A_TrayMenu</td>
+    <td><p>Gibt ein <a href="lib/Menu.htm">Menu-Objekt</a> zurück, mit dem das Tray-Menü geändert oder angezeigt werden kann.</p></td>
+  </tr>
+  <tr id="AllowMainWindow">
+    <td>A_AllowMainWindow</td>
+    <td><p>Liefert oder setzt, ob das <a href="Program.htm#main-window">Hauptfenster</a> des Skripts über das <a href="Program.htm#tray-icon">Tray-Symbol</a> geöffnet werden darf. Mögliche Werte sind 0 (verboten) und 1 (erlaubt).</p>
+    <p>Wenn das Skript weder <a href="Scripts.htm#ahk2exe">kompiliert</a> noch <a href="Program.htm#embedded-scripts">eingebettet</a> ist, wird diese Variable standardmäßig auf 1 gesetzt, andernfalls wird diese Variable standardmäßig auf 0 gesetzt, kann aber durch Zuweisung eines Wertes überschrieben werden. Diese Variable auf 1 zu setzen, stellt auch den Menüpunkt "Open" im Tray-Menü wieder her und aktiviert die Menüpunkte im View-Menü des versteckten Hauptfensters des Skripts, wie z.B. "Lines most recently executed", was den Quellcode des Skripts und andere Informationen anzeigt.</p>
+    <p>Die folgenden Funktionen sind immer in der Lage, das Hauptfenster zu öffnen und die entsprechenden View-Optionen auszuwählen, wenn sie während der Skriptausführung erreicht werden: <a href="lib/ListLines.htm">ListLines</a>, <a href="lib/ListVars.htm">ListVars</a>, <a href="lib/ListHotkeys.htm">ListHotkeys</a> und <a href="lib/KeyHistory.htm">KeyHistory</a>.</p>
+    <p>Die Variable auf 1 zu setzen, verhindert nicht, dass das Hauptfenster mit <a href="lib/WinShow.htm">WinShow</a> sichtbar gemacht oder mit <a href="lib/ControlGetText.htm">ControlGetText</a> oder ähnlichem inspiziert werden kann, verhindert aber, dass der Quellcode des Skripts und andere Informationen via Hauptfenster preisgegeben werden, außer wenn eine der oben aufgeführten Funktionen vom Skript aufgerufen wird.</p></td>
+  </tr>
+  <tr id="IconHidden">
+    <td>A_IconHidden</td>
+    <td>Liefert oder setzt, ob das <a href="Program.htm#tray-icon">Tray-Symbol</a> versteckt wird. Mögliche Werte sind 0 (sichtbar) und 1 (versteckt). Einzelheiten finden Sie unter <a href="lib/_NoTrayIcon.htm">#NoTrayIcon</a>.</td>
+  </tr>
+  <tr id="IconTip">
+    <td>A_IconTip</td>
+    <td><p>Liefert oder setzt den Tooltiptext, der angezeigt wird, wenn sich der Mauszeiger über dem <a href="Program.htm#tray-icon">Tray-Symbol</a> befindet. Wenn leer, wird stattdessen der Name des Skripts verwendet.</p>
+    <p>Um einen Tooltip mehrzeilig zu machen, trennen Sie jede Zeile mit einem Zeilenvorschubzeichen (`n), z.B. <code>"Zeile1`nZeile2"</code>. Es werden nur die ersten 127 Zeichen angezeigt. Außerdem wird der Text am ersten Tabulatorzeichen abgeschnitten, falls vorhanden.</p>
+    <p>Windows 10 und niedriger: Um ein Und-Zeichen (&amp;) im Tooltip anzuzeigen, versehen Sie es mit zwei zusätzlichen Und-Zeichen. Zum Beispiel bewirkt <code>"A &amp;&amp;&amp; B"</code>, dass "A &amp; B" im Tooltip angezeigt wird.</p></td>
+  </tr>
+  <tr id="IconFile">
+    <td>A_IconFile</td>
+    <td>Leer, es sei denn, ein benutzerdefiniertes <a href="Program.htm#tray-icon">Tray-Symbol</a> wurde via <a href="lib/TraySetIcon.htm">TraySetIcon</a> definiert, dann ist der vollständige Pfadname der Datei des neuen Symbols enthalten.</td>
+  </tr>
+  <tr id="IconNumber">
+    <td>A_IconNumber</td>
+    <td>Leer, wenn A_IconFile leer ist. Andernfalls ist die Nummer der Symbolgruppe enthalten, die in A_IconFile verwendet wird (üblicherweise 1).</td>
+  </tr>
+</table>
+<h3 id="User_Idle_Time">Inaktivität des Benutzers</h3>
+<table class="info">
+  <tr>
+    <th abbr="Var">Variable</th>
+    <th abbr="Beschr">Beschreibung</th>
+  </tr>
+  <tr id="TimeIdle">
+    <td>A_TimeIdle</td>
+    <td>
+      <p>Die Zeit in Millisekunden, die seit der letzten Eingabe via Tastatur, Maus usw. verstrichen ist. Dies ist nützlich, um festzustellen, ob der Benutzer abwesend ist. Physische Benutzereingaben sowie künstlich erzeugte Eingaben durch ein <strong>beliebiges</strong> Programm oder Skript (z.B. via <a href="lib/Send.htm">Send</a>- oder <a href="lib/MouseMove.htm">MouseMove</a>-Funktion) setzen diesen Wert auf 0 zurück. Da dieser Wert tendenziell in 10er-Schritten ansteigt, sollte nicht geprüft werden, ob er mit einem anderen Wert übereinstimmt. Prüfen Sie stattdessen, ob dieser Wert größer oder kleiner als ein anderer Wert ist. Zum Beispiel:</p>
+      <pre>if A_TimeIdle &gt; 600000
+    MsgBox "Die letzte Aktivität war vor 10 Minuten"</pre>
+    </td>
+  </tr>
+  <tr id="TimeIdlePhysical">
+    <td>A_TimeIdlePhysical</td>
+    <td>Ähnlich wie oben, allerdings werden künstliche Tastendrücke und/oder Mausklicks ignoriert, wenn der entsprechende Hook (<a href="lib/InstallKeybdHook.htm">Tastatur</a> oder <a href="lib/InstallMouseHook.htm">Maus</a>) installiert ist, d.h. diese Variable reagiert nur auf physische Ereignisse. Dadurch wird verhindert, dass simulierte Tastendrücke und Mausklicks fälschlicherweise die Aktivität des Benutzers vortäuschen. Wenn keine Hooks installiert sind, ist diese Variable äquivalent zu A_TimeIdle. Wenn nur ein Hook installiert ist, wird A_TimeIdlePhysical nur von dieser Art der physischen Eingabe beeinflusst (die Eingabe des anderen/nicht-installierten Hooks hat weder physisch noch künstlich eine Auswirkung).</td>
+  </tr>
+  <tr id="TimeIdleKeyboard">
+    <td>A_TimeIdleKeyboard</td>
+    <td>Wenn der <a href="lib/InstallKeybdHook.htm">Tastatur-Hook</a> installiert ist, enthält diese Variable die Zeit in Millisekunden, die seit der letzten physischen Tastatureingabe verstrichen ist. Andernfalls ist diese Variable äquivalent zu A_TimeIdle.</td>
+  </tr>
+  <tr id="TimeIdleMouse">
+    <td>A_TimeIdleMouse</td>
+    <td>Wenn der <a href="lib/InstallMouseHook.htm">Maus-Hook</a> installiert ist, enthält diese Variable die Zeit in Millisekunden, die seit der letzten physischen Mauseingabe verstrichen ist. Andernfalls ist diese Variable äquivalent zu A_TimeIdle.</td>
+  </tr>
+</table>
+<h3 id="h">Hotkeys, Hotstrings und benutzerdefinierte Menüpunkte</h3>
+<table class="info">
+  <tr>
+    <th abbr="Var">Variable</th>
+    <th abbr="Beschr">Beschreibung</th>
+  </tr>
+  <tr id="ThisHotkey">
+    <td>A_ThisHotkey</td>
+    <td><p>Der zuletzt ausgeführte <a href="Hotkeys.htm">Hotkey</a> oder <a href="Hotstrings.htm">nicht-automatisch-ersetzende Hotstring</a> (andernfalls leer), z.B. #z. Dieser Wert ändert sich, wenn der <a href="misc/Threads.htm">aktuelle Thread</a> von einem anderen Hotkey oder Hotstring unterbrochen wird, deshalb ist es in der Regel besser, den Parameter <a href="Hotkeys.htm#ThisHotkey">ThisHotkey</a> nach Möglichkeit zu verwenden.</p>
+      <p>Jeder neu erstellte Hotkey – entweder via <a href="lib/Hotkey.htm">Hotkey-Funktion</a> oder <a href="Hotkeys.htm">Zweifach-Doppelpunkt-Syntax</a> – erhält einen festen Namen, der sich aus dem Tastennamen und der Reihenfolge der Modifikatorsymbolen zusammensetzt und von allen <a href="lib/_HotIf.htm#variant">Varianten</a> des Hotkeys verwendet wird.</p>
+      <p>Jeder neu erstellte Hotstring – entweder via <a href="lib/Hotstring.htm">Hotstring-Funktion</a> oder <a href="Hotstrings.htm">Zweifach-Doppelpunkt-Label</a> – erhält einen festen Namen, der sich aus der auslösenden Zeichenkette und der Sequenz von Optionszeichen zusammensetzt.</p>
+      </td>
+  </tr>
+  <tr id="PriorHotkey">
+    <td>A_PriorHotkey</td>
+    <td>Dasselbe wie oben, aber für den vorherigen Hotkey. Andernfalls leer.</td>
+  </tr>
+  <tr id="PriorKey">
+    <td>A_PriorKey</td>
+    <td>Der Name der Taste, die vor dem Drücken oder Loslassen der letzten Taste gedrückt wurde, oder leer, wenn im Tastenverlauf kein entsprechender Tastendruck gefunden werden kann. Alle via Skript erzeugten Eingaben werden ignoriert. Bevor diese Variable verwendet werden kann, muss der <a href="lib/InstallKeybdHook.htm">Tastatur</a>- oder <a href="lib/InstallMouseHook.htm">Maus-Hook</a> installiert und der <a href="lib/KeyHistory.htm">Tastenverlauf</a> aktiviert sein.</td>
+  </tr>
+  <tr id="TimeSinceThisHotkey">
+    <td>A_TimeSinceThisHotkey</td>
+    <td>Die Zeit in Millisekunden, die seit dem Drücken von A_ThisHotkey verstrichen ist. Dieser Wert ist leer, wenn A_ThisHotkey leer ist.</td>
+  </tr>
+  <tr id="TimeSincePriorHotkey">
+    <td>A_TimeSincePriorHotkey</td>
+    <td>Die Zeit in Millisekunden, die seit dem Drücken von A_PriorHotkey verstrichen ist. Dieser Wert ist leer, wenn A_PriorHotkey leer ist.</td>
+  </tr>
+  <tr id="EndChar">
+    <td>A_EndChar</td>
+    <td>Ein <a href="Hotstrings.htm#EndChars">Endungszeichen</a>, das der Benutzer zuletzt gedrückt hat, um einen <a href="Hotstrings.htm">nicht-automatisch-ersetzenden Hotstring</a> auszulösen. Wenn kein Endungszeichen erforderlich war (wegen der <a href="Hotstrings.htm#Asterisk">*-Option</a>), ist diese Variable leer.</td>
+  </tr>
+  <tr id="MaxHotkeysPerInterval">
+    <td>A_MaxHotkeysPerInterval</td>
+    <td>Liefert oder setzt die maximale Anzahl von Hotkeys, die innerhalb eines via A_HotkeyInterval definierten Zeitrahmens gedrückt werden können, ohne ein Warndialogfenster auszulösen. Einzelheiten finden Sie unter <a href="lib/A_MaxHotkeysPerInterval.htm">A_MaxHotkeysPerInterval</a>.</td>
+  </tr>
+  <tr id="HotkeyInterval">
+    <td>A_HotkeyInterval</td>
+    <td>Liefert oder setzt die Länge des von <a href="lib/A_MaxHotkeysPerInterval.htm">A_MaxHotkeysPerInterval</a> verwendeten Intervalls, in Millisekunden.</td>
+  </tr>
+  <tr id="HotkeyModifierTimeout">
+    <td>A_HotkeyModifierTimeout</td>
+    <td>Liefert oder setzt das Zeitlimit, das Einfluss auf das Verhalten von <a href="lib/Send.htm">Send</a> mit den <a href="Hotkeys.htm">Hotkey</a>-Modifikatoren <kbd>Strg</kbd>, <kbd>Alt</kbd>, <kbd>Win</kbd> und <kbd>Umschalt</kbd> hat. Einzelheiten finden Sie unter <a href="lib/A_HotkeyModifierTimeout.htm">A_HotkeyModifierTimeout</a>.</td>
+  </tr>
+    <tr id="HotIf">
+    <td>A_HotIf</td>
+    <td>
+      <p><span class="ver">[v2.1-alpha.14+]</span>: Der Rückruf (ein <a href="misc/Functor.htm">Funktionsobjekt</a>), der die aktuellen <a href="lib/HotIf.htm">HotIf</a>-Kriterien für die Funktionen <a href="lib/Hotkey.htm">Hotkey</a> und <a href="lib/Hotstring.htm">Hotstring</a> repräsentiert, oder leer, wenn nicht vorhanden. Dieser Wert kann gespeichert und später an HotIf übergeben werden, um den Kontext wiederherzustellen. Rückrufe, die von HotIfWin oder einem <a href="lib/_HotIf.htm">optimierten #HotIf</a> gesetzt wurden, können zwar nicht vom Programm, wohl aber vom Skript aufgerufen werden.</p>
+      <p>HotIf gibt auch den vorherigen Rückruf zurück, aber mit dieser Variable kann dieser abgerufen werden, ohne die aktuellen Kriterien zu ändern.</p>
+    </td>
+  </tr>
+</table>
+<h3 id="os">Betriebssystem und Benutzerinformationen</h3>
+<table class="info">
+  <tr>
+    <th abbr="Var">Variable</th>
+    <th abbr="Beschr">Beschreibung</th>
+  </tr>
+  <tr id="ComSpec">
+    <td>A_ComSpec</td>
+    <td><p>Enthält dieselbe Zeichenkette wie die ComSpec-Umgebungsvariable, was üblicherweise der vollständige Pfad zur ausführbaren Datei der Eingabeaufforderung (cmd.exe) ist. Diese Variable wird oft mit <a href="lib/Run.htm">Run/RunWait</a> verwendet. Zum Beispiel:</p>
+      <pre class="NoIndent no-highlight">C:\Windows\system32\cmd.exe</pre>
+    </td>
+  </tr>
+  <tr id="Temp">
+    <td>A_Temp</td>
+    <td><p>Der vollständige Pfadname des Ordners zum Speichern von temporären Dateien. Folgende Orte werden der Reihenfolge nach durchsucht, um den Pfadnamen zu ermitteln: 1) <a href="Concepts.htm#environment-variables">Umgebungsvariable</a> TMP, TEMP oder USERPROFILE; 2) Windows-Verzeichnis. Zum Beispiel:</p>
+    <pre class="NoIndent no-highlight">C:\Users\&lt;Benutzer&gt;\AppData\Local\Temp</pre>
+  </td>
+  </tr>
+  <tr id="OSVersion">
+    <td>A_OSVersion</td>
+    <td>
+    <p>Die Versionsnummer des Betriebssystems im Format "<em>Haupt</em>.<em>Neben</em>.<em>Build</em>". Windows 7 SP1 ist beispielsweise 6.1.7601.</p>
+    <p>Beachten Sie, dass das Betriebssystem eine andere Versionsnummer meldet bzw. A_OSVersion einen anderen Wert enthält, wenn der Kompatibilitätsmodus im Eigenschaftenfenster der AutoHotkey-EXE-Datei oder des kompilierten Skripts eingeschaltet wurde.</p>
+    </td>
+  </tr>
+  <tr id="Is64bitOS">
+    <td>A_Is64bitOS</td>
+    <td>Enthält 1 (true), wenn das System 64-Bit ist, oder 0 (false), wenn es 32-Bit ist.</td>
+  </tr>
+  <tr id="PtrSize">
+    <td>A_PtrSize</td>
+    <td>Enthält die Größe eines Pointers in Bytes. Dieser Wert ist entweder 4 (32-Bit) oder 8 (64-Bit), abhängig davon, mit welcher EXE-Datei das Skript ausgeführt wird.</td>
+  </tr>
+  <tr id="Language">
+    <td>A_Language</td>
+    <td>Die Standardsprache des Systems als <a href="misc/Languages.htm">4-stelliger Code</a>.</td>
+  </tr>
+  <tr id="ComputerName">
+    <td>A_ComputerName</td>
+    <td>Der Netzwerkname des Computers.</td>
+  </tr>
+  <tr id="UserName">
+    <td>A_UserName</td>
+    <td>Der Anmeldename des Benutzers, der dieses Skript gestartet hat.</td>
+  </tr>
+  <tr id="WinDir">
+    <td>A_WinDir</td>
+    <td>Das Windows-Verzeichnis. Zum Beispiel: <code class="no-highlight">C:\Windows</code></td>
+  </tr>
+  <tr id="ProgramFiles">
+    <td>A_ProgramFiles</td>
+    <td>
+      <p>Das Verzeichnis der Programmdateien (z.B. <code class="no-highlight">C:\Programme</code> oder <code class="no-highlight">C:\Programme (x86)</code>). Die <a href="Concepts.htm#environment-variables">Umgebungsvariable</a> <em>ProgramFiles</em> enthält üblicherweise denselben Wert.</p>
+      <p>Für <a href="#Is64bitOS">64-Bit-Systeme</a> (nicht 32-Bit-Systeme) gilt folgendes:</p>
+      <ul>
+        <li>Wenn die EXE-Datei, mit der das Skript ausgeführt wird, 32-Bit ist, enthält A_ProgramFiles den Pfadnamen des Ordners "Programme (x86)".</li>
+        <li>Für 32-Bit-Prozesse enthält die Umgebungsvariable <em>ProgramW6432</em> den Pfadnamen des 64-Bit-Ordners "Programme". In Windows 7 und höher wird sie auch für 64-Bit-Prozesse gesetzt.</li>
+        <li>Die Umgebungsvariable <em>ProgramFiles(x86)</em> enthält den Pfadnamen des 32-Bit-Ordners "Programme (x86)".</li>
+      </ul>
+    </td>
+  </tr>
+  <tr id="AppData">
+    <td>A_AppData</td>
+    <td>
+      <p>Der vollständige Pfadname des Ordners, der anwendungsspezifische Daten des aktuellen Benutzers enthält. Zum Beispiel:</p>
+      <pre class="NoIndent no-highlight">C:\Users\&lt;Benutzer&gt;\AppData\Roaming</pre>
+    </td>
+  </tr>
+  <tr id="AppDataCommon">
+    <td>A_AppDataCommon</td>
+    <td>
+      <p>Der vollständige Pfadname des Ordners, der anwendungsspezifische Daten aller Benutzer enthält. Zum Beispiel:</p>
+      <pre class="NoIndent no-highlight">C:\ProgramData</pre>
+    </td>
+  </tr>
+  <tr id="Desktop">
+    <td>A_Desktop</td>
+    <td>
+      <p>Der vollständige Pfadname des Ordners, der die Desktop-Dateien des aktuellen Benutzers enthält. Zum Beispiel:</p>
+      <pre class="NoIndent no-highlight">C:\Users\&lt;Benutzer&gt;\Desktop</pre>
+    </td>
+  </tr>
+  <tr id="DesktopCommon">
+    <td>A_DesktopCommon</td>
+    <td>
+      <p>Der vollständige Pfadname des Ordners, der die Desktop-Dateien aller Benutzer enthält. Zum Beispiel:</p>
+      <pre class="NoIndent no-highlight">C:\Users\Public\Desktop</pre>
+    </td>
+  </tr>
+  <tr id="StartMenu">
+    <td>A_StartMenu</td>
+    <td>
+      <p>Der vollständige Pfadname des Ordners, der die Startmenü-Dateien des aktuellen Benutzers enthält. Zum Beispiel:</p>
+      <pre class="NoIndent no-highlight">C:\Users\&lt;Benutzer&gt;\AppData\Roaming\Microsoft\Windows\Start Menu</pre>
+    </td>
+  </tr>
+  <tr id="StartMenuCommon">
+    <td>A_StartMenuCommon</td>
+    <td>
+      <p>Der vollständige Pfadname des Ordners, der die Startmenü-Dateien aller Benutzer enthält. Zum Beispiel:</p>
+      <pre class="NoIndent no-highlight">C:\ProgramData\Microsoft\Windows\Start Menu</pre>
+    </td>
+  </tr>
+  <tr id="Programs">
+    <td>A_Programs</td>
+    <td>
+      <p>Der vollständige Pfadname des Startmenü-Ordners "Programme" des aktuellen Benutzers. Zum Beispiel:</p>
+      <pre class="NoIndent no-highlight">C:\Users\&lt;Benutzer&gt;\AppData\Roaming\Microsoft\Windows\Start Menu\Programs</pre>
+    </td>
+  </tr>
+  <tr id="ProgramsCommon">
+    <td>A_ProgramsCommon</td>
+    <td>
+      <p>Der vollständige Pfadname des Startmenü-Ordners "Programme" aller Benutzer. Zum Beispiel:</p>
+      <pre class="NoIndent no-highlight">C:\ProgramData\Microsoft\Windows\Start Menu\Programs</pre>
+  </td>
+  </tr>
+  <tr id="Startup">
+    <td>A_Startup</td>
+    <td>
+      <p>Der vollständige Pfadname des Startmenü-Ordners "Autostart" des aktuellen Benutzers. Zum Beispiel:</p>
+      <pre class="NoIndent no-highlight">C:\Users\&lt;Benutzer&gt;\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup</pre>
+  </td>
+  </tr>
+  <tr id="StartupCommon">
+    <td>A_StartupCommon</td>
+    <td>
+      <p>Der vollständige Pfadname des Startmenü-Ordners "Autostart" aller Benutzer. Zum Beispiel:</p>
+      <pre class="NoIndent no-highlight">C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup</pre>
+  </td>
+  </tr>
+  <tr id="MyDocuments">
+    <td>A_MyDocuments</td>
+    <td>
+      <p>Der vollständige Pfadname des Ordners "Dokumente", der beliebige Dateien (vorzugsweise Dokumente) des aktuellen Benutzers enthält. Im Gegensatz zu den meisten anderen ähnlichen Variablen wird, wenn der Ordner das Stammverzeichnis eines Laufwerks ist, der umgekehrte Schrägstrich am Ende weggelassen (z.B. <code class="no-highlight">M:</code> statt <code class="no-highlight">M:\</code>). Zum Beispiel:</p>
+      <pre class="NoIndent no-highlight">C:\Users\&lt;Benutzer&gt;\Documents</pre>
+  </td>
+  </tr>
+  <tr id="IsAdmin">
+    <td>A_IsAdmin</td>
+    <td><p>Enthält 1, wenn das Skript mit erhöhten Rechten ausgeführt wird (z.B. durch Nutzung des Rechtsklickmenüpunkts <em>Als Administrator ausführen</em>), andernfalls 0.</p>
+    <p id="RequireAdmin">Wenn das Skript sich selbst mit Adminrechten neu starten soll (oder um diese Rechte vom Benutzer via Dialogfenster einzufordern), verwenden Sie <a href="lib/Run.htm#RunAs">Run *RunAs</a>. Beachten Sie aber, dass die Skriptausführung als Administrator dazu führt, dass alle Programme, die vom Skript gestartet werden, ebenfalls als Administrator ausgeführt werden. Eine mögliche Alternative finden Sie in <a href="FAQ.htm#uac">der FAQ</a>.</p>
+    </td>
+  </tr>
+  <tr id="Screen">
+    <td><p>A_ScreenWidth<br>
+    A_ScreenHeight</p></td>
+    <td><p>Die Breite und Höhe des primären Bildschirms in Pixel (z.B. 1024 und 768).</p>
+      <p>Mit <a href="lib/SysGet.htm">SysGet</a> können die Dimensionen von nicht-primären Bildschirmen abgerufen werden.</p>
+      <p>Um stattdessen die Breite und Höhe des gesamten Desktops abzurufen (selbst wenn er sich über mehrere Bildschirme erstreckt), verwenden Sie folgendes Beispiel:</p>
+<pre>
+VirtuelleBreite := <a href="lib/SysGet.htm">SysGet</a>(78)
+VirtuelleHöhe := <a href="lib/SysGet.htm">SysGet</a>(79)
+</pre>
+    <p>Mit <a href="lib/SysGet.htm">SysGet</a> kann auch der Arbeitsbereich eines Bildschirms abgerufen werden. Dieser Bereich ist in der Regel kleiner als der gesamte Bildschirmbereich, da die Taskleiste und andere registrierte Desktopsymbolleisten ausgeschlossen werden.</p></td>
+  </tr>
+  <tr id="ScreenDPI">
+    <td>A_ScreenDPI</td>
+    <td><p>Die Anzahl der Pixel pro logischem Zoll entlang der Bildschirmbreite. Dies ist üblicherweise 96, wenn die Bildschirmskalierung auf 100&nbsp;% gesetzt ist. In einem System mit mehreren Bildschirmen entspricht dieser Wert dem primären Bildschirm zum Zeitpunkt des Programmstarts.</p>
+    <p>Siehe auch <a href="misc/DPIScaling.htm">DPI-Skalierung</a> und die <a href="lib/Gui.htm#DPIScale">-DPIScale</a>-GUI-Option.</p></td>
+  </tr>
+</table>
+<h3 id="misc">Sonstiges</h3>
+<table class="info">
+  <tr>
+    <th abbr="Var">Variable</th>
+    <th abbr="Beschr">Beschreibung</th>
+  </tr>
+  <tr id="Clipboard">
+    <td>A_Clipboard</td>
+    <td>Liefert oder setzt den Inhalt der systeminternen Zwischenablage. Einzelheiten finden Sie unter <a href="lib/A_Clipboard.htm">A_Clipboard</a>.</td>
+  </tr>
+  <tr id="Cursor">
+    <td>A_Cursor</td>
+    <td><p>Der Typ des aktuell angezeigten Mauszeigers. Die Variable enthält eines der folgenden Wörter: AppStarting, Arrow, Cross, Help, IBeam, Icon, No, Size, SizeAll, SizeNESW, SizeNS, SizeNWSE, SizeWE, UpArrow, Wait, Unknown. Die Großbuchstaben hinter Size sind Himmelsrichtungen, z.B. NESW = NorthEast+SouthWest (Nordost+Südwest). Die handförmigen Mauszeiger (Zeigen und Greifen) sind als Unknown klassifiziert.</p></td>
+  </tr>
+  <tr id="EventInfo">
+    <td>A_EventInfo</td>
+    <td><p>Enthält zusätzliche Informationen über die folgenden Ereignisse:</p>
+      <ul>
+        <li><a href="Hotkeys.htm#Wheel">Mausrad-Hotkeys</a> (WheelDown/Up/Left/Right)</li>
+        <li><a href="lib/OnMessage.htm">OnMessage</a></li>
+        <li><a href="lib/GuiOnMessage.htm">OnMessage (GUI)</a> <span class="ver">[v2.1-alpha.7+]</span></li>
+        <li><a href="misc/RegExCallout.htm">Callouts in Regulären Ausdrücken</a></li>
+      </ul>
+      <p>Hinweis: Jeder <a href="misc/Threads.htm">Thread</a> hat seinen eigenen Wert für A_EventInfo (im Gegensatz zu Variablen wie A_ThisHotkey). Wenn also ein Thread von einem anderen unterbrochen wird, sieht er bei seiner Wiederaufnahme immer noch seine ursprünglichen/korrekten Werte in diesen Variablen.</p>
+      <p>A_EventInfo kann auch vom Skript gesetzt werden, akzeptiert aber nur vorzeichenlose Integer innerhalb eines Zahlenbereichs, der für Pointer üblich ist (je nach AutoHotkey-Version entweder 32-Bit oder 64-Bit).</p></td>
+  </tr>
+  <tr id="LastError">
+    <td>A_LastError</td>
+    <td><p>Diese Variable ist üblicherweise das Ergebnis der Systemfunktion GetLastError(), nachdem das Skript bestimmte Funktionen wie z.B. <a href="lib/DllCall.htm">DllCall</a>, <a href="lib/Run.htm">Run/RunWait</a> und File/Ini/Reg-Funktionen (wo dokumentiert) aufgerufen hat. A_LastError ist eine Zahl zwischen 0 und 4294967295 (immer dezimal, nicht hexadezimal). Null (0) bedeutet Erfolg, während jede andere Zahl bedeutet, dass der Aufruf fehlgeschlagen ist. Jede Nummer entspricht einem bestimmten Fehlerzustand. Unter <a href="lib/Error.htm#OSError">OSError</a> erfahren Sie, wie der lokalisierte Fehlerbeschreibungstext abgerufen werden kann, oder suchen Sie auf <a href="https://www.microsoft.com">www.microsoft.com</a> nach "system error codes", um eine Liste zu erhalten. A_LastError ist eine threadspezifische Einstellung, d.h. es kann nicht durch Unterbrechungen anderer <a href="misc/Threads.htm">Threads</a> geändert werden.</p>
+    <p>Beim Zuweisen eines Wertes an A_LastError wird auch die Systemfunktion SetLastError() aufgerufen.</p></td>
+  </tr>
+  <tr id="HookInstalled">
+    <td>A_KeybdHookInstalled<br>A_MouseHookInstalled</td>
+    <td><p><span class="ver">[v2.1-alpha.7+]</span>: Enthält je nach aktuellem Status des Tastatur-/Maus-Hooks eine der folgenden Zahlen:</p>
+    <ul>
+      <li>0 = Keine Hooks installiert.</li>
+      <li>1 = Dieses Skript hat einen Hook installiert.</li>
+      <li>2 = Ein anderes Skript hat einen Hook installiert.</li>
+      <li>3 = Sowohl dieses Skript als auch ein anderes Skript haben Hooks installiert.</li>
+    </ul>
+    <p>Zum Beispiel ist <code>A_KeybdHookInstalled &gt; 1</code> wahr, wenn ein anderes Skript einen Tastatur-Hook installiert hat. In so einem Fall fällt <a href="lib/Send.htm#SendInputDetail">SendInput</a> auf SendEvent/SendPlay zurück. <code>A_KeybdHookInstalled &amp; 1</code> (das ein <a href="#bitwise">bitweises UND</a> verwendet) ist wahr, wenn dieses Skript einen Tastatur-Hook installiert hat.</p></td>
+  </tr>
+  <tr id="TrueFalse">
+    <td>True<br />False</td>
+    <td><p>Enthalten 1 und 0. Diese können verwendet werden, um die Lesbarkeit eines Skripts zu verbessern. Einzelheiten finden Sie unter <a href="Concepts.htm#boolean">Boolesche Werte</a>.</p>
+      <p>Dies sind <a href="Language.htm#constants">Schlüsselwörter</a>, keine Variablen.</p>
+    </td>
+  </tr>
+</table>
+<h3 id="loop">Loop</h3>
+<table class="info">
+  <tr>
+    <th abbr="Var">Variable</th>
+    <th abbr="Beschr">Beschreibung</th>
+  </tr>
+  <tr id="Index">
+    <td>A_Index</td>
+    <td>Liefert oder setzt die Nummer der aktuellen Schleifenwiederholung (ein 64-Bit-Integer). Sie enthält 1, wenn der Körper der Schleife zum ersten Mal ausgeführt wurde. Beim zweiten Mal enthält sie 2 und so weiter. Wenn eine innere Schleife von einer äußeren Schleife umschlossen ist, hat die innere Schleife Vorrang. A_Index funktioniert in <a href="Language.htm#loop-statement">jeder Schleifenvariante</a>, enthält aber außerhalb einer Schleife den Wert 0. Bei endlichen Schleifen wie z.B. <a href="lib/Loop.htm">Loop</a> beeinflusst eine Änderung von A_Index die aktuelle Anzahl der geplanten Wiederholungen.</td>
+  </tr>
+  <tr>
+    <td>A_LoopFileName, etc.</td>
+    <td>Diese und verwandte Variablen sind nur für <a href="lib/LoopFiles.htm">Datei-Schleifen</a> relevant.</td>
+  </tr>
+  <tr>
+    <td>A_LoopRegName, etc.</td>
+    <td>Diese und verwandte Variablen sind nur für <a href="lib/LoopReg.htm">Registry-Schleifen</a> relevant.</td>
+  </tr>
+  <tr>
+    <td>A_LoopReadLine</td>
+    <td>Siehe <a href="lib/LoopRead.htm">dateilesende Schleife</a>.</td>
+  </tr>
+  <tr>
+    <td>A_LoopField</td>
+    <td>Siehe <a href="lib/LoopParse.htm">parsende Schleife</a>.</td>
+  </tr>
+</table>
+
+<h2 id="cap">Kapazität und Speicher von Variablen</h2>
+<ul>
+  <li>Wenn einer Variable eine neue Zeichenkette zugewiesen wird, die länger ist als der aktuelle Inhalt der Variable, wird der reservierte Systemspeicher automatisch erweitert.</li>
+  <li>Um den reservierten Speicher einer großen Variable wieder freizugeben, weisen Sie ihr einen leeren Wert zu (z.B. <code>Var := ""</code>).</li>
+  <li>Es können beliebig viele Variablen erstellt werden. Das Programm unterstützt mehrere Millionen Variablen ohne nennenswerte Performanzeinbußen.</li>
+  <li>Funktionen und Ausdrücke, die numerische Eingaben akzeptieren, unterstützen in der Regel Floating-Point-Werte mit einer Genauigkeit von 15 Dezimalstellen. Integer können vorzeichenfähige 64-Bit-Werte sein, die einen Bereich von -9223372036854775808 (-0x8000000000000000) bis 9223372036854775807 (0x7FFFFFFFFFFFFFFF) abdecken. Integerkonstanten außerhalb dieses Bereichs werden umgekehrt. Gleiches gilt für arithmetische Operationen mit Integern, die bei einem Überlauf umgekehrt werden (z.B. 0x7FFFFFFFFFFFFFFF + 1 = -0x8000000000000000).</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>ObjAddRef / ObjRelease - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die Funktionen ObjAddRef und ObjRelease erhöhen oder verringern die Referenzanzahl eines Objekts um 1." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+
+<h1>ObjAddRef / ObjRelease</h1>
+
+<p>Erhöht oder verringert die <a href="../Objects.htm#Reference_Counting">Referenzanzahl</a> eines Objekts um 1.</p>
+
+<pre class="Syntax">NeueRefAnzahl := <span class="func">ObjAddRef</span>(Ptr)
+NeueRefAnzahl := <span class="func">ObjRelease</span>(Ptr)</pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>Ptr</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Ein unverwalteter Objektpointer oder COM-Interface-Pointer.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+<p>Diese Funktionen geben die neue Referenzanzahl zurück. Dieser Wert sollte <b>nur</b> für Debugging-Zwecke verwendet werden.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="../Objects.htm#Reference_Counting">Referenzzählung</a></p>
+<p>Obwohl die folgenden Artikel die Referenzzählung in Bezug auf COM beschreiben, werden einige wichtige Konzepte und Regeln erläutert, die generell auch für AutoHotkey-Objekte gelten: <a href="https://learn.microsoft.com/windows/win32/api/unknwn/nf-unknwn-iunknown-addref">IUnknown::AddRef</a>, <a href="https://learn.microsoft.com/windows/win32/api/unknwn/nf-unknwn-iunknown-release">IUnknown::Release</a>, <a href="https://learn.microsoft.com/windows/win32/com/rules-for-managing-reference-counts">Referenzzählungsregeln </a>.</p>
+
+</body>
+</html>

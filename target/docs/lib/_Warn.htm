@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>#Warn - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content='Die #Warn-Direktive aktiviert oder deaktiviert bestimmte Warnungen, die auf mögliche Fehler vonseiten des Programmierers hinweisen, wie z.B. Schreibfehler oder fehlende "globale" Deklarationen.' />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>#Warn</h1>
+
+<p>Aktiviert oder deaktiviert bestimmte Warnungen, die auf mögliche Fehler vonseiten des Programmierers hinweisen, wie z.B. Schreibfehler oder fehlende "globale" Deklarationen.</p>
+
+<pre class="Syntax"><span class="func">#Warn</span> <span class="optional">WarnungTyp, WarnungModus</span></pre>
+
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>WarnungTyp</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+
+    <p><span class="ver">[v2.1-alpha.12+]</span>: Wenn weggelassen, wird der programmweite Standardwarnmodus geändert. Dies wird von allen Warnungstypen verwendet, die standardmäßig aktiv sind oder auf <em>On</em> gesetzt sind.</p>
+    <p><span class="ver">[v2.0]</span>: Wenn weggelassen, wird standardmäßig <em>All</em> verwendet. Das Komma muss vorhanden sein.</p>
+    <p>Andernfalls geben Sie den Typ der Warnung an, die aktiviert oder deaktiviert werden soll.</p>
+    <p id="VarUnset"><strong>VarUnset:</strong> Zeigt vor Beginn der Skriptausführung eine Warnung an, wenn die jeweils erste Referenz zu einer Variable nie auf eine der folgenden Arten verwendet wird:</p>
+    <ul>
+      <li>Als Ziel einer direkten, nicht-dynamischen Zuweisung, z.B. <code>MeineVar := ""</code>.</li>
+      <li>Mit dem <a href="../Variables.htm#ref">Referenzoperator</a> verwendet, z.B. <code>&amp;MeineVar</code>.</li>
+      <li>Direkt an <a href="IsSet.htm">IsSet</a> übergeben, z.B. <code>IsSet(MeineVar)</code>.</li>
+    </ul>
+    <p id="LocalSameAsGlobal"><strong>LocalSameAsGlobal:</strong> Zeigt vor Beginn der Skriptausführung eine Warnung an, wenn <em>undeklarierte</em> lokale Variablen den gleichen Namen wie globale Variablen haben. Diese Warnung soll Fehler vermeiden, die auftreten können, wenn vergessen wurde, eine globale Variable innerhalb einer Funktion vor dem Zuweisungsversuch zu deklarieren. Wenn die globale Variable tatsächlich lokal sein soll, kann die Warnung mit einer Deklaration wie <code>local x</code> oder <code>static y</code> unterdrückt werden.</p>
+    <p>Diese Warnung ist standardmäßig deaktiviert.</p>
+    <pre>#Warn
+g := 1
+ShowG() {       <em>; Die Warnung wird auch angezeigt, wenn die Funktion nicht aufgerufen wird.</em>
+    <em>;global g   ; &lt;-- Dies wird für die Zuweisung an die globale Variable benötigt.</em>
+    g := 2
+}
+ShowG
+MsgBox g        <em>; Ohne die Deklaration hat obiges einem lokalen "g" zugewiesen.</em></pre>
+    <p id="Unreachable"><strong>Unreachable:</strong> Zeigt vor Beginn der Skriptausführung eine Warnung an, wenn unmittelbar nach einem <code>Return</code>, <code>Break</code>, <code>Continue</code>, <code>Throw</code> oder <code>Goto</code> eine Zeile auf gleicher Verschachtelungsebene folgt, es sei denn, diese Zeile ist das Ziel eines Labels. Zeilen dieser Art werden niemals ausgeführt.</p>
+    <p>Wenn der Code nicht erreichbar sein soll – z.B. wenn ein <code>return</code> verwendet wurde, um einen Codeblock vorübergehend zu deaktivieren, oder wenn ein Hotkey oder Hotstring durch Auskommentieren vorübergehend deaktiviert wurde – sollten Sie in Erwägung ziehen, den nicht erreichbaren Code ebenfalls auszukommentieren. Sie können die Warnung auch unterdrücken, indem Sie ein <a href="../misc/Labels.htm">Label</a> über der ersten nicht erreichbaren Zeile definieren.</p>
+    <p><strong>All:</strong> Wendet den angegebenen <em>WarnungModus</em> auf alle unterstützten Warnungstypen an.</p>
+  </dd>
+
+  <dt>WarnungModus</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+
+    <p>Wenn weggelassen, wird standardmäßig <em>On</em> verwendet. Andernfalls geben Sie einen Wert an, der festlegt, wie Warnungen übermittelt werden sollen.</p>
+    <p><strong>MsgBox:</strong> Zeigt ein Mitteilungsfenster an, das die Warnung beschreibt. Beachten Sie, dass das Skript nach dem Schließen des Mitteilungsfensters normal weiterläuft.</p>
+    <p><strong>StdOut:</strong> Sendet eine Beschreibung der Warnung zur Standardausgabe (<em>stdout</em>), inklusive Dateiname und Zeilennummer. Auf diese Weise können umfangreiche Texteditoren wie SciTE die Warnungen abfangen, ohne das Skript zu unterbrechen – der Benutzer kann später den Ausgabebereich des Texteditors verwenden, um zu einer fehlerhaften Zeile zu springen.</p>
+    <p><strong>OutputDebug:</strong> Sendet eine Beschreibung der Warnung zum Debugger, um sie anzuzeigen. Wenn kein Debugger aktiv ist, hat dieser Modus keinen Effekt. Weitere Details finden Sie unter <a href="OutputDebug.htm">OutputDebug</a>.</p>
+    <p><strong>On</strong> <span class="ver">[v2.1-alpha.12+]</span>: Aktiviert den angegebenen <em>WarnungTyp</em> unter Verwendung des programmweiten Standardmodus, was standardmäßig <em>MsgBox</em> ist. Mit einem separaten <code>#Warn <i>WarnungModus</i></code> kann der Standardmodus geändert werden.</p>
+    <p><strong>Off:</strong> Deaktiviert alle Warnungen für den angegebenen <em>WarnungTyp</em>.</p>
+  </dd>
+
+</dl>
+<h2 id="UTF8">UTF-8 <span class="ver">[v2.1-alpha.13+]</span></h2>
+<p>Es wird eine Warnung angezeigt, wenn eine als UTF-8 gelesene Skriptdatei ein oder mehrere Bytes enthält, die nicht Teil einer gültigen UTF-8-Byte-Sequenz sind. Diese Bytes können nicht in ein Zeichen dekodiert werden und werden daher mit '�' ersetzt. Dies deutet in der Regel darauf hin, dass die Skriptdatei nicht unter UTF-8 gespeichert wurde. Standardmäßig geht AutoHotkey davon aus, dass Dateien, die ASCII-fremde Zeichen enthalten, unter UTF-8 kodiert sind. Um das zu beheben, speichern Sie die Datei unter UTF-8 oder entfernen Sie alle ungültigen Byte-Sequenzen.</p>
+<p>Diese Warnung verwendet den Standardausgabemodus, und kann nur deaktiviert werden, wenn der Standardmodus auf Off gesetzt wird.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+	<p>Wenn diese Direktive im Skript nicht angegeben ist, sind alle Warnungen aktiviert und verwenden den MsgBox-Modus, mit Ausnahme der LocalSameAsGlobal-Warnung, die deaktiviert ist.</p>
+<p><span class="ver">[v2.1-alpha.12+]</span>: Jedes <a href="../Modules.htm">Modul</a> hat seine eigenen Warneinstellungen. Module, die mit <a href="_Module.htm">#Module</a> definiert werden, verwenden standardmäßig dieselben Einstellungen wie das vorherige Modul. Beim Standardmodul und bei den via <a href="_Import.htm">#Import</a> geladenen Modulen sind VarUnset und Unreachable standardmäßig On, während LocalSameAsGlobal standardmäßig Off ist.</p>
+<p><span class="ver">[v2.1-alpha.12+]</span>: Ein programmweiter Standardmodus kann mit <code>#Warn <i>WarnungModus</i></code> gesetzt werden, mit jedem Modus außer On. Die letzte einer solchen Direktive beeinflusst alle Warnungen, die standardmäßig aktiv sind, und alle Warnungen, bei denen <em>WarnungModus</em> auf On gesetzt wurde. <code>#Warn Off</code> führt dazu, dass solche Warnungen ignoriert werden. Außerdem gibt es folgende Sonderfälle:</p>
+<ul>
+  <li><code>#Warn</code>: Aktiviert VarUnset und Unreachable und deaktiviert LocalSameAsGlobal für das aktuelle Modul.</li>
+  <li><code>#Warn On</code>: Aktiviert VarUnset und Unreachable für das aktuelle Modul.</li>
+</ul>
+<p>Die Überprüfungen, die VarUnset-, LocalSameAsGlobal- und Unreachable-Warnungen erzeugen, werden durchgeführt, nachdem alle Direktiven geparst wurden, aber bevor das Skript ausgeführt wird. Folglich ist die Position der Direktive innerhalb eines Moduls ohne Bedeutung (und kann wie alle anderen Direktiven nicht bedingt ausgeführt werden).</p>
+<p>Die Anordnung der #Warn-Direktiven ist allerdings entscheidend, wenn <em>WarnungTyp</em> angegeben ist: die letzte Direktive, die eine bestimmte Warnung setzt, bestimmt den Modus dieser Warnung. Zum Beispiel haben die beiden unteren Direktiven den kombinierten Effekt, alle Warnungen außer LocalSameAsGlobal zu aktivieren (was auch die Standardkonfiguration ist):</p>
+<pre>#Warn All
+#Warn LocalSameAsGlobal, Off
+</pre>
+<h2 id="Related">Siehe auch</h2>
+<p><a href="../Functions.htm#Local">Lokale und globale Variablen</a>, <a href="../Modules.htm">Module</a></p>
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExAllOff">
+<p><a class="ex_number" href="#ExAllOff"></a> Deaktiviert alle Warnungen für das aktuelle Modul. Nicht empfohlen.</p>
+<pre>#Warn All, Off</pre>
+</div>
+
+<div class="ex" id="ExAll">
+<p><a class="ex_number" href="#ExAll"></a> Aktiviert alle Warnungstypen für das aktuelle Modul. <span class="ver">[v2.1-alpha.12+]</span>: Verwendet den programmweiten Standardmodus.</p>
+<pre>#Warn All</pre>
+</div>
+
+<div class="ex" id="ExOmitted">
+<p><a class="ex_number" href="#ExOmitted"></a> Für v2.1 werden damit lediglich die Standardwarnungen gesetzt, die mit dem programmweiten Standardmodus aktiviert werden sollen. Für v2.0 werden damit alle Warnungen aktiviert und der Modus auf MsgBox gesetzt.</p>
+<pre>#Warn</pre>
+</div>
+
+<div class="ex" id="ExLSAGOutputDebug">
+<p><a class="ex_number" href="#ExLSAGOutputDebug"></a> Sendet eine Warnung an OutputDebug für jede undeklarierte lokale Variable, die den gleichen Namen wie eine globale Variable hat.</p>
+<pre>#Warn LocalSameAsGlobal, OutputDebug</pre>
+</div>
+
+<div class="ex" id="ExDefaultStdOut">
+<p><a class="ex_number" href="#ExDefaultStdOut"></a> <span class="ver">[v2.1-alpha.12+]</span>: Bewirkt, dass Warnungen via StdOut übermittelt werden, es sei denn, für die Warnung wurde ein Modus angegeben.</p>
+<pre>#Warn StdOut</pre>
+</div>
+
+</body>
+</html>

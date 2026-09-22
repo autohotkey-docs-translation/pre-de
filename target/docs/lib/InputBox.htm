@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>InputBox - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die InputBox-Funktion zeigt ein Eingabefenster an, das den Benutzer zur Eingabe einer Zeichenkette auffordert." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>InputBox</h1>
+
+<p>Zeigt ein Eingabefenster an, das den Benutzer zur Eingabe einer Zeichenkette auffordert.</p>
+
+<pre class="Syntax">InputBoxObj := <span class="func">InputBox</span>(<span class="optional">Anzeigetext, Titel, Optionen, Standardwert</span>)</pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>Anzeigetext</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn leer oder weggelassen, wird standardmäßig kein Text verwendet. Andernfalls geben Sie einen Text an, der in der Regel dem Benutzer mitteilt, welche Art von Eingabe erwartet wird. Wenn <em>Anzeigetext</em> relativ lang ist, kann es via <a href="../Scripts.htm#continuation">Fortsetzungsbereich</a> in mehrere kurze Zeilen aufgeteilt werden, um die Übersichtlichkeit und Wartbarkeit des Skripts zu verbessern.</p>
+  </dd>
+
+  <dt>Titel</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn weggelassen, wird standardmäßig der aktuelle Wert von <a href="../Variables.htm#ScriptName">A_ScriptName</a> verwendet. Andernfalls geben Sie den Titel des Eingabefensters an.</p>
+  </dd>
+
+  <dt>Optionen</dt>
+  <dd>
+      <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+      <p>Wenn leer oder weggelassen, wird das Eingabefenster horizontal und vertikal auf dem Bildschirm zentriert, mit einer Standardgröße von etwa 380x200 Pixeln, abhängig von der Version und dem Design des Betriebssystems. Andernfalls geben Sie eine oder mehrere der folgenden Optionen an, jeweils getrennt durch ein Leer- oder Tabulatorzeichen:</p>
+      <p><strong>X</strong><em>n</em> und <strong>Y</strong><em>n</em>: Die X- und Y-Koordinate des Dialogfensters. Zum Beispiel bewirkt <code class="no-highlight">x0 y0</code>, dass das Fenster in der oberen linken Ecke des Desktops platziert wird. Wenn eine dieser Koordinaten weggelassen wird, wird das Fenster in dieser Dimension zentriert. Jede Koordinate kann negativ sein, um das Dialogfenster teilweise oder vollständig außerhalb des Desktops (oder auf dem sekundären Bildschirm in einer Multi-Bildschirm-Konfiguration) zu positionieren.</p>
+      <p><strong>W</strong><em>n</em> und <strong>H</strong><em>n</em>: Die Breite und Höhe des Clientbereichs des Dialogfensters (das ist der Bereich ohne Titelleiste und Rahmen). Zum Beispiel <code class="no-highlight">w200 h100</code>.</p>
+      <p><strong>T</strong><em>n</em>: Gibt das Zeitlimit in Sekunden an. Zum Beispiel bewirkt <code class="no-highlight">T10.0</code> ein Zeitlimit von zehn Sekunden. Wenn ein Zeitlimit höher als 2147483 (24,8 Tage) angegeben ist, wird es automatisch auf 2147483 zurückgesetzt. Nach Ablauf des Zeitlimits wird das Eingabefenster automatisch geschlossen und <a href="#return">InputBoxObj.Result</a> auf das Wort Timeout gesetzt. <a href="#return">InputBoxObj.Value</a> enthält die Zeichenkette, die der Benutzer währenddessen eingegeben hat.</p>
+      <p><strong>Password:</strong> Maskiert die Benutzereingabe (z.B. für eine Passworteingabe), d.h. alle Zeichen, die der Benutzer einträgt, werden mit einem Maskierungszeichen ersetzt. Wenn Sie ein anderes Maskierungszeichen benötigen, geben Sie es direkt nach dem Wort Password an. Zum Beispiel bewirkt <code class="no-highlight">Password*</code>, dass das Sternchen als Maskierungszeichen verwendet wird, nicht der ausgefüllte Kreis.</p>
+  </dd>
+
+  <dt>Standardwert</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn leer oder weggelassen, wird standardmäßig keine Zeichenkette verwendet. Andernfalls geben Sie eine Zeichenkette an, die im Eingabefeld des Eingabefensters erscheint, wenn das Fenster zum ersten Mal angezeigt wird. Der Benutzer kann die Zeichenkette z.B. durch Backspacing (wiederholtes Löschen des letzten Zeichens) ändern.</p>
+  </dd>
+
+</dl>
+
+<h2 id="return">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#objects">Objekt</a></p>
+<p>Diese Funktion gibt ein Objekt mit den folgenden Eigenschaften zurück:</p>
+<ul>
+  <li><code class="no-highlight">Value</code> (<a href="../Concepts.htm#strings">Zeichenkette</a>): Der vom Benutzer eingegebene Text.</li>
+  <li><code class="no-highlight">Result</code> (<a href="../Concepts.htm#strings">Zeichenkette</a>): Eines der folgenden Wörter, das angibt, wie das Eingabefenster geschlossen wurde: OK, Cancel oder Timeout.</li>
+</ul>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Ein typisches Eingabefenster sieht wie folgt aus:</p>
+<img src="../static/dlg_input.png" alt="InputBox" />
+<p>Das Dialogfenster ermöglicht dem Benutzer, einen beliebigen Text einzugeben und dann OK oder CANCEL (Abbrechen) zu drücken. Der Benutzer kann die Größe des Dialogfensters durch Ziehen des Rahmens ändern.</p>
+<p>Ein GUI-Fenster kann mit der <a href="Gui.htm#OwnDialogs">OwnDialogs-Option</a> ein modales Eingabefenster anzeigen. Ein modales Eingabefenster hindert den Benutzer daran, mit dem GUI-Fenster zu interagieren, bis er das Eingabefenster wieder schließt.</p>
+<h2 id="Related">Siehe auch</h2>
+<p><a href="Gui.htm">Gui-Objekt</a>, <a href="MsgBox.htm">MsgBox</a>, <a href="FileSelect.htm">FileSelect</a>, <a href="DirSelect.htm">DirSelect</a>, <a href="ToolTip.htm">ToolTip</a>, <a href="InputHook.htm">InputHook</a></p>
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExPassword">
+<p><a class="ex_number" href="#ExPassword"></a> Lässt den Benutzer ein verstecktes Passwort eingeben.</p>
+<pre>Passwort := InputBox("(Ihre Eingabe wird versteckt)", "Bitte Passwort eingeben", "password").Value</pre>
+</div>
+
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Lässt den Benutzer eine Telefonnummer eingeben.</p>
+<pre>IB := InputBox("Bitte geben Sie eine Telefonnummer ein.", "Telefonnummer", "w640 h480")
+if IB.Result = "Cancel"
+    MsgBox "Sie haben '" IB.Value "' eingegeben, aber dann auf Abbrechen gedrückt."
+else
+    MsgBox "Sie haben '" IB.Value "' eingegeben."</pre>
+</div>
+
+</body>
+</html>

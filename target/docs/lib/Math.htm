@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Mathematische Funktionen - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Funktionen zum Durchführen diverser mathematischer Operationen wie Runden, Potenzieren, Quadrieren, etc." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>Mathematische Funktionen</h1>
+<p>Funktionen zum Durchführen diverser mathematischer Operationen wie Runden, Potenzieren, Quadrieren, etc.</p>
+
+<h2 id="toc">Inhaltsverzeichnis</h2>
+<ul class="indent">
+  <li><a href="#General">Allgemeine Mathematik</a>:
+    <ul>
+      <li><a href="#Abs">Abs</a>: Gibt den Absolutwert einer Zahl zurück.</li>
+      <li><a href="#Ceil">Ceil</a>: Gibt eine Zahl zurück, aufgerundet auf den nächsten Integer.</li>
+      <li><a href="#Exp">Exp</a>: Gibt das Ergebnis von e hoch <em>N</em> zurück.</li>
+      <li><a href="#Floor">Floor</a>: Gibt eine Zahl zurück, abgerundet auf den nächsten Integer.</li>
+      <li><a href="#Log">Log</a>: Gibt den Logarithmus (Basis 10) einer Zahl zurück.</li>
+      <li><a href="#Ln">Ln</a>: Gibt den Logarithmus (Basis e) einer Zahl zurück.</li>
+      <li><a href="#Max">Max</a>: Gibt die höchste Zahl aus einer Reihe von Zahlen zurück.</li>
+      <li><a href="#Min">Min</a>: Gibt die niedrigste Zahl aus einer Reihe von Zahlen zurück.</li>
+      <li><a href="#Mod">Mod</a>: Modulo. Gibt den Rest einer Division zurück.</li>
+      <li><a href="#Round">Round</a>: Gibt eine Zahl zurück, gerundet auf <em>N</em> Dezimalstellen.</li>
+      <li><a href="#Sqrt">Sqrt</a>: Gibt die Quadratwurzel einer Zahl zurück.</li>
+    </ul>
+  </li>
+  <li><a href="#Trigonometry">Trigonometrie</a>:
+    <ul>
+      <li><a href="#Sin">Sin</a>: Gibt den trigonometrischen Sinus einer Zahl zurück.</li>
+      <li><a href="#Cos">Cos</a>: Gibt den trigonometrischen Kosinus einer Zahl zurück.</li>
+      <li><a href="#Tan">Tan</a>: Gibt den trigonometrischen Tangens einer Zahl zurück.</li>
+      <li><a href="#ASin">ASin</a>: Gibt den Arkussinus einer Zahl zurück (in Radiant).</li>
+      <li><a href="#ACos">ACos</a>: Gibt den Arkuskosinus einer Zahl zurück (in Radiant).</li>
+      <li><a href="#ATan">ATan</a>: Gibt den Arkustangens einer Zahl zurück (in Radiant).</li>
+      <li><a href="#ATan2">ATan2</a> <span class="ver">[v2.1-alpha.1+]</span>: Gibt den Hauptwert des Arkustangens von <code class="no-highlight">y/x</code> zurück (in Radiant).</li>
+    </ul>
+  </li>
+  <li><a href="#Errors">Fehlerbehandlung</a></li>
+</ul>
+
+<h2 id="General">Allgemeine Mathematik</h2>
+
+<h3 id="Abs">Abs</h3>
+<p>Gibt den Absolutwert einer bestimmten Zahl zurück.</p>
+<pre class="Syntax">Wert := <span class="func">Abs</span>(Zahl)</pre>
+<p>Der Rückgabewert ist vom gleichen Typ wie <em>Zahl</em> (Integer oder Floating-Point-Zahl).</p>
+<pre class="NoIndent">MsgBox Abs(-1.2) <em>; Gibt 1.2 zurück</em></pre>
+
+<h3 id="Ceil">Ceil</h3>
+<p>Gibt eine bestimmte Zahl zurück, aufgerundet auf den nächsten Integer (ohne .00-Suffix).</p>
+<pre class="Syntax">Wert := <span class="func">Ceil</span>(Zahl)</pre>
+<pre class="NoIndent">MsgBox Ceil(1.2)  <em>; Gibt 2 zurück</em>
+MsgBox Ceil(-1.2) <em>; Gibt -1 zurück</em></pre>
+
+<h3 id="Exp">Exp</h3>
+<p>Gibt das Ergebnis von e (ca. 2.71828182845905) hoch <em>N</em> zurück.</p>
+<pre class="Syntax">Wert := <span class="func">Exp</span>(N)</pre>
+<p><em>N</em> kann negativ sein und einen Dezimalpunkt enthalten. Um andere Zahlen als e zu potenzieren, verwenden Sie den <a href="../Variables.htm#pow">**-Operator</a>.</p>
+<pre class="NoIndent">MsgBox Exp(1.2) <em>; Gibt 3.320117 zurück</em></pre>
+
+<h3 id="Floor">Floor</h3>
+<p>Gibt eine bestimmte Zahl zurück, abgerundet auf den nächsten Integer (ohne .00-Suffix).</p>
+<pre class="Syntax">Wert := <span class="func">Floor</span>(Zahl)</pre>
+<pre class="NoIndent">MsgBox Floor(1.2)  <em>; Gibt 1 zurück</em>
+MsgBox Floor(-1.2) <em>; Gibt -2 zurück</em></pre>
+
+<h3 id="Log">Log</h3>
+<p>Gibt den Logarithmus (Basis 10) einer bestimmten Zahl zurück.</p>
+<pre class="Syntax">Wert := <span class="func">Log</span>(Zahl)</pre>
+<p>Das Ergebnis ist eine Floating-Point-Zahl. Wenn <em>Zahl</em> negativ ist, wird ein <a href="Error.htm#ValueError">ValueError</a> ausgelöst.</p>
+<pre class="NoIndent">MsgBox Log(1.2) <em>; Gibt 0.079181 zurück</em></pre>
+
+<h3 id="Ln">Ln</h3>
+<p>Gibt den Logarithmus (Basis e) einer bestimmten Zahl zurück.</p>
+<pre class="Syntax">Wert := <span class="func">Ln</span>(Zahl)</pre>
+<p>Das Ergebnis ist eine Floating-Point-Zahl. Wenn <em>Zahl</em> negativ ist, wird ein <a href="Error.htm#ValueError">ValueError</a> ausgelöst.</p>
+<pre class="NoIndent">MsgBox Ln(1.2) <em>; Gibt 0.182322 zurück</em></pre>
+
+<h3 id="Max">Max</h3>
+<p>Gibt die höchste Zahl aus einer Reihe von Zahlen zurück.</p>
+<pre class="Syntax">Zahl := <span class="func">Max</span>(Zahl1 <span class="optional">, Zahl2, ...</span>)</pre>
+<pre class="NoIndent">MsgBox Max(2.11, -2, 0) <em>; Gibt 2.11 zurück</em></pre>
+<p>Sie können auch einen <a href="../Functions.htm#Variadic">variadischen Parameter</a> angeben, um ein <a href="Array.htm">Array</a> von Zahlen zu übergeben. Zum Beispiel:</p>
+<pre class="NoIndent">Zahlen := [1, 2, 3, 4]
+MsgBox Max(Zahlen*) <em>; Gibt 4 zurück</em>
+</pre>
+
+<h3 id="Min">Min</h3>
+<p>Gibt die niedrigste Zahl aus einer Reihe von Zahlen zurück.</p>
+<pre class="Syntax">Zahl := <span class="func">Min</span>(Zahl1 <span class="optional">, Zahl2, ...</span>)</pre>
+<pre class="NoIndent">MsgBox Min(2.11, -2, 0) <em>; Gibt -2 zurück</em></pre>
+<p>Sie können auch einen <a href="../Functions.htm#Variadic">variadischen Parameter</a> angeben, um ein <a href="Array.htm">Array</a> von Zahlen zu übergeben. Zum Beispiel:</p>
+<pre class="NoIndent">Zahlen := [1, 2, 3, 4]
+MsgBox Min(Zahlen*) <em>; Gibt 1 zurück</em></pre>
+
+<h3 id="Mod">Mod</h3>
+<p>Modulo. Gibt den Rest aus einer Division zweier Zahlen zurück.</p>
+<pre class="Syntax">Wert := <span class="func">Mod</span>(Dividend, Divisor)</pre>
+<p>Das Vorzeichen des Ergebnisses entspricht dem Vorzeichen des ersten Parameters. Wenn einer der beiden Parameter eine Floating-Point-Zahl ist, wird das Ergebnis ebenfalls eine Floating-Point-Zahl sein. Wenn der zweite Parameter 0 ist, wird ein <a href="Error.htm#ZeroDivisionError">ZeroDivisionError</a> ausgelöst.</p>
+<pre class="NoIndent">MsgBox Mod(7.5, 2) <em>; Gibt 1.5 zurück (2 x 3 + 1.5)</em></pre>
+
+<h3 id="Round">Round</h3>
+<p>Gibt eine bestimmte Zahl zurück, gerundet auf <em>N</em> Dezimalstellen.</p>
+<pre class="Syntax">Wert := <span class="func">Round</span>(Zahl <span class="optional">, N</span>)</pre>
+<p>Wenn <em>N</em> weggelassen wird oder 0 ist, wird <em>Zahl</em> auf den nächsten Integer gerundet:</p>
+<pre class="NoIndent">MsgBox Round(3.14)    <em>; Gibt 3 zurück</em></pre>
+<p>Wenn <em>N</em> positiv ist, wird <em>Zahl</em> auf <em>N</em> Dezimalstellen gerundet:</p>
+<pre class="NoIndent">MsgBox Round(3.14, 1) <em>; Gibt 3.1 zurück</em></pre>
+<p>Wenn <em>N</em> negativ ist, wird <em>Zahl</em> um <em>N</em> Stellen links vom Dezimalpunkt gerundet:</p>
+<pre class="NoIndent">MsgBox Round(345, -1) <em>; Gibt 350 zurück</em>
+MsgBox Round(345, -2) <em>; Gibt 300 zurück</em></pre>
+<p>Das Ergebnis ist ein Integer, wenn <em>N</em> weggelassen wird oder kleiner als 1 ist. Andernfalls ist das Ergebnis eine numerische Zeichenkette mit genau <em>N</em> Dezimalstellen. Wenn Sie eine reine Zahl benötigen, führen Sie einfach eine weitere mathematische Operation am Rückgabewert von Round durch, z.B. <code>Round(3.333, 1)+0</code>.</p>
+
+<h3 id="Sqrt">Sqrt</h3>
+<p>Gibt die Quadratwurzel einer bestimmten Zahl zurück.</p>
+<pre class="Syntax">Wert := <span class="func">Sqrt</span>(Zahl)</pre>
+<p>Das Ergebnis ist eine Floating-Point-Zahl. Wenn <em>Zahl</em> negativ ist, wird ein <a href="Error.htm#ValueError">ValueError</a> ausgelöst.</p>
+<pre class="NoIndent">MsgBox Sqrt(16) <em>; Gibt 4 zurück</em></pre>
+
+<h2 id="Trigonometry">Trigonometrie</h2>
+<p class="note"><strong>Hinweis:</strong> Um Radiant in Grad umzurechnen, multiplizieren Sie den Wert mit 180/pi (ca. 57.29578). Um Grad in Radiant umzurechnen, multiplizieren Sie den Wert mit pi/180 (ca. 0.01745329252). Der Wert von pi (ca. 3.141592653589793) ist das 4-fache von Arkustangens 1.</p>
+
+<h3 id="Sin">Sin</h3>
+<p>Gibt den trigonometrischen Sinus einer bestimmten Zahl zurück.</p>
+<pre class="Syntax">Wert := <span class="func">Sin</span>(Zahl)</pre>
+<p><em>Zahl</em> muss in Radiant angegeben werden.</p>
+<pre class="NoIndent">MsgBox Sin(1.2) <em>; Gibt 0.932039 zurück</em></pre>
+
+<h3 id="Cos">Cos</h3>
+<p>Gibt den trigonometrischen Kosinus einer bestimmten Zahl zurück.</p>
+<pre class="Syntax">Wert := <span class="func">Cos</span>(Zahl)</pre>
+<p><em>Zahl</em> muss in Radiant angegeben werden.</p>
+<pre class="NoIndent">MsgBox Cos(1.2) <em>; Gibt 0.362358 zurück</em></pre>
+
+<h3 id="Tan">Tan</h3>
+<p>Gibt den trigonometrischen Tangens einer bestimmten Zahl zurück.</p>
+<pre class="Syntax">Wert := <span class="func">Tan</span>(Zahl)</pre>
+<p><em>Zahl</em> muss in Radiant angegeben werden.</p>
+<pre class="NoIndent">MsgBox Tan(1.2) <em>; Gibt 2.572152 zurück</em></pre>
+
+<h3 id="ASin">ASin</h3>
+<p>Gibt den Arkussinus (die Zahl, deren Sinus die angegebene Zahl ist) zurück (in Radiant).</p>
+<pre class="Syntax">Wert := <span class="func">ASin</span>(Zahl)</pre>
+<p>Wenn <em>Zahl</em> kleiner als -1 oder größer als 1 ist, wird ein <a href="Error.htm#ValueError">ValueError</a> ausgelöst.</p>
+<pre class="NoIndent">MsgBox ASin(0.2) <em>; Gibt 0.201358 zurück</em></pre>
+
+<h3 id="ACos">ACos</h3>
+<p>Gibt den Arkuskosinus (die Zahl, deren Kosinus die angegebene Zahl ist) zurück (in Radiant).</p>
+<pre class="Syntax">Wert := <span class="func">ACos</span>(Zahl)</pre>
+<p>Wenn <em>Zahl</em> kleiner als -1 oder größer als 1 ist, wird ein <a href="Error.htm#ValueError">ValueError</a> ausgelöst.</p>
+<pre class="NoIndent">MsgBox ACos(0.2) <em>; Gibt 1.369438 zurück</em></pre>
+
+<h3 id="ATan">ATan</h3>
+<p>Gibt den Arkustangens (die Zahl, deren Tangens die angegebene Zahl ist) zurück (in Radiant).</p>
+<pre class="Syntax">Wert := <span class="func">ATan</span>(Zahl)</pre>
+<pre class="NoIndent">MsgBox ATan(1.2) <em>; Gibt 0.876058 zurück</em></pre>
+
+<h3 id="ATan2">ATan2 <span class="ver">[v2.1-alpha.1+]</span></h3>
+<p>Gibt den Hauptwert des Arkustangens von <code class="no-highlight">y/x</code> zurück (in Radiant).</p>
+<pre class="Syntax">Wert := <span class="func">ATan2</span>(Y, X)</pre>
+<pre class="NoIndent">MsgBox ATan2(1, 2) <em>; Gibt 0.463648 zurück</em></pre>
+
+<h2 id="Errors">Fehlerbehandlung</h2>
+<p>Diese Funktionen lösen eine Ausnahme aus, wenn einer ihrer Eingabewerte nicht numerisch ist oder eine ungültige Operation (z.B. Division durch 0) versucht wird.</p>
+
+</body>
+</html>

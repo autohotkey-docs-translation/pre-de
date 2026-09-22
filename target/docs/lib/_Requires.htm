@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>#Requires - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die #Requires-Direktive deklariert die Anforderungen des Skripts und setzt potentiell den Kompatibilitätsmodus." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>#Requires</h1>
+
+<p>Deklariert die Anforderungen des Skripts und setzt potentiell den <a href="#CompatMode">Kompatibilitätsmodus</a>.</p>
+
+<pre class="Syntax"><span class="func">#Requires</span> Anforderung</pre>
+
+<h2 id="Parameters">Parameter</h2>
+<dl>
+  <dt>Anforderung</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn dieser Parameter nicht mit dem Wort "AutoHotkey" beginnt, wird eine Fehlermeldung angezeigt und das Programm beendet. Dies dient der Übersichtlichkeit und reserviert die Direktive für zukünftige Zwecke. Andere Entwicklungszweige von AutoHotkey können andere Namen unterstützen.</p>
+    <p>Andernfalls muss nach dem Wort "AutoHotkey" eine beliebige Kombination der folgenden Zeichen angegeben werden, getrennt durch Leer- oder Tabulatorzeichen:</p>
+    <ul>
+      <li>Ein optionales "v", unmittelbar gefolgt von einer Versionsnummer. <a href="../Variables.htm#AhkVersion">A_AhkVersion</a> muss größer gleich diese Version, aber kleiner als die nächste Hauptversion sein.</li>
+      <li><code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code> oder <code>=</code>, unmittelbar gefolgt von einem optionalen "v" und einer Versionsnummer. <code class="no-highlight">&gt;=2-rc &lt;2</code> erlaubt zum Beispiel v2 Release Candidates, aber nicht die finale Version.</li>
+      <li>Eines der folgenden Wörter, um den Typ der EXE-Datei einzuschränken, die das Skript ausführen darf: "32-bit", "64-bit".</li>
+    </ul>
+  </dd>
+</dl>
+
+<h2 id="Error_Message">Fehlermeldung</h2>
+<p>Die angezeigte Meldung ist abhängig von der Version von AutoHotkey, die die Direktive interpretiert.</p>
+<p>Die Fehlermeldung zeigt immer den Pfad, die Version und den Build von AutoHotkey an.</p>
+<p>Wenn das Skript mit einer Version von AutoHotkey gestartet wird, die diese Direktive nicht unterstützt, sieht die Fehlermeldung in etwa so aus:</p>
+<pre class="no-highlight">Line Text: #Requires <i>%Anforderung%</i>
+Error: This line does not contain a recognized action.</pre>
+
+<h2 id="CompatMode">Kompatibilitätsmodus <span class="ver">[v2.1-alpha.28+]</span></h2>
+<p>Die Angabe von Versionsanforderungen setzt auch den Kompatibilitätsmodus für das Skript. Der v2.0-kompatible Modus ist aktiv, wenn Version "2.0.x" die Anforderungen erfüllt; andernfalls ist er deaktiviert. Wenn die Direktive nicht verwendet wird, gilt standardmäßig der v2.0-Modus. Die Verwendung der Direktive ohne Versionsangabe hat keinen Einfluss auf den Modus.</p>
+<p>Die erste, in einem Modul verwendete Versionsdirektive bestimmt den Laufzeitmodus für den gesamten Startcode dieses Moduls in allen Dateien.</p>
+<p><a href="_Module.htm">#Module</a> setzt den Standardmodus des neuen Moduls auf den des __Init-Moduls.</p>
+<p>Versionsdirektiven können überall im Code verwendet werden, um den Laufzeitmodus für alle nachfolgenden Funktionsdefinitionen zu bestimmen.
+ Die Verwendung der Direktive innerhalb einer Funktion beeinflusst nur verschachtelte Funktionen; am Ende der Funktion wird der Modus wieder zurückgesetzt. Auf diese Weise kann eine v2.0-Funktion in eine v2.1-Funktion platziert werden.</p>
+<p>Modusänderungen, die durch eine Versionsdirektive innerhalb einer <a href="_Include.htm">#Include</a>-Datei wirksam werden, werden am Ende der Datei rückgängig gemacht. Auf diese Weise kann ein v2.1-Skript eine v2.0-Funktion oder -Klassenbibliothek inkludieren. Allerdings wird jeglicher Code, der sich nicht innerhalb einer Funktion befindet (also der Startcode), im Modus ausgeführt, der für das aktuelle Modul festgelegt ist. v2.0-Bibliotheken können stattdessen via <a href="_Import.htm">#Import</a> geladen werden, um maximale Kompatibilität zu gewährleisten.</p>
+<p>Einzelheiten dazu, wie sich der Modus auf das Verhalten des Skripts auswirkt, finden Sie unter <a href="../v2.1-changes.htm#CompatMode">Kompatibilitätsmodus (Änderungen)</a>.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Da der <a href="../Program.htm#launcher">Launcher</a> die gleichzeitige Nutzung von v1- und v2-Skripten auf einem System ermöglicht, empfiehlt es sich, zumindest <code>#Requires AutoHotkey v1</code> für v1-Skripte und <code>#Requires AutoHotkey v2</code> für v2-Skripte hinzuzufügen. Dadurch wird sichergestellt, dass die richtige Version zum Ausführen des Skripts verwendet wird.</p>
+<p>Wenn das Skript Syntaxelemente oder Funktionen verwendet, die in früheren Versionen nicht verfügbar sind, können Sie mit dieser Direktive sicherstellen, dass die Fehlermeldung die unerfüllte Anforderung und nicht einen willkürlichen Syntaxfehler anzeigt. Das ist mit so etwas wie <code>if (A_AhkVersion &lt;= "1.1.33")</code> nicht möglich, weil ein Syntaxfehler an anderer Stelle im Skript dessen Ausführung verhindern würde.</p>
+<p>Wenn Sie ein Skript mit anderen teilen oder den Code ins Internet stellen, können Sie mit dieser Direktive sicherstellen, dass jeder, der den Code findet, schnell erkennen kann, für welche AutoHotkey-Version dieser Code gedacht ist.</p>
+<p>Andere Programme oder Skripte können diese Direktive für verschiedene Zwecke überprüfen. Der Launcher von AutoHotkey v2 verwendet diese Information zum Beispiel, um festzustellen, welche EXE-Datei von AutoHotkey gestartet werden soll, während ein Skripteditor oder ähnliche Tools diese Information beispielsweise verwenden können, um festzustellen, wie die Skriptdatei interpretiert oder farblich hervorgehoben werden soll.</p>
+<p id="compare">Versionszeichenketten werden als eine Reihe von via Punkt getrennten Komponenten verglichen, optional gefolgt von einem Bindestrich und Vorabversionsidentifikator(en).</p>
+<ul>
+  <li>Numerische Komponenten werden numerisch verglichen. Zum Beispiel ist v1.01 = v1.1, aber a20 &gt; a112.</li>
+  <li>Innerhalb derselben Position werden numerische Komponenten gegenüber nicht-numerischen Komponenten immer als niedriger angesehen.</li>
+  <li>Jede fehlende via Punkt getrennte Komponente wird als Null behandelt. Zum Beispiel ist v1.1.33-alpha dasselbe wie v1.1.33.00-alpha.0.</li>
+  <li>Nicht-numerische Komponenten werden alphabetisch verglichen und sind Groß-/Kleinschreibung-sensitiv.</li>
+  <li>Vorabversionen werden gegenüber den Standardversionen als niedriger angesehen. Zum Beispiel wird ein Skript mit <code>#Requires AutoHotkey v2</code> unter v2.0-a112 nicht ausgeführt. Um Vorabversionen zu erlauben, fügen Sie einen Bindestrich hinzu. Zum Beispiel: <code class="no-highlight">v2.0-</code>.</li>
+  <li>Alle Suffixe, die mit "+" beginnen, werden ignoriert.</li>
+</ul>
+<p>Ein "+" am Ende genügt, um den Leser darauf hinzuweisen, dass spätere Versionen akzeptabel, aber nicht erforderlich sind.</p>
+<p>#Requires kann wie alle anderen Direktiven nicht bedingt ausgeführt werden.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="VerCompare.htm">VerCompare</a>, <a href="_ErrorStdOut.htm">#ErrorStdOut</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Bewirkt, dass das Skript nur in v2.0 inklusive Alpha-Versionen läuft.</p>
+<pre>#Requires AutoHotkey v2.0-a
+MsgBox "Dieses Skript läuft nur in v2.0 inklusive Alpha-Versionen."</pre>
+</div>
+
+<div class="ex" id="ExUpper">
+<p><a class="ex_number" href="#ExUpper"></a> Bewirkt, dass das Skript nur in v2.0 inklusive Vorabversionen läuft.</p>
+<pre>#Requires AutoHotkey &gt;=2.0- &lt;2.1</pre>
+</div>
+
+<div class="ex" id="ExBuild">
+<p><a class="ex_number" href="#ExBuild"></a> Bewirkt, dass das Skript nur mit einem 64-Bit-Interpreter (EXE) läuft.</p>
+<pre>#Requires AutoHotkey 64-bit</pre>
+</div>
+
+<div class="ex" id="ExVerBuild">
+<p><a class="ex_number" href="#ExVerBuild"></a> Bewirkt, dass das Skript nur mit einem 64-Bit-Interpreter (EXE) der Version 2.0-rc.2 oder höher läuft.</p>
+<pre>#Requires AutoHotkey v2.0-rc.2 64-bit</pre>
+</div>
+
+</body>
+</html>

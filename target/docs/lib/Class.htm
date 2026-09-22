@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Class-Objekt - Methoden &amp; Eigenschaften | AutoHotkey v2</title>
+<meta name="description" content="Ein Class-Objekt repräsentiert eine Klassendefinition; es enthält statische Methoden und Eigenschaften." />
+<meta name="ahk:equiv-v1" content="index.htm" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>Class-Objekt</h1>
+<pre class="NoIndent">class Class extends Object</pre>
+
+<p>Ein <strong>Class</strong>-Objekt repräsentiert eine Klassendefinition; es enthält statische Methoden und Eigenschaften.</p>
+<p>Jedes Klassenobjekt <a href="../Objects.htm#Custom_Objects">basiert auf</a> der Klasse, die es erweitert, oder auf <a href="Object.htm">Object</a>, falls nicht angegeben. Das globale Klassenobjekt <code>Object</code> basiert auf <code>Class.Prototype</code>, das wiederum auf <code>Object.Prototype</code> basiert, so dass Klassen Methoden und Eigenschaften von jedem dieser Basisobjekte erben können.</p>
+<p>"Statische" Methoden und Eigenschaften sind alle Methoden und Eigenschaften, die dem Klassenobjekt selbst gehören (und daher nicht für eine bestimmte Instanz gelten), während Methoden und Eigenschaften für Instanzen der Klasse dem <a href="#Prototype">Prototyp</a> der Klasse gehören.</p>
+<p>"ClassObj" wird hier stellvertretend für ein beliebiges Klassenobjekt verwendet, da "Class" die Klasse selbst ist. Normalerweise wird auf ein Klassenobjekt via Name verwiesen, der in dessen <a href="../Objects.htm#Custom_Classes">Klassendefinition</a> angegeben ist.</p>
+
+<h2 id="toc">Inhaltsverzeichnis</h2>
+<ul class="indent">
+  <li><a href="#StaticMethods">Statische Methoden</a>:
+    <ul>
+      <li><a href="#StaticCall">Call</a>: Erstellt ein neues Class-Objekt.</li>
+    </ul>
+  </li>
+  <li><a href="#Methods">Methoden</a>:
+    <ul>
+      <li><a href="#Call">Call</a>: Konstruiert eine neue Instanz der Klasse.</li>
+    </ul>
+  </li>
+  <li><a href="#Properties">Eigenschaften</a>:
+    <ul>
+      <li><a href="#Prototype">Prototype</a>: Liefert oder setzt das Objekt, auf dem alle Instanzen der Klasse basieren.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="StaticMethods">Statische Methoden</h2>
+
+<div class="methodShort" id="StaticCall"><h3>Call</h3>
+<p>Erstellt ein neues Class-Objekt ohne Prototyp.</p>
+<pre class="Syntax">ClassObj := Class()
+ClassObj := Class.<span class="func">Call</span>()</pre>
+<p><span class="ver">[v2.1-alpha.3+]</span>: Erstellt ein neues Class-Objekt basierend auf <em>BasisKlasse</em> oder Object.</p>
+<pre class="Syntax">ClassObj := Class(<span class="optional">Name, BasisKlasse, Args*</span>)
+ClassObj := Class(<span class="optional">BasisKlasse, Args*</span>)
+ClassObj := Class.<span class="func">Call</span>(<span class="optional">Name, BasisKlasse, Args*</span>)
+ClassObj := Class.<span class="func">Call</span>(<span class="optional">BasisKlasse, Args*</span>)</pre>
+<dl>
+  <dt>Name</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn weggelassen, wird standardmäßig eine leere Zeichenkette verwendet. Andernfalls geben Sie einen Klassennamen an, den Sie <code>ClassObj.Prototype.__Class</code> zuweisen möchten.</p>
+  </dd>
+  <dt>BasisKlasse</dt>
+  <dd>
+    <p>Typ: Klasse</p>
+    <p>Wenn weggelassen, wird standardmäßig Object verwendet. Andernfalls geben Sie die Basisklasse an. <code>ClassObj.Base</code> wird auf diesen Wert gesetzt, während <code>ClassObj.Prototype.Base</code> auf <code>BasisKlasse.Prototype</code> gesetzt wird.</p>
+  </dd>
+  <dt>Args*</dt>
+  <dd>
+    <p>Falls angegeben, werden alle anderen Parameter an <a href="../Objects.htm#static__New">static __New</a> übergeben, wie in <code>ClassObj.__New(Args*)</code>.</p>
+  </dd>
+</dl>
+<p class="note"><strong>Hinweis:</strong> Dies gilt für den direkten Aufruf von "Class" selbst, nicht für den <a href="#Call">Aufruf von Klassen</a>.</p>
+<p><code>Class()</code> oder <code>Class.Call()</code> kann verwendet werden, um ein neues Class-Objekt basierend auf <code>Class.Prototype</code> zu konstruieren. Dieses neue Objekt hat jedoch zunächst keine Call-Methode, da es keine Unterklasse von <a href="Object.htm">Object</a> ist. Es kann zu einer Unterklasse von Object durch Zuweisung an <a href="Object.htm#Base">Base</a> gemacht werden, oder die Call-Methode kann reimplementiert oder aus einer anderen Klasse kopiert werden. Außerdem muss ein <a href="#Prototype">Prototyp</a> erstellt und der Klasse zugewiesen werden, bevor sie mit der Standard-Call-Methode instanziiert werden kann.</p>
+<p><span class="ver">[v2.1-alpha.3+]</span>: <code>Class()</code> oder <code>Class.Call()</code> kann mit Parametern aufgerufen werden. Aus Gründen der Abwärtskompatibilität verhält es sich wie im Absatz oben beschrieben, wenn die Parameteranzahl Null ist. Andernfalls (auch wenn ein Parameter explizit <code>unset</code> ist) wird automatisch ein Prototyp basierend auf <code>BasisKlasse.Prototype</code> erstellt. Dadurch können Skripte während der Ausführung Prototypobjekte erstellen, die auf anderen nativen Typen als Object basieren, z.B. Map und Array.</p>
+<p>Ein Anwendungsbeispiel ist die <a href="../Structs.htm#defprop">Erstellung einer Strukturdefinition während der Skriptausführung</a>.</p>
+</div>
+
+<h2 id="Methods">Methoden</h2>
+
+<div class="methodShort" id="Call"><h3>Call</h3>
+<p>Konstruiert eine neue Instanz der Klasse.</p>
+<pre class="Syntax">Obj := ClassObj(Params*)
+Obj := ClassObj.<span class="func">Call</span>(Params*)</pre>
+<p>Diese statische Methode wird typischerweise von der <a href="Object.htm">Object</a>-, <a href="Array.htm">Array</a>- oder <a href="Map.htm">Map</a>-Klasse geerbt. Sie führt die folgenden Funktionen aus:</p>
+<ul>
+  <li>Speicher reservieren und die binäre Struktur des Objekts initialisieren, was vom nativen Typ des Objekts abhängt (z.B. ob es ein Array oder Map ist, oder ob es nur ein Object ist).</li>
+  <li>Die Basis des neuen Objekts auf <a href="#Prototype">ClassObj.Prototype</a> setzen.</li>
+  <li>Die __Init-Methode des neuen Objekts aufrufen, falls sie eine hat. Diese Methode wird automatisch via Klassendefinitionen erzeugt; sie enthält alle im Klassenkörper definierten Instanzvariableninitialisierer.</li>
+  <li>Die __New-Methode des neuen Objekts aufrufen, falls sie eine hat. Alle an Call übergebenen Parameter werden an __New weitergeleitet.</li>
+  <li>Das neue Objekt zurückgeben.</li>
+</ul>
+<p>Call kann innerhalb einer Klassendefinition durch Definieren einer statischen Methode überschrieben werden, z.B. <code>static Call()</code>. Auf diese Weise können Klassen die Konstruktion neuer Instanzen ändern oder verhindern.</p>
+<p>Dies ist eine statische Methode insofern, dass sie zu einer Klasse (z.B. Object) gehört, gleichzeitig aber auch eine Instanzmethode des Klassenobjekts, das eine Instanz von Class ist. Die Class-Klasse selbst hat eine <a href="#StaticCall">statische Call-Methode</a>. Mit anderen Worten, man kann <code>Class()</code> oder <code>Class.Call()</code> aufrufen, um ein neues Klassenobjekt während der Skriptausführung zu erstellen.</p>
+</div>
+
+<h2 id="Properties">Eigenschaften</h2>
+
+<div class="methodShort" id="Prototype"><h3>Prototype</h3>
+<p>Liefert oder setzt das Objekt, auf dem alle Instanzen der Klasse basieren.</p>
+<pre class="Syntax">Proto := ClassObj.<span class="func">Prototype</span></pre>
+<pre class="Syntax">ClassObj.<span class="func">Prototype</span> := Proto</pre>
+<p>Der Prototyp der Klasse enthält standardmäßig alle Instanzmethoden und dynamischen Eigenschaften, die in der Klassendefinition definiert sind, und kann verwendet werden, um Referenzen zu Methoden oder Eigenschafts-Getter/Setter abzurufen oder neue zu definieren. Das Skript kann zudem neue Werteigenschaften definieren, die als Standardeigenschaftswerte für alle Instanzen dienen.</p>
+<p>Der Prototyp einer Klasse basiert normalerweise auf dem Prototyp ihrer Basisklasse, folglich ist <code>ClassObj.Prototype.base == ClassObj.base.Prototype</code>.</p>
+<p>Prototype wird automatisch als eigene Eigenschaft eines Klassenobjekts, das via Klassendefinition erzeugt wurde, definiert.</p>
+<p><span class="ver">[v2.1-alpha.28+]</span>: Aus Gründen der Sicherheit und Effizienz haben <a href="../Structs.htm#classdef">Strukturklassen</a> einen schreibgeschützten Prototyp.</p>
+<p><a href="#Call">ClassObj()</a> und <a href="../Variables.htm#is">Wert is ClassObj</a> setzen voraus, dass die Prototype-Eigenschaft eine Werteigenschaft ist, die direkt zur Klasse gehört, es sei denn, sie ist eine <a href="Struct.htm">Struct</a>-Klasse. Den Wert dieser Eigenschaft zu ändern, wirkt sich in der Regel nur auf diese beiden Operationen und auf direkte Referenzen zu <code>ClassObj.Prototype</code> aus. Zuvor erstellte und anderweitig konstruierte Objekte sind in der Regel nicht davon betroffen, allerdings werden sie eventuell nicht mehr als Instanzen der Klasse erkannt.</p>
+<p>Bis auf einige Ausnahmen konstruieren interne Funktionen Objekte gewöhnlich auf Basis eines bekannten Prototyps und sind daher von Änderungen an der Prototype-Eigenschaft nicht betroffen.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>ControlGetStyle / ControlGetExStyle - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die Funktionen ControlGetStyle und ControlGetExStyle geben einen Integer zurück, der den Style bzw. erweiterten Style eines Steuerelements repräsentiert." />
+<meta name="ahk:equiv-v1" content="lib/ControlGet.htm#Style" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>ControlGetStyle / ControlGetExStyle</h1>
+
+<p>Gibt einen Integer zurück, der den Style oder erweiterten Style eines Steuerelements repräsentiert.</p>
+
+<pre class="Syntax">Style := <span class="func">ControlGetStyle</span>(StrlmntID <span class="optional">, FensterTitel, FensterText, AusnahmeTitel, AusnahmeText</span>)
+ExStyle := <span class="func">ControlGetExStyle</span>(StrlmntID <span class="optional">, FensterTitel, FensterText, AusnahmeTitel, AusnahmeText</span>)</pre>
+
+<h2 id="Parameters">Parameter</h2>
+<dl>
+    <dt>StrlmntID</dt>
+    <dd>
+        <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a>, <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#objects">Objekt</a></p>
+        <p>ClassNN, Text oder HWND des Steuerelements, oder ein Objekt mit einer Hwnd-Eigenschaft. Einzelheiten finden Sie unter <a href="../misc/ControlID.htm">Steuerelementidentifikatoren</a>.</p>
+    </dd>
+    <dt>FensterTitel, FensterText, AusnahmeTitel, AusnahmeText</dt>
+    <dd>
+        <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a>, <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#objects">Objekt</a></p>
+        <p>Wenn jeder dieser Parameter leer ist oder weggelassen wird, wird das <a href="../misc/WinTitle.htm#LastFoundWindow">Zuletzt Gefundene Fenster</a> verwendet. Andernfalls geben Sie für <em>FensterTitel</em> einen <a href="../misc/WinTitle.htm">Fenstertitel oder andere Kriterien</a> zur Identifizierung des Zielfensters und/oder für <em>FensterText</em> eine Teilzeichenkette aus einem Textelement des Zielfensters an (wie von <a href="../Program.htm#Window_Spy">Window Spy</a> angezeigt).</p>
+        <p><em>AusnahmeTitel</em> und <em>AusnahmeText</em> können verwendet werden, um ein oder mehrere Fenster anhand ihres Titels oder Textes auszuschließen. Ihre Angabe ähnelt der von <em>FensterTitel</em> und <em>FensterText</em>, außer dass <em>AusnahmeTitel</em> keine anderen Kriterien als den Fenstertitel erkennt.</p>
+        <p>Fenstertitel und -texte sind Groß-/Kleinschreibung-sensitiv. Standardmäßig werden versteckte Fenster nicht erkannt und versteckte Textelemente erkannt, was mit <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a> bzw. <a href="DetectHiddenText.htm">DetectHiddenText</a> geändert werden kann. Verwendet man <a href="../misc/WinTitle.htm#ahk_id">reine HWNDs</a>, werden versteckte Fenster immer erkannt. Standardmäßig kann ein Fenstertitel den angegebenen <em>FensterTitel</em> oder <em>AusnahmeTitel</em> an beliebiger Stelle enthalten, um eine Übereinstimmung zu sein, was mit <a href="SetTitleMatchMode.htm">SetTitleMatchMode</a> geändert werden kann.</p>
+    </dd>
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+<p>Diese Funktionen geben einen Integer zurück, der den Style oder erweiterten Style des Steuerelements repräsentiert.</p>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Es wird ein <a href="Error.htm#TargetError">TargetError</a> ausgelöst, wenn das Fenster oder Steuerelement nicht gefunden werden konnte.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Diese Funktion funktioniert am besten mit den gängigen oder vordefinierten Steuerelementen von Microsoft. Einige Anwendungen verwenden jedoch benutzerdefinierte oder modifizierte Steuerelemente – in diesem Fall funktioniert die Funktion möglicherweise nicht wie erwartet.</p>
+<p>Weitere Styles finden Sie unter <a href="../misc/Styles.htm">Fenster- und Steuerelement-Styles</a>.</p>
+<p>ControlGetExStyle ruft nur generische erweiterte Styles ab, wie z.B. WS_EX_CLIENTEDGE (0x200). Um steuerelementspezifische erweiterte Styles abzurufen, verwenden Sie <a href="SendMessage.htm">SendMessage</a>. Zum Beispiel würde <code>SendMessage(0x1037, 0, 0, "SysListView321")</code> (0x1037 ist <a href="https://learn.microsoft.com/windows/win32/controls/lvm-getextendedlistviewstyle">LVM_GETEXTENDEDLISTVIEWSTYLE</a>) den erweiterten Style eines ListView-Steuerelements zurückgeben.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="ControlSetStyle.htm">ControlSetStyle / ControlSetExStyle</a>, <a href="WinGetStyle.htm">WinGetStyle / WinGetExStyle</a>, <a href="../misc/Styles.htm">Styles-Tabelle</a>, <a href="Control.htm">Control-Funktionen</a></p>
+
+</body>
+</html>

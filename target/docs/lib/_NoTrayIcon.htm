@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>#NoTrayIcon - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die #NoTrayIcon-Direktive deaktiviert die Anzeige des Tray-Symbols." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>#NoTrayIcon</h1>
+
+<p>Deaktiviert die Anzeige des <a href="../Program.htm#tray-icon">Tray-Symbols</a>.</p>
+
+<pre class="Syntax"><span class="func">#NoTrayIcon</span></pre>
+<p>Diese Direktive irgendwo im Skript verhindert, dass das Tray-Symbol beim Start des Skripts angezeigt wird (auch dann, wenn das Skript kompiliert ist).</p>
+<p>Wenn Sie diese Direktive in einem Skript mit Hotkeys verwenden, ist es ratsam, einen Hotkey an die <a href="ExitApp.htm">ExitApp</a>-Funktion zu binden. Andernfalls gäbe es keine einfache Möglichkeit, das Programm zu beenden (ohne dabei den Computer neu zu starten oder den Prozess zu beenden). Zum Beispiel: <code>#x::ExitApp</code>.</p>
+<p>Das Tray-Symbol kann jederzeit während der Skriptausführung ein- oder ausgeblendet werden, indem Sie <a href="../Variables.htm#IconHidden">A_IconHidden</a> einen True- oder False-Wert zuweisen. Wenn Sie <code><a href="../Variables.htm#IconHidden">A_IconHidden</a> := true</code> ganz oben im Skript verwenden, werden Sie feststellen, dass das Tray-Symbol beim Start des Skripts kurz sichtbar ist. Um das zu verhindern, können Sie stattdessen #NoTrayIcon verwenden.</p>
+<p>Die interne Variable <strong>A_IconHidden</strong> enthält 1, wenn das Tray-Symbol gerade versteckt ist, andernfalls 0. Sie können ihr auch einen Wert zuweisen, um das Symbol ein- oder auszublenden.</p>
+
+<p>#NoTrayIcon kann wie alle anderen Direktiven nicht bedingt ausgeführt werden.</p>
+<h2 id="Related">Siehe auch</h2>
+<p><a href="../Program.htm#tray-icon">Tray-Symbol</a>, <a href="TraySetIcon.htm">TraySetIcon</a>, <a href="../Variables.htm#IconHidden">A_IconHidden</a>, <a href="../Variables.htm#IconTip">A_IconTip</a>, <a href="ExitApp.htm">ExitApp</a></p>
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Bewirkt, dass das Skript ohne ein Tray-Symbol gestartet wird.</p>
+<pre>#NoTrayIcon</pre>
+</div>
+
+</body>
+</html>

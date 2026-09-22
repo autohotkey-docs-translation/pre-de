@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>IniDelete - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die IniDelete-Funktion löscht einen Wert aus einer INI-Datei im Standardformat." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>IniDelete</h1>
+
+<p>Löscht einen Wert aus einer INI-Datei im Standardformat.</p>
+
+<pre class="Syntax"><span class="func">IniDelete</span> DateiName, Sektion <span class="optional">, Schlüssel</span></pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>DateiName</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Name der INI-Datei. Wenn kein absoluter Pfad angegeben ist, wird die Datei im <a href="../Variables.htm#WorkingDir">A_WorkingDir</a>-Verzeichnis vermutet.</p>
+  </dd>
+
+  <dt>Sektion</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Name einer Sektion in der INI-Datei, erkennbar an den eckigen Klammern (die Klammern müssen in diesem Parameter weggelassen werden).</p>
+  </dd>
+
+  <dt>Schlüssel</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn weggelassen, wird die komplette Sektion gelöscht. Andernfalls geben Sie den Namen eines Schlüssels in der INI-Datei an.</p>
+  </dd>
+
+</dl>
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Bei Misserfolg wird ein <a href="Error.htm#OSError">OSError</a> ausgelöst.</p>
+<p><a href="../Variables.htm#LastError">A_LastError</a> wird immer auf das Ergebnis der Systemfunktion GetLastError() gesetzt, unabhängig davon, ob eine Ausnahme ausgelöst wird oder nicht.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Eine typische INI-Datei sieht wie folgt aus:</p>
+<pre class="no-highlight">[SektionName]
+Schlüssel=Wert</pre>
+<h2 id="Related">Siehe auch</h2>
+<p><a href="IniRead.htm">IniRead</a>, <a href="IniWrite.htm">IniWrite</a>, <a href="RegDelete.htm">RegDelete</a>, <a href="RegDeleteKey.htm">RegDeleteKey</a></p>
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Löscht ein Schlüssel-Wert-Paar in Sektion2 aus einer INI-Datei im Standardformat.</p>
+<pre>IniDelete "C:\Temp\MeineDatei.ini", "Sektion2", "Schlüssel"</pre>
+</div>
+
+</body>
+</html>

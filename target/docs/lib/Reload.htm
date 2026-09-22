@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Reload - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die Reload-Funktion ersetzt die aktuell laufende Instanz des Skripts mit einer neuen Instanz." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>Reload</h1>
+
+<p>Ersetzt die aktuell laufende Instanz des Skripts mit einer neuen Instanz.</p>
+
+<pre class="Syntax"><span class="func">Reload</span></pre>
+<p>Diese Funktion ist für Skripte nützlich, die häufig geändert werden. Sie können diese Funktion einem Hotkey zuweisen, um das Skript schnell neu zu starten, nachdem Sie Ihre Änderungen in einem Texteditor abgespeichert haben.</p>
+<p>Standardmäßig kann das Skript auch über das <a href="../Program.htm#tray-icon">Tray-Symbol</a> oder das <a href="../Program.htm#main-window">Hauptfenster</a> neu geladen werden.</p>
+<p>Wenn die Befehlszeilenoption <a href="../Scripts.htm#SlashInclude">/include</a> an die aktuelle Instanz des Skripts übergeben wurde, wird sie automatisch an die neue Instanz übergeben.</p>
+<p>Alle anderen <a href="../Scripts.htm#cmd">Befehlszeilenparameter</a>, die an die aktuelle Instanz des Skripts übergeben wurden, werden nicht an die neue Instanz übergeben. Um solche Parameter zu übergeben, verzichten Sie auf Reload. Verwenden Sie stattdessen <a href="Run.htm">Run</a> in Verbindung mit <a href="../Variables.htm#AhkPath">A_AhkPath</a> und <a href="../Variables.htm#ScriptFullPath">A_ScriptFullPath</a> (und <a href="../Variables.htm#IsCompiled">A_IsCompiled</a>, wenn das Skript kompiliert ist). Ein Reload kann auch durchgeführt werden, indem die Zeichenkette <code class="no-highlight">/restart</code> im ersten Parameter (also direkt nach dem Namen der EXE-Datei) eingefügt wird. Siehe auch: <a href="../Scripts.htm#cmd">Befehlszeilenoptionen und Syntax</a>.</p>
+<p>Der Neustart des Skripts erfolgt in seinem ursprünglichen Arbeitsverzeichnis (also dem Verzeichnis zum Zeitpunkt des ersten Starts). Mit anderen Worten, <a href="SetWorkingDir.htm">SetWorkingDir</a> kann nicht verwendet werden, um das Arbeitsverzeichnis für die neue Instanz zu ändern.</p>
+<p>Wenn das Skript nicht neu geladen werden kann – z.B. wegen eines Syntaxfehlers – wird die Originalinstanz des Skripts weiter ausgeführt. Daher sollten nach der Reload-Funktion Maßnahmen für den Fall eines Misserfolgs ergriffen werden (wie z.B. ein <a href="Return.htm">Return</a>, um die aktuelle Subroutine zu beenden). Damit die Originalinstanz den Misserfolg erkennt, gehen Sie wie folgt vor:</p>
+<pre>Reload
+Sleep 1000 <em>; Bei Erfolg wird Reload diese Instanz während des Sleeps schließen, wodurch die folgende Zeile nie erreicht wird.</em>
+Ergebnis := MsgBox("Das Skript konnte nicht neu geladen werden. Möchten Sie es editieren?",, 4)
+if Ergebnis = "Yes"
+    Edit
+return</pre>
+<p>Ältere Instanzen des Skripts werden mit einem Mechanismus identifiziert, der auch bei <a href="_SingleInstance.htm">#SingleInstance</a> zum Einsatz kommt, einschließlich derselben <a href="_SingleInstance.htm#Limitations">Einschränkungen</a>.</p>
+<p>Wenn das Skript mehrere Instanzen von sich selbst zulässt, kann es vorkommen, dass Reload die richtige Instanz nicht erkennt. Die einfachste Alternative ist es, eine neue Instanz via <a href="Run.htm">Run</a> zu starten und dann zu beenden. Zum Beispiel:</p>
+<pre>if A_IsCompiled
+    Run Format('"{1}" /force', A_ScriptFullPath)
+else
+    Run Format('"{1}" /force "{2}"', A_AhkPath, A_ScriptFullPath)
+ExitApp</pre>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="Edit.htm">Edit</a></p>
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExHotkey">
+<p><a class="ex_number" href="#ExHotkey"></a> Drücken Sie einen Hotkey, um das Skript neu zu starten.</p>
+<pre>^!r::Reload  <em>; STRG+ALT+R</em></pre>
+</div>
+
+</body>
+</html>

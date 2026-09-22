@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>FileGetAttrib - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die FileGetAttrib-Funktion ermittelt, ob eine Datei oder ein Ordner z.B. schreibgeschützt oder versteckt ist." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>FileGetAttrib</h1>
+
+<p>Ermittelt, ob eine Datei oder ein Ordner z.B. schreibgeschützt oder versteckt ist.</p>
+
+<pre class="Syntax">AttributZkette := <span class="func">FileGetAttrib</span>(<span class="optional">DateiName</span>)</pre>
+
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>DateiName</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Wenn weggelassen, wird die aktuelle Datei der innersten umschlossenen <a href="LoopFiles.htm">Datei-Schleife</a> verwendet. Andernfalls geben Sie den Namen der Zieldatei an. Wenn kein absoluter Pfad angegeben ist, wird die Datei im <a href="../Variables.htm#WorkingDir">A_WorkingDir</a>-Verzeichnis vermutet. Im Gegensatz zu <a href="FileExist.htm">FileExist</a> und <a href="DirExist.htm">DirExist</a> muss dieser Parameter ein tatsächlicher Dateiname sein, kein Suchmuster.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+<p>Diese Funktion gibt die Attribute der Datei oder des Ordners zurück. Diese Zeichenkette ist eine Teilmenge von <code class="no-highlight">RASHNDOCTL</code>, wobei jeder Buchstabe die folgende Bedeutung hat:</p>
+<ul>
+  <li>R = READONLY (schreibgeschützt)</li>
+  <li>A = ARCHIVE (archiviert)</li>
+  <li>S = SYSTEM (Systemdatei)</li>
+  <li>H = HIDDEN (versteckt)</li>
+  <li>N = NORMAL</li>
+  <li>D = DIRECTORY (Verzeichnis)</li>
+  <li>O = OFFLINE</li>
+  <li>C = COMPRESSED (komprimiert)</li>
+  <li>T = TEMPORARY (temporär)</li>
+  <li>L = REPARSE_POINT (Analysepunkt; i.d.R. eine symbolische Verknüpfung)</li>
+</ul>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Bei Misserfolg wird ein <a href="Error.htm#OSError">OSError</a> ausgelöst.</p>
+<p><a href="../Variables.htm#LastError">A_LastError</a> wird auf das Ergebnis der Systemfunktion GetLastError() gesetzt.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Um zu prüfen, ob ein bestimmtes Attribut in der abgerufenen Zeichenkette vorhanden ist, siehe <a href="#ExIf">Beispiel #2</a> unten.</p>
+<p>Es ist auch möglich, den 8.3-Kurznamen einer Datei abzurufen. Zum Beispiel:</p>
+<pre><a href="LoopFiles.htm">Loop Files</a>, "C:\Meine Dokumente\Adressliste.txt"
+    KurzPfadName := A_LoopFileShortPath  <em>; Ergebnis: C:\MEINE~1\ADRESS~1.TXT</em></pre>
+<p>Mit einem ähnlichen Verfahren kann der lange Name eines 8.3-Kurznamen ermittelt werden.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="FileExist.htm">FileExist</a>, <a href="DirExist.htm">DirExist</a>, <a href="FileSetAttrib.htm">FileSetAttrib</a>, <a href="FileGetTime.htm">FileGetTime</a>, <a href="FileSetTime.htm">FileSetTime</a>, <a href="FileGetSize.htm">FileGetSize</a>, <a href="FileGetVersion.htm">FileGetVersion</a>, <a href="LoopFiles.htm">Datei-Schleife</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Speichert die Attributbuchstaben eines Verzeichnisses in <var>AusgabeVar</var>. Beachten Sie, dass existierende Verzeichnisse immer den Attributbuchstaben D haben.</p>
+<pre>AusgabeVar := FileGetAttrib("C:\Neuer Ordner")</pre>
+</div>
+<div class="ex" id="ExIf">
+<p><a class="ex_number" href="#ExIf"></a> Prüft, ob das Hidden-Attribut in der abgerufenen Zeichenkette vorhanden ist.</p>
+<pre>if InStr(FileGetAttrib("C:\Meine Datei.txt"), "H")
+    MsgBox "Die Datei ist versteckt."</pre>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>WinWaitClose - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die WinWaitClose-Funktion wartet, bis keine passenden Fenster mehr gefunden werden." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>WinWaitClose</h1>
+
+<p>Wartet, bis keine passenden Fenster mehr gefunden werden.</p>
+
+<pre class="Syntax">Boolesch := <span class="func">WinWaitClose</span>(<span class="optional">FensterTitel, FensterText, Zeitlimit, AusnahmeTitel, AusnahmeText</span>)</pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>FensterTitel, FensterText, AusnahmeTitel, AusnahmeText</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a>, <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#objects">Objekt</a></p>
+    <p>Wenn jeder dieser Parameter leer ist oder weggelassen wird, wird das <a href="../misc/WinTitle.htm#LastFoundWindow">Zuletzt Gefundene Fenster</a> verwendet. Andernfalls geben Sie für <em>FensterTitel</em> einen <a href="../misc/WinTitle.htm">Fenstertitel oder andere Kriterien</a> zur Identifizierung des Zielfensters und/oder für <em>FensterText</em> eine Teilzeichenkette aus einem Textelement des Zielfensters an (wie von <a href="../Program.htm#Window_Spy">Window Spy</a> angezeigt).</p>
+    <p><em>AusnahmeTitel</em> und <em>AusnahmeText</em> können verwendet werden, um ein oder mehrere Fenster anhand ihres Titels oder Textes auszuschließen. Ihre Angabe ähnelt der von <em>FensterTitel</em> und <em>FensterText</em>, außer dass <em>AusnahmeTitel</em> keine anderen Kriterien als den Fenstertitel erkennt.</p>
+    <p>Fenstertitel und -texte sind Groß-/Kleinschreibung-sensitiv. Standardmäßig werden versteckte Fenster nicht erkannt und versteckte Textelemente erkannt, was mit <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a> bzw. <a href="DetectHiddenText.htm">DetectHiddenText</a> geändert werden kann. Standardmäßig kann ein Fenstertitel den angegebenen <em>FensterTitel</em> oder <em>AusnahmeTitel</em> an beliebiger Stelle enthalten, um eine Übereinstimmung zu sein, was mit <a href="SetTitleMatchMode.htm">SetTitleMatchMode</a> geändert werden kann.</p>
+  </dd>
+
+  <dt>Zeitlimit</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#numbers">Float</a></p>
+    <p>Wenn weggelassen, wird die Funktion unendlich lang warten. Andernfalls geben Sie die maximale Wartezeit in Sekunden an. Um auf einen Bruchteil einer Sekunde zu warten, geben Sie eine Floating-Point-Zahl an, z.B. 0.25, um maximal 250 Millisekunden zu warten.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#boolean">Integer (boolesch)</a></p>
+<p>Diese Funktion gibt 0 (false) zurück, wenn die Funktion das Zeitlimit überschritten hat, andernfalls 1 (true).</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Die Funktion hört bereits auf zu warten, wenn keine passenden Fenster gefunden werden, und nicht erst, wenn <em>Zeitlimit</em> abgelaufen ist. In diesem Fall wird sofort 1 zurückgegeben und die Skriptausführung fortgesetzt. Umgekehrt kann die Funktion nach der Schließung eines passenden Fensters weiter warten, bis keine passenden Fenster mehr gefunden werden.</p>
+<p>Wenn für <em>FensterTitel</em> ein <a href="../misc/WinTitle.htm#ahk_id">reines HWND</a> (als <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Objects.htm">Objekt</a> mit einer Hwnd-Eigenschaft) angegeben wird, werden versteckte Fenster nur erkannt, wenn <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a> verwendet wird. Dies gilt nur für <a href="WinWait.htm">WinWait</a> und WinWaitClose; bei anderen fensterspezifischen Funktionen bewirkt die Angabe eines reinen HWND-Wertes, dass versteckte Fenster immer erkannt werden, unabhängig von DetectHiddenWindows.</p>
+<p>Da <code>"A"</code> mit dem jeweils aktiven Fenster übereinstimmt, wartet <code>WinWaitClose "A"</code> normalerweise unendlich lang. Um stattdessen auf die Schließung des aktuell aktiven Fensters zu warten, geben Sie wie folgt dessen Titel oder HWND an:</p>
+<pre>WinWaitClose WinExist("A")</pre>
+<p>WinWaitClose aktualisiert das <a href="../misc/WinTitle.htm#LastFoundWindow">Zuletzt Gefundene Fenster</a>, wenn es ein passendes Fenster findet. Dies kann z.B. verwendet werden, um das Fenster zu identifizieren oder damit zu arbeiten, nachdem die Funktion das Zeitlimit überschritten hat. Zum Beispiel:</p>
+<pre>
+Gui("", "Testfenster " Random()).Show("w300 h50")  <em>; Testfenster anzeigen.</em>
+if !WinWaitClose("Test",, 5)  <em>; Innerhalb von 5 Sekunden schließen.</em>
+{
+    MsgBox "Fenster noch nicht geschlossen: " WinGetTitle()
+    WinClose  <em>; Das von WinWaitClose gefundene Fenster schließen.</em>
+}
+</pre>
+<p>Während die Funktion wartet, können neue <a href="../misc/Threads.htm">Threads</a> via <a href="../Hotkeys.htm">Hotkeys</a>, <a href="Menu.htm">benutzerdefinierte Menüpunkte</a> oder <a href="SetTimer.htm">Timer</a> gestartet werden.</p>
+<p>Wenn ein anderer <a href="../misc/Threads.htm">Thread</a> den Inhalt der Variablen ändert, die für die Parameter dieser Funktion verwendet wurden, sieht die Funktion die Änderung nicht, d.h. die Funktion verwendet weiterhin den Titel und Text, die ursprünglich in den Variablen vorhanden waren, als die Funktion zu warten begann.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="WinClose.htm">WinClose</a>, <a href="WinWait.htm">WinWait</a>, <a href="WinWaitActive.htm">WinWaitActive</a>, <a href="WinExist.htm">WinExist</a>, <a href="WinActive.htm">WinActive</a>, <a href="ProcessWaitClose.htm">ProcessWaitClose</a>, <a href="SetTitleMatchMode.htm">SetTitleMatchMode</a>, <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a></p>
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Öffnet Notepad, wartet bis es existiert und wartet dann auf seine Schließung.</p>
+<pre>Run "notepad.exe"
+WinWait "Unbenannt - Editor"
+WinWaitClose <em>; Verwendet das von WinWait gefundene Fenster.</em>
+MsgBox "Notepad wurde geschlossen."</pre>
+</div>
+
+</body>
+</html>

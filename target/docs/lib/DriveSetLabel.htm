@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>DriveSetLabel - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die DriveSetLabel-Funktion ändert die Volumebezeichnung eines bestimmten Laufwerks." />
+<meta name="ahk:equiv-v1" content="lib/Drive.htm#Label" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>DriveSetLabel</h1>
+
+<p>Ändert die Volumebezeichnung eines bestimmten Laufwerks.</p>
+
+<pre class="Syntax"><span class="func">DriveSetLabel</span> Laufwerk <span class="optional">, NeueBezeichnung</span></pre>
+
+<h2 id="Parameters">Parameter</h2>
+<dl>
+    <dt>Laufwerk</dt>
+    <dd>
+        <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+        <p>Der Laufwerksbuchstabe, gefolgt von einem Doppelpunkt und optional einem umgekehrten Schrägstrich (kann auch mit UNC-Pfaden und zugeordneten Laufwerken funktionieren).</p>
+    </dd>
+    <dt>NeueBezeichnung</dt>
+    <dd>
+        <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+        <p>Wenn weggelassen, bekommt das Laufwerk eine leere Bezeichnung zugewiesen. Andernfalls geben Sie die neue Bezeichnung an, die gesetzt werden soll.</p>
+    </dd>
+</dl>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Bei Misserfolg wird eine Ausnahme ausgelöst.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="DriveGetLabel.htm">DriveGetLabel</a>, <a href="Drive.htm">Drive-Funktionen</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Ändert die Volumebezeichnung des C-Laufwerks.</p>
+<pre>DriveSetLabel "C:", "Seagate200"</pre>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>ListHotkeys - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die ListHotkeys-Funktion zeigt an, welche Hotkeys vom aktuellen Skript verwendet werden, ob deren Subroutinen gerade laufen und ob sie einen Hook verwenden." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>ListHotkeys</h1>
+
+<p>Zeigt an, welche Hotkeys vom aktuellen Skript verwendet werden, ob deren Subroutinen gerade laufen und ob sie den <a href="InstallKeybdHook.htm">Tastatur</a>- oder <a href="InstallMouseHook.htm">Maus</a>-Hook verwenden.</p>
+
+<pre class="Syntax"><span class="func">ListHotkeys</span></pre>
+<p>Diese Funktion entspricht der Auswahl des Menüpunkts "View-&gt;Hotkeys" im <a href="../Program.htm#main-window">Hauptfenster</a>.</p>
+<p>Wenn ein Hotkey via <a href="Hotkey.htm">Hotkey</a>-Funktion deaktiviert wurde, wird er als OFF oder PART aufgelistet (PART bedeutet, dass einige <a href="Hotkey.htm#variant">Varianten</a> des Hotkeys noch aktiv sind).</p>
+<p>Wenn eine der Hotkey-Varianten einen <a href="_InputLevel.htm">Inputlevel</a> ungleich 0 hat, wird der Level (oder Mindest- und Höchstlevel) angezeigt.</p>
+<p>Wenn Subroutinen eines Hotkeys gerade ausgeführt werden, wird die Gesamtzahl der Threads für diesen Hotkey angezeigt.</p>
+<p>Außerdem wird der Typ des Hotkeys angezeigt, der einer der folgenden sein kann:</p>
+<ul>
+  <li>reg: Der Hotkey wurde mit der Systemfunktion RegisterHotKey() implementiert.</li>
+  <li>reg(no): Wie oben, außer dass dieser Hotkey inaktiv ist (weil er nicht unterstützt wird, deaktiviert oder <a href="Suspend.htm">suspendiert</a> ist).</li>
+  <li>k-hook: Der Hotkey wurde via <a href="InstallKeybdHook.htm">Tastatur-Hook</a> implementiert.</li>
+  <li>m-hook: Der Hotkey wurde via <a href="InstallMouseHook.htm">Maus-Hook</a> implementiert.</li>
+  <li>2-hooks: Der Hotkey benötigt beide der oben genannten Hooks.</li>
+  <li>joypoll: Der Hotkey wurde durch regelmäßiges Abfragen des Controllers implementiert.</li>
+</ul>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="InstallKeybdHook.htm">InstallKeybdHook</a>, <a href="InstallMouseHook.htm">InstallMouseHook</a>, <a href="_UseHook.htm">#UseHook</a>, <a href="KeyHistory.htm">KeyHistory</a>, <a href="ListLines.htm">ListLines</a>, <a href="ListVars.htm">ListVars</a>, <a href="_MaxThreadsPerHotkey.htm">#MaxThreadsPerHotkey</a>, <a href="A_MaxHotkeysPerInterval.htm">A_MaxHotkeysPerInterval</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Zeigt Informationen über die vom aktuellen Skript verwendeten Hotkeys an.</p>
+<pre>ListHotkeys</pre>
+</div>
+
+</body>
+</html>

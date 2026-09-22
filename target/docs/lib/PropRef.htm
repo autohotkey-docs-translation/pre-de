@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>PropRef - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die PropRef-Funktion erstellt eine virtuelle Referenz, die auf eine Eigenschaft eines Objekts verweist." />
+<meta name="ahk:equiv-v1" content="index.htm" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>PropRef <span class="ver">[v2.1-alpha.10+]</span></h1>
+
+<p>Erstellt eine <a href="../Functions.htm#virtual-references">virtuelle Referenz</a>, die auf eine Eigenschaft eines Objekts verweist.</p>
+
+<pre class="Syntax">Ref := <span class="func">PropRef</span>(Obj, Name)</pre>
+<p><code>PropRef</code> selbst ist eine <a href="Class.htm">Klasse</a>, die von <code>Any</code> abgeleitet ist.</p>
+
+<h2 id="Parameters">Parameter</h2>
+<dl>
+  <dt>Obj</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#objects">Objekt</a> oder <a href="ComValue.htm">ComValue</a></p>
+    <p>Beliebiges Objekt.</p>
+  </dd>
+  <dt>Name</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Der Name der Eigenschaft.</p>
+  </dd>
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: PropRef</p>
+<p>Diese Funktion gibt eine <a href="../Functions.htm#virtual-references">virtuelle Referenz</a> zurück, die auf die Eigenschaft verweist – also ein Objekt mit einer __Value-Eigenschaft zum Abrufen oder Setzen des Wertes der Zieleigenschaft. Diese Referenz kann an einen ByRef-Parameter übergeben werden.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>In den meisten Fällen sollte man diese Klasse nicht direkt verwenden. Besser ist es, den <a href="../Variables.htm#ref">Referenzoperator</a> zu verwenden, um eine Referenz auf eine Eigenschaft abzurufen (über die <a href="Object.htm#__Ref">__Ref-Methode</a>).</p>
+<p>Allerdings kann diese Funktion auch mit <a href="ComValue.htm">ComValue</a> und abgeleiteten Typen verwendet werden, oder um eine benutzerdefinierte __Ref-Implementierung zu umgehen.</p>
+
+</body>
+</html>

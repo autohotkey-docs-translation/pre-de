@@ -1,0 +1,327 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Hotkeys - Definition &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Erfahren Sie mehr über Hotkeys im Allgemeinen, Modifikatorsymbole, kontextabhängige Hotkeys, benutzerdefinierte Kombinationen, Mausrad-Hotkeys, Funktions-Hotkeys, etc." />
+<meta name="keywords" content="hotkey,hotkeys,hot key,hot keys,shortcut,shortcuts,shortcut key,shortcut keys,keyboard shortcut,keyboard shortcuts,button,buttons,click,press,tastenkürzel,tastaturkurzbefehl,schnelltaste,schnelltasten,tastenkombination,tastenkombinationen,taste,tasten,klicken,drücken">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="static/theme.css" rel="stylesheet" />
+<link href="static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="static/content.js" id="content_js"></script>
+<script src="static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>Hotkeys <span class="headnote">(Maus-, Controller- und Tastaturkurzbefehle)</span></h1>
+
+
+<h2 id="toc">Inhaltsverzeichnis</h2>
+<ul>
+  <li><a href="#Intro">Einführung und einfache Beispiele</a></li>
+  <li><a href="#Symbols">Hotkey-Modifikatorsymbole</a></li>
+  <li><a href="#Context">Kontextabhängige Hotkeys</a></li>
+  <li><a href="#combo">Benutzerdefinierte Kombinationen</a></li>
+  <li><a href="#Features">Sonstige Features</a></li>
+  <li><a href="#Wheel">Mausrad-Hotkeys</a></li>
+  <li><a href="#Remarks">Tipps und Hinweise</a></li>
+  <li><a href="#alttab">Alt-Tab-Hotkeys</a></li>
+  <li><a href="#Function">Benannte Funktions-Hotkeys</a></li>
+</ul>
+
+<h2 id="Intro">Einführung und einfache Beispiele</h2>
+<p>Hotkeys werden manchmal auch als Tastaturkurzbefehle bezeichnet, weil sie schnell und einfach eine Aktion auslösen können (eine Aktion wäre z.B. das Starten eines Programms oder eines <a href="misc/Macros.htm">Tastaturmakros</a>). Das folgende Beispiel zeigt, wie Notepad mit dem Hotkey <kbd>Win</kbd>+<kbd>N</kbd> gestartet werden kann. Das Rautezeichen [#] ist ein sogenannter <em>Modifikator</em> und symbolisiert <kbd>Win</kbd>:</p>
+<pre>#n::
+{
+    Run "notepad"
+}</pre>
+<p>Im obigen Beispiel dienen die geschweiften Klammern dazu, einen <a href="Functions.htm">Funktionskörper</a> für den Hotkey zu definieren. Die geschweifte Startklammer kann auf derselben Zeile wie das Doppelpunktpaar stehen, um den <a href="lib/Block.htm#otb">One True Brace (OTB) Style</a> zu unterstützen. Wenn ein Hotkey jedoch nur eine einzige Zeile ausführen muss, kann diese Zeile rechts neben dem Doppelpunktpaar geschrieben werden. Mit anderen Worten, die geschweiften Klammern sind implizit:</p>
+<pre>#n::Run "notepad"</pre>
+<p id="ThisHotkey">Beim Auslösen eines Hotkeys wird der Name des Hotkeys (ohne die Doppelpunkte am Ende) als erster Parameter namens <code>ThisHotkey</code> übergeben. Zum Beispiel:</p>
+<pre>#n::MsgBox ThisHotkey  <em>; Meldet #n</em></pre>
+<p>Bis auf wenige Ausnahmen ähnelt dies der internen Variable <a href="Variables.htm#ThisHotkey">A_ThisHotkey</a>. Der Parametername kann mit einer <a href="#Function">benannten Funktion</a> geändert werden.</p>
+<p>Um zu erreichen, dass ein Hotkey von mehr als einem Modifikator ausgelöst werden kann, müssen diese nebeneinander aufgelistet werden (die Reihenfolge spielt keine Rolle). Das folgende Beispiel verwendet <code class="no-highlight">^!s</code> für <kbd>Strg</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd>:</p>
+<pre>^!s::
+{
+    <a href="lib/Send.htm">Send</a> "Mit freundlichen Grüßen,{enter}Max Mustermann"  <em>; Diese Zeile sendet Tastendrücke an das aktive (vorderste) Fenster.</em>
+}</pre>
+<h2 id="Symbols">Hotkey-Modifikatorsymbole</h2>
+<p>Sie können die folgenden Modifikatorsymbole verwenden, um Hotkeys zu definieren:</p>
+<table class="info fixed">
+  <tr>
+    <th class="center" style="width:30px">Symbol</th>
+    <th abbr="Beschr">Beschreibung</th>
+  </tr>
+  <tr>
+    <td class="center bold">#</td>
+    <td>
+      <p><kbd>Win</kbd> (Windows-Logo-Taste).</p>
+      <p id="win-l">Hotkeys, die <kbd>Win</kbd> enthalten (z.B. #a), warten darauf, bis <kbd>Win</kbd> losgelassen wird, bevor sie einen Text senden, der einen <kbd>L</kbd>-Tastendruck enthält. Dadurch wird verhindert, dass ein <a href="lib/Send.htm">Send</a> in so einem Hotkey den PC unbeabsichtigt sperrt. Dieses Verhalten gilt für alle Sendemodi, außer <a href="lib/SendMode.htm#Play">SendPlay</a> (weil es das nicht braucht), <a href="lib/Send.htm#blind">Blind-Modus</a> und <a href="lib/Send.htm#SendText">Text-Modus</a>.</p>
+      <p class="note"><strong>Hinweis:</strong> Das Drücken eines Hotkeys, der <kbd>Win</kbd> enthält, kann zu zusätzlichen simulierten Tastendrücken führen (standardmäßig <kbd>Strg</kbd>). Siehe <a href="lib/A_MenuMaskKey.htm">A_MenuMaskKey</a>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td class="center bold">!</td>
+    <td>
+      <p><kbd>Alt</kbd></p>
+      <p class="note"><strong>Hinweis:</strong> Das Drücken eines Hotkeys, der <kbd>Alt</kbd> enthält, kann zu zusätzlichen simulierten Tastendrücken führen (standardmäßig <kbd>Strg</kbd>). Siehe <a href="lib/A_MenuMaskKey.htm">A_MenuMaskKey</a>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td class="center bold">^</td>
+    <td><kbd>Strg</kbd></td>
+  </tr>
+  <tr>
+    <td class="center bold">+</td>
+    <td><kbd>Umschalt</kbd></td>
+  </tr>
+  <tr>
+    <td class="center bold">&amp;</td>
+    <td>Mit einem Und-Zeichen können zwei beliebige Tasten oder Maustasten zu einem benutzerdefinierten Hotkey kombiniert werden. Einzelheiten finden Sie <a href="#combo">unten</a>.</td>
+  </tr>
+  <tr id="LeftRight">
+    <td class="center bold">&lt;</td>
+    <td>Verwendet die linke Taste des Tastenpaares. Zum Beispiel ist &lt;!a äquivalent zu !a, allerdings kann der Hotkey nur mit der linken <kbd>Alt</kbd>-Taste ausgelöst werden.</td>
+  </tr>
+  <tr>
+    <td class="center bold">&gt;</td>
+    <td>Verwendet die rechte Taste des Tastenpaares.</td>
+  </tr>
+  <tr id="AltGr">
+    <td class="center bold">&lt;^&gt;!</td>
+    <td><p><kbd>AltGr</kbd> (<a href="https://en.wikipedia.org/wiki/AltGr_key">alternative Grafik bzw. alternativer Schriftsatz</a>). Wenn Ihre Tastaturbelegung <kbd>AltGr</kbd> anstelle einer rechten <kbd>Alt</kbd>-Taste aufweist, kann diese Symbolreihe in der Regel für <kbd>AltGr</kbd> verwendet werden. Zum Beispiel:</p>
+      <pre>&lt;^&gt;!m::MsgBox "Sie haben ALTGR+M gedrückt."
+&lt;^&lt;!m::MsgBox "Sie haben STRGLinks+ALTLinks+M gedrückt."</pre>
+      <p>Wenn Sie stattdessen <kbd>AltGr</kbd> selbst zu einem Hotkey machen wollen, verwenden Sie den folgenden Hotkey (ohne dass Hotkeys wie oben vorhanden sind):</p>
+      <pre>LControl &amp; RAlt::MsgBox "Sie haben ALTGR gedrückt."</pre></td>
+  </tr>
+  <tr id="wildcard">
+    <td class="center bold">*</td>
+    <td><p>Platzhalter: Bewirkt, dass der Hotkey immer ausgelöst wird, egal ob zusätzliche Modifikatoren gedrückt gehalten werden. Dieses Symbol wird oft zum <a href="misc/Remap.htm">Neubelegen</a> von Tasten oder Maustasten benutzt. Zum Beispiel:</p>
+      <pre>*#c::Run "calc.exe"  <em>; WIN+C, UMSCHALT+WIN+C und STRG+WIN+C usw. können diesen Hotkey auslösen.</em>
+*ScrollLock::Run "notepad"  <em>; ScrollLock wird diesen Hotkey immer auslösen, egal ob Modifikatoren gedrückt gehalten werden.</em></pre>
+      <p>Platzhalter-Hotkeys verwenden immer den Tastatur-Hook, ebenso wie alle Hotkeys, die mit einem Platzhalter-Hotkey übereinstimmen würden. Zum Beispiel würde das Vorhandensein von <code>*a::</code> dazu führen, dass <code>^a::</code> immer den Hook verwendet.</p></td>
+  </tr>
+  <tr id="Tilde">
+    <td class="center bold">~</td>
+    <td><p>Verhindert, dass beim Auslösen des Hotkeys die ursprüngliche Funktion seiner Taste blockiert (vor dem System verborgen) wird. Die Hotkeys im folgenden Beispiel bewirken, dass der Mausklick des Benutzers immer an das aktive Fenster gesendet wird, unabhängig von ihren zugewiesenen Aktionen:</p>
+      <pre>~RButton::MsgBox "Sie haben die rechte Maustaste gedrückt."
+~RButton &amp; C::MsgBox "Sie haben C gedrückt, während Sie die rechte Maustaste gedrückt hielten."</pre>
+      <p>Im Gegensatz zu den anderen Präfixsymbolen darf das Tilde-Präfix bei einigen <a href="lib/_HotIf.htm#variant">Varianten</a> eines Hotkeys vorhanden sein, bei anderen jedoch nicht. Wendet man jedoch eine Tilde auf die <a href="#prefix">Präfixtaste</a> einer benutzerdefinierten Tastenkombination an, die weder ausgeschaltet noch suspendiert ist, beeinflusst die Tilde das Verhalten dieser Präfixtaste bei <em>allen</em> Kombinationen.</p>
+      <p>Spezielle Hotkeys, die etwas mit <a href="#alttab">Alt-Tab</a> zu tun haben, ignorieren immer das Tilde-Präfix.</p>
+      <p>Wendet man das Tilde-Präfix auf einen Hotkey an, der nur aus einer benannten Modifikatortaste ohne L- oder R-Präfix (<code class="no-highlight">Control</code>/<code class="no-highlight">Ctrl</code>, <code class="no-highlight">Alt</code> oder <code class="no-highlight">Shift</code>) besteht, wird dieser Hotkey sofort beim Drücken ausgelöst, nicht erst nach dem Loslassen der Taste. Zum Beispiel werden <code>~Alt::</code>, <code>~LAlt::</code> und <code>LAlt::</code> ausgelöst, sobald die Taste gedrückt wird, während <code>Alt::</code> beim Loslassen der Taste ausgelöst wird. Hotkeys, die aus einer beliebigen anderen Taste bestehen, werden ausgelöst, sobald die Taste gedrückt wird, unabhängig davon, ob das Tilde-Präfix verwendet wird.</p>
+      <p>Wendet man das Tilde-Präfix auf eine benutzerdefinierte Modifikatortaste (<a href="#prefix">Präfixtaste</a>) an, die auch als eigener Hotkey verwendet wird, wird dieser Hotkey sofort beim Drücken ausgelöst, nicht erst nach dem Loslassen der Taste. Zum Beispiel wird der obige Hotkey <code>~RButton::</code> bereits ausgelöst, wenn die Maustaste nach unten gedrückt wird.</p>
+      <p>Wendet man das Tilde-Präfix nur auf die benutzerdefinierte Tastenkombination an, nicht aber auf den kombinationslosen Hotkey, wird die ursprüngliche Funktion der Taste weiterhin blockiert. Zum Beispiel bewirkt das folgende Skript, dass beim Gedrückthalten von AppsKey ein Tooltip angezeigt wird, anstatt ein Kontextmenü zu öffnen:</p>
+      <pre>AppsKey::ToolTip "Drücke &lt; oder &gt; zum Durchschalten der Fenster."
+AppsKey Up::ToolTip
+~AppsKey &amp; &lt;::Send "!+{Esc}"
+~AppsKey &amp; &gt;::Send "!{Esc}"</pre>
+      <p>Wenn mindestens eine Variante eines Tastatur-Hotkeys den Tilde-Modifikator hat, verwendet dieser Hotkey immer den Tastatur-Hook.</p>
+    </td>
+  </tr>
+  <tr id="prefixdollar">
+    <td class="center bold">$</td>
+    <td>
+      <p>Dieses Präfix wird normalerweise nur benötigt, um zu verhindern, dass der Hotkey von einer <a href="lib/Send.htm">Send</a>-Funktion ausgelöst wird. Das $-Präfix zwingt den <a href="lib/InstallKeybdHook.htm">Tastatur-Hook</a>, diesen Hotkey zu implementieren, so dass dieser nicht mehr durch eine <a href="lib/Send.htm">Send</a>-Funktion ausgelöst werden kann. Dieses Präfix ist das gleiche wie, als hätte man <code><a href="lib/_UseHook.htm">#UseHook</a></code> irgendwo vor der Hotkey-Definition angegeben.</p>
+      <p>Das $-Präfix hat keinen Effekt auf Maus-Hotkeys, weil sie immer den Maus-Hook verwenden. Außerdem hat es keinen Effekt auf Hotkeys, die den Tastatur-Hook bereits von sich aus aktivieren, wie z.B. Tastatur-Hotkeys mit dem Präfix <a href="#Tilde">Tilde (~)</a> oder <a href="#wildcard">Platzhalter (*)</a>, Taste-Oben-Hotkeys und benutzerdefinierte Kombinationen. Mit <a href="lib/ListHotkeys.htm">ListHotkeys</a> können Sie prüfen, ob ein bestimmter Hotkey den Tastatur-Hook verwendet.</p>
+      <p><a href="lib/_InputLevel.htm">#InputLevel</a> und <a href="lib/SendLevel.htm">SendLevel</a> bieten zusätzliche Kontrolle darüber, welche Hotkeys und Hotstrings durch die Send-Funktion ausgelöst werden können.</p>
+    </td>
+  </tr>
+  <tr id="keyup">
+    <td class="center">UP</td>
+    <td><p>Das UP-Wort muss nach dem Namen eines Hotkeys erfolgen und bewirkt, dass der Hotkey erst nach dem Loslassen der Taste ausgelöst wird, nicht sofort beim Drücken. Das folgende Beispiel zeigt, wie die linke <kbd>Win</kbd>-Taste zur linken <kbd>Strg</kbd>-Taste <a href="misc/Remap.htm">umbelegt</a> werden kann:</p>
+      <pre>*LWin::Send "{LControl down}"
+*LWin Up::Send "{LControl up}"
+</pre>
+      <p>UP kann auch auf normale Hotkeys angewendet werden. Zum Beispiel: <code>^!r Up::MsgBox "Sie haben STRG+ALT+R gedrückt und losgelassen"</code>. UP funktioniert auch bei <a href="#combo">Kombinations-Hotkeys</a> (z.B. <code>F1 &amp; e Up::</code>)</p>
+      <p>Einschränkungen: 1) UP funktioniert nicht bei <a href="KeyList.htm#Controller">Controllertasten</a>; und 2) ein UP-Hotkey ohne entsprechenden Counterpart (normaler Hotkey oder DOWN-Hotkey) wird diese Taste komplett übernehmen, um zu verhindern, dass sie dauerhaft gedrückt bleibt. Um das zu verhindern, kann beispielsweise ein <a href="#Tilde">Tilde-Präfix</a> hinzugefügt werden (z.B. <code>~LControl up::</code>)</p>
+      <p>UP-Hotkeys und ihre Counterparts (DOWN-Hotkeys, sofern vorhanden) verwenden immer den Tastatur-Hook.</p>
+      <p>Beachten Sie auch, dass mit einer ähnlichen Methode wie der oben ein Hotkey zu einer Präfixtaste gemacht werden kann. Das hat den Vorteil, dass, obwohl der Hotkey nach dem Loslassen ausgelöst wird, er dies nur tut, wenn Sie keine andere Taste gedrückt haben, während Sie ihn gedrückt hielten. Zum Beispiel:</p>
+      <pre>LControl &amp; F1::return  <em>; Macht LControl zum Präfix, wenn es min. einmal vor "&amp;" verwendet wird.</em>
+LControl::MsgBox "Sie haben LControl ohne Modifikation einer anderen Taste losgelassen."</pre></td>
+  </tr>
+</table>
+<p class="note"><strong>Hinweis:</strong> Die <a href="KeyList.htm">Tastenliste</a> enthält alle unterstützten Tastatur-, Maus- oder Controllertasten.</p>
+<p>Mehrere Hotkeys können vertikal gestapelt werden, um ihnen die gleiche Aktion zuzuweisen. Zum Beispiel:</p>
+<pre>^Numpad0::
+^Numpad1::
+{
+    MsgBox "STRG+Numpad0 oder STRG+Numpad1 zeigt diese Meldung an."
+}
+</pre>
+<p>Um eine Taste oder Tastenkombination systemweit zu deaktivieren, weisen Sie ihr eine Aktion zu, die nichts bewirkt. Das folgende Beispiel deaktiviert die rechte <kbd>Win</kbd>-Taste:</p>
+<pre>RWin::return</pre>
+
+<h2 id="Context">Kontextabhängige Hotkeys</h2>
+<p>Die <a href="lib/_HotIf.htm">#HotIf</a>-Direktive kann verwendet werden, um Hotkeys je nach Bedingung eine andere (oder gar keine) Aktion ausführen zu lassen. Zum Beispiel:</p>
+<pre>#HotIf WinActive("ahk_class Notepad")
+^a::MsgBox "Sie haben STRG+A gedrückt, während Notepad aktiv war. Drückt man STRG+A in einem anderen Fenster, wird die Tastenkombination selbst gesendet."
+#c::MsgBox "Sie haben WIN+C gedrückt, während Notepad aktiv war."
+
+#HotIf
+#c::MsgBox "Sie haben WIN+C gedrückt, während ein anderes Fenster als Notepad aktiv war."
+
+#HotIf MausIstÜber("ahk_class Shell_TrayWnd") <em>; Für MausIstÜber, siehe <a href="lib/_HotIf.htm#ExVolume">#HotIf-Beispiel 1</a>.</em>
+WheelUp::Send "{Volume_Up}"     <em>; Mausrad über die Taskleiste: Lautstärke erhöhen/verringern.</em>
+WheelDown::Send "{Volume_Down}" <em>;</em>
+</pre>
+
+<h2 id="combo">Benutzerdefinierte Kombinationen</h2>
+<p>Normalerweise bestehen die Kombinationen von Tastaturkurzbefehlen aus optionalen Präfix-/Modifikatortasten (Strg, Alt, Umschalt und LWin/RWin) und einer einzelnen Suffixtaste. Da die regulären Modifikatortasten standardmäßig nur für diesen Zweck vorgesehen sind, haben sie keinen unmittelbaren Effekt, wenn sie gedrückt werden.</p>
+<p>Um eine benutzerdefinierte Kombination von zwei Tasten (einschließlich der Maustasten, aber nicht der Controllertasten) zu definieren, fügen Sie " &amp; " zwischen den Tasten ein. Da sie für die Nutzung mit Präfixtasten gedacht sind, die normalerweise nicht als solche verwendet werden, weisen benutzerdefinierte Kombinationen das folgende Sonderverhalten auf:</p>
+<ul>
+  <li>Die Präfixtaste verliert ihre ursprüngliche Funktion, es sei denn, es handelt sich um eine reguläre Modifikatortaste oder eine umschaltbare Taste wie <kbd>Feststell</kbd>.</li>
+  <li>Wenn ein Hotkey nur durch Drücken der Präfixtaste aktiviert wird, wird er standardmäßig beim Loslassen ausgelöst, und überhaupt nicht, wenn eine andere Taste gedrückt wird. Zum Beispiel bewirkt <code>F1 &amp; F2::</code>, dass <code>*F1::</code> oder <code>F1::1</code> (eine <a href="misc/Remap.htm">Neubelegung</a>) beim Loslassen ausgelöst wird, es sei denn, es wird durch eine Kombination wie <kbd>Strg</kbd>+<kbd>F1</kbd> aktiviert. Wenn es sowohl einen Taste-Unten- als auch <a href="#keyup">Taste-Oben</a>-Hotkey gibt, werden beide Hotkeys gleichzeitig ausgelöst. Der Auslösen-beim-Loslassen-Effekt wird deaktiviert, wenn das <a href="#Tilde">Tilde-Präfix</a> auf die Präfixtaste in mindestens einer aktiven benutzerdefinierten Kombination oder auf den Suffix-Hotkey selbst angewendet wird.</li>
+</ul>
+<p class="note"><strong>Hinweis:</strong> Bei Kombinationen mit regulären Modifikatortasten ist es in der Regel besser, die Standardsyntax zu verwenden. Verwenden Sie zum Beispiel <code>&lt;+s::</code> anstelle von <code>LShift &amp; s::</code>.</p>
+<p>Das folgende Beispiel zeigt, wie ein Hotkey ausgelöst werden kann, wenn Numpad0 gedrückt gehalten und danach eine zweite Taste gedrückt wird:</p>
+<pre id="prefix">Numpad0 &amp; Numpad1::MsgBox "Sie haben Numpad1 gedrückt, während Sie Numpad0 gedrückt hielten."
+Numpad0 &amp; Numpad2::Run "Notepad"</pre>
+<p><strong>Die Präfixtaste verliert ihre ursprüngliche Funktion:</strong> Im Beispiel oben wird Numpad0 zu einer <em>Präfixtaste</em>; dadurch verliert Numpad0 aber auch seine ursprüngliche Funktion beim Drücken. Um das zu vermeiden, können Sie das Skript so konfigurieren, dass Numpad0 eine neue Aktion durchführt, wie zum Beispiel:</p>
+<pre>Numpad0::WinMaximize "A"   <em>; Maximiert das aktive/vorderste Fenster.</em>
+Numpad0::Send "{Numpad0}"  <em>; Lässt Numpad0 einen Numpad0-Tastendruck nach dem <i>Loslassen</i> erzeugen. Siehe Kommentar unten.</em></pre>
+<p><strong>Beim Loslassen auslösen:</strong> Das Vorhandensein einer der obigen benutzerdefinierten Kombinations-Hotkeys bewirkt, dass die gewünschte Aktion erst nach dem <em>Loslassen</em> von Numpad0 ausgeführt wird, aber nur, wenn Sie keine andere Taste gedrückt haben, während Sie Numpad0 gedrückt hielten. Dieses Verhalten lässt sich vermeiden, indem man auf beiden Hotkeys das <a href="#Tilde">Tilde-Präfix</a> anwendet.</p>
+<p id="combo_mods"><strong>Modifikatoren:</strong> Im Gegensatz zu normalen Hotkeys verhalten sich benutzerdefinierte Kombinationen so, als hätten sie standardmäßig den <a href="#wildcard">Platzhalter-Modifikator (*)</a>. So wird z.B. <code>1 &amp; 2::</code> auch dann ausgelöst, wenn beim Drücken von <kbd>1</kbd> und <kbd>2</kbd> der Modifikator <kbd>Strg</kbd> oder <kbd>Alt</kbd> gedrückt gehalten wird, während <code>^1::</code> nur durch <kbd>Strg</kbd>+<kbd>1</kbd> und nicht durch <kbd>Strg</kbd>+<kbd>Alt</kbd>+<kbd>1</kbd> ausgelöst werden würde.</p>
+<p>Kombinationen aus drei oder mehr Tasten werden nicht unterstützt. Kombinationen, die von Ihrer Tastatur unterstützt werden, können in der Regel mit <a href="lib/_HotIf.htm">#HotIf</a> und <a href="lib/GetKeyState.htm">GetKeyState</a> erkannt werden, aber das Ergebnis ist nicht immer konsistent. Zum Beispiel:</p>
+<pre><em>; Drücke AppsKey und Alt in beliebiger Reihenfolge, dann Bindestrich (-).</em>
+#HotIf GetKeyState("AppsKey", "P")
+Alt &amp; -::MsgBox "Hotkey aktiviert."
+
+<em>; Sind die Tasten vertauscht, zuerst Alt drücken (immer nur eine nutzen):</em>
+#HotIf GetKeyState("Alt", "P")
+AppsKey &amp; -::MsgBox "Hotkey aktiviert."
+
+<em>; , &amp; . &amp; -::</em>
+#HotIf GetKeyState(",") &amp;&amp; GetKeyState(".")
+-::MsgBox</pre>
+<p><strong>Tastatur-Hook:</strong> Benutzerdefinierte Kombinationen, die Tastaturtasten enthalten, verwenden immer den Tastatur-Hook, ebenso wie alle Hotkeys, die die Präfixtaste als Suffix verwenden. Zum Beispiel würde <code>a &amp; b::</code> bewirken, dass <code>^a::</code> immer den Hook verwendet.</p>
+
+<h2 id="Features">Sonstige Features</h2>
+<p><strong>NUM-, FESTSTELL- und ROLLEN-Taste:</strong> Diese Tasten können gezwungen werden, "AlwaysOn" (immer an) oder "AlwaysOff" (immer aus) zu sein. Zum Beispiel: <code><a href="lib/SetNumScrollCapsLockState.htm">SetNumLockState</a> "AlwaysOn"</code>.</p>
+<p><strong>Explorer-Hotkeys überschreiben:</strong> Die vordefinierten Windows-Hotkeys wie <kbd>Win</kbd>+<kbd>E</kbd> (#e) und <kbd>Win</kbd>+<kbd>R</kbd> (#r) können überschrieben werden, indem man ihnen eine Aktion im Skript zuweist. Einzelheiten finden Sie unter <a href="misc/Override.htm">Überschreiben oder Deaktivieren von Hotkeys</a>.</p>
+<p><strong>Alt-Tab ersetzen:</strong> Hotkeys können für das Alt-Tabbing verwendet werden. Zum Beispiel können Sie die folgenden zwei Hotkeys verwenden, um mit der rechten Hand das Alt-Tabben durchzuführen:</p>
+<pre>RControl &amp; RShift::AltTab  <em>; Halte STRG-RECHTS gedrückt und drücke mehrmals UMSCHALT-RECHTS, um vorwärts zu schalten.</em>
+RControl &amp; Enter::ShiftAltTab  <em>; Halte STRG-RECHTS gedrückt und drücke ENTER für umgekehrte Richtung.</em></pre>
+<p>Weitere Informationen finden Sie unter <a href="#alttab">Alt-Tab-Hotkeys</a>.</p>
+
+<h2 id="Wheel">Mausrad-Hotkeys</h2>
+<p>Mit den Tastennamen WheelDown und WheelUp können Hotkeys erstellt werden, die beim Drehen des Mausrads ausgelöst werden. Hier einige Beispiele für Mausrad-Hotkeys:</p>
+<pre>MButton &amp; WheelDown::MsgBox "Sie haben das Mausrad nach unten gedreht, während Sie die mittlere Maustaste gedrückt hielten."
+^!WheelUp::MsgBox "Sie haben das Mausrad nach oben gedreht, während Sie STRG+ALT gedrückt hielten."</pre>
+<p id="HWheel">Wenn die Maus horizontales Scrollen unterstützt, kann dies über die Tastennamen WheelLeft und WheelRight erkannt werden. Einige Mäuse haben ein einzelnes Rad, das hoch und runter gedreht oder nach links und rechts gekippt werden kann. Grundsätzlich werden in solchen Fällen WheelLeft- oder WheelRight-Signale wiederholt gesendet, während das Rad seitlich gekippt wird, um ein kontinuierliches Drehen zu simulieren. Dies führt in der Regel dazu, dass die Hotkeys wiederholt ausgeführt werden.</p>
+<p>Die interne Variable <strong>A_EventInfo</strong> enthält die Anzahl der Schritte, um die das Mausrad gedreht wurde (üblicherweise 120). Allerdings kann A_EventInfo größer oder kleiner als 120 sein, wenn folgende Bedingungen zutreffen:</p>
+<ul>
+  <li>Wenn die Maus Distanzen kleiner als einen Schritt meldet, kann A_EventInfo einen Wert kleiner als 120 enthalten;</li>
+  <li>Wenn das Mausrad schnell gedreht wird (abhängig vom Typ der Maus), kann A_EventInfo größer als 120 sein. Mit dem folgenden Hotkey können Sie Ihre Maus analysieren: <code>~WheelDown::ToolTip A_EventInfo</code></li>
+</ul>
+<p>Einige der nützlichsten Hotkeys für das Mausrad sind alternative Modi zum Scrollen von Text in einem Fenster. Das folgende Hotkey-Paar beispielsweise scrollt horizontal statt vertikal, wenn Sie das Mausrad bei gedrückter linker <kbd>Strg</kbd>-Taste drehen:</p>
+<pre>~LControl &amp; WheelUp::  <em>; Scrollt nach links.</em>
+{
+    Loop 2  <em>; &lt;-- Erhöhe diesen Wert, um schneller zu scrollen.</em>
+        SendMessage 0x0114, 0, 0, ControlGetFocus("A")  <em>; 0x0114 ist WM_HSCROLL und die 0 danach SB_LINELEFT.</em>
+}
+
+~LControl &amp; WheelDown::  <em>; Scrollt nach rechts.</em>
+{
+    Loop 2  <em>; &lt;-- Erhöhe diesen Wert, um schneller zu scrollen.</em>
+        SendMessage 0x0114, 1, 0, ControlGetFocus("A")  <em>; 0x0114 ist WM_HSCROLL und die 1 danach SB_LINERIGHT.</em>
+}</pre>
+<p>Da Mausrad-Hotkeys nur Down-Ereignisse (nie Up-Ereignisse) erzeugen, können sie nicht als <a href="#keyup">Taste-Oben-Hotkeys</a> verwendet werden.</p>
+
+<h2 id="Remarks">Tipps und Hinweise</h2>
+<p>Jede Ziffernblocktaste kann so geändert werden, dass sie je nach Status von <kbd>Num</kbd> zwei verschiedene Hotkey-Subroutinen startet. Alternativ kann eine Ziffernblocktaste so geändert werden, dass sie unabhängig vom Status die gleiche Subroutine startet. Zum Beispiel:</p>
+<pre>NumpadEnd::
+Numpad1::
+{
+    MsgBox "Dieser Hotkey wurde unabhängig von NUM ausgelöst."
+}
+</pre>
+<p>Wenn das <a href="#Tilde">Tilde-Symbol (~)</a> mindestens einmal mit einer <a href="#prefix">Präfixtaste</a> verwendet wird, ändert es das Verhalten dieser Präfixtaste bei allen Kombinationen. Bei beiden folgenden Hotkeys beispielsweise empfängt das aktive Fenster alle Rechtsklicks, obwohl nur eine der Definitionen eine Tilde enthält:</p>
+<pre>~RButton &amp; LButton::MsgBox "Sie haben die linke Maustaste gedrückt, während Sie die rechte Maustaste gedrückt hielten."
+RButton &amp; WheelUp::MsgBox "Sie haben das Mausrad nach oben gedreht, während Sie die rechte Maustaste gedrückt hielten."</pre>
+<p>Standardmäßig wird ein Hotkey ausgelöst, wenn seine Taste nach unten gedrückt wird. Modifikatortasten-Hotkeys (<code>Ctrl::</code>, <code>Control::</code>, <code>Alt::</code> und <code>Shift::</code>), <a href="#prefix">Präfixtasten</a>-Hotkeys und <a href="#keyup">Taste-Oben</a>-Hotkeys werden hingegen beim Loslassen der Taste ausgelöst. Verwenden Sie das <a href="#Tilde">Tilde-Präfix</a>, um die Modifikatortasten-Hotkeys und Präfixtasten-Hotkeys dazu zu bringen, beim Drücken statt beim Loslassen ausgelöst zu werden.</p>
+<p>Die <a href="lib/Suspend.htm">Suspend</a>-Funktion kann vorübergehend alle Hotkeys deaktivieren, außer denen, die Sie explizit ausgeschlossen haben. Für ein gezielteres Aktivieren/Deaktivieren von Hotkeys sollten Sie <a href="lib/_HotIf.htm">#HotIf</a> verwenden.</p>
+<p>Mit der <a href="lib/Hotkey.htm">Hotkey</a>-Funktion können Hotkeys dynamisch erstellt werden, während das Skript läuft. Die Hotkey-Funktion kann zudem bereits existierende Hotkeys einzeln modifizieren, deaktivieren oder aktivieren.</p>
+<p>Derzeit unterstützen Controller-Hotkeys keine Modifikatorsymbole wie ^ (Strg) und # (Win). Allerdings können Sie diesen Effekt mit <a href="lib/GetKeyState.htm">GetKeyState</a> nachahmen. Zum Beispiel:</p>
+<pre>Joy2::
+{
+    if not GetKeyState("Control")  <em>; Weder STRG-LINKS noch -RECHTS ist unten.</em>
+        return  <em>; Also nichts tun.</em>
+    MsgBox "Sie haben die zweite Taste des ersten Controllers gedrückt, während Sie die STRG-Taste gedrückt hielten."
+}</pre>
+<p>Manchmal sollte ein Hotkey auf das Loslassen seiner eigenen Modifikatortasten warten, ehe er fortfährt. Schauen Sie sich dazu das folgende Beispiel an:</p>
+<pre>^!s::Send "{Delete}"</pre>
+<p>Drückt man in diesem Fall <kbd>Strg</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd>, würde das System fälschlicherweise ein <kbd>Strg</kbd>+<kbd>Alt</kbd>+<kbd>Entf</kbd> erkennen (aufgrund der aggressiven Erkennung dieser Tastenkombination). Um das zu umgehen, nutzen Sie <a href="lib/KeyWait.htm">KeyWait</a>, um auf das Loslassen der Tasten zu warten. Zum Beispiel:</p>
+<pre>^!s::
+{
+    KeyWait "Control"
+    KeyWait "Alt"
+    Send "{Delete}"
+}
+</pre>
+<p>Wenn ein Hotkey wie <code>#z::</code> den Fehler "Invalid Hotkey" (ungültiger Hotkey) erzeugt, kann es sein, dass die Tastaturbelegung/Sprache Ihres Systems das angegebene Zeichen (in diesem Fall "Z") nicht kennt. Versuchen Sie es mit einem Zeichen, das in Ihrer Tastaturbelegung existiert.</p>
+<p>Die Funktion eines Hotkeys kann nur dann explizit vom Skript aufgerufen werden, wenn die Funktion benannt wurde. Siehe <a href="#Function">Benannte Funktions-Hotkeys</a>.</p>
+<p>Hotkeys werden häufig verwendet, um eine sich wiederholende Aktion (z.B. das Drücken mehrerer Tasten) zu starten und zu stoppen. Ein Beispiel dazu finden Sie unter <a href="FAQ.htm#repeat">Wie kann eine sich wiederholende Aktion gestoppt werden, ohne das Skript zu beenden?</a>.</p>
+<p>Jedes Skript ist <a href="misc/Threads.htm">quasi-multithreadingfähig</a>; es ist also in der Lage, einen neuen Hotkey während einer laufenden Hotkey-Subroutine zu starten. Zum Beispiel können neue Hotkeys gestartet werden, obwohl der aktuelle Hotkey gerade ein <a href="lib/MsgBox.htm">Mitteilungsfenster</a> anzeigt.</p>
+
+<h2 id="alttab"><span id="AltTabDetail"></span>Alt-Tab-Hotkeys</h2>
+<p>Alt-Tab-Hotkeys vereinfachen die Neubelegung der Alt-Tab-Hotkeys des Systems, die zum Aufrufen eines Menüs für den Wechsel von Anwendungen (Aktivieren von Fenstern) verwendet werden.</p>
+<p>Jeder Alt-Tab-Hotkey muss entweder eine einzelne Taste oder eine Kombination aus zwei Tasten sein, was in der Regel durch das Und-Zeichen (&amp;) erreicht wird. Das folgende Beispiel befähigt Sie, mit <kbd>J</kbd> oder <kbd>K</kbd> durch das Alt-Tab-Menü zu navigieren, während Sie die rechte <kbd>Alt</kbd>-Taste gedrückt halten:</p>
+<pre>RAlt &amp; j::AltTab
+RAlt &amp; k::ShiftAltTab</pre>
+<p><em>AltTab</em> und <em>ShiftAltTab</em> gehören zu einer Reihe von Sonderbefehlen, die nur erkannt werden, wenn sie in derselben Zeile wie ein Hotkey verwendet werden. Hier die komplette Liste:</p>
+<p><strong>AltTab:</strong> Nach rechts navigieren im Alt-Tab-Menü, sofern offen. Andernfalls das Menü öffnen (nur wenn der Hotkey eine Kombination aus zwei Tasten ist, sonst passiert nichts).</p>
+<p><strong>ShiftAltTab:</strong> Dasselbe wie oben, aber nach links navigieren.</p>
+<p><strong>AltTabMenu:</strong> Das Alt-Tab-Menü anzeigen oder verstecken.</p>
+<p><strong>AltTabAndMenu:</strong> Nach rechts navigieren im Alt-Tab-Menü, sofern offen. Andernfalls das Menü öffnen.</p>
+<p><strong>AltTabMenuDismiss:</strong> Das Alt-Tab-Menü schließen.</p>
+<p>Zur Veranschaulichung der obigen Sonderbefehle können Sie das Mausrad zu einem vollständigen Ersatz für Alt-Tab machen. Wenn die folgenden Hotkeys aktiv sind, können Sie das Menü durch Klicken der mittleren Maustaste öffnen und durch Drehen des Mausrads durch das Menü navigieren:</p>
+<pre>MButton::AltTabMenu
+WheelDown::AltTab
+WheelUp::ShiftAltTab</pre>
+<p>Um das Alt-Tab-Menü zu schließen, ohne das ausgewählte Fenster zu aktivieren, drücken oder senden Sie <kbd>Esc</kbd>. Das folgende Beispiel befähigt Sie, mit <kbd>Feststell</kbd> das Menü zu öffnen und nach rechts zu navigieren, während Sie die linke <kbd>Strg</kbd>-Taste gedrückt halten. Sie können dann die linke <kbd>Strg</kbd>-Taste wieder loslassen, um das ausgewählte Fenster zu aktivieren, oder das Mausrad drücken, um abzubrechen. Definieren Sie die <a href="#AltTabWindow">AltTabFenster</a>-Fenstergruppe wie unten gezeigt, bevor Sie dieses Beispiel ausführen.</p>
+<pre>LCtrl &amp; CapsLock::AltTab
+#HotIf WinExist("ahk_group AltTabFenster")  <em>; Signalisiert, dass das Alt-Tab-Menü auf dem Bildschirm existiert.</em>
+*MButton::Send "{Blind}{Escape}"  <em>; Mit dem *-Präfix kann es unabhängig von ALT ausgelöst werden.</em>
+#HotIf</pre>
+<p>Wenn das Skript <code class="no-highlight">{Alt Down}</code> gesendet hat (um z.B. das Alt-Tab-Menü zu öffnen), muss eventuell noch <code class="no-highlight">{Alt Up}</code> gesendet werden, wie im Beispiel weiter unten gezeigt.</p>
+
+<h3 id="AltTabRemarks">Allgemeine Bemerkungen</h3>
+<p>Derzeit müssen alle speziellen Alt-Tab-Aktionen direkt einem Hotkey zugewiesen werden, wie in den Beispielen oben (d.h. sie können nicht als Funktionen verwendet werden). Sie werden <span class="red">nicht von <a href="lib/_HotIf.htm">#HotIf</a> beeinflusst</span>.</p>
+<p>Eine Alt-Tab-Aktion kann unabhängig vom <code class="no-highlight">up</code>-Schlüsselwort beim Drücken und/oder Loslassen der Taste erfolgen und kann nicht mit einer anderen Aktion auf derselben Taste kombiniert werden. Zum Beispiel wird die kombinierte Verwendung von <code>F1::AltTabMenu</code> und <code>F1 up::AndereAktion()</code> nicht unterstützt.</p>
+<p id="AltTabWindow">Benutzerdefinierte Alt-Tab-Aktionen können auch via Hotkeys erstellt werden. Da die Identität des Alt-Tab-Menüs je nach OS-Version unterschiedlich ist, empfiehlt es sich, eine Fenstergruppe zu verwenden, wie unten gezeigt. Bei den Beispielen oben und unten, die <code class="no-highlight">ahk_group AltTabFenster</code> verwenden, wird davon ausgegangen, dass diese Fenstergruppe während der <a href="Scripts.htm#auto">Startphase des Skripts</a> definiert ist. Alternativ kann <code class="no-highlight">ahk_group AltTabFenster</code> je nach System mit dem entsprechenden <code class="no-highlight">ahk_class</code>-Kriterium ersetzt werden.</p>
+<pre>GroupAdd "AltTabFenster", "ahk_class MultitaskingViewFrame"  <em>; Windows 10</em>
+GroupAdd "AltTabFenster", "ahk_class TaskSwitcherWnd"  <em>; Windows Vista, 7, 8.1</em>
+GroupAdd "AltTabFenster", "ahk_class #32771"  <em>; Älter, oder mit aktiviertem klassischen Alt-Tab</em></pre>
+<p>Das folgende Beispiel befähigt Sie, mit <kbd>F1</kbd> das Menü zu öffnen und nach rechts zu navigieren. Sie können dann <kbd>F2</kbd> drücken, um das ausgewählte Fenster zu aktivieren, oder <kbd>Esc</kbd> drücken, um abzubrechen.</p>
+<pre>*F1::Send "{Alt down}{tab}" <em>; Sternchen ist in diesem Fall notwendig.</em>
+!F2::Send "{Alt up}"  <em>; ALT loslassen, um ausgewähltes Fenster zu aktivieren.</em>
+#HotIf WinExist("ahk_group AltTabFenster")
+~*Esc::Send "{Alt up}"  <em>; Beim Abbrechen des Menüs ALT automatisch loslassen.
+;*Esc::Send "{Esc}{Alt up}"  ; Ohne Tilde (~) müsste Escape gesendet werden.</em>
+#HotIf</pre>
+
+<h2 id="Function">Benannte Funktions-Hotkeys</h2>
+<p>Wenn die Funktion eines Hotkeys aufgerufen werden soll, ohne den Hotkey selbst auszulösen, können Sie einem oder mehreren Hotkeys eine benannte <a href="Functions.htm">Funktion</a> zuweisen, indem Sie diese einfach unterhalb des Doppelpunktpaares definieren. Zum Beispiel:</p>
+<pre><em>; STRG+UMSCHALT+O öffnet den Ordner der Datei im Explorer.
+; STRG+UMSCHALT+E öffnet den Ordner der Datei und markiert sie.
+; Unterstützt SciTE und Notepad++ (erfordert ggf. Titelleisteneinstellungen).</em>
+^+o::
+^+e::
+    editor_ordner_öffnen(hk)
+    {
+        pfad := WinGetTitle("A")
+        if RegExMatch(pfad, "\*?\K(.*)\\[^\\]+(?= [-*] )", &amp;pfad)
+            if (FileExist(pfad[0]) &amp;&amp; hk = "^+e")
+                Run Format('explorer.exe /select,"{1}"', pfad[0])
+            else
+                Run Format('explorer.exe "{1}"', pfad[1])
+    }</pre>
+<p>Wenn die Funktion <em>editor_ordner_öffnen</em> explizit vom Skript aufgerufen wird, muss dem ersten Parameter (hk) ein Wert übergeben werden.</p>
+<p><a href="Hotstrings.htm">Hotstrings</a> können auch auf diese Weise definiert werden. Mehrere Hotkeys oder Hotstrings können vertikal gestapelt werden, um die gleiche Funktion aufzurufen.</p>
+<p>Zwischen dem Hotkey und dem Funktionsnamen dürfen nur Leerraumzeichen oder Kommentare stehen.</p>
+<p>Die Benennung einer Funktion begünstigt auch die Selbstdokumentation von Hotkeys, wie im obigen Code, wo der Funktionsname den Hotkey beschreibt.</p>
+<p>Mit der <a href="lib/Hotkey.htm">Hotkey</a>-Funktion kann einem Hotkey auch eine Funktion oder ein Funktionsobjekt zugewiesen werden.</p>
+
+</body>
+</html>

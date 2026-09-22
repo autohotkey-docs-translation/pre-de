@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Goto - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die Goto-Anweisung springt zu einem bestimmten Label und setzt dort die Ausführung fort." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>Goto</h1>
+
+<p>Springt zu einem bestimmten Label und setzt dort die Ausführung fort.</p>
+
+<pre class="Syntax"><span class="func">Goto</span> Label</pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>Label</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Name des <a href="../misc/Labels.htm">Labels</a>, zu dem gesprungen werden soll.</p>
+    <p><em>Label</em> kann nur eine Variable oder ein Ausdruck sein, wenn runde Klammern verwendet werden. Zum Beispiel springen sowohl <code>Goto MeinLabel</code> als auch <code>Goto("MeinLabel")</code> zu <code>MeinLabel:</code>.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Die Verwendung eines dynamischen Labels (also eine Variable oder ein Ausdruck, der einen Labelnamen zurückgibt) beeinträchtigt die Performanz, da das Ziellabel jedes Mal neu gesucht werden muss, nicht nur beim Start des Skripts. Es wird ein Fehlerdialogfenster angezeigt, wenn das Label nicht existiert. Um das zu vermeiden, prüfen Sie vorher mit <a href="IsLabel.htm">IsLabel()</a>, ob das Label existiert. Zum Beispiel:</p>
+<pre>if IsLabel(VarMitLabelName)
+    Goto(VarMitLabelName)</pre>
+<p>Wenn möglich sollten Sie darauf verzichten, Goto in einem Skript zu verwenden, da es die Lesbarkeit und Wartbarkeit des Skripts verschlechtert. Versuchen Sie stattdessen, <a href="Else.htm">Else</a>, <a href="Block.htm">Blöcke</a>, <a href="Break.htm">Break</a> und <a href="Continue.htm">Continue</a> als Ersatz für Goto zu verwenden.</p>
+<h2 id="Related">Siehe auch</h2>
+<p><a href="Return.htm">Return</a>, <a href="IsLabel.htm">IsLabel</a>, <a href="Else.htm">Else</a>, <a href="Block.htm">Blöcke</a>, <a href="Break.htm">Break</a>, <a href="Continue.htm">Continue</a></p>
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Springt zum Label namens "MeinLabel" und setzt dort die Ausführung fort.</p>
+<pre>Goto MeinLabel
+<em>; ...</em>
+MeinLabel:
+Sleep 100
+<em>; ...</em></pre>
+</div>
+
+</body>
+</html>

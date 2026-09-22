@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Neubelegung von Tasten (Tastatur, Maus und Controller) | AutoHotkey v2</title>
+<meta name="description" content="Freier Tastatur-Remapper, der auch Maus- und Controllertasten neubelegen kann. Zudem kann er repetitive Aufgaben durch Senden von Tastendrücken &amp; Mausklicks automatisieren.">
+<meta name="keywords" content="tastatur,remapper,neubelegen,neubelegung,taste,tastendrücke,klicks,maus,tasten,controller,gamepad,joystick,hotkeys,hotkey">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>Neubelegung von Tasten <span class="headnote">(Tastatur, Maus und Controller)</span></h1>
+
+<h2 id="toc">Inhaltsverzeichnis</h2>
+<ul>
+  <li><a href="#intro">Einführung</a></li>
+  <li><a href="#Remap">Neubelegung von Tastatur und Maus</a></li>
+  <li><a href="#remarks">Bemerkungen</a></li>
+  <li><a href="#moving-the-mouse-cursor">Mauszeiger mit der Tastatur bewegen</a></li>
+  <li><a href="#registry">Neubelegung via Registry (Scancode Map)</a></li>
+  <li><a href="#related">Siehe auch</a></li>
+</ul>
+
+<h2 id="intro">Einführung</h2>
+<p><strong>Einschränkung:</strong> Die unten beschriebene Neubelegungsmethode von AutoHotkey ist in der Regel nicht so eindeutig und effektiv wie die direkte Neubelegung via Windows-Registry. Die Vor- und Nachteile der einzelnen Ansätze finden Sie unter <a href="#registry">Neubelegung via Registry</a>.</p>
+<h2 id="Remap">Neubelegung von Tastatur und Maus</h2>
+<p>Die Syntax für die Neubelegung einer Taste lautet <code class="no-highlight">Originaltaste::Zieltaste</code>. Ein <a href="../Scripts.htm">Skript</a>, das nur die folgende Zeile enthält, würde z.B. dafür sorgen, dass sich <kbd>A</kbd> wie <kbd>B</kbd> verhält:</p>
+<pre>a::b</pre>
+<p>Das obige Beispiel ändert nichts an <kbd>B</kbd> selbst. <kbd>B</kbd> sendet weiterhin "b", es sei denn, Sie belegen die Taste mit etwas anderem, wie im folgenden Beispiel:</p>
+<pre>a::b
+b::a</pre>
+<p>Die obigen Beispiele verwenden Kleinbuchstaben, was für die meisten Zwecke zu empfehlen ist, da auch die entsprechenden Großbuchstaben neubelegt werden. Mit anderen Worten, es werden Großbuchstaben gesendet, wenn <kbd>Feststell</kbd> eingeschaltet ist oder <kbd>Umschalt</kbd> gedrückt gehalten wird. Ein Großbuchstabe als Zieltaste würde hingegen die Großschreibung erzwingen. Das folgende Beispiel erzeugt ein großes B, wenn Sie entweder "a" oder "A" eingeben (sofern <kbd>Feststell</kbd> ausgeschaltet ist):</p>
+<pre>a::B</pre>
+<p>Umgekehrt werden alle Modifikatoren auf der linken Seite (nicht auf der rechten Seite) automatisch losgelassen, wenn die Taste gesendet wird. Zum Beispiel erzeugen die folgenden zwei Zeilen ein kleines "b", wenn Sie entweder <kbd>Umschalt</kbd>+<kbd>A</kbd> oder <kbd>Strg</kbd>+<kbd>A</kbd> drücken:</p>
+<pre>A::b
+^a::b</pre>
+
+<h3 id="RemapMouse">Neubelegung der Maus</h3>
+<p>Maustasten können auf die gleiche Weise neubelegt werden. Zum Beispiel:</p>
+<table class="info">
+  <tr>
+    <th style="min-width: 11em;">Beispiel</th>
+    <th abbr="Beschr">Beschreibung</th>
+  </tr>
+  <tr>
+    <td><code>MButton::Shift</code></td>
+    <td>Die mittlere Maustaste verhält sich wie <kbd>Umschalt</kbd>.</td>
+  </tr>
+  <tr>
+    <td><code>XButton1::LButton</code></td>
+    <td>Die vierte Maustaste verhält sich wie die linke Maustaste.</td>
+  </tr>
+  <tr>
+    <td><code>RAlt::RButton</code></td>
+    <td>Die rechte <kbd>Alt</kbd>-Taste verhält sich wie die rechte Maustaste.</td>
+  </tr>
+</table>
+
+<h3 id="other-useful-remappings">Weitere nützliche Neubelegungen</h3>
+<table class="info">
+  <tr>
+    <th style="min-width: 11em;">Beispiel</th>
+    <th abbr="Beschr">Beschreibung</th>
+  </tr>
+  <tr>
+    <td><code>CapsLock::Ctrl</code></td>
+    <td><kbd>Feststell</kbd> verhält sich wie <kbd>Strg</kbd>. Um <kbd>Feststell</kbd> weiterhin ein- und ausschalten zu können, fügen Sie zunächst die Neubelegung <code>+CapsLock::CapsLock</code> hinzu. Dies ermöglicht es Ihnen, <kbd>Feststell</kbd> durch Halten von <kbd>Umschalt</kbd> und Drücken von <kbd>Feststell</kbd> ein- und auszuschalten. Da beide Neubelegungen das Gedrückthalten zusätzlicher Modifikatortasten erlauben, muss die spezifischere Neubelegung <code>+CapsLock::CapsLock</code> zuerst gesetzt werden, damit dies funktioniert.</td>
+  </tr>
+  <tr>
+    <td><code>XButton2::^LButton</code></td>
+    <td>Die fünfte Maustaste (XButton2) erzeugt einen STRG-modifizierten Klick.</td>
+  </tr>
+  <tr>
+    <td><code>RAlt::AppsKey</code></td>
+    <td>Die rechte <kbd>Alt</kbd>-Taste verhält sich wie <kbd>Menü</kbd> (die Taste zum Öffnen des Kontextmenüs).</td>
+  </tr>
+  <tr>
+    <td><code>RCtrl::RWin</code></td>
+    <td>Die rechte <kbd>Strg</kbd>-Taste verhält sich wie die rechte <kbd>Win</kbd>-Taste.</td>
+  </tr>
+  <tr>
+    <td><code>Ctrl::Alt</code></td>
+    <td>Beide <kbd>Strg</kbd>-Tasten verhalten sich wie <kbd>Alt</kbd>. Siehe aber <a href="#AltTab">Alt-Tab-Probleme</a>.</td>
+  </tr>
+  <tr>
+    <td><code>^x::^c</code></td>
+    <td><kbd>Strg</kbd>+<kbd>X</kbd> verhält sich wie <kbd>Strg</kbd>+<kbd>C</kbd>. Dies bewirkt auch, dass sich <kbd>Strg</kbd>+<kbd>Alt</kbd>+<kbd>X</kbd> wie <kbd>Strg</kbd>+<kbd>Alt</kbd>+<kbd>C</kbd> verhält, usw.</td>
+  </tr>
+  <tr>
+    <td><code>RWin::Return</code></td>
+    <td>Deaktiviert <kbd>Win</kbd> durch Verwendung von <a href="../lib/Return.htm">Return</a>.</td>
+  </tr>
+</table>
+<p>Um diese Beispiele zu testen, kopieren Sie sie in eine neue Textdatei, z.B. "Remap.ahk", und starten Sie die Datei.</p>
+<p>In der <a href="../KeyList.htm">Tastenliste</a> finden Sie alle möglichen Namen der Tastatur- und Maustasten.</p>
+<h2 id="remarks">Bemerkungen</h2>
+<p>Die <a href="../lib/_HotIf.htm">HotIf</a>-Direktive kann verwendet werden, um eine oder mehrere Neubelegungen nur für bestimmte Fenster aktiv zu machen. Zum Beispiel:</p>
+<pre>#HotIf WinActive("ahk_class Notepad")
+a::b  <em>; 'a' verhält sich in Notepad wie 'b'.</em>
+#HotIf  <em>; Macht nachfolgende Neubelegungen und Hotkeys für alle Fenster wirksam.</em></pre>
+<p>Die Neubelegung einer Taste ist in den folgenden Fällen "vollständig":</p>
+<ul>
+  <li>Das Gedrückthalten einer Modifikatortaste wie <kbd>Strg</kbd> oder <kbd>Umschalt</kbd> während der Eingabe der Originaltaste bewirkt, dass diese Modifikatortaste auch für die Zieltaste wirksam wird. Zum Beispiel bewirkt <code>b::a</code>, dass <kbd>Strg</kbd>+<kbd>A</kbd> erzeugt wird, wenn Sie <kbd>Strg</kbd>+<kbd>B</kbd> drücken.</li>
+  <li><kbd>Feststell</kbd> hat auf neubelegte Tasten grundsätzlich denselben Effekt wie auf normale Tasten.</li>
+  <li>Die Zieltaste bleibt so lange gedrückt, wie Sie die Originaltaste gedrückt halten. Allerdings unterstützen einige Spiele keine Neubelegungen; in diesem Fall verhalten sich Tastatur und Maus so, als ob sie nicht neubelegt wären.</li>
+  <li>Neubelegte Tasten werden wiederholt gesendet, wenn sie gedrückt gehalten werden (außer Tasten, die zu Maustasten umbelegt wurden).</li>
+</ul>
+<p id="HookHotkeys">Eine neubelegte Taste kann normale Hotkeys auslösen, aber standardmäßig keine Maus- oder <a href="../lib/_UseHook.htm">Hook-Hotkeys</a> (mit <a href="../lib/ListHotkeys.htm">ListHotkeys</a> können Sie herausfinden, welche Hotkeys "gehookt" sind). Wenn Sie z.B. die Neubelegung <code>a::b</code> verwenden und <kbd>Strg</kbd>+<kbd>Alt</kbd>+<kbd>A</kbd> drücken, wird der <code class="no-highlight">^!b</code>-Hotkey nur ausgelöst, wenn <code class="no-highlight">^!b</code> kein Hook-Hotkey ist. Wenn <code class="no-highlight">^!b</code> ein Hook-Hotkey ist, können Sie <code class="no-highlight">^!a</code> als Hotkey definieren, wenn <kbd>Strg</kbd>+<kbd>Alt</kbd>+<kbd>A</kbd> die gleiche Aktion ausführen soll wie <kbd>Strg</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd>. Zum Beispiel:</p>
+<pre>a::b
+^!a::
+^!b::ToolTip "Sie haben " ThisHotkey " gedrückt."
+</pre>
+<p>Alternativ kann <a href="../lib/_InputLevel.htm">#InputLevel</a> verwendet werden, um das Standardverhalten zu überschreiben. Zum Beispiel:</p>
+<pre>#InputLevel 1
+a::b
+
+#InputLevel 0
+^!b::ToolTip "Sie haben " ThisHotkey " gedrückt."
+</pre>
+<p id="SendPlay">Die Verwendung von <a href="../lib/SendMode.htm">SendMode</a> während der <a href="../Scripts.htm#auto">Startphase des Skripts</a> beeinflusst alle Neubelegungen. Da aber jede Neubelegung <a href="../lib/Send.htm#blind">Send "{Blind}"</a> verwendet und der <a href="../lib/SendMode.htm#Play">SendPlay-Modus</a> {Blind} nicht vollständig unterstützt, kann es vorkommen, dass einige Neubelegungen im SendPlay-Modus nicht korrekt funktionieren (insbesondere <kbd>Strg</kbd>, <kbd>Umschalt</kbd>, <kbd>Alt</kbd> und <kbd>Win</kbd>). Um das zu umgehen, verzichten Sie während der <a href="../Scripts.htm#auto">Startphase des Skripts</a> auf <code>SendMode "Play"</code>, wenn Sie Neubelegungen verwenden, und ersetzen Sie jedes Send im Skript mit <a href="../lib/Send.htm">SendPlay</a>. Alternativ können Sie Ihre Neubelegungen in Hotkeys übersetzen (wie unten beschrieben), die explizit SendEvent statt Send aufrufen.</p>
+<p id="EscapeBrace">Wenn <em>Zieltaste</em> <code>{</code> sein soll, muss es mit einem <a href="EscapeChar.htm">Escapezeichen</a> versehen werden; zum Beispiel <code>x::`{</code>. Andernfalls wird es als geschweifte Startklammer für die Funktion des <a href="../Hotkeys.htm">Hotkeys</a> interpretiert.</p>
+<p id="actually">Beim Start eines Skripts wird jede Neubelegung in ein <a href="../Hotkeys.htm">Hotkey</a>-Paar übersetzt. Zum Beispiel enthält ein Skript mit <code>a::b</code> eigentlich die folgenden zwei Hotkeys:</p>
+<pre>*a::
+{
+    SetKeyDelay -1   <em>; Wenn die Zieltaste eine Maustaste oder ein Mausrad ist, wird stattdessen SetMouseDelay verwendet.</em>
+    Send "<a href="../lib/Send.htm#blind">{Blind}</a>{b DownR}"  <em>; <a href="../lib/Send.htm#DownR">DownR</a> verhält sich wie Down, außer dass andere Send-Funktionen im Skript nicht davon ausgehen, dass "b" beim Senden unten bleiben soll.</em>
+}
+
+*a up::
+{
+    SetKeyDelay -1  <em>; Siehe Hinweis unten, warum die Druckdauer bei beiden SetKeyDelays fehlt.</em>
+    Send "{Blind}{b Up}"
+}</pre>
+<p>Allerdings unterscheiden sich die obigen Hotkeys unter folgenden Umständen:</p>
+<ol>
+  <li>Wenn die Originaltaste die linke <kbd>Strg</kbd>-Taste und die Zieltaste <kbd>Alt</kbd> ist, wird die Zeile <code>Send "{Blind}{LAlt DownR}"</code> mit <code>Send "{Blind}<strong>{LCtrl up}</strong>{LAlt DownR}"</code> ersetzt. Dasselbe gilt, wenn die Originaltaste die rechte <kbd>Strg</kbd>-Taste ist, außer dass stattdessen <code class="no-highlight">{RCtrl up}</code> verwendet wird. Dies stellt sicher, dass das System Alt-Tastenkombinationen so übersetzt, als würde <kbd>Strg</kbd> nicht gedrückt gehalten, bewirkt aber auch, dass die Neubelegung jedes vorherige {Ctrl down} überschreibt. <span class="ver">[v2.1-alpha.5+]</span>: Die Neubelegung sendet kein ununterdrücktes Strg-Taste-Oben-Ereignis mehr, da dies in v2.0.8 von einem besseren Workaround abgelöst wurde.</li>
+  <li>Beim Neubelegen einer Tastaturtaste in eine Maustaste (z.B. <code>RCtrl::RButton</code>) verwenden die obigen Hotkeys SetMouseDelay statt SetKeyDelay. Außerdem wird oben der erste Hotkey mit folgendem ersetzt, um zu verhindern, dass die Autowiederholungsfunktion der Tastatur wiederholte Mausklicks erzeugt:
+    <pre>*RCtrl::
+{
+    SetMouseDelay -1
+    if not GetKeyState("RButton")  <em>; wenn die rechte Maustaste noch nicht unten ist ...</em>
+        Send "{Blind}{RButton DownR}"
+}</pre>
+  </li>
+  <li>Wenn die Originaltaste eine <a href="../Hotkeys.htm#combo">benutzerdefinierte Kombination</a> ist, wird der Platzhaltermodifikator (*) weggelassen, damit der Hotkey funktioniert.</li>
+  <li><code class="no-highlight">{Blind}</code> ist so angepasst, dass es jegliche Modifikatoren einbezieht, die explizit für die Originaltaste und nicht für die Zieltaste angegeben sind, damit Send diese Modifikatoren loslassen darf. Zum Beispiel bewirkt <code>^a::b</code>, dass <code class="no-highlight">{Blind^}</code> verwendet wird, sodass das gesendete <kbd>B</kbd> nicht durch <kbd>Strg</kbd> modifiziert wird, aber mit anderen Modifikatortasten kombiniert werden kann. <code>&lt;^a::b</code> verwendet <code class="no-highlight">{Blind&lt;^}</code> in <span class="ver">[v2.1-alpha.5+]</span>, aber <code class="no-highlight">{Blind^}</code> in früheren Versionen (was in Kombination mit RCtrl zu unerwarteten Ergebnissen führen kann). Weitere Informationen finden Sie unter <a href="../lib/Send.htm#blind">Blind-Modus</a>.</li>
+  <li><span class="ver">[v2.1-alpha.5+]</span>: Wenn die Original- oder Zieltaste WheelDown, WheelUp, WheelLeft oder WheelRight ist, entfallen der Taste-Oben-Hotkey und das DownR-Suffix.</li>
+</ol>
+<p>Beachten Sie, dass bei den obigen Hotkeys der zweite SetKeyDelay-Parameter (<a href="../lib/SetKeyDelay.htm#dur">Druckdauer</a>) weggelassen wurde, da eine Druckdauer nicht für Nur-Unten- oder Nur-Oben-Ereignisse wie <code class="no-highlight">{b down}</code> und <code class="no-highlight">{b up}</code> gilt. Allerdings gilt die Druckdauer für Statusänderungen bei Modifikatortasten (Umschalt, Strg, Alt und Win), was sich auf Neubelegungen wie <code>a::B</code> oder <code>a::^b</code> auswirkt. Folglich würde jede Druckdauer, die während der <a href="../Scripts.htm#auto">Startphase des Skripts</a> in Kraft gesetzt wird, für alle Neubelegungen gelten.</p>
+<p>Da Neubelegungen, wie oben beschrieben, in Hotkeys übersetzt werden, können sie von der <a href="../lib/Suspend.htm">Suspend</a>-Funktion beeinflusst und mit der <a href="../lib/Hotkey.htm">Hotkey</a>-Funktion deaktiviert oder modifiziert werden. Zum Beispiel würden die beiden folgenden Funktionen die Neubelegung <code>a::b</code> deaktivieren.</p>
+<pre>Hotkey "*a", "Off"
+Hotkey "*a up", "Off"</pre>
+<p id="AltTab">Alt-Tab-Probleme: Wenn Sie eine Taste zu <kbd>Alt</kbd> umbelegen, können Sie mit dieser Taste wahrscheinlich keine vernünftigen Alt-Tab-Aktionen durchführen. Eine mögliche Übergangslösung ist es, den Hotkey <code>*Tab::Send "{Blind}{Tab}"</code> hinzuzufügen – aber seien Sie sich bewusst, dass dieser Hotkey wahrscheinlich die Verwendung der echten <kbd>Alt</kbd>-Taste bei Alt-Tab-Aktionen stören wird. Dieser Hotkey sollte daher nur verwendet werden, wenn Sie Alt-Tab-Aktionen ausschließlich mit neubelegten Tasten und/oder <a href="../Hotkeys.htm#alttab">Alt-Tab-Hotkeys</a> durchführen.</p>
+<p>Zusätzlich zu den Tasten aus der <a href="../KeyList.htm">Tastenliste</a> können die Original- und Zieltaste auch eine virtuelle Taste (VKnn) oder ein Scancode (SCnnn) sein, wie im Abschnitt <a href="../KeyList.htm#SpecialKeys">Sondertasten</a> beschrieben. Bei den meisten Tastaturbelegungen wäre z.B. <code>sc01e::vk42</code> dasselbe wie <code>a::b</code>.</p>
+<p>Um eine Taste zu deaktivieren, anstatt sie neu zu belegen, verwenden Sie ein <a href="../lib/Return.htm">Return</a>. Zum Beispiel bewirkt <code>F1::Return</code>, dass <kbd>F1</kbd> deaktiviert wird.</p>
+<p>Die folgenden Tasten werden von der internen Neubelegungsmethode nicht unterstützt:</p>
+<ul>
+  <li>Das Mausrad (WheelUp/Down/Left/Right), außer in <span class="ver">[v2.1-alpha.5+]</span>.</li>
+  <li>"Pause" als Zieltastenname (da es eine gleichnamige interne Funktion gibt). Verwenden Sie stattdessen <code class="no-highlight">vk13</code> oder den entsprechenden Scancode.</li>
+  <li>Geschweifte Klammern {} als Zieltasten. Verwenden Sie stattdessen die <a href="../lib/Send.htm#vk">VK/SC-Methode</a>; z.B. <code>x::+sc01A</code> und <code>y::+sc01B</code>.</li>
+</ul>
+<h2 id="moving-the-mouse-cursor">Mauszeiger mit der Tastatur bewegen</h2>
+<p>Es ist möglich, den Mauszeiger mit der Tastatur zu bewegen, wie das voll funktionsfähige <a href="../scripts/index.htm#NumpadMouse">Tastatur-zu-Maus-Skript</a> zeigt. Dieses Skript ermöglicht unter anderem eine flüssige Mausbewegung und -beschleunigung. Es ist für Benutzer gedacht, die viele Mausaktionen mit der Tastatur ausführen möchten. Das folgende Beispiel ist eine vereinfachte Version:</p>
+<pre>*#up::MouseMove 0, -10, 0, "R"  <em>; WIN + NACH-OBEN =&gt; Zeiger nach oben bewegen</em>
+*#Down::MouseMove 0, 10, 0, "R"  <em>; WIN + NACH-UNTEN =&gt; Zeiger nach unten bewegen</em>
+*#Left::MouseMove -10, 0, 0, "R"  <em>; WIN + NACH-LINKS =&gt; Zeiger nach links bewegen</em>
+*#Right::MouseMove 10, 0, 0, "R"  <em>; WIN + NACH-RECHTS =&gt; Zeiger nach rechts bewegen</em>
+
+*&lt;#RCtrl::  <em>; WIN-LINKS + STRG-RECHTS =&gt; Linksklick (halten Sie STRG/UMSCHALT gedrückt, um einen STRG- oder UMSCHALT-modifizierten Klick zu erzeugen).</em>
+{
+    SendEvent "{Blind}{LButton down}"
+    KeyWait "RCtrl"  <em>; Hindert die Tastatur-Autowiederholung daran, den Mausklick zu wiederholen.</em>
+    SendEvent "{Blind}{LButton up}"
+}
+
+*&lt;#AppsKey::  <em>; WIN-LINKS + MENÜ =&gt; Rechtsklick</em>
+{
+    SendEvent "{Blind}{RButton down}"
+    KeyWait "AppsKey"  <em>; Hindert die Tastatur-Autowiederholung daran, den Mausklick zu wiederholen.</em>
+    SendEvent "{Blind}{RButton up}"
+}</pre>
+<h2 id="registry">Neubelegung via Registry (Scancode Map)</h2>
+<p><strong>Vorteile:</strong></p>
+<ul>
+  <li>Die Neubelegung via Registry ist in der Regel eindeutiger und effektiver als die <a href="#Remap">Neubelegung via AutoHotkey</a>. Sie unterstützt z.B. eine größere Auswahl an Videospielen, hat keine bekannten <a href="#AltTab">Alt-Tab-Probleme</a> und kann Hook-Hotkeys von AutoHotkey auslösen (während die Neubelegung via AutoHotkey einen <a href="#HookHotkeys">Workaround</a> erfordert).</li>
+  <li>Beim manuellen Eintragen der Registry-Werte (wie unten beschrieben) ist keine externe Software erforderlich. Hilfsprogramme wie <a href="https://www.bleepingcomputer.com/download/keytweak/">KeyTweak</a> haben den Vorteil, dass sie im Gegensatz zu AutoHotkey nicht ständig laufen müssen.</li>
+</ul>
+<p><strong>Nachteile:</strong></p>
+<ul>
+  <li>Eine Registry-Neubelegung ist unflexibel: Es ist ein Neustart erforderlich, um Änderungen rückgängig zu machen oder um neue Änderungen wirksam werden zu lassen.</li>
+  <li>Eine Registry-Neubelegung wirkt sich global aus: Sie kann keine Neubelegungen für bestimmte Benutzer, Anwendungen oder Sprachen/Regionen erstellen.</li>
+  <li>Eine Registry-Neubelegung kann keine via <kbd>Umschalt</kbd>, <kbd>Strg</kbd>, <kbd>Alt</kbd> oder <kbd>AltGr</kbd> modifizierten Tastendrücke senden. Sie kann z.B. keinen Kleinbuchstaben zu einem Großbuchstaben umbelegen.</li>
+  <li>Eine Registry-Neubelegung unterstützt nur die Tastatur (AutoHotkey beherrscht <a href="#RemapMouse">Mausneubelegung</a> und <a href="RemapController.htm">limitierte Controllerneubelegung</a>).</li>
+</ul>
+<p><strong>Wie man Änderungen an der Registry vornimmt:</strong> Es gibt mindestens zwei Methoden, wie man Tasten via Registry neubelegen kann:</p>
+<ol>
+  <li>Verwenden Sie Hilfsprogramme wie <a href="https://www.bleepingcomputer.com/download/keytweak/">KeyTweak</a> (Freeware), um Tasten visuell neu zu belegen. Solche Programme ändern die Registry für Sie.</li>
+  <li>Verwenden Sie eine .reg-Datei (Klartext), um neubelegte Tasten manuell in die Registry zu laden. Einzelheiten finden Sie im <a href="https://www.autohotkey.com/board/index.php?showtopic=8359#entry52760">archivierten Forum</a>.</li>
+</ol>
+<h2 id="related">Siehe auch</h2>
+<ul>
+  <li><a href="../KeyList.htm">Tastenliste (Tastatur, Maus und Controller)</a></li>
+  <li><a href="../lib/GetKeyState.htm">GetKeyState</a></li>
+  <li><a href="RemapController.htm">Controllerneubelegung</a></li>
+</ul>
+</body>
+</html>

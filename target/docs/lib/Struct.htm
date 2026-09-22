@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>Struct - Methoden &amp; Eigenschaften | AutoHotkey v2</title>
+<meta name="description" content="Struct ist die Basisklasse für alle Strukturen." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>Struct <span class="ver">[v2.1-alpha.22+]</span></h1>
+<pre class="NoIndent">class Struct extends Any</pre>
+
+<p>Struct ist die Basisklasse für alle <a href="../Structs.htm">Strukturen</a>.</p>
+<p>Im Gegensatz zu <a href="Object.htm">Object</a> sind die Eigenschaften einer Struktur auf die Eigenschaften ihres Basisobjekts (<a href="#Prototype">Prototyp</a> der Klasse der Struktur) beschränkt. In der Regel sind das typisierte Eigenschaften, die in einer <a href="../Structs.htm#classdef">Strukturdefinition</a> deklariert sind, können aber auch dynamische Eigenschaften, Methoden und schreibgeschützte Werteigenschaften sein.</p>
+<p>"Obj" wird hier stellvertretend für eine beliebige Instanz der Struct-Klasse verwendet.</p>
+<p>Instanzen von Struct basieren indirekt auf <code>Struct.Prototype</code>, das wiederum auf <code>Any.Prototype</code> basiert. Zusätzlich zu den von <a href="Any.htm">Any</a> geerbten Methoden und Eigenschaften haben Structs die folgenden vordefinierten Methoden und Eigenschaften.</p>
+
+<h2 id="toc">Inhaltsverzeichnis</h2>
+<ul class="indent">
+  <li><a href="#StaticMethods">Statische Methoden</a>:
+    <ul>
+      <li><a href="#Call">Call</a>: Erstellt ein neues Struct.</li>
+      <li><a href="#At">At</a>: Erstellt einen gekapselten Pointer.</li>
+    </ul>
+  </li>
+  <li><a href="#StaticProperties">Statische Eigenschaften</a>:
+    <ul>
+      <li><a href="#Prototype">Prototype</a>: Liefert den Prototyp, auf dem alle Instanzen der Strukturklasse basieren.</li>
+      <li><a href="#PtrClass">Ptr</a>: Liefert eine Klasse, die einen Pointer auf eine Struktur dieser Klasse repräsentiert.</li>
+      <li><a href="#__ItemClass">__Item</a>: Liefert eine Klasse, die ein Array fester Größe mit dieser Klasse als Elementtyp repräsentiert.</li>
+    </ul>
+  </li>
+  <li><a href="#Methods">Methoden</a>:
+    <ul>
+      <li><a href="#__Ref">__Ref</a>: Ermittelt eine verschachtelte Struktur oder eine virtuelle Referenz, die auf eine Eigenschaft verweist.</li>
+    </ul>
+  </li>
+  <li><a href="#Properties">Eigenschaften</a>:
+    <ul>
+      <li><a href="#Ptr">Ptr</a>: Liefert die Adresse der Struktur.</li>
+      <li><a href="#Size">Size</a>: Liefert die Größe der Struktur in Bytes.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="StaticMethods">Statische Methoden</h2>
+
+<div class="methodShort" id="Call"><h3>Call</h3>
+<p>Erstellt ein neues Struct.</p>
+<pre class="Syntax">Obj := StructKlasse()
+Obj := StructKlasse.<span class="func">Call</span>()</pre>
+<p><em>StructKlasse</em> muss eine Unterklasse von Struct sein. Unterklassen können mithilfe einer <a href="../Structs.htm#classdef">Strukturdefinition</a> oder <a href="../Structs.htm#defprop">während der Skriptausführung</a> erstellt werden.</p>
+</div>
+
+<div class="methodShort" id="At"><h3>At</h3>
+<p>Erstellt einen <a href="../Structs.htm#Boxed_Pointer">gekapselten Pointer</a>, der sich wie eine Instanz von <em>StructKlasse</em> verhält.</p>
+<pre class="Syntax">Obj := StructKlasse.<span class="func">At</span>(Adresse)</pre>
+<h4 id="At_Parameters">Parameter</h4>
+<dl>
+  <dt>Adresse</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Die Adresse einer Struktur des durch <em>StructKlasse</em> definierten Typs.</p>
+  </dd>
+</dl>
+<h4 id="At_Return_Value">Rückgabewert</h4>
+<p>Typ: <a href="../Concepts.htm#objects">Objekt</a></p>
+<h4 id="At_Remarks">Bemerkungen</h4>
+<p><em>StructKlasse</em> muss eine Unterklasse von Struct sein.</p>
+<p>Weitere Informationen finden Sie unter <a href="../Structs.htm#Boxed_Pointer">Gekapselter Pointer</a>.</p>
+</div>
+
+<h2 id="StaticProperties">Statische Eigenschaften</h2>
+
+<div class="methodShort" id="Prototype"><h3>Prototype</h3>
+<p>Liefert den Prototyp, auf dem alle Instanzen der Strukturklasse basieren.</p>
+<pre class="Syntax">Proto := ClassObj.<span class="func">Prototype</span></pre>
+<p>Weitere Informationen finden Sie unter <a href="Class.htm#Prototype">ClassObj.Prototype</a>.</p>
+</div>
+
+<div class="methodShort" id="PtrClass"><h3>Ptr</h3>
+<p>Liefert eine Klasse, die einen Pointer auf eine <em>StructKlasse</em> repräsentiert.</p>
+<pre class="Syntax">PtrKlasse := StructKlasse.<span class="func">Ptr</span></pre>
+<p>Typ: <a href="Class.htm">Klasse</a></p>
+<p>Dies wird in Verbindung mit <a href="DllCall.htm">DllCall</a> und <a href="../Structs.htm">typisierten Eigenschaften</a> verwendet.</p>
+<p>Weitere Informationen finden Sie unter <a href="../Structs.htm#pointers">Pointer auf Strukturen</a>.</p>
+</div>
+
+<div class="methodShort" id="__ItemClass"><h3>__Item <span class="ver">[v2.1-alpha.23+]</span></h3>
+<p>Liefert eine Klasse, die ein Array fester Größe bestehend aus <em>StructKlasse</em>-Elementen repräsentiert.</p>
+<pre class="Syntax">ArrayKlasse := StructKlasse[Länge]
+ArrayKlasse := StructKlasse.<span class="func">__Item</span>[Länge]</pre>
+<h4 id="__ItemClass_Parameters">Parameter</h4>
+<dl>
+  <dt>Name</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Die Länge des Array-Typs.</p>
+  </dd>
+</dl>
+<h4 id="__ItemClass_Return_Value">Rückgabewert</h4>
+<p>Typ: <a href="Class.htm">Klasse</a></p>
+<p>Der Rückgabewert ist eine Unterklasse von <a href="StructArray.htm">Struct.Array</a>.</p>
+<p>Dies wird üblicherweise in Verbindung mit <a href="DllCall.htm">DllCall</a> und <a href="../Structs.htm">typisierten Eigenschaften</a> verwendet.</p>
+</div>
+
+<h2 id="Methods">Methoden</h2>
+
+<div class="methodShort" id="__Ref"><h3>__Ref</h3>
+<p>Ermittelt eine verschachtelte Struktur oder eine <a href="../Functions.htm#virtual-references">virtuelle Referenz</a>, die auf eine Eigenschaft verweist.</p>
+<pre class="Syntax">Obj.<span class="func">__Ref</span>(Name)</pre>
+<h4 id="__Ref_Parameters">Parameter</h4>
+<dl>
+  <dt>Name</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+    <p>Der Name der Eigenschaft.</p>
+  </dd>
+</dl>
+<h4 id="__Ref_Return_Value">Rückgabewert</h4>
+<p>Typ: <a href="../Concepts.htm#objects">Objekt</a></p>
+<p>Handelt es sich bei der Eigenschaft um eine <a href="../Structs.htm#nested-structs">verschachtelte Struktur</a>, wird eine Referenz zurückgegeben, die auf diese Struktur verweist. Der Eigenschaft, die einer verschachtelten Struktur entspricht, kann nur ein Wert zugewiesen werden, wenn die Struktur eine setzbare __Value-Eigenschaft definiert. In diesem Fall kann die Struktur selbst auch als virtuelle Referenz verwendet werden. Da ein <a href="../Structs.htm#abstract">abstrakter Datentyp</a> in der Regel sowohl einen Getter als auch einen Setter implementiert, kann die verschachtelte Struktur selbst nur über diese Methode abgerufen werden.</p>
+<p>Handelt es sich bei der Eigenschaft um einen <a href="../Structs.htm#pointers">Pointertyp</a> oder nicht um eine verschachtelte Struktur, wird eine <a href="PropRef.htm">PropRef</a> erstellt und zurückgegeben.</p>
+<h4 id="__Ref_Remarks">Bemerkungen</h4>
+<p>Diese Methode wird normalerweise indirekt über den <a href="../Variables.htm#ref">Referenzoperator</a> aufgerufen. Zum Beispiel ist <code>&amp;Obj.Prop</code> dasselbe wie <code>Obj.__Ref('Prop')</code>.</p>
+<p>Anstelle einer Variablenreferenz kann eine <a href="../Functions.htm#virtual-references">virtuelle Referenz</a> an einen <a href="../Functions.htm#ByRef">ByRef-Parameter</a> übergeben werden.</p>
+</div>
+
+<h2 id="Properties">Eigenschaften</h2>
+
+<div class="methodShort" id="Ptr"><h3>Ptr</h3>
+<p>Liefert die Adresse der Struktur.</p>
+<pre class="Syntax">Adresse := Obj.<span class="func">Ptr</span></pre>
+<p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+<p>Die Adresse einer Struktur ist identisch zur Adresse ihres ersten Feldes (typisiertes Feld).</p>
+</div>
+
+<div class="methodShort" id="Size"><h3>Size</h3>
+<p>Liefert die Größe der Struktur in Bytes.</p>
+<pre class="Syntax">Größe := Obj.<span class="func">Size</span></pre>
+<p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>MouseGetPos - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die MouseGetPos-Funktion ruft die aktuelle Position des Mauszeigers ab, und optional das Fenster oder Steuerelement, über dem sich der Mauszeiger befindet." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+</head>
+<body><script>site.init();</script>
+
+<h1>MouseGetPos</h1>
+
+<p>Ruft die aktuelle Position des Mauszeigers ab, und optional das Fenster oder Steuerelement, über dem sich der Mauszeiger befindet.</p>
+
+<pre class="Syntax"><span class="func">MouseGetPos</span> <span class="optional">&amp;AusgabeVarX, &amp;AusgabeVarY, &amp;AusgabeVarFenster, &amp;AusgabeVarStrlmnt, Flag</span></pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+
+  <dt>&amp;AusgabeVarX, &amp;AusgabeVarY</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#variable-references">VarRef</a></p>
+    <p>Wenn weggelassen, wird der zugehörige Wert nicht gespeichert. Andernfalls geben Sie Referenzen an, die auf Ausgabevariablen verweisen, in denen die X- und Y-Koordinate gespeichert werden sollen. Standardmäßig sind die abgerufenen Koordinaten relativ zum Clientbereich des aktiven Fensters. Mit <a href="CoordMode.htm">CoordMode</a> können die Koordinaten relativ zum Bildschirm gemacht werden.</p>
+  </dd>
+
+  <dt>&amp;AusgabeVarFenster</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#variable-references">VarRef</a></p>
+    <p>Wenn weggelassen, wird der zugehörige Wert nicht gespeichert. Andernfalls geben Sie eine Referenz an, die auf eine Ausgabevariable verweist, in der die <a href="../misc/WinTitle.htm#ahk_id">eindeutige ID (HWND)</a> des Fensters unter dem Mauszeiger gespeichert werden soll. Wenn das Fenster nicht ermittelt werden kann, wird diese Variable leer gemacht.</p>
+    <p>Das Fenster muss nicht aktiv sein, um erkannt zu werden. Versteckte Fenster können nicht erkannt werden.</p>
+  </dd>
+
+  <dt>&amp;AusgabeVarStrlmnt</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#variable-references">VarRef</a></p>
+    <p>Wenn weggelassen, wird der zugehörige Wert nicht gespeichert. Andernfalls geben Sie Referenzen an, die auf Ausgabevariablen verweisen, in der die <a href="../misc/ControlID.htm#ClassNN">ClassNN</a> des Steuerelements unter dem Mauszeiger gespeichert werden soll. Wenn das Steuerelement nicht ermittelt werden kann, wird diese Variable leer gemacht.</p>
+    <p>Das Fenster des Steuerelements unter dem Mauszeiger muss nicht aktiv sein, um erkannt zu werden.</p>
+  </dd>
+
+  <dt>Flag</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Wenn weggelassen, wird standardmäßig 0 verwendet, d.h. es wird die Standardmethode zum Ermitteln von <em>AusgabeVarStrlmnt</em> verwendet und die <a href="../misc/ControlID.htm#ClassNN">ClassNN</a> des Steuerelements abgerufen. Andernfalls geben Sie eine Kombination (Summe) der folgenden Zahlen an:</p>
+    <p><strong>1:</strong> Verwendet eine einfachere Methode zum Ermitteln von <em>AusgabeVarStrlmnt</em>. Diese Methode ermittelt korrekt das aktive/oberste untergeordnete Fenster einer MDI-Anwendung (Multiple Document Interface) wie SysEdit oder TextPad. Allerdings ist sie für andere Zwecke, wie z.B. die Erkennung von Steuerelementen innerhalb eines GroupBox-Steuerelements, weniger genau.</p>
+    <p><strong>2:</strong> Speichert das <a href="../misc/ControlID.htm#HWND">HWND</a> des Steuerelements in <em>AusgabeVarStrlmnt</em>, nicht dessen <a href="../misc/ControlID.htm#ClassNN">ClassNN</a>.</p>
+    <p>Zum Beispiel können Sie den <em>Flag</em>-Parameter auf 3 setzen, um beide Optionen zu aktivieren.</p>
+  </dd>
+
+</dl>
+
+<h2 id="Error_Handling">Fehlerbehandlung <span class="ver">[v2.1-alpha.9+]</span></h2>
+<p>Es wird ein <a href="Error.htm#OSError">OSError</a> ausgelöst, wenn bei der Ermittlung der Mausposition ein Problem auftritt, z.B. wenn der PC gesperrt ist oder in einen Ruhezustand oder Energiesparmodus wechselt.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Wenn bestimmte Informationen nicht benötigt werden, können die entsprechenden Ausgabevariablen weggelassen werden.</p>
+<p>Auf Systemen mit mehreren Bildschirmen, die unterschiedliche DPI-Einstellungen haben, kann die zurückgegebene Position aufgrund der <a href="../misc/DPIScaling.htm">OS-DPI-Skalierung</a> anders als erwartet ausfallen.</p>
+
+<h2 id="Related">Siehe auch</h2>
+<p><a href="CoordMode.htm">CoordMode</a>, <a href="Win.htm">Win-Funktionen</a>, <a href="SetDefaultMouseSpeed.htm">SetDefaultMouseSpeed</a>, <a href="Click.htm">Click</a></p>
+
+<h2 id="Examples">Beispiele</h2>
+<div class="ex" id="ExBasic">
+<p><a class="ex_number" href="#ExBasic"></a> Meldet die Position des Mauszeigers.</p>
+<pre>MouseGetPos &amp;xpos, &amp;ypos 
+MsgBox "Der Zeiger befindet sich auf X" xpos " Y" ypos</pre>
+</div>
+
+<div class="ex" id="ExWatchCursor">
+<p><a class="ex_number" href="#ExWatchCursor"></a> Zeigt das HWND, den Klassennamen, den Titel und die Steuerelemente des Fensters an, das sich gerade unter dem Mauszeiger befindet.</p>
+<pre>SetTimer ZeigerÜberwachen, 100
+
+ZeigerÜberwachen()
+{
+    MouseGetPos , , &amp;ID, &amp;Strlmnt
+    ToolTip
+    (
+        "ahk_id " ID "
+        ahk_class " WinGetClass(ID) "
+        " WinGetTitle(ID) "
+        Steuerelement: " Strlmnt
+    )
+}</pre>
+</div>
+
+</body>
+</html>
