@@ -124222,9 +124222,8 @@
       <tuv lang="en">
         <seg>However, built-in (A_) variables do not require a declaration or explicit import to allow assignment, and their names cannot be reused.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T164018Z" creationid="Ragnar-F" creationdate="20260918T164018Z">
-        <seg>Interne Variablen (A_) lassen sich ohne Deklaration oder Import zuweisen,
-und ihre Namen sind nicht wiederverwendbar.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T125626Z" creationid="Ragnar-F" creationdate="20260918T164018Z">
+        <seg>Interne Variablen (A_) lassen sich ohne Deklaration oder Import zuweisen, und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
     </tu>
     <tu>
