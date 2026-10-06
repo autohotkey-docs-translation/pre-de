@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE tmx SYSTEM "tmx11.dtd">
 <tmx version="1.1">
-  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="6.0.1_0_42ef0143" segtype="sentence" srclang="en"/>
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="6.1.1_0_9a3f59119" segtype="sentence" srclang="en"/>
   <body>
 <!-- Default translations -->
     <tu>
@@ -5566,6 +5566,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>#HotIf WinActive("ahk_class MSPaintApp")</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T103201Z" creationid="Ragnar-F" creationdate="20261006T103201Z">
+        <seg>#HotIf WinActive("ahk_class MSPaintApp")</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>#HotIf WinActive("ahk_class Notepad")</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200612T113533Z" creationid="Ragnar-F" creationdate="20200612T113533Z">
@@ -5906,6 +5914,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T122243Z" creationid="Ragnar-F" creationdate="20260913T122243Z">
         <seg>#Import _internal {*}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#Import can be used inside a function.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T122931Z" creationid="Ragnar-F" creationdate="20261006T122931Z">
+        <seg>#Import kann innerhalb einer Funktion verwendet werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6806,6 +6822,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>#p::Run "mspaint"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T103131Z" creationid="Ragnar-F" creationdate="20261006T103131Z">
+        <seg>#p::Run "mspaint"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>#r::return</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230814T185021Z" creationid="Ragnar-F" creationdate="20230814T185021Z">
@@ -6890,6 +6914,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180412T131557Z" creationid="Ragnar-F" creationdate="20180412T131557Z">
         <seg>#z::MsgBox "Aber dieser nicht."</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#z::MsgBox "You pressed Win+Z in either Notepad or Paint."</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T103258Z" creationid="Ragnar-F" creationdate="20261006T103258Z">
+        <seg>#z::MsgBox "Sie haben WIN+Z entweder in Notepad oder Paint gedrückt."</seg>
       </tuv>
     </tu>
     <tu>
@@ -11914,6 +11946,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260921T125334Z" creationid="Ragnar-F" creationdate="20260921T125334Z">
         <seg>2.1-alpha.32 - 12. September 2026</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.33 - October 3, 2026</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T110617Z" creationid="Ragnar-F" creationdate="20261006T110617Z">
+        <seg>2.1-alpha.33 - 3. Oktober 2026</seg>
       </tuv>
     </tu>
     <tu>
@@ -21027,6 +21067,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>; Press Win-P to run Paint.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T103154Z" creationid="Ragnar-F" creationdate="20261006T103154Z">
+        <seg>; WIN+P drücken, um Paint zu starten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>; Press Win-W to run Wordpad.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200713T104141Z" creationid="Ragnar-F" creationdate="20200713T104141Z">
@@ -25427,6 +25475,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210212T203515Z" creationid="Ragnar-F" creationdate="20210212T203502Z">
         <seg>; WIN+P</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; Win+P activates or launches Paint.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T100817Z" creationid="Ragnar-F" creationdate="20261006T100817Z">
+        <seg>; Win+P aktiviert oder startet Paint.</seg>
       </tuv>
     </tu>
     <tu>
@@ -63877,6 +63933,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.33+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T122915Z" creationid="Ragnar-F" creationdate="20261006T122915Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.33+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;[v2.1-alpha.5+]&lt;/s0&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T173126Z" creationid="Ragnar-F" creationdate="20260916T173126Z">
@@ -71341,6 +71405,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Added __Ref method to Module, to support &lt;c0&gt;&amp;MyMod.MyVar&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T111500Z" creationid="Ragnar-F" creationdate="20261006T111500Z">
+        <seg>Hinzugefügt: __Ref-Methode für Module-Klassen, um &lt;c0&gt;&amp;MeinMod.MeineVar&lt;/c0&gt; zu unterstützen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Added a &lt;a0&gt;warning&lt;/a0&gt; for UTF-8 decoding errors in script files.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260920T070456Z" creationid="Ragnar-F" creationdate="20260920T070456Z">
@@ -71553,6 +71625,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260912T172310Z" creationid="Ragnar-F" creationdate="20260912T172310Z">
         <seg>Hinzugefügt: Vielleicht-Zuweisungsoperator (&lt;a0&gt;??=&lt;/a0&gt;).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Added the capability to use #Import inside a function.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T110705Z" creationid="Ragnar-F" creationdate="20261006T110705Z">
+        <seg>Hinzugefügt: #Import kann nun innerhalb einer Funktion verwendet werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -90072,8 +90152,8 @@
       <tuv lang="en">
         <seg>Consecutive &lt;a1&gt;Text&lt;/a1&gt; or &lt;a2&gt;Link&lt;/a2&gt; controls are given additional vertical padding, so that they typically align better in cases where a column of &lt;a3&gt;Edit&lt;/a3&gt;, &lt;a4&gt;DropDownList&lt;/a4&gt; or similar-sized controls are later added to their right.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260213T104516Z" creationid="Ragnar-F" creationdate="20260213T104516Z">
-        <seg>Aufeinanderfolgende &lt;a1&gt;Text&lt;/a1&gt;- oder &lt;a2&gt;Link&lt;/a2&gt;-Steuerelemente werden mit zusätzlichen vertikalen Abständen versehen, damit sie besser ausgerichtet sind, wenn danach eine rechts befindliche Spalte mit Steuerelementen wie &lt;a3&gt;Edit&lt;/a3&gt;, &lt;a4&gt;DropDownList&lt;/a4&gt; usw. hinzugefügt wird.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261001T111704Z" creationid="Ragnar-F" creationdate="20260213T104516Z">
+        <seg>Aufeinanderfolgende &lt;a1&gt;Text&lt;/a1&gt;- oder &lt;a2&gt;Link&lt;/a2&gt;-Steuerelemente erhalten zusätzlichen vertikalen Abstand. Dadurch sind sie in der Regel besser ausgerichtet, wenn später auf ihrer rechten Seite eine Spalte hinzugefügt wird, die aus &lt;a3&gt;Edit&lt;/a3&gt;-, &lt;a4&gt;DropDownList&lt;/a4&gt;- oder ähnlich großen Steuerelementen besteht.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100118,6 +100198,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Each name exported from the module is exposed as a virtual property.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T123355Z" creationid="Ragnar-F" creationdate="20261006T123355Z">
+        <seg>Jeder aus dem Modul exportierte Name wird als virtuelle Eigenschaft bereitgestellt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Each name-value pair causes a value property to be defined, with the exception that &lt;a0&gt;Base&lt;/a0&gt; can be set (with the same restrictions as a normal assignment).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231118T093530Z" creationid="Ragnar-F" creationdate="20220713T124609Z">
@@ -103206,6 +103294,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Explicitly use the full path of iexplore.exe.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T101018Z" creationid="Ragnar-F" creationdate="20261006T101018Z">
+        <seg>Explizit den vollständigen Pfad von iexplore.exe verwenden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Explicitly use the full path of wordpad.exe.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221220T094821Z" creationid="Ragnar-F" creationdate="20221220T094821Z">
@@ -105718,6 +105814,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;DlCall(..., Struct.Ptr, unset)&lt;/c0&gt; on 32-bit.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T122459Z" creationid="Ragnar-F" creationdate="20261006T122459Z">
+        <seg>Behoben: &lt;c0&gt;DlCall(..., Struct.Ptr, unset)&lt;/c0&gt; unter 32-Bit.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed &lt;c0&gt;Hotkey("a", "b")&lt;/c0&gt; to use the original function of "b", not "a".</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230623T170121Z" creationid="Ragnar-F" creationdate="20230623T170121Z">
@@ -105874,6 +105978,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240706T092520Z" creationid="Ragnar-F" creationdate="20240706T092520Z">
         <seg>Behoben: &lt;c0&gt;a.b[c] := d&lt;/c0&gt; ruft nun indirekt den Getter für &lt;c1&gt;a.b&lt;/c1&gt; auf, wenn es keinen Setter gibt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;a.b[c]&lt;/c0&gt; crash when &lt;c1&gt;a.b&lt;/c1&gt; returns unset.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T111640Z" creationid="Ragnar-F" creationdate="20261006T111640Z">
+        <seg>Behoben: &lt;c0&gt;a.b[c]&lt;/c0&gt; verursacht keinen Absturz mehr, wenn &lt;c1&gt;a.b&lt;/c1&gt; unset zurückgibt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -106110,6 +106222,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed CallbackCreate with 64-bit numeric parameter types on 32-bit.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T122636Z" creationid="Ragnar-F" creationdate="20261006T122636Z">
+        <seg>Behoben: CallbackCreate mit numerischen 64-Bit-Parametertypen unter 32-Bit.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed Class objects not allowing Base assignment.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T112003Z" creationid="Ragnar-F" creationdate="20260911T112003Z">
@@ -106234,6 +106354,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240530T114648Z" creationid="Ragnar-F" creationdate="20240530T114648Z">
         <seg>Behoben: Download versucht nun eine anonyme Authentifizierung, wenn der Server eine Client-Authentifizierung verlangt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed EditGetLine, ControlChooseIndex and ControlDeleteItem on 32-bit.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T122502Z" creationid="Ragnar-F" creationdate="20261006T122438Z">
+        <seg>Behoben: EditGetLine, ControlChooseIndex und ControlDeleteItem unter 32-Bit.</seg>
       </tuv>
     </tu>
     <tu>
@@ -106582,6 +106710,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed ObjSetCapacity and related to throw if target is Struct.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T121723Z" creationid="Ragnar-F" creationdate="20261006T111923Z">
+        <seg>Behoben: ObjSetCapacity u.ä. lösen nun einen Fehler aus, wenn das Ziel ein Struct-Objekt ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed ObjSetDataPtr throwing on success.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T080618Z" creationid="Ragnar-F" creationdate="20260911T122512Z">
@@ -106722,6 +106858,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260215T081202Z" creationid="Ragnar-F" creationdate="20260215T081202Z">
         <seg>Behoben: StrPut/StrGet-Behandlung von 32-Bit-Integer-Limitierungen unter x64.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed Struct.Array DllCall parameter types on 32-bit.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T122538Z" creationid="Ragnar-F" creationdate="20261006T122538Z">
+        <seg>Behoben: Struct.Array-DllCall-Parametertypen unter 32-Bit.</seg>
       </tuv>
     </tu>
     <tu>
@@ -114864,6 +115008,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For example, the following code would report that "C:\Program.png" was not found:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T101318Z" creationid="Ragnar-F" creationdate="20261006T101318Z">
+        <seg>Zum Beispiel meldet der folgende Code, dass "C:\Program.png" nicht gefunden wurde:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For example, the following creates a reference cycle:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240420T210521Z" creationid="Ragnar-F" creationdate="20240420T210521Z">
@@ -119913,6 +120065,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Go with the easiest option:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T101029Z" creationid="Ragnar-F" creationdate="20261006T101029Z">
+        <seg>Entscheiden wir uns für die einfachste Option:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Good candidates are virtual key codes which generally have no effect, such as vkE8, which Microsoft documents as "unassigned", or vkFF, which is reserved to mean "no mapping" (a key which has no function).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230430T073306Z" creationid="Ragnar-F" creationdate="20200612T064850Z">
@@ -120181,6 +120341,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180412T143537Z" creationid="Ragnar-F" creationdate="20180412T143537Z">
         <seg>GroupAdd "MSIE", "ahk_class IEFrame"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>GroupAdd "MyGroup", "ahk_class MSPaintApp"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T103243Z" creationid="Ragnar-F" creationdate="20261006T103243Z">
+        <seg>GroupAdd "MeineGruppe", "ahk_class MSPaintApp"</seg>
       </tuv>
     </tu>
     <tu>
@@ -122489,6 +122657,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>HotIfWinActive "ahk_class MSPaintApp"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T103305Z" creationid="Ragnar-F" creationdate="20261006T103305Z">
+        <seg>HotIfWinActive "ahk_class MSPaintApp"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>HotIfWinActive "ahk_class Notepad"</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200612T141652Z" creationid="Ragnar-F" creationdate="20200612T141652Z">
@@ -122645,6 +122821,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210307T220056Z" creationid="Ragnar-F" creationdate="20210307T220056Z">
         <seg>Hotkey "^!c", MeineFunkFürNotepad</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Hotkey "^!c", MyFuncForPaint</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T103319Z" creationid="Ragnar-F" creationdate="20261006T103319Z">
+        <seg>Hotkey "^!c", MeineFunkFürPaint</seg>
       </tuv>
     </tu>
     <tu>
@@ -124814,6 +124998,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230624T194425Z" creationid="Ragnar-F" creationdate="20210307T194439Z">
         <seg>Einige Methoden erfordern jedoch einen spezifischeren Variantentyp, wie z.B. &lt;c0&gt;VT_BYREF | VT_I4&lt;/c0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>However, some programs still fail to open a path containing spaces.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T101209Z" creationid="Ragnar-F" creationdate="20261006T101209Z">
+        <seg>Allerdings gibt es einige Programme, die einen Pfad mit Leerzeichen nicht öffnen können.</seg>
       </tuv>
     </tu>
     <tu>
@@ -140604,6 +140796,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>In the current release, these virtual properties are not visible to &lt;a1&gt;Props&lt;/a1&gt;, &lt;a2&gt;HasProp&lt;/a2&gt; or &lt;a3&gt;HasMethod&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T123437Z" creationid="Ragnar-F" creationdate="20261006T123437Z">
+        <seg>In der aktuellen Version sind diese virtuellen Eigenschaften für &lt;a1&gt;Props&lt;/a1&gt;, &lt;a2&gt;HasProp&lt;/a2&gt; und &lt;a3&gt;HasMethod&lt;/a3&gt; nicht sichtbar.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>In the example above, "Blue" appears in quotes because it is a literal string.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230824T073029Z" creationid="Ragnar-F" creationdate="20140316T130820Z">
@@ -140896,6 +141096,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230316T125901Z" creationid="Ragnar-F" creationdate="20171226T225856Z">
         <seg>So ähnlich erfolgt auch der Kontrollfluss in einem Programm oder Skript normalerweise von einer Anweisung zur nächsten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In the two examples above, the Run function receives the string &lt;c0&gt;mspaint "C:\Program Files\AutoHotkey\UX\inc\spy.ico"&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T103115Z" creationid="Ragnar-F" creationdate="20261006T103115Z">
+        <seg>In den beiden obigen Beispielen wird der Run-Funktion die Zeichenkette &lt;c0&gt;mspaint "C:\Program Files\AutoHotkey\UX\inc\spy.ico"&lt;/c0&gt; übergeben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -153660,6 +153868,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Module</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T123713Z" creationid="Ragnar-F" creationdate="20261006T123713Z">
+        <seg>Module</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Module Class</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T123114Z" creationid="Ragnar-F" creationdate="20261006T123114Z">
+        <seg>Module-Klasse</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>ModuleAlias</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T115722Z" creationid="Ragnar-F" creationdate="20260913T115722Z">
@@ -155280,6 +155504,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260918T180905Z" creationid="Ragnar-F" creationdate="20260918T180855Z">
         <seg>MsgBox "Hallo, Welt!",, "T2"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox "Help button pressed."</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T103929Z" creationid="Ragnar-F" creationdate="20261006T103929Z">
+        <seg>MsgBox "Hilfe-Schaltfläche gedrückt."</seg>
       </tuv>
     </tu>
     <tu>
@@ -159124,6 +159356,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>MsgBox("Press the Help button.", "Help button test", "0x4000 Owner" A_ScriptHwnd)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T103910Z" creationid="Ragnar-F" creationdate="20261006T103910Z">
+        <seg>MsgBox("Drücken Sie die Hilfe-Schaltfläche.", "Hilfe-Schaltfläche-Test", "0x4000 Owner" A_ScriptHwnd)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox("Press the Help button.", "Help button test", 0x4000)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T104039Z" creationid="Ragnar-F" creationdate="20261006T104039Z">
+        <seg>MsgBox("Drücken Sie die Hilfe-Schaltfläche.", "Hilfe-Schaltfläche-Test", 0x4000)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>MsgBox("Process not found!")</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180412T132655Z" creationid="Ragnar-F" creationdate="20180412T132655Z">
@@ -160736,6 +160984,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200623T110745Z" creationid="Ragnar-F" creationdate="20200623T110745Z">
         <seg>MeineGui.Add("Button",, "Beendet dieses Beispiel").OnEvent("Click", (*) =&gt; WinClose())</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MyGui.Add("Button",, "Show MsgBox").OnEvent("Click", ShowMsgBox)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T104007Z" creationid="Ragnar-F" creationdate="20261006T104007Z">
+        <seg>MeineGui.Add("Button",, "MsgBox anzeigen").OnEvent("Click", MsgBoxAnzeigen)</seg>
       </tuv>
     </tu>
     <tu>
@@ -164804,6 +165060,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Now suppose that we want to open the file in the Microsoft browser instead of Notepad.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T100913Z" creationid="Ragnar-F" creationdate="20261006T100913Z">
+        <seg>Nehmen wir nun an, dass wir die Datei im Microsoft-Browser statt in Notepad öffnen wollen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Now the parameter can be defined as &lt;c3&gt;&amp;bCancel&lt;/c3&gt; and assigned like &lt;c4&gt;bCancel := true&lt;/c4&gt;; or can be defined as &lt;c5&gt;pbCancel&lt;/c5&gt; and assigned like &lt;c6&gt;%pbCancel% := true&lt;/c6&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231125T151947Z" creationid="Ragnar-F" creationdate="20210704T175200Z">
@@ -167288,6 +167552,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210307T084233Z" creationid="Ragnar-F" creationdate="20210307T084233Z">
         <seg>OnMessage(0x0011, On_WM_QUERYENDSESSION)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>OnMessage(0x0053, WM_HELP)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T103833Z" creationid="Ragnar-F" creationdate="20261006T103833Z">
+        <seg>OnMessage(0x0053, WM_HELP)</seg>
       </tuv>
     </tu>
     <tu>
@@ -173052,6 +173324,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Perhaps the system couldn't find "iexplore", but what it's really saying is that there is no such file as "iexplore C:\...".</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T100951Z" creationid="Ragnar-F" creationdate="20261006T100951Z">
+        <seg>Vielleicht konnte das System "iexplore" nicht finden, aber was es wirklich sagen will, ist, dass es keine solche Datei wie "iexplore C:\..." gibt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Perhaps the system couldn't find "wordpad", but what it's really saying is that there is no such file as "wordpad C:\...".</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221220T093814Z" creationid="Ragnar-F" creationdate="20221220T093814Z">
@@ -177510,16 +177790,16 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>Regardless of this option, a negative class such as &lt;s0&gt;[^a]&lt;/s0&gt; always matches newlines.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20230805T134941Z" creationid="Ragnar-F" creationdate="20210211T200947Z">
-        <seg>Unabhängiger von dieser Option findet eine negative Klasse wie &lt;s0&gt;[^a]&lt;/s0&gt; immer Zeilenumbrüche.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261003T070912Z" creationid="Ragnar-F" creationdate="20210211T200947Z">
+        <seg>Unabhängig von dieser Option findet eine negative Klasse wie &lt;s0&gt;[^a]&lt;/s0&gt; immer Zeilenumbrüche.</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>Regardless of this option, non-alphabetic backslash sequences that have no special meaning are always treated as literals (e.g. \/ and / are both recognized as forward-slash).</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20230805T134937Z" creationid="Ragnar-F" creationdate="20140311T004550Z">
-        <seg>Unabhängiger von dieser Option werden umgekehrte Schrägstriche vor nicht-alphabetischen Zeichen ohne spezielle Funktion immer ignoriert (z.B. werden sowohl \/ als auch / als normaler Schrägstrich erkannt).</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261003T070936Z" creationid="Ragnar-F" creationdate="20140311T004550Z">
+        <seg>Unabhängig von dieser Option werden umgekehrte Schrägstriche vor nicht-alphabetischen Zeichen ohne spezielle Funktion immer ignoriert (z.B. werden sowohl \/ als auch / als normaler Schrägstrich erkannt).</seg>
       </tuv>
     </tu>
     <tu>
@@ -182484,6 +182764,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Run "iexplore C:\Program Files\AutoHotkey\license.txt"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T100925Z" creationid="Ragnar-F" creationdate="20261006T100925Z">
+        <seg>Run "iexplore C:\Program Files\AutoHotkey\license.txt"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Run "iexplore.exe C:\Program Files\AutoHotkey\license.txt"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T101047Z" creationid="Ragnar-F" creationdate="20261006T101047Z">
+        <seg>Run "iexplore.exe C:\Program Files\AutoHotkey\license.txt"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Run "license.rtf",,, &amp;pid</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220713T141208Z" creationid="Ragnar-F" creationdate="20220713T140907Z">
@@ -182520,6 +182816,30 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210216T094428Z" creationid="Ragnar-F" creationdate="20210216T094406Z">
         <seg>Run "mailto:someone@somedomain.com?subject=Das ist die Betreffzeile.&amp;body=Das ist der Haupttext der Nachricht."</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Run "mspaint "C:\Program Files\AutoHotkey\UX\inc\spy.ico""</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T103043Z" creationid="Ragnar-F" creationdate="20261006T103043Z">
+        <seg>Run "mspaint "C:\Program Files\AutoHotkey\UX\inc\spy.ico""</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Run "mspaint C:\Program Files\AutoHotkey\UX\inc\spy.ico"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T103049Z" creationid="Ragnar-F" creationdate="20261006T102054Z">
+        <seg>Run "mspaint C:\Program Files\AutoHotkey\UX\inc\spy.ico"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Run "mspaint `"C:\Program Files\AutoHotkey\UX\inc\spy.ico`""</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T103054Z" creationid="Ragnar-F" creationdate="20261006T103054Z">
+        <seg>Run "mspaint `"C:\Program Files\AutoHotkey\UX\inc\spy.ico`""</seg>
       </tuv>
     </tu>
     <tu>
@@ -182696,6 +183016,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221220T113658Z" creationid="Ragnar-F" creationdate="20221220T113658Z">
         <seg>Run 'edit ' A_ScriptFullPath</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Run 'mspaint "C:\Program Files\AutoHotkey\UX\inc\spy.ico"'</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T103058Z" creationid="Ragnar-F" creationdate="20261006T103058Z">
+        <seg>Run 'mspaint "C:\Program Files\AutoHotkey\UX\inc\spy.ico"'</seg>
       </tuv>
     </tu>
     <tu>
@@ -183232,6 +183560,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231120T120538Z" creationid="Ragnar-F" creationdate="20220605T103630Z">
         <seg>Die Ausführung eines Installers für v1.1.34.03 oder höher ermöglicht dies.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Running either "notepad" or "iexplore" on its own works, but for different reasons.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T100957Z" creationid="Ragnar-F" creationdate="20261006T100957Z">
+        <seg>Nur "notepad" oder "iexplore" auszuführen, funktioniert, aber aus unterschiedlichen Gründen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -185852,6 +186188,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>See &lt;a0&gt;example #8&lt;/a0&gt; for a demonstration.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T103635Z" creationid="Ragnar-F" creationdate="20261006T103635Z">
+        <seg>Siehe &lt;a0&gt;Beispiel #8&lt;/a0&gt; für eine Demonstration.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>See &lt;a0&gt;file loop&lt;/a0&gt; and &lt;a1&gt;registry loop&lt;/a1&gt; for details.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230620T173027Z" creationid="Ragnar-F" creationdate="20230620T173027Z">
@@ -186672,6 +187016,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230511T113658Z" creationid="Ragnar-F" creationdate="20140305T140619Z">
         <seg>Beispiele finden Sie am Ende dieser Seite.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>See the next section on how to handle this.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T102152Z" creationid="Ragnar-F" creationdate="20261006T102152Z">
+        <seg>Im nächsten Abschnitt erfahren Sie, wie man damit umgeht.</seg>
       </tuv>
     </tu>
     <tu>
@@ -190852,6 +191204,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>ShowMsgBox(*)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T104014Z" creationid="Ragnar-F" creationdate="20261006T104014Z">
+        <seg>MsgBoxAnzeigen(*)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>ShowMsgBox(HotkeyName)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231203T124628Z" creationid="Ragnar-F" creationdate="20231203T124617Z">
@@ -191128,6 +191488,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230615T092109Z" creationid="Ragnar-F" creationdate="20190929T095922Z">
         <seg>Zeigt, wie der EXE-Typ und das Betriebssystem, auf dem das Skript läuft, erkannt werden können.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Shows how to make the &lt;a0&gt;Help button&lt;/a0&gt; functional using the &lt;a1&gt;Owner option&lt;/a1&gt; or the &lt;a2&gt;Gui OwnDialogs option&lt;/a2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T103827Z" creationid="Ragnar-F" creationdate="20261006T103827Z">
+        <seg>Zeigt, wie man die &lt;a0&gt;Hilfe-Schaltfläche&lt;/a0&gt; mithilfe der &lt;a1&gt;Owner-Option&lt;/a1&gt; oder der &lt;a2&gt;Gui-OwnDialogs-Option&lt;/a2&gt; funktionsfähig macht.</seg>
       </tuv>
     </tu>
     <tu>
@@ -204141,6 +204509,22 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The Microsoft browser now launches successfully and displays the file.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T101119Z" creationid="Ragnar-F" creationdate="20261006T101119Z">
+        <seg>Der Microsoft-Browser wird nun erfolgreich gestartet und zeigt die Datei an.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The Module class has a predefined __Ref method, which allows the &lt;a1&gt;reference operator (&amp;)&lt;/a1&gt; to be used, as in &lt;c2&gt;&amp;MyMod.MyVar&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T123642Z" creationid="Ragnar-F" creationdate="20261006T123642Z">
+        <seg>Die Module-Klasse hat eine vordefinierte __Ref-Methode, die die Verwendung des &lt;a1&gt;Referenzoperators (&amp;)&lt;/a1&gt; ermöglicht, wie z.B. in &lt;c2&gt;&amp;MeinMod.MeineVar&lt;/c2&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The MonitorGet function checks if the specified monitor exists and optionally retrieves its bounding coordinates.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230706T113716Z" creationid="Ragnar-F" creationdate="20180816T095847Z">
@@ -211365,6 +211749,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The message box is owned by either the script's hidden &lt;a0&gt;main window&lt;/a0&gt; (via the &lt;a1&gt;Owner option&lt;/a1&gt;) or a GUI window (via the &lt;a2&gt;OwnDialogs option&lt;/a2&gt;).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T103623Z" creationid="Ragnar-F" creationdate="20261006T103623Z">
+        <seg>Das Mitteilungsfenster ist entweder dem versteckten &lt;a0&gt;Hauptfenster&lt;/a0&gt; des Skripts (via &lt;a1&gt;Owner-Option&lt;/a1&gt;) oder einem GUI-Fenster (via &lt;a2&gt;OwnDialogs-Option&lt;/a2&gt;) untergeordnet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The message number to send.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231101T173923Z" creationid="Ragnar-F" creationdate="20160703T194640Z">
@@ -211533,10 +211925,26 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The module alias defined in an &lt;a0&gt;#Import&lt;/a0&gt; directive is assigned an instance of the "Module" class.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T123255Z" creationid="Ragnar-F" creationdate="20261006T123255Z">
+        <seg>Der in einer &lt;a0&gt;#Import&lt;/a0&gt;-Direktive definierte Modulalias bekommt eine Instanz der Klasse "Module" zugewiesen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The module ends at the next #Module directive in the current file, or at the end of the current file.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260918T172827Z" creationid="Ragnar-F" creationdate="20260913T134418Z">
         <seg>Das Modul endet bei der nächsten #Module-Direktive in der aktuellen Datei oder am Ende der aktuellen Datei.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The module itself (an instance of &lt;a0&gt;Module&lt;/a0&gt;) is added to the current namespace only if &lt;e1&gt;ModuleAlias&lt;/e1&gt; is specified or &lt;e2&gt;ModuleName&lt;/e2&gt; is unquoted.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T122906Z" creationid="Ragnar-F" creationdate="20261006T122819Z">
+        <seg>Das Modul selbst (eine Instanz der &lt;a0&gt;Module&lt;/a0&gt;-Klasse) wird nur zum aktuellen Namensraum hinzugefügt, wenn &lt;e1&gt;ModulAlias&lt;/e1&gt; angegeben oder &lt;e2&gt;ModulName&lt;/e2&gt; anführungszeichenlos ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -213897,6 +214305,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230830T105142Z" creationid="Ragnar-F" creationdate="20230830T105142Z">
         <seg>Der Rückgabewert ist vom &lt;e0&gt;InfoTyp&lt;/e0&gt;-Wert abhängig.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The return value is 1 (true) if the variable or expression has a value (is not &lt;a0&gt;unset&lt;/a0&gt;), otherwise 0 (false).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T123056Z" creationid="Ragnar-F" creationdate="20261006T123056Z">
+        <seg>Der Rückgabewert ist 1 (true), wenn die Variable oder der Ausdruck einen Wert hat (nicht &lt;a0&gt;ungesetzt&lt;/a0&gt; ist), andernfalls 0 (false).</seg>
       </tuv>
     </tu>
     <tu>
@@ -225117,6 +225533,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This may change in a future release.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T123508Z" creationid="Ragnar-F" creationdate="20261006T123508Z">
+        <seg>Dies könnte sich in einer zukünftigen Version ändern.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This may contain binary zero.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T132247Z" creationid="Ragnar-F" creationdate="20160703T203404Z">
@@ -227905,6 +228329,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210704T182718Z" creationid="Ragnar-F" creationdate="20210704T182718Z">
         <seg>Dies wurde entfernt, da Skriptdateien nicht mehr die Dateiendung &lt;c2&gt;.ini&lt;/c2&gt; haben können.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This wasn't necessary with "notepad" or "iexplore", but those are exceptions to the general rule.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T103033Z" creationid="Ragnar-F" creationdate="20261006T103033Z">
+        <seg>Dies war bei "notepad" oder "iexplore" zwar nicht notwendig, aber das sind auch Ausnahmen von der Regel.</seg>
       </tuv>
     </tu>
     <tu>
@@ -235709,6 +236141,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Unlike notepad.exe, iexplore.exe cannot be found by checking each directory listed in the PATH environment variable.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T101006Z" creationid="Ragnar-F" creationdate="20261006T101006Z">
+        <seg>Im Gegensatz zu notepad.exe kann iexplore.exe nicht durch Überprüfen aller Verzeichnisse in der PATH-Umgebungsvariable gefunden werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Unlike notepad.exe, wordpad.exe cannot be found by checking each directory listed in the PATH environment variable.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221220T094333Z" creationid="Ragnar-F" creationdate="20221220T094333Z">
@@ -239221,6 +239661,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Variables which are declared or assigned outside the function take precedence over wildcard imports.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T123021Z" creationid="Ragnar-F" creationdate="20261006T123021Z">
+        <seg>Variablen, die außerhalb der Funktion deklariert oder zugewiesen werden, haben Vorrang vor Platzhalterimporten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Variables which returned On/Off now return 1/0, which are more useful in expressions.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210705T195819Z" creationid="Ragnar-F" creationdate="20210705T195819Z">
@@ -239449,6 +239897,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260921T125710Z" creationid="Ragnar-F" creationdate="20260921T125710Z">
         <seg>Version &lt;a0&gt;&lt;c1/&gt;2.1-alpha.32&lt;c2/&gt;&lt;/a0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Version &lt;a0&gt;&lt;c1/&gt;2.1-alpha.33&lt;c2/&gt;&lt;/a0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T122643Z" creationid="Ragnar-F" creationdate="20261006T122643Z">
+        <seg>Version &lt;a0&gt;&lt;c1/&gt;2.1-alpha.33&lt;c2/&gt;&lt;/a0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -240474,6 +240930,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210223T120207Z" creationid="Ragnar-F" creationdate="20210223T120207Z">
         <seg>WM_HELP := 0x0053</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>WM_HELP(*)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T103913Z" creationid="Ragnar-F" creationdate="20261006T103913Z">
+        <seg>WM_HELP(*)</seg>
       </tuv>
     </tu>
     <tu>
@@ -262760,7 +263224,7 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>["https://www.autohotkey.com/docs/alpha/", "AutoHotkey v2.1 pre-release"],</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260922T121821Z" creationid="Ragnar-F" creationdate="20260904T161508Z">
+      <tuv lang="de" changeid="Ragnar-F" changedate="20260922T114042Z" creationid="Ragnar-F" creationdate="20260904T161508Z">
         <seg>["https://ahkde.github.io/docs/pre/", "AutoHotkey v2.1 Vorabversion"],</seg>
       </tuv>
     </tu>
@@ -264478,10 +264942,26 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>^!c::MsgBox "You pressed Control+Alt+C in Paint."</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T103216Z" creationid="Ragnar-F" creationdate="20261006T103216Z">
+        <seg>^!c::MsgBox "Sie haben STRG+ALT+C in Paint gedrückt."</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>^!c::MsgBox "You pressed Control+Alt+C in WordPad."</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180412T130518Z" creationid="Ragnar-F" creationdate="20180412T130508Z">
         <seg>^!c::MsgBox "Sie haben STRG+ALT+C in WordPad gedrückt."</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>^!c::MsgBox "You pressed Control+Alt+C in a window other than Notepad/Paint."</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T103228Z" creationid="Ragnar-F" creationdate="20261006T103228Z">
+        <seg>^!c::MsgBox "Sie haben STRG+ALT+C in einem anderen Fenster als Notepad/Paint gedrückt."</seg>
       </tuv>
     </tu>
     <tu>
@@ -265762,6 +266242,14 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180412T191932Z" creationid="Ragnar-F" creationdate="20180412T191932Z">
         <seg>app_hotkey "#n", "ahk_class Notepad", "notepad.exe"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>app_hotkey "#p", "ahk_class MSPaintApp", "mspaint.exe"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T100837Z" creationid="Ragnar-F" creationdate="20261006T100837Z">
+        <seg>app_hotkey "#p", "ahk_class MSPaintApp", "mspaint.exe"</seg>
       </tuv>
     </tu>
     <tu>
@@ -279129,6 +279617,17 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
         <seg>Object</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230302T205125Z" creationid="Ragnar-F" creationdate="20230302T205125Z">
+        <seg>Object</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <prop type="file">docs/ObjList.htm</prop>
+      <prop type="prev">Module</prop>
+      <prop type="next">Array</prop>
+      <tuv lang="en">
+        <seg>Object</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T123739Z" creationid="Ragnar-F" creationdate="20261006T123739Z">
         <seg>Object</seg>
       </tuv>
     </tu>
