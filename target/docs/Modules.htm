@@ -23,11 +23,9 @@
 <p>Durch die Aufteilung eines Skripts in Module lassen sich seine Bestandteile leichter wiederverwenden und pflegen.</p>
 <p>Standardmäßig werden alle Codezeilen und globalen Variablen (einschließlich Funktionen und Klassen) einem implizit definierten Modul namens "__Main" hinzugefügt. Das Skript kann mit <a href="lib/_Module.htm">#Module</a> ein neues Modul starten oder mit <a href="lib/_Import.htm">#Import</a> ein Modul aus einer Datei laden.</p>
 <p>Mit einer <a href="lib/_Import.htm">#Import</a>-Direktive kann ein Modul oder einige seiner Funktionen, Klassen und Variablen innerhalb des aktuellen Moduls zugänglich gemacht werden.</p>
-<p>Alle Module importieren implizit aus dem internen Modul "AHK", das alle internen Klassen, Variablen und Funktionen enthält. Eine Deklaration oder Zuweisung innerhalb eines Moduls kann den Namen einer internen Klasse oder Funktion wiederverwenden. In diesem Fall ist die entsprechende Klasse oder Funktion nur über das AHK-Modul zugänglich (z.B. <code>#Import AHK</code>, <code>AHK.MsgBox()</code>). Interne Variablen (A_) lassen sich ohne Deklaration oder Import zuweisen,
-und ihre Namen sind nicht wiederverwendbar. <code>A_Args</code> ist eine Ausnahme (es ist eine normale in __Main definierte Variable).</p>
+<p>Alle Module importieren implizit aus dem internen Modul "AHK", das alle internen Klassen, Variablen und Funktionen enthält. Eine Deklaration oder Zuweisung innerhalb eines Moduls kann den Namen einer internen Klasse oder Funktion wiederverwenden. In diesem Fall ist die entsprechende Klasse oder Funktion nur über das AHK-Modul zugänglich (z.B. <code>#Import AHK</code>, <code>AHK.MsgBox()</code>). Interne Variablen (A_) lassen sich ohne Deklaration oder Import zuweisen, und ihre Namen sind nicht wiederverwendbar. <code>A_Args</code> ist eine Ausnahme (es ist eine normale in __Main definierte Variable).</p>
 <p>Ein Modulname gelangt erst durch den Import in den globalen Namensraum eines Moduls; etwaige Konflikte lassen sich durch ein Alias für das importierte Modul im Zielmodul lösen.</p>
-<p><a href="lib/_Include.htm">#Include</a> kann jeweils nur eine Datei pro Modul inkludieren.
-</p>
+<p><a href="lib/_Include.htm">#Include</a> kann jeweils nur eine Datei pro Modul inkludieren.</p>
 <p>Mit <a href="lib/_Warn.htm">#Warn</a> können Warnungen innerhalb des aktuellen Moduls aktiviert oder deaktiviert werden, ohne dass andere Module davon betroffen sind. Weitere Informationen finden Sie in den <a href="lib/_Warn.htm#Remarks">#Warn-Bemerkungen</a>.</p>
 <p><a href="lib/_HotIf.htm">#HotIf</a> beeinflusst nur das aktuelle Modul. #HotIf und <a href="lib/HotIf.htm">HotIf</a>-Ausdrücke gelten nur innerhalb ihres Moduls, da sie Referenzen enthalten können, die auf Variablen im Modul verweisen. Zum Beispiel ist der Effekt von <code>#HotIf meinSchalter</code> davon abhängig, welchen Wert <em>meinSchalter</em> im aktuellen Modul hat.</p>
 
@@ -55,6 +53,10 @@ MsgBox ANTWORT         <em>; wird als Drittes angezeigt.</em></pre>
   <li><code class="no-highlight"><i>ModulName</i>.ahk</code></li>
 </ul>
 <p>Zum Beispiel könnte <code>#Import M</code> die Datei mit dem exakten Namen <code class="no-highlight">M</code>, <code class="no-highlight">M\__Init.ahk</code> oder <code class="no-highlight">M.ahk</code> laden. <code>#Import "M"</code> verhält sich genauso, nur dass der Name <em>M</em> nicht zum aktuellen Modul hinzugefügt wird.</p>
+
+<h2 id="Class">Module-Klasse</h2>
+<p>Der in einer <a href="lib/_Import.htm">#Import</a>-Direktive definierte Modulalias bekommt eine Instanz der Klasse "Module" zugewiesen. Jeder aus dem Modul exportierte Name wird als virtuelle Eigenschaft bereitgestellt. In der aktuellen Version sind diese virtuellen Eigenschaften für <a href="lib/Props.htm">Props</a>, <a href="lib/HasProp.htm">HasProp</a> und <a href="lib/HasMethod.htm">HasMethod</a> nicht sichtbar. Dies könnte sich in einer zukünftigen Version ändern.</p>
+<p><span class="ver">[v2.1-alpha.33+]</span>: Die Module-Klasse hat eine vordefinierte __Ref-Methode, die die Verwendung des <a href="Variables.htm#ref">Referenzoperators (&amp;)</a> ermöglicht, wie z.B. in <code>&amp;MeinMod.MeineVar</code>.</p>
 
 <h2 id="Examples">Beispiele</h2>
 

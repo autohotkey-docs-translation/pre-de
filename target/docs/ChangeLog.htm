@@ -21,6 +21,17 @@
 </ul>
 <p>Alle technischen Einzelheiten zu den Änderungen finden Sie auf <a href="https://github.com/AutoHotkey/AutoHotkey">GitHub</a>.</p>
 
+<h2 id="v2.1-alpha.33">2.1-alpha.33 - 3. Oktober 2026</h2>
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Hinzugefügt: #Import kann nun innerhalb einer Funktion verwendet werden.</p>
+<p>Hinzugefügt: __Ref-Methode für Module-Klassen, um <code>&amp;MeinMod.MeineVar</code> zu unterstützen.</p>
+<p>Behoben: <code>a.b[c]</code> verursacht keinen Absturz mehr, wenn <code>a.b</code> unset zurückgibt.</p>
+<p>Behoben: ObjSetCapacity u.ä. lösen nun einen Fehler aus, wenn das Ziel ein Struct-Objekt ist.</p>
+<p>Behoben: EditGetLine, ControlChooseIndex und ControlDeleteItem unter 32-Bit.</p>
+<p>Behoben: <code>DlCall(..., Struct.Ptr, unset)</code> unter 32-Bit.</p>
+<p>Behoben: Struct.Array-DllCall-Parametertypen unter 32-Bit.</p>
+<p>Behoben: CallbackCreate mit numerischen 64-Bit-Parametertypen unter 32-Bit.</p>
+
 <h2 id="v2.1-alpha.32">2.1-alpha.32 - 12. September 2026</h2>
 <p>Hinzugefügt: <a href="lib/Gui.htm#FontHandle">FontHandle-Eigenschaft (Gui)</a>.</p>
 <p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
@@ -158,8 +169,7 @@
 <p>Behoben: Einige Fehlermeldungen verwiesen nicht auf die Zeile, die den Fehler auslöste.</p>
 <p>Behoben: DllCall lehnt nun Arrayklassen als Rückgabetyp ab, anstatt einen Absturz zu verursachen.</p>
 <p>Behoben: <code>global g</code> innerhalb einer Funktion steht nicht mehr im Konflikt mit einem vorherigen <code>export global g</code>.</p>
-<p>Behoben: Kein Absturz mehr, wenn ein unset global via Modulobjekt aufgerufen wird.
-</p>
+<p>Behoben: Kein Absturz mehr, wenn ein unset global via Modulobjekt aufgerufen wird.</p>
 <p>Behoben: Eine Modulinitialisierung verändert nicht mehr die Zeilennummer, die von nachfolgenden Fehlern gemeldet wird.</p>
 <p>Behoben: <code>A.B</code>, wobei B via Platzhalter in Modul A importiert wurde.</p>
 <p>Behoben: <code>ModulA.B</code> initialisiert nun Klassen und importierte Module.</p>
@@ -381,8 +391,7 @@
 <p>Hinzugefügt: <a href="lib/InputHook.htm#option-h">InputHook-Option H</a>, um das Abfangen von Hotkeys zu ermöglichen.</p>
 <p>Hinzugefügt: <a href="Variables.htm#HotIf">A_HotIf</a> und ein Rückgabewert für HotIf.</p>
 <p>Geändert: TraySetIcon aktualisiert nun auch das Symbol im Hauptfenster des Skripts.</p>
-<p>Geändert: Texteingabeerfassung und Behandlung von toten Tasten.
-</p>
+<p>Geändert: Texteingabeerfassung und Behandlung von toten Tasten.</p>
 <ul>
   <li>Behebt einige obskure Probleme und reduziert das Risiko, dass das aktive Fenster die Behandlung von toten Tasten beeinträchtigt.</li>
   <li>Tote Tasten mit den InputHook-Optionen S und I haben keinen Einfluss mehr auf die Eingabeerfassung.</li>
@@ -404,8 +413,7 @@
 
 <p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
 <p>Behoben: <code>class A extends B</code> löst B nun zuverlässig auf, unabhängig von der Reihenfolge.</p>
-<p>Behoben: Fehlerdialogfenster zeigten keine Nachbarzeilen an.
-</p>
+<p>Behoben: Fehlerdialogfenster zeigten keine Nachbarzeilen an.</p>
 <p>Behoben: Beim Abrufen/Setzen von virtuellen Referenzen werden geworfene Ausnahmen jetzt korrekt propagiert.</p>
 <p>Behoben: Der Debugger versucht nicht mehr, Eigenschafts-Getter direkt auf einem Prototype auszuwerten.</p>
 
@@ -683,8 +691,7 @@
 <p>Behoben: Ladezeitprüfungen erkannten fehlende Parameter bei MenuSelect nicht.</p>
 <p>Behoben: Kontextmenüs erschienen unter dem aktiven GUI-Fenster, wenn dieses AlwaysOnTop war.</p>
 <p><strong>Optimierungen</strong></p>
-<p>Optimiert: Pause lässt den System-Thread nun schlafen, bis Meldungen eintreffen, statt den Pausezustand häufig abzufragen. In Tests sank die CPU-Auslastung dadurch von 0,04&nbsp;% auf 0,00&nbsp;%.
-</p>
+<p>Optimiert: Pause lässt den System-Thread nun schlafen, bis Meldungen eintreffen, statt den Pausezustand häufig abzufragen. In Tests sank die CPU-Auslastung dadurch von 0,04&nbsp;% auf 0,00&nbsp;%.</p>
 <p>Optimiert: ProcessWaitClose und RunWait lassen den System-Thread nun schlafen, bis das Prozesshandle signalisiert wird oder Meldungen eintreffen. Dies senkt die CPU-Auslastung (wie oben) und verbessert die Reaktionszeit.</p>
 <p>Optimiert: Prüfungen von Dialogfensterklassen.</p>
 <p><strong>Änderungen</strong></p>

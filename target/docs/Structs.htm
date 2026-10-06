@@ -97,8 +97,7 @@ MsgBox AB().Size
 <p>Die Eigenschaft, die einer verschachtelten Struktur entspricht, gibt standardmäßig eine Referenz zurück, die auf die verschachtelte Struktur verweist, und ist nicht zuweisbar. Dies kann durch die Definition eines Getters und/oder Setters für die <a href="#abstract">__Value-Eigenschaft</a> überschrieben werden. Wenn ein Setter, aber kein Getter definiert ist, wird standardmäßig die Struktur selbst zurückgegeben.</p>
 
 <h3 id="abstract">Abstrakte Typen</h3>
-<p>Mit einer Struktur können verschiedene abstrakte Typen implementiert werden, wie z.B. smarte Pointer, Arrays, Enums, spezialisierte Zeichenkettentypen oder Typen, die auf bestimmte Werte beschränkt sind. Das folgende Beispiel implementiert einen booleschen Typ ähnlich wie in C++:
-</p>
+<p>Mit einer Struktur können verschiedene abstrakte Typen implementiert werden, wie z.B. smarte Pointer, Arrays, Enums, spezialisierte Zeichenkettentypen oder Typen, die auf bestimmte Werte beschränkt sind. Das folgende Beispiel implementiert einen booleschen Typ ähnlich wie in C++:</p>
 <pre>struct bool {
     value : UInt8  <em>; Dieser Eigenschaftsname hat keine besondere Bedeutung.</em>
     __value {
@@ -122,7 +121,7 @@ Beispiel()</pre>
 <p>Es gibt eine Vielzahl von Konventionen für Zeichenketten in Strukturen und DllCall. Derzeit unterstützen typisierte Eigenschaften intern keine Zeichenketten oder Arrays, können jedoch mithilfe dieser Mechanismen implementiert werden. Die Beispiele <a href="#ExCString">CString</a> und <a href="#ExBSTR">BSTR</a> veranschaulichen dies.</p>
 
 <h2 id="pointers">Pointer auf Strukturen <span class="ver">[v2.1-alpha.22+]</span></h2>
-<p>Jede Strukturklasse hat eine statische Eigenschaft namens <strong>Ptr</strong>, die eine Pointerklasse zurückgibt. Eine Pointerklasse wird in der Regel nicht instanziiert, sondern zusammen mit <a href="lib/DllCall.htm">DllCall</a> und typisierten Eigenschaften verwendet, um einen Parameter oder ein Feld anzugeben, der bzw. das auf eine Struktur verweist. Zum Beispiel repräsentiert <code>RECT.Ptr</code> den C-Typ <code>RECT*</code> oder <code>LPRECT</code>, sofern entsprechend eine Definition der RECT-Strukturklasse vorhanden ist.</p>
+<p>Jede Strukturklasse hat eine statische Eigenschaft namens <strong>Ptr</strong>, die eine Pointerklasse zurückgibt. Eine Pointerklasse wird in der Regel nicht instanziiert, sondern zusammen mit <a href="lib/DllCall.htm">DllCall</a> und typisierten Eigenschaften verwendet, um einen Parameter oder ein Feld anzugeben, der bzw. das auf eine Struktur verweist. Zum Beispiel repräsentiert <code>RECT.Ptr</code> den C-Typ <code class="no-highlight">RECT*</code> oder <code class="no-highlight">LPRECT</code>, sofern entsprechend eine Definition der RECT-Strukturklasse vorhanden ist.</p>
 
 <h3 id="Boxed_Pointer">Gekapselter Pointer</h3>
 <p>Anstatt Pointerwerte als eigenständigen Typ zu kapseln, werden sie als Instanzen der Zielstrukturklasse behandelt, mit denselben Eigenschaften und derselben Typidentität. Zur besseren Unterscheidung bezeichnen wir eine vom Skript konstruierte Instanz als "gekapselte Struktur" und eine Instanz, die einen Pointerwert kapselt, als "gekapselter Pointer".</p>

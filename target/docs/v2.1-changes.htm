@@ -138,8 +138,7 @@
 <p>Die Methoden <a href="lib/Menu.htm#ToggleCheck">ToggleCheck</a> und <a href="lib/Menu.htm#ToggleEnable">ToggleEnable</a> von <a href="lib/Menu.htm">Menu</a> geben nun den neuen Zustand zurück.</p>
 
 <h3 id="Keyboard_Input">Tastatureingabe</h3>
-<p>Texteingabeerfassung und Behandlung von toten Tasten wurden geändert:
-</p>
+<p>Texteingabeerfassung und Behandlung von toten Tasten wurden geändert:</p>
 <ul>
   <li>Behebt einige obskure Probleme und reduziert das Risiko, dass das aktive Fenster die Behandlung von toten Tasten beeinträchtigt.</li>
   <li>Tote Tasten mit den InputHook-Optionen S und I haben keinen Einfluss mehr auf die Eingabeerfassung.</li>
@@ -244,8 +243,7 @@
 
 <h3 id="Optimizations">Optimierungen</h3>
 <p>Diese Optimierungen verbessern die Performanz, haben aber sonst keinen Einfluss auf das Verhalten.</p>
-<p>Pause lässt den System-Thread nun schlafen, bis Meldungen eintreffen, statt den Pausezustand häufig abzufragen. In Tests sank die CPU-Auslastung dadurch von 0,04&nbsp;% auf 0,00&nbsp;%.
-</p>
+<p>Pause lässt den System-Thread nun schlafen, bis Meldungen eintreffen, statt den Pausezustand häufig abzufragen. In Tests sank die CPU-Auslastung dadurch von 0,04&nbsp;% auf 0,00&nbsp;%.</p>
 <p>ProcessWaitClose und RunWait lassen den System-Thread nun schlafen, bis das Prozesshandle signalisiert wird oder Meldungen eintreffen. Dies senkt die CPU-Auslastung (wie oben) und verbessert die Reaktionszeit.</p>
 <p>Optimierungen bei den Prüfungen von Dialogfensterklassen.</p>
 <p>Der ternäre Operator führt keine überflüssige Prüfung mehr durch, ob ein Wert eine Zahl ist.</p>
