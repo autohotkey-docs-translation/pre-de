@@ -34206,9 +34206,8 @@
       <tuv lang="en">
         <seg>&lt;a0&gt;#Include&lt;/a0&gt; is able to include a file once per module.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T164420Z" creationid="Ragnar-F" creationdate="20260918T164420Z">
-        <seg>&lt;a0&gt;#Include&lt;/a0&gt; kann jeweils nur eine Datei pro Modul inkludieren.
-</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T125045Z" creationid="Ragnar-F" creationdate="20260918T164420Z">
+        <seg>&lt;a0&gt;#Include&lt;/a0&gt; kann jeweils nur eine Datei pro Modul inkludieren.</seg>
       </tuv>
     </tu>
     <tu>
@@ -86567,9 +86566,8 @@
       <tuv lang="en">
         <seg>Changed text input collection and dead key handling.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T195745Z" creationid="Ragnar-F" creationdate="20260911T195058Z">
-        <seg>Geändert: Texteingabeerfassung und Behandlung von toten Tasten.
-</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T125010Z" creationid="Ragnar-F" creationdate="20260911T195058Z">
+        <seg>Geändert: Texteingabeerfassung und Behandlung von toten Tasten.</seg>
       </tuv>
     </tu>
     <tu>
@@ -107240,9 +107238,8 @@
       <tuv lang="en">
         <seg>Fixed crash when calling an unset global via a Module object.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T132212Z" creationid="Ragnar-F" creationdate="20260911T132212Z">
-        <seg>Behoben: Kein Absturz mehr, wenn ein unset global via Modulobjekt aufgerufen wird.
-</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T125002Z" creationid="Ragnar-F" creationdate="20260911T132212Z">
+        <seg>Behoben: Kein Absturz mehr, wenn ein unset global via Modulobjekt aufgerufen wird.</seg>
       </tuv>
     </tu>
     <tu>
@@ -107425,9 +107422,8 @@
       <tuv lang="en">
         <seg>Fixed error dialogs not showing vicinity lines.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260915T132746Z" creationid="Ragnar-F" creationdate="20260911T202523Z">
-        <seg>Behoben: Fehlerdialogfenster zeigten keine Nachbarzeilen an.
-</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T125014Z" creationid="Ragnar-F" creationdate="20260911T202523Z">
+        <seg>Behoben: Fehlerdialogfenster zeigten keine Nachbarzeilen an.</seg>
       </tuv>
     </tu>
     <tu>
@@ -115434,9 +115430,8 @@
       <tuv lang="en">
         <seg>For example, this implements a bool type like in C++:</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T091953Z" creationid="Ragnar-F" creationdate="20260919T091953Z">
-        <seg>Das folgende Beispiel implementiert einen booleschen Typ ähnlich wie in C++:
-</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T125047Z" creationid="Ragnar-F" creationdate="20260919T091953Z">
+        <seg>Das folgende Beispiel implementiert einen booleschen Typ ähnlich wie in C++:</seg>
       </tuv>
     </tu>
     <tu>
@@ -135724,9 +135719,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>If the system debugger is not active, this function has no effect.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20231031T080500Z" creationid="Ragnar-F" creationdate="20170721T085011Z">
-        <seg>Wenn der System-Debugger nicht aktiv ist, hat diese Funktion keinen Effekt.
-</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T125043Z" creationid="Ragnar-F" creationdate="20170721T085011Z">
+        <seg>Wenn der System-Debugger nicht aktiv ist, hat diese Funktion keinen Effekt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -140621,9 +140615,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>In testing, this reduced CPU usage from 0.04% to 0.00%.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260912T171514Z" creationid="Ragnar-F" creationdate="20260912T171514Z">
-        <seg>In Tests sank die CPU-Auslastung dadurch von 0,04 % auf 0,00 %.
-</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T125018Z" creationid="Ragnar-F" creationdate="20260912T171514Z">
+        <seg>In Tests sank die CPU-Auslastung dadurch von 0,04 % auf 0,00 %.</seg>
       </tuv>
     </tu>
     <tu>
@@ -200446,9 +200439,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>Text input collection and dead key handling have been changed:</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T174435Z" creationid="Ragnar-F" creationdate="20260921T174435Z">
-        <seg>Texteingabeerfassung und Behandlung von toten Tasten wurden geändert:
-</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T125058Z" creationid="Ragnar-F" creationdate="20260921T174435Z">
+        <seg>Texteingabeerfassung und Behandlung von toten Tasten wurden geändert:</seg>
       </tuv>
     </tu>
     <tu>
@@ -239911,9 +239903,8 @@ und ihre Namen sind nicht wiederverwendbar.</seg>
       <tuv lang="en">
         <seg>Version directives may be used throughout the code to set the runtime mode for any subsequent function definitions.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260913T141946Z" creationid="Ragnar-F" creationdate="20260913T141946Z">
-        <seg>Versionsdirektiven können überall im Code verwendet werden, um den Laufzeitmodus für alle nachfolgenden Funktionsdefinitionen zu bestimmen.
-</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T125040Z" creationid="Ragnar-F" creationdate="20260913T141946Z">
+        <seg>Versionsdirektiven können überall im Code verwendet werden, um den Laufzeitmodus für alle nachfolgenden Funktionsdefinitionen zu bestimmen.</seg>
       </tuv>
     </tu>
     <tu>
