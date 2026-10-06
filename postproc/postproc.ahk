@@ -53,7 +53,7 @@ Loop Files, "target\docs\*.htm", "R"
     
     meta_noindex := '<meta name="robots" content="noindex, nofollow" />'
     if not InStr(content, meta_noindex)
-        content := RegExReplace(content, "</head>", meta_noindex "`n</head>")
+        content := RegExReplace(content, "</head>", meta_noindex "`r`n</head>")
 
     ; overwrite file if needed
 
