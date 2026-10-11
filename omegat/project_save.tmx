@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE tmx SYSTEM "tmx11.dtd">
 <tmx version="1.1">
-  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="6.1.1_0_9a3f59119" segtype="sentence" srclang="en"/>
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="6.1.2_0_a2b11bf" segtype="sentence" srclang="en"/>
   <body>
 <!-- Default translations -->
     <tu>
@@ -5150,6 +5150,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>"directory-of-the-current-module\Lib\"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T084732Z" creationid="Ragnar-F" creationdate="20261011T084732Z">
+        <seg>"Verzeichnis-des-aktuellen-Moduls\Lib\"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>"directory-of-the-currently-running-AutoHotkey.exe\Lib\"</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20181007T113404Z" creationid="Ragnar-F" creationdate="20181007T113404Z">
@@ -5830,6 +5838,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>#Import "CompatibleLib.ahk" {CompatibleFunc}</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T192035Z" creationid="Ragnar-F" creationdate="20261011T191520Z">
+        <seg>#Import "CompatibleLib.ahk" {CompatibleFunc}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>#Import "X" {Calculate as CalculateX}</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260918T180128Z" creationid="Ragnar-F" creationdate="20260918T180111Z">
@@ -5842,6 +5858,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260918T180129Z" creationid="Ragnar-F" creationdate="20260918T180129Z">
         <seg>#Import "Y" {*}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#Import "v2.0\Script2.ahk"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T174408Z" creationid="Ragnar-F" creationdate="20261011T174408Z">
+        <seg>#Import "v2.0\Script2.ahk"</seg>
       </tuv>
     </tu>
     <tu>
@@ -5978,6 +6002,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180812T074810Z" creationid="Ragnar-F" creationdate="20180812T074810Z">
         <seg>#Include / #IncludeAgain - Syntax &amp; Verwendung | AutoHotkey v2</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#Include &lt;MyLib&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T174417Z" creationid="Ragnar-F" creationdate="20261011T174417Z">
+        <seg>#Include &lt;MyLib&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -6398,6 +6430,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>#Requires AutoHotkey v2.0</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T174437Z" creationid="Ragnar-F" creationdate="20261011T174437Z">
+        <seg>#Requires AutoHotkey v2.0</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>#Requires AutoHotkey v2.0-a</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200705T211529Z" creationid="Ragnar-F" creationdate="20200705T211529Z">
@@ -6418,6 +6458,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260915T131959Z" creationid="Ragnar-F" creationdate="20260915T131959Z">
         <seg>#Requires AutoHotkey v2.1-alpha.10</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#Requires AutoHotkey v2.1-alpha.33</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T190535Z" creationid="Ragnar-F" creationdate="20261011T190535Z">
+        <seg>#Requires AutoHotkey v2.1-alpha.33</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>#Requires AutoHotkey v2.1-alpha.35</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T174401Z" creationid="Ragnar-F" creationdate="20261011T174401Z">
+        <seg>#Requires AutoHotkey v2.1-alpha.35</seg>
       </tuv>
     </tu>
     <tu>
@@ -6970,6 +7026,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180411T202901Z" creationid="Ragnar-F" creationdate="20180411T202901Z">
         <seg>$^p::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>%A_MyDocuments%\AutoHotkey\Lib;%A_AhkPath%\..\Lib</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T094910Z" creationid="Ragnar-F" creationdate="20261011T094910Z">
+        <seg>%A_MyDocuments%\AutoHotkey\Lib;%A_AhkPath%\..\Lib</seg>
       </tuv>
     </tu>
     <tu>
@@ -11686,10 +11750,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>2.0.29 - October 3, 2026</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T100529Z" creationid="Ragnar-F" creationdate="20261006T100529Z">
+        <seg>2.0.29 - 3. Oktober 2026</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>2.0.3 - June 19, 2023</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230623T170019Z" creationid="Ragnar-F" creationdate="20230623T170019Z">
         <seg>2.0.3 - 19. Juni 2023</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.0.30 - October 9, 2026</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T075859Z" creationid="Ragnar-F" creationdate="20261011T075848Z">
+        <seg>2.0.30 - 9. Oktober 2026</seg>
       </tuv>
     </tu>
     <tu>
@@ -11954,6 +12034,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20261006T110617Z" creationid="Ragnar-F" creationdate="20261006T110617Z">
         <seg>2.1-alpha.33 - 3. Oktober 2026</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.34 - October 9, 2026</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T143408Z" creationid="Ragnar-F" creationdate="20261011T143408Z">
+        <seg>2.1-alpha.34 - 9. Oktober 2026</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>2.1-alpha.35 - October 11, 2026</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T142626Z" creationid="Ragnar-F" creationdate="20261011T142626Z">
+        <seg>2.1-alpha.35 - 11. Oktober 2026</seg>
       </tuv>
     </tu>
     <tu>
@@ -14686,6 +14782,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>; #Include "CompatibleLib.ahk"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T192033Z" creationid="Ragnar-F" creationdate="20261011T191613Z">
+        <seg>; #Include "CompatibleLib.ahk"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>; % is used because &amp; was omitted.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210307T114628Z" creationid="Ragnar-F" creationdate="20210307T114628Z">
@@ -15374,6 +15478,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>; &lt;s5&gt;[v2.1-alpha.35+]&lt;/s5&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T084838Z" creationid="Ragnar-F" creationdate="20261011T084838Z">
+        <seg>; &lt;s5&gt;[v2.1-alpha.35+]&lt;/s5&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>; =&gt;  [   , "B", "C"]</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180411T211745Z" creationid="Ragnar-F" creationdate="20180411T211745Z">
@@ -15402,6 +15514,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180411T211735Z" creationid="Ragnar-F" creationdate="20180411T211735Z">
         <seg>; =&gt;  ["A", "C", "B"]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; ?? is not used here because it works for "blank-unset" return values in both modes.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T190933Z" creationid="Ragnar-F" creationdate="20261011T190933Z">
+        <seg>; ?? wird hier nicht verwendet, da es in beiden Modi für "leere-ungesetzte" Rückgabewerte funktioniert.</seg>
       </tuv>
     </tu>
     <tu>
@@ -17761,6 +17881,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>; Directives in any #Include above have no effect on this module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T191803Z" creationid="Ragnar-F" creationdate="20261011T191803Z">
+        <seg>; Direktiven in einem #Include oben haben keinen Effekt auf dieses Modul.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>; Disable Alt+key shortcuts for the IME.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210223T105145Z" creationid="Ragnar-F" creationdate="20200612T063744Z">
@@ -19587,6 +19715,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>; Lib\MyLib.ahk</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T174426Z" creationid="Ragnar-F" creationdate="20261011T174426Z">
+        <seg>; Lib\MyLib.ahk</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>; Like [&lt;a1&gt;WinMinimize&lt;/a1&gt; "A"], but also play the system sound for minimizing.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231026T160558Z" creationid="Ragnar-F" creationdate="20210311T124724Z">
@@ -19719,6 +19855,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180410T204858Z" creationid="Ragnar-F" creationdate="20180410T204858Z">
         <seg>; MSPaint</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; Main.ahk</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T174358Z" creationid="Ragnar-F" creationdate="20261011T174358Z">
+        <seg>; Main.ahk</seg>
       </tuv>
     </tu>
     <tu>
@@ -20487,6 +20631,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231119T123330Z" creationid="Ragnar-F" creationdate="20190506T133225Z">
         <seg>; Betrifft nur dieses Skript und Unterprozesse.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; Only in &lt;a2&gt;v2.1 mode&lt;/a2&gt; with &lt;s3&gt;[v2.1-alpha.35+]&lt;/s3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T084837Z" creationid="Ragnar-F" creationdate="20261011T084452Z">
+        <seg>; Nur im &lt;a2&gt;v2.1-Modus&lt;/a2&gt; ab &lt;s3&gt;[v2.1-alpha.35+]&lt;/s3&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -23814,6 +23966,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>; The function below always uses v2.0 mode, due to the directive above.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T192526Z" creationid="Ragnar-F" creationdate="20261011T192526Z">
+        <seg>; Die Funktion unten nutzt immer den v2.0-Modus, wegen der Direktive oben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>; The key has been released, so break out of the loop.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180411T102207Z" creationid="Ragnar-F" creationdate="20180411T102207Z">
@@ -24162,6 +24322,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140312T022716Z" creationid="Ragnar-F" creationdate="20140312T022716Z">
         <seg>; Diese ganze Zeile ist ein Kommentar.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; This essential line sets the mode for the current module (__Main).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T190531Z" creationid="Ragnar-F" creationdate="20261011T190531Z">
+        <seg>; Diese unverzichtbare Zeile setzt den Modus für das aktuelle Modul (__Main).</seg>
       </tuv>
     </tu>
     <tu>
@@ -24702,6 +24870,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>; Try swapping these two directives around to see how it affects CompatibleLib's initialization.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T191958Z" creationid="Ragnar-F" creationdate="20261011T191513Z">
+        <seg>; Wenn Sie diese beiden Direktiven vertauschen, können Sie beobachten, welchen Einfluss das auf die Initialisierung von CompatibleLib hat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>; Try to print the error to stdout.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200606T182422Z" creationid="Ragnar-F" creationdate="20200606T182422Z">
@@ -25063,6 +25239,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>; Use try-catch to detect the mode.  Base returns "" in v2.0 mode and unset in v2.1 mode.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T190739Z" creationid="Ragnar-F" creationdate="20261011T190739Z">
+        <seg>; Mit try-catch den Modus ermitteln. Base liefert "" im v2.0-Modus und unset im v2.1-Modus.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>; User chose "Exit" from the File menu.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231005T172436Z" creationid="Ragnar-F" creationdate="20180411T105122Z">
@@ -25331,6 +25515,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180410T182906Z" creationid="Ragnar-F" creationdate="20180410T182906Z">
         <seg>; Mausrad über die Taskleiste: Lautstärke erhöhen/verringern.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; When #included in a v2.1 module, the following throws an error.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T192413Z" creationid="Ragnar-F" creationdate="20261011T192413Z">
+        <seg>; Wird folgendes in ein v2.1-Modul inkludiert, wird es einen Fehler auslösen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -30028,6 +30220,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>; v2.0\Lib\MyLib.ahk</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T174440Z" creationid="Ragnar-F" creationdate="20261011T174440Z">
+        <seg>; v2.0\Lib\MyLib.ahk</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>; v2.0\Script2.ahk</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T174435Z" creationid="Ragnar-F" creationdate="20261011T174435Z">
+        <seg>; v2.0\Script2.ahk</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>; v2.1-alpha.21 and older used Object instead of Struct.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260919T074416Z" creationid="Ragnar-F" creationdate="20260919T074356Z">
@@ -34648,6 +34856,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210725T072802Z" creationid="Ragnar-F" creationdate="20210725T072802Z">
         <seg>&lt;a0&gt;A_LastError&lt;/a0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;A_LineFile&lt;/a0&gt; "\..\"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T084258Z" creationid="Ragnar-F" creationdate="20261011T084258Z">
+        <seg>&lt;a0&gt;A_LineFile&lt;/a0&gt; "\..\"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;A_LineFile&lt;/a0&gt; always refers to the current module's file.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T095137Z" creationid="Ragnar-F" creationdate="20261011T095137Z">
+        <seg>&lt;a0&gt;A_LineFile&lt;/a0&gt; bezieht sich immer auf die Datei des aktuellen Moduls.</seg>
       </tuv>
     </tu>
     <tu>
@@ -44324,6 +44548,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a3&gt;Float&lt;/a3&gt; keys are automatically converted to String when in &lt;a4&gt;v2.0 mode&lt;/a4&gt;, but cause a &lt;a5&gt;TypeError&lt;/a5&gt; to be thrown in &lt;a6&gt;v2.1 mode&lt;/a6&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T194216Z" creationid="Ragnar-F" creationdate="20261011T194216Z">
+        <seg>Während &lt;a3&gt;Float&lt;/a3&gt;-Schlüssel im &lt;a4&gt;v2.0-Modus&lt;/a4&gt; automatisch in Zeichenketten umgewandelt werden, löst ihre Verwendung im &lt;a6&gt;v2.1-Modus&lt;/a6&gt; einen &lt;a5&gt;TypeError&lt;/a5&gt; aus.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a3&gt;Float&lt;/a3&gt; keys are automatically converted to String.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220419T101622Z" creationid="Ragnar-F" creationdate="20190820T203822Z">
@@ -44628,6 +44860,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a6&gt;A_ScriptDir&lt;/a6&gt; "\Lib\"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T084911Z" creationid="Ragnar-F" creationdate="20261011T084911Z">
+        <seg>&lt;a6&gt;A_ScriptDir&lt;/a6&gt; "\Lib\"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a6&gt;Base&lt;/a6&gt; may be set within the object literal, but all other properties are set as &lt;e7&gt;own value properties&lt;/e7&gt;, potentially overriding properties inherited from the base object.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231201T184202Z" creationid="Ragnar-F" creationdate="20210307T191726Z">
@@ -44680,6 +44920,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210725T063949Z" creationid="Ragnar-F" creationdate="20210725T063949Z">
         <seg>&lt;a7&gt;Length&lt;/a7&gt; ist nun eine Eigenschaft.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a8&gt;A_MyDocuments&lt;/a8&gt; "\AutoHotkey\Lib\"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T084915Z" creationid="Ragnar-F" creationdate="20261011T084915Z">
+        <seg>&lt;a8&gt;A_MyDocuments&lt;/a8&gt; "\AutoHotkey\Lib\"</seg>
       </tuv>
     </tu>
     <tu>
@@ -47576,6 +47824,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230911T174149Z" creationid="Ragnar-F" creationdate="20230911T174149Z">
         <seg>&lt;c1&gt;#Include "*i Spezialoptionen.ahk"&lt;/c1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c1&gt;#Include &lt;A_B&gt;&lt;/c1&gt; checks for "A_B" before "A_B.ahk", and never checks for "A.ahk".</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T134419Z" creationid="Ragnar-F" creationdate="20261011T134419Z">
+        <seg>&lt;c1&gt;#Include &lt;A_B&gt;&lt;/c1&gt; sucht zuerst nach "A_B" und dann nach "A_B.ahk", aber nie nach "A.ahk".</seg>
       </tuv>
     </tu>
     <tu>
@@ -60452,6 +60708,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; Runtime behavior depends on the mode of the current module or function, not the position of the directive in relation to the current line or file.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T175312Z" creationid="Ragnar-F" creationdate="20261011T175312Z">
+        <seg>&lt;s0&gt;Hinweis:&lt;/s0&gt; Das Laufzeitverhalten richtet sich nach dem Modus des aktuellen Moduls oder der aktuellen Funktion, nicht nach der Position der Direktive bezüglich der aktuellen Zeile oder Datei.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;Note:&lt;/s0&gt; Scripts should not assume that the expression is only evaluated when the hotkey's key is pressed (see below).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20251001T072805Z" creationid="Ragnar-F" creationdate="20251001T072805Z">
@@ -63940,6 +64204,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.34+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T132154Z" creationid="Ragnar-F" creationdate="20261011T132154Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.34+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.35+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T085145Z" creationid="Ragnar-F" creationdate="20261011T085145Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.35+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;[v2.1-alpha.5+]&lt;/s0&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T173126Z" creationid="Ragnar-F" creationdate="20260916T173126Z">
@@ -64104,6 +64384,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230823T184724Z" creationid="Ragnar-F" creationdate="20230624T072146Z">
         <seg>&lt;s0&gt;m1024:&lt;/s0&gt; Wenn diese Option weggelassen wird, wird die gesamte Datei geladen, es sei denn, der Speicher reicht nicht aus, dann wird eine Fehlermeldung angezeigt und der Thread beendet (kann aber mit &lt;a1&gt;Try&lt;/a1&gt; umgangen werden).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s0&gt;type&lt;/s0&gt; : UInt32</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T125958Z" creationid="Ragnar-F" creationdate="20261011T125958Z">
+        <seg>&lt;s0&gt;type&lt;/s0&gt; : UInt32</seg>
       </tuv>
     </tu>
     <tu>
@@ -65116,6 +65404,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>A &lt;a0&gt;ValueError&lt;/a0&gt; is thrown if &lt;e1&gt;Index&lt;/e1&gt; is non-numeric, less than &lt;c2&gt;-ArrayObj.Length&lt;/c2&gt; or greater than &lt;c3&gt;ArrayObj.Length + 1&lt;/c3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T193252Z" creationid="Ragnar-F" creationdate="20261011T193252Z">
+        <seg>Es wird ein &lt;a0&gt;ValueError&lt;/a0&gt; ausgelöst, wenn &lt;e1&gt;Index&lt;/e1&gt; nicht-numerisch, kleiner als &lt;c2&gt;-ArrayObj.Length&lt;/c2&gt; oder größer als &lt;c3&gt;ArrayObj.Length + 1&lt;/c3&gt; ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A &lt;a0&gt;ValueError&lt;/a0&gt; is thrown if &lt;e1&gt;Index&lt;/e1&gt; is out of range or non-numeric.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T192905Z" creationid="Ragnar-F" creationdate="20261011T192655Z">
+        <seg>Es wird ein &lt;a0&gt;ValueError&lt;/a0&gt; ausgelöst, wenn &lt;e1&gt;Index&lt;/e1&gt; außerhalb des gültigen Bereichs liegt oder nicht-numerisch ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A &lt;a0&gt;ValueError&lt;/a0&gt; is thrown if &lt;e1&gt;Index&lt;/e1&gt; is out of range.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260216T205506Z" creationid="Ragnar-F" creationdate="20210404T181047Z">
@@ -65184,6 +65488,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231025T111201Z" creationid="Ragnar-F" creationdate="20210216T150914Z">
         <seg>Es wird ein &lt;a0&gt;ValueError&lt;/a0&gt; ausgelöst, wenn die &lt;a1&gt;Col&lt;e2&gt;N&lt;/e2&gt;-Option&lt;/a1&gt; eine nicht-existierende Spalte angibt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A &lt;a0&gt;ValueError&lt;/a0&gt; is thrown if the range indicated by &lt;e1&gt;Index&lt;/e1&gt; and &lt;e2&gt;Length&lt;/e2&gt; is not entirely within the array's current bounds, or if either parameter is non-numeric.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T193410Z" creationid="Ragnar-F" creationdate="20261011T193410Z">
+        <seg>Es wird ein &lt;a0&gt;ValueError&lt;/a0&gt; ausgelöst, wenn der via &lt;e1&gt;Index&lt;/e1&gt; und &lt;e2&gt;Länge&lt;/e2&gt; angegebene Bereich nicht vollständig innerhalb der aktuellen Grenzen des Arrays liegt, oder wenn einer der beiden Parameter nicht-numerisch ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -65348,6 +65660,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>A &lt;a1&gt;TypeError&lt;/a1&gt; is thrown if &lt;c2&gt;Key is Float&lt;/c2&gt; and the caller is in &lt;a3&gt;v2.1 mode&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T194422Z" creationid="Ragnar-F" creationdate="20261011T194422Z">
+        <seg>Es wird ein &lt;a1&gt;TypeError&lt;/a1&gt; ausgelöst, wenn &lt;c2&gt;Schlüssel is Float&lt;/c2&gt; und der Aufrufer im &lt;a3&gt;v2.1-Modus&lt;/a3&gt; ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A &lt;a1&gt;TypeError&lt;/a1&gt; is thrown if &lt;e2&gt;Index&lt;/e2&gt; is floating-point or non-numeric and the caller is in &lt;a3&gt;v2.1 mode&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T193019Z" creationid="Ragnar-F" creationdate="20261011T192901Z">
+        <seg>Es wird ein &lt;a1&gt;TypeError&lt;/a1&gt; ausgelöst, wenn &lt;e2&gt;Index&lt;/e2&gt; eine Floating-Point-Zahl oder nicht-numerisch ist und der Aufrufer im &lt;a3&gt;v2.1-Modus&lt;/a3&gt; ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A &lt;a1&gt;WM_CLOSE message&lt;/a1&gt; is sent to terminate the old instance.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T170249Z" creationid="Ragnar-F" creationdate="20260913T170249Z">
@@ -65372,6 +65700,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>A &lt;a1&gt;numeric type class&lt;/a1&gt; such as &lt;c2&gt;UInt32&lt;/c2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T194623Z" creationid="Ragnar-F" creationdate="20261011T194623Z">
+        <seg>Eine &lt;a1&gt;Zahlentypklasse&lt;/a1&gt; wie z.B. &lt;c2&gt;UInt32&lt;/c2&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A &lt;a1&gt;pointer class&lt;/a1&gt; has similar usage and can be used for structs.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260921T202951Z" creationid="Ragnar-F" creationdate="20260921T180514Z">
@@ -65384,6 +65720,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260921T135624Z" creationid="Ragnar-F" creationdate="20260921T131403Z">
         <seg>Eine &lt;a1&gt;Struktur&lt;/a1&gt; oder ein &lt;a2&gt;abstrakter Typ&lt;/a2&gt;, der als Wert übergeben werden soll.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A &lt;a1&gt;structured array&lt;/a1&gt; can be assigned if the base element class is exactly equal to that of the pointer's target.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T133408Z" creationid="Ragnar-F" creationdate="20261011T133408Z">
+        <seg>Es ist möglich, ein &lt;a1&gt;strukturiertes Array&lt;/a1&gt; zuzuweisen, wenn die Basiselementklasse identisch mit der des Ziels des Pointers ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -65880,6 +66224,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240327T215255Z" creationid="Ragnar-F" creationdate="20240327T215255Z">
         <seg>Es wird ein TypeError ausgelöst, wenn &lt;e0&gt;Obj&lt;/e0&gt; von einem nicht unterstützten internen Typ abgeleitet ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A TypeError is thrown if &lt;e1&gt;ArrayObj&lt;/e1&gt; has typed properties.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T192622Z" creationid="Ragnar-F" creationdate="20261011T192622Z">
+        <seg>Es wird ein TypeError ausgelöst, wenn &lt;e1&gt;ArrayObj&lt;/e1&gt; typisierte Eigenschaften hat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A TypeError is thrown if &lt;e1&gt;MapObj&lt;/e1&gt; has typed properties.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T194230Z" creationid="Ragnar-F" creationdate="20261011T194230Z">
+        <seg>Es wird ein TypeError ausgelöst, wenn &lt;e1&gt;MapObj&lt;/e1&gt; typisierte Eigenschaften hat.</seg>
       </tuv>
     </tu>
     <tu>
@@ -66900,6 +67260,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>A library file name.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T170735Z" creationid="Ragnar-F" creationdate="20261011T170735Z">
+        <seg>Der Name einer Bibliotheksdatei.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A library file or function name.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230621T072844Z" creationid="Ragnar-F" creationdate="20230621T072844Z">
@@ -67836,6 +68204,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>A script originally written for v2.0 can be gradually updated one function at a time.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T184941Z" creationid="Ragnar-F" creationdate="20261011T184941Z">
+        <seg>Ein ursprünglich für v2.0 geschriebenes Skript kann schrittweise, Funktion für Funktion, aktualisiert werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A script that checks the state of such a key immediately after it changed may use &lt;a1&gt;Sleep&lt;/a1&gt; beforehand to give the system time to update the key state.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230423T135937Z" creationid="Ragnar-F" creationdate="20180429T204337Z">
@@ -68158,8 +68534,16 @@
       <tuv lang="en">
         <seg>A struct class is any subclass of &lt;a0&gt;Struct&lt;/a0&gt;, including the &lt;a1&gt;numeric types&lt;/a1&gt;, &lt;a2&gt;array classes&lt;/a2&gt;, &lt;a3&gt;pointer classes&lt;/a3&gt; and &lt;c4&gt;Struct.Ptr&lt;/c4&gt; itself.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T203305Z" creationid="Ragnar-F" creationdate="20260919T081608Z">
-        <seg>Eine Strukturklasse ist eine beliebige Unterklasse von &lt;a0&gt;Struct&lt;/a0&gt;, einschließlich &lt;a1&gt;numerischer Typen&lt;/a1&gt;, &lt;a2&gt;Arrayklassen&lt;/a2&gt;, &lt;a3&gt;Pointerklassen&lt;/a3&gt; und &lt;c4&gt;Struct.Ptr&lt;/c4&gt; selbst.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T194945Z" creationid="Ragnar-F" creationdate="20260919T081608Z">
+        <seg>Eine Strukturklasse ist eine beliebige Unterklasse von &lt;a0&gt;Struct&lt;/a0&gt;, einschließlich &lt;a1&gt;Zahlentypen&lt;/a1&gt;, &lt;a2&gt;Arrayklassen&lt;/a2&gt;, &lt;a3&gt;Pointerklassen&lt;/a3&gt; und &lt;c4&gt;Struct.Ptr&lt;/c4&gt; selbst.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A structure can instead be defined outside of the union and then used in a property declaration inside the union.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T132052Z" creationid="Ragnar-F" creationdate="20261011T132052Z">
+        <seg>Eine Struktur kann stattdessen außerhalb der Union definiert und dann in einer Eigenschaftsdeklaration innerhalb der Union verwendet werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -68348,6 +68732,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>A union block must contain only typed property declarations, although each declaration may have an initializer.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T131815Z" creationid="Ragnar-F" creationdate="20261011T131815Z">
+        <seg>Ein Unionsblock darf ausschließlich Deklarationen von typisierten Eigenschaften enthalten, wobei jede Deklaration einen Initialisierer haben kann.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A unique ID (HWND) is valid only during its lifetime.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260224T075738Z" creationid="Ragnar-F" creationdate="20260224T075738Z">
@@ -68376,6 +68768,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20150309T223938Z" creationid="Ragnar-F" creationdate="20150309T223938Z">
         <seg>Ein benutzerdefiniertes Objekt, das wie eine Funktion aufgerufen werden kann.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A v2.0 file containing only function and class definitions can be safely included in a v2.1 module with &lt;a0&gt;#Include&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T184826Z" creationid="Ragnar-F" creationdate="20261011T184826Z">
+        <seg>Eine v2.0-Datei, die ausschließlich Funktions- und Klassendefinitionen enthält, kann mittels &lt;a0&gt;#Include&lt;/a0&gt; bedenkenlos in ein v2.1-Modul inkludiert werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A v2.1 module or function can safely contain v2.0 functions.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T184632Z" creationid="Ragnar-F" creationdate="20261011T184632Z">
+        <seg>Ein v2.1-Modul oder eine v2.1-Funktion kann bedenkenlos v2.0-Funktionen enthalten.</seg>
       </tuv>
     </tu>
     <tu>
@@ -71230,8 +71638,8 @@
       <tuv lang="en">
         <seg>Added &lt;a0&gt;numeric type classes&lt;/a0&gt; extending Struct.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T135504Z" creationid="Ragnar-F" creationdate="20260911T135345Z">
-        <seg>Hinzugefügt: Klassen für &lt;a0&gt;numerische Typen&lt;/a0&gt;, die Struct erweitern.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T194737Z" creationid="Ragnar-F" creationdate="20260911T135345Z">
+        <seg>Hinzugefügt: &lt;a0&gt;Zahlentypklassen&lt;/a0&gt;, die Struct erweitern.</seg>
       </tuv>
     </tu>
     <tu>
@@ -71532,6 +71940,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Added numeric type class support to NumPut/NumGet.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T194642Z" creationid="Ragnar-F" creationdate="20261011T164714Z">
+        <seg>Hinzugefügt: NumPut und NumGet unterstützen nun die Verwendung von Zahlentypklassen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Added optional chaining with the maybe operator (&lt;c0&gt;a?.b&lt;/c0&gt;).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260912T172215Z" creationid="Ragnar-F" creationdate="20260912T172215Z">
@@ -71548,6 +71964,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Added support for &lt;a0&gt;anonymous unions&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T164852Z" creationid="Ragnar-F" creationdate="20261011T164852Z">
+        <seg>Hinzugefügt: Unterstützung für &lt;a0&gt;anonyme Unions&lt;/a0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Added support for ByRef VARIANT in incoming COM calls.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230702T121516Z" creationid="Ragnar-F" creationdate="20230702T121516Z">
@@ -71560,6 +71984,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260920T085438Z" creationid="Ragnar-F" creationdate="20260920T085438Z">
         <seg>Pflichtparameter können nun rechts neben optionalen Parametern definiert werden, z.B. &lt;c0&gt;Fn(a?, b)&lt;/c0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Added support for hiding properties from &lt;a0&gt;Props&lt;/a0&gt; and the debugger by including &lt;c1&gt;Enumerable:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T165541Z" creationid="Ragnar-F" creationdate="20261011T165541Z">
+        <seg>Hinzugefügt: Eigenschaften können nun vor &lt;a0&gt;Props&lt;/a0&gt; und dem Debugger verborgen werden, indem man &lt;c1&gt;Enumerable:</seg>
       </tuv>
     </tu>
     <tu>
@@ -74136,6 +74568,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231121T082931Z" creationid="Ragnar-F" creationdate="20210307T172440Z">
         <seg>Obwohl eine Bibliotheksdatei konventionsgemäß in der Regel nur eine einzelne Funktion oder Klasse mit demselben Namen wie die Datei enthält, kann sie auch private Funktionen enthalten, die nur von ihr aufgerufen werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Although by convention a library file often contains only a single function or class of the same name as its filename, it may also contain private functions that are called only by it.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T092609Z" creationid="Ragnar-F" creationdate="20261011T092609Z">
+        <seg>Obwohl eine Bibliotheksdatei konventionsgemäß oft nur eine einzelne Funktion oder Klasse mit demselben Namen wie die Datei enthält, kann sie auch private Funktionen enthalten, die nur von ihr aufgerufen werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -76748,6 +77188,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Any directories listed by the &lt;a0&gt;AhkLibPath&lt;/a0&gt; environment variable, if defined; otherwise, the user library and standard library.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T082553Z" creationid="Ragnar-F" creationdate="20261011T082553Z">
+        <seg>Alle Verzeichnisse, die in der Umgebungsvariable &lt;a0&gt;AhkLibPath&lt;/a0&gt; angegeben sind, sofern definiert; andernfalls die Benutzer- und Standardbibliothek.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Any disabled window is skipped, unless one of its owned windows was active more recently than it.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210704T191409Z" creationid="Ragnar-F" creationdate="20210704T191409Z">
@@ -78212,6 +78660,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>As a general rule, it is safest to separate v2.0 files from v2.1 files by keeping them in separate modules.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T185933Z" creationid="Ragnar-F" creationdate="20261011T185933Z">
+        <seg>Generell ist es am sichersten, v2.0-Dateien und v2.1-Dateien voneinander zu trennen, indem man sie in separaten Modulen unterbringt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>As a hotkey without a key-up counterpart (&lt;c2&gt;Alt::&lt;/c2&gt; without &lt;c3&gt;Alt up::&lt;/c3&gt;) it fires upon release unless it has the &lt;a4&gt;tilde prefix&lt;/a4&gt;, and is not suppressed even if the prefix is absent.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260322T124345Z" creationid="Ragnar-F" creationdate="20260322T113356Z">
@@ -78640,6 +79096,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230725T170444Z" creationid="Ragnar-F" creationdate="20200622T070404Z">
         <seg>Darüber hinaus können spezielle Benutzervariablen im Format &lt;c0&gt;U_&lt;i1&gt;Name&lt;/i1&gt;&lt;/c0&gt; mit den unten beschriebenen &lt;a2&gt;Let&lt;/a2&gt;- und &lt;a3&gt;Obey&lt;/a3&gt;-Direktiven erstellt werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>As with &lt;a1&gt;#Import&lt;/a1&gt;, this is done even if the name does not contain a dot.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T092447Z" creationid="Ragnar-F" creationdate="20261011T092447Z">
+        <seg>Dies geschieht auch dann, wenn der Name keinen Punkt enthält, analog zu &lt;a1&gt;#Import&lt;/a1&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -82167,6 +82631,14 @@
         <seg>Built-in variables may be used in the value of AhkImportPath by enclosing them in percent signs.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260918T173538Z" creationid="Ragnar-F" creationdate="20260918T173538Z">
+        <seg>Interne Variablen können in der Liste angegeben werden, müssen aber in Prozentzeichen gesetzt werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Built-in variables may be used in the value of AhkLibPath by enclosing them in percent signs.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T094949Z" creationid="Ragnar-F" creationdate="20261011T094949Z">
         <seg>Interne Variablen können in der Liste angegeben werden, müssen aber in Prozentzeichen gesetzt werden.</seg>
       </tuv>
     </tu>
@@ -86068,6 +86540,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed #Requires inside a function or #Include file to never affect the current module's compatibility mode for global code.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T165942Z" creationid="Ragnar-F" creationdate="20261011T165942Z">
+        <seg>Geändert: #Requires innerhalb einer Funktion oder einer #Include-Datei beeinflusst nicht mehr den Kompatibilitätsmodus für globalen Code des aktuellen Moduls.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed #Requires to set &lt;a0&gt;compatibility mode&lt;/a0&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122158Z" creationid="Ragnar-F" creationdate="20260911T122158Z">
@@ -86140,6 +86620,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed &lt;c0&gt;a.%b?% ?? c&lt;/c0&gt; to be consistent with &lt;c1&gt;%r?% ?? c&lt;/c1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T170450Z" creationid="Ragnar-F" creationdate="20261011T170450Z">
+        <seg>Geändert: &lt;c0&gt;a.%b?% ?? c&lt;/c0&gt; ist nun konsistent mit &lt;c1&gt;%r?% ?? c&lt;/c1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed &lt;c0&gt;a.Base := b&lt;/c0&gt; to be invalid when &lt;c1&gt;a&lt;/c1&gt; or &lt;c2&gt;b&lt;/c2&gt; has typed properties.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T122914Z" creationid="Ragnar-F" creationdate="20260911T122914Z">
@@ -86156,10 +86644,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed Array to throw TypeError for bad index types in v2.1 mode.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T142920Z" creationid="Ragnar-F" creationdate="20261011T142920Z">
+        <seg>Geändert: Im v2.1-Modus löst Array nun einen TypeError aus, wenn ungültige Indextypen verwendet werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed COM method and property calls to pass large integers as VT_I8, not VT_R8 (floating-point), so the original type and precision is retained.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230702T120942Z" creationid="Ragnar-F" creationdate="20230702T120942Z">
         <seg>Geändert: COM-Methodenaufrufe und -Eigenschaftsaufrufe übergeben große Integer nun als VT_I8, nicht mehr als VT_R8 (Floating-Point), um den ursprünglichen Typ und die Genauigkeit beizubehalten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed Clone to throw TypeError if typed properties exist, instead of producing a broken object.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T170108Z" creationid="Ragnar-F" creationdate="20261011T170108Z">
+        <seg>Geändert: Clone löst nun einen TypeError aus, wenn typisierte Eigenschaften vorhanden sind, anstatt ein kaputtes Objekt zu erzeugen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -86198,8 +86702,8 @@
       <tuv lang="en">
         <seg>Changed GetOwnPropDesc to return classes for numeric types.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260911T133806Z" creationid="Ragnar-F" creationdate="20260911T133806Z">
-        <seg>Geändert: GetOwnPropDesc gibt nun Klassen für numerische Typen zurück.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T194727Z" creationid="Ragnar-F" creationdate="20260911T133806Z">
+        <seg>Geändert: GetOwnPropDesc gibt nun Zahlentypklassen zurück.</seg>
       </tuv>
     </tu>
     <tu>
@@ -86272,6 +86776,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260912T165840Z" creationid="Ragnar-F" creationdate="20260912T165840Z">
         <seg>Geändert: ListVars zeigt ungesetzte Variablen nun als "varname:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed Map to throw TypeError for Float keys in v2.1 mode.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T142802Z" creationid="Ragnar-F" creationdate="20261011T142802Z">
+        <seg>Geändert: Im v2.1-Modus löst Map nun einen TypeError aus, wenn Float-Schlüssel verwendet werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -86556,6 +87068,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed search logic for #Include &lt;MyLib&gt; and #Import; refer to &lt;a0&gt;Script Library Folders&lt;/a0&gt; and &lt;a1&gt;Search Path&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T143223Z" creationid="Ragnar-F" creationdate="20261011T143223Z">
+        <seg>Geändert: #Include &lt;MeineBibl&gt; und #Import haben nun eine andere Suchlogik; siehe &lt;a0&gt;Skriptbibliotheksordner&lt;/a0&gt; und &lt;a1&gt;Suchpfad&lt;/a1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed some functions/properties to return unset in v2.1 mode.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T121449Z" creationid="Ragnar-F" creationdate="20260911T121449Z">
@@ -86632,6 +87152,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260912T174253Z" creationid="Ragnar-F" creationdate="20260912T174253Z">
         <seg>Geändert: Das Tray-Menü blockiert den unterbrochenen Thread nicht mehr.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed typed properties and DllCall to let a &lt;e0&gt;StructClass&lt;/e0&gt;.Array "decay" to a &lt;e1&gt;StructClass&lt;/e1&gt;.Ptr.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T170236Z" creationid="Ragnar-F" creationdate="20261011T170236Z">
+        <seg>Geändert: Typisierte Eigenschaften und DllCall lassen nun ein &lt;e0&gt;StructKlasse&lt;/e0&gt;.Array zu einem &lt;e1&gt;StructKlasse&lt;/e1&gt;.Ptr "verkommen".</seg>
       </tuv>
     </tu>
     <tu>
@@ -89916,6 +90444,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Compatibility Mode &lt;s0&gt;[v2.1-alpha.34+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T174458Z" creationid="Ragnar-F" creationdate="20261011T174458Z">
+        <seg>Kompatibilitätsmodus &lt;s0&gt;[v2.1-alpha.34+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Compatibility Settings</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20250926T143319Z" creationid="Ragnar-F" creationdate="20250926T143319Z">
@@ -89928,6 +90464,30 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140307T020056Z" creationid="Ragnar-F" creationdate="20140307T020056Z">
         <seg>Kompatibilität:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>CompatibleFunc()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T192040Z" creationid="Ragnar-F" creationdate="20261011T191623Z">
+        <seg>CompatibleFunc()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>CompatibleFunc() {</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T192527Z" creationid="Ragnar-F" creationdate="20261011T192527Z">
+        <seg>CompatibleFunc() {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>CompatibleLib.ahk:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T191859Z" creationid="Ragnar-F" creationdate="20261011T191859Z">
+        <seg>CompatibleLib.ahk:</seg>
       </tuv>
     </tu>
     <tu>
@@ -90120,6 +90680,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231120T084800Z" creationid="Ragnar-F" creationdate="20220604T194827Z">
         <seg>Den Launcher konfigurieren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Conflicts can be avoided by using &lt;a1&gt;#Import&lt;/a1&gt; instead.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T093149Z" creationid="Ragnar-F" creationdate="20261011T093149Z">
+        <seg>Konflikte lassen sich vermeiden, indem man stattdessen &lt;a1&gt;#Import&lt;/a1&gt; verwendet.</seg>
       </tuv>
     </tu>
     <tu>
@@ -92720,6 +93288,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171118T112135Z" creationid="Ragnar-F" creationdate="20171118T112135Z">
         <seg>CordiaUPC</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Correct use of version directives can allow code written for different versions to be mixed in one script.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T184204Z" creationid="Ragnar-F" creationdate="20261011T184204Z">
+        <seg>Durch den korrekten Einsatz von Versionsdirektiven können Codeabschnitte, die für verschiedene Versionen geschrieben wurden, gemeinsam in einem Skript stehen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -96176,6 +96752,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230610T210704Z" creationid="Ragnar-F" creationdate="20210212T225438Z">
         <seg>Zeigt, wie ein GUI-Fenster zu einer Unterklasse gemacht werden kann, indem dessen WindowProc an ein neues WindowProc weitergeleitet wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Demonstrates how version directives affect &lt;a0&gt;compatibility mode&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T190348Z" creationid="Ragnar-F" creationdate="20261011T190348Z">
+        <seg>Zeigt, welchen Effekt die Versionsdirektiven auf den &lt;a0&gt;Kompatibilitätsmodus&lt;/a0&gt; haben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -99702,8 +100286,8 @@
       <tuv lang="en">
         <seg>Each &lt;a1&gt;numeric type class&lt;/a1&gt; has its own pointer class, which is equivalent to the corresponding type name.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T202955Z" creationid="Ragnar-F" creationdate="20260921T180701Z">
-        <seg>Jede &lt;a1&gt;numerische Typklasse&lt;/a1&gt; hat ihre eigene Pointerklasse, was äquivalent zum entsprechenden Typnamen ist.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T194921Z" creationid="Ragnar-F" creationdate="20260921T180701Z">
+        <seg>Jede &lt;a1&gt;Zahlentypklasse&lt;/a1&gt; hat ihre eigene Pointerklasse, was äquivalent zum entsprechenden Typnamen ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -100928,6 +101512,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230826T074517Z" creationid="Ragnar-F" creationdate="20210223T115038Z">
         <seg>&lt;e0&gt;Länge&lt;/e0&gt; oder &lt;e1&gt;Kodierung&lt;/e1&gt; kann direkt nach &lt;e2&gt;Ziel&lt;/e2&gt; anzugeben, aber in diesem Fall muss &lt;e3&gt;Kodierung&lt;/e3&gt; nicht-numerisch sein.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Either &lt;e2&gt;mi&lt;/e2&gt; or &lt;e3&gt;ki&lt;/e3&gt; is valid, depending on the value of &lt;e4&gt;type&lt;/e4&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T130442Z" creationid="Ragnar-F" creationdate="20261011T130442Z">
+        <seg>Sowohl &lt;e2&gt;mi&lt;/e2&gt; als auch &lt;e3&gt;ki&lt;/e3&gt; sind gültig, je nach Wert von &lt;e4&gt;type&lt;/e4&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -105612,6 +106204,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed #Import to disallow the Export keyword inside functions.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T143405Z" creationid="Ragnar-F" creationdate="20261011T143405Z">
+        <seg>Behoben: #Import verbietet nun die Verwendung des Export-Schlüsselworts innerhalb von Funktionen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed #Import to not allow loops such as a var pointing to itself.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T140523Z" creationid="Ragnar-F" creationdate="20260911T140523Z">
@@ -105968,6 +106568,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230709T073042Z" creationid="Ragnar-F" creationdate="20230709T073042Z">
         <seg>Behoben: &lt;c0&gt;a &amp; b up::&lt;/c0&gt; unterdrückte &lt;k1&gt;b&lt;/k1&gt; nicht, wenn &lt;c2&gt;a &amp; b::&lt;/c2&gt; vorhanden, aber durch #HotIf deaktiviert ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;a &amp; b::AltTabMenu&lt;/c0&gt; and similar crashing the program when activated [broken by v2.0.20].</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T080538Z" creationid="Ragnar-F" creationdate="20261011T080538Z">
+        <seg>Behoben: &lt;c0&gt;a &amp; b::AltTabMenu&lt;/c0&gt; und Ähnliches verursachten bei Aktivierung einen Programmabsturz [fehlerhaft seit v2.0.20].</seg>
       </tuv>
     </tu>
     <tu>
@@ -106492,6 +107100,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed Gui.Move moving the window incorrectly if it has an owner.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T080344Z" creationid="Ragnar-F" creationdate="20261011T080344Z">
+        <seg>Behoben: Gui.Move verschiebt das Fenster nun korrekt, wenn es einem anderen Fenster untergeordnet ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed Gui.Move to not DPI-scale X or Y.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260921T091309Z" creationid="Ragnar-F" creationdate="20260921T091309Z">
@@ -106720,6 +107336,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T080618Z" creationid="Ragnar-F" creationdate="20260911T122512Z">
         <seg>Behoben: ObjSetDataPtr löst bei Erfolg keinen Fehler mehr aus.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed OnMessage crashing if more than 65536 monitors are registered.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T100753Z" creationid="Ragnar-F" creationdate="20261006T100753Z">
+        <seg>Behoben: OnMessage verursachte einen Absturz, wenn mehr als 65536 Funktionen registriert wurden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -108048,6 +108672,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T131725Z" creationid="Ragnar-F" creationdate="20260911T131725Z">
         <seg>Behoben: Einige Fehlermeldungen verwiesen nicht auf die Zeile, die den Fehler auslöste.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed some inconsistencies with &lt;e0&gt;NumericClass&lt;/e0&gt;.Ptr versus other structs.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T170417Z" creationid="Ragnar-F" creationdate="20261011T170417Z">
+        <seg>Behoben: Unstimmigkeiten zwischen &lt;e0&gt;NumerischeKlasse&lt;/e0&gt;.Ptr und anderen Strukturen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -109940,6 +110572,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For an example, see &lt;a3&gt;#Include example #4&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T090448Z" creationid="Ragnar-F" creationdate="20261011T090448Z">
+        <seg>Siehe &lt;a3&gt;#Include-Beispiel #4&lt;/a3&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For an example, see &lt;a7&gt;ComObjQuery&lt;/a7&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20200713T151648Z" creationid="Ragnar-F" creationdate="20200713T151648Z">
@@ -110072,6 +110712,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T161705Z" creationid="Ragnar-F" creationdate="20260916T161613Z">
         <seg>Aus Gründen der Abwärtskompatibilität mit der Throw-Anweisung in früheren Versionen akzeptiert Throw eine beliebige Anzahl von Parametern und verwendet nur den letzten Parameter (ähnlich wie beim &lt;a2&gt;Mehrfachanweisungskomma&lt;/a2&gt;).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For backward-compatibility, an empty union block is interpreted as an empty dynamic property, as "union" is also a valid property name.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T132152Z" creationid="Ragnar-F" creationdate="20261011T132152Z">
+        <seg>Aus Gründen der Abwärtskompatibilität wird ein leerer Unionsblock als leere dynamische Eigenschaft interpretiert, da "union" auch ein gültiger Eigenschaftsname ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -111140,10 +111788,34 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For example, &lt;c0&gt;#Include &lt;A.txt&gt;&lt;/c0&gt; searches for "A.txt" before "A.txt.ahk".</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T092505Z" creationid="Ragnar-F" creationdate="20261011T092134Z">
+        <seg>Zum Beispiel sucht &lt;c0&gt;#Include &lt;A.txt&gt;&lt;/c0&gt; zuerst nach "A.txt" und dann nach "A.txt.ahk".</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For example, &lt;c0&gt;#Include &lt;A_B&gt;&lt;/c0&gt; does not search for "A.ahk".</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T092539Z" creationid="Ragnar-F" creationdate="20261011T092539Z">
+        <seg>Zum Beispiel sucht &lt;c0&gt;#Include &lt;A_B&gt;&lt;/c0&gt; nicht nach "A.ahk".</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For example, &lt;c0&gt;#Include &lt;lib&gt;&lt;/c0&gt; and &lt;c1&gt;#Include &lt;lib_func&gt;&lt;/c1&gt; would both include lib.ahk from one of the &lt;a2&gt;Lib folders&lt;/a2&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230911T173653Z" creationid="Ragnar-F" creationdate="20230911T173653Z">
         <seg>Zum Beispiel würden sowohl &lt;c0&gt;#Include &lt;Bibl&gt;&lt;/c0&gt; als auch &lt;c1&gt;#Include &lt;Bibl_Funktion&gt;&lt;/c1&gt; Bibl.ahk aus einem der &lt;a2&gt;Lib-Ordner&lt;/a2&gt; inkludieren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For example, &lt;c0&gt;#Include &lt;lib&gt;&lt;/c0&gt; would include lib.ahk from one of several locations.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T173715Z" creationid="Ragnar-F" creationdate="20261011T173715Z">
+        <seg>Zum Beispiel versucht &lt;c0&gt;#Include &lt;Bibl&gt;&lt;/c0&gt;, Bibl.ahk aus einem von mehreren Orten zu inkludieren.</seg>
       </tuv>
     </tu>
     <tu>
@@ -112572,6 +113244,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>For example, &lt;c2&gt;a.%b?% ?? c&lt;/c2&gt; will produce &lt;c3&gt;c&lt;/c3&gt; without invoking any property if &lt;c4&gt;b&lt;/c4&gt; is unset.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T142214Z" creationid="Ragnar-F" creationdate="20261011T142214Z">
+        <seg>&lt;c2&gt;a.%b?% ?? c&lt;/c2&gt; beispielsweise erzeugt &lt;c3&gt;c&lt;/c3&gt;, ohne eine Eigenschaft indirekt aufzurufen, wenn &lt;c4&gt;b&lt;/c4&gt; ungesetzt ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>For example, &lt;c2&gt;b::a&lt;/c2&gt; would produce &lt;k3&gt;Ctrl&lt;/k3&gt;+&lt;k4&gt;A&lt;/k4&gt; if you press &lt;k5&gt;Ctrl&lt;/k5&gt;+&lt;k6&gt;B&lt;/k6&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230810T093141Z" creationid="Ragnar-F" creationdate="20180814T122427Z">
@@ -113832,6 +114512,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230625T124619Z" creationid="Ragnar-F" creationdate="20190819T195550Z">
         <seg>Zum Beispiel enthält ein &lt;a1&gt;Array&lt;/a1&gt; eine Sequenz von Elementen, während ein &lt;a2&gt;Map&lt;/a2&gt;-Objekt Schlüssel mit Werten assoziiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For example, an incomplete definition of the &lt;a0&gt;INPUT&lt;/a0&gt; structure used with &lt;a1&gt;SendInput&lt;/a1&gt; might look like this:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T125952Z" creationid="Ragnar-F" creationdate="20261011T125952Z">
+        <seg>Zum Beispiel könnte eine unvollständige Definition der &lt;a0&gt;INPUT&lt;/a0&gt;-Struktur, die bei &lt;a1&gt;SendInput&lt;/a1&gt; verwendet wird, wie folgt aussehen:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For example, an instance of &lt;c2&gt;UInt8[32]&lt;/c2&gt; can be assigned to a property of type &lt;c3&gt;UInt8.Ptr&lt;/c3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T133823Z" creationid="Ragnar-F" creationdate="20261011T133823Z">
+        <seg>Zum Beispiel kann eine Instanz von &lt;c2&gt;UInt8[32]&lt;/c2&gt; einer Eigenschaft vom Typ &lt;c3&gt;UInt8.Ptr&lt;/c3&gt; zugewiesen werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -123652,6 +124348,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>How the search is carried out depends on which &lt;a1&gt;version directive&lt;/a1&gt; is in effect for the #Include directive.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T091313Z" creationid="Ragnar-F" creationdate="20261011T091313Z">
+        <seg>Wie genau die Suche durchgeführt wird, hängt davon ab, welche &lt;a1&gt;Versionsdirektive&lt;/a1&gt; für die #Include-Direktive wirksam ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>How to Install AutoHotkey</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221219T133033Z" creationid="Ragnar-F" creationdate="20221219T133033Z">
@@ -128604,6 +129308,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If a match is still not found and the library's name contains an underscore (e.g. &lt;c2&gt;MyPrefix_MyFunc&lt;/c2&gt;), the program searches again with just the prefix (e.g. &lt;c3&gt;MyPrefix.ahk&lt;/c3&gt;).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T085143Z" creationid="Ragnar-F" creationdate="20261011T085143Z">
+        <seg>Wenn sie auch dort nicht gefunden wird und enthält der Bibliotheksname einen Unterstrich (z.B. &lt;c2&gt;MeinPräfix_MeineFunk&lt;/c2&gt;), wiederholt das Programm die Suche mit nur dem Präfix (z.B. &lt;c3&gt;MeinPräfix.ahk&lt;/c3&gt;).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If a matching process is not found or cannot be manipulated, zero is returned.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231103T083130Z" creationid="Ragnar-F" creationdate="20180816T112138Z">
@@ -129152,6 +129864,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230317T154050Z" creationid="Ragnar-F" creationdate="20140320T143035Z">
         <seg>Wenn alle fehlschlagen, ist AutoHotkey möglicherweise nicht für Ihr Videospiel geeignet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If an &lt;a1&gt;array of StructClass&lt;/a1&gt; is passed, the address of its first element is passed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T132807Z" creationid="Ragnar-F" creationdate="20261011T132807Z">
+        <seg>Wenn ein &lt;a1&gt;Array von StructKlasse&lt;/a1&gt; übergeben wird, wird die Adresse seines ersten Elements übergeben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -130846,8 +131566,8 @@
       <tuv lang="en">
         <seg>If it is not defined, the default list is as follows:</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260918T173608Z" creationid="Ragnar-F" creationdate="20260918T173253Z">
-        <seg>Wenn diese Variable nicht verwendet wird, gilt die folgende Standardliste:</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T094907Z" creationid="Ragnar-F" creationdate="20260918T173253Z">
+        <seg>Wenn diese Variable nicht definiert ist, gilt die folgende Standardliste:</seg>
       </tuv>
     </tu>
     <tu>
@@ -133212,6 +133932,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If the &lt;a1&gt;AhkLibPath&lt;/a1&gt; environment variable is defined, the user library and standard library are not searched unless they are explicitly included in the list.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T091203Z" creationid="Ragnar-F" creationdate="20261011T091203Z">
+        <seg>Ist die Umgebungsvariable &lt;a1&gt;AhkLibPath&lt;/a1&gt; definiert, werden die Benutzer- und Standardbibliothek nur durchsucht, wenn sie ausdrücklich in der Liste angegeben sind.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If the &lt;a5&gt;E option&lt;/a5&gt; is present, single character key names are interpreted as characters instead, and in those cases the modifier keys must be in the correct state to produce that character.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20250928T112611Z" creationid="Ragnar-F" creationdate="20231202T114818Z">
@@ -134168,6 +134896,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230618T131505Z" creationid="Ragnar-F" creationdate="20140307T151014Z">
         <seg>Befindet sich die Datei auf einem Netzwerkpfad (UNC), enthält die Variable den Freigabenamen, z.B. \\Workstation01.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the file is to be used via &lt;a0&gt;#Include&lt;/a0&gt;, such functions should have fairly distinct names because they will still be in the global namespace; that is, they will be callable from anywhere in the script.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T093120Z" creationid="Ragnar-F" creationdate="20261011T093120Z">
+        <seg>Verwendet man die Datei via &lt;a0&gt;#Include&lt;/a0&gt;, sollten solche Funktionen eindeutige Namen haben, da sie sich im globalen Namensraum befinden, d.h. sie können von überall im Skript aufgerufen werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -135718,7 +136454,7 @@
       <tuv lang="en">
         <seg>If the system debugger is not active, this function has no effect.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T125043Z" creationid="Ragnar-F" creationdate="20170721T085011Z">
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261006T125311Z" creationid="Ragnar-F" creationdate="20170721T085011Z">
         <seg>Wenn der System-Debugger nicht aktiv ist, hat diese Funktion keinen Effekt.</seg>
       </tuv>
     </tu>
@@ -137180,6 +137916,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If v2.1 mode is in effect, the search changes in the following ways:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T091402Z" creationid="Ragnar-F" creationdate="20261011T091402Z">
+        <seg>Wenn der v2.1-Modus aktiv ist, ändert sich die Suche wie folgt:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If validation is attempted, exceptions may be thrown as a result of querying the method's properties.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231002T181256Z" creationid="Ragnar-F" creationdate="20210419T115816Z">
@@ -138236,10 +138980,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Improved the reliability of FileSetTime with respect to restricted permissions and file locks.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T143651Z" creationid="Ragnar-F" creationdate="20261011T143651Z">
+        <seg>Verbessert: FileSetTime ist nun zuverlässiger in Bezug auf eingeschränkte Berechtigungen und Dateisperren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Improved the reliability of the script taking focus when a menu popup is shown.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20240506T150415Z" creationid="Ragnar-F" creationdate="20240506T120645Z">
         <seg>Verbessert: Das Skript nimmt nun zuverlässiger den Fokus, wenn ein Kontextmenü angezeigt wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Improved validation of DefineProp's Descriptor parameter.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T170715Z" creationid="Ragnar-F" creationdate="20261011T170715Z">
+        <seg>Verbessert: Validierung des Deskriptor-Parameters von DefineProp.</seg>
       </tuv>
     </tu>
     <tu>
@@ -139372,6 +140132,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>In method and property calls, the parameter list can be short-circuited.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T142619Z" creationid="Ragnar-F" creationdate="20261011T142619Z">
+        <seg>In Methoden- und Eigenschaftsaufrufen kann die Parameterliste kurzgeschlossen werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>In more general terms, a &lt;e0&gt;class&lt;/e0&gt; is a set or category of things having some property or attribute in common.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231118T133105Z" creationid="Ragnar-F" creationdate="20190820T104122Z">
@@ -139680,6 +140448,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231120T203204Z" creationid="Ragnar-F" creationdate="20180215T103759Z">
         <seg>Mit anderen Worten, ein Teilausdruck, der mit runden, eckigen oder geschweiften Klammern umschlossen ist, kann in den meisten Fällen automatisch mehrere Zeilen umspannen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In other words, an array can "decay" to a pointer.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T132932Z" creationid="Ragnar-F" creationdate="20261011T132932Z">
+        <seg>Mit anderen Worten, ein Array kann zu einem Pointer "verkommen".</seg>
       </tuv>
     </tu>
     <tu>
@@ -140636,6 +141412,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>In that case, evaluating the pointer property will return a reference to the original array.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T133601Z" creationid="Ragnar-F" creationdate="20261011T133601Z">
+        <seg>In diesem Fall gibt die Auswertung der Pointer-Eigenschaft eine Referenz zurück, die auf das ursprüngliche Array verweist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>In that case, exiting the script won't necessarily be enough, as the operating system still thinks the key is being held down.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230908T132213Z" creationid="Ragnar-F" creationdate="20221219T220010Z">
@@ -141232,6 +142016,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T092548Z" creationid="Ragnar-F" creationdate="20260913T092508Z">
         <seg>In diesem Kontext ist "ungesetzt" dasselbe wie "weggelassen".</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>In this example, &lt;e0&gt;mi&lt;/e0&gt; and &lt;e1&gt;ki&lt;/e1&gt; start at the same offset within the structure.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T130216Z" creationid="Ragnar-F" creationdate="20261011T130216Z">
+        <seg>In diesem Beispiel starten &lt;e0&gt;mi&lt;/e0&gt; und &lt;e1&gt;ki&lt;/e1&gt; an derselben Offset-Position innerhalb der Struktur.</seg>
       </tuv>
     </tu>
     <tu>
@@ -145312,6 +146104,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210705T100409Z" creationid="Ragnar-F" creationdate="20210705T100409Z">
         <seg>Sie benötigt nun ein Funktionsobjekt, keinen Namen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>It now short-circuits instead of invoking the default property.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T170619Z" creationid="Ragnar-F" creationdate="20261011T170619Z">
+        <seg>Es schließt nun kurz, anstatt die Standardeigenschaft indirekt aufzurufen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -149580,6 +150380,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>List items can be absolute paths or relative to the directory containing the current module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T095057Z" creationid="Ragnar-F" creationdate="20261011T095057Z">
+        <seg>Die Einträge in der Liste können absolute Pfade oder relativ zum Verzeichnis des aktuellen Moduls sein.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>List items can be absolute paths or relative to the directory containing the script (&lt;a0&gt;A_ScriptDir&lt;/a0&gt;).</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260918T173936Z" creationid="Ragnar-F" creationdate="20260918T173936Z">
@@ -151560,6 +152368,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231002T131408Z" creationid="Ragnar-F" creationdate="20180412T215155Z">
         <seg>HauptEdit.Value := DateiInhalt</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MainFunc()</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T192042Z" creationid="Ragnar-F" creationdate="20261011T191631Z">
+        <seg>MainFunc()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MainFunc() {</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T191830Z" creationid="Ragnar-F" creationdate="20261011T191822Z">
+        <seg>HauptFunk() {</seg>
       </tuv>
     </tu>
     <tu>
@@ -156828,6 +157652,46 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>MsgBox "UnsetError", "CompatibleFunc"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T192533Z" creationid="Ragnar-F" creationdate="20261011T192533Z">
+        <seg>MsgBox "UnsetError", "CompatibleFunc"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox "UnsetError", "CompatibleLib"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T192421Z" creationid="Ragnar-F" creationdate="20261011T192421Z">
+        <seg>MsgBox "UnsetError", "CompatibleLib"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox "UnsetError", "Main #1"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T192057Z" creationid="Ragnar-F" creationdate="20261011T191033Z">
+        <seg>MsgBox "UnsetError", "Main #1"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox "UnsetError", "Main #2"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T192048Z" creationid="Ragnar-F" creationdate="20261011T191821Z">
+        <seg>MsgBox "UnsetError", "Main #2"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox "UnsetError", "MainFunc"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T192051Z" creationid="Ragnar-F" creationdate="20261011T191837Z">
+        <seg>MsgBox "UnsetError", "MainFunc"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>MsgBox "Var contains the digit 1 or 3 (Var could be 1, 3, 10, 21, 23, etc.)"</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230624T094945Z" creationid="Ragnar-F" creationdate="20230624T094945Z">
@@ -158592,6 +159456,46 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180412T191528Z" creationid="Ragnar-F" creationdate="20180412T191528Z">
         <seg>MsgBox Test3.id "," Test3.val</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox Type(Any.Prototype.Base), "CompatibleFunc"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T192530Z" creationid="Ragnar-F" creationdate="20261011T192530Z">
+        <seg>MsgBox Type(Any.Prototype.Base), "CompatibleFunc"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox Type(Any.Prototype.Base), "CompatibleLib"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T192415Z" creationid="Ragnar-F" creationdate="20261011T192415Z">
+        <seg>MsgBox Type(Any.Prototype.Base), "CompatibleLib"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox Type(Any.Prototype.Base), "Main #1"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T192058Z" creationid="Ragnar-F" creationdate="20261011T191026Z">
+        <seg>MsgBox Type(Any.Prototype.Base), "Main #1"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox Type(Any.Prototype.Base), "Main #2"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T192046Z" creationid="Ragnar-F" creationdate="20261011T191804Z">
+        <seg>MsgBox Type(Any.Prototype.Base), "Main #2"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MsgBox Type(Any.Prototype.Base), "MainFunc"</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T192050Z" creationid="Ragnar-F" creationdate="20261011T191831Z">
+        <seg>MsgBox Type(Any.Prototype.Base), "MainFunc"</seg>
       </tuv>
     </tu>
     <tu>
@@ -161668,6 +162572,30 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>MyLib("Main.ahk")</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T174425Z" creationid="Ragnar-F" creationdate="20261011T174425Z">
+        <seg>MyLib("Main.ahk")</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MyLib("Script2.ahk")</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T174438Z" creationid="Ragnar-F" creationdate="20261011T174438Z">
+        <seg>MyLib("Script2.ahk")</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>MyLib(s) =&gt; MsgBox(A_LineFile, s)</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T174428Z" creationid="Ragnar-F" creationdate="20261011T174428Z">
+        <seg>MyLib(s) =&gt; MsgBox(A_LineFile, s)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>MyLink1 := MyGui.Add("Link",, 'This is a &lt;a href="https://www.autohotkey.com"&gt;link&lt;/a&gt;')</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260216T140954Z" creationid="Ragnar-F" creationdate="20260216T140954Z">
@@ -163216,6 +164144,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260920T090605Z" creationid="Ragnar-F" creationdate="20260920T090605Z">
         <seg>Neue Funktion.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>New functions can take advantage of v2.1 mode while leaving the rest of the script in v2.0 mode.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T185242Z" creationid="Ragnar-F" creationdate="20261011T185242Z">
+        <seg>Neue Funktionen können sich den v2.1-Modus zunutze machen, während der Rest des Skripts im v2.0-Modus bleibt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -165358,16 +166294,16 @@
       <tuv lang="en">
         <seg>Numeric Types</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T130723Z" creationid="Ragnar-F" creationdate="20260921T130723Z">
-        <seg>Numerische Typen</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T194817Z" creationid="Ragnar-F" creationdate="20260921T130723Z">
+        <seg>Zahlentypen</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>Numeric Types &lt;s0&gt;[v2.1-alpha.23+]&lt;/s0&gt;</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T081621Z" creationid="Ragnar-F" creationdate="20260919T081611Z">
-        <seg>Numerische Typen &lt;s0&gt;[v2.1-alpha.23+]&lt;/s0&gt;</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T194957Z" creationid="Ragnar-F" creationdate="20260919T081611Z">
+        <seg>Zahlentypen &lt;s0&gt;[v2.1-alpha.23+]&lt;/s0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -173196,6 +174132,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Per-module library.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T084910Z" creationid="Ragnar-F" creationdate="20261011T084910Z">
+        <seg>Pro-Modul-Bibliothek.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Per-monitor DPI awareness disables DPI virtualization and bitmap-scaling, and therefore requires the program to react to DPI changes, such as by resizing the GUI and its controls.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260919T190724Z" creationid="Ragnar-F" creationdate="20260919T190724Z">
@@ -177180,6 +178124,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Refer to &lt;a1&gt;Script Library Folders&lt;/a1&gt; for details about how the name is resolved to a file, including some differences between v2.0 and v2.1.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T174108Z" creationid="Ragnar-F" creationdate="20261011T174108Z">
+        <seg>Unter &lt;a1&gt;Skriptbibliotheksordner&lt;/a1&gt; finden Sie detaillierte Informationen, wie der Name zu einer Datei aufgelöst wird, einschließlich einiger Unterschiede zwischen v2.0 und v2.1.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Refer to &lt;a2&gt;Script Library Folders&lt;/a2&gt; for details.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T134543Z" creationid="Ragnar-F" creationdate="20261011T134543Z">
+        <seg>Weitere Informationen finden Sie unter &lt;a2&gt;Skriptbibliotheksordner&lt;/a2&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Refer to the &lt;a0&gt;Microsoft documentation&lt;/a0&gt; for details.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190930T094534Z" creationid="Ragnar-F" creationdate="20190930T094534Z">
@@ -178520,6 +179480,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231130T131956Z" creationid="Ragnar-F" creationdate="20210704T095002Z">
         <seg>Direkt geschriebene Zuweisungen wurden entfernt:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Removed message filtering for TreeView controls and FileSelect dialogs.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T143917Z" creationid="Ragnar-F" creationdate="20261011T143917Z">
+        <seg>Entfernt: TreeView-Steuerelemente und FileSelect-Dialogfenster filtern keine Meldungen mehr.</seg>
       </tuv>
     </tu>
     <tu>
@@ -185416,6 +186384,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260918T172439Z" creationid="Ragnar-F" creationdate="20260918T172432Z">
         <seg>Suchpfad &lt;s0&gt;[v2.1-alpha.20+]&lt;/s0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Search Path &lt;s0&gt;[v2.1-alpha.35+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T081839Z" creationid="Ragnar-F" creationdate="20261011T081839Z">
+        <seg>Suchpfad &lt;s0&gt;[v2.1-alpha.35+]&lt;/s0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -196388,6 +197364,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Specifying a version requirement (or multiple requirements in one directive) may also set the compatibility mode for the current module and subsequent functions or directives.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T175102Z" creationid="Ragnar-F" creationdate="20261011T175102Z">
+        <seg>Die Angabe einer Versionsanforderung (oder mehrerer Anforderungen in einer Direktive) kann dazu führen, dass der Kompatibilitätsmodus für das aktuelle Modul und nachfolgende Funktionen oder Direktiven aktiviert wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Specifying an incorrect length may produce unexpected behaviour.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190930T080503Z" creationid="Ragnar-F" creationdate="20190930T080503Z">
@@ -201796,6 +202780,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The &lt;a0&gt;compatibility mode example&lt;/a0&gt; below demonstrates how version directives affect compatibility mode.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T190323Z" creationid="Ragnar-F" creationdate="20261011T190134Z">
+        <seg>Das &lt;a0&gt;Kompatibilitätsmodusbeispiel&lt;/a0&gt; unten zeigt, welchen Effekt die Versionsdirektiven auf den Kompatibilitätsmodus haben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The &lt;a0&gt;current HotIf setting&lt;/a0&gt; determines the &lt;a1&gt;variant&lt;/a1&gt; of a hotkey upon which the Hotkey function will operate.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231012T190517Z" creationid="Ragnar-F" creationdate="20200612T150706Z">
@@ -202328,6 +203320,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231124T123909Z" creationid="Ragnar-F" creationdate="20210704T140111Z">
         <seg>Die Optionen &lt;c0&gt;,&lt;/c0&gt; und &lt;c1&gt;%&lt;/c1&gt; wurden entfernt, da diese Zeichen nicht mehr mit einem Escapezeichen versehen werden müssen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The &lt;c0&gt;AhkLibPath&lt;/c0&gt; environment variable can contain a semicolon-delimited list of directories which &lt;c1&gt;#Import&lt;/c1&gt; and &lt;c2&gt;#Include &lt;MyLib&gt;&lt;/c2&gt; will search after searching local directories.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T094845Z" creationid="Ragnar-F" creationdate="20261011T094845Z">
+        <seg>Die Umgebungsvariable &lt;c0&gt;AhkLibPath&lt;/c0&gt; kann eine semikolongetrennte Liste von Verzeichnissen enthalten, die &lt;c1&gt;#Import&lt;/c1&gt; und &lt;c2&gt;#Include &lt;MeineBibl&gt;&lt;/c2&gt; durchsuchen sollen, nachdem die lokalen Verzeichnisse durchsucht wurden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -208212,10 +209212,50 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The directory of the current &lt;a1&gt;module&lt;/a1&gt; is searched before &lt;a2&gt;A_ScriptDir&lt;/a2&gt;, effectively giving each module its own library folder.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T085532Z" creationid="Ragnar-F" creationdate="20261011T085532Z">
+        <seg>Bevor &lt;a2&gt;A_ScriptDir&lt;/a2&gt; durchsucht wird, wird das Verzeichnis des aktuellen &lt;a1&gt;Moduls&lt;/a1&gt; durchsucht. Dadurch hat jedes Modul praktisch einen eigenen Bibliotheksordner.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The directory of the current file is searched before all other directories.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T091828Z" creationid="Ragnar-F" creationdate="20261011T091506Z">
+        <seg>Zunächst wird das Verzeichnis der aktuellen Datei durchsucht. Erst danach werden alle anderen Verzeichnisse durchsucht.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The directory of the file which contains the #Import directive is always searched first.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260918T172924Z" creationid="Ragnar-F" creationdate="20260918T172924Z">
         <seg>Das Verzeichnis der Datei, die die #Import-Direktive enthält, wird immer zuerst durchsucht.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The directory of the file which contains the #Import directive.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T082135Z" creationid="Ragnar-F" creationdate="20261011T082135Z">
+        <seg>Das Verzeichnis der Datei, die die #Import-Direktive enthält.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The directory which contains the current module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T082159Z" creationid="Ragnar-F" creationdate="20261011T082159Z">
+        <seg>Das Verzeichnis, das das aktuelle Modul enthält.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The directory which contains the main script file (&lt;a0&gt;A_ScriptDir&lt;/a0&gt;).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T082233Z" creationid="Ragnar-F" creationdate="20261011T082233Z">
+        <seg>Das Verzeichnis, das die Hauptskriptdatei (&lt;a0&gt;A_ScriptDir&lt;/a0&gt;) enthält.</seg>
       </tuv>
     </tu>
     <tu>
@@ -209140,6 +210180,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The first version directive used within each module sets the runtime mode for all startup code in that module across all files.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T175347Z" creationid="Ragnar-F" creationdate="20261011T175347Z">
+        <seg>Die erste, in jedem Modul verwendete Versionsdirektive bestimmt den Laufzeitmodus für den gesamten Startcode dieses Moduls in allen Dateien.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The first version string to be compared.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20221201T094530Z" creationid="Ragnar-F" creationdate="20221201T094507Z">
@@ -209312,6 +210360,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140419T010402Z" creationid="Ragnar-F" creationdate="20140310T144515Z">
         <seg>Die folgende Liste beschreibt die einzelnen Optionen:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The following does not apply in &lt;a1&gt;v2.1 mode&lt;/a1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T085135Z" creationid="Ragnar-F" creationdate="20261011T085135Z">
+        <seg>Folgendes gilt nicht im &lt;a1&gt;v2.1-Modus&lt;/a1&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -209990,8 +211046,8 @@
       <tuv lang="en">
         <seg>The following struct classes are predefined for numeric types:</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260919T081727Z" creationid="Ragnar-F" creationdate="20260919T081727Z">
-        <seg>Es gibt für numerische Typen die folgenden vordefinierten Strukturklassen:</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T195014Z" creationid="Ragnar-F" creationdate="20260919T081727Z">
+        <seg>Es gibt für Zahlentypen die folgenden vordefinierten Strukturklassen:</seg>
       </tuv>
     </tu>
     <tu>
@@ -211264,6 +212320,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231121T082323Z" creationid="Ragnar-F" creationdate="20210307T171522Z">
         <seg>Die Orte für Bibliotheken sind:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The library locations for &lt;c0&gt;#Include &lt;LibName&gt;&lt;/c0&gt; are:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T084819Z" creationid="Ragnar-F" creationdate="20261011T084257Z">
+        <seg>Verwendet man &lt;c0&gt;#Include &lt;BiblName&gt;&lt;/c0&gt;, werden die Bibliotheken an folgenden Orten gesucht:</seg>
       </tuv>
     </tu>
     <tu>
@@ -213280,6 +214344,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231112T232209Z" creationid="Ragnar-F" creationdate="20221220T203709Z">
         <seg>Die Ausgabevariable, in der der geworfene Wert gespeichert werden soll, was typischerweise ein &lt;a0&gt;Error-Objekt&lt;/a0&gt; ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The overall size of the union is the size of its largest member.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T131618Z" creationid="Ragnar-F" creationdate="20261011T131618Z">
+        <seg>Die Gesamtgröße der Union entspricht der Größe ihres größten Elements.</seg>
       </tuv>
     </tu>
     <tu>
@@ -220044,6 +221116,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This allows modules to be used to resolve conflicts between multiple library scripts which have the same name.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T090525Z" creationid="Ragnar-F" creationdate="20261011T090342Z">
+        <seg>Mithilfe von Modulen können somit Konflikte zwischen mehreren Bibliotheksskripten vermieden werden, die denselben Namen verwenden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This allows more flexibility, such as storing references elsewhere, accepting them with a variadic function and passing them on with a variadic call.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231124T111312Z" creationid="Ragnar-F" creationdate="20210704T133624Z">
@@ -221512,6 +222592,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260918T172430Z" creationid="Ragnar-F" creationdate="20260918T172430Z">
         <seg>Das funktioniert jedoch weniger gut, wenn Module zirkuläre Abhängigkeiten aufweisen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This effect is positional and can vary any number of times within a single module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T175709Z" creationid="Ragnar-F" creationdate="20261011T175709Z">
+        <seg>Dieser Effekt ist positionsabhängig und kann innerhalb eines einzelnen Moduls beliebig oft variieren.</seg>
       </tuv>
     </tu>
     <tu>
@@ -223460,6 +224548,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This has no known effect on FileSelect on any supported OS.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T144357Z" creationid="Ragnar-F" creationdate="20261011T144357Z">
+        <seg>Dies hat keine bekannten Auswirkungen auf FileSelect bei unterstützten Betriebssystemen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This has not been confirmed, and might only be possible if the chosen bounds are larger than 2**53.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231103T112022Z" creationid="Ragnar-F" creationdate="20210620T123326Z">
@@ -223648,6 +224744,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260920T064047Z" creationid="Ragnar-F" creationdate="20260920T064047Z">
         <seg>Dazu gehören einige Änderungen am Verhalten, das bisher nicht dokumentiert war (auf das sich ein Skript daher nicht hätte verlassen sollen), sowie einige Änderungen am dokumentierten Verhalten, die grundsätzlich keine Anpassungen an bestehenden Skripten erfordern sollten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This includes the following directories (in order):</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T082351Z" creationid="Ragnar-F" creationdate="20261011T082100Z">
+        <seg>Diese Liste umfasst die folgenden Verzeichnisse (in dieser Reihenfolge):</seg>
       </tuv>
     </tu>
     <tu>
@@ -224512,6 +225616,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231118T130943Z" creationid="Ragnar-F" creationdate="20190820T101243Z">
         <seg>Dies wird als &lt;e2&gt;Vererbung durch Delegation&lt;/e2&gt; oder &lt;e3&gt;differentielle Vererbung&lt;/e3&gt; bezeichnet, da ein Objekt nur die Teile implementieren kann, die sich vom Objekt unterscheiden, und den Rest an seine Basis delegiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This is known as a &lt;a5&gt;tagged union&lt;/a5&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T131509Z" creationid="Ragnar-F" creationdate="20261011T131509Z">
+        <seg>Dies wird als &lt;a5&gt;getaggte Union&lt;/a5&gt; bezeichnet.</seg>
       </tuv>
     </tu>
     <tu>
@@ -226420,6 +227532,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>This operator can short-circuit from within a &lt;a1&gt;property name substitution&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T141754Z" creationid="Ragnar-F" creationdate="20261011T141754Z">
+        <seg>Dieser Operator kann die Auswertung einer &lt;a1&gt;Eigenschaftsnamensubstitution&lt;/a1&gt; kurzschließen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>This operator is a shorthand replacement for the &lt;a1&gt;if-else statement&lt;/a1&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231201T152732Z" creationid="Ragnar-F" creationdate="20160705T165236Z">
@@ -227320,6 +228440,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T063224Z" creationid="Ragnar-F" creationdate="20260913T063224Z">
         <seg>Dies zwingt den Aufrufer, eine VarRef oder &lt;a1&gt;virtuelle Referenz&lt;/a1&gt; zu übergeben, und erlaubt der Funktion, die VarRef bereits durch einen simplen Verweis auf den Parameter (ohne Prozentzeichen) zu "derefenzieren".</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This reverts a bug-fix added in &lt;a0&gt;v1.0.44.11&lt;/a0&gt;, which worked around an issue on OS versions which are no longer supported, but caused the same issue with DirSelect on newer OS versions.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T144206Z" creationid="Ragnar-F" creationdate="20261011T144206Z">
+        <seg>Dies macht eine in &lt;a0&gt;v1.0.44.11&lt;/a0&gt; hinzugefügte Fehlerbehebung rückgängig, die ein Problem bei nicht mehr unterstützten OS-Versionen umging, jedoch bei neueren OS-Versionen dasselbe Problem mit DirSelect verursachte.</seg>
       </tuv>
     </tu>
     <tu>
@@ -228644,10 +229772,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Throw a &lt;a1&gt;TypeError&lt;/a1&gt; if &lt;e2&gt;Index&lt;/e2&gt; is floating-point or non-numeric and the caller is in &lt;a3&gt;v2.1 mode&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T193121Z" creationid="Ragnar-F" creationdate="20261011T193121Z">
+        <seg>Einen &lt;a1&gt;TypeError&lt;/a1&gt; auslösen, wenn &lt;e2&gt;Index&lt;/e2&gt; eine Floating-Point-Zahl oder nicht-numerisch ist und der Aufrufer im &lt;a3&gt;v2.1-Modus&lt;/a3&gt; ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Throw an &lt;a0&gt;IndexError&lt;/a0&gt; if &lt;e1&gt;Index&lt;/e1&gt; is zero or out of range.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260216T205517Z" creationid="Ragnar-F" creationdate="20220702T083923Z">
         <seg>Einen &lt;a0&gt;IndexError&lt;/a0&gt; auslösen, wenn &lt;e1&gt;Index&lt;/e1&gt; Null ist oder außerhalb des gültigen Bereichs liegt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Throw an &lt;a0&gt;IndexError&lt;/a0&gt; if &lt;e1&gt;Index&lt;/e1&gt; is zero, out of range or non-numeric.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T193159Z" creationid="Ragnar-F" creationdate="20261011T193159Z">
+        <seg>Einen &lt;a0&gt;IndexError&lt;/a0&gt; auslösen, wenn &lt;e1&gt;Index&lt;/e1&gt; Null ist, außerhalb des gültigen Bereichs liegt oder nicht-numerisch ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -235508,6 +236652,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Underscore has no special meaning.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T092514Z" creationid="Ragnar-F" creationdate="20261011T092514Z">
+        <seg>Der Unterstrich hat keine besondere Bedeutung.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Understanding the implications of the change requires a general understanding of &lt;a1&gt;DPI Scaling&lt;/a1&gt; and more specifically two phenomena which affect system DPI aware scripts when there is a DPI mismatch:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260919T185502Z" creationid="Ragnar-F" creationdate="20260919T185502Z">
@@ -235704,6 +236856,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231202T091352Z" creationid="Ragnar-F" creationdate="20231202T091352Z">
         <seg>Uninitialisierte Variablen</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Union Block &lt;s0&gt;[v2.1-alpha.34+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T125436Z" creationid="Ragnar-F" creationdate="20261011T125436Z">
+        <seg>Unionsblock &lt;s0&gt;[v2.1-alpha.34+]&lt;/s0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -235988,6 +237148,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Unlike &lt;c0&gt;#Include &lt;MyLib&gt;&lt;/c0&gt;, #Import does not look for a "Lib" subdirectory except where specified for the last item above.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T084050Z" creationid="Ragnar-F" creationdate="20261011T084050Z">
+        <seg>Im Gegensatz zu &lt;c0&gt;#Include &lt;MeineBibl&gt;&lt;/c0&gt; sucht #Import nicht nach einem Lib-Unterverzeichnis, außer an den im letzten Punkt oben genannten Orten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Unlike &lt;c1&gt;IsSet(A) ? A : B&lt;/c1&gt;, a &lt;a2&gt;VarUnset warning&lt;/a2&gt; may still be shown at load-time if there are other references to the variable but no assignments.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231201T104242Z" creationid="Ragnar-F" creationdate="20220702T071342Z">
@@ -236000,6 +237168,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230821T093457Z" creationid="Ragnar-F" creationdate="20140228T133651Z">
         <seg>Die #Hotstring-Direktive ist im Gegensatz zu &lt;e0&gt;EndChars&lt;/e0&gt; oben positionsabhängig, wenn sie auf diese Weise verwendet wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Unlike C and C++, nested structure definitions are not currently supported.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T131944Z" creationid="Ragnar-F" creationdate="20261011T131944Z">
+        <seg>Im Gegensatz zu C und C++ unterstützt AutoHotkey aktuell keine verschachtelten Strukturdefinitionen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -238348,10 +239524,34 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Using the directive inside a function only affects nested functions.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T182652Z" creationid="Ragnar-F" creationdate="20261011T182652Z">
+        <seg>Die Verwendung der Direktive innerhalb einer Funktion beeinflusst nur verschachtelte Funktionen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Using the directive inside a function only affects nested functions; the mode reverts at the end of the function.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260913T142102Z" creationid="Ragnar-F" creationdate="20260913T142102Z">
         <seg>Die Verwendung der Direktive innerhalb einer Funktion beeinflusst nur verschachtelte Funktionen; am Ende der Funktion wird der Modus wieder zurückgesetzt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Using the directive inside a module only affects other modules if it is the first directive, as described above.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T182230Z" creationid="Ragnar-F" creationdate="20261011T182230Z">
+        <seg>Die Verwendung der Direktive innerhalb eines Moduls beeinflusst andere Module nur, wenn sie die erste Direktive ist, wie oben beschrieben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Using the directive inside an include file does not affect the outer module or any functions defined in the outer file.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T182552Z" creationid="Ragnar-F" creationdate="20261011T182552Z">
+        <seg>Die Verwendung der Direktive innerhalb einer #Include-Datei beeinflusst weder das äußere Modul noch Funktionen, die in der äußeren Datei definiert sind.</seg>
       </tuv>
     </tu>
     <tu>
@@ -238456,6 +239656,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190412T114734Z" creationid="Ragnar-F" creationdate="20140311T150524Z">
         <seg>Standardmäßig gilt die Links-nach-Rechts-Leserichtung (LTR).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Utilizes modules to resolve a conflict between two libraries with the same name.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T174357Z" creationid="Ragnar-F" creationdate="20261011T174357Z">
+        <seg>Verwendet Module, um einen Konflikt zwischen zwei Bibliotheken mit demselben Namen zu lösen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -239896,6 +241104,30 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20261006T122643Z" creationid="Ragnar-F" creationdate="20261006T122643Z">
         <seg>Version &lt;a0&gt;&lt;c1/&gt;2.1-alpha.33&lt;c2/&gt;&lt;/a0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Version &lt;a0&gt;&lt;c1/&gt;2.1-alpha.35&lt;c2/&gt;&lt;/a0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T170717Z" creationid="Ragnar-F" creationdate="20261011T170717Z">
+        <seg>Version &lt;a0&gt;&lt;c1/&gt;2.1-alpha.35&lt;c2/&gt;&lt;/a0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Version directives are parsed at load time to determine the mode for subsequent function/method definitions and &lt;c0&gt;#Include &lt;LibName&gt;&lt;/c0&gt; directives.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T175629Z" creationid="Ragnar-F" creationdate="20261011T175629Z">
+        <seg>Versionsdirektiven werden beim Laden des Skripts geparst, um den Modus für nachfolgende Funktions-/Methodendefinitionen und &lt;c0&gt;#Include &lt;BiblName&gt;&lt;/c0&gt;-Direktiven zu bestimmen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Version directives are scoped to the current module, file and function.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T190141Z" creationid="Ragnar-F" creationdate="20261011T181935Z">
+        <seg>Versionsdirektiven beschränken ihren Gültigkeitsbereich auf Modul-, Datei- oder Funktionsebene.</seg>
       </tuv>
     </tu>
     <tu>
@@ -248596,6 +249828,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Within a struct or class definition, a union block can be used to define overlapping typed properties.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T125838Z" creationid="Ragnar-F" creationdate="20261011T125838Z">
+        <seg>Innerhalb einer Struktur- oder Klassendefinition kann ein sogenannter Unionsblock verwendet werden, um überlappende typisierte Eigenschaften zu definieren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Within a user-defined function, a parameter is "unset" if it was omitted by the caller and has no default value.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260912T195819Z" creationid="Ragnar-F" creationdate="20260912T195819Z">
@@ -248648,6 +249888,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260918T174203Z" creationid="Ragnar-F" creationdate="20260918T174203Z">
         <seg>Innerhalb jedes Verzeichnisses werden die Dateien in folgender Reihenfolge abgearbeitet:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Within each directory, the program searches for an exact match before it appends the filename extension.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T091816Z" creationid="Ragnar-F" creationdate="20261011T091816Z">
+        <seg>Das Programm sucht in jedem Verzeichnis nach einer exakten Übereinstimmung, bevor es die Dateiendung anhängt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -264668,6 +265916,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>[PR #358 by miaminlk]</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T143711Z" creationid="Ragnar-F" creationdate="20261011T143654Z">
+        <seg>[PR #358 von miaminlk]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>[PR #359 by iPhilip]</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T080358Z" creationid="Ragnar-F" creationdate="20261011T080353Z">
+        <seg>[PR #359 von iPhilip]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>[PR UX/#4]</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230623T183130Z" creationid="Ragnar-F" creationdate="20230623T183130Z">
@@ -267084,6 +268348,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>catch UnsetError</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T191031Z" creationid="Ragnar-F" creationdate="20261011T191031Z">
+        <seg>catch UnsetError</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>catch ValueError as err</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210410T203404Z" creationid="Ragnar-F" creationdate="20210410T203404Z">
@@ -268640,6 +269912,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20250926T154455Z" creationid="Ragnar-F" creationdate="20250926T154455Z">
         <seg>false :</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>false&lt;/c1&gt; in the &lt;a2&gt;DefineProp&lt;/a2&gt; descriptor.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T165655Z" creationid="Ragnar-F" creationdate="20261011T165655Z">
+        <seg>false&lt;/c1&gt; in den &lt;a2&gt;DefineProp&lt;/a2&gt;-Deskriptor einfügt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -272572,6 +273852,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>ki : KEYBDINPUT</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T130019Z" creationid="Ragnar-F" creationdate="20261011T130019Z">
+        <seg>ki : KEYBDINPUT</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>lResult := SendMessage(msg, 0, 0, "Internet Explorer_Server1", "ahk_class IEFrame")</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20180412T132730Z" creationid="Ragnar-F" creationdate="20180412T132730Z">
@@ -272824,6 +274112,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20241102T142429Z" creationid="Ragnar-F" creationdate="20241102T142429Z">
         <seg>Methoden von &lt;a0&gt;GuiControl&lt;/a0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>mi : MOUSEINPUT</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T130018Z" creationid="Ragnar-F" creationdate="20261011T130018Z">
+        <seg>mi : MOUSEINPUT</seg>
       </tuv>
     </tu>
     <tu>
@@ -275756,6 +277052,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>struct INPUT {</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T125952Z" creationid="Ragnar-F" creationdate="20261011T125952Z">
+        <seg>struct INPUT {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>struct LVINSERTMARK {</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260919T072125Z" creationid="Ragnar-F" creationdate="20260919T072125Z">
@@ -276989,6 +278293,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>union {</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T130016Z" creationid="Ragnar-F" creationdate="20261011T130016Z">
+        <seg>union {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>unitSize := StrPut("", cp)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260919T173943Z" creationid="Ragnar-F" creationdate="20260919T173736Z">
@@ -277145,6 +278457,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260919T203021Z" creationid="Ragnar-F" creationdate="20260919T203021Z">
         <seg>v2.0-Modus</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>v2.0 and v2.1 modes cannot be mixed within the global/startup code of a single module, even if the code originates from multiple files.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T185638Z" creationid="Ragnar-F" creationdate="20261011T185638Z">
+        <seg>Die Modi v2.0 und v2.1 dürfen im globalen Code bzw. im Startcode eines einzelnen Moduls nicht gemischt werden, selbst wenn der Code aus mehreren Dateien stammt.</seg>
       </tuv>
     </tu>
     <tu>
