@@ -58076,6 +58076,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;Enumerable&lt;/s0&gt; &lt;s1&gt;[v2.1-alpha.34+]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T195903Z" creationid="Ragnar-F" creationdate="20261011T195903Z">
+        <seg>&lt;s0&gt;Enumerable&lt;/s0&gt; &lt;s1&gt;[v2.1-alpha.34+]&lt;/s1&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;EnvSet&lt;/s0&gt; EnvVar &lt;s1&gt;, Value&lt;/s1&gt;</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20220604T160430Z" creationid="Ragnar-F" creationdate="20220604T160430Z">
@@ -66240,6 +66248,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20261011T194230Z" creationid="Ragnar-F" creationdate="20261011T194230Z">
         <seg>Es wird ein TypeError ausgelöst, wenn &lt;e1&gt;MapObj&lt;/e1&gt; typisierte Eigenschaften hat.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A TypeError is thrown if &lt;e1&gt;Obj&lt;/e1&gt; has typed properties.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T195646Z" creationid="Ragnar-F" creationdate="20261011T195646Z">
+        <seg>Es wird ein TypeError ausgelöst, wenn &lt;e1&gt;Obj&lt;/e1&gt; typisierte Eigenschaften hat.</seg>
       </tuv>
     </tu>
     <tu>
@@ -131412,6 +131428,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If false (0), the property is hidden from enumeration by &lt;a2&gt;Props&lt;/a2&gt; and the debugger.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T200354Z" creationid="Ragnar-F" creationdate="20261011T200354Z">
+        <seg>Wenn false (0), wird &lt;a2&gt;Props&lt;/a2&gt; und der Debugger die Eigenschaft beim Enumerieren ignorieren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If false, the control is disabled.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231202T205414Z" creationid="Ragnar-F" creationdate="20231202T205414Z">
@@ -135462,8 +135486,8 @@
       <tuv lang="en">
         <seg>If the method is of a type that does not return a value (the &lt;c0&gt;void&lt;/c0&gt; return type in C), specify &lt;c1&gt;"Int"&lt;/c1&gt; or any other numeric type without any suffix (except HRESULT), and ignore the return value.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20260921T091350Z" creationid="Ragnar-F" creationdate="20260921T091350Z">
-        <seg>Wenn die Methode vom Typ ist, der keinen Wert zurückgibt (der Rückgabetyp &lt;c0&gt;void&lt;/c0&gt; in C), können Sie &lt;c1&gt;"Int"&lt;/c1&gt; oder einen anderen numerischen Typ ohne Suffix (außer HRESULT) angeben und den Rückgabewert ignorieren.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T195405Z" creationid="Ragnar-F" creationdate="20260921T091350Z">
+        <seg>Wenn die Methode vom Typ ist, der keinen Wert zurückgibt (der Rückgabetyp &lt;c0&gt;void&lt;/c0&gt; in C), können Sie &lt;c1&gt;"Int"&lt;/c1&gt; oder einen anderen Zahlentyp ohne Suffix (außer HRESULT) angeben und den Rückgabewert ignorieren.</seg>
       </tuv>
     </tu>
     <tu>
@@ -244720,6 +244744,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231124T111445Z" creationid="Ragnar-F" creationdate="20210704T133812Z">
         <seg>Wenn ein Parameter als ByRef markiert ist, löst jeder Versuch, explizit einen Nicht-VarRef-Wert zu übergeben, einen Fehler aus.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>When a property is being created or redefined, the following own property may also be present:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261011T195901Z" creationid="Ragnar-F" creationdate="20261011T195901Z">
+        <seg>Beim Erstellen oder Umdefinieren einer Eigenschaft kann auch die folgende eigene Eigenschaft angegeben werden:</seg>
       </tuv>
     </tu>
     <tu>
