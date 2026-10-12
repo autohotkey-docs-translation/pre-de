@@ -41,13 +41,27 @@
 <pre class="no-highlight">Line Text: #Requires <i>%Anforderung%</i>
 Error: This line does not contain a recognized action.</pre>
 
-<h2 id="CompatMode">Kompatibilitätsmodus <span class="ver">[v2.1-alpha.28+]</span></h2>
-<p>Die Angabe von Versionsanforderungen setzt auch den Kompatibilitätsmodus für das Skript. Der v2.0-kompatible Modus ist aktiv, wenn Version "2.0.x" die Anforderungen erfüllt; andernfalls ist er deaktiviert. Wenn die Direktive nicht verwendet wird, gilt standardmäßig der v2.0-Modus. Die Verwendung der Direktive ohne Versionsangabe hat keinen Einfluss auf den Modus.</p>
-<p>Die erste, in einem Modul verwendete Versionsdirektive bestimmt den Laufzeitmodus für den gesamten Startcode dieses Moduls in allen Dateien.</p>
+<h2 id="CompatMode">Kompatibilitätsmodus <span class="ver">[v2.1-alpha.34+]</span></h2>
+<p>Die Angabe einer Versionsanforderung (oder mehrerer Anforderungen in einer Direktive) kann dazu führen, dass der Kompatibilitätsmodus für das aktuelle Modul und nachfolgende Funktionen oder Direktiven aktiviert wird. Der v2.0-kompatible Modus ist aktiv, wenn Version "2.0.x" die Anforderungen erfüllt; andernfalls ist er deaktiviert. Wenn die Direktive nicht verwendet wird, gilt standardmäßig der v2.0-Modus. Die Verwendung der Direktive ohne Versionsangabe hat keinen Einfluss auf den Modus.</p>
+<p class="warning"><strong>Hinweis:</strong> Das Laufzeitverhalten richtet sich nach dem Modus des aktuellen Moduls oder der aktuellen Funktion, nicht nach der Position der Direktive bezüglich der aktuellen Zeile oder Datei.</p>
+<p>Die erste, in jedem Modul verwendete Versionsdirektive bestimmt den Laufzeitmodus für den gesamten Startcode dieses Moduls in allen Dateien.</p>
+<p>Versionsdirektiven werden beim Laden des Skripts geparst, um den Modus für nachfolgende Funktions-/Methodendefinitionen und <code>#Include &lt;BiblName&gt;</code>-Direktiven zu bestimmen. Dieser Effekt ist positionsabhängig und kann innerhalb eines einzelnen Moduls beliebig oft variieren.</p>
 <p><a href="_Module.htm">#Module</a> setzt den Standardmodus des neuen Moduls auf den des __Init-Moduls.</p>
-<p>Versionsdirektiven können überall im Code verwendet werden, um den Laufzeitmodus für alle nachfolgenden Funktionsdefinitionen zu bestimmen. Die Verwendung der Direktive innerhalb einer Funktion beeinflusst nur verschachtelte Funktionen; am Ende der Funktion wird der Modus wieder zurückgesetzt. Auf diese Weise kann eine v2.0-Funktion in eine v2.1-Funktion platziert werden.</p>
-<p>Modusänderungen, die durch eine Versionsdirektive innerhalb einer <a href="_Include.htm">#Include</a>-Datei wirksam werden, werden am Ende der Datei rückgängig gemacht. Auf diese Weise kann ein v2.1-Skript eine v2.0-Funktion oder -Klassenbibliothek inkludieren. Allerdings wird jeglicher Code, der sich nicht innerhalb einer Funktion befindet (also der Startcode), im Modus ausgeführt, der für das aktuelle Modul festgelegt ist. v2.0-Bibliotheken können stattdessen via <a href="_Import.htm">#Import</a> geladen werden, um maximale Kompatibilität zu gewährleisten.</p>
+<p>Versionsdirektiven beschränken ihren Gültigkeitsbereich auf Modul-, Datei- oder Funktionsebene. Mit anderen Worten:</p>
+<ul>
+  <li>Die Verwendung der Direktive innerhalb eines Moduls beeinflusst andere Module nur, wenn sie die erste Direktive ist, wie oben beschrieben.</li>
+  <li>Die Verwendung der Direktive innerhalb einer #Include-Datei beeinflusst weder das äußere Modul noch Funktionen, die in der äußeren Datei definiert sind.</li>
+  <li>Die Verwendung der Direktive innerhalb einer Funktion beeinflusst nur verschachtelte Funktionen.</li>
+</ul>
+<p>Durch den korrekten Einsatz von Versionsdirektiven können Codeabschnitte, die für verschiedene Versionen geschrieben wurden, gemeinsam in einem Skript stehen.</p>
+<ul>
+  <li>Ein v2.1-Modul oder eine v2.1-Funktion kann bedenkenlos v2.0-Funktionen enthalten.</li>
+  <li>Eine v2.0-Datei, die ausschließlich Funktions- und Klassendefinitionen enthält, kann mittels <a href="_Include.htm">#Include</a> bedenkenlos in ein v2.1-Modul inkludiert werden.</li>
+  <li>Ein ursprünglich für v2.0 geschriebenes Skript kann schrittweise, Funktion für Funktion, aktualisiert werden. Neue Funktionen können sich den v2.1-Modus zunutze machen, während der Rest des Skripts im v2.0-Modus bleibt.</li>
+  <li>Die Modi v2.0 und v2.1 dürfen im globalen Code bzw. im Startcode eines einzelnen Moduls nicht gemischt werden, selbst wenn der Code aus mehreren Dateien stammt. Generell ist es am sichersten, v2.0-Dateien und v2.1-Dateien voneinander zu trennen, indem man sie in separaten Modulen unterbringt.</li>
+</ul>
 <p>Einzelheiten dazu, wie sich der Modus auf das Verhalten des Skripts auswirkt, finden Sie unter <a href="../v2.1-changes.htm#CompatMode">Kompatibilitätsmodus (Änderungen)</a>.</p>
+<p>Das <a href="#ExCompatMode">Kompatibilitätsmodusbeispiel</a> unten zeigt, welchen Effekt die Versionsdirektiven auf den Kompatibilitätsmodus haben.</p>
 
 <h2 id="Remarks">Bemerkungen</h2>
 <p>Da der <a href="../Program.htm#launcher">Launcher</a> die gleichzeitige Nutzung von v1- und v2-Skripten auf einem System ermöglicht, empfiehlt es sich, zumindest <code>#Requires AutoHotkey v1</code> für v1-Skripte und <code>#Requires AutoHotkey v2</code> für v2-Skripte hinzuzufügen. Dadurch wird sichergestellt, dass die richtige Version zum Ausführen des Skripts verwendet wird.</p>
@@ -89,6 +103,61 @@ MsgBox "Dieses Skript läuft nur in v2.0 inklusive Alpha-Versionen."</pre>
 <div class="ex" id="ExVerBuild">
 <p><a class="ex_number" href="#ExVerBuild"></a> Bewirkt, dass das Skript nur mit einem 64-Bit-Interpreter (EXE) der Version 2.0-rc.2 oder höher läuft.</p>
 <pre>#Requires AutoHotkey v2.0-rc.2 64-bit</pre>
+</div>
+
+<div class="ex" id="ExCompatMode">
+<p><a class="ex_number" href="ExCompatMode"></a> Zeigt, welchen Effekt die Versionsdirektiven auf den <a href="#CompatMode">Kompatibilitätsmodus</a> haben. </p>
+<pre>
+<em>; Diese unverzichtbare Zeile setzt den Modus für das aktuelle Modul (__Main).</em>
+#Requires AutoHotkey v2.1-alpha.33
+
+<em>; Mit try-catch den Modus ermitteln. Base liefert "" im v2.0-Modus und unset im v2.1-Modus.
+; ?? wird hier nicht verwendet, da es in beiden Modi für "leere-ungesetzte" Rückgabewerte funktioniert.</em>
+try
+    MsgBox Type(Any.Prototype.Base), "Main #1"
+catch UnsetError
+    MsgBox "UnsetError", "Main #1"
+
+<em>; Wenn Sie diese beiden Direktiven vertauschen, können Sie beobachten, welchen Einfluss das auf die Initialisierung von CompatibleLib hat.</em>
+#Import "CompatibleLib.ahk" {CompatibleFunc}
+<em>; #Include "CompatibleLib.ahk"</em>
+
+CompatibleFunc()
+MainFunc()
+
+<em>; Direktiven in einem #Include oben haben keinen Effekt auf dieses Modul.</em>
+try
+    MsgBox Type(Any.Prototype.Base), "Main #2"
+catch UnsetError
+    MsgBox "UnsetError", "Main #2"
+
+HauptFunk() {
+    try
+        MsgBox Type(Any.Prototype.Base), "MainFunc"
+    catch UnsetError
+        MsgBox "UnsetError", "MainFunc"
+}
+</pre>
+<p>CompatibleLib.ahk:</p>
+<pre filename="CompatibleLib.ahk">
+#Requires AutoHotkey v2.0
+
+<em>; Wird Folgendes in ein v2.1-Modul inkludiert, wird es einen Fehler auslösen.</em>
+try
+    MsgBox Type(Any.Prototype.Base), "CompatibleLib"
+catch UnsetError
+    MsgBox "UnsetError", "CompatibleLib"
+
+<em>; Die Funktion unten nutzt immer den v2.0-Modus, wegen der Direktive oben.</em>
+CompatibleFunc() {
+    try
+        MsgBox Type(Any.Prototype.Base), "CompatibleFunc"
+    catch UnsetError
+        MsgBox "UnsetError", "CompatibleFunc"
+}
+</pre>
+</div>
+
 </div>
 
 </body>

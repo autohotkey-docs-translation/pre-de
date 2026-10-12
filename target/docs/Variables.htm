@@ -83,7 +83,7 @@ MsgBox(1.00)  <em>; Zeigt 1.0</em></pre>
     <td>
       <p><strong>Dereferenzierung</strong> oder <strong>Namensubstitution</strong>.</p>
       <p>Wenn die Auswertung von <em>Ausdr</em> eine <a href="Concepts.htm#variable-references">VarRef</a> ergibt, greift <code>%Ausdr%</code> auf die entsprechende Variable zu. Zum Beispiel nimmt <code>x := &amp;y</code> eine Referenz, die auf <em>y</em> verweist, und weist sie <em>x</em> zu, dann weist <code>%x% := 1</code> der Variable <em>y</em> etwas zu und <code>%x%</code> liest ihren Wert.</p>
-      <p><span class="ver">[v2.1-alpha.10+]</span>: Wenn die Auswertung von <em>Ausdr</em> ein anderes Objekt ergibt, wird die <a href="Functions.htm#virtual-references">__Value-Eigenschaft</a> des Objekts aufgerufen (Get oder Set, je nachdem, ob die Dereferenzierung das Ziel einer Zuweisung ist).</p>
+      <p><span class="ver">[v2.1-alpha.10+]</span>: Wenn die Auswertung von <em>Ausdr</em> ein anderes Objekt ergibt, wird die <a href="Functions.htm#virtual-references">__Value-Eigenschaft</a> des Objekts aufgerufen (Get oder Set, je nachdem, ob die Dereferenzierung das Ziel einer Zuweisung ist). Es wird ein PropertyError ausgelöst, wenn die Eigenschaft nicht existiert.</p>
       <p>Andernfalls wird der Wert des Teilausdrucks <em>Ausdr</em> als Name oder Teilname einer Variable oder Eigenschaft verwendet. Auf diese Weise kann das Skript auf eine Variable oder Eigenschaft verweisen, deren Name durch die Auswertung von <em>Ausdr</em> ermittelt wird, was typischerweise eine andere Variable ist. Variablen können nicht dynamisch erstellt werden, aber eine Variable kann dynamisch zugewiesen werden, wenn sie irgendwo im Skript nicht-dynamisch deklariert oder referenziert wurde.</p>
       <p class="note"><strong>Hinweis:</strong> Das <u>Ergebnis</u> des Teilausdrucks <em>Ausdr</em> muss der Name oder Teilname der Variable oder Eigenschaft sein, auf die zugegriffen werden soll.</p>
       <p>Prozentzeichen dürfen wegen ihrer Mehrdeutigkeit nicht direkt in <em>Ausdr</em> verwendet werden, können aber innerhalb von runden Klammern verschachtelt werden. Andernfalls kann <em>Ausdr</em> ein beliebiger Ausdruck sein.</p>
@@ -107,6 +107,7 @@ MsgBox(1.00)  <em>; Zeigt 1.0</em></pre>
       <p class="note"><strong>Tipp:</strong> Durch Kurzschließen kann der Vielleicht-Operator komplexe Ausdrücke vereinfachen, wo mehrere Eingaben ungesetzt sein können. Zum Beispiel: <code>((a?) &lt; b?.c &amp;&amp; f()?) ?? false</code> statt <code>IsSet(a) &amp;&amp; IsSet(b) &amp;&amp; a &lt; b.c &amp;&amp; (f() ?? false)</code>.</p>
       <p>Eine optionale Kette unterliegt denselben <a href="Language.htm#unset-valid">Einschränkungen</a> wie ein Unset-Ausdruck. <a href="Language.htm#unset-chain">Hinzu kommt die Einschränkung</a>, dass ein finales Fragezeichen erforderlich ist, wenn die Kette als "Parameter weglassen" interpretiert werden soll.</p>
       <p><span class="ver">[v2.1-alpha.29+]</span>: Auf der linken Seite einer Zuweisung kann eine optionale Kette verwendet werden. In diesem Fall darf die Kette jedoch nicht mit <code>?</code> enden.</p>
+      <p><span class="ver">[v2.1-alpha.34+]</span>: Dieser Operator kann die Auswertung einer <a href="#deref">Eigenschaftsnamensubstitution</a> kurzschließen. <code>a.%b?% ?? c</code> beispielsweise erzeugt <code>c</code>, ohne eine Eigenschaft indirekt aufzurufen, wenn <code>b</code> ungesetzt ist. In Methoden- und Eigenschaftsaufrufen kann die Parameterliste kurzgeschlossen werden.</p>
       <p>Siehe auch: <a href="Language.htm#unset">Ungesetzt (technische Details)</a>, <a href="Concepts.htm#unset">Ungesetzt (Konzept)</a></p>
     </td>
   </tr>
@@ -545,7 +546,7 @@ AhkPath := InstallDir ? InstallDir "\AutoHotkey.exe" : ""</pre>
   </tr>
   <tr id="YDay">
     <td>A_YDay</td>
-    <td>Der aktuelle Tag des Jahres (1-366). Der Wert enthält keine führenden Nullen, z.B. wird 9 abgerufen, nicht 009. Um einen Wert mit führenden Nullen abzurufen, verwenden Sie folgendes: <code><a href="lib/FormatTime.htm">FormatTime</a>(, "YDay0")</code>.</td>
+    <td>Der aktuelle Tag des Jahres (1-366). Der Wert enthält keine führenden Nullen, z.B. wird 9 abgerufen, nicht 009. Um einen Wert mit führenden Nullen abzurufen, verwenden Sie Folgendes: <code><a href="lib/FormatTime.htm">FormatTime</a>(, "YDay0")</code>.</td>
   </tr>
   <tr id="YWeek">
     <td>A_YWeek</td>
@@ -646,7 +647,7 @@ MsgBox VerstricheneZeit " Millisekunden sind verstrichen."</pre>
   <tr id="KeyDelay">
     <td>A_KeyDelay<br>
     A_KeyDuration</td>
-    <td>Liefert oder setzt die Verzögerung oder Dauer für Tastendrücke, die via traditionellem <a href="lib/SendMode.htm#Event">SendEvent-Modus</a> gesendet werden, in Millisekunden. Einzelheiten finden Sie unter <a href="lib/SetKeyDelay.htm">SetKeyDelay</a>.</td>
+    <td>Liefert oder setzt die Verzögerung oder Dauer für Tastendrücke, die via traditionellen <a href="lib/SendMode.htm#Event">SendEvent-Modus</a> gesendet werden, in Millisekunden. Einzelheiten finden Sie unter <a href="lib/SetKeyDelay.htm">SetKeyDelay</a>.</td>
   </tr>
   <tr id="KeyDelayPlay">
     <td>A_KeyDelayPlay<br>
@@ -849,7 +850,7 @@ MsgBox VerstricheneZeit " Millisekunden sind verstrichen."</pre>
     <td>A_ProgramFiles</td>
     <td>
       <p>Das Verzeichnis der Programmdateien (z.B. <code class="no-highlight">C:\Programme</code> oder <code class="no-highlight">C:\Programme (x86)</code>). Die <a href="Concepts.htm#environment-variables">Umgebungsvariable</a> <em>ProgramFiles</em> enthält üblicherweise denselben Wert.</p>
-      <p>Für <a href="#Is64bitOS">64-Bit-Systeme</a> (nicht 32-Bit-Systeme) gilt folgendes:</p>
+      <p>Für <a href="#Is64bitOS">64-Bit-Systeme</a> (nicht 32-Bit-Systeme) gilt Folgendes:</p>
       <ul>
         <li>Wenn die EXE-Datei, mit der das Skript ausgeführt wird, 32-Bit ist, enthält A_ProgramFiles den Pfadnamen des Ordners "Programme (x86)".</li>
         <li>Für 32-Bit-Prozesse enthält die Umgebungsvariable <em>ProgramW6432</em> den Pfadnamen des 64-Bit-Ordners "Programme". In Windows 7 und höher wird sie auch für 64-Bit-Prozesse gesetzt.</li>

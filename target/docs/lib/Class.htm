@@ -18,7 +18,7 @@
 <pre class="NoIndent">class Class extends Object</pre>
 
 <p>Ein <strong>Class</strong>-Objekt repräsentiert eine Klassendefinition; es enthält statische Methoden und Eigenschaften.</p>
-<p>Jedes Klassenobjekt <a href="../Objects.htm#Custom_Objects">basiert auf</a> der Klasse, die es erweitert, oder auf <a href="Object.htm">Object</a>, falls nicht angegeben. Das globale Klassenobjekt <code>Object</code> basiert auf <code>Class.Prototype</code>, das wiederum auf <code>Object.Prototype</code> basiert, so dass Klassen Methoden und Eigenschaften von jedem dieser Basisobjekte erben können.</p>
+<p>Jedes Klassenobjekt <a href="../Objects.htm#Custom_Objects">basiert auf</a> der Klasse, die es erweitert, oder auf <a href="Object.htm">Object</a>, falls nicht angegeben. Das globale Klassenobjekt <code>Object</code> basiert auf <code>Class.Prototype</code>, das wiederum auf <code>Object.Prototype</code> basiert, sodass Klassen Methoden und Eigenschaften von jedem dieser Basisobjekte erben können.</p>
 <p>"Statische" Methoden und Eigenschaften sind alle Methoden und Eigenschaften, die dem Klassenobjekt selbst gehören (und daher nicht für eine bestimmte Instanz gelten), während Methoden und Eigenschaften für Instanzen der Klasse dem <a href="#Prototype">Prototyp</a> der Klasse gehören.</p>
 <p>"ClassObj" wird hier stellvertretend für ein beliebiges Klassenobjekt verwendet, da "Class" die Klasse selbst ist. Normalerweise wird auf ein Klassenobjekt via Name verwiesen, der in dessen <a href="../Objects.htm#Custom_Classes">Klassendefinition</a> angegeben ist.</p>
 
@@ -89,7 +89,7 @@ Obj := ClassObj.<span class="func">Call</span>(Params*)</pre>
   <li>Das neue Objekt zurückgeben.</li>
 </ul>
 <p>Call kann innerhalb einer Klassendefinition durch Definieren einer statischen Methode überschrieben werden, z.B. <code>static Call()</code>. Auf diese Weise können Klassen die Konstruktion neuer Instanzen ändern oder verhindern.</p>
-<p>Dies ist eine statische Methode insofern, dass sie zu einer Klasse (z.B. Object) gehört, gleichzeitig aber auch eine Instanzmethode des Klassenobjekts, das eine Instanz von Class ist. Die Class-Klasse selbst hat eine <a href="#StaticCall">statische Call-Methode</a>. Mit anderen Worten, man kann <code>Class()</code> oder <code>Class.Call()</code> aufrufen, um ein neues Klassenobjekt während der Skriptausführung zu erstellen.</p>
+<p>Dies ist eine statische Methode in dem Sinne, dass sie zu einer Klasse (z.B. Object) gehört, gleichzeitig ist sie aber auch eine Instanzmethode des Klassenobjekts, das eine Instanz von Class ist. Die Class-Klasse selbst hat eine <a href="#StaticCall">statische Call-Methode</a>. Mit anderen Worten, man kann <code>Class()</code> oder <code>Class.Call()</code> aufrufen, um ein neues Klassenobjekt während der Skriptausführung zu erstellen.</p>
 </div>
 
 <h2 id="Properties">Eigenschaften</h2>

@@ -42,10 +42,15 @@ MsgBox "B wird ausgeführt"  <em>; wird als Erstes angezeigt.</em>
 MsgBox ANTWORT         <em>; wird als Drittes angezeigt.</em></pre>
 <p><span class="ver">[v2.1-alpha.20]</span> und älter: Jedes Modul führt seine importierten Module vor seinem eigenen Körper aus, mit Ausnahme von bereits gestarteten Modulen. Das funktioniert jedoch weniger gut, wenn Module zirkuläre Abhängigkeiten aufweisen.</p>
 
-<h2 id="Search_Path">Suchpfad <span class="ver">[v2.1-alpha.20+]</span></h2>
-<p>Der Modulsuchpfad ist eine Liste von Verzeichnissen, die von der <a href="lib/_Import.htm">#Import</a>-Direktive genutzt wird, um Moduldateien zu finden. Das Verzeichnis der Datei, die die #Import-Direktive enthält, wird immer zuerst durchsucht. Die Umgebungsvariable <code class="no-highlight">AhkImportPath</code> kann eine semikolongetrennte Liste von Verzeichnissen enthalten, die ebenfalls durchsucht werden sollen. Wenn diese Variable nicht verwendet wird, gilt die folgende Standardliste:</p>
-<pre class="no-highlight">%A_ScriptDir%;%A_MyDocuments%\AutoHotkey;%A_AhkPath%\..</pre>
-<p>Interne Variablen können in der Liste angegeben werden, müssen aber in Prozentzeichen gesetzt werden. Prozentzeichen, die nicht zu einer gültigen Variablenreferenz gehören, werden als direkt geschriebener Text interpretiert. Referenzen, die auf Umgebungsvariablen verweisen, werden von AutoHotkey nicht aufgelöst, da dies in der Regel bereits vor dem Prozessstart erfolgt. Die Einträge in der Liste können absolute Pfade oder relativ zum Verzeichnis des Skripts (<a href="Variables.htm#ScriptDir">A_ScriptDir</a>) sein. Die Liste wird nur einmal aufgelöst, daher verweist <a href="Variables.htm#LineFile">A_LineFile</a> immer auf das Hauptskript.</p>
+<h2 id="Search_Path">Suchpfad <span class="ver">[v2.1-alpha.35+]</span></h2>
+<p>Der Modulsuchpfad ist eine Liste von Verzeichnissen, die von der <a href="lib/_Import.htm">#Import</a>-Direktive genutzt wird, um Moduldateien zu finden. Diese Liste umfasst die folgenden Verzeichnisse (in dieser Reihenfolge):</p>
+<ul>
+  <li>Das Verzeichnis der Datei, die die #Import-Direktive enthält.</li>
+  <li>Das Verzeichnis, das das aktuelle Modul enthält.</li>
+  <li>Das Verzeichnis, das die Hauptskriptdatei (<a href="Variables.htm#ScriptDir">A_ScriptDir</a>) enthält.</li>
+  <li>Alle Verzeichnisse, die in der Umgebungsvariable <a href="Scripts.htm#AhkLibPath">AhkLibPath</a> angegeben sind, sofern definiert; andernfalls die Benutzer- und Standardbibliothek.</li>
+</ul>
+<p>Im Gegensatz zu <code>#Include &lt;MeineBibl&gt;</code> sucht #Import nicht nach einem Lib-Unterverzeichnis, außer an den im letzten Punkt oben genannten Orten.</p>
 <p>Die Verzeichnisse werden in der Reihenfolge ihrer Auflistung durchsucht. Innerhalb jedes Verzeichnisses werden die Dateien in folgender Reihenfolge abgearbeitet:</p>
 <ul>
   <li><code class="no-highlight"><i>ModulName</i></code></li>

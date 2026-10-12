@@ -18,7 +18,7 @@
 <pre class="NoIndent">class Map extends Object</pre>
 
 <p>Ein <strong>Map</strong>-Objekt <em>ordnet</em> einen Satz von Werten, <em>Schlüssel</em> genannt, einem anderen Satz von Werten zu. Ein Schlüssel und der Wert, dem er zugeordnet ist, werden als Schlüssel-Wert-Paar bezeichnet. Ein Map-Objekt kann beliebig viele Schlüssel-Wert-Paare enthalten, aber jeder Schlüssel muss eindeutig sein.</p>
-<p>Ein Schlüssel kann ein <a href="../Concepts.htm#numbers">Integer</a>, eine <a href="../Objects.htm">Objektreferenz</a> oder eine nullterminierte <a href="../Concepts.htm#strings">Zeichenkette</a> sein. Der Vergleich von Zeichenkettenschlüsseln erfolgt Groß-/Kleinschreibung-sensitiv, während Objekte per Referenz/Adresse verglichen werden. <a href="../Concepts.htm#numbers">Float</a>-Schlüssel werden automatisch in eine Zeichenkette umgewandelt.</p>
+<p>Ein Schlüssel kann ein <a href="../Concepts.htm#numbers">Integer</a>, eine <a href="../Objects.htm">Objektreferenz</a> oder eine nullterminierte <a href="../Concepts.htm#strings">Zeichenkette</a> sein. Der Vergleich von Zeichenkettenschlüsseln erfolgt Groß-/Kleinschreibung-sensitiv, während Objekte per Referenz/Adresse verglichen werden. Während <a href="../Concepts.htm#numbers">Float</a>-Schlüssel im <a href="../v2.1-changes.htm#CompatMode">v2.0-Modus</a> automatisch in Zeichenketten umgewandelt werden, löst ihre Verwendung im <a href="../v2.1-changes.htm#CompatMode">v2.1-Modus</a> einen <a href="Error.htm#TypeError">TypeError</a> aus.</p>
 <p>Die einfachste Verwendung eines Map-Objekts besteht darin, ein Schlüssel-Wert-Paar über die implizite <a href="#__Item">__Item</a>-Eigenschaft abzurufen oder zu setzen, indem man einfach den Schlüssel in eckigen Klammern hinter das Map-Objekt schreibt. Zum Beispiel:</p>
 <pre>Farben := Map()
 Farben["Rot"] := "ff0000"
@@ -82,6 +82,7 @@ MapObj := Map.<span class="func">Call</span>(Schlüssel1, Wert1, Schlüssel2, We
 <pre class="Syntax">Klon := MapObj.<span class="func">Clone</span>()</pre>
 <p>Alle Schlüssel-Wert-Paare werden in das neue Map-Objekt kopiert. <em>Objektreferenzen</em> werden kopiert (wie bei einer normalen Zuweisung), nicht die Objekte selbst.</p>
 <p>Eigene Eigenschaften, eigene Methoden und Basis werden wie bei <a href="Object.htm#Clone">Obj.Clone</a> kopiert.</p>
+<p><span class="ver">[v2.1-alpha.34+]</span>: Es wird ein TypeError ausgelöst, wenn <em>MapObj</em> typisierte Eigenschaften hat.</p>
 </div>
 
 <div class="methodShort" id="Delete"><h3>Delete</h3>
@@ -99,6 +100,7 @@ MapObj := Map.<span class="func">Call</span>(Schlüssel1, Wert1, Schlüssel2, We
 <p>Typ: <a href="../Concepts.htm#values">Beliebig</a></p>
 <p>Diese Methode gibt den entfernten Wert zurück.</p>
 <p><span class="ver">[v2.1-alpha.29+]</span>: Im <a href="../v2.1-changes.htm#CompatMode">v2.1-Modus</a> ist der Rückgabewert <code>unset</code>, wenn es keinen Wert gibt, der zurückgegeben werden kann. Dies kann dazu führen, dass der Aufrufer einen <a href="Error.htm#UnsetError">UnsetError</a> auslöst.</p>
+<p><span class="ver">[v2.1-alpha.35+]</span>: Es wird ein <a href="Error.htm#TypeError">TypeError</a> ausgelöst, wenn <code>Schlüssel is Float</code> gilt und der Aufrufer im <a href="../v2.1-changes.htm#CompatMode">v2.1-Modus</a> ist.</p>
 </div>
 
 <div class="methodShort" id="Get"><h3>Get</h3>
@@ -113,17 +115,20 @@ MapObj := Map.<span class="func">Call</span>(Schlüssel1, Wert1, Schlüssel2, We
   <li>Einen <a href="Error.htm#UnsetError">UnsetItemError</a> auslösen.</li>
 </ol>
 <p>Wenn <em>Standardwert</em> weggelassen wird, ist dies äquivalent zu <code>MapObj[Schlüssel]</code>, außer dass <a href="#__Item">__Item</a> nicht aufgerufen wird.</p>
+<p><span class="ver">[v2.1-alpha.35+]</span>: Es wird ein <a href="Error.htm#TypeError">TypeError</a> ausgelöst, wenn <code>Schlüssel is Float</code> gilt und der Aufrufer im <a href="../v2.1-changes.htm#CompatMode">v2.1-Modus</a> ist.</p>
 </div>
 
 <div class="methodShort" id="Has"><h3>Has</h3>
 <p>Gibt 1 (true) zurück, wenn der angegebene Schlüssel einen Wert in einem Map-Objekt hat, andernfalls 0 (false).</p>
 <pre class="Syntax">MapObj.<span class="func">Has</span>(Schlüssel)</pre>
+<p><span class="ver">[v2.1-alpha.35+]</span>: Es wird ein <a href="Error.htm#TypeError">TypeError</a> ausgelöst, wenn <code>Schlüssel is Float</code> gilt und der Aufrufer im <a href="../v2.1-changes.htm#CompatMode">v2.1-Modus</a> ist.</p>
 </div>
 
 <div class="methodShort" id="Set"><h3>Set</h3>
 <p>Setzt beliebig viele Elemente.</p>
 <pre class="Syntax">MapObj.<span class="func">Set</span>(<span class="optional">Schlüssel, Wert, Schlüssel2, Wert2, ...</span>)</pre>
 <p>Dies ist dasselbe wie, als würde man jedes Element mit <code>MapObj[Schlüssel] := Wert</code> setzen, außer dass <a href="#__Item">__Item</a> nicht aufgerufen wird und <a href="#Capacity">Capacity</a> automatisch angepasst wird, um zu vermeiden, dass es während eines einzigen Aufrufs mehrfach erweitert wird.</p>
+<p><span class="ver">[v2.1-alpha.35+]</span>: Es wird ein <a href="Error.htm#TypeError">TypeError</a> ausgelöst, wenn <code>Schlüssel is Float</code> gilt und der Aufrufer im <a href="../v2.1-changes.htm#CompatMode">v2.1-Modus</a> ist.</p>
 <h4 id="Set_Return_Value">Rückgabewert</h4>
 <p>Typ: <a href="../Concepts.htm#objects">Objekt</a></p>
 <p>Diese Methode gibt das Map zurück.</p>

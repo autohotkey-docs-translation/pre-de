@@ -37,11 +37,12 @@
   <dt>&lt;BiblName&gt;</dt>
   <dd>
     <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
-    <p>Der Name einer Bibliotheksdatei oder -funktion. Zum Beispiel würden sowohl <code>#Include &lt;Bibl&gt;</code> als auch <code>#Include &lt;Bibl_Funktion&gt;</code> Bibl.ahk aus einem der <a href="../Scripts.htm#lib">Lib-Ordner</a> inkludieren. Variablenreferenzen sind nicht erlaubt.</p>
+    <p>Der Name einer Bibliotheksdatei. Zum Beispiel versucht <code>#Include &lt;Bibl&gt;</code>, Bibl.ahk aus einem von mehreren Orten zu inkludieren. Variablenreferenzen sind nicht erlaubt. Unter <a href="../Scripts.htm#lib">Skriptbibliotheksordner</a> finden Sie detaillierte Informationen, wie der Name zu einer Datei aufgelöst wird, einschließlich einiger Unterschiede zwischen v2.0 und v2.1.</p>
     <p>Es kann ein Unterverzeichnis angegeben werden. Beachten Sie aber, dass der erste Unterstrich wie unter <a href="../Scripts.htm#lib">Skriptbibliotheksordner</a> beschrieben ggf. als Trennzeichen interpretiert wird. Zum Beispiel versucht <code>#Include &lt;a_b\c&gt;</code>, a.ahk zu inkludieren, wenn a_b\c.ahk nicht gefunden wird.</p>
   </dd>
 
 </dl>
+
 <h2 id="Remarks">Bemerkungen</h2>
 <p>Ein Skript verhält sich so, als wäre der Inhalt der zu inkludierenden Datei physisch exakt an der Position der #Include-Direktive vorhanden (als wäre der Inhalt der Datei sozusagen vorher kopiert und dann dort eingefügt wurden). Diese Direktive ist daher nicht in der Lage, zwei einzelne Skripte zu einem funktionierenden Skript zusammenzufügen.</p>
 <p>#Include stellt sicher, dass die angegebene Datei nur einmal inkludiert wird, auch wenn sie mehrmals im Skript zum Inkludieren angegeben ist. Mit #IncludeAgain kann hingegen eine Datei mehrmals inkludiert werden, andernfalls verhält es sich wie #Include.</p>
@@ -68,6 +69,29 @@
 <div class="ex" id="ExDir2">
 <p><a class="ex_number" href="#ExDir2"></a> Dasselbe wie oben, aber für ein explizit benanntes Verzeichnis.</p>
 <pre>#Include "C:\Meine Skripte"</pre>
+</div>
+
+<div class="ex" id="ExCompat">
+<p><a class="ex_number" href="#ExCompat"></a> Verwendet Module, um einen Konflikt zwischen zwei Bibliotheken mit demselben Namen zu lösen.</p>
+<pre filename="Main.ahk"><em>; Main.ahk</em>
+#Requires AutoHotkey v2.1-alpha.35
+#Import "v2.0\Script2.ahk"
+#Include &lt;MyLib&gt;
+MyLib("Main.ahk")
+</pre>
+<pre filename="MyLib.ahk"><em>; Lib\MyLib.ahk</em>
+#Requires AutoHotkey v2.1-alpha.35
+MyLib(s) =&gt; MsgBox(A_LineFile, s)
+</pre>
+<pre filename="Script2.ahk"><em>; v2.0\Script2.ahk</em>
+#Requires AutoHotkey v2.0
+#Include &lt;MyLib&gt;
+MyLib("Script2.ahk")
+</pre>
+<pre filename="MyLib.ahk"><em>; v2.0\Lib\MyLib.ahk</em>
+#Requires AutoHotkey v2.0
+MyLib(s) =&gt; MsgBox(A_LineFile, s)
+</pre>
 </div>
 
 </body>

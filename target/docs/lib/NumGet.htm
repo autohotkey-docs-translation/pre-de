@@ -36,8 +36,9 @@ Zahl := <span class="func">NumGet</span>(Quelle, Typ)</pre>
 
   <dt>Typ</dt>
   <dd>
-      <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a></p>
+      <p>Typ: <a href="../Concepts.htm#strings">Zeichenkette</a> oder <a href="../Concepts.htm#objects">Objekt</a></p>
       <p>Eine der folgenden Zeichenketten: UInt, Int, Int64, Short, UShort, Char, UChar, Double, Float, Ptr oder UPtr.</p>
+      <p><span class="ver">[v2.1-alpha.34+]</span>: Eine <a href="../Structs.htm#numeric-types">Zahlentypklasse</a> wie z.B. <code>UInt32</code>.</p>
     <p><em>Vorzeichenlose</em> 64-Bit-Integer werden nicht unterstützt, da der native Integertyp von AutoHotkey "Int64" ist. Um also mit Zahlen größer gleich 0x8000000000000000 zu arbeiten, lassen Sie das U-Präfix weg und interpretieren Sie alle negativen Werte als große Integer (Int64). Zum Beispiel ist ein Int64-Wert von -1 eigentlich 0xFFFFFFFFFFFFFFFF, wenn er als UInt64 gedacht ist. In 64-Bit-Builds ist UPtr äquivalent zu Int64.</p>
       <p>Weitere Informationen finden Sie unter <a href="DllCall.htm#types">DllCall-Typen</a>.</p>
     </dd>

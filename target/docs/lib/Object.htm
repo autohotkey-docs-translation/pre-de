@@ -74,6 +74,7 @@ Obj := Object.<span class="func">Call</span>()</pre>
 <p>Dynamische Eigenschaften werden kopiert, nicht indirekt aufgerufen.</p>
 <p>Der Klon hat dasselbe Basisobjekt wie das Originalobjekt.</p>
 <p>Es wird ein TypeError ausgelöst, wenn <em>Obj</em> von einem nicht unterstützten internen Typ abgeleitet ist. Diese Implementierung von Clone unterstützt Object-, Class- und Error-Objekte. Siehe auch: <a href="Array.htm#Clone">Clone (Array)</a>, <a href="Map.htm#Clone">Clone (Map)</a>.</p>
+<p><span class="ver">[v2.1-alpha.34+]</span>: Es wird ein TypeError ausgelöst, wenn <em>Obj</em> typisierte Eigenschaften hat.</p>
 </div>
 
 <div class="methodShort" id="DefineProp"><h3>DefineProp</h3>
@@ -100,6 +101,8 @@ Obj := <span class="func">DefineProp</span>(Obj, Name, Deskriptor) <em>; <span c
     <p><strong>Type</strong> <span class="ver">[v2.1-alpha.30+]</span>: Die Strukturklasse, die den Typ der Eigenschaft, die definiert werden soll, identifiziert. <em>Obj</em> muss ein Prototyp sein. Diese und die obigen Eigenschaften schließen sich gegenseitig aus. Allgemeine Informationen finden Sie unter <a href="../Structs.htm">Strukturen</a>, und ein Beispiel unter <a href="../Structs.htm#defprop">Verwendung von DefineProp</a>.</p>
     <p id="DefinePropPack"><strong>Pack</strong> <span class="ver">[v2.1-alpha.19+]</span>: Einer der folgenden Integer, der die maximale Ausrichtungsanforderung für die Eigenschaft angibt: 0, 1, 2, 4 oder 8. Dies beeinflusst die Ausrichtung der Eigenschaft und der gesamten Struktur nur dann, wenn die Ausrichtung ungleich Null und kleiner als die Standardausrichtungsanforderung des Typs ist, oder wenn die Ausrichtung ungleich Null ist und <em>Type</em> ein Integer ist. Definiert man eine Eigenschaft in einer Klassendefinition, bestimmt die aktuellste <a href="_StructPack.htm">#StructPack</a>-Direktive den Wert für <em>Pack</em>.</p>
     <p id="DefinePropOffset"><strong>Offset</strong> <span class="ver">[v2.1-alpha.24+]</span>: Der Offset des Strukturfelds. Um denselben Offset einer zuvor definierten Eigenschaft zu verwenden, geben Sie deren Namen an. Andernfalls geben Sie den Offset in Bytes an.</p>
+    <p>Beim Erstellen oder Umdefinieren einer Eigenschaft kann auch die folgende eigene Eigenschaft angegeben werden:</p>
+    <p id="DefinePropEnumerable"><strong>Enumerable</strong> <span class="ver">[v2.1-alpha.34+]</span>: Wenn false (0), wird <a href="Props.htm">Props</a> und der Debugger die Eigenschaft beim Enumerieren ignorieren.</p>
   </dd>
 </dl>
 <h4 id="DefineProp_Return_Value">Rückgabewert</h4>

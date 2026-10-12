@@ -41,6 +41,20 @@
 <p>Mit <a href="lib/_StructPack.htm">#StructPack</a> kann die Standardausrichtung der Felder innerhalb der Struktur überschrieben werden.</p>
 <p>Alle Elemente einer <a href="Objects.htm#Custom_Classes">Klassendefinition</a> sind zulässig, aber ein Initialisierer wie z.B. <code>x := 0</code> kann keine neue Eigenschaft erstellen.</p>
 
+<h3 id="classdef-union">Unionsblock <span class="ver">[v2.1-alpha.34+]</span></h3>
+<p>Innerhalb einer Struktur- oder Klassendefinition kann ein sogenannter Unionsblock verwendet werden, um überlappende typisierte Eigenschaften zu definieren. Zum Beispiel könnte eine unvollständige Definition der <a href="https://learn.microsoft.com/windows/win32/api/winuser/ns-winuser-input">INPUT</a>-Struktur, die bei <a href="https://learn.microsoft.com/windows/win32/api/winuser/nf-winuser-sendinput">SendInput</a> verwendet wird, wie folgt aussehen:</p>
+<pre>struct INPUT {
+    <span class="no-highlight">type</span> : UInt32
+    union {
+        mi : MOUSEINPUT
+        ki : KEYBDINPUT
+    }
+}</pre>
+<p>In diesem Beispiel starten <em>mi</em> und <em>ki</em> an derselben Offset-Position innerhalb der Struktur. Sowohl <em>mi</em> als auch <em>ki</em> sind gültig, je nach Wert von <em>type</em>. Dies wird als <a href="https://en.wikipedia.org/wiki/Tagged_union">getaggte Union</a> bezeichnet.</p>
+<p>Die Gesamtgröße der Union entspricht der Größe ihres größten Elements.</p>
+<p>Ein Unionsblock darf ausschließlich Deklarationen von typisierten Eigenschaften enthalten, wobei jede Deklaration einen Initialisierer haben kann. Im Gegensatz zu C und C++ unterstützt AutoHotkey aktuell keine verschachtelten Strukturdefinitionen. Eine Struktur kann stattdessen außerhalb der Union definiert und dann in einer Eigenschaftsdeklaration innerhalb der Union verwendet werden.</p>
+<p>Aus Gründen der Abwärtskompatibilität wird ein leerer Unionsblock als leere dynamische Eigenschaft interpretiert, da "union" auch ein gültiger Eigenschaftsname ist.</p>
+
 <h2 id="defprop">Verwendung von DefineProp</h2>
 <p>Eine Struktur kann während der Skriptausführung definiert werden, indem man ein <a href="lib/Class.htm">Class</a>-Objekt erstellt und mittels <a href="lib/Object.htm#DefineProp">DefineProp</a> typisierte Eigenschaften zu seinem <a href="lib/Class.htm#Prototype">Prototyp</a> hinzufügt. Zum Beispiel:</p>
 <pre>POINT := Class(Struct)  <em>; v2.1-alpha.21 und älter nutzten Object statt Struct.</em>
@@ -68,10 +82,10 @@ MsgBox AB().Size
 </ul>
 <p>Typbezeichner werden nacheinander mit statischen Eigenschaftsinitialisierern ausgewertet, wenn die Klasse initialisiert wird (nicht jedes Mal, wenn sie instanziiert wird).</p>
 <p>Der Typbezeichner muss bei der Auswertung eine Strukturklasse mit einer Größe ungleich Null ergeben. Die Auswertung erfolgt im Kontext <a href="Objects.htm#static__New">static __Init()</a>; d.h. <code>this</code> verweist auf das Klassenobjekt.</p>
-<p>Eine Strukturklasse ist eine beliebige Unterklasse von <a href="lib/Struct.htm">Struct</a>, einschließlich <a href="#numeric-types">numerischer Typen</a>, <a href="#arrays">Arrayklassen</a>, <a href="#pointers">Pointerklassen</a> und <code>Struct.Ptr</code> selbst.</p>
+<p>Eine Strukturklasse ist eine beliebige Unterklasse von <a href="lib/Struct.htm">Struct</a>, einschließlich <a href="#numeric-types">Zahlentypen</a>, <a href="#arrays">Arrayklassen</a>, <a href="#pointers">Pointerklassen</a> und <code>Struct.Ptr</code> selbst.</p>
 
-<h3 id="numeric-types">Numerische Typen <span class="ver">[v2.1-alpha.23+]</span></h3>
-<p>Es gibt für numerische Typen die folgenden vordefinierten Strukturklassen:</p>
+<h3 id="numeric-types">Zahlentypen <span class="ver">[v2.1-alpha.23+]</span></h3>
+<p>Es gibt für Zahlentypen die folgenden vordefinierten Strukturklassen:</p>
 <ul>
   <li><code>Int8</code>, <code>Int16</code>, <code>Int32</code> und <code>Int64</code> sind vorzeichenfähige Integer; 8-Bit, 16-Bit, 32-Bit und 64-Bit.</li>
   <li><code>UInt8</code>, <code>UInt16</code> und <code>UInt32</code> sind vorzeichenlose Integer; 8-Bit, 16-Bit und 32-Bit.</li>
@@ -138,6 +152,7 @@ Beispiel()</pre>
 <ul>
   <li>Wenn <a href="Language.htm#unset">ungesetzt</a>, wird ein Null-Pointer (0) übergeben.</li>
   <li>Wenn ein StructKlasse.Ptr übergeben wird, wird der darin enthaltene Pointerwert übergeben (untypische Verwendung).</li>
+  <li><span class="ver">[v2.1-alpha.34+]</span>: Wenn ein <a href="#arrays">Array von StructKlasse</a> übergeben wird, wird die Adresse seines ersten Elements übergeben. Mit anderen Worten, ein Array kann zu einem Pointer "verkommen".</li>
   <li>Wenn eine <a href="Concepts.htm#variable-references">VarRef</a> übergeben wird, wird ihr Wert (sofern vorhanden) als Eingabe verwendet.</li>
   <li>Wenn die Eingabe eine Instanz von StructKlasse ist, wird deren Adresse übergeben.</li>
   <li>In allen anderen Fällen wird eine neue Instanz von StructKlasse konstruiert.
@@ -159,6 +174,7 @@ Beispiel()</pre>
 <p>Sowohl bei der Zuweisung als auch bei der Rückgabe repräsentiert <a href="Language.htm#unset">ungesetzt</a> einen Null-Pointer (0).</p>
 <p>Bei ungleich Null ist der High-Level-Wert der Eigenschaft eine Instanz der Zielklasse (entweder ein <a href="#Boxed_Pointer">gekapselter Pointer</a> oder eine <a href="#Boxed_Pointer">gekapselte Struktur</a>).</p>
 <p>Wenn der Eigenschaft eine <a href="#Boxed_Pointer">gekapselte Struktur</a> eines geeigneten Typs zugewiesen wird, wird eine Referenz darauf beibehalten, um sicherzustellen, dass diese Struktur erst gelöscht wird, wenn das Skript seine Referenz auf die äußere Struktur oder den <a href="#Boxed_Pointer">gekapselten Pointer</a> freigibt. Zum Beispiel ist die Verwendung von <code>outer.lpEx := Beispiel()</code> in der Regel unbedenklich, während <code>meineVar := Beispiel().Ptr</code> die neue Struktur unmittelbar nach der Zuweisung freigeben würde. Wenn der zugrunde liegende Pointerwert verändert wurde, bewirkt die Auswertung von <code>outer.lpEx</code>, dass die zuvor gehaltene Referenz freigegeben wird.</p>
+<p><span class="ver">[v2.1-alpha.34+]</span>: Es ist möglich, ein <a href="#arrays">strukturiertes Array</a> zuzuweisen, wenn die Basiselementklasse identisch mit der des Ziels des Pointers ist. In diesem Fall gibt die Auswertung der Pointer-Eigenschaft eine Referenz zurück, die auf das ursprüngliche Array verweist. Zum Beispiel kann eine Instanz von <code>UInt8[32]</code> einer Eigenschaft vom Typ <code>UInt8.Ptr</code> zugewiesen werden.</p>
 <p>Wenn eine Pointerklasse direkt konstruiert wird, verhält sich ihre __Value-Eigenschaft wie oben beschrieben.</p>
 
 <h2 id="arrays">Strukturierte Arrays <span class="ver">[v2.1-alpha.23+]</span></h2>

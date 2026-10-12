@@ -79,6 +79,7 @@ ArrayObj := Array.<span class="func">Call</span>(<span class="optional">Wert, We
 <pre class="Syntax">Klon := ArrayObj.<span class="func">Clone</span>()</pre>
 <p>Alle Array-Elemente werden in das neue Array kopiert. <em>Objektreferenzen</em> werden kopiert (wie bei einer normalen Zuweisung), nicht die Objekte selbst.</p>
 <p>Eigene Eigenschaften, eigene Methoden und Basis werden wie bei <a href="Object.htm#Clone">Obj.Clone</a> kopiert.</p>
+<p><span class="ver">[v2.1-alpha.34+]</span>: Es wird ein TypeError ausgelöst, wenn <em>ArrayObj</em> typisierte Eigenschaften hat.</p>
 </div>
 
 <div class="methodShort" id="Delete"><h3>Delete</h3>
@@ -97,7 +98,8 @@ ArrayObj := Array.<span class="func">Call</span>(<span class="optional">Wert, We
 <p>Diese Methode gibt den entfernten Wert zurück (<a href="../v2.1-changes.htm#CompatMode"><em>leer-ungesetzt</em></a>, wenn es keinen gibt).</p>
 <h4 id="Delete_Remarks">Bemerkungen</h4>
 <p>Diese Methode hat keinen Einfluss auf die <a href="#Length">Länge</a> des Arrays.</p>
-<p>Es wird ein <a href="Error.htm#ValueError">ValueError</a> ausgelöst, wenn <em>Index</em> außerhalb des gültigen Bereichs liegt.</p>
+<p>Es wird ein <a href="Error.htm#ValueError">ValueError</a> ausgelöst, wenn <em>Index</em> außerhalb des gültigen Bereichs liegt oder nicht-numerisch ist.</p>
+<p><span class="ver">[v2.1-alpha.35+]</span>: Es wird ein <a href="Error.htm#TypeError">TypeError</a> ausgelöst, wenn <em>Index</em> eine Floating-Point-Zahl oder nicht-numerisch ist und der Aufrufer im <a href="../v2.1-changes.htm#CompatMode">v2.1-Modus</a> ist.</p>
 </div>
 
 <div class="methodShort" id="Get"><h3>Get</h3>
@@ -105,7 +107,8 @@ ArrayObj := Array.<span class="func">Call</span>(<span class="optional">Wert, We
 <pre class="Syntax">Wert := ArrayObj.<span class="func">Get</span>(Index <span class="optional">, Standardwert</span>)</pre>
 <p>Diese Methode durchläuft die folgenden Schritte:</p>
 <ol>
-  <li>Einen <a href="Error.htm#IndexError">IndexError</a> auslösen, wenn <em>Index</em> Null ist oder außerhalb des gültigen Bereichs liegt.</li>
+  <li><span class="ver">[v2.1-alpha.35+]</span>: Einen <a href="Error.htm#TypeError">TypeError</a> auslösen, wenn <em>Index</em> eine Floating-Point-Zahl oder nicht-numerisch ist und der Aufrufer im <a href="../v2.1-changes.htm#CompatMode">v2.1-Modus</a> ist.</li>
+  <li>Einen <a href="Error.htm#IndexError">IndexError</a> auslösen, wenn <em>Index</em> Null ist, außerhalb des gültigen Bereichs liegt oder nicht-numerisch ist.</li>
   <li>Den Wert auf <em>Index</em> zurückgeben, falls vorhanden (siehe <a href="#Has">Has</a>).</li>
   <li>Den Wert des <em>Standardwert</em>-Parameters zurückgeben, falls angegeben.</li>
   <li>Den Wert von <code>ArrayObj.Default</code> zurückgeben, falls definiert.</li>
@@ -118,6 +121,7 @@ ArrayObj := Array.<span class="func">Call</span>(<span class="optional">Wert, We
 <div class="methodShort" id="Has"><h3>Has</h3>
 <p>Gibt eine Zahl ungleich 0 zurück, wenn der Index gültig ist und einen Wert hat.</p>
 <pre class="Syntax">HatIndex := ArrayObj.<span class="func">Has</span>(Index)</pre>
+<p><span class="ver">[v2.1-alpha.35+]</span>: Es wird ein <a href="Error.htm#TypeError">TypeError</a> ausgelöst, wenn <em>Index</em> eine Floating-Point-Zahl oder nicht-numerisch ist und der Aufrufer im <a href="../v2.1-changes.htm#CompatMode">v2.1-Modus</a> ist.</p>
 </div>
 
 <div class="methodShort" id="InsertAt"><h3>InsertAt</h3>
@@ -149,7 +153,8 @@ x.InsertAt(2, "B")      <em>; =&gt;  ["A", "B",    , "C"]</em>
 
 x := ["C"]
 x.InsertAt(1, , "B")    <em>; =&gt;  [   , "B", "C"]</em></pre>
-<p>Es wird ein <a href="Error.htm#ValueError">ValueError</a> ausgelöst, wenn <em>Index</em> kleiner als <code>-ArrayObj.Length</code> oder größer als <code>ArrayObj.Length + 1</code> ist. Bei einem Array mit z.B. 3 Elementen muss <em>Index</em> im Bereich von -3 bis 4 liegen.</p>
+<p>Es wird ein <a href="Error.htm#ValueError">ValueError</a> ausgelöst, wenn <em>Index</em> nicht-numerisch, kleiner als <code>-ArrayObj.Length</code> oder größer als <code>ArrayObj.Length + 1</code> ist. Bei einem Array mit z.B. 3 Elementen muss <em>Index</em> im Bereich von -3 bis 4 liegen.</p>
+<p><span class="ver">[v2.1-alpha.35+]</span>: Es wird ein <a href="Error.htm#TypeError">TypeError</a> ausgelöst, wenn <em>Index</em> eine Floating-Point-Zahl oder nicht-numerisch ist und der Aufrufer im <a href="../v2.1-changes.htm#CompatMode">v2.1-Modus</a> ist.</p>
 </div>
 
 <div class="methodShort" id="Pop"><h3>Pop</h3>
@@ -199,7 +204,8 @@ ArrayObj.<span class="func">RemoveAt</span>(Index, Länge)</pre>
 <p>Wenn <em>Länge</em> weggelassen wird und das Element einen Wert hat, wird dieser zurückgegeben. Andernfalls ist der Rückgabewert <a href="../v2.1-changes.htm#CompatMode"><em>leer-ungesetzt</em></a>.</p>
 <h4 id="RemoveAt_Remarks">Bemerkungen</h4>
 <p>RemoveAt ist das Gegenstück zu <a href="#InsertAt">InsertAt</a>.</p>
-<p>Es wird ein <a href="Error.htm#ValueError">ValueError</a> ausgelöst, wenn der via <em>Index</em> und <em>Länge</em> angegebene Bereich nicht vollständig innerhalb der aktuellen Grenzen des Arrays liegt.</p>
+<p>Es wird ein <a href="Error.htm#ValueError">ValueError</a> ausgelöst, wenn der via <em>Index</em> und <em>Länge</em> angegebene Bereich nicht vollständig innerhalb der aktuellen Grenzen des Arrays liegt, oder wenn einer der beiden Parameter nicht-numerisch ist.</p>
+<p><span class="ver">[v2.1-alpha.35+]</span>: Es wird ein <a href="Error.htm#TypeError">TypeError</a> ausgelöst, wenn <em>Index</em> eine Floating-Point-Zahl oder nicht-numerisch ist und der Aufrufer im <a href="../v2.1-changes.htm#CompatMode">v2.1-Modus</a> ist.</p>
 <p>Die restlichen Elemente rechts von <em>Pos</em> werden um den via <em>Länge</em> definierten Wert (oder standardmäßig um 1) nach links verschoben. Zum Beispiel:</p>
 <pre>x := ["A", "B"]
 MsgBox x.RemoveAt(1)  <em>; A</em>

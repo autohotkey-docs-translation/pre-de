@@ -21,6 +21,34 @@
 </ul>
 <p>Alle technischen Einzelheiten zu den Änderungen finden Sie auf <a href="https://github.com/AutoHotkey/AutoHotkey">GitHub</a>.</p>
 
+<h2 id="v2.1-alpha.35">2.1-alpha.35 - 11. Oktober 2026</h2>
+<p>Geändert: Im v2.1-Modus löst Map nun einen TypeError aus, wenn Float-Schlüssel verwendet werden.</p>
+<p>Geändert: Im v2.1-Modus löst Array nun einen TypeError aus, wenn ungültige Indextypen verwendet werden.</p>
+<p>Geändert: #Include &lt;MeineBibl&gt; und #Import haben nun eine andere Suchlogik; siehe <a href="Scripts.htm#lib">Skriptbibliotheksordner</a> und <a href="Modules.htm#Search_Path">Suchpfad</a>.</p>
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Behoben: #Import verbietet nun die Verwendung des Export-Schlüsselworts innerhalb von Funktionen.</p>
+
+<h2 id="v2.1-alpha.34">2.1-alpha.34 - 9. Oktober 2026</h2>
+<p>Verbessert: FileSetTime ist nun zuverlässiger in Bezug auf eingeschränkte Berechtigungen und Dateisperren. [PR #358 von miaminlk] </p>
+<p>Entfernt: TreeView-Steuerelemente und FileSelect-Dialogfenster filtern keine Meldungen mehr. Dies macht eine in <a href="https://www.autohotkey.com/docs/v1/ChangeLogHelp.htm#v1.0.44.11">v1.0.44.11</a> hinzugefügte Fehlerbehebung rückgängig, die ein Problem bei nicht mehr unterstützten OS-Versionen umging, jedoch bei neueren OS-Versionen dasselbe Problem mit DirSelect verursachte. Dies hat keine bekannten Auswirkungen auf FileSelect bei unterstützten Betriebssystemen.</p>
+<p>Hinzugefügt: NumPut und NumGet unterstützen nun die Verwendung von Zahlentypklassen.</p>
+<p>Hinzugefügt: Unterstützung für <a href="Structs.htm#classdef-union">anonyme Unions</a>.</p>
+<p>Hinzugefügt: Eigenschaften können nun vor <a href="lib/Props.htm">Props</a> und dem Debugger verborgen werden, indem man <code>Enumerable: false</code> in den <a href="lib/Object.htm#DefineProp">DefineProp</a>-Deskriptor einfügt.</p>
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Geändert: #Requires innerhalb einer Funktion oder einer #Include-Datei beeinflusst nicht mehr den Kompatibilitätsmodus für globalen Code des aktuellen Moduls.</p>
+<p>Geändert: Clone löst nun einen TypeError aus, wenn typisierte Eigenschaften vorhanden sind, anstatt ein kaputtes Objekt zu erzeugen.</p>
+<p>Geändert: Typisierte Eigenschaften und DllCall lassen nun ein <em>StructKlasse</em>.Array zu einem <em>StructKlasse</em>.Ptr "verkommen".</p>
+<p>Behoben: Unstimmigkeiten zwischen <em>NumerischeKlasse</em>.Ptr und anderen Strukturen.</p>
+<p>Geändert: <code>a.%b?% ?? c</code> ist nun konsistent mit <code>%r?% ?? c</code>. Es schließt nun kurz, anstatt die Standardeigenschaft indirekt aufzurufen.</p>
+<p>Verbessert: Validierung des Deskriptor-Parameters von DefineProp.</p>
+
+<h2 id="v2.0.30">2.0.30 - 9. Oktober 2026</h2>
+<p>Behoben: Gui.Move verschiebt das Fenster nun korrekt, wenn es einem anderen Fenster untergeordnet ist. [PR #359 von iPhilip]</p>
+<p>Behoben: <code>a &amp; b::AltTabMenu</code> und Ähnliches verursachten bei Aktivierung einen Programmabsturz [fehlerhaft seit v2.0.20].</p>
+
+<h2 id="v2.0.29">2.0.29 - 3. Oktober 2026</h2>
+<p>Behoben: OnMessage verursachte einen Absturz, wenn mehr als 65536 Funktionen registriert wurden.</p>
+
 <h2 id="v2.1-alpha.33">2.1-alpha.33 - 3. Oktober 2026</h2>
 <p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
 <p>Hinzugefügt: #Import kann nun innerhalb einer Funktion verwendet werden.</p>
@@ -187,7 +215,7 @@
 <p>Erweitert: CallbackCreate akzeptiert nun optional ein Array von Parametertypen.</p>
 <p>Hinzugefügt: Offset-Unterparameter für DefineProp, was Unions erlaubt.</p>
 <p>Geändert: <code>StructKlasse.Ptr</code> macht nun <code>StructKlasse.base.Ptr</code> statt <code>Struct.Ptr</code> zur Unterklasse.</p>
-<p>Geändert: GetOwnPropDesc gibt nun Klassen für numerische Typen zurück.</p>
+<p>Geändert: GetOwnPropDesc gibt nun Zahlentypklassen zurück.</p>
 <p>Behoben: Undefiniertes Verhalten beim Übergeben einer Struct-Klasse ohne Felder an DllCall.</p>
 <p>Behoben: <code>StructKlasse[N].Ptr</code> (Pointer, die auf Array-Typen verweisen).</p>
 <p>Behoben: <code>#Import ":N"</code> importiert nicht mehr die falsche Datei, wenn es unter einem #Module in einer #Include-Datei verwendet wird.</p>
@@ -196,7 +224,7 @@
 <p>Behoben: Zirkelbezüge verhindern nicht mehr, dass Struct.Ptr/Array-Klassen gelöscht werden.</p>
 
 <h2 id="v2.1-alpha.23">2.1-alpha.23 - 22. März 2026</h2>
-<p>Hinzugefügt: Klassen für <a href="Structs.htm#numeric-types">numerische Typen</a>, die Struct erweitern.</p>
+<p>Hinzugefügt: <a href="Structs.htm#numeric-types">Zahlentypklassen</a>, die Struct erweitern.</p>
 <p>Hinzugefügt: Klassen für <a href="Structs.htm#arrays">strukturierte Arrays</a>, erstellt mit <code><i>StructKlasse</i>[N]</code>.</p>
 
 <p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>

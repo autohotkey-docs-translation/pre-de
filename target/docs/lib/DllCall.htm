@@ -59,7 +59,7 @@
 <p>Übersicht:
   </p><ul>
     <li><a href="#String_Types">Zeichenkettentypen</a></li>
-    <li><a href="#Numeric_Types">Numerische Typen</a></li>
+    <li><a href="#Numeric_Types">Zahlentypen</a></li>
     <li><a href="#Other_Types">Sonstige Typen</a></li>
     <li><a href="#Unsigned_Integer_Types">Vorzeichenlose Integertypen</a></li>
     <li><a href="#Pointer_Types">Pointertypen</a></li>
@@ -99,7 +99,7 @@ str := StrGet(buf, "cp0")  <em>; ANSI-Zeichenkette aus dem Pufferspeicher abrufe
 </tr>
 </table>
 
-<h3 id="Numeric_Types">Numerische Typen</h3>
+<h3 id="Numeric_Types">Zahlentypen</h3>
 <p>In <span class="ver">[v2.1-alpha.23+]</span> können <a href="../Structs.htm#numeric-types">Typklassen</a> anstelle von Typnamen übergeben werden. Zum Beispiel ist <code>DllCall("Sleep", "UInt", 100)</code> dasselbe wie <code>DllCall("Sleep", UInt32, 100)</code>.</p>
 <table class="info">
 <tr>
@@ -223,7 +223,7 @@ str := StrGet(buf, "cp0")  <em>; ANSI-Zeichenkette aus dem Pufferspeicher abrufe
 <p class="note"><strong>Hinweis:</strong> <a href="#Pointer_Types">Char*</a> ist nicht dasselbe wie <a href="#Str">Str</a>, weil <a href="#Pointer_Types">Char*</a> die Adresse einer 8-Bit-Zahl übergibt, während <a href="#Str">Str</a> die Adresse einer Zeichenkette übergibt, die je nach AutoHotkey-Version 16-Bit (Unicode) oder 8-Bit (für <a href="#AStr">AStr</a>) ist. Ähnlich verhält es sich mit <a href="#Pointer_Types">UInt*</a>: Da dieser Typ die Adresse einer 32-Bit-Zahl übergibt, ist er nicht für Funktionen geeignet, die ein Array mit Werten oder eine Struktur größer als 32 Bit erwarten.</p>
 <p>Da Variablen in AutoHotkey keinen festen Typ haben, verweist eine an die Funktion übergebene Adresse auf einen temporären Speicher, nicht auf die Variable des Aufrufers.</p>
 <p><span class="ver">[v2.1-alpha.22+]</span>: Eine <a href="../Structs.htm#pointers">Pointerklasse</a> funktioniert ähnlich und kann für Strukturen verwendet werden.</p>
-<p><span class="ver">[v2.1-alpha.23+]</span>: Jede <a href="../Structs.htm#numeric-types">numerische Typklasse</a> hat ihre eigene Pointerklasse, was äquivalent zum entsprechenden Typnamen ist. Zum Beispiel ist <code>Int32.Ptr</code> dasselbe wie <code>"Int*"</code>.</p>
+<p><span class="ver">[v2.1-alpha.23+]</span>: Jede <a href="../Structs.htm#numeric-types">Zahlentypklasse</a> hat ihre eigene Pointerklasse, was äquivalent zum entsprechenden Typnamen ist. Zum Beispiel ist <code>Int32.Ptr</code> dasselbe wie <code>"Int*"</code>.</p>
 </td>
 
 <h2 id="error">Fehlerbehandlung</h2>
