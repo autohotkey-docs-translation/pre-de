@@ -283057,6 +283057,17 @@
     </tu>
     <tu>
       <prop type="file">docs/ObjList.htm</prop>
+      <prop type="prev">&lt;a0&gt;Module&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.11+]&lt;/s1&gt;</prop>
+      <prop type="next">Array</prop>
+      <tuv lang="en">
+        <seg>Object</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261020T181609Z" creationid="Ragnar-F" creationdate="20261020T181609Z">
+        <seg>Object</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <prop type="file">docs/ObjList.htm</prop>
       <prop type="prev">Any</prop>
       <prop type="next">Array</prop>
       <tuv lang="en">
@@ -283075,6 +283086,17 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20261006T123739Z" creationid="Ragnar-F" creationdate="20261006T123739Z">
         <seg>Object</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <prop type="file">docs/ObjList.htm</prop>
+      <prop type="prev">Integer</prop>
+      <prop type="next">&lt;a0&gt;Struct&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.22+]&lt;/s1&gt;</prop>
+      <tuv lang="en">
+        <seg>String</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261020T181628Z" creationid="Ragnar-F" creationdate="20261020T181628Z">
+        <seg>String</seg>
       </tuv>
     </tu>
     <tu>
