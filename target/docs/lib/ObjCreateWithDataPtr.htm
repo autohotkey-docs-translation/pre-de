@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<title>ObjCreateWithDataPtr - Syntax &amp; Verwendung | AutoHotkey v2</title>
+<meta name="description" content="Die ObjCreateWithDataPtr-Funktion erstellt ein Objekt mit einem internen Datenpointer." />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" />
+<link href="../static/dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="dark_css" />
+<script src="../static/content.js" id="content_js"></script>
+<script src="../static/ga4.js"></script>
+<meta name="robots" content="noindex, nofollow" />
+</head>
+<body><script>site.init();</script>
+
+
+<h1>ObjCreateWithDataPtr <span class="ver">[v2.1-alpha.36+]</span></h1>
+
+<p>Erstellt ein Objekt mit einem internen Datenpointer.</p>
+
+<pre class="Syntax">Obj := <span class="func">ObjCreateWithDataPtr</span>(ClassObj, Adresse)</pre>
+<h2 id="Parameters">Parameter</h2>
+<dl>
+  <dt>ClassObj</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#objects">Objekt</a></p>
+    <p>Ein <a href="Class.htm">Class</a>-Objekt, das eine direkte Konstruktion unterstützt.</p>
+  </dd>
+  <dt>Adresse</dt>
+  <dd>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Eine Zahl im nativen Integer-Bereich (32-Bit oder 64-Bit). Wenn <em>ClassObj</em> typisierte Eigenschaften definiert, muss der Wert entweder null oder eine kompatible Speicheradresse sein.</p>
+  </dd>
+</dl>
+
+<h2 id="Return_Value">Rückgabewert</h2>
+<p>Typ: <a href="../Concepts.htm#objects">Objekt</a> oder <a href="Struct.htm">Struct</a></p>
+<p>Der Rückgabewert ist ein von <code>ClassObj.Prototype</code> abgeleitetes Objekt.</p>
+
+<h2 id="Error_Handling">Fehlerbehandlung</h2>
+<p>Es wird eine Ausnahme ausgelöst, wenn <em>ClassObj</em> nicht unterstützt wird.</p>
+<p>Die Übergabe einer ungültigen Adresse ungleich null kann zu einer Instabilität des Programms führen, wenn <em>ClassObj</em> typisierte Eigenschaften definiert.</p>
+
+<h2 id="Remarks">Bemerkungen</h2>
+<p>Ziehen Sie alle anderen Möglichkeiten in Betracht, bevor Sie diese Funktion nutzen. Sie ist für bestimmte Sonderfälle vorgesehen, wie zum Beispiel:</p>
+<ul>
+  <li>Beim Implementieren von Abstraktionen für Funktions-Pointer, Interface-Pointer, Handles und Ähnliches, wobei <em>Obj</em> selbst den Pointer- oder Handle-Wert repräsentiert – ähnlich einem <a href="../Structs.htm#Boxed_Pointer">gekapselten Pointer</a>, jedoch mit aktiviertem <a href="../Objects.htm#Custom_NewDelete">__Delete</a>.</li>
+  <li>Beim Erstellen eines Nicht-Struktur-Objekts, dessen typisierte Eigenschaften auf Speicher außerhalb des Objekts selbst verweisen.</li>
+</ul>
+<p>Diese Funktion sollte nicht bloß dazu verwendet werden, eine überschriebene statische Call-Methode zu umgehen. Rufen Sie innerhalb der Methode <code>super()</code> oder <code>super.Call()</code> auf, um eine Instanz zu konstruieren. Man kann eine überschriebene Methode auch umgehen, indem man explizit ihre Superklassenversion aufruft, wie in <code>(Object.Call)(ClassObj)</code>.</p>
+<p>Anders als <a href="Class.htm#Call">ClassObj.Call</a> erstellt diese Funktion ein Objekt, ohne <a href="../Objects.htm#Custom_Classes_var">__Init</a> oder <a href="../Objects.htm#Custom_NewDelete">__New</a> aufzurufen; das Skript kann diese jedoch bei Bedarf manuell aufrufen. Wenn __Init nicht aufgerufen wird, werden Instanzvariableninitialisierer nicht ausgeführt. Das Endergebnis ähnelt einem Ausdruck wie <code>{Base: ClassObj.Prototype}</code>, außer dass ein breiteres Spektrum an Klassen unterstützt wird.</p>
+<p>Anders als bei <a href="Struct.htm#At">StructClass.At</a> wird __Delete aufgerufen, wenn das Objekt gelöscht wird.</p>
+<p>Der Datenpointer des Objekts kann mit <a href="Object.htm#GetDataPtr">ObjGetDataPtr</a> abgerufen und mit <a href="Object.htm#SetDataPtr">ObjSetDataPtr</a> gesetzt werden. Wenn <em>ClassObj</em> eine Strukturklasse ist, kann der Datenpointer auch mit <a href="Struct.htm#Ptr">Obj.Ptr</a> abgerufen werden.</p>
+
+<h2 id="Examples">Beispiele</h2>
+
+<div class="ex" id="ExCallback">
+<p><a class="ex_number" href="#ExCallback"></a> Erstellt einen referenzgezählten Rückruf.</p>
+<pre>#Requires AutoHotkey v2.1-alpha.36
+
+myCallback := CCallback(() =&gt; MsgBox("Rückruf wurde aufgerufen"))
+
+<em>; Rückruf kann einem Pointerfeld zugewiesen werden.</em>
+sample := SampleStruct()
+sample.callback := myCallback
+
+<em>; Nur um zu zeigen, dass wir diese Referenz nicht behalten müssen:</em>
+myCallback := unset
+
+<em>; Rückruf aufrufen (besser wäre es, ihn via Struktur an eine API zu übergeben).</em>
+DllCall(NumGet(sample, IntPtr))
+
+sample := unset
+MsgBox "Variablen wurden ungesetzt gemacht"
+
+struct SampleStruct {
+    callback : CCallback.Ptr
+}
+
+struct CCallback {
+    static Call(args*) {
+        cb := CallbackCreate(args*)
+        MsgBox "Erstelle Rückruf " cb
+        return ObjCreateWithDataPtr(this, cb)
+    }
+    __delete() {
+        MsgBox "Lösche Rückruf " this.ptr
+        CallbackFree(this.ptr)
+    }
+}</pre>
+</div>
+
+</body>
+</html>

@@ -289,9 +289,7 @@ Obj := <span class="func">DefineProp</span>(Obj, Name, Deskriptor) <em>; <span c
 <p>Es wird eine Ausnahme ausgelöst, wenn <em>Obj</em> vom falschen Typ ist.</p>
 
 <h3 id="SetDataPtr">ObjSetDataPtr <span class="ver">[v2.1-alpha.3+]</span></h3>
-<p class="warning"><strong>Warnung:</strong> Diese Funktion wird wahrscheinlich wieder entfernt. Verwenden Sie Alternativen wie <a href="Struct.htm#At">Struct.At</a>.</p>
 <p>Setzt die Adresse der <a href="../Structs.htm">strukturierten Daten</a> des Objekts (via Skript definierte typisierte Eigenschaften).</p>
-<p><span class="ver">[v2.1-alpha.27+]</span>: Nur <a href="../Structs.htm#Boxed_Pointer">gekapselte Pointer</a> sind in der Lage, typisierte Eigenschaften auf eine externe Adresse umzuleiten. Bei allen anderen Objekten schlägt diese Funktion fehl. Aufgrund eines Bugs wird selbst bei Erfolg ein Fehler ausgelöst.</p>
 <pre class="Syntax"><span class="func">ObjSetDataPtr</span>(Obj, Ptr)</pre>
 <h4 class="func_section" id="SetDataPtr_Parameters">Parameter</h4>
 <dl>
@@ -302,6 +300,8 @@ Obj := <span class="func">DefineProp</span>(Obj, Name, Deskriptor) <em>; <span c
   </dd>
 </dl>
 <h4 class="func_section" id="SetDataPtr_Remarks">Bemerkungen</h4>
+<p><span class="ver">[v2.1-alpha.27+]</span>: Nur <a href="../Structs.htm#Boxed_Pointer">gekapselte Pointer</a> sind in der Lage, typisierte Eigenschaften auf eine externe Adresse umzuleiten. Bei allen anderen Objekten schlägt diese Funktion fehl. Aufgrund eines Bugs wird selbst bei Erfolg ein Fehler ausgelöst (wurde mit v2.1-alpha.28 behoben).</p>
+<p><span class="ver">[v2.1-alpha.36+]</span>: Diese Funktion kann auch mit Objekten verwendet werden, die via <a href="ObjCreateWithDataPtr.htm">ObjCreateWithDataPtr</a> erstellt wurden.</p>
 <p>Das Skript kann <a href="#GetDataPtr">ObjGetDataPtr</a> verwenden, um <em>Ptr</em> abzurufen.</p>
 <p>ObjSetDataPtr hat keinen Effekt auf verschachtelte Objekte, da diese jeweils einen eigenen Datenpointer haben (der auf die ursprünglichen Daten des äußeren Objekts verweist).</p>
 <h4 class="func_section" id="SetDataPtr_Error_Handling">Fehlerbehandlung</h4>
