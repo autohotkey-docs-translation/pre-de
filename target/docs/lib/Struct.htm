@@ -38,6 +38,7 @@
   </li>
   <li><a href="#Methods">Methoden</a>:
     <ul>
+      <li><a href="#__New">__New</a>: Setzt die Werte aller Felder.</li>
       <li><a href="#__Ref">__Ref</a>: Ermittelt eine verschachtelte Struktur oder eine virtuelle Referenz, die auf eine Eigenschaft verweist.</li>
     </ul>
   </li>
@@ -111,6 +112,21 @@ ArrayKlasse := StructKlasse.<span class="func">__Item</span>[Länge]</pre>
 </div>
 
 <h2 id="Methods">Methoden</h2>
+
+<div class="methodShort" id="__New"><h3>__New <span class="ver">[v2.1-alpha.37+]</span></h3>
+<p>Setzt die Werte aller Felder.</p>
+<pre class="Syntax">Obj.<span class="func">__New</span>(<span class="optional">Werte...</span>)</pre>
+<p>Bei Aufruf mit mindestens einem Parameter müssen Anzahl und Reihenfolge der Parameter mit denen der in der Struktur definierten Felder übereinstimmen. Werte werden in einer unbestimmten Reihenfolge zugewiesen. Wenn sich Felder überschneiden (weil eine Union verwendet wurde), ist das Ergebnis unbestimmt.</p>
+<p>Zum Beispiel:</p>
+<pre>
+struct GRÖẞE {
+    Breite : Int32, Höhe : Int32
+}
+BildschirmGröße := GRÖẞE(A_ScreenWidth, A_ScreenHeight)
+</pre>
+<p>Es passiert nichts, wenn null Parameter übergeben werden. Strukturen sind null-initialisiert bei Reservierung, noch bevor __Init oder __New ausgeführt werden.</p>
+<p>Diese Methode existiert zur Unterstützung von <a href="#Call">Call</a> und ist nicht für den direkten Aufruf gedacht. Siehe <a href="../Objects.htm#Custom_NewDelete">Konstruktion und Destruktion</a>.</p>
+</div>
 
 <div class="methodShort" id="__Ref"><h3>__Ref</h3>
 <p>Ermittelt eine verschachtelte Struktur oder eine <a href="../Functions.htm#virtual-references">virtuelle Referenz</a>, die auf eine Eigenschaft verweist.</p>

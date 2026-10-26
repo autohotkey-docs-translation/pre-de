@@ -1,3 +1,13 @@
+// An alphabetically sorted list of items. Each item is an array where field:
+//   #1 = item name
+//   #1 = relative docs link
+//   #3 = item type (optional). One of the following numbers used to categorize related items.
+//
+//   0 = directive         5 = declaration
+//   1 = built-in var      6 = built-in class
+//   2 = built-in func     7 = built-in method/prop
+//   3 = control flow      99 = Ahk2Exe compiler
+//   4 = operator
 indexData = [
   ["__Call-Metafunktion", "Objects.htm#Meta_Functions"],
   ["__Delete-Metafunktion", "Objects.htm#Custom_NewDelete"],
@@ -16,6 +26,7 @@ indexData = [
   ["__New-Methode (Buffer)", "lib/Buffer.htm#__New", 7],
   ["__New-Methode (Gui)", "lib/Gui.htm#__New", 7],
   ["__New-Methode (Map)", "lib/Map.htm#__New", 7],
+  ["__New-Methode (Struct)", "lib/Struct.htm#__New", 7],
   ["__Ref-Methode (Object)", "lib/Object.htm#__Ref", 7],
   ["__Ref-Methode (Struct)", "lib/Struct.htm#__Ref", 7],
   ["__Set-Metafunktion", "Objects.htm#Meta_Functions"],

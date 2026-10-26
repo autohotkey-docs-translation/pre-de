@@ -21,6 +21,22 @@
 </ul>
 <p>Alle technischen Einzelheiten zu den Änderungen finden Sie auf <a href="https://github.com/AutoHotkey/AutoHotkey">GitHub</a>.</p>
 
+<h2 id="v2.1-alpha.37">2.1-alpha.37 - 25. Oktober 2026</h2>
+<p>Geändert: Die Parametertypen <code>Str</code>/<code>*</code>/<code>P</code> von DllCall/ComCall erlauben nun <code>unset</code>, was null bedeutet.</p>
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Hinzugefügt: <code>Struct.Prototype.__New(FeldWerte*)</code>.</p>
+<p>Geändert: IsSet impliziert nun ein finales <code>?</code>, wenn keine verwendet werden.</p>
+<p>Geändert: Struct.At erlaubt nun Struct selbst (benötigt nun keine Unterklasse mehr).</p>
+<p>Geändert: <code>DllCall(..., Int32, n:=Int32(), ...)</code> übergibt nicht mehr die Adresse, sondern den Wert von n; dasselbe gilt für andere numerische Strukturklassen.</p>
+<p>Behoben: Typisierte Rückrufparameter eines Array-Untertyps.</p>
+<p>Behoben: <code>a.b()</code> löst nun einen UnsetError im Falle von <code>a.b =&gt; unset</code> aus, anstatt einen Absturz zu verursachen.</p>
+<p>Behoben: NumGet/NumPut löst nun einen Fehler aus, wenn eine falsche Struct-Klasse übergeben wird.</p>
+<p>Behoben: Undefiniertes Verhalten bei <code>DllCall(..., IntPtr, obj, ...)</code>.</p>
+
+<h2 id="v2.0.31">2.0.31 - 25. Oktober 2026</h2>
+<p>Behoben: <code>a.b[c]</code> löst nun einen Fehler aus, wenn <code>a.b</code> eine Methode ist.</p>
+<p>Behoben: Kein Absturz mehr beim Setzen eines Haltepunkts, wenn eine Funktion einen Parameter-Standardausdruck und eine Fat-Arrow-Funktion als erste Zeile hat. [PR #363 von FuPeiJiang]</p>
+
 <h2 id="v2.1-alpha.36">2.1-alpha.36 - 18. Oktober 2026</h2>
 <p>Hinzugefügt: ObjCreateWithDataPtr.</p>
 <p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
