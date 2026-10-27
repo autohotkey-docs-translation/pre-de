@@ -242692,6 +242692,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Version &lt;a0&gt;&lt;c1/&gt;2.1-alpha.37&lt;c2/&gt;&lt;/a0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261027T085459Z" creationid="Ragnar-F" creationdate="20261027T085459Z">
+        <seg>Version &lt;a0&gt;&lt;c1/&gt;2.1-alpha.37&lt;c2/&gt;&lt;/a0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Version directives are parsed at load time to determine the mode for subsequent function/method definitions and &lt;c0&gt;#Include &lt;LibName&gt;&lt;/c0&gt; directives.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20261011T175629Z" creationid="Ragnar-F" creationdate="20261011T175629Z">
