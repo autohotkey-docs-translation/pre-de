@@ -104,6 +104,26 @@ MsgBox AB().Size
 </ul>
 <p>Jede Instanz hat eine Eigenschaft namens __Value, und zwar vom Typ, der durch die Klasse repräsentiert wird. In der Regel geschieht dies indirekt durch den <a href="Variables.htm#deref">Dereferenzoperator</a> oder wenn die Instanz als <a href="Functions.htm#virtual-references">virtuelle Referenz</a> verwendet wird. Zum Beispiel würde <code>MouseGetPos(Int32.at(pt.ptr))</code> die X-Koordinate am Anfang der Struktur <code>pt</code> speichern.</p>
 
+<h2 id="open-structures">Offene Strukturen <span class="ver">[v2.1-alpha.38+]</span></h2>
+<p>Jeder Prototyp startet zunächst mit einer "offenen" Struktur. Während die Struktur offen ist, können neue typisierte Eigenschaften hinzugefügt werden, allerdings sind die Offsets der typisierten Eigenschaften und die endgültige Größe der Struktur noch unbekannt. Sobald eine Instanz oder eine andere Strukturdefinition diese Details benötigt, dürfen sie nicht mehr geändert werden; die Struktur gilt daher als "geschlossen".</p>
+<p>Die Struktur einer Klasse ist geschlossen, wenn einer der folgenden Fälle eintritt:</p>
+<ul>
+  <li>Eine Instanz oder ein gekapselter Pointer wird konstruiert.</li>
+  <li>Eine Struktur, die diese Struktur enthält oder erweitert, wird geschlossen.</li>
+  <li>Die Größe der Struktur wird durch Übergabe des Prototyps an <a href="lib/Object.htm#ObjGetDataSize">ObjGetDataSize</a> angefordert.</li>
+  <li>Die Klasse wird als Parameter- oder Rückgabetyp bei <a href="lib/DllCall.htm">DllCall</a>, <a href="lib/ComCall.htm">ComCall</a> oder <a href="lib/CallbackCreate.htm">CallbackCreate</a> verwendet.</li>
+</ul>
+<p>Eine Struktur kann sich weder direkt noch indirekt selbst enthalten, aber sie kann über einen Pointer auf sich selbst verweisen. Zum Beispiel:</p>
+<pre>struct S1 {
+    P1 : S2.Ptr
+}
+struct S2 {
+    P2 : S1
+    P3 : Int32
+}
+</pre>
+<p>S1 wird zuerst initialisiert, doch die Referenz zu S2 bewirkt, dass S2 initialisiert wird, bevor S1 mit der Definition von P1 fertig ist. Das bedeutet, dass die Größe von P2 unbekannt ist und dass der Offset von P3 während der Initialisierung der Klasse nicht ermittelt werden kann. Dies kann man vermeiden, indem man die Reihenfolge der Definitionen in diesem Beispiel umkehrt, aber nach den oben genannten Regeln funktioniert es so oder so. Beachten Sie, dass die Initialisierungsreihenfolge auch durch externe Referenzen zu den beiden Klassen beeinflusst werden kann.</p>
+
 <h2 id="nested-structs">Verschachtelte Strukturen</h2>
 <p>Verschachtelte Strukturen werden in der Reihenfolge ihrer Definition erstellt, noch bevor die äußere Struktur initialisiert wird. Die eigenen Feldinitialisierer der verschachtelten Struktur werden ausgewertet, und <a href="Objects.htm#Custom_NewDelete">__New</a> wird (ohne Parameter) aufgerufen, bevor irgendwelche Initialisierer in der äußeren Struktur ausgeführt werden.</p>
 <p class="note"><strong>Hinweis:</strong> Aufgrund der speziellen Anforderungen bezüglich Speicherreservierung und Initialisierung werden verschachtelte Strukturen direkt konstruiert, nicht durch Aufruf der statischen Call-Methode der Klasse.</p>

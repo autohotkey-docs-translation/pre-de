@@ -28,8 +28,9 @@
   </dd>
   <dt>Adresse</dt>
   <dd>
-    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#objects">Objekt</a></p>
     <p>Eine Zahl im nativen Integer-Bereich (32-Bit oder 64-Bit). Wenn <em>ClassObj</em> typisierte Eigenschaften definiert, muss der Wert entweder null oder eine kompatible Speicheradresse sein.</p>
+    <p><span class="ver">[v2.1-alpha.38+]</span>: Handelt es sich bei diesem Parameter um ein Objekt, wird indirekt die Eigenschaft namens <code>Ptr</code> aufgerufen, um die Adresse abzurufen, und intern eine Referenz zum Objekt von der neuen Instanz beibehalten.</p>
   </dd>
 </dl>
 

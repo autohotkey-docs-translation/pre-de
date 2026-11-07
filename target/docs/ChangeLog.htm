@@ -21,6 +21,25 @@
 </ul>
 <p>Alle technischen Einzelheiten zu den Änderungen finden Sie auf <a href="https://github.com/AutoHotkey/AutoHotkey">GitHub</a>.</p>
 
+<h2 id="v2.1-alpha.38">2.1-alpha.38 - 7. November 2026</h2>
+<p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
+<p>Geändert: ObjCreateWithDataPtr und Struct.At erlauben nun ein Objekt mit einer Ptr-Eigenschaft.</p>
+<p>Geändert: StructClass.At erlaubt nun Adressen kleiner als 65536.</p>
+<p>Geändert: ObjGetDataPtr gibt nun unset zurück, anstatt einen Fehler auszulösen.</p>
+<p>Geändert: Strukturdefinitionen bleiben nun länger <a href="Structs.htm#open-structures"><em>offen</em></a>, um Probleme mit der Initialisierungsreihenfolge zu beheben.</p>
+<p>Geändert: GetOwnPropDesc für typisierte Eigenschaften:</p>
+<ul>
+  <li><code>Pack</code> wird gesetzt, wenn ein vom Standard abweichender Wert definiert wurde.</li>
+  <li>Wenn der Offset noch nicht berechnet wurde, wird <code>Offset</code> auf Basis der Eingabe in DefineProp gesetzt, jedoch möglicherweise ohne die ursprüngliche Groß-/Kleinschreibung für Eigenschaftsnamen.</li>
+</ul>
+<p>Behoben: Benutzerdefinierte Ptr-Unterklassen werden nun konstruiert, sodass __Value bei Bedarf indirekt aufgerufen wird. Subclassing von Ptr erfordert derzeit <code>Class(X.Ptr)</code>.</p>
+<p>Behoben: Bei direkter Zuweisung (<code>v := imported</code>) wurde das Modul nicht ausgeführt.</p>
+<p>Behoben: Module, die im Funktionskontext ausgeführt werden, wenn sie von einer Referenz innerhalb einer Funktion ausgelöst werden.</p>
+<p>Behoben: Platzhalterimporte respektieren nun den Gültigkeitsbereich von Funktionen unabhängig von der #Import-Reihenfolge.</p>
+<p>Behoben: <code>a.b()</code> zeigt nun nicht mehr zwei Fehler an, wenn <code>a.b</code> einen Fehler auslöst.</p>
+<p>Behoben: Kein undefiniertes Verhalten mehr, wenn Strukturkonstruktionen für Rückruf-Rückgabewerte scheitern.</p>
+<p>Behoben: CallbackCreate akzeptiert nun eine Strukturklasse mit geerbten Feldern, die keine eigenen Felder besitzt.</p>
+
 <h2 id="v2.1-alpha.37">2.1-alpha.37 - 25. Oktober 2026</h2>
 <p>Geändert: Die Parametertypen <code>Str</code>/<code>*</code>/<code>P</code> von DllCall/ComCall erlauben nun <code>unset</code>, was null bedeutet.</p>
 <p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
@@ -501,7 +520,7 @@
 <p>Behoben: Interne Imports und Platzhalter-Imports in Assume-Global-Funktionen.</p>
 
 <h2 id="v2.1-alpha.11">2.1-alpha.11 - 24. Mai 2024</h2>
-<p>Hinzugefügt: <a href="Modules.htm">Module</a>, <a href="lib/_Module.htm">#Module</a>, <a href="lib/_Import.htm">#Import</a> und Export.</p>
+<p>Hinzugefügt: <a href="Modules.htm">Module</a>, <a href="lib/_Module.htm">#Module</a>, Import (abgelöst von <a href="lib/_Import.htm">#Import</a> in v2.1-alpha.20) und Export (entfernt in v2.1-alpha.31).</p>
 
 <p><strong>Änderungen, die nur für Alpha-Nutzer gelten:</strong></p>
 <p>Behoben: Lecks durch virtuelle Referenzen, die Objekte zurückgeben.</p>

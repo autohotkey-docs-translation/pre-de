@@ -33,12 +33,12 @@
     <ul>
       <li><a href="#Prototype">Prototype</a>: Liefert den Prototyp, auf dem alle Instanzen der Strukturklasse basieren.</li>
       <li><a href="#PtrClass">Ptr</a>: Liefert eine Klasse, die einen Pointer auf eine Struktur dieser Klasse repräsentiert.</li>
-      <li><a href="#__ItemClass">__Item</a>: Liefert eine Klasse, die ein Array fester Größe mit dieser Klasse als Elementtyp repräsentiert.</li>
+      <li><a href="#__ItemClass">__Item</a> <span class="ver">[v2.1-alpha.23+]</span>: Liefert eine Klasse, die ein Array fester Größe mit dieser Klasse als Elementtyp repräsentiert.</li>
     </ul>
   </li>
   <li><a href="#Methods">Methoden</a>:
     <ul>
-      <li><a href="#__New">__New</a>: Setzt die Werte aller Felder.</li>
+      <li><a href="#__New">__New</a> <span class="ver">[v2.1-alpha.37+]</span>: Setzt die Werte aller Felder.</li>
       <li><a href="#__Ref">__Ref</a>: Ermittelt eine verschachtelte Struktur oder eine virtuelle Referenz, die auf eine Eigenschaft verweist.</li>
     </ul>
   </li>
@@ -66,14 +66,16 @@ Obj := StructKlasse.<span class="func">Call</span>()</pre>
 <dl>
   <dt>Adresse</dt>
   <dd>
-    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a></p>
+    <p>Typ: <a href="../Concepts.htm#numbers">Integer</a> oder <a href="../Concepts.htm#objects">Objekt</a></p>
     <p>Die Adresse einer Struktur des durch <em>StructKlasse</em> definierten Typs.</p>
+    <p><span class="ver">[v2.1-alpha.38+]</span>: Handelt es sich bei diesem Parameter um ein Objekt, wird indirekt die Eigenschaft namens <code>Ptr</code> aufgerufen, um die Adresse abzurufen, und intern eine Referenz zum Objekt vom gekapselten Pointer beibehalten. Zum Beispiel gibt <code>UInt8.At(Buffer(16))</code> einen gekapselten Pointer zurück, der einem Strukturfeld vom Typ <code>UInt8.Ptr</code> zugewiesen werden kann.</p>
   </dd>
 </dl>
 <h4 id="At_Return_Value">Rückgabewert</h4>
 <p>Typ: <a href="../Concepts.htm#objects">Objekt</a></p>
 <h4 id="At_Remarks">Bemerkungen</h4>
 <p><em>StructKlasse</em> muss eine Unterklasse von Struct sein.</p>
+<p>Wenn die Adresse ungültig ist, sind alle indirekten Aufrufe typisierter Eigenschaften der zurückgegebenen Instanz unsicher. Da der Debugger Eigenschaften möglicherweise automatisch auswertet, ist es grundsätzlich unsicher, eine ungültige Adresse zu kapseln. <span class="ver">[v2.1-alpha.38+]</span>: Pointerwerte kleiner als 65536 (z.B. beim <a href="https://learn.microsoft.com/windows/win32/api/winuser/nf-winuser-makeintresourcew">MAKEINTRESOURCE</a>-Makro) sind ausgenommen; hierbei wird beim Auswerten einer typisierten Eigenschaft sicher ein Fehler ausgelöst.</p>
 <p>Weitere Informationen finden Sie unter <a href="../Structs.htm#Boxed_Pointer">Gekapselter Pointer</a>.</p>
 </div>
 
