@@ -12190,6 +12190,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>2.1-alpha.38 - November 7, 2026</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T083443Z" creationid="Ragnar-F" creationdate="20261107T083443Z">
+        <seg>2.1-alpha.38 - 7. November 2026</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>2.1-alpha.4 - September 4, 2023</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260912T161441Z" creationid="Ragnar-F" creationdate="20260912T161441Z">
@@ -43828,10 +43836,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;a0&gt;__Item&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.23+]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T095114Z" creationid="Ragnar-F" creationdate="20261107T095114Z">
+        <seg>&lt;a0&gt;__Item&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.23+]&lt;/s1&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;a0&gt;__Item&lt;/a0&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190923T182941Z" creationid="Ragnar-F" creationdate="20190923T182941Z">
         <seg>&lt;a0&gt;__Item&lt;/a0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;a0&gt;__New&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.37+]&lt;/s1&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T095117Z" creationid="Ragnar-F" creationdate="20261107T095117Z">
+        <seg>&lt;a0&gt;__New&lt;/a0&gt; &lt;s1&gt;[v2.1-alpha.37+]&lt;/s1&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -46904,6 +46928,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260224T210724Z" creationid="Ragnar-F" creationdate="20210705T202608Z">
         <seg>&lt;c0&gt;Owner&lt;/c0&gt;, gefolgt von einem HWND, setzt das übergeordnete Fenster und überschreibt die &lt;c1&gt;+OwnDialogs&lt;/c1&gt;-Gui-Option.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;c0&gt;Pack&lt;/c0&gt; is set if a non-default value was defined.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T084239Z" creationid="Ragnar-F" creationdate="20261107T084239Z">
+        <seg>&lt;c0&gt;Pack&lt;/c0&gt; wird gesetzt, wenn ein vom Standard abweichender Wert definiert wurde.</seg>
       </tuv>
     </tu>
     <tu>
@@ -54712,6 +54744,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230612T165332Z" creationid="Ragnar-F" creationdate="20210211T120759Z">
         <seg>&lt;e8&gt;DownTemp&lt;/e8&gt; und &lt;e9&gt;DownR&lt;/e9&gt; können verwendet werden, um dieses Verhalten zu überschreiben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;e8&gt;Pack&lt;/e8&gt; is set if a non-zero value was previously specified.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T094000Z" creationid="Ragnar-F" creationdate="20261107T094000Z">
+        <seg>&lt;e8&gt;Pack&lt;/e8&gt; wird gesetzt, wenn zuvor ein Wert ungleich null angegeben wurde.</seg>
       </tuv>
     </tu>
     <tu>
@@ -64636,6 +64676,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;s0&gt;[v2.1-alpha.38+]&lt;/s0&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T092755Z" creationid="Ragnar-F" creationdate="20261107T092755Z">
+        <seg>&lt;s0&gt;[v2.1-alpha.38+]&lt;/s0&gt;:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;s0&gt;[v2.1-alpha.5+]&lt;/s0&gt;:</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T173126Z" creationid="Ragnar-F" creationdate="20260916T173126Z">
@@ -65248,6 +65296,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230805T133426Z" creationid="Ragnar-F" creationdate="20140311T011858Z">
         <seg>&lt;s7&gt;(?=...)&lt;/s7&gt; ist eine &lt;e8&gt;positive&lt;/e8&gt; vorausschauende Behauptung, da sie verlangt, dass ein bestimmtes Suchmuster existieren muss.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;s7&gt;[v2.1-alpha.38+]&lt;/s7&gt;:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T093919Z" creationid="Ragnar-F" creationdate="20261107T093919Z">
+        <seg>&lt;s7&gt;[v2.1-alpha.38+]&lt;/s7&gt;:</seg>
       </tuv>
     </tu>
     <tu>
@@ -69004,6 +69060,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>A structure cannot directly or indirectly contain itself, but it can self-reference through a pointer.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T102247Z" creationid="Ragnar-F" creationdate="20261107T102247Z">
+        <seg>Eine Struktur kann sich weder direkt noch indirekt selbst enthalten, aber sie kann über einen Pointer auf sich selbst verweisen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>A structure is a collection of &lt;e0&gt;members&lt;/e0&gt; (fields) stored adjacently in memory.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140930T140843Z" creationid="Ragnar-F" creationdate="20140301T024628Z">
@@ -69016,6 +69080,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260919T055123Z" creationid="Ragnar-F" creationdate="20260919T055123Z">
         <seg>Eine Struktur oder &lt;e0&gt;struct&lt;/e0&gt; ist eine Sammlung von &lt;e1&gt;Elementen&lt;/e1&gt; (Feldern), die nebeneinander im Speicher abgelegt sind.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>A structure which contains or extends this structure is closed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T101959Z" creationid="Ragnar-F" creationdate="20261107T101959Z">
+        <seg>Eine Struktur, die diese Struktur enthält oder erweitert, wird geschlossen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -72024,6 +72096,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T205142Z" creationid="Ragnar-F" creationdate="20260911T205142Z">
         <seg>Hinzugefügt: &lt;a0&gt;Module&lt;/a0&gt;, &lt;a1&gt;#Module&lt;/a1&gt;, &lt;a2&gt;#Import&lt;/a2&gt; und Export.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Added &lt;a0&gt;Modules&lt;/a0&gt;, &lt;a1&gt;#Module&lt;/a1&gt;, Import (superseded by &lt;a2&gt;#Import&lt;/a2&gt; in v2.1-alpha.20) and Export (removed in v2.1-alpha.31).</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T092747Z" creationid="Ragnar-F" creationdate="20261107T092747Z">
+        <seg>Hinzugefügt: &lt;a0&gt;Module&lt;/a0&gt;, &lt;a1&gt;#Module&lt;/a1&gt;, Import (abgelöst von &lt;a2&gt;#Import&lt;/a2&gt; in v2.1-alpha.20) und Export (entfernt in v2.1-alpha.31).</seg>
       </tuv>
     </tu>
     <tu>
@@ -77012,6 +77092,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>An instance or boxed pointer is constructed.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T101932Z" creationid="Ragnar-F" creationdate="20261107T101932Z">
+        <seg>Eine Instanz oder ein gekapselter Pointer wird konstruiert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>An integer between 0 and 100.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140228T155224Z" creationid="Ragnar-F" creationdate="20140228T155224Z">
@@ -79520,6 +79608,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231202T193752Z" creationid="Ragnar-F" creationdate="20231202T193752Z">
         <seg>Da die Koordinaten, die von dieser Methode zurückgegeben werden, auch die Titelleiste, die Menüleiste und den Rahmen des Fensters einbeziehen, können sie je nach Version und Design des Betriebssystems variieren.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>As the debugger may evaluate properties automatically, it is generally unsafe to box an invalid address.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T100238Z" creationid="Ragnar-F" creationdate="20261107T100238Z">
+        <seg>Da der Debugger Eigenschaften möglicherweise automatisch auswertet, ist es grundsätzlich unsicher, eine ungültige Adresse zu kapseln.</seg>
       </tuv>
     </tu>
     <tu>
@@ -87300,6 +87396,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed GetOwnPropDesc for typed properties:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T084007Z" creationid="Ragnar-F" creationdate="20261107T084007Z">
+        <seg>Geändert: GetOwnPropDesc für typisierte Eigenschaften:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed GetOwnPropDesc to return classes for numeric types.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20261011T194727Z" creationid="Ragnar-F" creationdate="20260911T133806Z">
@@ -87412,6 +87516,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Changed ObjCreateWithDataPtr and Struct.At to allow an object with a Ptr property.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T083607Z" creationid="Ragnar-F" creationdate="20261107T083607Z">
+        <seg>Geändert: ObjCreateWithDataPtr und Struct.At erlauben nun ein Objekt mit einer Ptr-Eigenschaft.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed ObjGetDataPtr to return unset instead of throwing.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T083738Z" creationid="Ragnar-F" creationdate="20261107T083738Z">
+        <seg>Geändert: ObjGetDataPtr gibt nun unset zurück, anstatt einen Fehler auszulösen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Changed ProcessWait to show "STILL WAITING" in ListLines, like WinWait.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260912T171849Z" creationid="Ragnar-F" creationdate="20260912T171849Z">
@@ -87432,6 +87552,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20261026T183842Z" creationid="Ragnar-F" creationdate="20261026T183842Z">
         <seg>Geändert: Struct.At erlaubt nun Struct selbst (benötigt nun keine Unterklasse mehr).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed StructClass.At to permit addresses &lt; 65536.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T083650Z" creationid="Ragnar-F" creationdate="20261107T083650Z">
+        <seg>Geändert: StructClass.At erlaubt nun Adressen kleiner als 65536.</seg>
       </tuv>
     </tu>
     <tu>
@@ -87696,6 +87824,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T121449Z" creationid="Ragnar-F" creationdate="20260911T121449Z">
         <seg>Geändert: Einige Funktionen/Eigenschaften geben im v2.1-Modus nun unset zurück.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Changed structure definitions to remain &lt;a0&gt;&lt;e1&gt;open&lt;/e1&gt;&lt;/a0&gt; longer, to solve issues with initialization order.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T083933Z" creationid="Ragnar-F" creationdate="20261107T083933Z">
+        <seg>Geändert: Strukturdefinitionen bleiben nun länger &lt;a0&gt;&lt;e1&gt;offen&lt;/e1&gt;&lt;/a0&gt;, um Probleme mit der Initialisierungsreihenfolge zu beheben.</seg>
       </tuv>
     </tu>
     <tu>
@@ -101012,6 +101148,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Each Prototype starts with its structure "open".</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T100958Z" creationid="Ragnar-F" creationdate="20261107T100958Z">
+        <seg>Jeder Prototyp startet zunächst mit einer "offenen" Struktur.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Each Tab control may have no more than 256 tabs.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260212T180310Z" creationid="Ragnar-F" creationdate="20260212T180310Z">
@@ -107292,6 +107436,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed &lt;c0&gt;a.b()&lt;/c0&gt; to not show two errors when &lt;c1&gt;a.b&lt;/c1&gt; throws.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T090647Z" creationid="Ragnar-F" creationdate="20261107T090647Z">
+        <seg>Behoben: &lt;c0&gt;a.b()&lt;/c0&gt; zeigt nun nicht mehr zwei Fehler an, wenn &lt;c1&gt;a.b&lt;/c1&gt; einen Fehler auslöst.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed &lt;c0&gt;a.b()&lt;/c0&gt; to throw UnsetError when &lt;c1&gt;a.b =&gt; unset&lt;/c1&gt;, not crash.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20261026T185018Z" creationid="Ragnar-F" creationdate="20261026T184726Z">
@@ -107552,6 +107704,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230904T091018Z" creationid="Ragnar-F" creationdate="20230101T133628Z">
         <seg>Behoben: COM-Fehler zeigen nicht mehr "(null)" an, wenn keine Beschreibung verfügbar ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed CallbackCreate to accept a struct class with inherited fields and none of its own.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T092551Z" creationid="Ragnar-F" creationdate="20261107T092551Z">
+        <seg>Behoben: CallbackCreate akzeptiert nun eine Strukturklasse mit geerbten Feldern, die keine eigenen Felder besitzt.</seg>
       </tuv>
     </tu>
     <tu>
@@ -108780,6 +108940,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed direct assignment (&lt;c0&gt;v := imported&lt;/c0&gt;) not executing the module.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T085559Z" creationid="Ragnar-F" creationdate="20261107T085559Z">
+        <seg>Behoben: Bei direkter Zuweisung (&lt;c0&gt;v := imported&lt;/c0&gt;) wurde das Modul nicht ausgeführt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed duplicate Gui control name errors to correctly abort the thread.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230623T170745Z" creationid="Ragnar-F" creationdate="20230623T170745Z">
@@ -109216,6 +109384,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T132331Z" creationid="Ragnar-F" creationdate="20260911T132331Z">
         <seg>Behoben: Eine Modulinitialisierung verändert nicht mehr die Zeilennummer, die von nachfolgenden Fehlern gemeldet wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed modules executing in function context when triggered by a reference inside a function.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T085957Z" creationid="Ragnar-F" creationdate="20261107T085957Z">
+        <seg>Behoben: Module, die im Funktionskontext ausgeführt werden, wenn sie von einer Referenz innerhalb einer Funktion ausgelöst werden.</seg>
       </tuv>
     </tu>
     <tu>
@@ -109708,6 +109884,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed undefined behavior when struct construction fails for a callback return value.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T091953Z" creationid="Ragnar-F" creationdate="20261107T091953Z">
+        <seg>Behoben: Kein undefiniertes Verhalten mehr, wenn Strukturkonstruktionen für Rückruf-Rückgabewerte scheitern.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed undefined behavior with &lt;c0&gt;DllCall(..., IntPtr, obj, ...)&lt;/c0&gt;.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20261026T184945Z" creationid="Ragnar-F" creationdate="20261026T184945Z">
@@ -109756,6 +109940,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Fixed user-defined Ptr subclasses to be constructed, so __Value is invoked when appropriate.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T085319Z" creationid="Ragnar-F" creationdate="20261107T085319Z">
+        <seg>Behoben: Benutzerdefinierte Ptr-Unterklassen werden nun konstruiert, sodass __Value bei Bedarf indirekt aufgerufen wird.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Fixed various Gui calculations to be per-monitor DPI-aware.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T183948Z" creationid="Ragnar-F" creationdate="20260911T183948Z">
@@ -109776,6 +109968,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260911T113044Z" creationid="Ragnar-F" creationdate="20260911T113044Z">
         <seg>Behoben: Zuweisungen virtueller Referenzen erlauben nun unset.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Fixed wildcard import to respect function scope regardless of #import order.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T090525Z" creationid="Ragnar-F" creationdate="20261107T090525Z">
+        <seg>Behoben: Platzhalterimporte respektieren nun den Gültigkeitsbereich von Funktionen unabhängig von der #Import-Reihenfolge.</seg>
       </tuv>
     </tu>
     <tu>
@@ -114096,6 +114296,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260919T082901Z" creationid="Ragnar-F" creationdate="20260919T082822Z">
         <seg>Zum Beispiel ist &lt;c2&gt;UInt32.Ptr&lt;/c2&gt; dasselbe wie &lt;c3&gt;"UInt*"&lt;/c3&gt; bei &lt;a4&gt;DllCall&lt;/a4&gt;, und &lt;c5&gt;UInt8[64]&lt;/c5&gt; ist die Klasse eines 64-Byte-Arrays.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>For example, &lt;c2&gt;UInt8.At(Buffer(16))&lt;/c2&gt; returns a boxed pointer which can be assigned to a struct field of type &lt;c3&gt;UInt8.Ptr&lt;/c3&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T095506Z" creationid="Ragnar-F" creationdate="20261107T095506Z">
+        <seg>Zum Beispiel gibt &lt;c2&gt;UInt8.At(Buffer(16))&lt;/c2&gt; einen gekapselten Pointer zurück, der einem Strukturfeld vom Typ &lt;c3&gt;UInt8.Ptr&lt;/c3&gt; zugewiesen werden kann.</seg>
       </tuv>
     </tu>
     <tu>
@@ -128964,6 +129172,22 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If &lt;e1&gt;Obj&lt;/e1&gt; is a Prototype with an &lt;a2&gt;open structure&lt;/a2&gt;, it is closed to determine the structure's final size, accounting for alignment requirements.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T095110Z" creationid="Ragnar-F" creationdate="20261107T095110Z">
+        <seg>Handelt es bei &lt;e1&gt;Obj&lt;/e1&gt; um einen Prototyp mit &lt;a2&gt;offener Struktur&lt;/a2&gt;, wird diese geschlossen, um die endgültige Größe der Struktur unter Berücksichtigung der Ausrichtungsanforderungen zu ermitteln.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If &lt;e1&gt;Obj&lt;/e1&gt; was constructed without structured data or a data pointer, the return value is &lt;a2&gt;unset&lt;/a2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T094402Z" creationid="Ragnar-F" creationdate="20261107T094402Z">
+        <seg>Wenn &lt;e1&gt;Obj&lt;/e1&gt; ohne strukturierte Daten oder einen Datenpointer konstruiert wurde, ist der Rückgabewert &lt;a2&gt;ungesetzt&lt;/a2&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If &lt;e1&gt;OutputFile&lt;/e1&gt; was specified, the special mode of &lt;a2&gt;FileAppend&lt;/a2&gt; described &lt;a3&gt;above&lt;/a3&gt; may also be used within the &lt;e4&gt;Else&lt;/e4&gt; statement's body.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231025T132929Z" creationid="Ragnar-F" creationdate="20210410T144459Z">
@@ -135356,6 +135580,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>If the address is not valid, it is unsafe to invoke any typed properties on the returned instance.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T095933Z" creationid="Ragnar-F" creationdate="20261107T095933Z">
+        <seg>Wenn die Adresse ungültig ist, sind alle indirekten Aufrufe typisierter Eigenschaften der zurückgegebenen Instanz unsicher.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>If the array is empty (&lt;a0&gt;Length&lt;/a0&gt; is 0), an &lt;a1&gt;Error&lt;/a1&gt; is thrown.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210404T181545Z" creationid="Ragnar-F" creationdate="20210404T181545Z">
@@ -136648,6 +136880,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230906T100021Z" creationid="Ragnar-F" creationdate="20191209T142857Z">
         <seg>Wenn das Objekt kein Array ist, wird __Enum mit einer Zählung von 1 und der Enumerator mit jeweils nur einem Parameter aufgerufen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the object's structure hasn't yet been &lt;a9&gt;closed&lt;/a9&gt;, &lt;e10&gt;Offset&lt;/e10&gt; is set only if it was previously specified, and may return a normalized property name.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T094203Z" creationid="Ragnar-F" creationdate="20261107T094203Z">
+        <seg>Wenn die Struktur des Objekts noch nicht &lt;a9&gt;geschlossen&lt;/a9&gt; wurde, wird &lt;e10&gt;Offset&lt;/e10&gt; nur gesetzt, wenn es zuvor angegeben wurde, und möglicherweise einen normalisierten Eigenschaftsnamen zurückgeben.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If the offset has not yet been calculated, &lt;c0&gt;Offset&lt;/c0&gt; is set based on the input to DefineProp, but may not preserve case for property names.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T085145Z" creationid="Ragnar-F" creationdate="20261107T085145Z">
+        <seg>Wenn der Offset noch nicht berechnet wurde, wird &lt;c0&gt;Offset&lt;/c0&gt; auf Basis der Eingabe in DefineProp gesetzt, jedoch möglicherweise ohne die ursprüngliche Groß-/Kleinschreibung für Eigenschaftsnamen.</seg>
       </tuv>
     </tu>
     <tu>
@@ -138696,6 +138944,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230516T093439Z" creationid="Ragnar-F" creationdate="20210212T173746Z">
         <seg>Wenn dieser Parameter eine einzelne Datei oder ein einzelner Ordner ist (also ohne Platzhalter) und enthält &lt;e0&gt;Modus&lt;/e0&gt; ein R, werden mehrere Übereinstimmungen gefunden, wenn der angegebene Dateiname in mehreren Ordnern vorkommt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If this parameter is an object, the property named &lt;c1&gt;Ptr&lt;/c1&gt; is invoked to retrieve the address, and a reference to the object is retained internally by the boxed pointer.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T095204Z" creationid="Ragnar-F" creationdate="20261107T095204Z">
+        <seg>Handelt es sich bei diesem Parameter um ein Objekt, wird die Eigenschaft namens &lt;c1&gt;Ptr&lt;/c1&gt; indirekt aufgerufen, um die Adresse abzurufen, und intern eine Referenz zum Objekt vom gekapselten Pointer beibehalten.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>If this parameter is an object, the property named &lt;c1&gt;Ptr&lt;/c1&gt; is invoked to retrieve the address, and a reference to the object is retained internally by the new instance.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T093516Z" creationid="Ragnar-F" creationdate="20261107T093516Z">
+        <seg>Handelt es sich bei diesem Parameter um ein Objekt, wird die Eigenschaft namens &lt;c1&gt;Ptr&lt;/c1&gt; indirekt aufgerufen, um die Adresse abzurufen, und intern eine Referenz zum Objekt von der neuen Instanz beibehalten.</seg>
       </tuv>
     </tu>
     <tu>
@@ -165332,6 +165596,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>New typed properties can be added while the structure is open, but the offset of each typed property and final size of the structure are unknown.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T101405Z" creationid="Ragnar-F" creationdate="20261107T101405Z">
+        <seg>Während die Struktur offen ist, können neue typisierte Eigenschaften hinzugefügt werden, allerdings sind die Offsets der typisierten Eigenschaften und die endgültige Größe der Struktur noch unbekannt.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>New values for the flags identified by &lt;i0&gt;Mask&lt;/i0&gt;, or flags to add or remove.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190612T085732Z" creationid="Ragnar-F" creationdate="20140228T211547Z">
@@ -166552,6 +166824,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210223T145106Z" creationid="Ragnar-F" creationdate="20210223T145106Z">
         <seg>Beachten Sie, dass in diesem Fall der MsgBox-Funktionsaufruf mit &lt;a0&gt;runden Klammern&lt;/a0&gt; angegeben werden muss.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Note that initialization order can also be affected by external references to either class.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T102839Z" creationid="Ragnar-F" creationdate="20261107T102839Z">
+        <seg>Beachten Sie, dass die Initialisierungsreihenfolge auch durch externe Referenzen zu den beiden Klassen beeinflusst werden kann.</seg>
       </tuv>
     </tu>
     <tu>
@@ -169748,6 +170028,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Once an instance or another structure definition depends on these details, they cannot be permitted to change, so the structure is said to "close".</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T101732Z" creationid="Ragnar-F" creationdate="20261107T101732Z">
+        <seg>Sobald eine Instanz oder eine andere Strukturdefinition diese Details benötigt, dürfen sie nicht mehr geändert werden; die Struktur gilt daher als "geschlossen".</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Once assigned (if non-null), the pointer will be released automatically when the wrapper object is freed.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230920T152706Z" creationid="Ragnar-F" creationdate="20200713T151439Z">
@@ -170488,6 +170776,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20171226T231816Z" creationid="Ragnar-F" creationdate="20171226T224615Z">
         <seg>Öffne Notepad</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Open Structures &lt;s0&gt;[v2.1-alpha.38+]&lt;/s0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T100812Z" creationid="Ragnar-F" creationdate="20261107T100804Z">
+        <seg>Offene Strukturen &lt;s0&gt;[v2.1-alpha.38+]&lt;/s0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -171552,6 +171848,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230726T093044Z" creationid="Ragnar-F" creationdate="20200622T101214Z">
         <seg>Andernfalls geben Sie eine der folgenden Zahlen an, um das Programm nach einer bestimmten Komprimierung auszuführen:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Otherwise specify the offset in bytes, where 0 is the start of the struct.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T093655Z" creationid="Ragnar-F" creationdate="20261107T093655Z">
+        <seg>Andernfalls geben Sie den Offset in Bytes an, wobei 0 der Anfang der Struktur ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -174268,10 +174572,26 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>P1 : S2.Ptr</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T102250Z" creationid="Ragnar-F" creationdate="20261107T102250Z">
+        <seg>P1 : S2.Ptr</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>P1C1 := TV.Add("Parent 1's first child", &lt;s2&gt;P1&lt;/s2&gt;)</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260214T211620Z" creationid="Ragnar-F" creationdate="20180412T181115Z">
         <seg>P1C1 := TV.Add("Erstes Kinderelement von Elternelement 1", &lt;s2&gt;P1&lt;/s2&gt;)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>P2 : S1</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T102252Z" creationid="Ragnar-F" creationdate="20261107T102252Z">
+        <seg>P2 : S1</seg>
       </tuv>
     </tu>
     <tu>
@@ -174304,6 +174624,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260214T211629Z" creationid="Ragnar-F" creationdate="20180412T181130Z">
         <seg>P2C2C1 := TV.Add("Erstes Kinderelement von Elternelement 2", P2C2)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>P3 : Int32</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T102253Z" creationid="Ragnar-F" creationdate="20261107T102253Z">
+        <seg>P3 : Int32</seg>
       </tuv>
     </tu>
     <tu>
@@ -175904,6 +176232,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20231125T142556Z" creationid="Ragnar-F" creationdate="20210704T170318Z">
         <seg>Pointertypen erlauben entweder eine reine Integeradresse wie früher oder ein Objekt/ComValue.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Pointer values lower than 65536 (such as for the &lt;a1&gt;MAKEINTRESOURCE&lt;/a1&gt; macro) are excluded; for those, evaluating a typed property will safely throw an error.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T100759Z" creationid="Ragnar-F" creationdate="20261107T100759Z">
+        <seg>Pointerwerte kleiner als 65536 (z.B. beim &lt;a1&gt;MAKEINTRESOURCE&lt;/a1&gt;-Makro) sind ausgenommen; hierbei wird beim Auswerten einer typisierten Eigenschaft sicher ein Fehler ausgelöst.</seg>
       </tuv>
     </tu>
     <tu>
@@ -185840,6 +186176,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20140303T132734Z" creationid="Ragnar-F" creationdate="20140303T132734Z">
         <seg>S = SYSTEM (Systemdatei)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>S1 is initialized first, but the reference to S2 causes S2 to be initialized before S1 is finished defining P1.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T102419Z" creationid="Ragnar-F" creationdate="20261107T102419Z">
+        <seg>S1 wird zuerst initialisiert, doch die Referenz zu S2 bewirkt, dass S2 initialisiert wird, bevor S1 mit der Definition von P1 fertig ist.</seg>
       </tuv>
     </tu>
     <tu>
@@ -200516,6 +200860,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>Subclassing Ptr currently requires &lt;c0&gt;Class(X.Ptr)&lt;/c0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T085509Z" creationid="Ragnar-F" creationdate="20261107T085509Z">
+        <seg>Subclassing von Ptr erfordert derzeit &lt;c0&gt;Class(X.Ptr)&lt;/c0&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>Submenu1 := Menu()</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20210307T163306Z" creationid="Ragnar-F" creationdate="20210307T163306Z">
@@ -202872,6 +203224,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190930T110419Z" creationid="Ragnar-F" creationdate="20190930T110419Z">
         <seg>In diesem Fall ist es nicht möglich, Änderungen vollständig zu testen, die auf die Unterstützung längerer Pfade von EXE-Dateien abzielen.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>That could be avoided by reversing the order of the definitions in this example, but the rules listed above allow it to work either way.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T102741Z" creationid="Ragnar-F" creationdate="20261107T102741Z">
+        <seg>Dies kann man vermeiden, indem man die Reihenfolge der Definitionen in diesem Beispiel umkehrt, aber nach den oben genannten Regeln funktioniert es so oder so.</seg>
       </tuv>
     </tu>
     <tu>
@@ -209460,6 +209820,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The class is used as a parameter or return type with &lt;a0&gt;DllCall&lt;/a0&gt;, &lt;a1&gt;ComCall&lt;/a1&gt; or &lt;a2&gt;CallbackCreate&lt;/a2&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T103109Z" creationid="Ragnar-F" creationdate="20261107T102157Z">
+        <seg>Die Klasse wird als Parameter- oder Rückgabetyp bei &lt;a0&gt;DllCall&lt;/a0&gt;, &lt;a1&gt;ComCall&lt;/a1&gt; oder &lt;a2&gt;CallbackCreate&lt;/a2&gt; verwendet.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The class itself is an object, containing only static methods and properties.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20190820T104924Z" creationid="Ragnar-F" creationdate="20190820T104924Z">
@@ -215340,6 +215708,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The offset of &lt;e2&gt;Obj&lt;/e2&gt;'s first property would typically be equal to the size of the base structure; i.e. any lesser offset can overlap with an inherited field.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T093915Z" creationid="Ragnar-F" creationdate="20261107T093915Z">
+        <seg>Der Offset der ersten Eigenschaft von &lt;e2&gt;Obj&lt;/e2&gt; entspricht in der Regel der Größe der Basisstruktur; das heißt, dass ein geringerer Offset zu einer Überlappung mit einem geerbten Feld führen kann.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The offset of the struct field.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T083600Z" creationid="Ragnar-F" creationdate="20260916T083554Z">
@@ -217660,6 +218036,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>The size of the structure is requested by passing the Prototype to &lt;a0&gt;ObjGetDataSize&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T102037Z" creationid="Ragnar-F" creationdate="20261107T102037Z">
+        <seg>Die Größe der Struktur wird durch Übergabe des Prototyps an &lt;a0&gt;ObjGetDataSize&lt;/a0&gt; angefordert.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>The size, in bytes, of the raw binary data.</seg>
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20230919T121325Z" creationid="Ragnar-F" creationdate="20190513T152041Z">
@@ -218072,6 +218456,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260916T092558Z" creationid="Ragnar-F" creationdate="20260916T092558Z">
         <seg>In diesem Fall kann die Struktur selbst auch als virtuelle Referenz verwendet werden.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>The structure of a class is closed when any of the following occur:</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T101758Z" creationid="Ragnar-F" creationdate="20261107T101758Z">
+        <seg>Die Struktur einer Klasse ist geschlossen, wenn einer der folgenden Fälle eintritt:</seg>
       </tuv>
     </tu>
     <tu>
@@ -228240,6 +228632,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260919T095447Z" creationid="Ragnar-F" creationdate="20260919T095447Z">
         <seg>Das bedeutet: Wenn Ref an einen von &lt;a2&gt;DllCall&lt;/a2&gt; genutzten &lt;a3&gt;Ptr&lt;/a3&gt;-Parameter, &lt;a4&gt;NumGet&lt;/a4&gt; oder &lt;a5&gt;NumPut&lt;/a5&gt; übergeben wird, handelt es sich bei dem Parameterwert bzw. der Zieladresse um die Adresse der Struktur, nicht um die Adresse, auf der der Pointer gespeichert ist.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>This means the size of P2 is unknown and the offset of P3 cannot be determined during initialization of the class.</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T102523Z" creationid="Ragnar-F" creationdate="20261107T102523Z">
+        <seg>Das bedeutet, dass die Größe von P2 unbekannt ist und der Offset von P3 während der Initialisierung der Klasse nicht ermittelt werden kann.</seg>
       </tuv>
     </tu>
     <tu>
@@ -242696,6 +243096,14 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20261027T085459Z" creationid="Ragnar-F" creationdate="20261027T085459Z">
         <seg>Version &lt;a0&gt;&lt;c1/&gt;2.1-alpha.37&lt;c2/&gt;&lt;/a0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>Version &lt;a0&gt;&lt;c1/&gt;2.1-alpha.38&lt;c2/&gt;&lt;/a0&gt;</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T092749Z" creationid="Ragnar-F" creationdate="20261107T092749Z">
+        <seg>Version &lt;a0&gt;&lt;c1/&gt;2.1-alpha.38&lt;c2/&gt;&lt;/a0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -279688,6 +280096,22 @@
       </tuv>
       <tuv lang="de" changeid="Ragnar-F" changedate="20260919T172422Z" creationid="Ragnar-F" creationdate="20260919T172422Z">
         <seg>struct RECT {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>struct S1 {</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T102248Z" creationid="Ragnar-F" creationdate="20261107T102248Z">
+        <seg>struct S1 {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>struct S2 {</seg>
+      </tuv>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T102251Z" creationid="Ragnar-F" creationdate="20261107T102251Z">
+        <seg>struct S2 {</seg>
       </tuv>
     </tu>
     <tu>
