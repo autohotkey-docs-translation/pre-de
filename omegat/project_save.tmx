@@ -138950,16 +138950,16 @@
       <tuv lang="en">
         <seg>If this parameter is an object, the property named &lt;c1&gt;Ptr&lt;/c1&gt; is invoked to retrieve the address, and a reference to the object is retained internally by the boxed pointer.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T095204Z" creationid="Ragnar-F" creationdate="20261107T095204Z">
-        <seg>Handelt es sich bei diesem Parameter um ein Objekt, wird die Eigenschaft namens &lt;c1&gt;Ptr&lt;/c1&gt; indirekt aufgerufen, um die Adresse abzurufen, und intern eine Referenz zum Objekt vom gekapselten Pointer beibehalten.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T104154Z" creationid="Ragnar-F" creationdate="20261107T095204Z">
+        <seg>Handelt es sich bei diesem Parameter um ein Objekt, wird indirekt die Eigenschaft namens &lt;c1&gt;Ptr&lt;/c1&gt; aufgerufen, um die Adresse abzurufen, und intern eine Referenz zum Objekt vom gekapselten Pointer beibehalten.</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>If this parameter is an object, the property named &lt;c1&gt;Ptr&lt;/c1&gt; is invoked to retrieve the address, and a reference to the object is retained internally by the new instance.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T093516Z" creationid="Ragnar-F" creationdate="20261107T093516Z">
-        <seg>Handelt es sich bei diesem Parameter um ein Objekt, wird die Eigenschaft namens &lt;c1&gt;Ptr&lt;/c1&gt; indirekt aufgerufen, um die Adresse abzurufen, und intern eine Referenz zum Objekt von der neuen Instanz beibehalten.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T104547Z" creationid="Ragnar-F" creationdate="20261107T093516Z">
+        <seg>Handelt es sich bei diesem Parameter um ein Objekt, wird indirekt die Eigenschaft namens &lt;c1&gt;Ptr&lt;/c1&gt; aufgerufen, um die Adresse abzurufen, und intern eine Referenz zum Objekt von der neuen Instanz beibehalten.</seg>
       </tuv>
     </tu>
     <tu>
@@ -215710,8 +215710,8 @@
       <tuv lang="en">
         <seg>The offset of &lt;e2&gt;Obj&lt;/e2&gt;'s first property would typically be equal to the size of the base structure; i.e. any lesser offset can overlap with an inherited field.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T093915Z" creationid="Ragnar-F" creationdate="20261107T093915Z">
-        <seg>Der Offset der ersten Eigenschaft von &lt;e2&gt;Obj&lt;/e2&gt; entspricht in der Regel der Größe der Basisstruktur; das heißt, dass ein geringerer Offset zu einer Überlappung mit einem geerbten Feld führen kann.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T104144Z" creationid="Ragnar-F" creationdate="20261107T093915Z">
+        <seg>Der Offset der ersten Eigenschaft von &lt;e2&gt;Obj&lt;/e2&gt; entspricht in der Regel der Größe der Basisstruktur; das heißt, dass ein kleinerer Offset zu einer Überlappung mit einem geerbten Feld führen kann.</seg>
       </tuv>
     </tu>
     <tu>
@@ -228638,8 +228638,8 @@
       <tuv lang="en">
         <seg>This means the size of P2 is unknown and the offset of P3 cannot be determined during initialization of the class.</seg>
       </tuv>
-      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T102523Z" creationid="Ragnar-F" creationdate="20261107T102523Z">
-        <seg>Das bedeutet, dass die Größe von P2 unbekannt ist und der Offset von P3 während der Initialisierung der Klasse nicht ermittelt werden kann.</seg>
+      <tuv lang="de" changeid="Ragnar-F" changedate="20261107T103839Z" creationid="Ragnar-F" creationdate="20261107T102523Z">
+        <seg>Das bedeutet, dass die Größe von P2 unbekannt ist und dass der Offset von P3 während der Initialisierung der Klasse nicht ermittelt werden kann.</seg>
       </tuv>
     </tu>
     <tu>
